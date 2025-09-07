@@ -18,7 +18,8 @@
       "Bash(do echo \"=== Processing $file ===\")",
       "Bash(find:*)",
       "Bash(do)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(wc:*)"
     ],
     "deny": [],
     "ask": [],
