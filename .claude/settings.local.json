@@ -19,7 +19,8 @@
       "Bash(find:*)",
       "Bash(do)",
       "Bash(cat:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(git config:*)"
     ],
     "deny": [],
     "ask": [],
