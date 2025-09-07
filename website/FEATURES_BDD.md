@@ -2,6 +2,33 @@
 
 Este documento define todas as features do website usando metodologia BDD (Behavior-Driven Development) com sintaxe Gherkin.
 
+## Assets e Recursos Visuais
+
+### Localização dos Assets
+Todos os recursos visuais estão localizados em `/design/` no repositório:
+
+#### Logos Matrix Protocol
+- **Desktop/Claro**: `design/matrix-protocol-logo-gray.svg`
+- **Desktop/Escuro**: `design/matrix-protocol-logo-white.svg`
+- **Mobile/Ícone Claro**: `design/matrix-protocol-icon-gray.svg`  
+- **Mobile/Ícone Escuro**: `design/matrix-protocol-icon-white.svg`
+
+#### Logos dos 5 Frameworks
+Cada framework (MEF, ZOF, OIF, MOC, MAL) possui 3 variações:
+- **Logo Completo Colorido**: `design/{framework}-logo-text-color-full.svg`
+- **Logo Texto Branco**: `design/{framework}-logo-color-text-white.svg`
+- **Apenas Ícone**: `design/{framework}-logo-icon.svg`
+
+#### Cores Oficiais dos Frameworks
+- **MEF (Matrix Embedding Framework)**: Verde `#2ECC71`
+- **ZOF (Zion Orchestration Framework)**: Laranja `#E67E22`
+- **OIF (Operator Intelligence Framework)**: Azul `#2980B9`
+- **MOC (Matrix Ontology Catalog)**: Roxo `#9B59B6`
+- **MAL (Matrix Arbiter Layer)**: Vermelho `#C0392B`
+
+#### Outros Assets
+- **Design System Completo**: `design/design-project.svg`
+
 ## Estrutura de Épicos
 
 ### Epic 1: Navegação e Layout Base

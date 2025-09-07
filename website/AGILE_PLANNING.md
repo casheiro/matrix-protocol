@@ -2,6 +2,65 @@
 
 Documento de planejamento ágil completo com metodologia Scrum/Kanban para desenvolvimento do website Matrix Protocol.
 
+## Assets e Design System
+
+### Localização dos Recursos Visuais
+Todos os assets necessários para implementação estão disponíveis em `/design/` do repositório:
+
+#### Brand Assets Matrix Protocol
+```
+design/
+├── matrix-protocol-logo-gray.svg      # Logo principal (tema claro)
+├── matrix-protocol-logo-white.svg     # Logo principal (tema escuro)  
+├── matrix-protocol-icon-gray.svg      # Ícone mobile (tema claro)
+├── matrix-protocol-icon-white.svg     # Ícone mobile (tema escuro)
+└── design-project.svg                 # Design system completo
+```
+
+#### Framework Visual Identity
+Cada framework possui 3 variações de logo:
+```
+design/
+├── {framework}-logo-text-color-full.svg     # Logo completo colorido
+├── {framework}-logo-color-text-white.svg    # Para fundos escuros
+└── {framework}-logo-icon.svg                # Ícone isolado
+```
+Onde `{framework}` = `mef`, `zof`, `oif`, `moc`, `mal`
+
+#### Design Tokens - Cores Oficiais
+| Framework | Cor Oficial | Hex Code | Tailwind Class |
+|-----------|-------------|----------|----------------|
+| MEF | Verde | `#2ECC71` | `bg-mef-500` |
+| ZOF | Laranja | `#E67E22` | `bg-zof-500` |
+| OIF | Azul | `#2980B9` | `bg-oif-500` |
+| MOC | Roxo | `#9B59B6` | `bg-moc-500` |
+| MAL | Vermelho | `#C0392B` | `bg-mal-500` |
+
+### Configurações de Desenvolvimento
+#### Tailwind CSS Custom Colors
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'mef': { 500: '#2ECC71' },
+        'zof': { 500: '#E67E22' },
+        'oif': { 500: '#2980B9' },
+        'moc': { 500: '#9B59B6' },
+        'mal': { 500: '#C0392B' }
+      }
+    }
+  }
+}
+```
+
+#### Asset Loading Strategy
+- **Performance**: Usar SVGs otimizados para logos e ícones
+- **Responsividade**: Logo completo em desktop, ícone em mobile
+- **Tema**: Alternar entre versões gray/white baseado em dark mode
+- **Lazy Loading**: Logos de frameworks carregados sob demanda
+
 ## Visão do Produto
 
 **Visão:** Criar o website oficial do Matrix Protocol que serve como portal central para compreensão, adoção e implementação do protocolo semântico de colaboração humano-IA.

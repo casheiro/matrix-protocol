@@ -2,6 +2,30 @@
 
 Organização das user stories por personas e épicos, seguindo metodologia ágil para desenvolvimento do website.
 
+## Assets e Recursos Visuais
+
+### Localização dos Assets no Repositório
+Todos os elementos visuais mencionados nas user stories estão disponíveis em `/design/`:
+
+#### Identidade Visual Matrix Protocol
+- **Logos Desktop**: `design/matrix-protocol-logo-gray.svg` (claro), `design/matrix-protocol-logo-white.svg` (escuro)
+- **Ícones Mobile**: `design/matrix-protocol-icon-gray.svg` (claro), `design/matrix-protocol-icon-white.svg` (escuro)
+
+#### Elementos dos 5 Frameworks
+Para cada framework (MEF, ZOF, OIF, MOC, MAL):
+- **Logo Completo**: `design/{framework}-logo-text-color-full.svg`
+- **Logo para Fundo Escuro**: `design/{framework}-logo-color-text-white.svg`
+- **Ícone Isolado**: `design/{framework}-logo-icon.svg`
+
+#### Paleta de Cores Oficial
+- **MEF**: Verde `#2ECC71` (bg-mef-500 no Tailwind)
+- **ZOF**: Laranja `#E67E22` (bg-zof-500 no Tailwind)
+- **OIF**: Azul `#2980B9` (bg-oif-500 no Tailwind)
+- **MOC**: Roxo `#9B59B6` (bg-moc-500 no Tailwind)
+- **MAL**: Vermelho `#C0392B` (bg-mal-500 no Tailwind)
+
+> **Nota para Desenvolvedores**: Configurar essas cores como custom colors no Tailwind CSS para manter consistência visual.
+
 ## Personas Identificadas
 
 ### 1. **Visitante Curioso**
