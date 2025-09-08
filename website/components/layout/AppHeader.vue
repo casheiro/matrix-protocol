@@ -12,18 +12,11 @@
             class="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
             :aria-label="`${appName} - ${$t('nav.homepage')}`"
           >
-            <!-- Desktop Logo -->
-            <img 
-              :src="logoSrc"
-              :alt="`${appName} Logo`"
-              class="hidden md:block h-8 w-auto"
-              loading="eager"
-            />
-            <!-- Mobile Icon -->
+            <!-- Matrix Protocol Icon -->
             <img 
               :src="iconSrc"
               :alt="`${appName} Icon`"
-              class="block md:hidden h-7 w-auto"
+              class="h-8 md:h-10 w-auto"
               loading="eager"
             />
           </NuxtLink>
@@ -110,6 +103,8 @@
 
 <script setup lang="ts">
 import type { NavigationItem } from '~/types'
+import FrameworkDropdown from "~/components/navigation/FrameworkDropdown.vue";
+import LanguageSelector from "~/components/navigation/LanguageSelector.vue";
 
 // App configuration from environment variables
 const { githubUrl, appName } = useMatrixConfig()
@@ -124,17 +119,11 @@ const { isMenuOpen, toggleMenu } = useAppStore()
 // Current route for active state detection
 const route = useRoute()
 
-// Logo sources based on theme
-const logoSrc = computed(() => 
-  isDark.value 
-    ? '/assets/logos/matrix/matrix-protocol-logo-white.svg'
-    : '/assets/logos/matrix/matrix-protocol-logo-gray.svg'
-)
-
+// Icon source based on theme
 const iconSrc = computed(() => 
   isDark.value 
-    ? '/assets/logos/matrix/matrix-protocol-icon-white.svg'
-    : '/assets/logos/matrix/matrix-protocol-icon-gray.svg'
+    ? '/assets/logos/matrix-protocol-icon-gray.svg'
+    : '/assets/logos/matrix-protocol-icon-white.svg'
 )
 
 // Navigation items with i18n keys

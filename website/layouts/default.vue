@@ -9,7 +9,7 @@
     </a>
     
     <!-- Header Navigation -->
-    <AppHeader />
+    <LayoutAppHeader />
     
     <!-- Main Content -->
     <main 
