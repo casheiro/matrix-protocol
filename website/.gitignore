@@ -12,6 +12,9 @@ node_modules
 # Environment
 .env
 .env.*
+.env.local
+.env.production
+.env*.local
 
 # IDE
 .idea
@@ -24,7 +27,10 @@ node_modules
 Thumbs.db
 
 # Package manager
-pnpm-lock.yaml
+# pnpm-lock.yaml (keeping lock file for reproducible builds)
+
+# Docker
+docker-compose.override.yml
 
 # TypeScript
 *.tsbuildinfo

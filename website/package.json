@@ -9,7 +9,12 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up",
+    "docker:build": "docker build -t matrix-protocol-website .",
+    "docker:prod": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "env:copy": "cp .env.example .env.local"
   },
   "dependencies": {
     "@nuxt/ui": "^2.18.0",

@@ -1,0 +1,46 @@
+# ==============================================
+# MATRIX PROTOCOL WEBSITE - DEVELOPMENT COMPOSE
+# ==============================================
+# Development Docker Compose with hot reload
+# Use: docker-compose -f docker-compose.dev.yml up
+
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    
+    ports:
+      - "${PORT:-3000}:3000"
+    
+    volumes:
+      # Mount source code for hot reload
+      - .:/app
+      - /app/node_modules
+      - /app/.nuxt
+      - /app/.output
+    
+    environment:
+      - NODE_ENV=development
+      - NUXT_DEVTOOLS=true
+      - NUXT_TELEMETRY_DISABLED=true
+    
+    # Use local environment file
+    env_file:
+      - .env.local
+    
+    # Override CMD for development
+    command: pnpm dev --host 0.0.0.0
+    
+    # No restart in development
+    restart: "no"
+    
+    # Development logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "1"
