@@ -28,7 +28,7 @@
           <template v-for="item in navigationItems" :key="item.to">
             <NuxtLink 
               :to="item.to"
-              class="relative px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              class="relative px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-md transition-all duration-300 rounded-md focus:outline-none focus:ring-0 active:scale-[0.98]"
               :class="{ 'text-gray-900 dark:text-white': isActiveRoute(item.to) }"
               :aria-current="isActiveRoute(item.to) ? 'page' : undefined"
             >
@@ -56,7 +56,7 @@
             :href="githubUrl" 
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden md:flex items-center justify-center w-9 h-9 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            class="hidden md:flex items-center justify-center w-9 h-9 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-md rounded-md transition-all duration-300 focus:outline-none focus:ring-0 active:scale-[0.98]"
             :aria-label="$t('nav.github')"
           >
             <UIcon name="i-simple-icons-github" class="w-5 h-5" />
@@ -202,9 +202,41 @@ a, button {
   @apply scale-x-100;
 }
 
-/* Custom focus styles */
-:focus-visible {
-  @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+/* Remove problematic focus styles that cause border issues */
+:deep(button) {
+  @apply focus:outline-none;
+}
+
+:deep(button:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(button:active) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:active) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:visited) {
+  @apply ring-0 outline-none;
+}
+
+/* Remove any webkit focus outlines */
+:deep(*) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+}
+
+:deep(*:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Backdrop blur support fallback */

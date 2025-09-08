@@ -13,7 +13,7 @@
       variant="ghost" 
       color="gray"
       size="sm"
-      class="w-auto px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      class="w-auto px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-md rounded-md transition-all duration-300 focus:outline-none focus:ring-0 active:scale-[0.98]"
       :aria-label="$t('nav.languageSelector')"
       :aria-expanded="false"
       :aria-haspopup="true"
@@ -40,7 +40,7 @@
             v-for="locale in availableLocales"
             :key="locale.code"
             @click="switchLocale(locale.code, close)"
-            class="w-full flex items-center justify-between px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+            class="w-full flex items-center justify-between px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white hover:shadow-md rounded-md transition-all duration-300 focus:outline-none focus:ring-0 active:scale-[0.98]"
             :class="{
               'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300': locale.code === currentLocale,
               'font-medium': locale.code === currentLocale
@@ -176,29 +176,70 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Custom button styling */
-button[role="menuitem"] {
-  @apply outline-none;
-}
-
-button[role="menuitem"]:focus {
-  @apply ring-2 ring-blue-500 ring-inset;
-}
-
-/* Smooth transitions */
+/* Smooth transitions for all interactive elements */
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
 }
 
-/* Active state styling */
+/* Remove all focus rings and borders */
+:deep(button) {
+  @apply focus:outline-none focus:ring-0;
+}
+
+:deep(button:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(button:active) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:active) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:visited) {
+  @apply ring-0 outline-none;
+}
+
+/* Remove any webkit focus outlines */
+:deep(*) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+}
+
+:deep(*:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Hover effects for language options */
+.dark .hover\:bg-gray-800:hover {
+  background-color: rgb(31 41 55);
+}
+
+/* Active language highlighting */
 .bg-blue-50 {
   background-color: rgb(239 246 255);
 }
 
 .dark .bg-blue-900\/20 {
   background-color: rgb(30 58 138 / 0.2);
+}
+
+.text-blue-700 {
+  color: rgb(29 78 216);
+}
+
+.dark .text-blue-300 {
+  color: rgb(147 197 253);
 }
 
 /* Flag emoji sizing */

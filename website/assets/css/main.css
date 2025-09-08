@@ -17,6 +17,35 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
   }
+  
+  /* Remove todas as bordas claras e outlines indesejados */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+  }
+  
+  *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  button:active,
+  a:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
 }
 
 @layer components {

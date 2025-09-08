@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-12-20',
   devtools: { enabled: true },
   
+  // Fix unhead compatibility issue
+  experimental: {
+    headNext: true
+  },
+  
   // App configuration
   app: {
     head: {

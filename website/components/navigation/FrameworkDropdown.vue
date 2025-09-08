@@ -1,12 +1,23 @@
 <template>
   <UPopover 
+    mode="hover"
+    :open-delay="100"
+    :close-delay="300"
     :popper="{ placement: 'bottom-start', offsetDistance: 8 }"
     :ui="{ 
       width: 'w-80',
       background: 'bg-white dark:bg-gray-900',
       shadow: 'shadow-xl',
       rounded: 'rounded-lg',
-      ring: 'ring-1 ring-gray-200 dark:ring-gray-700'
+      ring: 'ring-1 ring-gray-200 dark:ring-gray-700',
+      transition: {
+        enterActiveClass: 'transition duration-200 ease-out',
+        enterFromClass: 'transform scale-95 opacity-0',
+        enterToClass: 'transform scale-100 opacity-100',
+        leaveActiveClass: 'transition duration-75 ease-in',
+        leaveFromClass: 'transform scale-100 opacity-100',
+        leaveToClass: 'transform scale-95 opacity-0'
+      }
     }"
     @keydown.escape="closeDropdown"
   >
@@ -14,7 +25,7 @@
       variant="ghost" 
       color="gray"
       trailing-icon="i-heroicons-chevron-down"
-      class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md"
       :class="{ 'text-gray-900 dark:text-white': isFrameworksActive }"
       :aria-expanded="false"
       :aria-haspopup="true"
@@ -41,7 +52,7 @@
             v-for="(framework, index) in frameworks"
             :key="framework.key"
             :to="`/frameworks/${framework.key}`"
-            class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+            class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-md transition-all duration-300 group focus:outline-none focus:ring-0 focus:bg-gray-50 dark:focus:bg-gray-800 active:scale-[0.98]"
             role="menuitem"
             :tabindex="0"
             @click="close"
@@ -196,27 +207,77 @@ onMounted(() => {
   overflow: hidden;
 }
 
-/* Focus trap styling */
+/* Remove all focus rings and borders */
 [role="menuitem"]:focus {
-  @apply outline-none ring-2 ring-blue-500 ring-inset;
+  @apply outline-none ring-0;
 }
 
-/* Smooth animations for icon containers */
+/* Remove default button focus styles that cause border issues */
+:deep(button) {
+  @apply focus:outline-none focus:ring-0;
+}
+
+:deep(button:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(button:active) {
+  @apply ring-0 outline-none;
+}
+
+/* Remove focus styles from links */
+:deep(a) {
+  @apply focus:outline-none focus:ring-0;
+}
+
+:deep(a:focus) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:active) {
+  @apply ring-0 outline-none;
+}
+
+:deep(a:visited) {
+  @apply ring-0 outline-none;
+}
+
+/* Remove any webkit focus outlines */
+:deep(*) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+}
+
+:deep(*:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Elegant hover animations */
 .group:hover .flex-shrink-0 {
-  @apply scale-105;
+  @apply scale-110;
+  filter: brightness(1.1);
 }
 
-/* Color transitions */
-.transition-colors {
-  transition-property: color, background-color, border-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+.group:hover {
+  transform: translateY(-1px);
 }
 
-/* Transform transitions */
-.transition-transform {
-  transition-property: transform;
+/* Smooth transitions for all properties */
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 300ms;
+}
+
+/* Icon hover effects */
+.group:hover .w-4.h-4 {
+  @apply scale-110;
+}
+
+/* Active state with subtle scale */
+.active\:scale-\[0\.98\]:active {
+  transform: scale(0.98);
 }
 </style>
