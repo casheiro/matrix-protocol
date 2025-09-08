@@ -36,6 +36,6 @@ docker-compose.override.yml
 *.tsbuildinfo
 
 # Package Manager Lock
-pnpm-lock.json
-yarn-lock.json
-package-lock.json
+/yarn-lock.json
+/package-lock.json
+/pnpm-lock.yaml
