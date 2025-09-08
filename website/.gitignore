@@ -34,3 +34,8 @@ docker-compose.override.yml
 
 # TypeScript
 *.tsbuildinfo
+
+# Package Manager Lock
+pnpm-lock.json
+yarn-lock.json
+package-lock.json

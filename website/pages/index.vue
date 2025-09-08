@@ -54,7 +54,7 @@
             :class="framework.colorClass"
           >
             <img 
-              :src="`/assets/logos/${framework.key}/${framework.key}-logo-icon.svg`"
+              :src="`/assets/logos/${framework.key}-logo-icon.svg`"
               :alt="`${framework.acronym} Icon`"
               class="w-8 h-8"
               loading="lazy"
@@ -114,35 +114,35 @@ const frameworks = [
     acronym: 'MEF',
     nameKey: 'frameworks.mef.name',
     descriptionKey: 'frameworks.mef.description',
-    colorClass: 'bg-mef-500'
+    colorClass: 'bg-mef-100'
   },
   {
     key: 'zof',
     acronym: 'ZOF',
     nameKey: 'frameworks.zof.name',
     descriptionKey: 'frameworks.zof.description',
-    colorClass: 'bg-zof-500'
+    colorClass: 'bg-zof-100'
   },
   {
     key: 'oif',
     acronym: 'OIF',
     nameKey: 'frameworks.oif.name',
     descriptionKey: 'frameworks.oif.description',
-    colorClass: 'bg-oif-500'
+    colorClass: 'bg-oif-100'
   },
   {
     key: 'moc',
     acronym: 'MOC',
     nameKey: 'frameworks.moc.name',
     descriptionKey: 'frameworks.moc.description',
-    colorClass: 'bg-moc-500'
+    colorClass: 'bg-moc-100'
   },
   {
     key: 'mal',
     acronym: 'MAL',
     nameKey: 'frameworks.mal.name',
     descriptionKey: 'frameworks.mal.description',
-    colorClass: 'bg-mal-500'
+    colorClass: 'bg-mal-100'
   }
 ]
 
