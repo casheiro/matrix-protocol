@@ -1,13 +1,13 @@
 export interface Framework {
   key: string
   acronym: string
-  name: string
-  description: string
+  nameKey: string
+  descriptionKey: string
   colorClass: string
 }
 
 export interface NavigationItem {
-  label: string
+  labelKey: string
   to: string
   icon?: string
 }
@@ -23,4 +23,19 @@ export interface MatrixColor {
   700: string
   800: string
   900: string
+}
+
+// App Store interface
+export interface AppState {
+  isMenuOpen: boolean
+  currentFramework: string | null
+}
+
+// Locale interface for i18n
+export interface LocaleInfo {
+  code: string
+  name: string
+  nativeName: string
+  flag: string
+  iso: string
 }

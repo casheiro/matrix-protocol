@@ -39,6 +39,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Component configuration for auto-import
+  components: {
+    dirs: [
+      '~/components',
+      { path: '~/components/layout', prefix: '' },
+      { path: '~/components/navigation', prefix: '' }
+    ]
+  },
+
   // Configuração Google Fonts para Rajdhani
   googleFonts: {
     families: {
@@ -55,11 +64,28 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English' },
-      { code: 'pt', iso: 'pt-BR', name: 'Português' }
+      { 
+        code: 'en', 
+        iso: 'en-US', 
+        name: 'English',
+        file: 'en-US.json'
+      },
+      { 
+        code: 'pt', 
+        iso: 'pt-BR', 
+        name: 'Português',
+        file: 'pt-BR.json'
+      }
     ],
     defaultLocale: 'pt',
-    strategy: 'prefix'
+    strategy: 'prefix',
+    langDir: 'locales/',
+    lazy: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
   },
 
   // Nuxt UI já configura colorMode

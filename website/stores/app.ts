@@ -1,10 +1,12 @@
 import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', {
-  state: () => ({
-    isMenuOpen: false,
-    currentFramework: null as string | null
-  }),
+  state: () => {
+    return {
+      isMenuOpen: false,
+      currentFramework: null as string | null
+    }
+  },
   
   getters: {
     frameworkColor: (state) => {

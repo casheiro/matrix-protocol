@@ -266,8 +266,8 @@ nano .env.local
 #### ✅ **SEMPRE faça isso:**
 ```vue
 <script setup>
-// CORRETO: Usar composable useAppConfig
-const { githubUrl, appName, appVersion } = useAppConfig()
+// CORRETO: Usar composable useMatrixConfig
+const { githubUrl, appName, appVersion } = useMatrixConfig()
 </script>
 
 <template>
@@ -276,13 +276,13 @@ const { githubUrl, appName, appVersion } = useAppConfig()
 </template>
 ```
 
-### Composable useAppConfig
+### Composable useMatrixConfig
 
-Use sempre o composable `useAppConfig()` para acessar configurações:
+Use sempre o composable `useMatrixConfig()` para acessar configurações:
 
 ```typescript
 // Exemplo completo de uso
-const config = useAppConfig()
+const config = useMatrixConfig()
 
 // Dados básicos da aplicação
 config.appName          // "Matrix Protocol"
@@ -383,7 +383,7 @@ pnpm preview
 ├── .env.local           # Suas configurações locais (ignorado pelo git)
 ├── nuxt.config.ts       # Configuração Nuxt com runtimeConfig
 ├── composables/
-│   └── useAppConfig.ts  # Composable para acessar configurações
+│   └── useMatrixConfig.ts  # Composable para acessar configurações
 ├── server/api/
 │   └── health.get.ts    # Endpoint de health check
 ├── Dockerfile           # Configuração Docker multi-stage

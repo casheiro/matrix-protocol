@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "homepage": "Homepage",
+    "protocol": "Protocol",
+    "frameworks": "Frameworks",
+    "documentation": "Documentation",
+    "examples": "Examples",
+    "resources": "Resources",
+    "github": "Access GitHub repository",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode",
+    "openMenu": "Open navigation menu",
+    "frameworksDropdown": "Frameworks menu",
+    "frameworksMenu": "Available frameworks list",
+    "languageSelector": "Language selector",
+    "languageMenu": "Language selection menu",
+    "selectLanguage": "Select language"
+  },
+  
+  "frameworks": {
+    "title": "Matrix Frameworks",
+    "subtitle": "Choose a framework to explore",
+    "viewAll": "View all frameworks",
+    
+    "mef": {
+      "name": "Matrix Embedding Framework",
+      "description": "Versioned knowledge structuring through UKIs with semantic relationships and complete audit trail"
+    },
+    "zof": {
+      "name": "Zion Orchestration Framework", 
+      "description": "Conceptual workflows with canonical states for AI-oriented teams and mandatory checkpoints"
+    },
+    "oif": {
+      "name": "Operator Intelligence Framework",
+      "description": "Artificial intelligence archetypes with hierarchical governance and derived explainability"
+    },
+    "moc": {
+      "name": "Matrix Ontology Catalog",
+      "description": "Organizational ontology catalog with flexible taxonomies and validated authority"
+    },
+    "mal": {
+      "name": "Matrix Arbiter Layer",
+      "description": "Deterministic conflict arbitration with P1-P6 precedence rules and auditable decisions"
+    }
+  },
+  
+  "accessibility": {
+    "skipToMain": "Skip to main content"
+  },
+  
+  "footer": {
+    "subtitle": "Epistemological framework for human-AI collaboration"
+  },
+  
+  "meta": {
+    "defaultTitle": "Matrix Protocol - Human-AI Collaboration Framework",
+    "defaultDescription": "Complete semantic protocol for knowledge structuring, workflow orchestration and AI governance through MEF, ZOF, OIF, MOC and MAL frameworks.",
+    "keywords": "matrix protocol, ai collaboration, knowledge management, semantic framework, epistemological framework"
+  },
+  
+  "home": {
+    "title": "Matrix Protocol",
+    "subtitle": "Epistemological framework for human-AI collaboration",
+    "description": "Semantic protocol that organizes knowledge through versioned structures, conceptual workflows and intelligent governance.",
+    "version": "v1.0.0",
+    "getStarted": "Get Started",
+    "viewDocs": "View Documentation"
+  },
+  
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Complete technical guides and resources"
+  },
+  "protocol": {
+    "title": "Protocol",
+    "subtitle": "Complete Matrix Protocol specification"
+  },
+  "examples": {
+    "title": "Examples",
+    "subtitle": "Practical cases and reference implementations"
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Tools and support materials"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "open": "Open",
+    "next": "Next",
+    "previous": "Previous",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "underConstruction": "This section is under construction",
+    "backHome": "Back to Home"
+  }
+}

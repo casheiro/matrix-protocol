@@ -8,7 +8,7 @@
  * @example
  * ```vue
  * <script setup>
- * const { githubUrl, appName, appVersion } = useAppConfig()
+ * const { githubUrl, appName, appVersion } = useMatrixConfig()
  * </script>
  * 
  * <template>
@@ -16,7 +16,7 @@
  * </template>
  * ```
  */
-export const useAppConfig = () => {
+export const useMatrixConfig = () => {
   const config = useRuntimeConfig()
   
   return {
@@ -54,8 +54,8 @@ export const useAppConfig = () => {
     },
     
     // Environment info
-    isDevelopment: process.env.NODE_ENV === 'development',
-    isProduction: process.env.NODE_ENV === 'production'
+    isDevelopment: import.meta.env.MODE === 'development',
+    isProduction: import.meta.env.MODE === 'production'
   }
 }
 

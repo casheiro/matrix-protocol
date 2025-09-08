@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/d/projetos/matrix-protocol/**)",
+      "Bash(pnpm typecheck:*)",
+      "Bash(pnpm install:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
