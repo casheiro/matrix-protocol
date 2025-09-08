@@ -3,6 +3,22 @@
     <div class="max-w-4xl mx-auto px-4 text-center">
       <!-- Hero Section -->
       <div class="mb-12">
+        <!-- Matrix Protocol Icon -->
+        <div class="mb-8">
+          <img 
+            src="/assets/logos/matrix-protocol-icon-white.svg"
+            alt="Matrix Protocol Icon"
+            class="h-16 md:h-20 lg:h-24 mx-auto mb-6 dark:block hidden"
+            loading="eager"
+          />
+          <img 
+            src="/assets/logos/matrix-protocol-icon-gray.svg"
+            alt="Matrix Protocol Icon"
+            class="h-16 md:h-20 lg:h-24 mx-auto mb-6 dark:hidden block"
+            loading="eager"
+          />
+        </div>
+        
         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
           {{ $t('home.title') }}
           <span class="inline-block ml-3 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-lg md:text-2xl font-semibold rounded-full">
@@ -46,11 +62,11 @@
         <div
           v-for="framework in frameworks"
           :key="framework.key"
-          class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
+          class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700 text-center"
         >
           <!-- Framework Icon -->
           <div 
-            class="w-12 h-12 rounded-lg mb-4 flex items-center justify-center"
+            class="w-12 h-12 rounded-lg mb-4 flex items-center justify-center mx-auto"
             :class="framework.colorClass"
           >
             <img 

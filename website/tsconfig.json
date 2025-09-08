@@ -9,9 +9,16 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noUncheckedIndexedAccess": true,
+    "types": [
+      "@nuxtjs/i18n",
+      "@nuxt/ui"
+    ]
   },
   "include": [
-    "./.nuxt/nuxt.d.ts"
+    "./.nuxt/nuxt.d.ts",
+    "./types/**/*",
+    "types/**/*"
   ]
 }

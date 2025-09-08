@@ -4,6 +4,25 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-12-20',
   devtools: { enabled: true },
   
+  // App configuration
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/assets/logos/matrix-protocol-icon-gray.svg'
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/assets/logos/matrix-protocol-icon-white.svg',
+          media: '(prefers-color-scheme: dark)'
+        }
+      ]
+    }
+  },
+  
   // Runtime configuration for environment variables
   runtimeConfig: {
     // Private keys (server-side only)
