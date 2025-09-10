@@ -1,21 +1,120 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Definir fontes dos arquivos para Tailwind v4 */
+@source "../../components/**/*.vue";
+@source "../../pages/**/*.vue";
+@source "../../layouts/**/*.vue";
+@source "../../app.vue";
+
+/* Configuração do tema usando @theme directive (Tailwind CSS v4) */
+@theme {
+  /* Fontes customizadas */
+  --font-sans: 'Rajdhani', system-ui, sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+  
+  /* Basic Tailwind colors required for components */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: transparent;
+  
+  /* Gray scale */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  /* Blue scale for UI elements */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  
+  /* Cores dos frameworks Matrix Protocol */
+  --color-mef-50: #E8F8F5;
+  --color-mef-100: #D0F4EA;
+  --color-mef-200: #A1E9D5;
+  --color-mef-300: #72DEC0;
+  --color-mef-400: #43D3AB;
+  --color-mef-500: #2ECC71;
+  --color-mef-600: #27AE60;
+  --color-mef-700: #229954;
+  --color-mef-800: #1E8449;
+  --color-mef-900: #196F3D;
+  
+  --color-zof-50: #FDF2E9;
+  --color-zof-100: #FAE5D3;
+  --color-zof-200: #F6CBA7;
+  --color-zof-300: #F2B17B;
+  --color-zof-400: #EE974F;
+  --color-zof-500: #E67E22;
+  --color-zof-600: #D68910;
+  --color-zof-700: #BA7A0B;
+  --color-zof-800: #9E6B07;
+  --color-zof-900: #825C03;
+  
+  --color-oif-50: #EBF5FB;
+  --color-oif-100: #D6EAF8;
+  --color-oif-200: #AED6F1;
+  --color-oif-300: #85C1E9;
+  --color-oif-400: #5DADE2;
+  --color-oif-500: #2980B9;
+  --color-oif-600: #1F618D;
+  --color-oif-700: #1A5276;
+  --color-oif-800: #154360;
+  --color-oif-900: #10334A;
+  
+  --color-moc-50: #F4ECF7;
+  --color-moc-100: #E8DAEF;
+  --color-moc-200: #D7BDE2;
+  --color-moc-300: #C39BD3;
+  --color-moc-400: #AF7AC5;
+  --color-moc-500: #9B59B6;
+  --color-moc-600: #7D3C98;
+  --color-moc-700: #6C3483;
+  --color-moc-800: #5B2C6F;
+  --color-moc-900: #4A235A;
+  
+  --color-mal-50: #FADBD8;
+  --color-mal-100: #F5B7B1;
+  --color-mal-200: #F1948A;
+  --color-mal-300: #EC7063;
+  --color-mal-400: #E74C3C;
+  --color-mal-500: #C0392B;
+  --color-mal-600: #A93226;
+  --color-mal-700: #922B21;
+  --color-mal-800: #7B241C;
+  --color-mal-900: #641E16;
+}
 
 @layer base {
   /* Rajdhani como fonte padrão */
   html {
     font-family: 'Rajdhani', system-ui, sans-serif;
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply antialiased font-normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
   }
   
   /* Headings com peso maior */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    font-weight: 600;
   }
   
   /* Remove todas as bordas claras e outlines indesejados */
@@ -51,11 +150,18 @@
 @layer components {
   /* Container padrão */
   .container-wide {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    max-width: 80rem;
   }
   
   /* Botões customizados Matrix Protocol */
   .btn-matrix {
-    @apply font-medium tracking-wide uppercase;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
   }
 }

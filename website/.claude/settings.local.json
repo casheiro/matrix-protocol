@@ -6,7 +6,10 @@
       "Bash(pnpm install:*)",
       "mcp__ide__getDiagnostics",
       "Bash(pnpm add:*)",
-      "Bash(pnpm dev:*)"
+      "Bash(pnpm dev:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(npx:*)"
     ],
     "deny": [],
     "ask": []
