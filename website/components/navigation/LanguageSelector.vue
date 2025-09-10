@@ -124,7 +124,7 @@ const switchLocale = async (newLocale: string, closePopover: () => void) => {
 
   try {
     // Switch locale using Nuxt i18n
-    await setLocale(newLocale)
+    await setLocale(newLocale as 'en' | 'pt')
     
     // Save preference to localStorage for persistence
     const languageCookie = useCookie('i18n_redirected', {
@@ -154,7 +154,7 @@ const switchLocale = async (newLocale: string, closePopover: () => void) => {
 onMounted(() => {
   const savedLocale = useCookie('i18n_redirected')
   if (savedLocale.value && savedLocale.value !== currentLocale.value) {
-    setLocale(savedLocale.value)
+    setLocale(savedLocale.value as 'en' | 'pt')
   }
 })
 

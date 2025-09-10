@@ -91,26 +91,6 @@
           </p>
         </div>
       </div>
-      
-      <!-- Status Information -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-        <div class="flex items-center justify-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
-          <div class="flex items-center space-x-2">
-            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span>{{ $t('common.loading') }}</span>
-          </div>
-          <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
-          <div class="hidden sm:flex items-center space-x-2">
-            <UIcon name="i-heroicons-code-bracket" class="w-4 h-4" />
-            <span>NAV-001 Implementation</span>
-          </div>
-          <div class="hidden md:block text-gray-300 dark:text-gray-600">•</div>
-          <div class="hidden md:flex items-center space-x-2">
-            <UIcon name="i-heroicons-globe-alt" class="w-4 h-4" />
-            <span>{{ currentLocale.toUpperCase() }}</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>

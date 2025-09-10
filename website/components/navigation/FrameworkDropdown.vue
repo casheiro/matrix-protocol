@@ -1,41 +1,28 @@
 <template>
-  <UPopover 
-    mode="hover"
-    :open-delay="100"
-    :close-delay="300"
-    :popper="{ placement: 'bottom-start', offsetDistance: 8 }"
-    :ui="{ 
-      width: 'w-80',
-      background: 'bg-white dark:bg-gray-900',
-      shadow: 'shadow-xl',
-      rounded: 'rounded-lg',
-      ring: 'ring-1 ring-gray-200 dark:ring-gray-700',
-      transition: {
-        enterActiveClass: 'transition duration-200 ease-out',
-        enterFromClass: 'transform scale-95 opacity-0',
-        enterToClass: 'transform scale-100 opacity-100',
-        leaveActiveClass: 'transition duration-75 ease-in',
-        leaveFromClass: 'transform scale-100 opacity-100',
-        leaveToClass: 'transform scale-95 opacity-0'
-      }
-    }"
-    @keydown.escape="closeDropdown"
-  >
+  <div class="relative">
+    <!-- Dropdown Button -->
     <UButton 
       variant="ghost" 
       color="gray"
       trailing-icon="i-heroicons-chevron-down"
       class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md"
       :class="{ 'text-gray-900 dark:text-white': isFrameworksActive }"
-      :aria-expanded="false"
       :aria-haspopup="true"
+      :aria-expanded="isOpen"
       :aria-label="$t('nav.frameworksDropdown')"
+      @click="toggleDropdown"
     >
       {{ $t('nav.frameworks') }}
     </UButton>
 
-    <template #panel="{ close }">
-      <div class="p-4" role="menu" :aria-label="$t('nav.frameworksMenu')">
+    <!-- Dropdown Panel -->
+    <div 
+      v-if="isOpen"
+      class="absolute left-0 top-full mt-2 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg ring-1 ring-gray-200 dark:ring-gray-700 z-50"
+      role="menu" 
+      :aria-label="$t('nav.frameworksMenu')"
+    >
+      <div class="p-4">
         <!-- Dropdown Header -->
         <div class="mb-3">
           <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
@@ -49,17 +36,12 @@
         <!-- Framework List -->
         <div class="space-y-1">
           <NuxtLink
-            v-for="(framework, index) in frameworks"
+            v-for="framework in frameworks"
             :key="framework.key"
             :to="`/frameworks/${framework.key}`"
+            @click="closeDropdown"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-md transition-all duration-300 group focus:outline-none focus:ring-0 focus:bg-gray-50 dark:focus:bg-gray-800 active:scale-[0.98]"
             role="menuitem"
-            :tabindex="0"
-            @click="close"
-            @keydown.enter="navigateToFramework(framework.key, close)"
-            @keydown.space.prevent="navigateToFramework(framework.key, close)"
-            @keydown.arrow-down="focusNext(index)"
-            @keydown.arrow-up="focusPrevious(index)"
           >
             <!-- Framework Icon Container -->
             <div 
@@ -102,7 +84,7 @@
         <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-3">
           <NuxtLink 
             to="/frameworks"
-            @click="close"
+            @click="closeDropdown"
             class="flex items-center justify-center p-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
           >
             {{ $t('frameworks.viewAll') }}
@@ -110,15 +92,16 @@
           </NuxtLink>
         </div>
       </div>
-    </template>
-  </UPopover>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import type { Framework } from '~/types'
-
 // Current route for active state
 const route = useRoute()
+
+// Dropdown state
+const isOpen = ref(false)
 
 // Check if we're in a frameworks-related page
 const isFrameworksActive = computed(() => 
@@ -126,7 +109,7 @@ const isFrameworksActive = computed(() =>
 )
 
 // Frameworks data with official colors and i18n keys
-const frameworks: Framework[] = [
+const frameworks = [
   {
     key: 'mef',
     acronym: 'MEF',
@@ -165,35 +148,27 @@ const frameworks: Framework[] = [
 ]
 
 // Methods
+const toggleDropdown = () => {
+  isOpen.value = !isOpen.value
+}
+
 const closeDropdown = () => {
-  // This will be handled by the UPopover component
+  isOpen.value = false
 }
 
-const navigateToFramework = (key: string, close: () => void) => {
-  navigateTo(`/frameworks/${key}`)
-  close()
-}
-
-const focusNext = (currentIndex: number) => {
-  const nextIndex = (currentIndex + 1) % frameworks.length
-  const nextElement = document.querySelector(`[data-framework-index="${nextIndex}"]`) as HTMLElement
-  nextElement?.focus()
-}
-
-const focusPrevious = (currentIndex: number) => {
-  const prevIndex = currentIndex === 0 ? frameworks.length - 1 : currentIndex - 1
-  const prevElement = document.querySelector(`[data-framework-index="${prevIndex}"]`) as HTMLElement
-  prevElement?.focus()
-}
-
-// Add keyboard navigation support
+// Close dropdown when clicking outside
 onMounted(() => {
-  // Add data attributes for keyboard navigation
-  nextTick(() => {
-    const frameworkLinks = document.querySelectorAll('[role="menuitem"]')
-    frameworkLinks.forEach((link, index) => {
-      link.setAttribute('data-framework-index', index.toString())
-    })
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as Element
+    if (isOpen.value && !target.closest('.relative')) {
+      closeDropdown()
+    }
+  }
+  
+  document.addEventListener('click', handleClickOutside)
+  
+  onUnmounted(() => {
+    document.removeEventListener('click', handleClickOutside)
   })
 })
 </script>
