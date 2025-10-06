@@ -14,7 +14,7 @@ tags:
   - arbitragem
 draft: false
 category: framework
-version: "0.0.1"
+version: "0.0.1-beta"
 status: "Ativo"
 date: "2025-10-05"
 head:

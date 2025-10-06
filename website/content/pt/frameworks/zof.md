@@ -64,6 +64,20 @@ Referências adicionais no **MOC (Matrix Ontology Catalog)** para taxonomias org
 
 ## 3. Conceitos Centrais
 
+### O Padrão Universal
+
+Todo workflow ZOF segue este padrão fundamental:
+
+**EVENTO → CONSULTAR ORACLE → DECISÃO → AÇÃO → AVALIAR SE VALE ENSINAR → (ENSINAR)**
+
+Este padrão incorpora a mentalidade Oracle-first:
+1. Algo acontece (EVENTO)
+2. Consultar conhecimento existente (CONSULTAR ORACLE)
+3. Tomar decisão informada (DECISÃO)
+4. Executar ação (AÇÃO)
+5. Avaliar se novo conhecimento foi gerado (AVALIAR)
+6. Condicionalmente enriquecer Oracle (ENSINAR)
+
 ### Essência do ZOF em 3 Conceitos
 
 **1. Fluxo Pensado como Estado**

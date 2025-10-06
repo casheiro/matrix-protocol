@@ -9,7 +9,7 @@ tags:
   - definições
 draft: false
 category: glossary
-version: "0.0.1"
+version: "0.0.1-beta"
 status: "Ativo"
 date: "2025-01-28"
 head:

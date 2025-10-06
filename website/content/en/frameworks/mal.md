@@ -14,7 +14,7 @@ tags:
   - arbitration
 draft: false
 category: framework
-version: "0.0.1"
+version: "0.0.1-beta"
 status: "Active"
 date: "2025-10-05"
 head:

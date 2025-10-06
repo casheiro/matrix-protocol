@@ -92,7 +92,53 @@ Every UKI MUST contain:
 
 ---
 
-## 5. Interoperability
+## 5. UKI Lifecycle (Normative)
+
+### 5.1 Canonical States
+
+UKIs progress through defined lifecycle states:
+
+- **Draft** (version 0.x.x): Initial creation, no validation required
+- **InReview** (version 0.x.x): Under expert review
+- **Validated** (version 0.x.x): Expert-approved, not yet published
+- **Published** (version 1.x.x+): Officially sanctioned, immutable
+- **Deprecated**: Superseded by newer UKI, replacement required
+- **Archived**: Historical record, read-only
+
+### 5.2 State Transitions
+
+#### Draft → In Review
+- **Trigger**: Submission for review by author
+- **Validations**: Schema compliance, MOC reference validity
+- **Authority**: Any team member (based on MOC scope_ref)
+
+#### In Review → Validated
+- **Trigger**: Approval by designated reviewers
+- **Validations**: Technically correct content, strategic alignment
+- **Authority**: Defined by organizational MOC (scope_ref)
+
+#### Validated → Published
+- **Trigger**: Promotion by domain responsible
+- **Validations**: Organizational impact assessed, dependencies resolved
+- **Authority**: domain_ref + maturity_ref in MOC
+
+#### Published → Deprecated
+- **Trigger**: Knowledge obsolete or replaced
+- **Validations**: Migration plan, dependent UKIs notified
+- **Authority**: Same as Published state
+
+### 5.3 Versioning Rules by State
+
+- **Draft**: 0.x.x (free increment)
+- **In Review**: 0.x.x (frozen during review)
+- **Validated**: Beta (first stable version)
+- **Published**: 1.x.x, 2.x.x... (semantic versioning)
+- **Deprecated**: Version frozen
+- **Archived**: Final version preserved
+
+---
+
+## 6. Interoperability
 
 MEF integrates with all Matrix Protocol frameworks through structured knowledge exchange and validation:
 
@@ -107,7 +153,7 @@ See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md
 
 ---
 
-## 6. Conventions and Examples
+## 7. Conventions and Examples
 
 All examples in this document are **illustrative only** and do not define normative behavior.  
 Normative semantics (scopes, governance, archetypes, enrich criteria) are always derived from the **MOC (Matrix Ontology Catalog)** of each organization.  
@@ -115,7 +161,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ---
 
-## 7. Illustrative Examples (Appendix)
+## 8. Illustrative Examples (Appendix)
 
 > **Example (Informative, MOC-dependent)**
 
@@ -301,7 +347,7 @@ knowledge_sources:
 
 ---
 
-## 8. Cross-References
+## 9. Cross-References
 
 ### Framework Dependencies
 - [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md) <!-- Interactive version: https://matrix-protocol.org/protocol -->

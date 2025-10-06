@@ -80,7 +80,53 @@ Toda UKI DEVE conter:
 
 ---
 
-## 5. Interoperabilidade
+## 5. Ciclo de Vida UKI (Normativo)
+
+### 5.1 Estados Canônicos
+
+UKIs progridem através de estados de ciclo de vida definidos:
+
+- **Rascunho** (versão 0.x.x): Criação inicial, sem validação necessária
+- **EmRevisão** (versão 0.x.x): Sob revisão de especialistas
+- **Validado** (versão 0.x.x): Aprovado por especialistas, ainda não publicado
+- **Publicado** (versão 1.x.x+): Oficialmente sancionado, imutável
+- **Deprecado**: Substituído por UKI mais recente, substituição obrigatória
+- **Arquivado**: Registro histórico, somente leitura
+
+### 5.2 Transições de Estado
+
+#### Rascunho → Em Revisão
+- **Gatilho**: Submissão para revisão pelo autor
+- **Validações**: Conformidade com esquema, validade das referências MOC
+- **Autoridade**: Qualquer membro da equipe (baseado no scope_ref do MOC)
+
+#### Em Revisão → Validado
+- **Gatilho**: Aprovação pelos revisores designados
+- **Validações**: Conteúdo tecnicamente correto, alinhamento estratégico
+- **Autoridade**: Definido pelo MOC organizacional (scope_ref)
+
+#### Validado → Publicado
+- **Gatilho**: Promoção pelo responsável do domínio
+- **Validações**: Impacto organizacional avaliado, dependências resolvidas
+- **Autoridade**: domain_ref + maturity_ref no MOC
+
+#### Publicado → Deprecado
+- **Gatilho**: Conhecimento obsoleto ou substituído
+- **Validações**: Plano de migração, UKIs dependentes notificados
+- **Autoridade**: Mesma do estado Publicado
+
+### 5.3 Regras de Versionamento por Estado
+
+- **Rascunho**: 0.x.x (incremento livre)
+- **Em Revisão**: 0.x.x (congelado durante revisão)
+- **Validado**: Beta (primeira versão estável)
+- **Publicado**: 1.x.x, 2.x.x... (versionamento semântico)
+- **Deprecado**: Versão congelada
+- **Arquivado**: Versão final preservada
+
+---
+
+## 6. Interoperabilidade
 
 - **MOC (Matrix Ontology Catalog)**: Define taxonomias organizacionais referenciadas pelos campos *_ref
 - **MEP (Matrix Epistemic Principle)**: Fornece fundamentos epistemológicos para versionamento e promoção
@@ -89,7 +135,7 @@ Toda UKI DEVE conter:
 
 ---
 
-## 6. Convenções e Exemplos
+## 7. Convenções e Exemplos
 
 Todos os exemplos neste documento são **meramente ilustrativos** e não definem comportamento normativo.  
 A semântica normativa (escopos, governança, arquétipos, critérios de enriquecimento) é sempre derivada do **MOC (Matrix Ontology Catalog)** de cada organização.  
@@ -97,7 +143,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ---
 
-## 7. Exemplos Ilustrativos (Apêndice)
+## 8. Exemplos Ilustrativos (Apêndice)
 
 > **Exemplo (Informativo, Dependente do MOC)**
 
@@ -163,7 +209,7 @@ relationships:
 
 ---
 
-## 8. Referências Cruzadas
+## 9. Referências Cruzadas
 
 - [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
 - [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  

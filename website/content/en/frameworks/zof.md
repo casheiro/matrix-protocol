@@ -59,6 +59,20 @@ Cross-reference to **MOC (Matrix Ontology Catalog)** for organization-specific t
 
 ## 3. Core Concepts
 
+### The Universal Pattern
+
+Every ZOF workflow follows this fundamental pattern:
+
+**EVENT → QUERY ORACLE → DECISION → ACTION → EVALUATE IF WORTH TEACHING → (TEACH)**
+
+This pattern embodies the Oracle-first mindset:
+1. Something happens (EVENT)
+2. Consult existing knowledge (QUERY ORACLE)
+3. Make informed decision (DECISION)
+4. Execute action (ACTION)
+5. Assess if new knowledge was generated (EVALUATE)
+6. Conditionally enrich Oracle (TEACH)
+
 ### ZOF Essence in 3 Concepts
 
 **1. Flow Thought as State**
