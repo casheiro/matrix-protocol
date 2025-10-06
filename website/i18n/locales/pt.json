@@ -63,7 +63,7 @@
       "implementation": "Guia de Implementação"
     },
     "unifiedStructure": {
-      "title": "Estrutura Unificada MOC v1.0",
+      "title": "Estrutura Unificada MOC v0.0.1-beta",
       "normative": "Normativa",
       "description": "Framework base que garante consistência e escalabilidade entre todos os templates organizacionais, preservando características específicas de cada porte.",
       "hierarchies": {
@@ -73,7 +73,7 @@
         "evaluation": "Critérios de enriquecimento"
       },
       "progression": "Caminho de Evolução Organizacional",
-      "conformity": "Unified v1.0",
+      "conformity": "Unified v0.0.1-beta",
       "download": "Download Estrutura Unificada"
     }
   },

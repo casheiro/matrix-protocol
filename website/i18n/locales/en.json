@@ -63,7 +63,7 @@
       "implementation": "Implementation Guide"
     },
     "unifiedStructure": {
-      "title": "MOC Unified Structure v1.0",
+      "title": "MOC Unified Structure v0.0.1-beta",
       "normative": "Normative",
       "description": "Base framework that ensures consistency and scalability across all organizational templates while preserving size-specific characteristics.",
       "hierarchies": {
@@ -73,7 +73,7 @@
         "evaluation": "Enrichment criteria"
       },
       "progression": "Organizational Evolution Path",
-      "conformity": "Unified v1.0",
+      "conformity": "Unified v0.0.1-beta",
       "download": "Download Unified Structure"
     }
   },

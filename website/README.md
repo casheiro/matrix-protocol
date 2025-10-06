@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O **Matrix Protocol Website** é a plataforma oficial de documentação e divulgação do Matrix Protocol Beta - um framework abrangente para colaboração humano-IA através de estruturas de conhecimento e workflows orquestrados. O site centraliza toda a documentação técnica, guias de implementação e recursos relacionados ao protocolo.
+O **Matrix Protocol Website** é a plataforma oficial de documentação e divulgação do Matrix Protocol - um framework abrangente para colaboração humano-IA através de estruturas de conhecimento e workflows orquestrados. O site centraliza toda a documentação técnica, guias de implementação e recursos relacionados ao protocolo.
 
 ### Sobre o Matrix Protocol
 
@@ -29,14 +29,6 @@ O Matrix Protocol é um framework integral para colaboração humano-IA através
 - **[📋 Índice Completo](./docs/INDEX.md)** - Mapa de toda a documentação disponível
 - **[📖 Regras de Documentação](./docs/REGRAS_DOCUMENTACAO.md)** - Diretrizes obrigatórias
 - **[🏗️ Migração v1→v2](./docs/migracao/)** - Documentação completa da migração
-
-### Categorias de Documentação
-
-- **🏛️ Arquitetura**: Design e estrutura do sistema (planejado)
-- **⚙️ Configuração**: Setup e configurações (planejado)  
-- **💻 Desenvolvimento**: Padrões e processos de dev (planejado)
-- **🏗️ Migração**: Processo de migração v1→v2 (ativo)
-- **📚 Referências**: APIs, glossários e troubleshooting (planejado)
 
 > ⚠️ **Importante**: Toda documentação técnica deve ser criada exclusivamente em `/docs`. Consulte as [regras de documentação](./docs/REGRAS_DOCUMENTACAO.md) antes de contribuir.
 

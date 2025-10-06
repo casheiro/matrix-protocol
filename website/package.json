@@ -1,7 +1,7 @@
 {
   "name": "matrix-protocol-website-v2",
   "description": "Official website for the Matrix Protocol Beta - A comprehensive framework for human-AI collaboration",
-  "version": "0.0.1",
+  "version": "0.0.1-beta",
   "type": "module",
   "private": true,
   "scripts": {
