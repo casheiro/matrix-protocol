@@ -5,7 +5,7 @@
 **Date:** January 2025  
 **Protocol:** Matrix Protocol (semantic protocol for human-AI collaboration)
 
-> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, see the [Complete Manual](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md) (4,600+ lines, 15 chapters).
+> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, see the [Complete Manual](../manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md) (4,600+ lines, 15 chapters).
 
 > 🎯 **Objective**: Provide technical specifications, configuration examples and implementation guides for the semantic frameworks that compose the Matrix Protocol (MEF, ZOF, MAL, OIF).
 

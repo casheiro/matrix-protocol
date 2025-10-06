@@ -1,4 +1,57 @@
-# Changelog
+# Changelog / Registro de Mudanças
+
+## Português 🇧🇷
+
+Todas as mudanças notáveis do Matrix Protocol serão documentadas neste arquivo.
+
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+e este projeto adere ao [Versionamento Semântico](https://semver.org/spec/v2.0.0.html).
+
+## [0.0.1-beta] - 2025-10-05
+
+### Decisões Fundamentais
+
+- **Versão v0.0.1 Beta estabelecida** para todo o protocolo
+- **Justificativa:** Protocolo ainda não implementado em produção, permite mudanças antes da v1.0.0
+- **Status do MAL corrigido** de "Rascunho" para "Ativo" - especificação está completa
+- **Formato UKI padronizado:** `uki:[scope_ref]:[type_ref]:[slug]` (scope primeiro, não domain primeiro)
+- **Repositórios separados:** Estratégia de sincronização entre repositório principal e website
+
+### Adicionado
+
+#### Estrutura de Diretórios
+- **`/docs/`** - Documentação unificada como fonte única da verdade
+  - `specifications/en/` - Especificações em inglês (10 arquivos)
+  - `specifications/pt/` - Especificações em português (10 arquivos)
+  - `guides/` - Guias práticos de implementação
+  - `visualizations/` - Diagramas técnicos e fluxos
+  - `templates/` - Templates MOC e UKI
+  - `examples/` - Exemplos práticos (knowledge-comparison)
+
+#### Guias Práticos (`/docs/guides/`)
+- `QUICK_START.md` - Implementação em 3 passos (2-4 horas)
+- `IMPLEMENTATION_ROADMAP.md` - Roadmap de 6 fases (6-18 meses)
+- `COMMON_PITFALLS.md` - Erros comuns e soluções
+
+#### Visualizações (`/docs/visualizations/`)
+- `mal-arbitration-flow.md` - Fluxo completo de arbitragem MAL
+- `moc-hierarchies.md` - Estrutura das 4 hierarquias MOC
+- `oif-access-control.md` - Controle de acesso OIF
+- `zof-canonical-states.md` - Estados canônicos ZOF
+
+#### Templates (`/docs/templates/`)
+- **MOC Templates:** Modelos organizacionais por porte (startup, scaleup, corporation, enterprise)
+- **UKI Templates:** Modelos para diferentes tipos de conhecimento
+
+### Melhorado
+
+- **Organização por idioma:** Especificações reorganizadas em `en/` e `pt/` para melhor manutenibilidade
+- **Referências cruzadas:** 59 referências atualizadas para nova estrutura
+- **Documentação:** Guias completos de implementação e uso
+
+---
+
+## English 🇺🇸
 
 All notable changes to the Matrix Protocol will be documented in this file.
 

@@ -9,34 +9,34 @@
 
 | Repository File | Website URL | Content Type | Sync Status |
 |----------------|-------------|--------------|-------------|
-| `/MATRIX_PROTOCOL.md` | `/protocol` | Main Specification | ✅ Must Sync |
-| `/MATRIX_PROTOCOL_PT.md` | `/pt/protocol` | Main Specification (PT) | ✅ Must Sync |
-| `/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md` | `/mep` | Epistemological Manifesto | ✅ Must Sync |
-| `/MEP_MATRIX_EPISTEMIC_PRINCIPLE_PT.md` | `/pt/mep` | Epistemological Manifesto (PT) | ✅ Must Sync |
-| `/MEF_MATRIX_EMBEDDING_FRAMEWORK.md` | `/frameworks/mef` | Framework Specification | ✅ Must Sync |
-| `/MEF_MATRIX_EMBEDDING_FRAMEWORK_PT.md` | `/pt/frameworks/mef` | Framework Specification (PT) | ✅ Must Sync |
-| `/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md` | `/frameworks/zof` | Framework Specification | ✅ Must Sync |
-| `/ZOF_ZION_ORCHESTRATION_FRAMEWORK_PT.md` | `/pt/frameworks/zof` | Framework Specification (PT) | ✅ Must Sync |
-| `/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md` | `/frameworks/oif` | Framework Specification | ✅ Must Sync |
-| `/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK_PT.md` | `/pt/frameworks/oif` | Framework Specification (PT) | ✅ Must Sync |
-| `/MOC_MATRIX_ONTOLOGY_CATALOG.md` | `/frameworks/moc` | Framework Specification | ✅ Must Sync |
-| `/MOC_MATRIX_ONTOLOGY_CATALOG_PT.md` | `/pt/frameworks/moc` | Framework Specification (PT) | ✅ Must Sync |
-| `/MAL_MATRIX_ARBITER_LAYER.md` | `/frameworks/mal` | Framework Specification | ✅ Must Sync |
-| `/MAL_MATRIX_ARBITER_LAYER_PT.md` | `/pt/frameworks/mal` | Framework Specification (PT) | ✅ Must Sync |
-| `/MATRIX_PROTOCOL_GLOSSARY.md` | `/glossary` | Glossary | ✅ Must Sync |
-| `/MATRIX_PROTOCOL_GLOSSARY_PT.md` | `/pt/glossary` | Glossary (PT) | ✅ Must Sync |
-| `/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md` | `/integration` | Integration Diagrams | ✅ Must Sync |
-| `/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md` | `/pt/integration` | Integration Diagrams (PT) | ✅ Must Sync |
-| `/Ontology_MEF_Support.md` | `/frameworks/mef-ontology` | Support Ontology | ✅ Must Sync |
-| `/Ontology_MEF_Support_PT.md` | `/pt/frameworks/mef-ontology` | Support Ontology (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MATRIX_PROTOCOL.md` | `/protocol` | Main Specification | ✅ Must Sync |
+| `/docs/specifications/pt/MATRIX_PROTOCOL.md` | `/pt/protocol` | Main Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md` | `/mep` | Epistemological Manifesto | ✅ Must Sync |
+| `/docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md` | `/pt/mep` | Epistemological Manifesto (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MEF_MATRIX_EMBEDDING_FRAMEWORK.md` | `/frameworks/mef` | Framework Specification | ✅ Must Sync |
+| `/docs/specifications/pt/MEF_MATRIX_EMBEDDING_FRAMEWORK.md` | `/pt/frameworks/mef` | Framework Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md` | `/frameworks/zof` | Framework Specification | ✅ Must Sync |
+| `/docs/specifications/pt/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md` | `/pt/frameworks/zof` | Framework Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md` | `/frameworks/oif` | Framework Specification | ✅ Must Sync |
+| `/docs/specifications/pt/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md` | `/pt/frameworks/oif` | Framework Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MOC_MATRIX_ONTOLOGY_CATALOG.md` | `/frameworks/moc` | Framework Specification | ✅ Must Sync |
+| `/docs/specifications/pt/MOC_MATRIX_ONTOLOGY_CATALOG.md` | `/pt/frameworks/moc` | Framework Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MAL_MATRIX_ARBITER_LAYER.md` | `/frameworks/mal` | Framework Specification | ✅ Must Sync |
+| `/docs/specifications/pt/MAL_MATRIX_ARBITER_LAYER.md` | `/pt/frameworks/mal` | Framework Specification (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MATRIX_PROTOCOL_GLOSSARY.md` | `/glossary` | Glossary | ✅ Must Sync |
+| `/docs/specifications/pt/MATRIX_PROTOCOL_GLOSSARY.md` | `/pt/glossary` | Glossary (PT) | ✅ Must Sync |
+| `/docs/specifications/en/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md` | `/integration` | Integration Diagrams | ✅ Must Sync |
+| `/docs/specifications/pt/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md` | `/pt/integration` | Integration Diagrams (PT) | ✅ Must Sync |
+| `/docs/specifications/en/Ontology_MEF_Support.md` | `/frameworks/mef-ontology` | Support Ontology | ✅ Must Sync |
+| `/docs/specifications/pt/Ontology_MEF_Support.md` | `/pt/frameworks/mef-ontology` | Support Ontology (PT) | ✅ Must Sync |
 
 ## Guides and Documentation Mapping
 
 | Repository File | Website URL | Content Type | Sync Status |
 |----------------|-------------|--------------|-------------|
-| `/guides/QUICK_START.md` | `/quickstart` | Getting Started Guide | 🔄 Can Diverge |
-| `/guides/IMPLEMENTATION_ROADMAP.md` | `/implementation` | Implementation Guide | 🔄 Can Diverge |
-| `/guides/COMMON_PITFALLS.md` | `/implementation#common-pitfalls` | Implementation Tips | 🔄 Can Diverge |
+| `/docs/guides/QUICK_START.md` | `/quickstart` | Getting Started Guide | 🔄 Can Diverge |
+| `/docs/guides/IMPLEMENTATION_ROADMAP.md` | `/implementation` | Implementation Guide | 🔄 Can Diverge |
+| `/docs/guides/COMMON_PITFALLS.md` | `/implementation#common-pitfalls` | Implementation Tips | 🔄 Can Diverge |
 | `/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md` | `/downloads/implementation-guide` | Complete Manual | ✅ Must Sync |
 | `/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md` | `/downloads/implementation-guide-pt` | Complete Manual (PT) | ✅ Must Sync |
 
@@ -82,7 +82,7 @@ See [Section 5: UKI Lifecycle](./MEF_MATRIX_EMBEDDING_FRAMEWORK.md#5-uki-lifecyc
 See [MOC Example](./examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml)
 
 # Guide references
-See [Quick Start Guide](./guides/QUICK_START.md)
+See [Quick Start Guide](./docs/guides/QUICK_START.md)
 
 # Template references
 See [MOC Templates](./templates/moc/startup.yaml)

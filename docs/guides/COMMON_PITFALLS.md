@@ -289,7 +289,7 @@ Phase 3: Legacy deprecation (3 months)
 ### **Templates and Examples**
 - [Organization-specific MOC templates](/templates/moc/)
 - [UKI structure templates](/templates/uki/)
-- [Real implementation examples](/examples/knowledge-comparison/)
+- [Real implementation examples](../examples/knowledge-comparison/)
 
 ### **Early Warning Indicators**
 - Low adoption rates (<60% after 3 months)

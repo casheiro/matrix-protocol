@@ -364,6 +364,6 @@ knowledge_sources:
 - [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
 
 ### Examples and Templates
-- [MOC Squad Payments Example](./examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml) <!-- Download: https://matrix-protocol.org/downloads/examples/moc-example -->
-- [UKI Examples](./examples/knowledge-comparison/structured/) <!-- Download: https://matrix-protocol.org/downloads/examples -->
+- [MOC Squad Payments Example](../examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml) <!-- Download: https://matrix-protocol.org/downloads/examples/moc-example -->
+- [UKI Examples](../examples/knowledge-comparison/structured/) <!-- Download: https://matrix-protocol.org/downloads/examples -->
 - [UKI Templates](./templates/uki/) <!-- Download: https://matrix-protocol.org/downloads/templates -->  

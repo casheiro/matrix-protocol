@@ -335,12 +335,12 @@ The next step **can only be taken by you**.
 - [Ontology MEF Support](Ontology_MEF_Support.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
 
 ### Practical Resources
-- [Quick Start Guide](./guides/QUICK_START.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
-- [Implementation Roadmap](./guides/IMPLEMENTATION_ROADMAP.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
-- [Common Pitfalls](./guides/COMMON_PITFALLS.md) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
+- [Quick Start Guide](../guides/QUICK_START.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
+- [Implementation Roadmap](../guides/IMPLEMENTATION_ROADMAP.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
+- [Common Pitfalls](../guides/COMMON_PITFALLS.md) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
 
 ### Examples and Templates
-- [Knowledge Comparison Examples](./examples/knowledge-comparison/) <!-- Download examples: https://matrix-protocol.org/downloads/examples -->
+- [Knowledge Comparison Examples](../examples/knowledge-comparison/) <!-- Download examples: https://matrix-protocol.org/downloads/examples -->
 - [MOC Templates](./templates/moc/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
 - [UKI Templates](./templates/uki/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
 

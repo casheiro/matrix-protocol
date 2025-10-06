@@ -28,9 +28,9 @@ See [EvaluateForEnrich Checkpoint](./ZOF_ZION_ORCHESTRATION_FRAMEWORK.md#evaluat
 #### Directory Structure References
 ```markdown
 # Guides references
-See [Quick Start Guide](./guides/QUICK_START.md)
-See [Implementation Roadmap](./guides/IMPLEMENTATION_ROADMAP.md)
-See [Common Pitfalls](./guides/COMMON_PITFALLS.md)
+See [Quick Start Guide](./docs/guides/QUICK_START.md)
+See [Implementation Roadmap](./docs/guides/IMPLEMENTATION_ROADMAP.md)
+See [Common Pitfalls](./docs/guides/COMMON_PITFALLS.md)
 
 # Examples references
 See [Knowledge Comparison Examples](./examples/knowledge-comparison/)
@@ -216,7 +216,7 @@ View [UKI example](https://github.com/user/matrix-protocol/blob/main/examples/kn
 ### ❌ Broken Internal Links
 ```markdown
 # WRONG - Non-existent files
-[Non-existent Guide](./guides/NON_EXISTENT.md)
+[Non-existent Guide](./docs/guides/NON_EXISTENT.md)
 
 # WRONG - Incorrect section anchors
 [Wrong Section](./MEF_MATRIX_EMBEDDING_FRAMEWORK.md#non-existent-section)
