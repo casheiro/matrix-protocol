@@ -1,11 +1,11 @@
 # Decision Record UKI Template
 # Specialized template for decision documentation
-# Based on MEF v1.0.0 Specification
+# Based on MEF v0.0.1-beta Specification
 
 # --- Mandatory Header ---
 schema: "1.0"
 ontology_reference: "[moc-reference]"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # --- Identity and Scope ---
 id: uki:[scope_ref]:decision:[decision-slug]

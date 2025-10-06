@@ -36,7 +36,7 @@ moc_version: "1.0"
 organization: "[STARTUP_NAME]"
 created_date: "[YYYY-MM-DD]"
 last_modified: "[YYYY-MM-DD]"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # Startup-optimized: 4 essential hierarchies only
 hierarchies:
@@ -286,7 +286,7 @@ moc_version: "1.0"
 organization: "[SCALEUP_NAME]"
 created_date: "[YYYY-MM-DD]"
 last_modified: "[YYYY-MM-DD]"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # Scale-up optimized: 5 hierarchies with growth flexibility
 hierarchies:
@@ -653,7 +653,7 @@ moc_version: "1.0"
 organization: "[ENTERPRISE_NAME]"
 created_date: "[YYYY-MM-DD]"
 last_modified: "[YYYY-MM-DD]"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # Enterprise-grade: 6 comprehensive hierarchies
 hierarchies:
@@ -1169,7 +1169,7 @@ moc_version: "1.0"
 organization: "[CORPORATION_NAME]"
 created_date: "[YYYY-MM-DD]"
 last_modified: "[YYYY-MM-DD]" 
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # Corporate-scale: 7+ hierarchies with maximum governance
 hierarchies:

@@ -152,7 +152,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 # --- Exemplo Ilustrativo ---
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 id: uki:technical:pattern:jwt-authentication  # EXEMPLO
 title: "Padrão de Autenticação JWT"

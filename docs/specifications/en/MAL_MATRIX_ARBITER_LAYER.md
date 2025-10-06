@@ -233,7 +233,7 @@ decision_record:
   
   audit:
     decided_at: "2025-08-26T15:45:30Z"
-    decided_by: "MAL:v1.0.0"
+    decided_by: "MAL:v0.0.1-beta"
     timeout_used_ms: 150
     precedence_policy: "moc:arbitration:security_conflicts"
   
@@ -304,7 +304,7 @@ decision_record:
   
   audit:
     decided_at: "2025-08-26T16:20:30Z"
-    decided_by: "MAL:v1.0.0"
+    decided_by: "MAL:v0.0.1-beta"
     timeout_used_ms: 75
 ```
 
@@ -368,7 +368,7 @@ decision_record:
   
   audit:
     decided_at: "2025-08-26T17:10:45Z"
-    decided_by: "MAL:v1.0.0"
+    decided_by: "MAL:v0.0.1-beta"
     timeout_used_ms: 200
 ```
 

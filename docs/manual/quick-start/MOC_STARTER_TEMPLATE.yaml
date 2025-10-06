@@ -6,7 +6,7 @@ moc_version: "1.0"
 organization: "[YOUR_ORGANIZATION_NAME]"
 created_date: "[YYYY-MM-DD]"
 last_modified: "[YYYY-MM-DD]"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # =============================================================================
 # STARTUP TEMPLATE (5-50 people) - Use this for early-stage organizations

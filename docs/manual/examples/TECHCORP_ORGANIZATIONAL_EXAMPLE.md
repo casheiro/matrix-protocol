@@ -227,7 +227,7 @@ moc_version: "1.0"
 organization: "TechCorp Solutions"
 created_date: "2024-01-15"
 last_modified: "2024-03-30"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 hierarchies:
   scope:

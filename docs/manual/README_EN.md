@@ -1,4 +1,4 @@
-# Matrix Protocol Implementation Manual v1.0.0
+# Matrix Protocol Implementation Manual v0.0.1-beta
 **Practical Guide Based on Real Experience**
 
 > 🎯 **Purpose**: Consolidated manual with real and functional content for implementing the Matrix Protocol in organizations of any size.
@@ -187,7 +187,7 @@ This manual is based on real experience and continues evolving. If you implement
 - All examples and templates must be organizationally tested
 - Focus on semantic protocol implementation, not business metrics
 - Maintain bilingual consistency (Portuguese/English)
-- Validate against Matrix Protocol v1.0.0 specification
+- Validate against Matrix Protocol v0.0.1-beta specification
 
 ---
 
@@ -207,4 +207,4 @@ This manual is based on real experience and continues evolving. If you implement
 
 ---
 
-**Matrix Protocol Implementation Manual v1.0.0**: *Where epistemology meets engineering for human-AI collaboration.*
+**Matrix Protocol Implementation Manual v0.0.1-beta**: *Where epistemology meets engineering for human-AI collaboration.*

@@ -435,7 +435,7 @@ moc_version: "1.0"
 organization: "TechCorp_Early_Stage"
 created_date: "2024-01-15"
 last_modified: "2024-01-15" 
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # Startup: 4 hierarquias essenciais apenas
 hierarchies:
@@ -2308,9 +2308,9 @@ prevention_effectiveness:
 
 ### **7.1 Estrutura UKI e Versionamento Semântico**
 
-#### **Estrutura UKI Completa (MEF v1.0.0)**
+#### **Estrutura UKI Completa (MEF v0.0.1-beta)**
 
-Baseada na experiência TechCorp, a estrutura UKI segue rigorosamente a especificação MEF v1.0.0:
+Baseada na experiência TechCorp, a estrutura UKI segue rigorosamente a especificação MEF v0.0.1-beta:
 
 ```yaml
 # --- Cabeçalho Obrigatório ---
@@ -4603,6 +4603,6 @@ success_metrics:
 
 ---
 
-**Manual Técnico de Implementação do Matrix Protocol v1.0.0**
+**Manual Técnico de Implementação do Matrix Protocol v0.0.1-beta**
 
 *Protocolo semântico para colaboração humano-IA - Exemplos ilustrativos baseados em organização hipotética*

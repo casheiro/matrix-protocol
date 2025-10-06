@@ -1,11 +1,11 @@
 # Basic UKI Template - Ready to Use
-# Based on MEF v1.0.0 Specification
+# Based on MEF v0.0.1-beta Specification
 # Complete template with all required and recommended fields
 
 # --- Mandatory Header ---
 schema: "1.0"
 ontology_reference: "[moc-reference]"  # Points to organizational MOC
-version: "1.0.0"
+version: "0.0.1-beta"
 
 # --- Identity and Scope ---
 id: uki:[scope_ref]:[type_ref]:[slug-id]  # MOC-compliant format

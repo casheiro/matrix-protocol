@@ -1,6 +1,6 @@
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 id: uki:squad-payments:business_rule:chargeback-management-006
 title: "Gestão de Chargebacks e Contestações"

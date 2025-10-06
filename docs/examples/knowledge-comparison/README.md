@@ -18,7 +18,7 @@ Demonstrar como o MEF transforma conhecimento caótico e disperso em:
 
 ## 🏗️ Estrutura Foundacional: MOC (Matrix Ontology Catalog)
 
-### `MOC_SQUAD_PAYMENTS.yaml` - Ontologia Organizacional (MOC v1.0.0)
+### `MOC_SQUAD_PAYMENTS.yaml` - Ontologia Organizacional (MOC v0.0.1-beta)
 
 Antes de qualquer UKI ser criado, o **Matrix Ontology Catalog (MOC)** define a taxonomia organizacional seguindo a especificação oficial:
 
@@ -26,7 +26,7 @@ Antes de qualquer UKI ser criado, o **Matrix Ontology Catalog (MOC)** define a t
 ```yaml
 moc_version: "1.0"
 organization: "Example E-commerce Company" 
-version: "1.0.0"
+version: "0.0.1-beta"
 
 hierarchies:
   scope:
@@ -70,7 +70,7 @@ maturity_ref: validated      # → hierarchies.maturity.nodes[id="validated"]
 
 ### 🎯 Por Que o MOC é Fundamental
 
-1. **Especificação Oficial:** Implementa exatamente MOC v1.0.0 com `hierarchies` → `nodes` → `governance`
+1. **Especificação Oficial:** Implementa exatamente MOC v0.0.1-beta com `hierarchies` → `nodes` → `governance`
 2. **Referências Válidas:** Todos os `*_ref` dos UKIs apontam para `id` existentes no MOC
 3. **Governança Estruturada:** Cada node define autoridade, visibilidade e critérios de promoção
 4. **Epistemologia Aplicada:** Maturity levels implementam princípios MEP de estratificação

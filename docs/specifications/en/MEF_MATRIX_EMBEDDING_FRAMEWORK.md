@@ -170,7 +170,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 # --- Illustrative Example ---
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 id: uki:technical:pattern:jwt-authentication  # EXAMPLE - org defines taxonomy
 title: "JWT Authentication Pattern"

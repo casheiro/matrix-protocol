@@ -216,7 +216,7 @@ moc_version: "1.0"
 organization: "Example E-commerce Company"
 created_date: "2024-03-25"
 last_modified: "2024-03-25"
-version: "1.0.0"
+version: "0.0.1-beta"
 
 hierarchies:
   scope:

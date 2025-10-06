@@ -82,4 +82,4 @@ When contributing to the documentation:
 
 ---
 
-**Matrix Protocol v1.0.0** - Single Source of Truth Documentation
+**Matrix Protocol v0.0.1-beta** - Single Source of Truth Documentation
