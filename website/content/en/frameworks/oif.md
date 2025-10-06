@@ -1,1 +1,0 @@
-../../../../docs/specifications/en/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md

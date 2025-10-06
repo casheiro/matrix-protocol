@@ -46,7 +46,7 @@ const { data, error, pending, refresh } = await useAsyncData(
       
       console.log('🔍 Querying collection:', locale, 'path:', protocolPath)
       
-      // First, try to get all content from collection to debug
+      // First, try to get all content from collection to debug  
       const allContent = await queryCollection(locale).all()
       console.log('📋 All content in collection:', allContent?.length || 0, 'items')
       if (allContent?.length > 0) {

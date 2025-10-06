@@ -1,1 +1,0 @@
-../../../../docs/specifications/pt/MOC_MATRIX_ONTOLOGY_CATALOG.md

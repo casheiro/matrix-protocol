@@ -1,1 +1,0 @@
-../../../../docs/specifications/en/MATRIX_PROTOCOL_GLOSSARY.md

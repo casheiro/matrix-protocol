@@ -24,7 +24,11 @@
       "Bash(tree:*)",
       "Bash(chmod:*)",
       "Bash(./scripts/check-sync.sh:*)",
-      "Bash(ln:*)"
+      "Bash(ln:*)",
+      "WebSearch",
+      "Bash(npm run dev:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:content.nuxt.com)"
     ],
     "deny": [],
     "ask": [],
