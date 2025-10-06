@@ -16,18 +16,6 @@ export default defineNuxtConfig({
     experimental: {
       sqliteConnector: 'native' // usa node:sqlite (Node >= 22.5)
     },
-    // Configure content source to read from unified docs directory
-    sources: {
-      docs: {
-        driver: 'fs',
-        base: '../docs'
-      },
-      // Keep local content for website-specific pages
-      content: {
-        driver: 'fs',
-        base: './content'
-      }
-    },
     highlight: {
       theme: 'github-dark',
       preload: ['yaml', 'javascript', 'typescript', 'bash', 'json', 'markdown', 'vue', 'css', 'html']

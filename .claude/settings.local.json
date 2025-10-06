@@ -23,7 +23,8 @@
       "Bash(git config:*)",
       "Bash(tree:*)",
       "Bash(chmod:*)",
-      "Bash(./scripts/check-sync.sh:*)"
+      "Bash(./scripts/check-sync.sh:*)",
+      "Bash(ln:*)"
     ],
     "deny": [],
     "ask": [],

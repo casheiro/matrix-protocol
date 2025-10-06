@@ -1,0 +1,1 @@
+../../../../docs/specifications/pt/Ontology_MEF_Support.md

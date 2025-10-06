@@ -1,0 +1,1 @@
+../../../../docs/specifications/pt/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md

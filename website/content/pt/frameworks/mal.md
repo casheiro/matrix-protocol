@@ -1,0 +1,1 @@
+../../../../docs/specifications/pt/MAL_MATRIX_ARBITER_LAYER.md

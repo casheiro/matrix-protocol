@@ -1,0 +1,1 @@
+../../../../docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md

@@ -1,6 +1,5 @@
 # MAL — Matrix Arbiter Layer
 **Acrônimo:** MAL  
-**Status:** Ativo  
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
