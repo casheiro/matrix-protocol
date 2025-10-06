@@ -27,9 +27,8 @@ head:
 ---
 # MOC — Matrix Ontology Catalog
 **Acronym:** MOC  
-**Status:** Active  
-**Version:** Beta  
-**Date:** 2025-01-25  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
 
 > 🚨 **IMPORTANT WARNING**: This document contains ILLUSTRATIVE EXAMPLES (such as `technical`, `business`, `draft`, etc.) that are NOT mandatory taxonomies. Each organization defines its own hierarchies according to their specific needs. Examples serve only as conceptual reference.
 

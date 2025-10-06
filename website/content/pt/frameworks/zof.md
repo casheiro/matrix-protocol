@@ -33,9 +33,8 @@ head:
 ---
 # ZOF — Zion Orchestration Framework
 **Acrônimo:** ZOF  
-**Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-01-25
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém EXEMPLOS ILUSTRATIVOS (como `strategy`, `operations`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
 

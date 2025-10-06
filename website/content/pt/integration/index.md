@@ -23,9 +23,8 @@ head:
 ---
 # Protocolo Matrix — Diagrama de Integração
 **Acrônimo:** Diagrama de Integração  
-**Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-01-25
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05
 
 > 🔄 "O todo é maior que a soma das partes — e o Protocolo Matrix demonstra isso através da integração perfeita entre frameworks."
 

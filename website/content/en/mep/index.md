@@ -26,9 +26,8 @@ head:
 ---
 # MEP — Matrix Epistemic Principle
 **Acronym:** MEP  
-**Status:** Active  
-**Version:** Beta  
-**Date:** 2025-01-25  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
 
 > 📜 "Knowledge is malleable; authority is derived; explainability is mandatory."
 

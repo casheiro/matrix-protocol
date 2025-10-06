@@ -16,8 +16,8 @@ head:
 # Guia de Início Rápido - Matrix Protocol Beta
 **Implementação Rápida em 3 Passos**
 
-**Versão:** Beta  
-**Data:** Janeiro 2025  
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05  
 **Tempo Estimado:** 2-4 horas para setup inicial
 
 > 🎯 **Objetivo**: Implementar Matrix Protocol na sua organização em 3 passos simples, seguindo uma abordagem estruturada e prática.

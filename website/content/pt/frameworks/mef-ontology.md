@@ -22,9 +22,8 @@ head:
 ---
 # Ontologia de Suporte MEF — MEF Support Ontology
 **Acrônimo:** MEF Support Ontology  
-**Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-01-25  
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05  
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém **APENAS EXEMPLOS ILUSTRATIVOS** (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
 

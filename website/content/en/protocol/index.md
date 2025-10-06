@@ -28,9 +28,8 @@ head:
 ---
 # Matrix Protocol — Human-AI Collaboration Protocol
 **Acronym:** Matrix Protocol  
-**Status:** Active  
-**Version:** Beta  
-**Date:** 2025-01-25  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
 
 > 🚨 **IMPORTANT**: This document contains illustrative examples that are **NOT mandatory taxonomies**. All taxonomies are configurable via organizational MOC.
 

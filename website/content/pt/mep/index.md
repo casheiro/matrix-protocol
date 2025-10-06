@@ -26,9 +26,8 @@ head:
 ---
 # MEP — Matrix Epistemic Principle
 **Acrônimo:** MEP  
-**Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-01-25
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05
 
 > 📜 "O conhecimento é maleável; a autoridade é derivada; a explicabilidade é mandatória."
 

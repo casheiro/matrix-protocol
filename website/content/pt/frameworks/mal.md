@@ -28,9 +28,9 @@ head:
 ---
 # MAL — Matrix Arbiter Layer
 **Acrônimo:** MAL  
+**Versão:** 0.0.1  
 **Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-08-26
+**Data:** 2025-10-05
 
 > "Na ausência de conflito, a sabedoria permanece não testada." — Provérbio Antigo
 

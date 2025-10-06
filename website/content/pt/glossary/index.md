@@ -23,9 +23,8 @@ head:
 ---
 # Protocolo Matrix — Glossário Unificado
 **Acrônimo:** Glossário Unificado  
-**Status:** Ativo  
-**Versão:** Beta  
-**Data:** 2025-01-25
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05
 
 > 📚 "Precisão na linguagem cria precisão no pensamento — e precisão no pensamento cria precisão na implementação."
 

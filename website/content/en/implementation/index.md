@@ -16,8 +16,8 @@ head:
 # Implementation Guide - Matrix Protocol Beta
 **Organizational Implementation Technical Manual**
 
-**Version:** Beta  
-**Date:** January 2025  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
 **Protocol:** Matrix Protocol (semantic protocol for human-AI collaboration)
 
 > ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, download the [Complete Manual](/downloads/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md) (4,600+ lines, 15 chapters).
