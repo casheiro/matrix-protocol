@@ -1,7 +1,6 @@
 # MEF — Matrix Embedding Framework
 **Acrônimo:** MEF  
-**Status:** Beta  
-**Versão:** 0.0.1  
+**Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MEF_MATRIX_EMBEDDING_FRAMEWORK.md](MEF_MATRIX_EMBEDDING_FRAMEWORK.md).

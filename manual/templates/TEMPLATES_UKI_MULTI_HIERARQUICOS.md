@@ -1,9 +1,9 @@
 # Templates UKI Multi-Hierárquicos
 **Templates de UKI Demonstrando Relacionamentos Cross-Cutting Organizacionais**
 
-**Versão:** 1.0.0  
-**Data:** 2025-01-25  
-**Compatibilidade:** Protocolo Matrix v1.0.0, MEF v1.0.0  
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05  
+**Compatibilidade:** Protocolo Matrix v0.0.1-beta, MEF v0.0.1-beta  
 
 > 🎯 **Propósito**: Fornecer templates de UKI sofisticados que demonstram como o conhecimento organizacional pode atravessar múltiplas hierarquias, domínios e níveis de autoridade de forma eficaz.
 

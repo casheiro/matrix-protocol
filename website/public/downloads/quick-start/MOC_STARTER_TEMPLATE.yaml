@@ -1,0 +1,498 @@
+# MOC Starter Template - Ready to Use
+# Based on TechCorp scenario and adaptable templates for various organizational sizes
+# Select and customize the template that matches your organization size
+
+moc_version: "1.0"
+organization: "[YOUR_ORGANIZATION_NAME]"
+created_date: "[YYYY-MM-DD]"
+last_modified: "[YYYY-MM-DD]"
+version: "0.0.1"
+
+# =============================================================================
+# STARTUP TEMPLATE (5-50 people) - Use this for early-stage organizations
+# =============================================================================
+startup_config:
+  hierarchies:
+    scope:
+      metadata:
+        concept: "Knowledge reach and visibility"
+        governance_rules: |
+          Simple 3-level model: Individual → Team → Company
+          Focus on knowledge sharing and preventing single points of failure.
+        level_semantics: |
+          Level 0 = Company-wide (all employees can access)
+          Level 1 = Team-specific (team + managers)  
+          Level 2 = Individual (person + direct manager)
+          Lower level = broader access
+          
+      nodes:
+        - id: "company"
+          label: "Company-wide"
+          parent: null
+          level: 0
+          governance:
+            visibility: ["all_employees"]
+            propagation: "automatic"
+            authority_required: "any_employee"
+            
+        - id: "engineering" 
+          label: "Engineering Team"
+          parent: "company"
+          level: 1
+          governance:
+            visibility: ["engineering_team", "founders", "managers"]
+            propagation: "restricted"
+            authority_required: "tech_lead"
+            
+        - id: "product"
+          label: "Product Team"
+          parent: "company"
+          level: 1
+          governance:
+            visibility: ["product_team", "founders", "managers"]
+            propagation: "restricted"
+            authority_required: "product_lead"
+            
+        - id: "personal"
+          label: "Personal Notes"
+          parent: null
+          level: 2
+          governance:
+            visibility: ["individual", "direct_manager"]
+            propagation: "blocked"
+            authority_required: "individual"
+
+    domain:
+      metadata:
+        concept: "Knowledge specialization areas"
+        governance_rules: "Practical domains focused on daily operations"
+        
+      nodes:
+        - id: "technical"
+          label: "Technical Knowledge"
+          governance:
+            owners: ["tech_lead", "senior_engineers"]
+            reviewers: ["all_engineers"]
+            
+        - id: "product"
+          label: "Product Knowledge"
+          governance:
+            owners: ["product_lead"]
+            reviewers: ["product_team", "founders"]
+            
+        - id: "business"
+          label: "Business Knowledge"
+          governance:
+            owners: ["founders"]
+            reviewers: ["all_leads"]
+
+    type:
+      metadata:
+        concept: "Knowledge format types"
+        
+      nodes:
+        - id: "decision"
+          label: "Decision Record"
+          governance:
+            required_fields: ["context", "decision", "rationale"]
+            review_required: true
+            
+        - id: "process"
+          label: "Process Documentation"
+          governance:
+            required_fields: ["steps", "owner", "frequency"]
+            
+        - id: "reference"
+          label: "Reference Material"
+          governance:
+            required_fields: ["summary", "usage"]
+
+    maturity:
+      metadata:
+        concept: "Validation and confidence level"
+        
+      nodes:
+        - id: "draft"
+          label: "Draft"
+          level: 0
+          governance:
+            validation_required: false
+            creation_authority: "any_employee"
+            
+        - id: "validated"
+          label: "Validated"
+          parent: "draft"
+          level: 1
+          governance:
+            validation_required: true
+            reviewers_required: 1
+            
+        - id: "approved"
+          label: "Approved"
+          parent: "validated"
+          level: 2
+          governance:
+            authority_required: "team_lead_or_founder"
+
+# =============================================================================
+# SCALE-UP TEMPLATE (50-200 people) - Use when you have multiple teams/tribes
+# =============================================================================
+scaleup_config:
+  hierarchies:
+    scope:
+      metadata:
+        concept: "Organizational reach with tribes"
+        level_semantics: |
+          Level 0 = Company-wide
+          Level 1 = Tribe-wide
+          Level 2 = Squad-specific
+          Level 3 = Individual
+          
+      nodes:
+        - id: "company"
+          label: "Company-wide"
+          parent: null
+          level: 0
+          
+        - id: "tribe_engineering"
+          label: "Engineering Tribe"
+          parent: "company"
+          level: 1
+          governance:
+            visibility: ["engineering_tribe", "tribe_leads", "executives"]
+            
+        - id: "tribe_product"
+          label: "Product Tribe"
+          parent: "company"
+          level: 1
+          governance:
+            visibility: ["product_tribe", "tribe_leads", "executives"]
+            
+        - id: "squad_backend"
+          label: "Backend Squad"
+          parent: "tribe_engineering"
+          level: 2
+          governance:
+            visibility: ["squad_backend", "tech_leads", "tribe_engineering"]
+            
+        - id: "squad_frontend"
+          label: "Frontend Squad"
+          parent: "tribe_engineering"
+          level: 2
+
+    authority:
+      metadata:
+        concept: "Decision-making authority hierarchy"
+        level_semantics: |
+          Level 0 = Individual Contributor
+          Level 1 = Squad Lead
+          Level 2 = Tribe Lead
+          Level 3 = Executive
+          Higher level = broader authority
+          
+      nodes:
+        - id: "contributor"
+          label: "Individual Contributor"
+          level: 0
+          governance:
+            knowledge_creation: ["draft"]
+            
+        - id: "senior_contributor"
+          label: "Senior Contributor"
+          parent: "contributor"
+          level: 0
+          governance:
+            knowledge_creation: ["draft", "validated"]
+            
+        - id: "tech_lead"
+          label: "Technical Lead"
+          parent: "senior_contributor"
+          level: 1
+          governance:
+            knowledge_creation: ["draft", "validated", "approved"]
+            scope_authority: ["squad"]
+            
+        - id: "tribe_lead"
+          label: "Tribe Lead"
+          parent: "tech_lead"
+          level: 2
+          governance:
+            knowledge_creation: ["all"]
+            scope_authority: ["tribe"]
+            
+        - id: "executive"
+          label: "Executive"
+          parent: "tribe_lead"
+          level: 3
+          governance:
+            knowledge_creation: ["all"]
+            scope_authority: ["company"]
+            policy_creation: true
+
+    # Additional hierarchies for scale-up...
+    domain:
+      nodes:
+        - id: "engineering_core"
+          label: "Core Engineering"
+          governance:
+            owners: ["principal_engineers"]
+            mandatory_knowledge: ["all_engineers"]
+            
+        - id: "architecture"
+          label: "System Architecture"
+          parent: "engineering_core"
+          governance:
+            owners: ["principal_engineers", "architecture_committee"]
+            
+        - id: "product_strategy"
+          label: "Product Strategy"
+          governance:
+            owners: ["product_leads"]
+            
+        - id: "business_operations"
+          label: "Business Operations"
+          governance:
+            owners: ["operations_team"]
+
+# =============================================================================  
+# ENTERPRISE TEMPLATE (200+ people) - Full complexity with compliance
+# =============================================================================
+enterprise_config:
+  hierarchies:
+    scope:
+      metadata:
+        concept: "Multi-divisional organizational reach"
+        governance_rules: |
+          5-level model: Individual → Squad → Tribe → Division → Company
+          Supports multiple divisions, geographies, and functions
+        level_semantics: |
+          Level 0 = Company-wide
+          Level 1 = Division-wide
+          Level 2 = Tribe-wide  
+          Level 3 = Squad-specific
+          Level 4 = Individual
+          
+      nodes:
+        - id: "company"
+          label: "Company"
+          level: 0
+          governance:
+            visibility: ["all_employees"]
+            compliance_required: true
+            
+        - id: "division_technology"
+          label: "Technology Division"
+          parent: "company"
+          level: 1
+          governance:
+            visibility: ["tech_division", "division_leads", "executives"]
+            
+        - id: "division_product"
+          label: "Product Division"
+          parent: "company"
+          level: 1
+          
+        # ... more divisions
+
+    authority:
+      metadata:
+        concept: "Formal organizational authority"
+        level_semantics: |
+          Level 0 = Individual Contributor
+          Level 1 = Team/Squad Lead  
+          Level 2 = Senior Manager/Tribe Lead
+          Level 3 = Director/Division Lead
+          Level 4 = VP/Executive
+          Level 5 = C-Level
+          
+      nodes:
+        - id: "contributor"
+          label: "Individual Contributor"
+          level: 0
+          
+        - id: "senior_contributor"
+          label: "Senior Contributor"
+          parent: "contributor"
+          level: 0
+          
+        - id: "team_lead"
+          label: "Team Lead"
+          parent: "senior_contributor"
+          level: 1
+          
+        - id: "senior_manager"
+          label: "Senior Manager"
+          parent: "team_lead"
+          level: 2
+          
+        - id: "director"
+          label: "Director"
+          parent: "senior_manager"
+          level: 3
+          
+        - id: "vp"
+          label: "Vice President"
+          parent: "director"
+          level: 4
+          
+        - id: "c_level"
+          label: "C-Level Executive"
+          parent: "vp"
+          level: 5
+          governance:
+            policy_creation: true
+            strategic_decisions: true
+
+    # Additional enterprise hierarchies
+    compliance:
+      metadata:
+        concept: "Regulatory compliance classification"
+        
+      nodes:
+        - id: "public"
+          label: "Public Information"
+          level: 0
+          governance:
+            disclosure_allowed: true
+            
+        - id: "internal"
+          label: "Internal Use Only"
+          level: 1
+          governance:
+            employee_access_only: true
+            
+        - id: "confidential"
+          label: "Confidential"
+          parent: "internal"
+          level: 2
+          governance:
+            need_to_know_basis: true
+            access_approval_required: true
+            
+        - id: "restricted"
+          label: "Restricted"
+          parent: "confidential"
+          level: 3
+          governance:
+            executive_approval_required: true
+            audit_access_log: true
+
+    lifecycle:
+      metadata:
+        concept: "Knowledge temporal management"
+        
+      nodes:
+        - id: "active"
+          label: "Active Knowledge"
+          level: 0
+          governance:
+            review_frequency: "quarterly"
+            
+        - id: "deprecated"
+          label: "Deprecated Knowledge"
+          parent: "active"
+          level: 1
+          governance:
+            deprecation_notice_period: 90
+            migration_path_required: true
+            
+        - id: "archived"
+          label: "Archived Knowledge"
+          parent: "deprecated"
+          level: 2
+          governance:
+            read_only: true
+            compliance_retention: true
+
+# =============================================================================
+# GOVERNANCE CONFIGURATION (customize based on your template choice)
+# =============================================================================
+governance:
+  version_control:
+    change_approval_required: false  # startup: false, enterprise: true
+    change_authority: "founders"     # startup: founders, enterprise: committee
+    
+  audit_trail:
+    retention_period_days: 365      # startup: 365, enterprise: 2555 (7 years)
+    
+  conflict_resolution:
+    escalation_path: ["team_lead", "founder"]  # customize based on your org
+    arbitration_policy: "moc:arbitration:simple_precedence"
+    timeout_policy: "48h_max"      # startup: 48h, enterprise: 5 business days
+
+# =============================================================================
+# SELECTION GUIDE - Choose your template based on organization characteristics
+# =============================================================================
+selection_guide:
+  startup_indicators:
+    - employees: 5-50
+    - hierarchy_levels: "≤3"
+    - decision_making: "informal and fast"
+    - documentation: "minimal but critical"
+    - growth_stage: "early growth, finding product-market fit"
+    
+  scaleup_indicators:
+    - employees: 50-200
+    - hierarchy_levels: "3-4"
+    - decision_making: "semi-formal with clear ownership"
+    - documentation: "structured but flexible"
+    - growth_stage: "scaling team and processes"
+    
+  enterprise_indicators:
+    - employees: "200+"
+    - hierarchy_levels: "4+"
+    - decision_making: "formal with compliance requirements"
+    - documentation: "comprehensive with audit trails"
+    - growth_stage: "mature organization or large corporation"
+
+# =============================================================================
+# IMPLEMENTATION STEPS - Follow this sequence regardless of template chosen
+# =============================================================================
+implementation_steps:
+  phase_1_setup:
+    duration: "2-4 weeks"
+    activities:
+      - "Select appropriate template (startup/scaleup/enterprise)"
+      - "Customize organization name and key stakeholders"
+      - "Review and adapt governance rules to your culture"
+      - "Identify 3-5 pilot users for initial testing"
+      
+  phase_2_pilot:
+    duration: "4-6 weeks"  
+    activities:
+      - "Deploy MOC with pilot team"
+      - "Create first 10-20 UKIs to test structure"
+      - "Validate hierarchy makes sense for real scenarios"
+      - "Collect feedback and iterate on governance rules"
+      
+  phase_3_expand:
+    duration: "8-12 weeks"
+    activities:
+      - "Expand to full organization gradually"
+      - "Migrate critical legacy knowledge"
+      - "Establish review and approval processes"
+      - "Monitor adoption and quality metrics"
+
+# =============================================================================
+# QUICK WIN UKIS - Create these UKIs first to demonstrate value
+# =============================================================================
+suggested_first_ukis:
+  - id: "uki:[scope]:decision:tool-selection-001"
+    title: "Standard Tool Selection Process"
+    rationale: "Everyone faces tool selection decisions"
+    
+  - id: "uki:[scope]:process:code-review-001"  
+    title: "Code Review Guidelines"
+    rationale: "High-frequency process with clear impact"
+    
+  - id: "uki:[scope]:reference:onboarding-checklist-001"
+    title: "New Employee Onboarding Checklist"
+    rationale: "Regular need, easy to measure improvement"
+    
+  - id: "uki:[scope]:decision:meeting-practices-001"
+    title: "Effective Meeting Practices"
+    rationale: "Universal pain point, immediate productivity impact"
+    
+  - id: "uki:[scope]:process:incident-response-001"
+    title: "Incident Response Procedure"
+    rationale: "Critical knowledge that prevents chaos during incidents"

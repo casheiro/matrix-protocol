@@ -1,7 +1,6 @@
 # MEP — Matrix Epistemic Principle
 **Acrônimo:** MEP  
-**Status:** Beta  
-**Versão:** 0.0.1  
+**Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MEP_MATRIX_EPISTEMIC_PRINCIPLE.md](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md).

@@ -1,7 +1,6 @@
 # MEF Support Ontology — Matrix Embedding Framework Support Ontology
 **Acronym:** MEF Support Ontology  
-**Version:** 0.0.1
-**Status:** Beta
+**Version:** 0.0.1-beta
 **Last Updated:** 2025-10-05  
 
 > 🚨 **IMPORTANT WARNING**: This document contains **ILLUSTRATIVE EXAMPLES ONLY** (such as `technical`, `business`, `draft`, etc.) that are NOT mandatory taxonomies. The **MOC (Matrix Ontology Catalog)** is the only definitive source for organizational taxonomies.

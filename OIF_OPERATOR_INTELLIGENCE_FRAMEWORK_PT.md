@@ -1,7 +1,6 @@
 # OIF — Operator Intelligence Framework
 **Acrônimo:** OIF  
-**Status:** Beta  
-**Versão:** 0.0.1  
+**Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md).

@@ -1,9 +1,9 @@
 # MOC Templates by Organizational Size
 **Matrix Ontology Catalog Templates for Different Organization Types**
 
-**Version:** 1.0.0  
-**Date:** 2025-01-25  
-**Compatibility:** Matrix Protocol v1.0.0  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
+**Compatibility:** Matrix Protocol v0.0.1-beta  
 
 > 🎯 **Purpose**: Provide ready-to-use MOC templates adapted for organizations of different sizes, from startups to large enterprises.
 

@@ -1,0 +1,188 @@
+# Template MOC Básico - Pronto para Usar
+# Template ultra-simplificado para implementação rápida do Protocolo Matrix
+# Adequado para qualquer porte de organização (5-1000+ pessoas)
+# Customize este template baseado em suas necessidades
+
+moc_version: "1.0"
+organization: "[NOME_DA_SUA_ORGANIZACAO]"
+created_date: "[AAAA-MM-DD]"
+last_modified: "[AAAA-MM-DD]"
+version: "0.0.1"
+
+# =============================================================================
+# CONFIGURAÇÃO BÁSICA - Apenas hierarquias essenciais
+# =============================================================================
+
+hierarchies:
+  # Visibilidade e Controle de Acesso ao Conhecimento
+  scope:
+    metadata:
+      concept: "Quem pode acessar que tipo de conhecimento"
+      governance_rules: |
+        Modelo simples de 3 níveis cobrindo todos os portes organizacionais:
+        - Empresa: Todos podem acessar
+        - Equipe: Membros da equipe + liderança
+        - Pessoal: Individual + gestor direto apenas
+      level_semantics: |
+        Nível 0 = Público para toda organização
+        Nível 1 = Acesso específico da equipe
+        Nível 2 = Acesso pessoal/privado
+        
+    nodes:
+      - id: "publico"
+        label: "Conhecimento da Empresa"
+        parent: null
+        level: 0
+        governance:
+          visibility: ["todos_funcionarios"]
+          propagation: "automatic"
+          authority_required: "qualquer_funcionario"
+          
+      - id: "equipe"
+        label: "Conhecimento da Equipe"
+        parent: "publico"
+        level: 1
+        governance:
+          visibility: ["membros_equipe", "gestores"]
+          propagation: "restricted"
+          authority_required: "lider_equipe"
+          
+      - id: "pessoal"
+        label: "Notas Pessoais"
+        parent: null
+        level: 2
+        governance:
+          visibility: ["individual", "gestor_direto"]
+          propagation: "blocked"
+          authority_required: "individual"
+
+  # Categorias de Conhecimento
+  domain:
+    metadata:
+      concept: "Que tipo de conhecimento é este"
+      governance_rules: "Áreas essenciais de conhecimento para qualquer organização"
+      
+    nodes:
+      - id: "tecnico"
+        label: "Técnico & Desenvolvimento"
+        governance:
+          owners: ["equipe_tech"]
+          reviewers: ["desenvolvedores_senior"]
+          
+      - id: "negocio"
+        label: "Negócio & Estratégia" 
+        governance:
+          owners: ["equipe_gestao"]
+          reviewers: ["lideres_equipe"]
+          
+      - id: "operacoes"
+        label: "Operações & Processos"
+        governance:
+          owners: ["equipe_ops"]
+          reviewers: ["todos_funcionarios"]
+
+  # Nível de Qualidade do Conhecimento
+  maturity:
+    metadata:
+      concept: "Quão validado e confiável é este conhecimento"
+      governance_rules: "Níveis progressivos de validação desde rascunho até padrão"
+      level_semantics: |
+        Nível 0 = Rascunho (trabalho em progresso)
+        Nível 1 = Revisado (validado pela equipe)
+        Nível 2 = Padrão (aprovado pela organização)
+        
+    nodes:
+      - id: "rascunho"
+        label: "Rascunho"
+        level: 0
+        governance:
+          validation_required: false
+          creation_authority: "qualquer_funcionario"
+          auto_expire_days: 90
+          
+      - id: "revisado"
+        label: "Revisado pela Equipe"
+        parent: "rascunho"
+        level: 1
+        governance:
+          validation_required: true
+          reviewers_required: 1
+          authority_required: "lider_equipe"
+          
+      - id: "padrao"
+        label: "Padrão da Organização"
+        parent: "revisado"
+        level: 2
+        governance:
+          validation_required: true
+          authority_required: "gestao"
+          mandatory_compliance: true
+
+  # Tipo de Formato do Conhecimento
+  type:
+    metadata:
+      concept: "Como este conhecimento está estruturado"
+      
+    nodes:
+      - id: "decisao"
+        label: "Registro de Decisão"
+        governance:
+          required_fields: ["contexto", "decisao", "justificativa"]
+          review_required: true
+          
+      - id: "processo"
+        label: "Documentação de Processo"
+        governance:
+          required_fields: ["passos", "responsavel", "frequencia"]
+          update_frequency_months: 6
+          
+      - id: "referencia"
+        label: "Material de Referência"
+        governance:
+          required_fields: ["resumo", "uso", "exemplos"]
+          
+      - id: "aprendizado"
+        label: "Aprendizado & Conhecimento"
+        governance:
+          required_fields: ["resumo", "pontos_chave", "aplicacoes"]
+          sharing_encouraged: true
+
+# =============================================================================
+# ORIENTAÇÕES DE INÍCIO RÁPIDO
+# =============================================================================
+
+# Como usar este template:
+# 1. Substitua [NOME_DA_SUA_ORGANIZACAO] pelo nome da sua organização
+# 2. Atualize datas e versão
+# 3. Customize IDs e labels dos nós para coincidir com suas equipes/funções
+# 4. Ajuste regras de governança baseado nas necessidades da sua organização
+# 5. Adicione mais hierarquias ou nós conforme sua organização cresce
+#
+# Para templates mais especializados por porte organizacional:
+# - MOC_STARTUP_TEMPLATE.yaml (5-50 pessoas)
+# - MOC_SCALEUP_TEMPLATE.yaml (50-200 pessoas) 
+# - MOC_ENTERPRISE_TEMPLATE.yaml (200-1000 pessoas)
+# - MOC_CORPORATION_TEMPLATE.yaml (1000+ pessoas)
+
+# Exemplos de Uso:
+examples:
+  uki_basica:
+    scope: "equipe"
+    domain: "tecnico"
+    maturity: "rascunho" 
+    type: "decisao"
+    title: "Exemplo: Decisão de Migração de Banco de Dados"
+    
+  padrao_empresa:
+    scope: "publico"
+    domain: "operacoes"
+    maturity: "padrao"
+    type: "processo"
+    title: "Exemplo: Processo de Integração de Funcionários"
+    
+  nota_pessoal:
+    scope: "pessoal"
+    domain: "negocio"
+    maturity: "rascunho"
+    type: "aprendizado"
+    title: "Exemplo: Minhas Notas da Reunião de Liderança"

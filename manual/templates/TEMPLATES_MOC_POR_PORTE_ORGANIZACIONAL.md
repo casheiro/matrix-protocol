@@ -1,9 +1,9 @@
 # Templates MOC por Porte Organizacional
 **Templates de Catálogo de Ontologia Matrix para Diferentes Tipos de Organização**
 
-**Versão:** 1.0.0  
-**Data:** 2025-01-25  
-**Compatibilidade:** Protocolo Matrix v1.0.0  
+**Versão:** 0.0.1-beta  
+**Data:** 2025-10-05  
+**Compatibilidade:** Protocolo Matrix v0.0.1-beta  
 
 > 🎯 **Propósito**: Fornecer templates MOC prontos para uso adaptados para organizações de diferentes portes, desde startups até grandes empresas.
 

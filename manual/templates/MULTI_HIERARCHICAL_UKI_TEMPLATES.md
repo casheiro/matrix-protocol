@@ -1,9 +1,9 @@
 # Multi-Hierarchical UKI Templates
 **Templates for Complex Organizational Knowledge with Cross-Cutting Relationships**
 
-**Version:** 1.0.0  
-**Date:** 2025-01-25  
-**Compatibility:** Matrix Protocol v1.0.0, MEF v1.0.0  
+**Version:** 0.0.1-beta  
+**Date:** 2025-10-05  
+**Compatibility:** Matrix Protocol v0.0.1-beta, MEF v0.0.1-beta  
 
 > 🎯 **Purpose**: Provide comprehensive UKI templates that demonstrate complex multi-level organizational knowledge with sophisticated cross-cutting relationships and governance patterns.
 

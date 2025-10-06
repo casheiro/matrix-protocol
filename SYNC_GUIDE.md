@@ -1,6 +1,6 @@
 # Guia de Sincronização Website ↔ Repositório
 
-**Versão:** 1.0.0  
+**Versão:** 0.0.1-beta  
 **Data:** 2025-10-05  
 **Status:** Ativo  
 

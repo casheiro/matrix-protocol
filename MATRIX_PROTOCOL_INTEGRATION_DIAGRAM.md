@@ -1,7 +1,6 @@
 # Matrix Protocol — Integration Diagram
 **Acronym:** Integration Diagram  
-**Version:** 0.0.1
-**Status:** Beta
+**Version:** 0.0.1-beta
 **Last Updated:** 2025-10-05  
 
 > 🔄 "The whole is greater than the sum of its parts — and the Matrix Protocol demonstrates this through seamless framework integration."

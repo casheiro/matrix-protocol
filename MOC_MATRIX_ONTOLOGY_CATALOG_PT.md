@@ -1,7 +1,6 @@
 # MOC — Matrix Ontology Catalog
 **Acrônimo:** MOC  
-**Status:** Beta  
-**Versão:** 0.0.1  
+**Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MOC_MATRIX_ONTOLOGY_CATALOG.md](MOC_MATRIX_ONTOLOGY_CATALOG.md).

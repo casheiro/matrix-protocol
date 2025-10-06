@@ -1,7 +1,7 @@
-# Guia de Implementação do Matrix Protocol v1.0.0
+# Guia de Implementação do Matrix Protocol v0.0.1-beta
 **Manual Técnico de Implementação**
 
-**Versão:** 1.0.0  
+**Versão:** 0.0.1-beta  
 **Data:** Janeiro 2025  
 **Protocolo:** Matrix Protocol (protocolo semântico em desenvolvimento)
 

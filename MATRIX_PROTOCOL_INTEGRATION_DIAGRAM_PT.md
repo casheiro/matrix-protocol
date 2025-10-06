@@ -1,7 +1,6 @@
 # Protocolo Matrix — Diagrama de Integração
 **Acrônimo:** Diagrama de Integração  
-**Status:** Beta  
-**Versão:** 0.0.1  
+**Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md).

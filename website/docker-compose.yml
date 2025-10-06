@@ -1,0 +1,36 @@
+# Docker Compose for Matrix Protocol Website v2 - Coolify Compatible
+version: '3.8'
+
+services:
+  matrix-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: matrix-protocol-website
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - NITRO_HOST=${NITRO_HOST:-0.0.0.0}
+      - NITRO_PORT=${NITRO_PORT:-5000}
+      - SITE_URL=${SITE_URL:-https://matrix-protocol.casheiro.com.br}
+      - GITHUB_URL=${GITHUB_URL:-https://github.com/casheiro/matrix-protocol}
+      - DISCORD_URL=${DISCORD_URL:-https://discord.gg/Gd7BxsRhB4}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - matrix-network
+    labels:
+      # Coolify labels for automatic deployment
+      - "coolify.managed=true"
+      - "coolify.version=4"
+      - "coolify.type=application"
+
+networks:
+  matrix-network:
+    driver: bridge

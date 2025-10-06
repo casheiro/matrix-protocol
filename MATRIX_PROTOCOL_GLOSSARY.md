@@ -1,7 +1,6 @@
 # Matrix Protocol — Unified Glossary
 **Acronym:** Unified Glossary  
-**Version:** 0.0.1
-**Status:** Beta
+**Version:** 0.0.1-beta
 **Last Updated:** 2025-10-05  
 
 > 📚 "Precision in language creates precision in thought — and precision in thought creates precision in implementation."

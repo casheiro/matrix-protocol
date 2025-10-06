@@ -1,4 +1,4 @@
-# Manual de Implementação do Matrix Protocol v1.0.0
+# Manual de Implementação do Matrix Protocol v0.0.1-beta
 **Guia Prático Baseado em Experiência Real**
 
 > 🎯 **Propósito**: Manual consolidado com conteúdo real e funcional para implementar o Matrix Protocol em organizações de qualquer porte.
@@ -219,7 +219,7 @@ Este manual é baseado em experiência real e continua evoluindo. Se você imple
 ---
 
 **Última Atualização**: Janeiro 2025  
-**Versão**: 1.0.0  
+**Versão**: 0.0.1-beta  
 **Baseado em**: TechCorp case study + 12 organizações adicionais  
 **Conteúdo**: 100% real, 0% stub ou placeholder
 
