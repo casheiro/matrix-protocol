@@ -1,8 +1,8 @@
 # MEF — Matrix Embedding Framework
 **Acrônimo:** MEF  
-**Status:** Ativo  
-**Versão:** 1.0.0  
-**Data:** 2025-01-25  
+**Status:** Beta  
+**Versão:** 0.0.1  
+**Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MEF_MATRIX_EMBEDDING_FRAMEWORK.md](MEF_MATRIX_EMBEDDING_FRAMEWORK.md).
 
@@ -54,7 +54,7 @@ Cada UKI é um arquivo YAML estruturado contendo:
 
 ### Estrutura UKI Obrigatória
 Toda UKI DEVE conter:
-- **id**: Identificador único no formato uki:[domain_ref]:[type_ref]:[slug]
+- **id**: Identificador único no formato uki:[scope_ref]:[type_ref]:[slug]
 - **title**: Título descritivo e objetivo
 - **version**: Versionamento semântico MAJOR.MINOR.PATCH
 - **scope_ref, domain_ref, type_ref**: Referências válidas ao MOC organizacional

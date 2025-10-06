@@ -1,0 +1,141 @@
+# Basic UKI Template - Ready to Use
+# Based on MEF v1.0.0 Specification
+# Complete template with all required and recommended fields
+
+# --- Mandatory Header ---
+schema: "1.0"
+ontology_reference: "[moc-reference]"  # Points to organizational MOC
+version: "1.0.0"
+
+# --- Identity and Scope ---
+id: uki:[scope_ref]:[type_ref]:[slug-id]  # MOC-compliant format
+title: "[Descriptive title]"
+scope_ref: [moc-node]      # Reference to MOC scope hierarchy
+scope_mode: "restricted"   # or "propagated" 
+domain_ref: [moc-node]     # Reference to MOC domain hierarchy
+type_ref: [moc-node]       # Reference to MOC type hierarchy  
+maturity_ref: [moc-node]   # Reference to MOC maturity hierarchy
+
+# --- Lifecycle ---
+created_date: [YYYY-MM-DD]
+last_modified: [YYYY-MM-DD]
+change_summary: "[Summary of changes]"  # For versions > 1.0.0
+change_impact: [major|minor|patch]
+status: [active|deprecated|archived]
+
+# --- Content ---
+content: |
+  [Structured knowledge content]
+  
+  ## Context
+  [Why this knowledge exists and what problem it solves]
+  
+  ## Details
+  [Main content - can be any format appropriate for the type]
+  
+  ## Implementation Notes
+  [Practical guidance for applying this knowledge]
+  
+  ## Related Information
+  [Links to other relevant knowledge or resources]
+
+# --- Examples (Mandatory) ---
+examples:
+  - input: "[Real scenario description]"
+    output: "[Expected result/behavior]"
+  - input: "[Another scenario]"
+    output: "[Another expected result]"
+
+# --- Relationships (Standard Types) ---
+relationships:
+  - type: depends_on
+    target: uki:[scope_ref]:[type_ref]:[target-id]
+    description: "[Specific relationship description]"
+  - type: implements
+    target: uki:[scope_ref]:[type_ref]:[target-id]
+    description: "[How this UKI implements the target]"
+
+# --- Governance ---
+domain_of_influence: "[organizational-reference]"
+
+# =============================================================================
+# TEMPLATE USAGE INSTRUCTIONS
+# =============================================================================
+
+# 1. Replace all bracketed placeholders with actual values
+# 2. Ensure all *_ref fields reference valid MOC nodes
+# 3. Choose appropriate relationship types from the standard list:
+#    - depends_on: This UKI requires the target UKI
+#    - overrides: This UKI supersedes the target UKI
+#    - conflicts_with: This UKI conflicts with the target UKI
+#    - complements: This UKI works together with the target UKI
+#    - amends: This UKI modifies the target UKI
+#    - precedes: This UKI must come before the target UKI
+#    - equivalent_to: This UKI is equivalent to the target UKI
+# 4. Provide concrete, real-world examples
+# 5. Use semantic versioning for version field
+
+# =============================================================================
+# EXAMPLES BY TYPE
+# =============================================================================
+
+# DECISION RECORD EXAMPLE:
+# id: uki:engineering:decision:database-migration-001
+# title: "Migration from PostgreSQL to MongoDB"
+# content: |
+#   ## Context
+#   Current PostgreSQL database showing performance issues with document-heavy workloads
+#   
+#   ## Decision
+#   Migrate primary application database from PostgreSQL to MongoDB
+#   
+#   ## Rationale
+#   - Better performance for document operations
+#   - Native JSON support aligns with API structure
+#   - Horizontal scaling capabilities for future growth
+#   
+#   ## Implementation Plan
+#   Phase 1: Set up MongoDB cluster
+#   Phase 2: Dual-write implementation
+#   Phase 3: Read traffic migration
+#   Phase 4: Decommission PostgreSQL
+
+# PROCESS DOCUMENTATION EXAMPLE:
+# id: uki:operations:process:code-review-001
+# title: "Code Review Process for Feature Development"
+# content: |
+#   ## Process Overview
+#   Mandatory code review process for all feature development
+#   
+#   ## Steps
+#   1. Developer creates feature branch
+#   2. Implements feature with tests
+#   3. Creates pull request with description
+#   4. At least 2 reviewers approve changes
+#   5. CI/CD pipeline passes all checks
+#   6. Merge to main branch
+#   
+#   ## Quality Criteria
+#   - Code follows style guidelines
+#   - Tests achieve >80% coverage
+#   - Documentation updated if needed
+#   - Performance impact assessed
+
+# REFERENCE MATERIAL EXAMPLE:
+# id: uki:technical:reference:api-authentication-001
+# title: "API Authentication Implementation Guide"
+# content: |
+#   ## Authentication Methods
+#   
+#   ### JWT Tokens
+#   - Use RS256 signing algorithm
+#   - 15-minute expiration for access tokens
+#   - 7-day expiration for refresh tokens
+#   
+#   ### API Keys
+#   - For service-to-service communication
+#   - Rotate monthly
+#   - Include in Authorization header
+#   
+#   ## Implementation Examples
+#   [Code examples and configurations]

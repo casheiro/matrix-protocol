@@ -1,8 +1,8 @@
 # Matrix Protocol — Human-AI Collaboration Protocol
 **Acronym:** Matrix Protocol  
-**Status:** Stable  
-**Version:** 1.0.0  
-**Date:** 2025-01-25  
+**Version:** 0.0.1
+**Status:** Beta
+**Last Updated:** 2025-10-05  
 
 > 🚨 **IMPORTANT**: This document contains illustrative examples that are **NOT mandatory taxonomies**. All taxonomies are configurable via organizational MOC.
 
@@ -113,6 +113,7 @@ The Matrix Protocol achieves seamless integration through three interdependent l
 - **MAL (Matrix Arbiter Layer)**: Provides deterministic conflict and concurrency arbitration when local governance fails; invoked by ZOF on H1/H2/H3 conflicts; persisted by MEF; explained by OIF; configured by MOC; aligned with MEP
 
 See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for complete three-layer integration visualization.
+<!-- For interactive diagrams and visualizations, see https://matrix-protocol.org/integration -->
 
 ---
 
@@ -319,14 +320,33 @@ The next step **can only be taken by you**.
 
 ## 8. Cross-References
 
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
-- [Ontology MEF Support](Ontology_MEF_Support.md)  
+### Core Specifications
+- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) <!-- Interactive version: https://matrix-protocol.org/integration -->
+- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md) <!-- Interactive version: https://matrix-protocol.org/glossary -->
+- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
+- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
+
+### Framework Specifications
+- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef -->
+- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
+- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
+- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
+- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md) <!-- Interactive version: https://matrix-protocol.org/mep -->
+- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
+- [Ontology MEF Support](Ontology_MEF_Support.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
+
+### Practical Resources
+- [Quick Start Guide](./guides/QUICK_START.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
+- [Implementation Roadmap](./guides/IMPLEMENTATION_ROADMAP.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
+- [Common Pitfalls](./guides/COMMON_PITFALLS.md) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
+
+### Examples and Templates
+- [Knowledge Comparison Examples](./examples/knowledge-comparison/) <!-- Download examples: https://matrix-protocol.org/downloads/examples -->
+- [MOC Templates](./templates/moc/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
+- [UKI Templates](./templates/uki/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
+
+### Visualizations
+- [ZOF Canonical States](./visualizations/zof-canonical-states.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/zof#canonical-states -->
+- [MAL Arbitration Flow](./visualizations/mal-arbitration-flow.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/mal#arbitration-flow -->
+- [MOC Hierarchies](./visualizations/moc-hierarchies.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/moc#hierarchies -->
+- [OIF Access Control](./visualizations/oif-access-control.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/oif#access-control -->  

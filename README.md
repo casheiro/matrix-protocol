@@ -45,7 +45,7 @@ O protocolo é orientado pelo **Matrix Epistemic Principle (MEP)** — um manife
 | **[MEF_MATRIX_EMBEDDING_FRAMEWORK.md](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** | Estruturação de conhecimento versionado | ✅ Ativo |
 | **[ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** | Workflows conceituais para equipes IA-orientadas | ✅ Ativo |
 | **[OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)** | Arquétipos de inteligência artificial | ✅ Ativo |
-| **[MAL_MATRIX_ARBITER_LAYER.md](MAL_MATRIX_ARBITER_LAYER.md)** | Arbitragem de conflitos e concorrência | 🔄 Rascunho |
+| **[MAL_MATRIX_ARBITER_LAYER.md](MAL_MATRIX_ARBITER_LAYER.md)** | Arbitragem de conflitos e concorrência | ✅ Ativo |
 
 ### 📖 Material de Suporte
 
@@ -53,6 +53,56 @@ O protocolo é orientado pelo **Matrix Epistemic Principle (MEP)** — um manife
 |-----------|-----------|
 | **[Ontology_MEF_Support.md](Ontology_MEF_Support.md)** | Ontologia de vocabulários controlados |
 | **[CLAUDE.md](CLAUDE.md)** | Instruções para Claude Code |
+
+---
+
+## 📁 Estrutura do Repositório
+
+### 🏛️ Especificações (`/`)
+- **Especificações principais:** Todos os frameworks do Matrix Protocol (EN + PT)
+- **Documentação:** CLAUDE.md, CHANGELOG.md, README.md
+- **Análises:** WEBSITE_DIVERGENCE_ANALYSIS.md, CONSOLIDATION_PLAN.md
+
+### 📚 Guias Práticos (`/guides/`)
+- **QUICK_START.md** - Implementação rápida em 3 passos (2-4 horas)
+- **IMPLEMENTATION_ROADMAP.md** - Roadmap organizacional de 6 fases (6-18 meses)
+- **COMMON_PITFALLS.md** - Armadilhas comuns e soluções
+
+### 🎨 Visualizações (`/visualizations/`)
+- **mal-arbitration-flow.md** - Fluxo completo de arbitragem MAL
+- **moc-hierarchies.md** - Estrutura das 4 hierarquias MOC
+- **oif-access-control.md** - Controle de acesso OIF
+- **zof-canonical-states.md** - Estados canônicos ZOF
+
+### 📋 Templates (`/templates/`)
+- **`moc/`** - Templates MOC por porte organizacional (startup, scaleup, enterprise, corporation)
+- **`uki/`** - Templates UKI (básico, decision-record, process)
+
+### 🔧 Scripts (`/scripts/`)
+- **check-internal-links.sh** - Verificação de links internos
+- **validate-cross-references.sh** - Validação de referências cruzadas
+
+---
+
+## 🔄 Sincronização com Website
+
+Este repositório mantém sincronização com o website oficial em [matrix-protocol.org](https://matrix-protocol.org).
+
+### Estratégia de Sincronização
+- **📋 Especificações**: Fonte de verdade está neste repositório
+- **📚 Guias e Tutoriais**: Podem ter versões expandidas no website
+- **🎨 Visualizações**: Mantidas em ambos (repositório = fonte, website = renderizado)
+- **📥 Downloads**: Website contém recursos adicionais para implementação
+
+### Versão Atual
+- **Versão:** v0.0.1 Beta
+- **Status:** Em desenvolvimento ativo
+- **Justificativa:** Protocolo ainda não implementado em produção
+
+### Documentação de Sincronização
+- **[SYNC_GUIDE.md](./SYNC_GUIDE.md)** - Processo detalhado de sincronização
+- **[NAVIGATION_MAP.md](./NAVIGATION_MAP.md)** - Mapeamento repositório ↔ website
+- **[LINK_PATTERNS.md](./LINK_PATTERNS.md)** - Padrões de referências documentados
 
 ---
 
@@ -131,7 +181,7 @@ The protocol is guided by the **Matrix Epistemic Principle (MEP)** — an access
 | **[MEF_MATRIX_EMBEDDING_FRAMEWORK.md](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** | Versioned knowledge structuring | ✅ Active |
 | **[ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** | Conceptual workflows for AI-oriented teams | ✅ Active |
 | **[OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)** | Artificial intelligence archetypes | ✅ Active |
-| **[MAL_MATRIX_ARBITER_LAYER.md](MAL_MATRIX_ARBITER_LAYER.md)** | Conflict & concurrency arbitration | 🔄 Draft |
+| **[MAL_MATRIX_ARBITER_LAYER.md](MAL_MATRIX_ARBITER_LAYER.md)** | Conflict & concurrency arbitration | ✅ Active |
 
 ### 📖 Support Material
 
@@ -139,6 +189,56 @@ The protocol is guided by the **Matrix Epistemic Principle (MEP)** — an access
 |----------|-------------|
 | **[Ontology_MEF_Support.md](Ontology_MEF_Support.md)** | Controlled vocabularies ontology |
 | **[CLAUDE.md](CLAUDE.md)** | Instructions for Claude Code |
+
+---
+
+## 📁 Repository Structure
+
+### 🏛️ Specifications (`/`)
+- **Main specifications:** All Matrix Protocol frameworks (EN + PT)
+- **Documentation:** CLAUDE.md, CHANGELOG.md, README.md
+- **Analysis:** WEBSITE_DIVERGENCE_ANALYSIS.md, CONSOLIDATION_PLAN.md
+
+### 📚 Practical Guides (`/guides/`)
+- **QUICK_START.md** - Fast 3-step implementation (2-4 hours)
+- **IMPLEMENTATION_ROADMAP.md** - Organizational 6-phase roadmap (6-18 months)
+- **COMMON_PITFALLS.md** - Common mistakes and solutions
+
+### 🎨 Visualizations (`/visualizations/`)
+- **mal-arbitration-flow.md** - Complete MAL arbitration flow
+- **moc-hierarchies.md** - Structure of 4 MOC hierarchies
+- **oif-access-control.md** - OIF access control
+- **zof-canonical-states.md** - ZOF canonical states
+
+### 📋 Templates (`/templates/`)
+- **`moc/`** - MOC templates by organization size (startup, scaleup, enterprise, corporation)
+- **`uki/`** - UKI templates (basic, decision-record, process)
+
+### 🔧 Scripts (`/scripts/`)
+- **check-internal-links.sh** - Internal links validation
+- **validate-cross-references.sh** - Cross-references validation
+
+---
+
+## 🔄 Website Synchronization
+
+This repository maintains synchronization with the official website at [matrix-protocol.org](https://matrix-protocol.org).
+
+### Synchronization Strategy
+- **📋 Specifications**: Source of truth is in this repository
+- **📚 Guides and Tutorials**: May have expanded versions on website
+- **🎨 Visualizations**: Maintained in both (repository = source, website = rendered)
+- **📥 Downloads**: Website contains additional implementation resources
+
+### Current Version
+- **Version:** v0.0.1 Beta
+- **Status:** Active development
+- **Rationale:** Protocol not yet implemented in production
+
+### Synchronization Documentation
+- **[SYNC_GUIDE.md](./SYNC_GUIDE.md)** - Detailed synchronization process
+- **[NAVIGATION_MAP.md](./NAVIGATION_MAP.md)** - Repository ↔ website mapping
+- **[LINK_PATTERNS.md](./LINK_PATTERNS.md)** - Documented reference patterns
 
 ---
 
@@ -181,4 +281,4 @@ Define archetypes with **[OIF](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)**.
 
 ---
 
-**Matrix Protocol v1.0** | **Protocolo Matrix v1.0**
+**Matrix Protocol v0.0.1 Beta** | **Protocolo Matrix v0.0.1 Beta**

@@ -20,7 +20,9 @@
       "Bash(do)",
       "Bash(cat:*)",
       "Bash(wc:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(tree:*)",
+      "Bash(chmod:*)"
     ],
     "deny": [],
     "ask": [],

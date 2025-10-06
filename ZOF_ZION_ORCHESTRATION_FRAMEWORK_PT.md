@@ -1,8 +1,8 @@
 # ZOF — Zion Orchestration Framework
 **Acrônimo:** ZOF  
-**Status:** Ativo  
-**Versão:** 1.0.0  
-**Data:** 2025-01-25  
+**Status:** Beta  
+**Versão:** 0.0.1  
+**Última Atualização:** 2025-10-05  
 
 > ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md).
 

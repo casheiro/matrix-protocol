@@ -1,0 +1,265 @@
+# Process Documentation UKI Template
+# Specialized template for process and procedure documentation
+# Based on MEF v1.0.0 Specification
+
+# --- Mandatory Header ---
+schema: "1.0"
+ontology_reference: "[moc-reference]"
+version: "1.0.0"
+
+# --- Identity and Scope ---
+id: uki:[scope_ref]:process:[process-slug]
+title: "[Process Name - What process is documented]"
+scope_ref: [moc-scope-node]
+scope_mode: "propagated"  # Most processes benefit from wider visibility
+domain_ref: [moc-domain-node]
+type_ref: process  # This template is specifically for processes
+maturity_ref: [moc-maturity-node]
+
+# --- Lifecycle ---
+created_date: [YYYY-MM-DD]
+last_modified: [YYYY-MM-DD]
+change_summary: "[Summary of changes]"
+change_impact: [major|minor|patch]
+status: active
+
+# --- Process Content ---
+content: |
+  # [Process Name]
+  
+  ## Purpose and Scope
+  [What is the purpose of this process? What does it accomplish and what is its scope?]
+  
+  ### Objectives
+  - [Primary objective 1]
+  - [Primary objective 2]
+  - [Primary objective 3]
+  
+  ### Scope
+  - **Applies to:** [Who or what this process applies to]
+  - **When to use:** [Circumstances that trigger this process]
+  - **Frequency:** [How often this process is executed]
+  
+  ## Roles and Responsibilities
+  [Who is involved in this process and what are their responsibilities?]
+  
+  ### Process Owner
+  - **Role:** [Process owner role/title]
+  - **Responsibilities:** [Overall accountability and improvement]
+  
+  ### Key Participants
+  - **[Role 1]:** [Specific responsibilities and activities]
+  - **[Role 2]:** [Specific responsibilities and activities]
+  - **[Role 3]:** [Specific responsibilities and activities]
+  
+  ### RACI Matrix
+  | Activity | Role 1 | Role 2 | Role 3 | Role 4 |
+  |----------|--------|--------|--------|--------|
+  | [Activity 1] | R | A | C | I |
+  | [Activity 2] | A | R | I | C |
+  | [Activity 3] | C | R | A | I |
+  
+  ## Process Steps
+  [Detailed step-by-step description of the process]
+  
+  ### Phase 1: [Phase Name]
+  **Duration:** [Expected timeframe]
+  **Owner:** [Responsible role]
+  
+  1. **[Step 1]:** [Detailed description]
+     - **Input:** [What is needed to start this step]
+     - **Output:** [What is produced by this step]
+     - **Tools:** [Tools or systems used]
+     - **Criteria:** [Success criteria or checkpoints]
+  
+  2. **[Step 2]:** [Detailed description]
+     - **Input:** [What is needed to start this step]
+     - **Output:** [What is produced by this step]
+     - **Tools:** [Tools or systems used]
+     - **Criteria:** [Success criteria or checkpoints]
+  
+  ### Phase 2: [Phase Name]
+  **Duration:** [Expected timeframe]
+  **Owner:** [Responsible role]
+  
+  3. **[Step 3]:** [Detailed description]
+     - **Input:** [What is needed to start this step]
+     - **Output:** [What is produced by this step]
+     - **Tools:** [Tools or systems used]
+     - **Criteria:** [Success criteria or checkpoints]
+  
+  ## Process Flow Diagram
+  ```
+  [Start] → [Step 1] → [Decision Point] → [Step 2A/2B] → [Step 3] → [End]
+  ```
+  
+  ## Inputs and Outputs
+  [What goes into the process and what comes out]
+  
+  ### Inputs
+  - **[Input 1]:** [Description and source]
+  - **[Input 2]:** [Description and source]
+  - **[Input 3]:** [Description and source]
+  
+  ### Outputs
+  - **[Output 1]:** [Description and destination]
+  - **[Output 2]:** [Description and destination]
+  - **[Output 3]:** [Description and destination]
+  
+  ## Quality Standards and Metrics
+  [How process quality is measured and maintained]
+  
+  ### Quality Criteria
+  - [Quality standard 1]: [Measurement method]
+  - [Quality standard 2]: [Measurement method]
+  - [Quality standard 3]: [Measurement method]
+  
+  ### Key Performance Indicators (KPIs)
+  - **[KPI 1]:** [Target value] - [Measurement method]
+  - **[KPI 2]:** [Target value] - [Measurement method]
+  - **[KPI 3]:** [Target value] - [Measurement method]
+  
+  ### Service Level Agreements (SLAs)
+  - **[SLA 1]:** [Target] - [Measurement and consequences]
+  - **[SLA 2]:** [Target] - [Measurement and consequences]
+  
+  ## Tools and Systems
+  [Technology and tools used in this process]
+  
+  ### Required Tools
+  - **[Tool 1]:** [Purpose and usage instructions]
+  - **[Tool 2]:** [Purpose and usage instructions]
+  - **[Tool 3]:** [Purpose and usage instructions]
+  
+  ### System Integrations
+  - **[System 1]:** [Integration points and data flow]
+  - **[System 2]:** [Integration points and data flow]
+  
+  ## Exception Handling
+  [How to handle problems, exceptions, and edge cases]
+  
+  ### Common Issues and Resolutions
+  1. **Issue:** [Description of problem]
+     - **Symptoms:** [How to identify this issue]
+     - **Resolution:** [Steps to resolve]
+     - **Prevention:** [How to prevent in future]
+  
+  2. **Issue:** [Description of problem]
+     - **Symptoms:** [How to identify this issue]
+     - **Resolution:** [Steps to resolve]
+     - **Prevention:** [How to prevent in future]
+  
+  ### Escalation Procedures
+  - **Level 1:** [Initial escalation point and criteria]
+  - **Level 2:** [Secondary escalation point and criteria]
+  - **Level 3:** [Final escalation point and criteria]
+  
+  ## Compliance and Governance
+  [Regulatory requirements and governance aspects]
+  
+  ### Regulatory Requirements
+  - **[Regulation 1]:** [Specific requirements and compliance measures]
+  - **[Regulation 2]:** [Specific requirements and compliance measures]
+  
+  ### Audit Requirements
+  - **Documentation:** [What must be documented and retained]
+  - **Evidence:** [What evidence of compliance is required]
+  - **Frequency:** [How often audits occur]
+  
+  ## Training and Competency
+  [Training requirements for process participants]
+  
+  ### Required Training
+  - **[Role 1]:** [Specific training requirements and frequency]
+  - **[Role 2]:** [Specific training requirements and frequency]
+  
+  ### Competency Assessment
+  - **Method:** [How competency is assessed]
+  - **Frequency:** [How often assessment occurs]
+  - **Criteria:** [What constitutes competency]
+  
+  ## Process Improvement
+  [How the process is continuously improved]
+  
+  ### Review Schedule
+  - **Monthly:** [Quick operational reviews]
+  - **Quarterly:** [Performance and metric reviews]
+  - **Annually:** [Comprehensive process evaluation]
+  
+  ### Improvement Methodology
+  - **Data Collection:** [What data is collected for improvement]
+  - **Analysis Methods:** [How data is analyzed]
+  - **Change Management:** [How improvements are implemented]
+
+# --- Examples (Mandatory) ---
+examples:
+  - input: "New employee needs to be onboarded to the engineering team"
+    output: "HR initiates onboarding process, IT provisions accounts and equipment, manager assigns buddy and creates learning plan, employee completes training modules, 30-day check-in conducted, and onboarding completion certified with all systems access verified."
+  - input: "Customer support ticket escalated to engineering team"
+    output: "Support creates engineering ticket with priority classification, engineering team triages within SLA, assigns to appropriate squad, implements fix with testing, deploys solution, validates resolution with customer support, and closes ticket with root cause analysis."
+
+# --- Relationships ---
+relationships:
+  - type: implements
+    target: uki:[scope_ref]:policy:[policy-id]
+    description: "This process implements organizational policies and standards"
+  - type: depends_on
+    target: uki:[scope_ref]:reference:[system-guide-id]
+    description: "This process depends on system documentation and user guides"
+  - type: complements
+    target: uki:[scope_ref]:process:[related-process-id]
+    description: "This process works together with related organizational processes"
+
+# --- Governance ---
+domain_of_influence: "[organizational-reference]"
+
+# =============================================================================
+# PROCESS-SPECIFIC METADATA
+# =============================================================================
+
+# Process characteristics
+process_metadata:
+  process_owner: "[person-or-role]"
+  process_type: [operational|management|support]
+  criticality: [low|medium|high|critical]
+  complexity: [simple|moderate|complex]
+  automation_level: [manual|semi-automated|automated]
+  
+# Performance metrics
+process_metrics:
+  cycle_time: "[duration]"
+  success_rate: "[percentage]"
+  cost_per_execution: "[amount]"
+  customer_satisfaction: "[rating]"
+  
+# Compliance tracking
+compliance_info:
+  regulatory_frameworks: ["framework1", "framework2"]
+  last_audit_date: "[YYYY-MM-DD]"
+  next_audit_date: "[YYYY-MM-DD]"
+  compliance_status: [compliant|minor-issues|major-issues|non-compliant]
+  
+# Change management
+change_tracking:
+  last_major_revision: "[YYYY-MM-DD]"
+  pending_changes: ["change1", "change2"]
+  change_approval_required: [yes|no]
+  change_impact_assessment: [low|medium|high]
+
+# =============================================================================
+# USAGE GUIDANCE
+# =============================================================================
+
+# This template is optimized for:
+# - Operational processes (daily/weekly/monthly activities)
+# - Management processes (planning, review, decision-making)
+# - Support processes (HR, IT, facilities)
+# - Customer-facing processes (sales, support, delivery)
+
+# Key principles:
+# 1. Be clear and specific in step descriptions
+# 2. Define roles and responsibilities explicitly
+# 3. Include quality standards and measurements
+# 4. Document exception handling and escalation
+# 5. Plan for continuous improvement and updates
+# 6. Consider compliance and regulatory requirements

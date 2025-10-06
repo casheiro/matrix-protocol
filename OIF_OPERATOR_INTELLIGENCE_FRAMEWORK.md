@@ -1,8 +1,8 @@
 # OIF — Operator Intelligence Framework
 **Acronym:** OIF  
-**Status:** Stable  
-**Version:** 1.0.0  
-**Date:** 2025-01-25  
+**Version:** 0.0.1
+**Status:** Beta
+**Last Updated:** 2025-10-05  
 
 > "The mind that opens to a new idea never returns to its original size." — Albert Einstein
 

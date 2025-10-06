@@ -1,8 +1,8 @@
 # MAL — Matrix Arbiter Layer
 **Acronym:** MAL  
-**Status:** Draft  
-**Version:** 1.0.0  
-**Date:** 2025-08-26  
+**Version:** 0.0.1
+**Status:** Active
+**Last Updated:** 2025-10-05  
 
 > "In the absence of conflict, wisdom remains untested." — Ancient Proverb
 

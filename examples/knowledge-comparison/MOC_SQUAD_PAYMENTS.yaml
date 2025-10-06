@@ -20,7 +20,7 @@ hierarchies:
       - id: "squad-payments"
         label: "Squad Payments"
         parent: "tribe-commerce"
-        level: 1
+        level: 2
         governance:
           visibility: ["squad_members", "tribe_leads", "architecture_committee"]
           propagation: "restricted"
