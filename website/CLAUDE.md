@@ -38,6 +38,7 @@ Before implementing ANY migration:
 }
 ```
 
+
 ### Original Stack (Source - v1)
 ```json
 {
@@ -49,6 +50,7 @@ Before implementing ANY migration:
   "typescript": "5.4.5"
 }
 ```
+
 
 ## 🔴 REGRA DE OURO - GERENCIAMENTO DE DEPENDÊNCIAS (INVIOLÁVEL)
 
@@ -65,6 +67,7 @@ pnpm add -D <package-name>
 # Para remover dependências
 pnpm remove <package-name>
 ```
+
 
 #### ❌ PROIBIDO - O que NUNCA fazer:
 - Editar seção `dependencies` ou `devDependencies` manualmente
@@ -97,6 +100,7 @@ pnpm generate           # Generate static site
 pnpm preview            # Preview built site
 ```
 
+
 ### Migration & Validation (To be implemented)
 ```bash
 pnpm typecheck          # TypeScript validation
@@ -104,6 +108,7 @@ pnpm lint               # ESLint + Prettier
 pnpm test               # Unit tests
 pnpm lighthouse         # Performance audit
 ```
+
 
 ## Critical Architecture Components
 
@@ -118,6 +123,7 @@ modules: [
 ]
 ```
 
+
 ### UApp Wrapper Requirement
 The `app.vue` MUST include the UApp wrapper for Nuxt UI 3.x compatibility:
 ```vue
@@ -130,8 +136,10 @@ The `app.vue` MUST include the UApp wrapper for Nuxt UI 3.x compatibility:
 </template>
 ```
 
+
 ### Project Structure
 ```
+
 matrix-protocol-website-v2/
 ├── .nuxt/                  # Build artifacts (gerado)
 ├── .output/                # Output da build (gerado)
@@ -170,6 +178,7 @@ matrix-protocol-website-v2/
 └── package.json            # Dependências e scripts
 ```
 
+
 ## Matrix Protocol Framework Colors (MANDATORY)
 
 ### Official Framework Colors
@@ -180,6 +189,7 @@ matrix-protocol-website-v2/
 --moc-purple: #9B59B6;      /* MOC - Matrix Ontology Catalog */
 --mal-red: #C0392B;         /* MAL - Matrix Arbiter Layer */
 ```
+
 
 ### Typography Requirements
 - **Headings**: Rajdhani (Bold/Regular)
@@ -221,6 +231,7 @@ matrix-protocol-website-v2/
 </style>
 ```
 
+
 #### ✅ CORRETO - Padrão obrigatório v2:
 ```vue
 <template>
@@ -239,6 +250,7 @@ matrix-protocol-website-v2/
 }
 </style>
 ```
+
 
 ### 🔧 **Componentes Nuxt UI - Problemas Identificados**
 
@@ -261,6 +273,7 @@ matrix-protocol-website-v2/
 </Transition>
 ```
 
+
 #### ⚠️ **UDropdown - API v3.x Mudou**
 - API completamente diferente da v2.x
 - Sempre verificar documentação Nuxt UI 3.x atual
@@ -281,6 +294,7 @@ runtimeConfig: {
 }
 ```
 
+
 ### 🗺️ **Rotas i18n - Padrões Validados**
 
 ```vue
@@ -290,6 +304,7 @@ runtimeConfig: {
 <!-- ⚠️ ALTERNATIVA (quando localePath falha) -->
 :to="`/${$i18n.locale}/frameworks/mef`"
 ```
+
 
 **Contextos onde alternativa foi necessária:**
 - MobileDrawer.vue (problemas de contexto de composable)
@@ -317,6 +332,7 @@ runtimeConfig: {
 </div>
 ```
 
+
 ### 🏢 **Atribuição Casheiro - Padrão Completo**
 
 #### Footer obrigatório:
@@ -330,6 +346,7 @@ runtimeConfig: {
 </p>
 ```
 
+
 #### Schema.org obrigatório:
 ```ts
 // useSEO.ts
@@ -338,6 +355,7 @@ description: 'Empresa criadora e mantenedora do Matrix Protocol',
 url: toValue(config.casheiroUrl)
 ```
 
+
 ### 🌍 **i18n Completo - Todos os Textos**
 
 ```ts
@@ -345,6 +363,7 @@ url: toValue(config.casheiroUrl)
 const defaultKeywords = t('seo.keywords.default')  // ← Era hardcoded em PT
 const pageAuthor = t('seo.author')                 // ← "Casheiro"
 ```
+
 
 ```json
 // pt.json & en.json - SEMPRE adicionar
@@ -360,6 +379,7 @@ const pageAuthor = t('seo.author')                 // ← "Casheiro"
   "casheiroLink": "Casheiro"
 }
 ```
+
 
 ### 📋 **CHECKLIST DE MIGRAÇÃO OBRIGATÓRIO**
 
@@ -420,6 +440,7 @@ Para cada componente Vue migrado que usa `@apply`:
 grep -r "@apply" app/components/
 ```
 
+
 #### Step 2: Converter estilos
 1. **Copiar classes** do `@apply` para variável/constante
 2. **Aplicar inline** no template usando `class="..."`  
@@ -448,6 +469,7 @@ grep -r "@apply" app/components/
 /* Remover @apply ou manter apenas CSS puro */
 </style>
 ```
+
 
 #### Step 4: Validação
 - Build deve passar sem erros de Tailwind

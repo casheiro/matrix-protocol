@@ -100,6 +100,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Reference Domains**
 ```yaml
+
 # --- Illustrative Examples ---
 reference_domains:
   strategy:
@@ -131,8 +132,10 @@ alternative_domain_examples:
   data_governance: "Data management and governance"
 ```
 
+
 ### **UKI Type References**
 ```yaml
+
 # --- Illustrative Examples ---
 reference_types:
   pattern:
@@ -171,8 +174,10 @@ alternative_type_examples:
   concept: "Definition or theoretical model"
 ```
 
+
 ### **Ontological Relationships**
 ```yaml
+
 # --- Illustrative Examples ---
 relationship_types:
   depends_on:
@@ -230,8 +235,10 @@ relationship_usage_examples:
     description: "Cannot implement both patterns simultaneously"
 ```
 
+
 ### **Severity Levels**
 ```yaml
+
 # --- Illustrative Examples ---
 severity_classification:
   low:
@@ -284,8 +291,10 @@ impact_assessment_matrix:
     - "Revenue implications"
 ```
 
+
 ### **Lifecycle Management**
 ```yaml
+
 # --- Illustrative Examples ---
 lifecycle_states:
   active:
@@ -335,8 +344,10 @@ lifecycle_transition_rules:
       - "Stakeholder approval needed"
 ```
 
+
 ### **Organizational Customization Guide**
 ```yaml
+
 # --- Implementation Guide ---
 customization_methodology:
   step_1_domain_analysis:
@@ -385,6 +396,7 @@ industry_specific_examples:
     types: ["standard_procedure", "quality_standard", "safety_protocol", "efficiency_metric"]
     special_relationships: ["quality_dependency", "safety_requirement"]
 ```
+
 
 ---
 

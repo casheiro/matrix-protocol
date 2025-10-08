@@ -159,6 +159,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Arbitragem de Conflito Horizontal (H1)**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 arbitration_event:
   event_id: "mal-evt-20250826-001"
@@ -207,8 +208,10 @@ decision_record:
       regulatória mais forte ligada aos requisitos de conformidade LGPD.
 ```
 
+
 ### **Arbitragem de Enriquecimento Concorrente (H2)**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 arbitration_event:
   event_id: "mal-evt-20250826-002"
@@ -230,8 +233,10 @@ decision_record:
     summary: "Precedência de autoridade superior em cenário concorrente"
 ```
 
+
 ### **Arbitragem de Contenção de Promoção (H3)**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 arbitration_event:
   event_id: "mal-evt-20250826-003"
@@ -253,12 +258,14 @@ decision_record:
     summary: "Convergência de autoridade, proximidade de escopo e evidência de conformidade"
 ```
 
+
 ---
 
 ## 8. Interfaces Mínimas MAL (Normativo)
 
 ### Schema de Entrada de Evento de Arbitragem
 ```yaml
+
 # --- Interface Normativa ---
 arbitration_event:
   event_id: string                    # Obrigatório: Identificador único de arbitragem
@@ -280,8 +287,10 @@ arbitration_event:
   policy_ref: string                  # Opcional: Política de arbitragem específica
 ```
 
+
 ### Schema de Saída de Registro de Decisão
 ```yaml
+
 # --- Interface Normativa ---
 decision_record:
   decision_id: string                 # Obrigatório: Identificador único da decisão
@@ -303,6 +312,7 @@ decision_record:
     decided_by: string                # Identificador da versão MAL
     timeout_used_ms: integer          # Tempo de processamento usado
 ```
+
 
 ---
 

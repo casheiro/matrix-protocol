@@ -127,6 +127,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Camada Oráculo - Governança Estratégica**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Função: Núcleo de sabedoria do Protocolo Matrix
 oracle_responsibilities:
@@ -143,8 +144,10 @@ oracle_responsibilities:
     - "Criar ciclos de governança MEF baseados no MOC"
 ```
 
+
 ### **Camada Zion - Framework Conceitual de Workflows**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Estados Canônicos ZOF
 canonical_states_flow:
@@ -173,8 +176,10 @@ authentication_flow:
   enrich: "Cria uki:technical:example:auth-implementation e uki:technical:pattern:token-refresh"
 ```
 
+
 ### **Camada Operador - Framework de Inteligência**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Arquétipos de Inteligência OIF
 intelligence_archetypes:
@@ -200,8 +205,10 @@ jwt_implementation_oif:
   enrich_state: "Knowledge Agent cria UKIs com scope_ref=team, respeitando MOC"
 ```
 
+
 ### **Integração MEF com Protocolo Matrix**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # MEF como Implementação da Camada Oráculo
 mef_oracle_implementation:
@@ -223,8 +230,10 @@ lifecycle_flow:
   8: "Avaliação de Promoção (local vs amplo)"
 ```
 
+
 ### **Ordem Operacional para Consultas Oracle**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 mandatory_operational_sequence:
   1: "Contexto MOC: Identificar hierarquia, autoridades e escopo via MOC"
@@ -236,8 +245,10 @@ mandatory_operational_sequence:
 important: "A filtragem SEMPRE precede a consulta, nunca o contrário"
 ```
 
+
 ### **Benefícios do Framework**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 organizational_benefits:
   architecture: "Camadas bem definidas para responsabilidades diferentes"
@@ -252,6 +263,7 @@ organizational_benefits:
   ai_ready_structure: "Construída para sistemas inteligentes"
   evolutionary_design: "Melhoria contínua via EvaluateForEnrich"
 ```
+
 
 **O Despertar na Matrix**
 > "A resposta está aí, te procurando. E vai te encontrar, se você quiser." — Trinity

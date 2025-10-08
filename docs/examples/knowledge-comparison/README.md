@@ -24,6 +24,7 @@ Antes de qualquer UKI ser criado, o **Matrix Ontology Catalog (MOC)** define a t
 
 #### 📋 Estrutura Oficial MOC
 ```yaml
+
 moc_version: "1.0"
 organization: "Example E-commerce Company" 
 version: "0.0.1-beta"
@@ -41,6 +42,7 @@ hierarchies:
           visibility: ["squad_members", "tribe_leads"]
           propagation: "restricted"
 ```
+
 
 #### 🏛️ 5 Hierarquias Implementadas
 
@@ -61,12 +63,14 @@ hierarchies:
 
 #### 🔗 Integração UKI ↔ MOC
 ```yaml
+
 # Como UKIs referenciam o MOC
 scope_ref: squad-payments    # → hierarchies.scope.nodes[id="squad-payments"]
 domain_ref: business         # → hierarchies.domain.nodes[id="business"] 
 type_ref: business_rule      # → hierarchies.type.nodes[id="business_rule"]
 maturity_ref: validated      # → hierarchies.maturity.nodes[id="validated"]
 ```
+
 
 ### 🎯 Por Que o MOC é Fundamental
 
@@ -174,6 +178,7 @@ Durante a criação inicial, foram utilizados campos que não existem na especif
 
 ### 1. **Resolução de Conflitos**
 ```yaml
+
 # Exemplo: uki-pay-refund-policy-002.yaml
 change_summary: "Unificação de prazos conflitantes e definição de SLA por gateway"
 promotion:
@@ -183,24 +188,30 @@ promotion:
     Candidata à promoção para escopo tribe.
 ```
 
+
 ### 2. **Relacionamentos Semânticos Explícitos**
 ```yaml
+
 relationships:
   - type: relates_to
     target: uki:squad-payments:business_rule:discount-logic-001
     description: "Desconto afeta cálculo proporcional de refund"
 ```
 
+
 ### 3. **Versionamento e Evolução**
 ```yaml
+
 version: 2.1.0
 change_impact: minor
 previous_version: 2.0.0
 change_summary: "Ajuste de thresholds baseado em análise de falsos positivos"
 ```
 
+
 ### 4. **Estrutura Oficial MEF com Integração MOC**
 ```yaml
+
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"  # Referência ao MOC da squad
 scope_ref: squad-payments                      # Escopo definido no MOC
@@ -211,14 +222,17 @@ maturity_ref: validated                       # Nível definido no MOC
 domain_of_influence: "engineering_teams"
 ```
 
+
 ### 5. **Governança e Promoção**
 ```yaml
+
 promotion:
   promotion_rationale: |
     Política afeta múltiplas squads - candidata à promoção para escopo tribe
 maturity_ref: validated
 status: active
 ```
+
 
 ## 📈 Métricas de Impacto
 

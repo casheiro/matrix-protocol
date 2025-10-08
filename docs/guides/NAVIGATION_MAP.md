@@ -91,11 +91,13 @@ See [MOC Templates](./templates/moc/startup.yaml)
 See [MAL Flow Diagram](./visualizations/mal-arbitration-flow.md)
 ```
 
+
 #### Absolute Links (For External References)
 ```markdown
 # Only for external references
 See [Matrix Protocol Website](https://matrix-protocol.org)
 ```
+
 
 ### Website Link Patterns
 
@@ -113,6 +115,7 @@ See [ZOF Framework](/frameworks/zof)
 [Download MOC Template](/downloads/templates/moc-startup)
 ```
 
+
 #### Repository References
 ```markdown
 # Link to source specification
@@ -121,6 +124,7 @@ View complete specification on [GitHub](https://github.com/user/matrix-protocol/
 # Link to specific section
 See [UKI Lifecycle section](https://github.com/user/matrix-protocol/blob/main/MEF_MATRIX_EMBEDDING_FRAMEWORK.md#5-uki-lifecycle)
 ```
+
 
 ## Website Comment Patterns
 
@@ -133,6 +137,7 @@ When adding website references in repository files:
 
 <!-- Visual diagram available at https://matrix-protocol.org/frameworks/mal#arbitration-flow -->
 ```
+
 
 ## Cross-Reference Integration Points
 

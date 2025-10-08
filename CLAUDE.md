@@ -140,6 +140,7 @@ Every decision generates auditable epistemological narrative. Explainability is 
 
 ### Current UKI Structure (Mandatory Fields)
 ```yaml
+
 # --- Mandatory Header ---
 schema: "1.0"
 ontology_reference: "[moc-reference]"  # Points to organizational MOC
@@ -180,6 +181,7 @@ relationships:
 domain_of_influence: "[organizational-reference]"
 ```
 
+
 ### MOC-Based Knowledge Organization
 - All `*_ref` fields MUST reference valid nodes in organizational MOC
 - Use format `uki:[scope_ref]:[type_ref]:[slug-id]` (scope comes first, not domain)
@@ -190,6 +192,7 @@ domain_of_influence: "[organizational-reference]"
 
 ### Real Example from Repository
 ```yaml
+
 # From examples/knowledge-comparison/structured/business-rules/uki-pay-discount-logic-001.yaml
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"  # Standard MEF ontology reference
@@ -209,8 +212,10 @@ relationships:
     description: "Cálculo de taxas considera descontos aplicados"
 ```
 
+
 ### Real MOC Implementation from Repository
 ```yaml
+
 # --- Actual MOC_SQUAD_PAYMENTS.yaml from examples/knowledge-comparison/ ---
 moc_version: "1.0"
 organization: "Example E-commerce Company"
@@ -303,6 +308,7 @@ governance:
     arbitration_policy: "moc:arbitration:security_conflicts"
 ```
 
+
 **Key Integration**: UKIs in `/examples/knowledge-comparison/structured/` reference this MOC via their `*_ref` fields:
 - `scope_ref: squad-payments` → `hierarchies.scope.nodes[id="squad-payments"]`
 - `domain_ref: business` → `hierarchies.domain.nodes[id="business"]`
@@ -321,6 +327,7 @@ The `examples/knowledge-comparison/` directory contains the primary demonstratio
 
 ### Structure Overview
 ```
+
 examples/knowledge-comparison/
 ├── MOC_SQUAD_PAYMENTS.yaml              # Organizational taxonomy (FOUNDATIONAL)
 ├── unstructured/                        # 12 problematic documents
@@ -332,6 +339,7 @@ examples/knowledge-comparison/
     ├── technical-patterns/              # 6 UKIs: gateway, security, retry patterns  
     └── procedures/                      # 5 UKIs: PCI, deployment, monitoring procedures
 ```
+
 
 ### Using These Examples
 - **MOC First**: Always start with the MOC to understand organizational taxonomy
@@ -347,6 +355,7 @@ The Matrix Protocol operates through sophisticated **cross-framework integration
 ### Typical Workflow Integration Sequence
 
 ```mermaid
+
 graph TD
     A[ZOF: User Request] --> B[ZOF: Understand State]
     B --> C[MEF: Query UKIs]
@@ -364,6 +373,7 @@ graph TD
     L --> O[End: Traceable Decision]
     N --> O
 ```
+
 
 ### Cross-Framework Dependencies
 
@@ -399,11 +409,13 @@ All ZOF workflows MUST follow this exact sequence:
 ### Explainability Signals (Mandatory)
 Each state transition MUST record:
 ```yaml
+
 signals:
   context: "[What entered this state]"
   decision: "[Why it transitioned to next state]"
   result: "[What exited this state]"
 ```
+
 
 ### EvaluateForEnrich Checkpoint
 - Uses `can_enrich?()` function with MOC-defined criteria
@@ -413,6 +425,7 @@ signals:
 
 ### ZOF Flow Example (Conceptual)
 ```yaml
+
 # Technology-independent workflow description
 flow_id: "zof-payment-gateway-selection"
 canonical_states:
@@ -444,6 +457,7 @@ canonical_states:
       - uki:squad-payments:business_rule:market-specific-gateway-rules-019
 ```
 
+
 ### Key ZOF Principles
 - **Technology-Independent**: Describes "how to think", not "how to implement"
 - **Oracle-Centric**: Always consult existing knowledge before deciding
@@ -458,6 +472,7 @@ canonical_states:
 ### H1 (Horizontal Conflict) - Competing UKIs
 
 ```yaml
+
 # Arbitration Event
 arbitration_event:
   event_id: "mal-evt-20250826-001"
@@ -494,9 +509,11 @@ decision_record:
     - "mark_conflict_resolved"
 ```
 
+
 ### H2 (Concurrent Enrichment) - Simultaneous Modifications
 
 ```yaml
+
 # Concurrent enrichment detected within 30-second window
 arbitration_event:
   event_type: "H2"
@@ -522,6 +539,7 @@ decision_record:
     - "defer_enrich:zof-auth-update-001"
 ```
 
+
 ## OIF (Operator Intelligence Framework) Examples
 
 > **AI archetypes with hierarchical explainability and MOC integration**
@@ -529,6 +547,7 @@ decision_record:
 ### Knowledge Agent (Canonical Archetype)
 
 ```yaml
+
 # Knowledge Agent behavior demonstrating derived authority
 user_query: "What's the correct way to implement JWT authentication?"
 
@@ -553,9 +572,11 @@ knowledge_agent_response:
     absolute technical truth. Consult security team for cross-squad policies.
 ```
 
+
 ### OIF Arbitration Explanation Template
 
 ```yaml
+
 # OIF explaining MAL decision to user
 arbitration_explanation:
   decision_id: "mal-dec-20250826-h1-001"
@@ -588,6 +609,7 @@ arbitration_explanation:
   escalation_path: "Contact security team if you need to contest this decision"
 ```
 
+
 ## MEP (Matrix Epistemic Principle) Applications
 
 > **How epistemological principles guide real protocol operations**
@@ -605,6 +627,7 @@ arbitration_explanation:
 ### MEP Conformance Example
 
 ```yaml
+
 # How MEP principles are validated in practice
 mep_conformance_check:
   principle_1_semantic_elasticity:
@@ -622,6 +645,7 @@ mep_conformance_check:
     evidence: "MAL Decision Records include reasoning and MOC references"
     validation: "PASS - Complete audit trail maintained"
 ```
+
 
 This demonstrates that MEP is not abstract philosophy but **concrete guidance** that shapes every framework operation, ensuring epistemological consistency across the entire protocol.
 

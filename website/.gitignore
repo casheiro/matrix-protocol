@@ -22,3 +22,13 @@ logs
 .env
 .env.*
 !.env.example
+
+# Generated downloads (synced from docs/examples and docs/manual)
+public/downloads/uki/
+public/downloads/frameworks/mef/*.zip
+public/downloads/guides/
+public/downloads/quick-start/
+public/downloads/templates/
+
+# Sync metadata
+public/downloads/sync-metadata.json

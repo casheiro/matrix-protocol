@@ -47,6 +47,7 @@ A limpeza da documentação foi concluída com sucesso, removendo 7 arquivos obs
 
 ### 📋 Documentação Oficial (6 arquivos)
 ```
+
 ├── README.md                        # Documentação principal bilíngue
 ├── CHANGELOG.md                     # Histórico bilíngue  
 ├── CLAUDE.md                        # Orientações Claude Code
@@ -55,8 +56,10 @@ A limpeza da documentação foi concluída com sucesso, removendo 7 arquivos obs
 └── SYNC_GUIDE_EN.md                 # Guia sincronização (EN)
 ```
 
+
 ### 📁 Diretórios Essenciais
 ```
+
 ├── docs/                           # Documentação unificada (fonte única da verdade)
 │   ├── specifications/en/          # Especificações em inglês
 │   ├── specifications/pt/          # Especificações em português  
@@ -70,6 +73,7 @@ A limpeza da documentação foi concluída com sucesso, removendo 7 arquivos obs
 ├── scripts/                        # Scripts de automação
 └── website/                        # Website Nuxt (para Fase 2)
 ```
+
 
 ---
 

@@ -123,6 +123,7 @@ content: |
   
   ### Alert Routing
   ```yaml
+
   alert_routing:
     business_hours: # 9:00-18:00 BRT, Mon-Fri
       - slack: "#alerts"
@@ -136,6 +137,7 @@ content: |
       - sms: "+55-11-99999-9999" (Tech Lead)
       - sms: "+55-11-88888-8888" (CTO)
   ```
+
   
   ## Dashboard Configuration
   

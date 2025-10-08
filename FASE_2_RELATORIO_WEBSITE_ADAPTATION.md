@@ -38,6 +38,7 @@ Escolhemos a estratégia de symlinks por ser:
 ### Estrutura de Symlinks Criada
 
 ```
+
 website/content/
 ├── pt/
 │   ├── frameworks/
@@ -56,6 +57,7 @@ website/content/
 └── en/
     └── [mesma estrutura para inglês]
 ```
+
 
 ### Mudanças de Configuração
 
@@ -89,6 +91,7 @@ website/content/
 - 12 symlinks em PT (6 frameworks + 6 páginas)
 - 12 symlinks em EN (6 frameworks + 6 páginas)
 ```
+
 
 ### ✅ Acessibilidade do Conteúdo
 - Verificado que todos os arquivos são acessíveis através dos symlinks

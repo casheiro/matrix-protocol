@@ -77,6 +77,7 @@ content: |
     WHERE created_at >= CURRENT_DATE - INTERVAL '90 days'
     GROUP BY DATE(created_at), gateway_type;
   ```
+
   
   **Connection Pool Tuning:**
   ```properties
@@ -87,6 +88,7 @@ content: |
   spring.datasource.hikari.idle-timeout=300000
   spring.datasource.hikari.max-lifetime=1200000
   ```
+
   
   ### Application-Level Caching
   
@@ -102,6 +104,7 @@ content: |
       // Don't cache transient states, TTL: 5 minutes
   }
   ```
+
   
   **Cache Patterns:**
   - **Write-through:** Currency exchange rates
@@ -120,6 +123,7 @@ content: |
   -XX:+UseStringDeduplication
   -XX:+OptimizeStringConcat
   ```
+
   
   **Garbage Collection Monitoring:**
   - GC pause time target: < 200ms
@@ -149,6 +153,7 @@ content: |
   
   ### Performance Test Automation
   ```yaml
+
   # JMeter test configuration
   load_test_config:
     threads: 1000
@@ -168,6 +173,7 @@ content: |
         weight: 10%
         endpoint: "/api/refunds"
   ```
+
   
   ## Performance Issue Investigation
   
@@ -191,6 +197,7 @@ content: |
   FROM pg_stat_user_indexes 
   ORDER BY idx_tup_read DESC;
   ```
+
   
   ### Common Bottlenecks and Solutions
   

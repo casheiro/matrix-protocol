@@ -100,6 +100,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 
 #### 1.1 Atualizar MOC_BASIC_TEMPLATE.yaml
 ```yaml
+
 # Adicionar após hierarquia 'maturity':
 evaluation_criteria:
   metadata:
@@ -122,9 +123,11 @@ unified_structure_compliance:
   conformity: "full"
 ```
 
+
 #### 1.2 Revisar MOC_STARTER_TEMPLATE.yaml
 - Adicionar header comment:
 ```yaml
+
 # LEGACY TEMPLATE - For reference only
 # For production use, please select normalized templates:
 # - MOC_STARTUP_TEMPLATE.yaml (5-50 employees)
@@ -132,6 +135,7 @@ unified_structure_compliance:
 # - MOC_ENTERPRISE_TEMPLATE.yaml (200-1000 employees)
 # - MOC_CORPORATION_TEMPLATE.yaml (1000+ employees)
 ```
+
 
 ### FASE 2: Criar Estrutura de Diretórios (Prioridade Alta)
 
@@ -143,6 +147,7 @@ mkdir -p /public/downloads/frameworks/moc
 mkdir -p /public/downloads/frameworks/mal
 ```
 
+
 ### FASE 3: Criar Recursos dos Frameworks (Prioridade Média)
 
 #### 3.1 MEF Resources
@@ -150,6 +155,7 @@ mkdir -p /public/downloads/frameworks/mal
 ##### basic-templates.zip
 Conteúdo do ZIP:
 ```
+
 mef-basic-templates/
 ├── README.md
 ├── basic-uki.yaml
@@ -159,6 +165,7 @@ mef-basic-templates/
     ├── business-process.yaml
     └── learning-note.yaml
 ```
+
 
 ##### MEF_IMPLEMENTATION_GUIDE.md
 Estrutura do documento:
@@ -175,15 +182,18 @@ Estrutura do documento:
 ## 8. Troubleshooting
 ```
 
+
 ##### advanced-templates.zip
 Conteúdo do ZIP:
 ```
+
 mef-advanced-templates/
 ├── multi-hierarchical/
 ├── complex-relationships/
 ├── version-branches/
 └── migration-scripts/
 ```
+
 
 ##### complex-use-cases.md
 Casos documentados:
@@ -197,12 +207,14 @@ Casos documentados:
 ##### basic-workflows.zip
 Conteúdo do ZIP:
 ```
+
 zof-basic-workflows/
 ├── sequential-workflow.yaml
 ├── checkpoint-workflow.yaml
 ├── decision-workflow.yaml
 └── parallel-workflow.yaml
 ```
+
 
 ##### ZOF_ORCHESTRATION_GUIDE.md
 Estrutura:
@@ -217,6 +229,7 @@ Estrutura:
 ## 6. Integration Points
 ## 7. Monitoring
 ```
+
 
 ##### advanced-workflows.zip
 Workflows complexos:
@@ -238,6 +251,7 @@ Integrações documentadas:
 ##### basic-archetypes.zip
 Arquétipos incluídos:
 ```
+
 oif-basic-archetypes/
 ├── analyst.yaml
 ├── developer.yaml
@@ -245,6 +259,7 @@ oif-basic-archetypes/
 ├── researcher.yaml
 └── support.yaml
 ```
+
 
 ##### OIF_INTELLIGENCE_GUIDE.md
 Conteúdo:
@@ -273,6 +288,7 @@ Análises:
 ##### basic-ontologies.zip
 Ontologias por setor:
 ```
+
 moc-basic-ontologies/
 ├── technology/
 ├── healthcare/
@@ -280,6 +296,7 @@ moc-basic-ontologies/
 ├── education/
 └── manufacturing/
 ```
+
 
 ##### MOC_CATALOGING_GUIDE.md
 Guia completo:
@@ -308,12 +325,14 @@ Estratégias de migração:
 ##### basic-protocols.zip
 Protocolos incluídos:
 ```
+
 mal-basic-protocols/
 ├── simple-arbitration.yaml
 ├── priority-based.yaml
 ├── escalation.yaml
 └── consensus.yaml
 ```
+
 
 ##### MAL_ARBITRATION_GUIDE.md
 Manual completo:

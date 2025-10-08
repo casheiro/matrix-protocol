@@ -130,6 +130,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Oracle Layer - Strategic Governance**
 ```yaml
+
 # --- Illustrative Example ---
 # Function: Wisdom core of Matrix Protocol
 oracle_responsibilities:
@@ -152,8 +153,10 @@ oracle_components:
   strategic_version_manager: "Versioning that propagates strategic changes to dependent UKIs"
 ```
 
+
 ### **Zion Layer - Conceptual Workflow Framework**
 ```yaml
+
 # --- Illustrative Example ---
 # ZOF Canonical States
 canonical_states_flow:
@@ -183,8 +186,10 @@ authentication_workflow:
   result: "Solution implemented + structured knowledge returned to Oracle for future reuse"
 ```
 
+
 ### **Operator Layer - Intelligence Framework**
 ```yaml
+
 # --- Illustrative Example ---
 # OIF Intelligence Archetypes
 intelligence_archetypes:
@@ -214,8 +219,10 @@ jwt_implementation_oif:
   result: "Implementation completed + Oracle enriched within user's authorized scope, complete MOC governance applied"
 ```
 
+
 ### **MEF Integration with Matrix Protocol**
 ```yaml
+
 # --- Illustrative Example ---
 # MEF as Oracle Layer Implementation
 mef_oracle_implementation:
@@ -240,8 +247,10 @@ lifecycle_flow:
   continuous_cycle: "Return to Oracle Create"
 ```
 
+
 ### **Mandatory Operational Sequence for Oracle Queries**
 ```yaml
+
 # --- Illustrative Example ---
 mandatory_operational_sequence:
   1_moc_context: "MOC Context: Identify user hierarchy, authorities, and scope via MOC"
@@ -258,8 +267,10 @@ moc_integration_points:
   operator_moc: "OIF uses MOC to filter knowledge and validate explanations based on hierarchies"
 ```
 
+
 ### **Framework Benefits**
 ```yaml
+
 # --- Illustrative Example ---
 organizational_benefits:
   clear_architecture: "Well-defined layers for different responsibilities"
@@ -275,8 +286,10 @@ organizational_benefits:
   evolutionary_design: "Continuous improvement through feedback loops and criterious enrichment via EvaluateForEnrich"
 ```
 
+
 ### **Matrix State Diagrams**
 ```mermaid
+
 # --- Illustrative Example ---
 stateDiagram-v2
     [*] --> Intake
@@ -304,6 +317,7 @@ stateDiagram-v2
       enrichment (MEF UKIs)
     end note
 ```
+
 
 **Awakening in the Matrix**
 > "The answer is out there, looking for you. And it will find you, if you want it to." — Trinity

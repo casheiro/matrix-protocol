@@ -79,6 +79,7 @@ content: |
     "gateway": "stripe"
   }
   ```
+
   
   ## Monitoring and Observability
   

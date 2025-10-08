@@ -128,12 +128,14 @@ Template validado + métricas básicas + 3 itens refinados
 
 **Template adaptado:**
 ```yaml
+
 comando: "[comando específico]"
 quando_usar: "[cenário]"
 pré_requisitos: "[o que ter antes]"
 resultado_esperado: "[como validar]"
 se_der_erro: "[troubleshooting]"
 ```
+
 
 ### **Time de Negócio (Produto, Vendas, Marketing)**
 **Comece com:**
@@ -144,12 +146,14 @@ se_der_erro: "[troubleshooting]"
 
 **Template adaptado:**
 ```yaml
+
 regra: "[regra específica]"
 quando_aplicar: "[condições]"
 como_calcular: "[fórmula ou processo]"
 exceções: "[casos especiais]"
 aprovações: "[quem autoriza]"
 ```
+
 
 ### **Time de Suporte (CS, Help Desk)**
 **Comece com:**
@@ -160,12 +164,14 @@ aprovações: "[quem autoriza]"
 
 **Template adaptado:**
 ```yaml
+
 problema: "[descrição do problema]"
 sintomas: "[como identificar]"
 solução_rápida: "[primeiro passo]"
 solução_completa: "[processo detalhado]"
 quando_escalar: "[critérios]"
 ```
+
 
 ---
 
@@ -212,6 +218,7 @@ quando_escalar: "[critérios]"
 
 ### **Email de Kick-off (Semana 1)**
 ```
+
 Assunto: [PILOTO] Conhecimento Estruturado para IA - Primeiros Passos
 
 Olá time!
@@ -233,8 +240,10 @@ Abraços,
 [Seu nome]
 ```
 
+
 ### **Slack Update (Semana 2)**
 ```
+
 🚀 Update Conhecimento Estruturado - Semana 2
 
 ✅ FEITO:
@@ -255,8 +264,10 @@ Abraços,
 Quem quer testar? DM me! 🤖
 ```
 
+
 ### **Apresentação Resultados (Semana 4)**
 ```
+
 📈 RESULTADOS PILOTO - Conhecimento Estruturado
 
 🎯 OBJETIVO: Reduzir tempo busca informação 30min → 5min
@@ -280,6 +291,7 @@ Quem quer testar? DM me! 🤖
 
 LIÇÕES: Começar simples funciona. Estrutura mínima = resultado máximo.
 ```
+
 
 ---
 

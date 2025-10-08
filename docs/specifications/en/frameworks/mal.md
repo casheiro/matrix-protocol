@@ -161,6 +161,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Horizontal Conflict (H1) Arbitration**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-001"
@@ -243,8 +244,10 @@ decision_record:
     next_steps: "7-day rule deprecated; review migration path"
 ```
 
+
 ### **Concurrent Enrichment (H2) Arbitration**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-002"
@@ -307,8 +310,10 @@ decision_record:
     timeout_used_ms: 75
 ```
 
+
 ### **Promotion Contention (H3) Arbitration**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-003"
@@ -371,8 +376,10 @@ decision_record:
     timeout_used_ms: 200
 ```
 
+
 ### **Coexistence Decision**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-004"
@@ -405,12 +412,14 @@ decision_record:
       security principle consistency.
 ```
 
+
 ---
 
 ## 8. MAL Minimal Interfaces (Normative)
 
 ### Arbitration Event Input Schema
 ```yaml
+
 # --- Normative Interface ---
 arbitration_event:
   event_id: string                    # Required: Unique arbitration identifier
@@ -443,8 +452,10 @@ arbitration_event:
     previous_attempts: integer        # Failed local resolution attempts
 ```
 
+
 ### Decision Record Output Schema
 ```yaml
+
 # --- Normative Interface ---
 decision_record:
   decision_id: string                 # Required: Unique decision identifier
@@ -483,6 +494,7 @@ decision_record:
     reason_code: string               # Structured reason code
     next_steps: string                # Recommended actions
 ```
+
 
 ---
 

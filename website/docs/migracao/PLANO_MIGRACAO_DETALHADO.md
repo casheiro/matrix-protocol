@@ -29,6 +29,7 @@ Este documento estabelece o plano completo para migração do projeto Matrix Pro
 
 ### 2.1 Estrutura de Páginas
 ```
+
 pages/
 ├── index.vue                    # Homepage principal
 ├── frameworks/
@@ -42,8 +43,10 @@ pages/
 └── resources.vue               # Recursos e downloads
 ```
 
+
 ### 2.2 Componentes de Layout
 ```
+
 components/layout/
 ├── AppHeader.vue               # Cabeçalho principal com navegação
 └── MobileDrawer.vue            # Menu mobile responsivo
@@ -52,15 +55,19 @@ layouts/
 └── default.vue                 # Layout padrão do site
 ```
 
+
 ### 2.3 Componentes de Navegação
 ```
+
 components/navigation/
 ├── FrameworkDropdown.vue       # Dropdown de frameworks
 └── LanguageSelector.vue        # Seletor de idiomas PT/EN
 ```
 
+
 ### 2.4 Componentes de Conteúdo
 ```
+
 components/content/
 ├── GlossaryContent.vue         # Renderização do glossário
 ├── ImplementationContent.vue   # Conteúdo de implementação
@@ -79,8 +86,10 @@ components/docs/
 └── QuickStartContent.vue       # Quick start
 ```
 
+
 ### 2.5 Componentes de Homepage
 ```
+
 components/home/
 ├── FeaturesSection.vue         # Seção de características
 ├── FrameworkCard.vue           # Cards dos frameworks
@@ -89,13 +98,16 @@ components/home/
 └── QuickStartGuide.vue         # Guia rápido na homepage
 ```
 
+
 ### 2.6 Componentes de Frameworks
 ```
+
 components/frameworks/
 ├── FrameworkLayout.vue         # Layout específico de frameworks
 ├── FrameworkSidebar.vue        # Sidebar dos frameworks
 └── TableOfContents.vue         # Índice de conteúdo
 ```
+
 
 ## 3. Análise de Dependências e Módulos
 
@@ -109,6 +121,7 @@ components/frameworks/
 
 ### 3.2 Composables Customizados
 ```
+
 app/composables/
 ├── useAccessibility.ts         # Funcionalidades de acessibilidade
 ├── useFileDownload.ts          # Download de arquivos
@@ -117,6 +130,7 @@ app/composables/
 ├── useMatrixConfig.ts          # Configurações do Matrix
 └── useSEO.ts                   # Otimizações SEO
 ```
+
 
 ## 4. Estratégia de Migração por Fases
 
@@ -279,6 +293,7 @@ app/composables/
 </UButton>
 ```
 
+
 ### 5.2 @nuxt/content 3.x - Atualizações
 
 #### Mudanças no Sistema de Queries
@@ -294,6 +309,7 @@ const { data } = await $content('frameworks').fetch()
 // Depois
 const { data } = await queryContent('frameworks').find()
 ```
+
 
 ### 5.3 Nuxt 4.x - Configurações
 

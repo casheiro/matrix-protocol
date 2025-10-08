@@ -31,6 +31,7 @@ Este guia estabelece o processo de sincronização entre o **repositório princi
 ### Estratégia de Dois Repositórios
 
 ```mermaid
+
 graph LR
     A[Repositório Principal] <--> B[Website Repositório]
     A --> C[Especificações Autoritativas]
@@ -44,6 +45,7 @@ graph LR
         K[Visuals] --> L[Website → Repo]
     end
 ```
+
 
 ---
 
@@ -93,6 +95,7 @@ graph LR
 ### Hugo Frontmatter (Website)
 
 ```yaml
+
 ---
 title: "Matrix Embedding Framework"
 description: "Framework para estruturação de conhecimento via UKIs"
@@ -107,6 +110,7 @@ seo:
 ---
 ```
 
+
 ### Markdown Headers (Repositório)
 
 ```markdown
@@ -116,6 +120,7 @@ seo:
 **Last Updated:** 2025-10-05
 ```
 
+
 ---
 
 ## Processo de Sincronização
@@ -123,6 +128,7 @@ seo:
 ### Workflow de Modificação
 
 ```mermaid
+
 sequenceDiagram
     participant Dev as Developer
     participant Repo as Repository
@@ -138,6 +144,7 @@ sequenceDiagram
     Website->>QA: 6. Quality validation
     QA->>Dev: 7. Report status
 ```
+
 
 ### Tipos de Mudança
 
@@ -211,6 +218,7 @@ sequenceDiagram
 grep -r "Version:" *.md | grep -v "0.0.1"
 ```
 
+
 #### Quarta-feira: Content Review
 1. Review de PRs pendentes no repositório
 2. Check de novos downloads no website
@@ -244,13 +252,17 @@ labels: 'sync-required, bug'
 
 **Repositório contém:**
 ```
+
 [paste content]
 ```
 
+
 **Website contém:**
 ```
+
 [paste content]
 ```
+
 
 ## Impacto
 - [ ] Crítico - Afeta implementação
@@ -267,6 +279,7 @@ labels: 'sync-required, bug'
 ## Context/Background
 [Additional information]
 ```
+
 
 ---
 
@@ -296,6 +309,7 @@ done
 echo "✅ Internal links check complete"
 ```
 
+
 #### 2. `scripts/validate-cross-references.sh`
 
 ```bash
@@ -317,6 +331,7 @@ done
 
 echo "✅ Cross-references validation complete"
 ```
+
 
 #### 3. `scripts/check-version-consistency.sh`
 
@@ -343,11 +358,13 @@ done
 echo "✅ Version consistency check complete"
 ```
 
+
 ### CI/CD Integration
 
 #### GitHub Actions Workflow (`.github/workflows/sync-validation.yml`)
 
 ```yaml
+
 name: Sync Validation
 
 on:
@@ -384,6 +401,7 @@ jobs:
           fi
           echo "✅ UKI format validation passed"
 ```
+
 
 ---
 
@@ -445,6 +463,7 @@ git log --oneline --grep="version"
 # Documentar decisão no CHANGELOG
 ```
 
+
 #### 2. **Conflito de Conteúdo**
 
 **Situação:** Mesmo framework tem especificações diferentes
@@ -465,6 +484,7 @@ git log --oneline --grep="version"
 # Corrigir website para uki:[scope_ref]:[type_ref]:[slug]
 sed -i 's/uki:\[domain_ref\]/uki:[scope_ref]/g' affected_files
 ```
+
 
 ### Escalação de Conflitos
 
@@ -520,6 +540,7 @@ sed -i 's/uki:\[domain_ref\]/uki:[scope_ref]/g' affected_files
 - [ ] Update website MEF Section 5
 - [ ] Sync ZOF Universal Pattern
 ```
+
 
 ---
 

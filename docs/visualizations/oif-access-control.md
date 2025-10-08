@@ -4,6 +4,7 @@
 ## OIF Access Control Flow
 
 ```mermaid
+
 flowchart LR
     subgraph "🤖 OIF Agents"
         KAgent[Knowledge Agent<br/>📚 MEF Specialist]
@@ -56,9 +57,11 @@ flowchart LR
     class Escalate escalation
 ```
 
+
 ## Detailed Access Control Process
 
 ```mermaid
+
 sequenceDiagram
     participant User
     participant OIF as OIF Agent
@@ -84,6 +87,7 @@ sequenceDiagram
         Note over OIF,User: • Reason for denial<br/>• Required authority level<br/>• Escalation path
     end
 ```
+
 
 ## Agent Archetypes and Capabilities
 
@@ -162,6 +166,7 @@ All agent responses MUST include:
 
 ### Authorized Knowledge Query
 ```
+
 User: "Show me authentication patterns for our API"
 Knowledge Agent: 
 - Queries MOC: scope=team-backend, domain=technical
@@ -170,8 +175,10 @@ Knowledge Agent:
   patterns (citing moc:scope:team-backend, moc:domain:technical)"
 ```
 
+
 ### Unauthorized Operation Attempt
 ```
+
 User: "Create organization-wide security policy"
 Workflow Agent:
 - Queries MOC: scope=organization, domain=security, operation=create
@@ -179,6 +186,7 @@ Workflow Agent:
 - Response: "You need security_lead authority for organization-wide policies. 
   Contact [escalation_path] to request this operation."
 ```
+
 
 ## Key Principles
 

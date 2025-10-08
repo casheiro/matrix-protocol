@@ -167,6 +167,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Standard UKI Structure**
 ```yaml
+
 # --- Illustrative Example ---
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"
@@ -215,8 +216,10 @@ relationships:
 domain_of_influence: "engineering_teams"  # MOC organizational reference
 ```
 
+
 ### **Knowledge Promotion Example**
 ```yaml
+
 # --- Illustrative Example ---
 promotion:
   is_promoted_from: uki:technical:example:local-auth-impl
@@ -235,8 +238,10 @@ impact_analysis:
 lifecycle_management_ref: "uki:org.governance:policy:lifecycle-standard"
 ```
 
+
 ### **Ontological Relationships Types**
 ```yaml
+
 # --- Illustrative Example ---
 relationships:
   # DEPENDENCY: This UKI requires another to function
@@ -275,8 +280,10 @@ relationships:
     description: "Functionally equivalent for bearer token scenarios"
 ```
 
+
 ### **Domain and Type Examples**
 ```yaml
+
 # --- Illustrative Example ---
 # Different domain examples (all MOC-dependent)
 domains_examples:
@@ -306,8 +313,10 @@ contexts_examples:
   support: "Knowledge for maintenance and troubleshooting"
 ```
 
+
 ### **Versioning and Lifecycle**
 ```yaml
+
 # --- Illustrative Example ---
 version_evolution:
   "1.0.0": "Initial implementation"
@@ -326,8 +335,10 @@ change_impact_classification:
   patch: "Bug fixes, no functional changes"
 ```
 
+
 ### **MEF Integration Patterns**
 ```yaml
+
 # --- Illustrative Example ---
 # MEF as Oracle Layer Implementation
 mef_oracle_implementation:
@@ -344,6 +355,7 @@ knowledge_sources:
   compliance_validation: "Strategic traceability verification"
   version_management: "Change propagation to dependent UKIs"
 ```
+
 
 ---
 

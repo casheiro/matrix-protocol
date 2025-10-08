@@ -63,6 +63,7 @@ Unlike individual framework documentation that focuses on specific capabilities,
 ## 3. End-to-End Flow Diagram
 
 ```mermaid
+
 graph TB
     %% User Layer
     User[👤 User Request<br/>Authentication Implementation]
@@ -167,6 +168,7 @@ graph TB
     class MAL_ARB,MAL_DEC,MAL_POL mal
 ```
 
+
 ---
 
 ## 4. Integration Points Matrix
@@ -200,6 +202,7 @@ graph TB
 ### **Example 1: JWT Authentication Implementation**
 
 ```yaml
+
 # Complete Integration Flow
 user_story: "As a developer, I need to implement JWT authentication"
 
@@ -287,9 +290,11 @@ oif_explanation:
     similar authentication requirements."
 ```
 
+
 ### **Example 2: MAL Arbitration Scenario**
 
 ```yaml
+
 # Concurrent JWT Implementation Conflict
 user_story: "Two teams implementing JWT authentication simultaneously"
 
@@ -354,9 +359,11 @@ mef_decision_record:
   audit_trail: "Complete MAL arbitration recorded for future reference"
 ```
 
+
 ### **Example 2B: Multi-scope Enrichment with Scope Mode Validation**
 
 ```yaml
+
 # Cross-organizational Security Guideline Creation
 user_request: "Create security guideline affecting multiple teams"
 affected_scopes: ["team-frontend", "team-backend", "team-devops"]
@@ -413,9 +420,11 @@ enrichment_result:
     authority_validation_record: "multi_scope_any_mode_approved"
 ```
 
+
 ### **Example 3: Authority Escalation Scenario**
 
 ```yaml
+
 # Organization-Level Policy Creation Attempt
 user_request: "Create organization-wide security policy"
 user_context: {scope: "team", authority: "developer", domain: "technical"}
@@ -451,6 +460,7 @@ zof_workflow_modification:
     act: "Generate escalation request with context"
     # EvaluateForEnrich skipped - no enrichment for escalation routing
 ```
+
 
 ---
 

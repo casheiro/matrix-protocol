@@ -45,6 +45,7 @@ content: |
     }
   }
   ```
+
   
   ## Data Masking for PCI Compliance
   
@@ -67,6 +68,7 @@ content: |
       }
   }
   ```
+
   
   ## Logging Strategy
   
@@ -101,6 +103,7 @@ content: |
     "sensitive_data_masked": true
   }
   ```
+
   
   ## Exception Handling Hierarchy
   
@@ -117,6 +120,7 @@ content: |
   public class ValidationException extends PaymentException     // retriable=false
   public class FraudDetectedException extends PaymentException  // retriable=false
   ```
+
   
   ### Global Exception Handler
   ```java
@@ -131,6 +135,7 @@ content: |
       }
   }
   ```
+
   
   ## Stack Trace Management
   

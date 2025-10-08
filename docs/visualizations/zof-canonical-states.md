@@ -4,6 +4,7 @@
 ## ZOF Canonical States - Complete Flow
 
 ```mermaid
+
 stateDiagram-v2
     [*] --> Intake
     
@@ -100,11 +101,13 @@ stateDiagram-v2
     Decide --> Understand : more_context_needed
 ```
 
+
 ## Explainability Signals Framework
 
 Each state transition MUST record explainability signals:
 
 ```mermaid
+
 graph LR
     subgraph "State Transition"
         Input[📥 Context<br/>What entered state]
@@ -124,9 +127,11 @@ graph LR
     end
 ```
 
+
 ## EvaluateForEnrich - Detailed Process
 
 ```mermaid
+
 flowchart TD
     Start([Start EvaluateForEnrich]) --> MOC[📋 Apply MOC Criteria]
     
@@ -175,6 +180,7 @@ flowchart TD
     class Reject,Escalate,Improve escalation
     class MAL,MALDecision arbitration
 ```
+
 
 ## State Descriptions
 

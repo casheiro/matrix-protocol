@@ -76,6 +76,7 @@ content: |
     // Fallback: try secondary gateway or manual queue
   }
   ```
+
   
   ## Circuit Breaker Integration
   

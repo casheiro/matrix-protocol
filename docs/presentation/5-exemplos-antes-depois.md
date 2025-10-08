@@ -7,6 +7,7 @@
 
 ### ❌ **ANTES** (Informação Dispersa)
 ```
+
 Thread Slack:
 [10:23] maria: cliente quer refund, 7 dias úteis né?
 [10:25] joão: acho que é 7 dias sim
@@ -15,8 +16,10 @@ Thread Slack:
 [14:13] joão: pode, mas vamos revisar política
 ```
 
+
 ### ✅ **DEPOIS** (Estruturado)
 ```yaml
+
 título: "Política de Refund - Padrões e Prazos"
 categoria: "Regra de Negócio"
 criado_em: "2024-03-25"
@@ -41,12 +44,14 @@ relacionado_com:
   - "Processo de Atendimento ao Cliente"
 ```
 
+
 ---
 
 ## 📋 **Exemplo 2: Detecção de Fraude**
 
 ### ❌ **ANTES** (Ticket JIRA Confuso)
 ```
+
 Tivemos aumento de 23% em chargebacks. Casos específicos:
 1. Mesmo IP, 15 compras, cartões diferentes, Friday night
 2. Threshold R$ 5000 não funcionou? (BUG?)
@@ -56,8 +61,10 @@ João comentou: "Threshold talvez alto. Vamos para R$ 3500"
 Pedro: "CVV bug existe, vou corrigir essa semana"
 ```
 
+
 ### ✅ **DEPOIS** (Estruturado)
 ```yaml
+
 título: "Regras de Detecção de Fraude - Thresholds Ativos"
 categoria: "Regra de Negócio"
 criado_em: "2024-03-25"
@@ -86,12 +93,14 @@ notas_importantes:
 próxima_revisão: "2024-05-25"
 ```
 
+
 ---
 
 ## 📋 **Exemplo 3: Processo de Deploy**
 
 ### ❌ **ANTES** (Checklist Desatualizado)
 ```
+
 ONBOARDING CHECKLIST - Abril 2022
 Responsável: Pedro Silva (ex-funcionário)
 
@@ -102,8 +111,10 @@ Deploy produção:
 - New Relic (conta cancelada em 2023)
 ```
 
+
 ### ✅ **DEPOIS** (Estruturado)
 ```yaml
+
 título: "Processo de Deploy - Sistema Pagamentos"
 categoria: "Procedimento Técnico"
 criado_em: "2024-03-25"
@@ -135,12 +146,14 @@ relacionado_com:
 próxima_revisão: "2024-06-25"
 ```
 
+
 ---
 
 ## 📋 **Exemplo 4: Integração Gateway**
 
 ### ❌ **ANTES** (Anotações Pessoais)
 ```
+
 ANOTAÇÕES DIVERSAS - João (arquivo pessoal)
 
 Gateway lento ultimamente:
@@ -153,8 +166,10 @@ TECH DEBT:
 - Timeout paypal muito alto (configurar 30s)
 ```
 
+
 ### ✅ **DEPOIS** (Estruturado)
 ```yaml
+
 título: "Integração Gateway - Configurações e Timeouts"
 categoria: "Padrão Técnico"
 criado_em: "2024-03-25"
@@ -191,12 +206,14 @@ relacionado_com:
 próxima_revisão: "2024-04-25"
 ```
 
+
 ---
 
 ## 📋 **Exemplo 5: Cálculo de Descontos**
 
 ### ❌ **ANTES** (Ata de Reunião Informal)
 ```
+
 # reunião squad - março
 pessoal presente: joão, maria, ana, lucas
 
@@ -210,8 +227,10 @@ ana comentou que 7 dias é muito pouco mesmo
 R$ 5000 tá gerando fricção, subir para R$ 10000?
 ```
 
+
 ### ✅ **DEPOIS** (Estruturado)
 ```yaml
+
 título: "Regras de Desconto - Volume e Cupons"
 categoria: "Regra de Negócio"
 criado_em: "2024-03-25"
@@ -251,6 +270,7 @@ relacionado_com:
 
 próxima_revisão: "2024-06-25"
 ```
+
 
 ---
 

@@ -131,6 +131,7 @@ git clone <repository-url>
 cd matrix-protocol-website-v2
 ```
 
+
 ### 2. Instalação de Dependências
 
 ```bash
@@ -142,12 +143,14 @@ pnpm install
 # yarn install
 ```
 
+
 ### 3. Configuração de Ambiente
 
 ```bash
 # Copiar arquivo de exemplo (opcional)
 cp .env.example .env
 ```
+
 
 ### 4. Verificação da Instalação
 
@@ -158,9 +161,11 @@ pnpm run dev
 # Site estará disponível em http://localhost:3000
 ```
 
+
 ### Estrutura de Conteúdo
 
 ```
+
 content/
 ├── pt/                 # Conteúdo em português
 │   ├── index.md       # Página inicial
@@ -171,6 +176,7 @@ content/
 │   └── glossary/      # Glossário técnico
 └── en/                # Conteúdo em inglês (estrutura idêntica)
 ```
+
 
 ## Uso
 
@@ -183,6 +189,7 @@ pnpm run dev
 # Servidor com hot reload em http://localhost:3000
 ```
 
+
 ### Build de Produção
 
 ```bash
@@ -192,6 +199,7 @@ pnpm run generate
 # Visualizar build localmente
 pnpm run preview
 ```
+
 
 ## Contribuição
 
@@ -224,6 +232,7 @@ content: adicionar documentação do framework MOC
 i18n: atualizar traduções em inglês
 ```
 
+
 ### Adicionando Conteúdo
 
 ```markdown
@@ -243,6 +252,7 @@ Utilize a sintaxe padrão do Markdown com suporte a:
 - Links automáticos entre páginas
 - Imagens otimizadas
 ```
+
 
 ## Licença
 

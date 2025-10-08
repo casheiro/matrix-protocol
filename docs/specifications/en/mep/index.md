@@ -151,27 +151,33 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Scenario 1: UKI Conflict**
 ```yaml
+
 # --- Illustrative Example ---
 Situation: Two UKIs about "JWT authentication" conflict
 MEP guides: Derived authority → check scope_ref and maturity_ref
 MAL executes: Arbitration based on epistemological hierarchy
 ```
 
+
 ### **Scenario 2: Rule Promotion**
 ```yaml
+
 # --- Illustrative Example ---
 Situation: Squad-level rule wants to become organizational policy  
 MEP guides: Responsible promotion → requires promotion_rationale
 MEF records: Field with complete epistemological justification
 ```
 
+
 ### **Scenario 3: Enrichment Rejection**
 ```yaml
+
 # --- Illustrative Example ---
 Situation: UKI rejected in ZOF's evaluate_for_enrich
 MEP guides: Necessary explainability → mandatory narrative
 OIF communicates: Clear feedback with epistemological basis to user
 ```
+
 
 **Mini-examples:**
 - *Elasticity*: A "discount rule" UKI can be squad-level in e-commerce but org-level in banking — context defines pertinence

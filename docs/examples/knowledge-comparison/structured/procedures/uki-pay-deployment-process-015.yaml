@@ -117,6 +117,7 @@ content: |
   # Sample transaction test
   curl -X POST https://payments-green.internal/test/transaction
   ```
+
   
   ### Canary Release (High-risk changes)
   **Traffic distribution:**
@@ -156,6 +157,7 @@ content: |
   # Cache invalidation (if needed)
   redis-cli FLUSHDB
   ```
+
   
   ## PCI Compliance Validation
   

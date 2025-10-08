@@ -19,10 +19,12 @@
 Determine o tamanho da sua organização e use o template apropriado:
 
 ```
+
 📊 5-50 funcionários     → Use template "startup"
 📊 50-200 funcionários   → Use template "scaleup" 
 📊 200+ funcionários     → Use template "enterprise"
 ```
+
 
 **Como fazer:**
 1. Baixe o Template MOC Básico (universal para qualquer tamanho) em `/templates/moc/basic-template.yaml`
@@ -49,23 +51,28 @@ nodes:
   - pessoal      # Anotações pessoais individuais
 ```
 
+
 #### **🎯 Domínio (Domínio de Especialização)**
 ```yaml
+
 nodes:
   - tecnico     # Conhecimento técnico
   - produto     # Conhecimento de produto
   - negocio     # Conhecimento de negócio
 ```
 
+
 #### **📋 Tipo (Tipo de Conteúdo)**
 
 ```yaml
+
 nodes:
   - decisao     # Registros de decisão
   - processo    # Processos e procedimentos
   - conhecimento # Conhecimento geral
   - referencia  # Material de referência
 ```
+
 
 ### **Passo 3: Crie seu Primeiro UKI**
 *Tempo: 30-60 minutos*
@@ -74,6 +81,7 @@ Estruture informações importantes no formato UKI:
 
 #### **Template UKI Básico**
 ```yaml
+
 id: "uki:tecnico:decisao:abordagem-autenticacao"
 scope_ref: "engenharia"
 domain_ref: "tecnico" 
@@ -107,6 +115,7 @@ relationships:
   - type: "implements"
     target: "uki:negocio:processo:requisitos-seguranca"
 ```
+
 
 ---
 

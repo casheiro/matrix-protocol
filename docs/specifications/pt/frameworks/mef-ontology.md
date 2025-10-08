@@ -88,6 +88,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Domínios de Referência**
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 domains_examples:
   strategy: "Decisões de alto nível, planejamento estratégico"
@@ -104,8 +105,10 @@ alternative_domains:
   experiencia_cliente: "Gestão da experiência do cliente"
 ```
 
+
 ### **Tipos de UKI de Referência**
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 types_examples:
   pattern: "Solução reutilizável para problema comum"
@@ -124,8 +127,10 @@ alternative_types:
   conceito: "Definição ou modelo teórico"
 ```
 
+
 ### **Relacionamentos Ontológicos**
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 relationship_types:
   depends_on: "Depende semanticamente de outra UKI"
@@ -150,8 +155,10 @@ relationship_usage_examples:
     description: "Substitui padrão de autenticação básica obsoleto"
 ```
 
+
 ### **Níveis de Severidade**
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 severity_levels:
   low:
@@ -175,8 +182,10 @@ severity_levels:
     examples: ["mudanças que quebram compatibilidade", "alterações de segurança críticas"]
 ```
 
+
 ### **Ciclo de Vida**
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 lifecycle_states:
   active:
@@ -195,8 +204,10 @@ lifecycle_states:
     actions: ["consulta apenas histórica", "não referenciar"]
 ```
 
+
 ### **Guia de Customização Organizacional**
 ```yaml
+
 # --- Exemplo de Como Customizar ---
 customization_guide:
   step_1_analysis:
@@ -231,6 +242,7 @@ example_organizational_vocabulary:
     - "qualidade_atendimento"
     - "interoperabilidade_sistemas"
 ```
+
 
 ---
 

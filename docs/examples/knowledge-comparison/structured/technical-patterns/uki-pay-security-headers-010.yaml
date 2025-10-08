@@ -31,29 +31,34 @@ content: |
     base-uri 'self';
     form-action 'self' https://checkout.paypal.com
   ```
+
   
   ### HTTP Strict Transport Security (HSTS)  
   ```http
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   ```
+
   **Rationale:** Força HTTPS por 1 ano, previne downgrade attacks
   
   ### X-Frame-Options
   ```http
   X-Frame-Options: DENY
   ```
+
   **Rationale:** Previne clickjacking em páginas de pagamento
   
   ### X-Content-Type-Options
   ```http
   X-Content-Type-Options: nosniff
   ```
+
   **Rationale:** Previne MIME-type sniffing attacks
   
   ### Referrer-Policy
   ```http
   Referrer-Policy: strict-origin-when-cross-origin
   ```
+
   **Rationale:** Protege informações sensíveis em URLs
   
   ## Headers Específicos para APIs
@@ -62,6 +67,7 @@ content: |
   ```http
   X-Permitted-Cross-Domain-Policies: none
   ```
+
   **Rationale:** Bloqueia Flash/Silverlight cross-domain requests
   
   ### Cache-Control para Endpoints Sensíveis
@@ -70,6 +76,7 @@ content: |
   Pragma: no-cache
   Expires: 0
   ```
+
   **Aplicar em:** `/payments/*`, `/admin/*`, `/webhooks/*`
   
   ## Implementation Pattern
@@ -90,6 +97,7 @@ content: |
       }
   }
   ```
+
   
   ### Nginx Configuration (Proxy Level)
   ```nginx
@@ -98,6 +106,7 @@ content: |
   add_header Referrer-Policy strict-origin-when-cross-origin always;
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
   ```
+
   
   ## Environment-Specific Variations
   

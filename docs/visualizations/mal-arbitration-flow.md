@@ -4,6 +4,7 @@
 ## MAL Arbitration Flow - Complete Process
 
 ```mermaid
+
 flowchart TD
     %% Conflict detection in ZOF
     A[🔍 ZOF EvaluateForEnrich<br/>Detects Conflict] --> B{Conflict<br/>Type?}
@@ -74,6 +75,7 @@ flowchart TD
     class W,X persistence
     class P timeout
 ```
+
 
 ## Description
 

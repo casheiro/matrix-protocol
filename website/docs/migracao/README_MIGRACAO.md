@@ -47,6 +47,7 @@ Este projeto representa a migração completa do **Matrix Protocol Website** de 
 ## 🏗️ Estrutura do Projeto Original
 
 ```
+
 matrix-protocol-website/
 ├── components/
 │   ├── content/          # Componentes de conteúdo markdown
@@ -66,6 +67,7 @@ matrix-protocol-website/
 │       └── en.json
 ├── public/               # Arquivos públicos
 ```
+
 
 ## 🎯 Objetivos da Migração
 
@@ -203,6 +205,7 @@ npm run preview
 # Testes
 npm run test
 ```
+
 
 ## 📞 Suporte e Contato
 

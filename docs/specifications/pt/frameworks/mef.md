@@ -149,6 +149,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Estrutura Padrão UKI**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"
@@ -174,8 +175,10 @@ relationships:
     description: "Implementa requisitos de segurança definidos"
 ```
 
+
 ### **Promoção de Conhecimento**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 promotion:
   is_promoted_from: uki:technical:example:local-auth-impl
@@ -190,8 +193,10 @@ impact_analysis:
   propagation_estimate: 15
 ```
 
+
 ### **Relacionamentos Ontológicos**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 relationships:
   - type: depends_on
@@ -206,6 +211,7 @@ relationships:
     target: uki:technical:pattern:authorization-rbac
     description: "Trabalha em conjunto com autorização baseada em papéis"
 ```
+
 
 ---
 

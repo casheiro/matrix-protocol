@@ -31,6 +31,7 @@ This guide establishes the synchronization process between the **main repository
 ### Current Architecture
 
 ```
+
 Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 ├── docs/specifications/en/   ↔   ├── content/en/frameworks/
 ├── docs/specifications/pt/   ↔   ├── content/pt/frameworks/
@@ -38,6 +39,7 @@ Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 ├── docs/visualizations/      ↔   ├── content/en/integration/
 └── docs/examples/            ↔   └── public/downloads/
 ```
+
 
 **🎯 GOAL:** Eliminate manual synchronization by implementing unified `/docs/` structure as single source of truth.
 
@@ -110,6 +112,7 @@ Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 5. Deploy to production
 ```
 
+
 ### 2. Website → Repository (Corrections & Improvements)
 
 **Trigger:** Content improvements made through website interface
@@ -122,6 +125,7 @@ Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 4. Merge to repository
 5. Trigger Repository → Website sync
 ```
+
 
 ### 3. Bidirectional Validation
 
@@ -176,14 +180,17 @@ Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 ./scripts/check-sync.sh --report --fix-links
 ```
 
+
 #### `/scripts/validate-cross-references.sh`
 ```bash
 # Validates all internal links and references
 ./scripts/validate-cross-references.sh --verbose
 ```
 
+
 #### GitHub Actions Workflow
 ```yaml
+
 # .github/workflows/sync-website.yml
 name: Sync to Website
 on:
@@ -199,6 +206,7 @@ jobs:
       - name: Sync content
         run: ./scripts/sync-to-website.sh
 ```
+
 
 ### 📊 Monitoring Tools
 
@@ -289,17 +297,20 @@ jobs:
 ./scripts/merge-content.sh --source repository --target website --preview
 ```
 
+
 #### Diff Analysis
 ```bash
 # Detailed difference analysis
 ./scripts/analyze-diff.sh --detailed --format json
 ```
 
+
 #### Rollback Capability
 ```bash
 # Emergency rollback to last known good state
 ./scripts/rollback-sync.sh --timestamp "2025-10-05T14:30:00Z"
 ```
+
 
 ---
 
@@ -338,10 +349,12 @@ jobs:
 **Goal:** Eliminate manual synchronization entirely by 2025 Q2
 
 ```
+
 Single Source Repository → Automated Processing → Multi-Channel Distribution
                        ↓
                    Website + API + Downloads + Search
 ```
+
 
 ---
 

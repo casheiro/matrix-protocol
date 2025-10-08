@@ -65,6 +65,7 @@ Implementar um playground/sandbox interativo para cada framework, permitindo aos
 
 #### Componentes Arquiteturais
 ```
+
 components/
 ├── playground/
 │   ├── PlaygroundModal.vue
@@ -81,6 +82,7 @@ components/
 │       ├── ExampleSelector.vue
 │       └── ExportDialog.vue
 ```
+
 
 #### Fases de Implementação
 1. **MVP (Semana 1-2)**: Editor YAML básico com validação
@@ -202,6 +204,7 @@ Detecção automática de preferência do sistema e toggle manual.
 #### Riscos/Considerações
 - [Possíveis problemas ou complexidades]
 ```
+
 
 ---
 

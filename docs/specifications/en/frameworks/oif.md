@@ -149,6 +149,7 @@ Each archetype definition in the OIF MUST include a field `archetype_level` to e
 
 #### Normative Archetype Definitions
 ```yaml
+
 # Canonical Archetypes (Protocol Core)
 archetype_id: kag
 archetype_name: Knowledge Agent
@@ -184,12 +185,14 @@ session_lifetime: true
 persistence_allowed: false
 ```
 
+
 ### 🔒 Canonical Prompt Preservation (Normative)
 
 OIF MUST implement immutable prompt protection for canonical archetypes to preserve protocol integrity while enabling organizational customization through specialized archetypes.
 
 #### Archetype Customization Matrix
 ```yaml
+
 # --- Normative Customization Rules ---
 archetype_customization_matrix:
   canonical_archetypes:
@@ -214,8 +217,10 @@ archetype_customization_matrix:
     domain_specialization: OPTIONAL     # Can be domain-agnostic
 ```
 
+
 #### Prompt Immutability Enforcement
 ```yaml
+
 # --- Normative Protection Rules ---
 canonical_prompt_protection:
   immutability_scope:
@@ -236,8 +241,10 @@ canonical_prompt_protection:
     violation_response: REJECT_INSTANTIATION
 ```
 
+
 #### Specialized Archetype Extension Patterns
 ```yaml
+
 # --- Normative Extension Rules ---
 specialized_extension_patterns:
   inheritance_model: "composition_over_modification"
@@ -263,6 +270,7 @@ specialized_extension_patterns:
     authority_scope_verification: true
 ```
 
+
 #### Archetype Level Governance
 - **Canonical**: Protocol-level governance; no organizational override allowed
 - **Specialized**: Organizational governance via MOC; must extend, not replace, canonical behavior
@@ -274,6 +282,7 @@ OIF implementations MUST provide a standardized template for explaining MAL arbi
 
 #### Mandatory Template Fields
 ```yaml
+
 # --- Normative Interface ---
 arbitration_explanation_template:
   decision_id: string                 # Required: MAL decision identifier
@@ -304,6 +313,7 @@ arbitration_explanation_template:
     user_authority: string            # User's authority level
     user_scope: array[string]         # User's accessible scopes
 ```
+
 
 #### Template Usage Requirements
 - OIF MUST render arbitration explanations using this template structure
@@ -354,6 +364,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Knowledge Agent - Oracle Intelligence**
 ```yaml
+
 # --- Illustrative Example ---
 knowledge_agent_archetype:
   archetype_id: kag
@@ -408,8 +419,10 @@ knowledge_agent_archetype:
       To access organizational patterns, request approval via your team lead per MOC escalation path."
 ```
 
+
 ### **Workflow Agent - Zion Intelligence**
 ```yaml
+
 # --- Illustrative Example ---
 workflow_agent_archetype:
   archetype_id: wag
@@ -473,8 +486,10 @@ workflow_agent_archetype:
       final_decision: "ENRICH_APPROVED"
 ```
 
+
 ### **Governance-Aware Implementation**
 ```yaml
+
 # --- Illustrative Example ---
 governance_aware_implementation:
   moc_based_access_control:
@@ -519,8 +534,10 @@ governance_aware_implementation:
       MOC.subscribe_to_changes(user_id, on_authority_change)
 ```
 
+
 ### **Intelligence Quality Metrics**
 ```yaml
+
 # --- Illustrative Example ---
 quality_metrics:
   explainability_metrics:
@@ -589,8 +606,10 @@ continuous_monitoring:
   monthly_metrics: ["overall_intelligence_quality", "moc_integration_effectiveness"]
 ```
 
+
 ### **Derived Authority: Denial of Absolute Truths**
 ```yaml
+
 # --- Illustrative Example ---
 derived_authority_implementation:
   mep_integration:
@@ -652,8 +671,10 @@ derived_authority_implementation:
         return ValidationSuccess()
 ```
 
+
 ### **Intelligence Archetype Templates**
 ```yaml
+
 # --- Illustrative Example ---
 archetype_templates:
   knowledge_agent_template:
@@ -722,8 +743,10 @@ archetype_templates:
         - "Must escalate organizational impact assessments"
 ```
 
+
 ### **Archetype Capability Composition**
 ```yaml
+
 # --- Illustrative Example ---
 capability_composition_rules:
   capability_inheritance:
@@ -758,6 +781,7 @@ capability_composition_rules:
       else:
         archetype.disable_capability("cross_domain_knowledge_synthesis")
 ```
+
 
 ---
 

@@ -31,6 +31,7 @@
 ### MOC Configuration
 
 ```yaml
+
 # MOC_STARTUP_TEMPLATE.yaml
 moc_version: "1.0"
 organization: "[STARTUP_NAME]"
@@ -253,6 +254,7 @@ named_arbitration_policies:
     temporal_window_ms: 60000     # 1-minute concurrency window
 ```
 
+
 ### Implementation Notes for Startups
 
 **Strengths of This Template:**
@@ -281,6 +283,7 @@ named_arbitration_policies:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_SCALEUP_TEMPLATE.yaml
 moc_version: "1.0"
 organization: "[SCALEUP_NAME]"
@@ -635,6 +638,7 @@ named_arbitration_policies:
       - "P6_deterministic_fallback"
 ```
 
+
 ---
 
 ## 🏢 Enterprise Template (200-1000 employees)
@@ -648,6 +652,7 @@ named_arbitration_policies:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_ENTERPRISE_TEMPLATE.yaml
 moc_version: "1.0"
 organization: "[ENTERPRISE_NAME]"
@@ -1151,6 +1156,7 @@ named_arbitration_policies:
     audit_trail_enhanced: true
 ```
 
+
 ---
 
 ## 🏛️ Corporation Template (1000+ employees)
@@ -1164,6 +1170,7 @@ named_arbitration_policies:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_CORPORATION_TEMPLATE.yaml
 moc_version: "1.0"
 organization: "[CORPORATION_NAME]"
@@ -1751,6 +1758,7 @@ named_arbitration_policies:
     cross_bu_coordination_required: true
     corporate_approval_required: true
 ```
+
 
 ---
 

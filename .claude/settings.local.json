@@ -28,7 +28,10 @@
       "WebSearch",
       "Bash(npm run dev:*)",
       "Bash(node:*)",
-      "WebFetch(domain:content.nuxt.com)"
+      "WebFetch(domain:content.nuxt.com)",
+      "Bash(curl:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm preview:*)"
     ],
     "deny": [],
     "ask": [],

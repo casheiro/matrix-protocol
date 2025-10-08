@@ -120,6 +120,7 @@ O MOC DEVE fornecer configuração para gestão de ciclo de vida do conhecimento
 
 #### Configuração de Ciclo de Vida
 ```yaml
+
 # --- Configuração Normativa ---
 lifecycle_management:
   default_lifecycle_policies:
@@ -165,6 +166,7 @@ lifecycle_management:
     promotion_lifecycle_impact: true       # Analisa impacto do ciclo nas promoções
 ```
 
+
 #### Requisitos de Integração de Ciclo de Vida
 - **Integração MEF**: Todos os UKIs DEVEM referenciar políticas organizacionais de ciclo de vida via lifecycle_ref
 - **Integração MAL**: Status do ciclo de vida DEVE ser considerado em decisões de arbitragem
@@ -181,6 +183,7 @@ Implementações MOC DEVEM fornecer configuração para políticas de arbitragem
 
 #### Configuração Obrigatória de Arbitragem
 ```yaml
+
 # --- Configuração Normativa ---
 arbitration_policies:
   default_precedence_order:           # Ordem padrão P1-P6 (MAL pode sobrepor)
@@ -228,8 +231,10 @@ arbitration_policies:
       cross_scope_validation: true    # Validar promoção além dos limites de escopo
 ```
 
+
 #### Exemplos de Políticas de Arbitragem Nomeadas
 ```yaml
+
 # --- Exemplos de Políticas Organizacionais ---
 named_arbitration_policies:
   "moc:arbitration:security_conflicts":
@@ -282,8 +287,10 @@ named_arbitration_policies:
     sunset_precedence: false          # Conhecimento em sunset não vence
 ```
 
+
 #### Estrutura de Namespace de Referência de Política
 ```yaml
+
 # --- Especificação de Namespace Normativa ---
 policy_reference_structure:
   namespace_format: "moc:arbitration:{policy_name}"
@@ -308,6 +315,7 @@ policy_reference_structure:
     policy_extension: "política nomeada modifica regras específicas de precedência"
 ```
 
+
 #### Requisitos de Integração MAL
 - MAL DEVE consultar políticas de arbitragem MOC para aplicação de regras de precedência
 - Regras de especificidade de escopo MOC DEVEM ser aplicadas para avaliação P2
@@ -321,6 +329,7 @@ O MOC DEVE implementar mecanismos de feedback para atualização taxonômica bas
 
 #### Análise de Padrões de Promoção
 ```yaml
+
 # --- Configuração Normativa ---
 promotion_analysis:
   monitoring_window_days: 90              # Janela de análise para padrões de promoção
@@ -342,6 +351,7 @@ promotion_analysis:
       action: "review_authority_hierarchy"
 ```
 
+
 #### Feedback Loop para Evolução Taxonômica
 - **Detecção Automática**: Sistema DEVE monitorar padrões de promoção e identificar inconsistências taxonômicas
 - **Análise de Impacto**: MOC DEVE analisar como promoções sucessivas indicam lacunas ou desalinhamentos hierárquicos
@@ -351,6 +361,7 @@ promotion_analysis:
 
 #### Critérios para Evolução Taxonômica
 ```yaml
+
 # --- Critérios Normativos ---
 evolution_criteria:
   taxonomy_refinement_indicators:
@@ -366,12 +377,14 @@ evolution_criteria:
     - "Plano de rollback em caso de problemas de evolução"
 ```
 
+
 #### 🧬 Evolução Ontológica (Normativo)
 
 **Princípio Central**: Promoções sucessivas de UKIs fornecem feedback para refinamento taxonômico, mas mudanças taxonômicas NUNCA são automáticas. O MOC permanece como única fonte de verdade para ontologias organizacionais.
 
 ##### Loop de Feedback Promoção ↔ Ontologia
 ```yaml
+
 # --- Configuração Normativa ---
 ontology_evolution:
   feedback_mechanism:
@@ -405,6 +418,7 @@ ontology_evolution:
     moc_role: "taxonomic_authority"       # MOC é única fonte de verdade
     promotion_feedback_flow: "mef → analysis → proposals → moc_curation"
 ```
+
 
 ##### Garantias de Evolução
 - **Sem Contradição**: Promoção é registro MEF; taxonomia é autoridade MOC
@@ -443,6 +457,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Estrutura Base do MOC**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 moc_version: "1.0"
 organization: "[Nome da Organização]"
@@ -469,8 +484,10 @@ hierarchies:
           authority_required: "team_lead"
 ```
 
+
 ### **Integração MEF**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Campos MOC no MEF:
 scope_ref: "team"           # Referência ao nó MOC
@@ -478,8 +495,10 @@ domain_ref: "technical"     # Referência ao nó MOC
 maturity_ref: "approved"    # Referência ao nó MOC
 ```
 
+
 ### **Integração ZOF**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Checkpoint EvaluateForEnrich:
 flow_execution:
@@ -491,8 +510,10 @@ flow_execution:
       result: "Aprovado para enriquecimento com escopo 'team'"
 ```
 
+
 ### **Integração OIF**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Controle de Acesso:
 user_context:
@@ -504,8 +525,10 @@ access_control:
   explanation_refs: "cita nós MOC específicos nas justificativas"
 ```
 
+
 ### **Governança e Versionamento**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 governance:
   version_control:
@@ -518,6 +541,7 @@ governance:
     change_notifications: ["all_users"]
     validation_frequency_days: 90
 ```
+
 
 **Benefícios Ilustrativos:**
 - *Flexibilidade*: Organização adapta estruturas às necessidades específicas

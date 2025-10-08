@@ -5,11 +5,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "npm run sync:templates && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "sync:templates": "bash scripts/sync-uki-templates.sh && bash scripts/create-uki-zips.sh",
     "typecheck": "nuxt typecheck",
     "clean": "rm -rf .nuxt .output dist"
   },
@@ -35,6 +36,7 @@
     "@iconify-json/heroicons": "^1.2.3",
     "@tailwindcss/typography": "^0.5.18",
     "@types/node": "^24.5.2",
+    "glob": "^11.0.3",
     "tailwindcss": "^4.1.13"
   }
 }

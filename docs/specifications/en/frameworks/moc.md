@@ -141,6 +141,7 @@ MOC MUST provide configuration for knowledge lifecycle management to ensure prop
 
 #### Lifecycle Configuration
 ```yaml
+
 # --- Normative Configuration ---
 lifecycle_management:
   default_lifecycle_policies:
@@ -186,6 +187,7 @@ lifecycle_management:
     promotion_lifecycle_impact: true       # Analyze lifecycle impact on promotions
 ```
 
+
 #### Lifecycle Integration Requirements
 - **MEF Integration**: All UKIs MUST reference organizational lifecycle policies via lifecycle_ref
 - **MAL Integration**: Lifecycle status MUST be considered in arbitration decisions
@@ -202,6 +204,7 @@ MOC implementations MUST provide configuration for MAL arbitration policies to e
 
 #### Mandatory Arbitration Configuration
 ```yaml
+
 # --- Normative Configuration ---
 arbitration_policies:
   default_precedence_order:           # Default P1-P6 order (MAL may override)
@@ -249,8 +252,10 @@ arbitration_policies:
       cross_scope_validation: true    # Validate promotion across scope boundaries
 ```
 
+
 #### Named Arbitration Policy Examples
 ```yaml
+
 # --- Organizational Policy Examples ---
 named_arbitration_policies:
   "moc:arbitration:security_conflicts":
@@ -303,8 +308,10 @@ named_arbitration_policies:
     sunset_precedence: false          # Sunset knowledge doesn't win
 ```
 
+
 #### Policy Reference Namespace Structure
 ```yaml
+
 # --- Normative Namespace Specification ---
 policy_reference_structure:
   namespace_format: "moc:arbitration:{policy_name}"
@@ -329,6 +336,7 @@ policy_reference_structure:
     policy_extension: "named policy modifies specific precedence rules"
 ```
 
+
 #### MAL Integration Requirements
 - MAL MUST consult MOC arbitration policies for precedence rule application
 - MOC scope specificity rules MUST be applied for P2 evaluation
@@ -342,6 +350,7 @@ MOC MUST implement feedback mechanisms for taxonomic updates based on UKI promot
 
 #### Promotion Pattern Analysis
 ```yaml
+
 # --- Normative Configuration ---
 promotion_analysis:
   monitoring_window_days: 90              # Analysis window for promotion patterns
@@ -363,6 +372,7 @@ promotion_analysis:
       action: "review_authority_hierarchy"
 ```
 
+
 #### Feedback Loop for Taxonomic Evolution
 - **Automatic Detection**: System MUST monitor promotion patterns and identify taxonomic inconsistencies
 - **Impact Analysis**: MOC MUST analyze how successive promotions indicate hierarchical gaps or misalignments
@@ -372,6 +382,7 @@ promotion_analysis:
 
 #### Criteria for Taxonomic Evolution
 ```yaml
+
 # --- Normative Criteria ---
 evolution_criteria:
   taxonomy_refinement_indicators:
@@ -387,12 +398,14 @@ evolution_criteria:
     - "Rollback plan in case of evolution issues"
 ```
 
+
 #### 🧬 Ontology Evolution (Normative)
 
 **Core Principle**: Successive UKI promotions provide feedback for taxonomic refinement, but taxonomic changes are NEVER automatic. MOC remains the single source of truth for organizational ontologies.
 
 ##### Promotion ↔ Ontology Feedback Loop
 ```yaml
+
 # --- Normative Configuration ---
 ontology_evolution:
   feedback_mechanism:
@@ -426,6 +439,7 @@ ontology_evolution:
     moc_role: "taxonomic_authority"       # MOC is single source of truth
     promotion_feedback_flow: "mef → analysis → proposals → moc_curation"
 ```
+
 
 ##### Evolution Guarantees
 - **No Contradiction**: Promotion is MEF registration; taxonomy is MOC authority
@@ -464,6 +478,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Base MOC Structure**
 ```yaml
+
 # --- Illustrative Example ---
 moc_version: "1.0"
 organization: "[Organization Name]"
@@ -591,8 +606,10 @@ governance:
     resolution_timeout_days: 14
 ```
 
+
 ### **MEF Integration**
 ```yaml
+
 # --- Illustrative Example ---
 # MOC Fields in MEF:
 scope_ref: "team"           # Reference to MOC node
@@ -607,8 +624,10 @@ maturity_ref: "approved"    # Reference to MOC node
 # - Propagates changes according to configuration
 ```
 
+
 ### **ZOF Integration**
 ```yaml
+
 # --- Illustrative Example ---
 # EvaluateForEnrich Checkpoint:
 flow_execution:
@@ -620,8 +639,10 @@ flow_execution:
       result: "Approved for enrichment with 'team' scope"
 ```
 
+
 ### **OIF Integration**
 ```yaml
+
 # --- Illustrative Example ---
 # Access Control:
 user_context:
@@ -633,8 +654,10 @@ access_control:
   explanation_refs: "references specific MOC nodes in justifications"
 ```
 
+
 ### **Change Control Process**
 ```yaml
+
 # --- Illustrative Example ---
 change_process:
   impact_analysis:
@@ -649,6 +672,7 @@ change_process:
     4: "Versioning and notification"
     5: "Migration period for dependents"
 ```
+
 
 **Benefits Examples:**
 - *Total Flexibility*: Adapt structures to specific organizational needs

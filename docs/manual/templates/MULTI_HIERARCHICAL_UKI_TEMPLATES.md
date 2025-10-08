@@ -26,6 +26,7 @@
 ### Template 1: Data Governance Framework (Organization-Wide)
 
 ```yaml
+
 # uki:organization:policy:data-governance-framework-001.yaml
 # Demonstrates: Organization-wide policy with complex cross-cutting relationships
 schema: "1.0"
@@ -68,6 +69,7 @@ content: |
   
   #### Data Stewardship Organization
   ```
+
   Organization Level:
     - Chief Data Officer (CDO) - Overall data strategy and governance
     - Chief Privacy Officer (CPO) - Privacy and regulatory compliance
@@ -83,6 +85,7 @@ content: |
     - Data Custodians - Technical data maintenance and security
     - Business Data Owners - Business context and usage decisions
   ```
+
   
   ### Data Classification Framework
   
@@ -123,6 +126,7 @@ content: |
   
   #### Quality Management Process
   ```yaml
+
   quality_monitoring:
     automated_checks:
       - daily_quality_reports: "Automated quality dashboards"
@@ -134,6 +138,7 @@ content: |
       - quarterly_audits: "Comprehensive data quality assessments"
       - annual_certification: "Executive sign-off on data quality status"
   ```
+
   
   ### Privacy and Regulatory Compliance
   
@@ -192,6 +197,7 @@ content: |
   
   #### Regional Requirements
   ```yaml
+
   data_residency_requirements:
     european_union:
       - customer_personal_data: "Must remain within EU/EEA"
@@ -207,6 +213,7 @@ content: |
       - personal_data_localization: "Russian citizen data stored locally"
       - critical_information_infrastructure: "Local processing requirements"
   ```
+
   
   ### Data Architecture and Technology Standards
   
@@ -345,6 +352,7 @@ regulatory_compliance:
     next_assessment: "2025-05-05"
 ```
 
+
 ---
 
 ## 🔐 Cross-Division Security Standard Template
@@ -352,6 +360,7 @@ regulatory_compliance:
 ### Template 2: Zero Trust Security Architecture Standard
 
 ```yaml
+
 # uki:organization:standard:zero-trust-security-architecture-001.yaml
 # Demonstrates: Cross-division standard with complex technical relationships
 schema: "1.0"
@@ -407,6 +416,7 @@ content: |
   
   #### Identity and Access Management (IAM)
   ```yaml
+
   identity_framework:
     identity_providers:
       primary_idp: "Azure Active Directory / Okta"
@@ -423,9 +433,11 @@ content: |
       behavioral_analytics: "ML-based anomaly detection"
       adaptive_authentication: "Risk-based authentication requirements"
   ```
+
   
   #### Device Security and Management
   ```yaml
+
   device_management:
     endpoint_protection:
       edr_solution: "CrowdStrike Falcon / Microsoft Defender"
@@ -442,9 +454,11 @@ content: |
       app_wrapping: "Corporate app protection and control"
       remote_wipe: "Selective wipe of corporate data"
   ```
+
   
   #### Network Security Architecture
   ```yaml
+
   network_segmentation:
     micro_segmentation:
       software_defined_perimeter: "Illumio / Guardicore micro-segmentation"
@@ -461,9 +475,11 @@ content: |
       traffic_analytics: "ML-based network behavior analysis"
       dns_security: "DNS filtering and threat intelligence"
   ```
+
   
   #### Application Security Framework
   ```yaml
+
   application_security:
     secure_development:
       secure_sdlc: "Security integrated throughout development lifecycle"
@@ -480,9 +496,11 @@ content: |
       runtime_application_security: "RASP for real-time threat protection"
       serverless_security: "Function-level security controls"
   ```
+
   
   #### Data Protection and Classification
   ```yaml
+
   data_protection:
     data_classification:
       automated_classification: "ML-based data discovery and classification"
@@ -499,9 +517,11 @@ content: |
       pseudonymization: "Privacy-preserving data processing"
       consent_management: "Dynamic consent and preference management"
   ```
+
   
   #### Cloud Security Architecture
   ```yaml
+
   cloud_security:
     multi_cloud_governance:
       cspm_implementation: "Cloud Security Posture Management"
@@ -518,11 +538,13 @@ content: |
       event_driven_security: "Security controls for event-driven architectures"
       api_gateway_security: "Serverless API security and rate limiting"
   ```
+
   
   ### Implementation Roadmap
   
   #### Phase 1: Foundation (Months 1-6)
   ```yaml
+
   foundation_phase:
     identity_modernization:
       - "Implement cloud-native identity provider"
@@ -539,9 +561,11 @@ content: |
       - "Implement DNS security"
       - "Establish network segmentation baseline"
   ```
+
   
   #### Phase 2: Enhancement (Months 7-12)
   ```yaml
+
   enhancement_phase:
     micro_segmentation:
       - "Implement software-defined perimeter"
@@ -558,9 +582,11 @@ content: |
       - "Implement container security platform"
       - "Establish cloud workload protection"
   ```
+
   
   #### Phase 3: Optimization (Months 13-18)
   ```yaml
+
   optimization_phase:
     advanced_analytics:
       - "Implement user and entity behavior analytics"
@@ -577,6 +603,7 @@ content: |
       - "Deploy security posture assessment"
       - "Establish security metrics and KPIs"
   ```
+
   
   ### Compliance and Governance
   
@@ -618,6 +645,7 @@ content: |
   
   #### Security Effectiveness Metrics
   ```yaml
+
   security_metrics:
     threat_detection:
       - "Mean time to detection (MTTD): <15 minutes"
@@ -637,9 +665,11 @@ content: |
       - "Security training completion: >98%"
       - "Audit findings: trending down"
   ```
+
   
   #### Business Impact Metrics
   ```yaml
+
   business_metrics:
     productivity_impact:
       - "User authentication time: <30 seconds"
@@ -656,6 +686,7 @@ content: |
       - "Data breach risk: 70% reduction"
       - "Insider threat risk: 50% reduction"
   ```
+
 
 examples:
   - input: "Remote employee needs access to customer database from personal device"
@@ -734,6 +765,7 @@ compliance_certifications:
     next_assessment: "2025-11-20"
 ```
 
+
 ---
 
 ## 🔄 Cross-Cutting Procedure Template
@@ -741,6 +773,7 @@ compliance_certifications:
 ### Template 3: Enterprise Incident Response Procedure
 
 ```yaml
+
 # uki:organization:procedure:enterprise-incident-response-001.yaml
 # Demonstrates: Cross-cutting procedure with very high relationship complexity
 schema: "1.0"
@@ -783,6 +816,7 @@ content: |
   
   #### Severity Levels
   ```yaml
+
   severity_classification:
     severity_1_critical:
       definition: "Complete service outage or critical security breach"
@@ -824,9 +858,11 @@ content: |
       response_time: "8 hours"
       escalation_required: "Team lead notification"
   ```
+
   
   #### Incident Categories
   ```yaml
+
   incident_categories:
     technology_incidents:
       - "System outages and performance degradation"
@@ -856,11 +892,13 @@ content: |
       - "Power outages and utility failures"
       - "Building security incidents"
   ```
+
   
   ### Incident Response Organization
   
   #### Incident Response Team Structure
   ```yaml
+
   response_organization:
     incident_commander:
       role: "Overall incident leadership and decision-making authority"
@@ -898,9 +936,11 @@ content: |
         - "Support customer communication and service recovery"
       authority_level: "Business unit manager or above"
   ```
+
   
   #### On-Call and Escalation Structure
   ```yaml
+
   on_call_structure:
     tier_1_response:
       - "24/7 operations center staffing"
@@ -926,11 +966,13 @@ content: |
       severity_3: "Department director notification within 4 hours"
       automated_escalation: "If no response within 2x response time SLA"
   ```
+
   
   ### Incident Response Process
   
   #### Phase 1: Detection and Initial Response
   ```yaml
+
   detection_response:
     incident_detection:
       automated_monitoring:
@@ -954,9 +996,11 @@ content: |
       - "[ ] Activate appropriate escalation procedures"
       - "[ ] Start incident communication procedures"
   ```
+
   
   #### Phase 2: Investigation and Containment
   ```yaml
+
   investigation_containment:
     investigation_process:
       - "Gather incident details and timeline information"
@@ -984,9 +1028,11 @@ content: |
         - "Coordinate with legal team on disclosure requirements"
         - "Manage internal communication to prevent rumors"
   ```
+
   
   #### Phase 3: Resolution and Recovery
   ```yaml
+
   resolution_recovery:
     resolution_process:
       - "Implement permanent fix or long-term solution"
@@ -1015,9 +1061,11 @@ content: |
       - "Update incident tracking system with final status"
       - "Communicate incident closure to all stakeholders"
   ```
+
   
   #### Phase 4: Post-Incident Review and Learning
   ```yaml
+
   post_incident_review:
     review_process:
       timeline: "Within 48 hours for Severity 1-2, within 1 week for Severity 3-4"
@@ -1041,11 +1089,13 @@ content: |
       - "Updates to incident response procedures if needed"
       - "Training recommendations and knowledge sharing"
   ```
+
   
   ### Communication Framework
   
   #### Internal Communication
   ```yaml
+
   internal_communications:
     executive_briefing:
       severity_1_2: "Real-time updates every 30 minutes during active response"
@@ -1062,9 +1112,11 @@ content: |
       investor_relations: "For incidents with potential material impact"
       partner_notification: "For incidents affecting external partnerships"
   ```
+
   
   #### External Communication
   ```yaml
+
   external_communications:
     customer_communication:
       service_status_page: "Real-time updates on public status page"
@@ -1087,11 +1139,13 @@ content: |
       spokesperson_designation: "Trained spokesperson for media interactions"
       crisis_communication: "PR agency coordination for significant incidents"
   ```
+
   
   ### Technology and Automation
   
   #### Incident Management Platform
   ```yaml
+
   technology_stack:
     incident_tracking: "ServiceNow / PagerDuty incident management"
     monitoring_integration: "Automatic incident creation from monitoring alerts"
@@ -1104,9 +1158,11 @@ content: |
       chatbot_integration: "AI-powered incident triage and initial response"
       metrics_dashboard: "Real-time incident metrics and KPI tracking"
   ```
+
   
   #### AI-Powered Incident Management
   ```yaml
+
   ai_capabilities:
     intelligent_classification:
       - "ML-based incident severity and category classification"
@@ -1126,11 +1182,13 @@ content: |
       - "Maintenance window optimization to prevent incidents"
       - "Risk assessment for changes and deployments"
   ```
+
   
   ### Metrics and Continuous Improvement
   
   #### Key Performance Indicators
   ```yaml
+
   incident_metrics:
     response_metrics:
       - "Mean Time to Acknowledge (MTTA): <5 minutes for Severity 1"
@@ -1150,9 +1208,11 @@ content: |
       - "Revenue impact per incident: tracked and trending down"
       - "Regulatory fines and penalties: zero tolerance target"
   ```
+
   
   #### Continuous Improvement Process
   ```yaml
+
   improvement_framework:
     monthly_reviews:
       - "Incident trend analysis and pattern identification"
@@ -1172,6 +1232,7 @@ content: |
       - "Major process and technology upgrade planning"
       - "Budget and resource allocation for following year"
   ```
+
 
 examples:
   - input: "Production database becomes unavailable affecting all customer transactions"
@@ -1257,6 +1318,7 @@ procedure_integration:
   crisis_communication: "Integrated crisis communication and media relations"
   legal_compliance: "Coordinated legal review and regulatory notification"
 ```
+
 
 <function_calls>
 <invoke name="TodoWrite">

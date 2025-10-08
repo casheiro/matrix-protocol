@@ -120,6 +120,7 @@ content: |
   
   ### Initial Notification (P0/P1)
   ```
+
   🚨 PAYMENT SYSTEM INCIDENT - P0
   
   Issue: Payment processing completely unavailable
@@ -131,9 +132,11 @@ content: |
   War Room: #incident-20240325-1422
   Status: https://status.company.com
   ```
+
   
   ### Resolution Update
   ```
+
   ✅ INCIDENT RESOLVED - P0
   
   Issue: Payment processing restored
@@ -143,6 +146,7 @@ content: |
   
   Next Steps: Post-mortem scheduled for tomorrow
   ```
+
   
   ## Post-Incident Process
   

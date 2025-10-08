@@ -51,8 +51,10 @@ Cross-reference to **MOC (Matrix Ontology Catalog)** for organization-specific t
 
 ### The Universal Pattern
 ```
+
 EVENT → QUERY ORACLE → DECISION → ACTION → EVALUATE IF WORTH TEACHING → (TEACH)
 ```
+
 
 ### Mandatory Canonical States
 Every ZOF flow follows this conceptual sequence:
@@ -118,6 +120,7 @@ ZOF MUST implement specific rules for enrichment operations that cross multiple 
 
 #### Cross-boundary Enrichment Detection
 ```yaml
+
 # --- Normative Configuration ---
 cross_boundary_detection:
   scope_crossing:
@@ -136,6 +139,7 @@ cross_boundary_detection:
     classification: "multi_boundary_crossing"
 ```
 
+
 #### Authority Validation for Cross-boundary Enrichment
 - **Hierarchical Authority Check**: User MUST have authority in BOTH source and target hierarchies
 - **Cross-domain Validation**: For domain crossing, user MUST have domain_access to both domains in MOC
@@ -144,6 +148,7 @@ cross_boundary_detection:
 
 #### Cross-boundary Enrichment Rules
 ```yaml
+
 # --- Normative Rules ---
 cross_boundary_enrichment_rules:
   scope_crossing_rules:
@@ -169,6 +174,7 @@ cross_boundary_enrichment_rules:
       outcome_application: "domain_specific_actions"
 ```
 
+
 #### EvaluateForEnrich for Cross-boundary Operations
 - **Extended Criteria**: Cross-boundary enrichment MUST apply additional evaluation criteria from MOC
 - **Impact Analysis**: MUST assess impact on both source and target hierarchies
@@ -183,6 +189,7 @@ ZOF MUST implement scope_mode validation for enrichment operations that affect m
 
 ##### Scope Mode Types
 ```yaml
+
 # --- Normative Configuration ---
 scope_mode_validation:
   validation_types:
@@ -215,8 +222,10 @@ scope_mode_validation:
     precedence: "lowest"
 ```
 
+
 ##### Scope Mode Application Examples
 ```yaml
+
 # --- Illustrative Examples ---
 scope_mode_scenarios:
   scenario_1_cross_team_guideline:
@@ -240,6 +249,7 @@ scope_mode_scenarios:
     scope_mode: "any"                  # Cross-domain sharing encouraged
     validation_result: "APPROVED if technical OR business validates"
 ```
+
 
 ##### Integration with MOC Authority
 - **Authority Mapping**: scope_mode MUST respect MOC authority hierarchies for each affected scope
@@ -276,6 +286,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Canonical States with Signals**
 ```yaml
+
 # --- Illustrative Example ---
 flow_execution:
   - state: "intake"
@@ -315,8 +326,10 @@ flow_execution:
       result: "Oracle enriched with uki:technical:example:team-jwt-implementation"
 ```
 
+
 ### **EvaluateForEnrich Checkpoint**
 ```yaml
+
 # --- Illustrative Example ---
 evaluate_for_enrich_execution:
   moc_criteria_consultation:
@@ -354,8 +367,10 @@ evaluate_for_enrich_execution:
     justification: "Novel implementation approach with reusable value within authorized scope"
 ```
 
+
 ### **MAL Conflict Resolution in EvaluateForEnrich**
 ```yaml
+
 # --- Illustrative Example ---
 evaluate_for_enrich_with_conflict:
   conflict_detection:
@@ -413,8 +428,10 @@ evaluate_for_enrich_with_conflict:
       justification: "MAL resolved conflict in favor of advanced implementation based on stronger security evidence"
 ```
 
+
 ### **Minimum can_enrich?() Profile - Initial Adoption**
 ```yaml
+
 # --- Illustrative Example ---
 # For organizations starting with ZOF, simplified function with 3 basic questions
 minimum_can_enrich_profile:
@@ -484,8 +501,10 @@ gradual_extensions:
     - "Advanced semantic validation"
 ```
 
+
 ### **Canonical Events and Workflow Patterns**
 ```yaml
+
 # --- Illustrative Example ---
 canonical_events:
   knowledge.added:
@@ -538,8 +557,10 @@ workflow_patterns:
     application: "Processing corrections and learnings"
 ```
 
+
 ### **Workflow Lifecycle States**
 ```yaml
+
 # --- Illustrative Example ---
 workflow_lifecycle:
   initiated:
@@ -573,8 +594,10 @@ workflow_lifecycle:
     allowed_transitions: []
 ```
 
+
 ### **Free Implementation Guidance**
 ```yaml
+
 # --- Illustrative Example ---
 zof_prescribes:
   flow_thinking: "How to structure workflow thought"
@@ -628,8 +651,10 @@ state_machine_visualization:
         end note
 ```
 
+
 ### **MOC Integration Points**
 ```yaml
+
 # --- Illustrative Example ---
 moc_integration:
   enrichment_criteria:
@@ -670,8 +695,10 @@ moc_integration:
         return REQUIRES_APPROVAL
 ```
 
+
 ### **Integration with Other Matrix Components**
 ```yaml
+
 # --- Illustrative Example ---
 matrix_component_integration:
   mef_integration:
@@ -694,6 +721,7 @@ matrix_component_integration:
     governance_rules: "MOC defines authority and visibility rules"
     evaluation_criteria: "MOC configures EvaluateForEnrich checkpoint criteria"
 ```
+
 
 ---
 

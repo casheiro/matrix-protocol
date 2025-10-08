@@ -41,6 +41,7 @@ Documentar **padrões críticos** para garantir que futuras migrações de compo
 </style>
 ```
 
+
 #### ✅ **SOLUÇÃO** (Nova v2)
 ```vue
 <template>
@@ -59,6 +60,7 @@ Documentar **padrões críticos** para garantir que futuras migrações de compo
 }
 </style>
 ```
+
 
 #### **Arquivos que PRECISAM dessa conversão:**
 - `/components/navigation/FrameworkDropdown.vue`
@@ -80,10 +82,12 @@ Documentar **padrões críticos** para garantir que futuras migrações de compo
 <NuxtLink :to="localePath('/frameworks/mef')">
 ```
 
+
 #### ⚠️ **Alternativa quando localePath falha**
 ```vue
 <NuxtLink :to="`/${$i18n.locale}/frameworks/mef`">
 ```
+
 
 **Contextos onde foi necessário usar alternativa:**
 - MobileDrawer.vue (problemas de contexto de composable)
@@ -105,6 +109,7 @@ runtimeConfig: {
 }
 ```
 
+
 #### ✅ **SOLUÇÃO** (Nova v2)
 ```ts
 // nuxt.config.ts - OBRIGATÓRIO
@@ -119,6 +124,7 @@ runtimeConfig: {
   }
 }
 ```
+
 
 **Resultado**: Evita "undefined" nos títulos das páginas.
 
@@ -145,6 +151,7 @@ runtimeConfig: {
 </Transition>
 ```
 
+
 #### ⚠️ **UDropdown - API v3.x Mudou**
 - Verificar sempre documentação Nuxt UI 3.x
 - Props e estrutura diferentes da v2.x
@@ -159,6 +166,7 @@ runtimeConfig: {
 // useSEO.ts - Keywords hardcoded em português
 keywords = 'Matrix Protocol, Framework, IA, Inteligência Artificial...'
 ```
+
 
 #### ✅ **SOLUÇÃO** (Nova v2)
 ```ts
@@ -183,6 +191,7 @@ const pageKeywords = keywords || defaultKeywords
 }
 ```
 
+
 ---
 
 ### 6. **Estrutura de Componentes - Auto-import Issues**
@@ -198,6 +207,7 @@ const pageKeywords = keywords || defaultKeywords
   </main>
 </template>
 ```
+
 
 #### ✅ **SOLUÇÃO** (Nova v2)
 ```vue
@@ -216,6 +226,7 @@ const pageKeywords = keywords || defaultKeywords
   </div>
 </template>
 ```
+
 
 **Razão**: Nuxt 4 tem mudanças no auto-import que causam problemas em alguns casos.
 
@@ -251,6 +262,7 @@ const pageKeywords = keywords || defaultKeywords
 </NuxtLink>
 ```
 
+
 ---
 
 ### 8. **Atribuição Casheiro - Padrão Completo**
@@ -266,6 +278,7 @@ const pageKeywords = keywords || defaultKeywords
 </p>
 ```
 
+
 #### ✅ **Schema.org**
 ```ts
 // useSEO.ts
@@ -280,6 +293,7 @@ const generateSchemaOrg = (title: string, description: string, url: string) => {
   }
 }
 ```
+
 
 ---
 
@@ -343,6 +357,7 @@ export const useMatrixConfig = () => {
 }
 ```
 
+
 ### **Estrutura de SEO**
 ```ts
 export const useSEO = () => {
@@ -361,6 +376,7 @@ export const useSEO = () => {
 }
 ```
 
+
 ### **Estrutura de Navegação**
 ```vue
 <template>
@@ -377,6 +393,7 @@ export const useSEO = () => {
   </nav>
 </template>
 ```
+
 
 ---
 

@@ -3,6 +3,7 @@
 ## 📋 **Template Simples**
 
 ```yaml
+
 # === INFORMAÇÕES BÁSICAS ===
 título: "[Nome claro e objetivo]"
 categoria: "[Ex: Processo, Regra de Negócio, Procedimento Técnico]"
@@ -40,6 +41,7 @@ notas_importantes:
 próxima_revisão: "[Data quando deve ser revisado]"
 ```
 
+
 ---
 
 ## 🎯 **Como Usar Este Template**
@@ -70,6 +72,7 @@ próxima_revisão: "[Data quando deve ser revisado]"
 
 ### **Template Ultra-Simples (para começar)**
 ```
+
 TÍTULO: [Nome claro]
 DATA: [AAAA-MM-DD]
 STATUS: [Ativo/Obsoleto]
@@ -89,8 +92,10 @@ EXEMPLO:
 RELACIONADO: [outros documentos]
 ```
 
+
 ### **Template Médio (quando precisar de mais detalhes)**
 ```yaml
+
 título: "[Nome]"
 categoria: "[Tipo]"
 criado: "[Data]" | atualizado: "[Data]"
@@ -116,6 +121,7 @@ relacionamentos:
   
 revisão_próxima: "[Data]"
 ```
+
 
 ---
 

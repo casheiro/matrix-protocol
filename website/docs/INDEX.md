@@ -31,6 +31,7 @@ Este é o **mapa completo** de toda a documentação técnica do projeto Matrix 
 ### Categorias Planejadas
 
 ```
+
 docs/
 ├── INDEX.md                    # Este arquivo
 ├── REGRAS_DOCUMENTACAO.md      # Regras obrigatórias
@@ -69,6 +70,7 @@ docs/
     ├── releases/               # Notas de release
     └── migration-guides/       # Guias de migração entre versões
 ```
+
 
 ---
 

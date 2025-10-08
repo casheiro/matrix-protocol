@@ -54,6 +54,7 @@ A consolidação do diretório `manual/` foi executada com sucesso, movendo-o pa
 ## 🏗️ Estrutura Final Unificada
 
 ```
+
 docs/ (Fonte Única da Verdade)
 ├── specifications/en/          # Especificações técnicas (inglês)
 ├── specifications/pt/          # Especificações técnicas (português)
@@ -76,6 +77,7 @@ docs/ (Fonte Única da Verdade)
 └── presentation/               # Guidelines de documentação
 ```
 
+
 ---
 
 ## 📈 Benefícios Alcançados
@@ -87,10 +89,12 @@ docs/ (Fonte Única da Verdade)
 
 ### 2. **Estrutura Hierárquica Clara**
 ```
+
 Complexidade Crescente:
 specifications/ → guides/ → manual/
    (técnico)    (resumo)   (completo)
 ```
+
 
 ### 3. **Integração Website Otimizada**
 - ✅ **Downloads automáticos** - Gerados de docs/manual/

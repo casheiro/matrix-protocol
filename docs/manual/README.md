@@ -24,6 +24,7 @@
 ## 📁 Estrutura do Manual
 
 ```
+
 manual/
 ├── README.md                                       # Este arquivo - navegação principal
 ├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md     # Manual completo em português (4.600+ linhas)
@@ -35,6 +36,7 @@ manual/
 └── tools/
     └── validation-checklists.md               # Checklists práticos por fase
 ```
+
 
 ---
 
@@ -57,6 +59,7 @@ cp quick-start/MOC_STARTER_TEMPLATE.yaml seu-projeto/moc-config.yaml
 # 4. Valide com checklist
 # Use tools/validation-checklists.md para cada fase
 ```
+
 
 ### **2. Para Estudo Detalhado**
 

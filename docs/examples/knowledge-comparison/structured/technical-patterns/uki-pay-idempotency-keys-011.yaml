@@ -70,6 +70,7 @@ content: |
     "ttl": 86400
   }
   ```
+
   
   ### Request Hash Validation
   **Algorithm:** SHA-256 of request body
@@ -124,6 +125,7 @@ content: |
     });
   }
   ```
+
   
   ### Retry Strategy with Idempotency
   ```javascript
@@ -142,6 +144,7 @@ content: |
     }
   }
   ```
+
 
 examples:
   - input: "POST /payments com Idempotency-Key já usado, mesmo request body"

@@ -31,6 +31,7 @@
 ### Configuração MOC
 
 ```yaml
+
 # MOC_TEMPLATE_STARTUP.yaml
 moc_version: "1.0"
 organizacao: "[NOME_STARTUP]"
@@ -253,6 +254,7 @@ politicas_arbitragem_nomeadas:
     janela_temporal_ms: 60000     # Janela de concorrência de 1 minuto
 ```
 
+
 ### Notas de Implementação para Startups
 
 **Pontos Fortes deste Template:**
@@ -281,6 +283,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 # MOC_TEMPLATE_SCALEUP.yaml
 moc_version: "1.0"
 organizacao: "[NOME_SCALEUP]"
@@ -635,6 +638,7 @@ politicas_arbitragem_nomeadas:
       - "P6_fallback_deterministico"
 ```
 
+
 ---
 
 ## 🏢 Template Enterprise (200-1000 funcionários)
@@ -648,6 +652,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 # MOC_TEMPLATE_ENTERPRISE.yaml
 moc_version: "1.0"
 organizacao: "[NOME_ENTERPRISE]"
@@ -1151,6 +1156,7 @@ politicas_arbitragem_nomeadas:
     trilha_auditoria_aprimorada: true
 ```
 
+
 ---
 
 ## 🏛️ Template Corporação (1000+ funcionários)
@@ -1164,6 +1170,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 # MOC_TEMPLATE_CORPORACAO.yaml
 moc_version: "1.0"
 organizacao: "[NOME_CORPORACAO]"
@@ -1751,6 +1758,7 @@ politicas_arbitragem_nomeadas:
     coordenacao_cross_un_necessaria: true
     aprovacao_corporativa_necessaria: true
 ```
+
 
 ---
 

@@ -18,6 +18,7 @@ Este documento descreve o fluxo completo de pagamentos da plataforma.
 ### Configurações Gateway
 
 ```
+
 PagSeguro:
 - Endpoint: https://ws.pagseguro.uol.com.br/v2/
 - Timeout: 30s
@@ -27,6 +28,7 @@ PagSeguro:
 Mercado Pago:
 - [Link quebrado para documentação]
 ```
+
 
 ## Fluxo de Checkout
 

@@ -11,6 +11,7 @@
 
 **Estrutura Padrão**:
 ```yaml
+
 schema: "1.0"
 id: uki:squad-payments:business_rule:discount-logic-001
 title: "Regras de Desconto por Volume e Cupons"
@@ -26,6 +27,7 @@ relationships:
   - type: relates_to
     target: uki:squad-payments:business_rule:refund-policy-002
 ```
+
 
 ### **✅ Knowledge Sources Não Estruturados (Compatível)**
 

@@ -31,6 +31,7 @@ Este documento detalha todas as adaptações técnicas necessárias para migrar 
 </template>
 ```
 
+
 #### ✅ CORRETO (preserva idioma + Nuxt UI 3.x):
 ```vue
 <!-- app.vue - COM UApp (OBRIGATÓRIO) -->
@@ -65,6 +66,7 @@ const localePath = useLocalePath()
 </template>
 ```
 
+
 #### 📋 Padrão Obrigatório em Todos os Componentes:
 
 ```vue
@@ -87,6 +89,7 @@ const localePath = useLocalePath()
   <UButton :to="localePath(`/resources?framework=${framework.key}`)">Recursos</UButton>
 </template>
 ```
+
 
 ### 🔍 Padrões Obrigatórios (Nuxt UI 3.x)
 
@@ -157,6 +160,7 @@ function validateLocalePaths() {
 }
 ```
 
+
 ## 1. Nuxt 4.x - Mudanças Principais
 
 ### 1.1 Configuração do Nuxt Config
@@ -180,6 +184,7 @@ export default defineNuxtConfig({
   ]
 })
 ```
+
 
 #### Depois (Nuxt 4.1.2)
 ```typescript
@@ -205,6 +210,7 @@ export default defineNuxtConfig({
 })
 ```
 
+
 **Mudanças Necessárias**:
 - ✅ `compatibilityDate` movido para nível raiz
 - ⚠️ Verificar se todas as configurações do Nitro são compatíveis
@@ -225,6 +231,7 @@ export default defineNuxtConfig({
 </template>
 ```
 
+
 #### Depois
 ```vue
 <!-- layouts/default.vue -->
@@ -237,6 +244,7 @@ export default defineNuxtConfig({
   </div>
 </template>
 ```
+
 
 **Mudanças Necessárias**:
 - ✅ Estrutura de layouts mantida
@@ -255,11 +263,13 @@ useHead({
 })
 ```
 
+
 #### Runtime Config - Verificar
 ```typescript
 // Verificar se há mudanças na API
 const config = useRuntimeConfig()
 ```
+
 
 ## 2. Nuxt UI 3.x - Breaking Changes Críticos
 
@@ -279,6 +289,7 @@ const config = useRuntimeConfig()
 </template>
 ```
 
+
 #### Depois (Nuxt UI 3.3.4)
 ```vue
 <template>
@@ -292,6 +303,7 @@ const config = useRuntimeConfig()
   </UButton>
 </template>
 ```
+
 
 **Verificações Necessárias**:
 - ✅ Props básicas mantidas
@@ -323,6 +335,7 @@ const frameworkItems = [
 ]
 </script>
 ```
+
 
 #### Depois (Nuxt UI 3.x)
 ```vue
@@ -356,6 +369,7 @@ const frameworkItems = [
 </script>
 ```
 
+
 **Mudanças Críticas**:
 - 🔴 **BREAKING**: Estrutura de items completamente diferente
 - 🔴 **BREAKING**: Uso de slots em vez de props para conteúdo
@@ -379,6 +393,7 @@ const isOpen = ref(false)
 </script>
 ```
 
+
 #### Depois (Nuxt UI 3.x)
 ```vue
 <template>
@@ -397,6 +412,7 @@ const isOpen = ref(false)
 const isOpen = ref(false)
 </script>
 ```
+
 
 **Mudanças**:
 - ⚠️ Recomendado usar `UCard` dentro do modal
@@ -419,6 +435,7 @@ const { data: posts } = await $content('blog')
   .fetch()
 ```
 
+
 #### Depois (@nuxt/content 3.7.1)
 ```typescript
 // Composable ou página
@@ -431,6 +448,7 @@ const posts = await queryContent('blog')
   .sort({ date: -1 })
   .find()
 ```
+
 
 **Mudanças Críticas**:
 - 🔴 **BREAKING**: `$content()` → `queryContent()`
@@ -447,6 +465,7 @@ const { data: navigation } = await $content()
   .fetch()
 ```
 
+
 #### Depois
 ```typescript
 const navigation = await queryContent()
@@ -454,6 +473,7 @@ const navigation = await queryContent()
   .where({ _path: { $contains: '/frameworks' } })
   .find()
 ```
+
 
 **Mudanças**:
 - 🔴 **BREAKING**: `dir` → `_path`
@@ -470,6 +490,7 @@ const navigation = await queryContent()
 </template>
 ```
 
+
 #### Depois
 ```vue
 <template>
@@ -478,6 +499,7 @@ const navigation = await queryContent()
   </div>
 </template>
 ```
+
 
 **Mudanças**:
 - 🔴 **BREAKING**: `<nuxt-content>` → `<ContentRenderer>`
@@ -512,6 +534,7 @@ export default defineNuxtConfig({
 })
 ```
 
+
 ```vue
 <!-- app.vue - ANTES -->
 <template>
@@ -520,6 +543,7 @@ export default defineNuxtConfig({
   </NuxtLayout>
 </template>
 ```
+
 
 #### Depois (Nuxt 4.x + Nuxt UI 3.x)
 ```typescript
@@ -546,6 +570,7 @@ export default defineNuxtConfig({
 })
 ```
 
+
 ```vue
 <!-- app.vue - DEPOIS (OBRIGATÓRIO) -->
 <script setup lang="ts">
@@ -562,6 +587,7 @@ const { locale } = useI18n()
   </UApp>
 </template>
 ```
+
 
 **Mudanças Críticas**:
 - 🔴 **BREAKING**: Componente `UApp` obrigatório no root
@@ -601,6 +627,7 @@ const { locale } = useI18n()
   {{ $t('navigation.protocol') }}
 </UButton>
 ```
+
 
 ### 5.2 FrameworkDropdown.vue
 
@@ -646,6 +673,7 @@ const { locale } = useI18n()
 </template>
 ```
 
+
 ### 5.3 Componentes de Conteúdo
 
 #### GlossaryContent.vue
@@ -660,6 +688,7 @@ const { data: glossary } = await $content('glossary').fetch()
 const glossary = await queryContent('glossary').findOne()
 </script>
 ```
+
 
 #### ProtocolContent.vue
 ```vue
@@ -681,6 +710,7 @@ const navigation = await queryContent()
   .find()
 </script>
 ```
+
 
 ## 6. Testes de Compatibilidade
 
@@ -754,6 +784,7 @@ function updateContentQueries(filePath) {
 }
 ```
 
+
 ### 7.2 Script de Atualização de Componentes
 ```javascript
 // scripts/update-ui-components.js
@@ -767,6 +798,7 @@ function updateUIComponents(filePath) {
   fs.writeFileSync(filePath, content)
 }
 ```
+
 
 ## 8. Rollback Strategy
 
@@ -793,9 +825,11 @@ function updateUIComponents(filePath) {
 
 **Erro comum durante o build**:
 ```
+
 ERROR [@tailwindcss/vite:generate:build] Cannot apply unknown utility class text-gray-600. 
 Are you using CSS modules or similar and missing @reference?
 ```
+
 
 **Causa**: Classes `@apply` em blocos `<style scoped>` não são compatíveis com Tailwind CSS v4.
 
@@ -827,6 +861,7 @@ Todos os componentes que usam padrão `@apply` em estilos escopados:
 </style>
 ```
 
+
 #### ✅ DEPOIS (v2 - Compatível com Tailwind v4)
 ```vue
 <template>
@@ -845,6 +880,7 @@ Todos os componentes que usam padrão `@apply` em estilos escopados:
 </style>
 ```
 
+
 ### 9.4 Processo de Conversão
 
 #### Passo 1: Identificar estilos problemáticos
@@ -852,6 +888,7 @@ Todos os componentes que usam padrão `@apply` em estilos escopados:
 # Buscar por @apply em componentes
 grep -r "@apply" app/components/
 ```
+
 
 #### Passo 2: Extrair classes Tailwind
 1. Copiar todas as classes dos blocos `@apply`
@@ -883,6 +920,7 @@ const getItemClasses = (item) => {
 </script>
 ```
 
+
 #### Passo 4: Remover `@apply`
 - Deletar completamente todos os blocos `@apply`
 - Manter apenas CSS puro se necessário
@@ -892,6 +930,7 @@ const getItemClasses = (item) => {
 ```bash
 pnpm build  # Deve passar sem erros Tailwind
 ```
+
 
 ### 9.5 Componentes Já Migrados (Referência)
 

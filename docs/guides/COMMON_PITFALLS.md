@@ -71,6 +71,7 @@
 
 #### **Simple Starting MOC:**
 ```yaml
+
 hierarchies:
   scope:
     nodes:
@@ -90,6 +91,7 @@ hierarchies:
       - knowledge
       - reference
 ```
+
 
 #### **Prevention Checklist:**
 - [ ] Maximum 3 hierarchies to start
@@ -126,10 +128,12 @@ hierarchies:
 
 #### **Integration Strategy:**
 ```
+
 Phase 1: Parallel operation (3 months)
 Phase 2: Gradual migration (6 months)
 Phase 3: Legacy deprecation (3 months)
 ```
+
 
 #### **Prevention Checklist:**
 - [ ] Existing systems inventory completed

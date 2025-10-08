@@ -6,8 +6,10 @@
 
 **REGRA FUNDAMENTAL**: Todo conteúdo de documentação técnica deve ser criado **EXCLUSIVAMENTE** em:
 ```
+
 d:\projetos\matrix-protocol-website-v2\docs\
 ```
+
 
 ### 2. Escopo do README.md Principal
 
@@ -26,6 +28,7 @@ O arquivo `README.md` na raiz do projeto deve conter **APENAS**:
 ### 3. Estrutura Obrigatória do Diretório `/docs`
 
 ```
+
 docs/
 ├── INDEX.md                    # Mapa completo da documentação
 ├── REGRAS_DOCUMENTACAO.md      # Este arquivo (regras)
@@ -36,6 +39,7 @@ docs/
 ├── referencias/                # Documentação de referência
 └── versioning/                 # Controle de versões da docs
 ```
+
 
 ### 4. Proibições Explícitas
 
@@ -74,6 +78,7 @@ docs/
 **Responsável**: Nome/Equipe
 ```
 
+
 ### 6. Versionamento da Documentação
 
 #### Controle de Versões:
@@ -93,6 +98,7 @@ categoria: "arquitetura|configuracao|desenvolvimento|migracao|referencias"
 status: "ativo|deprecated|rascunho"
 ---
 ```
+
 
 ### 7. Organização por Categorias
 

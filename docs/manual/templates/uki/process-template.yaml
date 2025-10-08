@@ -90,8 +90,10 @@ content: |
   
   ## Process Flow Diagram
   ```
+
   [Start] → [Step 1] → [Decision Point] → [Step 2A/2B] → [Step 3] → [End]
   ```
+
   
   ## Inputs and Outputs
   [What goes into the process and what comes out]

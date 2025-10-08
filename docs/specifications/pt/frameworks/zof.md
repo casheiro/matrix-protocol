@@ -52,8 +52,10 @@ Referências adicionais no **MOC (Matrix Ontology Catalog)** para taxonomias org
 
 ### O Padrão Universal
 ```
+
 EVENTO → CONSULTA ORACLE → DECISÃO → AÇÃO → AVALIO SE VALE ENSINAR → (ENSINO)
 ```
+
 
 ### Estados Canônicos Obrigatórios
 Todo fluxo ZOF segue esta sequência conceitual:
@@ -119,6 +121,7 @@ ZOF DEVE implementar regras específicas para operações de enriquecimento que 
 
 #### Detecção de Enriquecimento Cross-boundary
 ```yaml
+
 # --- Configuração Normativa ---
 cross_boundary_detection:
   scope_crossing:
@@ -137,6 +140,7 @@ cross_boundary_detection:
     classification: "multi_boundary_crossing"
 ```
 
+
 #### Validação de Autoridade para Enriquecimento Cross-boundary
 - **Verificação de Autoridade Hierárquica**: Usuário DEVE ter autoridade em AMBAS as hierarquias origem e destino
 - **Validação Cross-domain**: Para cruzamento de domínio, usuário DEVE ter domain_access para ambos os domínios no MOC
@@ -145,6 +149,7 @@ cross_boundary_detection:
 
 #### Regras de Enriquecimento Cross-boundary
 ```yaml
+
 # --- Regras Normativas ---
 cross_boundary_enrichment_rules:
   scope_crossing_rules:
@@ -170,6 +175,7 @@ cross_boundary_enrichment_rules:
       outcome_application: "domain_specific_actions"
 ```
 
+
 #### EvaluateForEnrich para Operações Cross-boundary
 - **Critérios Estendidos**: Enriquecimento cross-boundary DEVE aplicar critérios de avaliação adicionais do MOC
 - **Análise de Impacto**: DEVE avaliar impacto em ambas as hierarquias origem e destino
@@ -184,6 +190,7 @@ O ZOF DEVE implementar validação scope_mode para operações de enriquecimento
 
 ##### Tipos de Modo de Escopo
 ```yaml
+
 # --- Configuração Normativa ---
 scope_mode_validation:
   validation_types:
@@ -216,8 +223,10 @@ scope_mode_validation:
     precedence: "lowest"
 ```
 
+
 ##### Exemplos de Aplicação do Modo de Escopo
 ```yaml
+
 # --- Exemplos Ilustrativos ---
 scope_mode_scenarios:
   scenario_1_cross_team_guideline:
@@ -241,6 +250,7 @@ scope_mode_scenarios:
     scope_mode: "any"                  # Compartilhamento cross-domain encorajado
     validation_result: "APROVADO se technical OU business validar"
 ```
+
 
 ##### Integração com Autoridade MOC
 - **Mapeamento de Autoridade**: scope_mode DEVE respeitar hierarquias de autoridade MOC para cada escopo afetado
@@ -273,6 +283,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Estados Canônicos com Sinais**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 flow_execution:
   - state: "intake"
@@ -294,8 +305,10 @@ flow_execution:
       result: "Estratégia de implementação definida"
 ```
 
+
 ### **Checkpoint EvaluateForEnrich**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 evaluate_for_enrich:
   checkpoint_execution:
@@ -314,8 +327,10 @@ evaluate_for_enrich:
       evaluation: "PASS - solução pode ser reutilizada em outros projetos"
 ```
 
+
 ### **Perfil Mínimo can_enrich?() - Adoção Inicial**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 # Para organizações iniciando com ZOF, função simplificada com 3 perguntas básicas
 minimum_can_enrich_profile:
@@ -351,8 +366,10 @@ minimum_can_enrich_profile:
         return REQUIRES_APPROVAL
 ```
 
+
 ### **Eventos Canônicos**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 canonical_events:
   knowledge.added: "Novo conteúdo disponível"
@@ -371,8 +388,10 @@ workflow_patterns:
   feedback_flow: "Processamento de correções"
 ```
 
+
 ### **Implementação Livre**
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 zof_prescribes:
   how_to_think: "Como estruturar o pensamento do fluxo"
@@ -393,6 +412,7 @@ benefits:
   flexibility: "Cada equipe implementa com suas tecnologias"
   authority: "Respeitamos hierarquias organizacionais via MOC"
 ```
+
 
 ---
 

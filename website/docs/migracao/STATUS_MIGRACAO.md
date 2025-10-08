@@ -66,6 +66,7 @@
 
 ### 📁 Conteúdo a Migrar:
 ```
+
 content/
 ├── en/
 │   ├── frameworks/
@@ -76,6 +77,7 @@ content/
     ├── docs/
     └── pages/
 ```
+
 
 ### ⚙️ Adaptações Necessárias:
 - Atualizar queries para @nuxt/content 3.x

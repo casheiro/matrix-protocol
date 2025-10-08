@@ -49,6 +49,7 @@ Este checklist deve ser usado para **CADA** componente migrado do projeto origin
 </template>
 ```
 
+
 #### 5. Substituição de Componentes Problemáticos
 - [ ] **USlideover → Transition custom**
   ```vue
@@ -61,6 +62,7 @@ Este checklist deve ser usado para **CADA** componente migrado do projeto origin
     <div v-if="isOpen">...</div>
   </Transition>
   ```
+
 - [ ] **UDropdown**: Verificar nova API v3.x se usado
 - [ ] **Outros componentes UI**: Testar antes de implementar
 
@@ -172,6 +174,7 @@ grep -r "USlideover" /mnt/d/projetos/matrix-protocol-website/components/
 grep -r "text.*:" /mnt/d/projetos/matrix-protocol-website/components/
 ```
 
+
 ### **Build e Validação**
 ```bash
 # Build completo
@@ -186,6 +189,7 @@ pnpm lint
 # Dev server
 pnpm dev
 ```
+
 
 ---
 

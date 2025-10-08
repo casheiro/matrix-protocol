@@ -24,6 +24,7 @@
 ## 📁 Manual Structure
 
 ```
+
 manual/
 ├── README_EN.md                                    # This file - main navigation
 ├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md     # Complete manual in Portuguese (4,600+ lines)
@@ -48,6 +49,7 @@ manual/
     ├── validation-checklists-pt.md            # Validation checklists (PT)
     └── validation-checklists.md               # Validation checklists (EN)
 ```
+
 
 ---
 

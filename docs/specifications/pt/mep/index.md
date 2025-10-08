@@ -145,27 +145,33 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 
 ### **Cenário 1: Conflito de UKIs** (Informativo, Dependente do MOC)
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 Situação: Duas UKIs sobre "autenticação JWT" conflitam
 MEP orienta: Autoridade derivada → verificar scope_ref e maturity_ref
 MAL executa: Arbitragem baseada em hierarquia epistemológica
 ```
 
+
 ### **Cenário 2: Promoção de Regra** (Informativo, Dependente do MOC)
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 Situação: Regra squad-level quer virar policy organizacional  
 MEP orienta: Promoção responsável → exige promotion_rationale
 MEF registra: Campo com justificativa epistemológica completa
 ```
 
+
 ### **Cenário 3: Rejeição de Enriquecimento** (Informativo, Dependente do MOC)
 ```yaml
+
 # --- Exemplo Ilustrativo ---
 Situação: UKI rejeitada no evaluate_for_enrich do ZOF
 MEP orienta: Explicabilidade necessária → narrativa obrigatória
 OIF comunica: Feedback claro com base epistemológica ao usuário
 ```
+
 
 *Mini-exemplo de Elasticidade:* Uma UKI "regra de desconto" pode ser squad-level em e-commerce, mas org-level em banco — o contexto define a pertinência.
 

@@ -65,6 +65,7 @@ Diferentemente da documentação individual de cada framework que foca em capaci
 ## 3. Diagrama de Fluxo End-to-End
 
 ```mermaid
+
 graph TB
     %% Camada do Usuário
     User[👤 Solicitação do Usuário<br/>Implementação de Autenticação]
@@ -169,6 +170,7 @@ graph TB
     class MAL_ARB,MAL_DEC,MAL_POL mal
 ```
 
+
 ---
 
 ## 4. Matriz de Pontos de Integração
@@ -197,6 +199,7 @@ graph TB
 ### **Exemplo 1: Implementação de Autenticação JWT**
 
 ```yaml
+
 # Fluxo Completo de Integração
 user_story: "Como desenvolvedor, preciso implementar autenticação JWT"
 
@@ -284,9 +287,11 @@ oif_explanation:
     em requisitos similares de autenticação."
 ```
 
+
 ### **Exemplo 2: Cenário de Arbitragem MAL**
 
 ```yaml
+
 # Conflito de Implementação JWT Concorrente
 user_story: "Dois times implementando autenticação JWT simultaneamente"
 
@@ -351,9 +356,11 @@ mef_decision_record:
   audit_trail: "Arbitragem MAL completa registrada para referência futura"
 ```
 
+
 ### **Exemplo 3: Cenário de Escalação de Autoridade**
 
 ```yaml
+
 # Tentativa de Criação de Política Organizacional
 user_request: "Criar política de segurança organizacional"
 user_context: {scope: "team", authority: "developer", domain: "technical"}
@@ -389,6 +396,7 @@ zof_workflow_modification:
     act: "Gerar solicitação de escalação com contexto"
     # EvaluateForEnrich pulado - sem enriquecimento para roteamento de escalação
 ```
+
 
 ---
 

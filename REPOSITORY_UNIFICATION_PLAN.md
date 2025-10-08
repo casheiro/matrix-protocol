@@ -25,6 +25,7 @@ This plan outlines the consolidation of Matrix Protocol documentation and websit
 
 ### Current Structure
 ```
+
 matrix-protocol/
 ├── *.md (42 files, ~11,877 lines)    # Technical documentation
 ├── guides/ (3 files)                 # Practical guides  
@@ -37,6 +38,7 @@ matrix-protocol/
     ├── package.json (Nuxt 4.x)      # Modern stack
     └── .gitignore (separate)         # Build ignores
 ```
+
 
 ### Identified Problems
 
@@ -70,6 +72,7 @@ matrix-protocol/
 
 ### Proposed Unified Structure
 ```
+
 matrix-protocol/
 ├── docs/                             # NEW: Single source of truth
 │   ├── specifications/               # Core specs (*.md files)
@@ -106,6 +109,7 @@ matrix-protocol/
 └── README.md                        # Main project README
 ```
 
+
 ---
 
 ## 📋 Implementation Plan (5 Phases)
@@ -128,6 +132,7 @@ matrix-protocol/
    mkdir -p docs/templates
    mkdir -p docs/examples
    ```
+
 
 2. **Move Core Specifications**
    - Move all `*_FRAMEWORK.md` files to `docs/specifications/`
@@ -175,6 +180,7 @@ matrix-protocol/
      }
    })
    ```
+
 
 2. **Content Linking Strategy**
    - Option A: Symlinks from `website/content/` to `docs/`
@@ -224,6 +230,7 @@ matrix-protocol/
    *.log
    .env
    ```
+
 
 2. **Workflow Adaptation**
    - Update GitHub Actions for unified structure

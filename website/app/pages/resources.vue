@@ -67,7 +67,7 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_BASIC_TEMPLATE_PT.yaml', 'MOC_BASIC_TEMPLATE_PT.yaml')"
+                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE_PT.yaml', 'MOC_STARTER_TEMPLATE_PT.yaml')"
                   color="success"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
@@ -76,7 +76,7 @@
                   Português
                 </UButton>
                 <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_BASIC_TEMPLATE.yaml', 'MOC_BASIC_TEMPLATE.yaml')"
+                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE.yaml', 'MOC_STARTER_TEMPLATE.yaml')"
                   color="success"
                   variant="outline"
                   icon="i-heroicons-arrow-down-tray"
@@ -243,6 +243,8 @@
               {{ $t('resources.templates.title') }}
             </h3>
           </div>
+          
+          <!-- Templates separados por tamanho organizacional -->
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             <!-- Startup Template -->
             <UCard class="border-green-200 dark:border-green-800">
@@ -255,15 +257,15 @@
                   <p class="text-sm text-gray-600 dark:text-gray-400">5-50 funcionários</p>
                   <UBadge color="success" size="xs" class="mt-2">
                     <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    {{ $t('resources.unifiedStructure.conformity') }}
+                    Simples e Ágil
                   </UBadge>
                 </div>
               </template>
               <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                {{ $t('resources.templates.startup') }}
+                Hierarquia flat, processos leves, foco em velocidade.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_STARTUP_TEMPLATE.yaml', 'MOC_STARTUP_TEMPLATE.yaml')"
+                @click="downloadFile('/downloads/templates/MOC_STARTUP.yaml', 'MOC_STARTUP.yaml')"
                 color="success"
                 variant="outline"
                 size="sm"
@@ -286,15 +288,15 @@
                   <p class="text-sm text-gray-600 dark:text-gray-400">50-200 funcionários</p>
                   <UBadge color="info" size="xs" class="mt-2">
                     <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    {{ $t('resources.unifiedStructure.conformity') }}
+                    Tribes & Squads
                   </UBadge>
                 </div>
               </template>
               <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                {{ $t('resources.templates.scaleup') }}
+                Estrutura ágil escalada, coordenação entre times.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_SCALEUP_TEMPLATE.yaml', 'MOC_SCALEUP_TEMPLATE.yaml')"
+                @click="downloadFile('/downloads/templates/MOC_SCALEUP.yaml', 'MOC_SCALEUP.yaml')"
                 color="info"
                 variant="outline"
                 size="sm"
@@ -317,15 +319,15 @@
                   <p class="text-sm text-gray-600 dark:text-gray-400">200-1000 funcionários</p>
                   <UBadge color="primary" size="xs" class="mt-2">
                     <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    {{ $t('resources.unifiedStructure.conformity') }}
+                    Governança Formal
                   </UBadge>
                 </div>
               </template>
               <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                {{ $t('resources.templates.enterprise') }}
+                Compliance, processos formais, múltiplas divisões.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_ENTERPRISE_TEMPLATE.yaml', 'MOC_ENTERPRISE_TEMPLATE.yaml')"
+                @click="downloadFile('/downloads/templates/MOC_ENTERPRISE.yaml', 'MOC_ENTERPRISE.yaml')"
                 color="primary"
                 variant="outline"
                 size="sm"
@@ -348,15 +350,15 @@
                   <p class="text-sm text-gray-600 dark:text-gray-400">1000+ funcionários</p>
                   <UBadge color="error" size="xs" class="mt-2">
                     <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    {{ $t('resources.unifiedStructure.conformity') }}
+                    Global & Regulado
                   </UBadge>
                 </div>
               </template>
               <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                {{ $t('resources.templates.corporation') }}
+                Multi-regional, board governance, compliance total.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_CORPORATION_TEMPLATE.yaml', 'MOC_CORPORATION_TEMPLATE.yaml')"
+                @click="downloadFile('/downloads/templates/MOC_CORPORATION.yaml', 'MOC_CORPORATION.yaml')"
                 color="error"
                 variant="outline"
                 size="sm"
@@ -624,7 +626,7 @@
                 Templates básicos para criação de Units of Knowledge Interlinked (UKIs)
               </p>
               <UButton
-                @click="downloadFile('/downloads/frameworks/mef/basic-templates.zip', 'mef-basic-templates.zip')"
+                @click="downloadMatrixFile('basic-templates')"
                 color="success"
                 icon="i-heroicons-arrow-down-tray"
                 size="sm"
@@ -645,7 +647,7 @@
                 Guia passo a passo para implementar o Matrix Embedding Framework
               </p>
               <UButton
-                @click="downloadFile('/downloads/frameworks/mef/MEF_IMPLEMENTATION_GUIDE.md', 'MEF_IMPLEMENTATION_GUIDE.md')"
+                @click="downloadMatrixFile('implementation-guide-pt')"
                 color="success"
                 variant="outline"
                 icon="i-heroicons-arrow-down-tray"
@@ -679,7 +681,7 @@
                 Templates complexos com relacionamentos ontológicos e versionamento avançado
               </p>
               <UButton
-                @click="downloadFile('/downloads/frameworks/mef/advanced-templates.zip', 'mef-advanced-templates.zip')"
+                @click="downloadMatrixFile('advanced-templates')"
                 color="success"
                 icon="i-heroicons-arrow-down-tray"
                 size="sm"
@@ -700,7 +702,7 @@
                 Exemplos de implementação MEF em organizações de grande porte
               </p>
               <UButton
-                @click="downloadFile('/downloads/frameworks/mef/complex-use-cases.md', 'mef-complex-use-cases.md')"
+                @click="downloadMatrixFile('techcorp-case-study')"
                 color="success"
                 variant="outline"
                 icon="i-heroicons-arrow-down-tray"
@@ -1197,6 +1199,17 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+const { resolveDownload } = useMatrixLinks()
+
+// Função para fazer download de arquivos usando useMatrixLinks
+const downloadMatrixFile = async (key: string) => {
+  const downloadInfo = resolveDownload(key)
+  if (downloadInfo) {
+    await downloadFile(downloadInfo.url, downloadInfo.filename)
+  } else {
+    console.error(`MatrixLinks: Unknown download key "${key}"`)
+  }
+}
 
 // Função para fazer download de arquivos
 const downloadFile = async (filePath: string, fileName: string) => {

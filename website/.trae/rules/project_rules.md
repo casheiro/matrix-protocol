@@ -154,6 +154,7 @@ O **Matrix Protocol Website** é a plataforma oficial de documentação e divulg
 --mal-gradient: linear-gradient(135deg, #C0392B 0%, #f87171 100%);
 ```
 
+
 #### 🔤 Tipografia Obrigatória
 - **Títulos**: Rajdhani (Bold/Regular)
 - **Corpo**: Source Code Pro (Regular/Medium)
@@ -180,8 +181,10 @@ O **Matrix Protocol Website** é a plataforma oficial de documentação e divulg
 }
 ```
 
+
 #### 📁 Estrutura de Arquivos Obrigatória
 ```
+
 matrix-protocol-website-v2/
 ├── app/                        # Diretório principal da aplicação
 │   ├── assets/                 # CSS, imagens, fontes
@@ -211,6 +214,7 @@ matrix-protocol-website-v2/
 ├── docs/                       # Documentação técnica do projeto
 └── nuxt.config.ts              # Configuração principal
 ```
+
 
 #### ⚙️ Configurações Obrigatórias
 - **SSG**: Geração estática habilitada
@@ -245,6 +249,7 @@ matrix-protocol-website-v2/
 </style>
 ```
 
+
 **Processo obrigatório para migração de estilos:**
 1. **Identificar** todos os `@apply` no componente original
 2. **Extrair** classes Tailwind para variáveis/constantes
@@ -268,6 +273,7 @@ pnpm run test          # Testes unitários
 pnpm run build         # Build de produção
 pnpm run lighthouse    # Auditoria de performance
 ```
+
 
 #### 📊 Métricas Mínimas Obrigatórias
 - **Lighthouse Performance**: ≥90

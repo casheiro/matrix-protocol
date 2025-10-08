@@ -28,6 +28,7 @@
 Este template demonstra como uma política de governança de dados atravessa múltiplas divisões, requer diferentes níveis de autoridade, e se relaciona com diversos domínios de conhecimento.
 
 ```yaml
+
 # uki:organizacao:framework:governanca-dados-empresarial-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_ORGANIZACAO_EXEMPLO v1.0"
@@ -68,6 +69,7 @@ conteudo: |
   
   #### 2. Classificação e Catalogação
   ```yaml
+
   classificacao_dados:
     publicos:
       definicao: "Dados que podem ser compartilhados externamente"
@@ -89,6 +91,7 @@ conteudo: |
       exemplos: ["dados_pessoais", "propriedade_intelectual", "dados_clientes"]
       controles: ["criptografia_obrigatoria", "auditoria_continua", "retention_policy"]
   ```
+
   
   #### 3. Qualidade de Dados
   
@@ -102,6 +105,7 @@ conteudo: |
   
   **Métricas de Qualidade por Classificação:**
   ```yaml
+
   metas_qualidade:
     altamente_confidenciais:
       precisao: 99.9%
@@ -118,6 +122,7 @@ conteudo: |
       completude: 95.0%
       consistencia: 97.0%
   ```
+
   
   #### 4. Privacidade e Compliance
   
@@ -138,6 +143,7 @@ conteudo: |
   
   **Controles de Segurança por Classificação:**
   ```yaml
+
   controles_seguranca:
     altamente_confidenciais:
       criptografia: "AES-256 em repouso e trânsito"
@@ -151,11 +157,13 @@ conteudo: |
       auditoria: "Log de acessos críticos"
       backup: "Backup padrão com retenção 3 anos"
   ```
+
   
   ### Governança Multi-Divisional
   
   #### Estrutura de Governança
   ```yaml
+
   comite_governanca_dados:
     presidente: "Chief Data Officer"
     membros_permanentes:
@@ -176,6 +184,7 @@ conteudo: |
         - "Diretor Analytics"
         - "Gerente Compliance"
   ```
+
   
   #### Responsabilidades por Divisão
   
@@ -204,6 +213,7 @@ conteudo: |
   
   #### Métricas de Sucesso
   ```yaml
+
   kpis_governanca:
     qualidade_dados:
       meta: "98% precisão média"
@@ -221,6 +231,7 @@ conteudo: |
       meta: "50% redução time-to-insight"
       medicao: "Trimestral via survey usuários"
   ```
+
 
 # === Exemplos ===
 exemplos:
@@ -317,6 +328,7 @@ relacionamentos_emergentes:
     evidencia: "Parceiros externos requerem evidências de governança de dados"
 ```
 
+
 ---
 
 ## 🏗️ Template Multi-Domínio: Arquitetura de Segurança Zero Trust
@@ -325,6 +337,7 @@ relacionamentos_emergentes:
 Este template demonstra como uma arquitetura técnica complexa atravessa domínios de segurança, técnico e operacional, envolvendo múltiplos níveis de maturidade e tipos de conhecimento.
 
 ```yaml
+
 # uki:organizacao:arquitetura:zero-trust-security-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_ORGANIZACAO_EXEMPLO v1.0"
@@ -366,6 +379,7 @@ conteudo: |
   
   **Gerenciamento de Identidade e Acesso (IAM):**
   ```yaml
+
   componentes_iam:
     identity_provider:
       primario: "Azure Active Directory"
@@ -383,9 +397,11 @@ conteudo: |
       aprovacao_workflow: "dual_approval"
       sessoes_gravadas: "high_privilege_accounts"
   ```
+
   
   **Políticas de Acesso Condicional:**
   ```yaml
+
   politicas_condicionais:
     localizacao:
       escritorios_confiaveis: ["Sao_Paulo", "Austin", "Londres"]
@@ -405,11 +421,13 @@ conteudo: |
       score_risco_minimo: 70
       acoes_alto_risco: ["mfa_adicional", "bloquear_acesso", "notificar_admin"]
   ```
+
   
   #### 2. Segurança de Rede Zero Trust
   
   **Microsegmentação:**
   ```yaml
+
   arquitetura_rede:
     zonas_seguranca:
       dmz_externa:
@@ -440,11 +458,13 @@ conteudo: |
       device_profiling: "automatico"
       quarantine_network: "dispositivos_nao_compliantes"
   ```
+
   
   #### 3. Proteção de Endpoints
   
   **Estratégia Multi-Camadas:**
   ```yaml
+
   protecao_endpoints:
     endpoint_detection_response:
       solucao: "CrowdStrike Falcon"
@@ -463,11 +483,13 @@ conteudo: |
       compliance_scanning: "diario"
       remediation: "automatica_pre_aprovada"
   ```
+
   
   #### 4. Proteção de Dados
   
   **Classificação e Proteção:**
   ```yaml
+
   protecao_dados:
     data_loss_prevention:
       solucao: "Microsoft Purview DLP"
@@ -490,11 +512,13 @@ conteudo: |
       imutabilidade: "backup_vault_lock"
       teste_restore: "mensal_automated"
   ```
+
   
   ### Implementação por Domínios
   
   #### Domínio Técnico/Engenharia
   ```yaml
+
   implementacao_engenharia:
     infrastructure_as_code:
       ferramentas: ["Terraform", "ARM Templates", "CloudFormation"]
@@ -513,9 +537,11 @@ conteudo: |
       metrics: "Prometheus + Grafana"
       logs: "centralized_logging_elk_stack"
   ```
+
   
   #### Domínio Operacional
   ```yaml
+
   implementacao_operacoes:
     security_operations_center:
       staffing: "24x7x365"
@@ -534,9 +560,11 @@ conteudo: |
       auditing: "continuous_compliance_monitoring"
       reporting: "executive_dashboard"
   ```
+
   
   #### Domínio de Negócio/Produto
   ```yaml
+
   implementacao_produto:
     privacy_by_design:
       data_minimization: "collect_only_necessary_data"
@@ -548,11 +576,13 @@ conteudo: |
       adaptive_authentication: "friction_based_on_risk"
       transparency: "security_status_page"
   ```
+
   
   ### Governança e Compliance
   
   #### Estrutura de Governança
   ```yaml
+
   governanca_zero_trust:
     comite_seguranca:
       presidente: "CISO"
@@ -581,11 +611,13 @@ conteudo: |
         - "business_continuity: 99.9% uptime"
         - "compliance_score: 100%"
   ```
+
   
   ### Roadmap de Implementação
   
   #### Fase 1: Fundação (Meses 1-6)
   ```yaml
+
   fase_1:
     identidade:
       - "Migração para Azure AD Premium"
@@ -602,9 +634,11 @@ conteudo: |
       - "Configuração MDM dispositivos móveis"
       - "Baselines segurança padronizadas"
   ```
+
   
   #### Fase 2: Aprimoramento (Meses 7-12)
   ```yaml
+
   fase_2:
     dados:
       - "Implementação DLP abrangente"
@@ -621,9 +655,11 @@ conteudo: |
       - "Executive reporting dashboard"
       - "Regular penetration testing"
   ```
+
   
   #### Fase 3: Otimização (Meses 13-18)
   ```yaml
+
   fase_3:
     automacao:
       - "AI-powered threat detection"
@@ -635,6 +671,7 @@ conteudo: |
       - "Third-party integration security"
       - "Supply chain risk management"
   ```
+
 
 # === Exemplos Multi-Domínio ===
 exemplos:
@@ -769,6 +806,7 @@ roadmap_futuro:
     - "Seamless multi-cloud zero trust"
 ```
 
+
 ---
 
 ## 🔄 Template Cross-Cutting: Processo de Resposta a Incidentes Organizacional
@@ -777,6 +815,7 @@ roadmap_futuro:
 Este template representa o ápice da complexidade organizacional, atravessando todas as hierarquias possíveis e demonstrando relacionamentos temporais, espaciais e de autoridade.
 
 ```yaml
+
 # uki:organizacao:processo:resposta-incidentes-empresarial-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_ORGANIZACAO_EXEMPLO v1.0"
@@ -829,6 +868,7 @@ conteudo: |
   
   #### Por Domínio de Impacto
   ```yaml
+
   categorias_incidentes:
     seguranca_cibernetica:
       subcategorias:
@@ -885,9 +925,11 @@ conteudo: |
       sla_resposta: "45_minutos"
       autoridade_decisao: "diretor_comunicacoes"
   ```
+
   
   #### Por Severidade Multi-Escalar
   ```yaml
+
   niveis_severidade:
     critico:
       definicao: "Impacto severo em segurança, receita ou reputação"
@@ -922,11 +964,13 @@ conteudo: |
       ativacao_automatica: false
       comunicacao_executiva: "daily_summary"
   ```
+
   
   ### Estrutura Organizacional Multi-Hierárquica
   
   #### Comitê de Gestão de Crise (Nível Executivo)
   ```yaml
+
   comite_gestao_crise:
     presidente: "CEO"
     membros_permanentes:
@@ -949,9 +993,11 @@ conteudo: |
       - "Comunicação com conselho/acionistas"
       - "Aprovação de custos emergenciais >$500K"
   ```
+
   
   #### Equipes de Resposta Especializadas
   ```yaml
+
   equipes_resposta:
     cert_security:
       lider: "CISO"
@@ -983,11 +1029,13 @@ conteudo: |
       disponibilidade: "plantao_juridico"
       especializacao: "aspectos_legais_regulatorios"
   ```
+
   
   ### Fluxo de Processo Multi-Estados (ZOF Integrado)
   
   #### Estado 1: Detecção e Classificação
   ```yaml
+
   deteccao_classificacao:
     canais_deteccao:
       automatizados:
@@ -1013,9 +1061,11 @@ conteudo: |
       medio: "15_minutos"
       baixo: "30_minutos"
   ```
+
   
   #### Estado 2: Mobilização e Ativação
   ```yaml
+
   mobilizacao_ativacao:
     automacao_mobilizacao:
       notificacao_simultanea:
@@ -1035,9 +1085,11 @@ conteudo: |
       substitutos_automaticos: "predefined_backup_matrix"
       escalacao_indisponibilidade: "next_tier_automatic"
   ```
+
   
   #### Estado 3: Investigação e Análise (Understand - ZOF)
   ```yaml
+
   investigacao_analise:
     consulta_oraculo_conhecimento:
       bases_conhecimento:
@@ -1066,9 +1118,11 @@ conteudo: |
         - "Communication tracking"
         - "Action item recording"
   ```
+
   
   #### Estado 4: Contenção e Estabilização (Act - ZOF)
   ```yaml
+
   contencao_estabilizacao:
     acoes_contencao_rapida:
       automatizadas:
@@ -1090,9 +1144,11 @@ conteudo: |
         - "System stability restoration"
         - "Service availability improvement"
   ```
+
   
   #### Estado 5: Avaliação para Enriquecimento (EvaluateForEnrich - ZOF)
   ```yaml
+
   avaliacao_enriquecimento:
     criterios_moc_organizacionais:
       impacto_negocio:
@@ -1120,9 +1176,11 @@ conteudo: |
         - "Training materials/scenarios"
         - "Vendor evaluation criteria"
   ```
+
   
   #### Estado 6: Recuperação e Restauração
   ```yaml
+
   recuperacao_restauracao:
     fases_recuperacao:
       immediate_restoration:
@@ -1140,9 +1198,11 @@ conteudo: |
         prazo: "30_days_post_incident"
         validacao: "security_assessment"
   ```
+
   
   #### Estado 7: Revisão e Aprendizado (Review - ZOF)
   ```yaml
+
   revisao_aprendizado:
     post_incident_review:
       cronograma:
@@ -1164,9 +1224,11 @@ conteudo: |
         - "Communication evaluation"
         - "Cost/impact analysis"
   ```
+
   
   #### Estado 8: Enriquecimento Organizacional (Enrich - ZOF)
   ```yaml
+
   enriquecimento_organizacional:
     criacao_conhecimento:
       runbooks_atualizados:
@@ -1195,11 +1257,13 @@ conteudo: |
         - "Decision support systems"
         - "Integration improvements"
   ```
+
   
   ### Comunicação Multi-Stakeholder
   
   #### Matriz de Comunicação por Severidade
   ```yaml
+
   comunicacao_stakeholders:
     critico:
       timing: "imediato_0_15min"
@@ -1228,11 +1292,13 @@ conteudo: |
         - "Affected departments"
         - "Weekly executive summary"
   ```
+
   
   ### Métricas e KPIs Multi-Dimensionais
   
   #### Eficácia Operacional
   ```yaml
+
   metricas_operacionais:
     tempo_resposta:
       mttr: "Mean Time to Response"
@@ -1250,9 +1316,11 @@ conteudo: |
       escalation_accuracy: ">95%"
       stakeholder_satisfaction: ">90%"
   ```
+
   
   #### Impacto nos Negócios
   ```yaml
+
   metricas_negocio:
     financeiro:
       cost_per_incident: "total_cost/number_incidents"
@@ -1269,6 +1337,7 @@ conteudo: |
       audit_findings: "incident_related_findings"
       compliance_score: "regulatory_framework_adherence"
   ```
+
 
 # === Exemplos Cross-Cutting Complexos ===
 exemplos:
@@ -1458,6 +1527,7 @@ inovacao_response:
     market_differentiation: "superior_resilience_value_proposition"
 ```
 
+
 ---
 
 ## 📊 Análise de Padrões de Relacionamentos
@@ -1466,6 +1536,7 @@ inovacao_response:
 
 #### **Padrão 1: Cascata de Autoridade Multi-Nível**
 ```yaml
+
 cascata_autoridade:
   organizacao → divisao → tribo → squad
   exemplo: "Framework governança de dados"
@@ -1473,8 +1544,10 @@ cascata_autoridade:
   autoridades_envolvidas: [ceo, vp, diretor, gerente, tech_lead]
 ```
 
+
 #### **Padrão 2: Convergência Multi-Domínio**
 ```yaml
+
 convergencia_dominios:
   [seguranca + tecnico + operacional + negocio] → resultado_integrado
   exemplo: "Arquitetura Zero Trust"
@@ -1482,8 +1555,10 @@ convergencia_dominios:
   sincronizacao: temporal_e_funcional
 ```
 
+
 #### **Padrão 3: Evolução Temporal Controlada**
 ```yaml
+
 evolucao_temporal:
   legacy → atual → futuro
   exemplo: "Resposta a incidentes multi-generacional"
@@ -1491,14 +1566,17 @@ evolucao_temporal:
   governanca: versionamento_semantico_organizacional
 ```
 
+
 #### **Padrão 4: Compliance Regulatório Distributivo**
 ```yaml
+
 compliance_distributivo:
   regulatorio_global → implementacao_local
   exemplo: "LGPD + SOX + ISO27001 integrados"
   relacionamentos_tipo: [atende, implementa, auditado_por]
   escopo: multi_jurisdicional
 ```
+
 
 ### Benefícios dos Templates Multi-Hierárquicos
 

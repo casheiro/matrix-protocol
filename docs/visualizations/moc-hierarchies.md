@@ -4,6 +4,7 @@
 ## Structure of the Four MOC Hierarchies
 
 ```mermaid
+
 graph TB
     subgraph "MOC - Matrix Ontology Catalog"
         subgraph "1️⃣ SCOPE Hierarchy"
@@ -91,9 +92,11 @@ graph TB
     class UKI integration
 ```
 
+
 ## MOC Authority Validation Service
 
 ```mermaid
+
 flowchart TB
     subgraph "🔐 MOC Authority Validation Service"
         Input[["📥 Input Parameters<br/>• user_moc_context<br/>• operation<br/>• scope_ref<br/>• domain_ref<br/>• maturity_ref"]]
@@ -111,6 +114,7 @@ flowchart TB
         Service -.->|consults| MOC_Rules
     end
 ```
+
 
 ## Description
 
