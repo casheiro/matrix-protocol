@@ -29,7 +29,6 @@ public/downloads/frameworks/mef/*.zip
 public/downloads/guides/
 public/downloads/quick-start/
 public/downloads/templates/
-content/
 
 # Sync metadata
 public/downloads/sync-metadata.json

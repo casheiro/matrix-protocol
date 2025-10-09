@@ -54,6 +54,9 @@
       "examples": "Exemplos Práticos",
       "reference": "Material de Referência"
     },
+    "protocol": {
+      "description": "Especificação completa do Matrix Protocol com arquitetura, regras normativas e exemplos práticos"
+    },
     "notFound": {
       "title": "Conteúdo não encontrado",
       "description": "O conteúdo solicitado não foi encontrado na documentação.",

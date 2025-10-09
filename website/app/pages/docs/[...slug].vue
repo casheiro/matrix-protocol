@@ -72,7 +72,7 @@ const { getDocsNavigation } = useDocsNavigation()
 const contentPath = computed(() => {
   const locale = $i18n.locale.value
   const slug = Array.isArray(route.params.slug) ? route.params.slug.join('/') : (route.params.slug || 'index')
-  return `docs/${slug}`
+  return `${locale}/docs/${slug}`
 })
 
 // Buscar conteúdo da documentação
@@ -81,24 +81,24 @@ const { data: docsContent, error: contentError } = await useAsyncData(
   async () => {
     try {
       const locale = $i18n.locale.value
-      console.log('🔍 Loading docs content:', `/${locale}/${contentPath.value}`)
+      console.log('🔍 Loading docs content:', `/${contentPath.value}`)
       
       // Tentar múltiplos formatos de path
-      let content = await queryCollection(locale).path(`/${locale}/${contentPath.value}`).first()
+      let content = await queryCollection(locale).path(`/${contentPath.value}`).first()
       
       if (!content) {
         console.log('🔄 Trying with .md extension...')
-        content = await queryCollection(locale).path(`/${locale}/${contentPath.value}.md`).first()
+        content = await queryCollection(locale).path(`/${contentPath.value}.md`).first()
       }
       
       if (!content) {
         console.log('🔄 Trying with /index...')
-        content = await queryCollection(locale).path(`/${locale}/${contentPath.value}/index`).first()
+        content = await queryCollection(locale).path(`/${contentPath.value}/index`).first()
       }
       
       if (!content) {
         console.log('🔄 Trying direct index.md...')
-        content = await queryCollection(locale).path(`/${locale}/${contentPath.value}/index.md`).first()
+        content = await queryCollection(locale).path(`/${contentPath.value}/index.md`).first()
       }
       
       // Debug: Listar todo o conteúdo disponível

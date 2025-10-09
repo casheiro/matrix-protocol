@@ -54,6 +54,9 @@
       "examples": "Practical Examples",
       "reference": "Reference Material"
     },
+    "protocol": {
+      "description": "Complete Matrix Protocol specification with architecture, normative rules and practical examples"
+    },
     "notFound": {
       "title": "Content not found",
       "description": "The requested content was not found in the documentation.",

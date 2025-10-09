@@ -1,0 +1,15 @@
+{
+  "sync_date": "2025-10-08T09:25:17-03:00",
+  "source_dir": "../docs",
+  "total_files": 72,
+  "languages": {
+    "pt": 36,
+    "en": 36
+  },
+  "structure": {
+    "specifications": true,
+    "guides": true, 
+    "manual": true,
+    "examples": true
+  }
+}
