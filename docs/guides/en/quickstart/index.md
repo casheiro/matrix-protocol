@@ -29,10 +29,10 @@ Determine your organization size and use the appropriate template:
 **How to do it:**
 1. Download the Basic MOC Template (universal for any size) from `/templates/moc/basic-template.yaml`
    - **OR** choose a specific template for your size:
-     - 🚀 [Startup (5-50)](/templates/moc/startup.yaml)
-     - 📈 [Scale-up (50-200)](/templates/moc/scaleup.yaml)
-     - 🏢 [Enterprise (200-1000)](/templates/moc/enterprise.yaml)
-     - 🏛️ [Corporation (1000+)](/templates/moc/corporation.yaml)
+     - 🚀 Startup (5-50)
+     - 📈 Scale-up (50-200)
+     - 🏢 Enterprise (200-1000)
+     - 🏛️ Corporation (1000+)
 2. Customize the chosen template for your organization
 3. Replace `[YOUR_ORGANIZATION_NAME]` with your organization's name
 
@@ -160,18 +160,18 @@ relationships:
 ## 🛠️ Essential Resources
 
 ### **Immediate Downloads**
-- 📋 [Basic MOC Template (Universal)](/templates/moc/basic-template.yaml) - Use today
+- 📋 Basic MOC Template (Universal) - Use today
 - 🎯 **Specialized Templates by Size:**
-  - 🚀 [Startup (5-50)](/templates/moc/startup.yaml)
-  - 📈 [Scale-up (50-200)](/templates/moc/scaleup.yaml)
-  - 🏢 [Enterprise (200-1000)](/templates/moc/enterprise.yaml)
-  - 🏛️ [Corporation (1000+)](/templates/moc/corporation.yaml)
+  - 🚀 Startup (5-50)
+  - 📈 Scale-up (50-200)
+  - 🏢 Enterprise (200-1000)
+  - 🏛️ Corporation (1000+)
 - 📖 [Complete Manual](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md) - 4,600+ lines, 15 chapters
 - ✅ [Validation Checklist](/manual/tools/validation-checklists.md) - Avoid common mistakes
 - 📊 [TechCorp Case](/manual/reference/techcorp-case-study-en.md) - Illustrative example
 
 ### **Ready Templates**
-- 🏢 [Templates by Organization Size](/templates/moc/) - Complete directory structure
+- 🏢 Templates by Organization Size - Complete directory structure
 - 🔧 [Multi-hierarchical UKI Templates](/templates/uki/) - Complete UKI templates
 - 📋 [Detailed Implementation Phases](/manual/templates/IMPLEMENTATION_PHASES_DETAILED.md)
 
@@ -179,11 +179,11 @@ relationships:
 
 | Size | Employees | Template | Complexity | When to Use |
 |------|-----------|----------|------------|-------------|
-| **Universal** | 5-1000+ | [basic-template.yaml](/templates/moc/basic-template.yaml) | 🟢 Basic | Quick start, POC |
-| **Startup** | 5-50 | [startup.yaml](/templates/moc/startup.yaml) | 🟢 Low | Agility, MVP, rapid growth |
-| **Scale-up** | 50-200 | [scaleup.yaml](/templates/moc/scaleup.yaml) | 🟡 Medium | Structuring, departments |
-| **Enterprise** | 200-1000 | [enterprise.yaml](/templates/moc/enterprise.yaml) | 🔴 High | Governance, compliance |
-| **Corporation** | 1000+ | [corporation.yaml](/templates/moc/corporation.yaml) | 🔴 Maximum | Global, regulatory |
+| **Universal** | 5-1000+ | basic-template.yaml | 🟢 Basic | Quick start, POC |
+| **Startup** | 5-50 | startup.yaml | 🟢 Low | Agility, MVP, rapid growth |
+| **Scale-up** | 50-200 | scaleup.yaml | 🟡 Medium | Structuring, departments |
+| **Enterprise** | 200-1000 | enterprise.yaml | 🔴 High | Governance, compliance |
+| **Corporation** | 1000+ | corporation.yaml | 🔴 Maximum | Global, regulatory |
 
 ---
 

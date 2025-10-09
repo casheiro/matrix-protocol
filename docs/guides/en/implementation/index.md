@@ -58,8 +58,8 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
    - Arbitration policies definition
 
 #### Essential Resources:
-- [Basic MOC Template](/templates/moc/basic-template.yaml) (universal)
-- [Specialized Templates](/templates/moc/) by organization size
+- Basic MOC Template (universal)
+- Specialized Templates by organization size
 - [Validation Checklist](/manual/tools/validation-checklists.md)
 
 ---
@@ -239,8 +239,8 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 - **Part V**: Integration and Compliance (Chapters 13-15)
 
 ### **Ready Templates**
-- 📋 [Basic MOC Template](/templates/moc/basic-template.yaml) (universal)
-- 🎯 [Specialized Templates](/templates/moc/): Startup, Scale-up, Enterprise, Corporation
+- 📋 Basic MOC Template (universal)
+- 🎯 Specialized Templates: Startup, Scale-up, Enterprise, Corporation
 - 🔧 [Multi-hierarchical UKI Templates](/templates/uki/)
 - 📋 [Detailed Implementation Phases](/manual/templates/IMPLEMENTATION_PHASES_DETAILED.md)
 
@@ -262,8 +262,8 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 
 ### **If You Want to Start Today**
 1. 🚀 [Quick Start Guide](QUICK_START.md) - 2-4 hours
-2. 📋 [Basic MOC Template](/templates/moc/basic-template.yaml) - Universal for any size
-3. 🎯 [Specialized Templates](/templates/moc/): Choose based on your organization size
+2. 📋 Basic MOC Template - Universal for any size
+3. 🎯 Specialized Templates: Choose based on your organization size
 4. ✅ [First UKI](QUICK_START.md) - 30-60 minutes
 
 ### **For Detailed Study**

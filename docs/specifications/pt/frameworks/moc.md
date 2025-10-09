@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MOC_MATRIX_ONTOLOGY_CATALOG.md](MOC_MATRIX_ONTOLOGY_CATALOG.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MOC_MATRIX_ONTOLOGY_CATALOG.md.
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém EXEMPLOS ILUSTRATIVOS (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. Cada organização define suas próprias hierarquias conforme suas necessidades específicas. Exemplos servem apenas como referência conceitual.
 
@@ -439,7 +439,7 @@ O MOC atua como a base de governança que permite customização organizacional 
 - **MEP (Matrix Epistemic Principle)**: Implementa contexto organizacional para autoridade derivada; fornece base taxonômica para estratificação epistemológica; permite flexibilidade local com coerência global
 - **MAL (Matrix Arbiter Layer)**: Consome políticas de arbitragem MOC para configuração de regras de precedência; aplica hierarquias de autoridade MOC para avaliação P1; usa regras de especificidade de escopo MOC para avaliação P2; respeita timeout MOC e políticas de tipo de conflito
 
-Veja [Diagrama de Integração do Protocolo Matrix](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) para fluxos de validação e governança MOC.
+Veja Diagrama de Integração do Protocolo Matrix para fluxos de validação e governança MOC.
 
 ---
 
@@ -554,9 +554,9 @@ governance:
 
 ## 8. Referências Cruzadas
 
-- [Protocolo Matrix — Especificação Principal](MATRIX_PROTOCOL.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- Protocolo Matrix — Especificação Principal  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

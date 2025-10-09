@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
-    './app/modules/link-transformer', // Módulo para transformar links - DEVE vir ANTES do content
+    // './app/modules/link-transformer', // REMOVIDO - transformação via sync script
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/i18n',

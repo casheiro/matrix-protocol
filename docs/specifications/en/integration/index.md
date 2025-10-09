@@ -466,12 +466,12 @@ zof_workflow_modification:
 
 ## 6. Cross-References
 
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  
+- Matrix Protocol Glossary
+- MAL — Matrix Arbiter Layer  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese

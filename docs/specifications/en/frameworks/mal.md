@@ -143,7 +143,7 @@ MAL operates as the arbitration nexus integrating decision-making across all Mat
 - **MOC (Matrix Ontology Catalog)**: Provides arbitration policies and precedence rule configuration; supplies authority hierarchy for P1 evaluation; defines scope specificity rules for P2 evaluation
 - **MEP (Matrix Epistemic Principle)**: Guides epistemic rationale generation; ensures derived authority principles in decision explanations; mandates explainability in arbitration outcomes
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for MAL arbitration workflow patterns.
+See Matrix Protocol Integration Diagram for MAL arbitration workflow patterns.
 
 ---
 
@@ -500,13 +500,13 @@ decision_record:
 
 ## 9. Cross-References
 
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram  
+- Matrix Protocol Glossary  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  

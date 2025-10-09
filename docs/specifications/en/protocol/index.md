@@ -111,7 +111,7 @@ The Matrix Protocol achieves seamless integration through three interdependent l
 - **MEP (Matrix Epistemic Principle)**: Establishes epistemological foundations ensuring derived authority, responsible promotion, and mandatory explainability across all framework operations; guides MAL epistemic rationale
 - **MAL (Matrix Arbiter Layer)**: Provides deterministic conflict and concurrency arbitration when local governance fails; invoked by ZOF on H1/H2/H3 conflicts; persisted by MEF; explained by OIF; configured by MOC; aligned with MEP
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for complete three-layer integration visualization.
+See Matrix Protocol Integration Diagram for complete three-layer integration visualization.
 <!-- For interactive diagrams and visualizations, see https://matrix-protocol.org/integration -->
 
 ---
@@ -334,18 +334,18 @@ The next step **can only be taken by you**.
 ## 8. Cross-References
 
 ### Core Specifications
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) <!-- Interactive version: https://matrix-protocol.org/integration -->
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md) <!-- Interactive version: https://matrix-protocol.org/glossary -->
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
+- Matrix Protocol Integration Diagram <!-- Interactive version: https://matrix-protocol.org/integration -->
+- Matrix Protocol Glossary <!-- Interactive version: https://matrix-protocol.org/glossary -->
+- Matrix Protocol Integration Diagram — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
+- Matrix Protocol Glossary — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
 
 ### Framework Specifications
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef -->
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md) <!-- Interactive version: https://matrix-protocol.org/mep -->
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
+- MEF — Matrix Embedding Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/mef -->
+- ZOF — Zion Orchestration Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
+- OIF — Operator Intelligence Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
+- MOC — Matrix Ontology Catalog <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
+- MEP — Matrix Epistemic Principle <!-- Interactive version: https://matrix-protocol.org/mep -->
+- MAL — Matrix Arbiter Layer <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
 - [Ontology MEF Support](Ontology_MEF_Support.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
 
 ### Practical Resources
@@ -355,7 +355,7 @@ The next step **can only be taken by you**.
 
 ### Examples and Templates
 - [Knowledge Comparison Examples](../examples/knowledge-comparison/) <!-- Download examples: https://matrix-protocol.org/downloads/examples -->
-- [MOC Templates](./templates/moc/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
+- MOC Templates <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
 - [UKI Templates](./templates/uki/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
 
 ### Visualizations

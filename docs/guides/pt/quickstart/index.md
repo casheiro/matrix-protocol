@@ -29,10 +29,10 @@ Determine o tamanho da sua organização e use o template apropriado:
 **Como fazer:**
 1. Baixe o Template MOC Básico (universal para qualquer tamanho) em `/templates/moc/basic-template.yaml`
    - **OU** escolha um template específico para seu tamanho:
-     - 🚀 [Startup (5-50)](/templates/moc/startup.yaml)
-     - 📈 [Scale-up (50-200)](/templates/moc/scaleup.yaml)
-     - 🏢 [Enterprise (200-1000)](/templates/moc/enterprise.yaml)
-     - 🏛️ [Corporation (1000+)](/templates/moc/corporation.yaml)
+     - 🚀 Startup (5-50)
+     - 📈 Scale-up (50-200)
+     - 🏢 Enterprise (200-1000)
+     - 🏛️ Corporation (1000+)
 2. Customize o template escolhido para sua organização
 3. Substitua `[NOME_DA_SUA_ORGANIZACAO]` pelo nome da sua organização
 
@@ -160,18 +160,18 @@ relationships:
 ## 🛠️ Recursos Essenciais
 
 ### **Downloads Imediatos**
-- 📋 [Template MOC Básico (Universal)](/templates/moc/basic-template.yaml) - Use hoje
+- 📋 Template MOC Básico (Universal) - Use hoje
 - 🎯 **Templates Especializados por Tamanho:**
-  - 🚀 [Startup (5-50)](/templates/moc/startup.yaml)
-  - 📈 [Scale-up (50-200)](/templates/moc/scaleup.yaml)
-  - 🏢 [Enterprise (200-1000)](/templates/moc/enterprise.yaml)
-  - 🏛️ [Corporation (1000+)](/templates/moc/corporation.yaml)
+  - 🚀 Startup (5-50)
+  - 📈 Scale-up (50-200)
+  - 🏢 Enterprise (200-1000)
+  - 🏛️ Corporation (1000+)
 - 📖 [Manual Completo](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md) - 4.600+ linhas, 15 capítulos
 - ✅ [Checklist de Validação](/manual/tools/validation-checklists.md) - Evite erros comuns
 - 📊 [Caso TechCorp](/manual/reference/techcorp-case-study-pt.md) - Exemplo ilustrativo
 
 ### **Templates Prontos**
-- 🏢 [Templates por Tamanho Organizacional](/templates/moc/) - Estrutura completa de diretórios
+- 🏢 Templates por Tamanho Organizacional - Estrutura completa de diretórios
 - 🔧 [Templates UKI Multi-hierárquicos](/templates/uki/) - Templates UKI completos
 - 📋 [Fases de Implementação Detalhadas](/manual/templates/IMPLEMENTATION_PHASES_DETAILED.md)
 
@@ -179,11 +179,11 @@ relationships:
 
 | Tamanho | Funcionários | Template | Complexidade | Quando Usar |
 |---------|--------------|----------|-------------|-------------|
-| **Universal** | 5-1000+ | [basic-template.yaml](/templates/moc/basic-template.yaml) | 🟢 Básico | Início rápido, POC |
-| **Startup** | 5-50 | [startup.yaml](/templates/moc/startup.yaml) | 🟢 Baixo | Agilidade, MVP, crescimento rápido |
-| **Scale-up** | 50-200 | [scaleup.yaml](/templates/moc/scaleup.yaml) | 🟡 Médio | Estruturação, departamentos |
-| **Enterprise** | 200-1000 | [enterprise.yaml](/templates/moc/enterprise.yaml) | 🔴 Alto | Governança, compliance |
-| **Corporation** | 1000+ | [corporation.yaml](/templates/moc/corporation.yaml) | 🔴 Máximo | Global, regulatório |
+| **Universal** | 5-1000+ | basic-template.yaml | 🟢 Básico | Início rápido, POC |
+| **Startup** | 5-50 | startup.yaml | 🟢 Baixo | Agilidade, MVP, crescimento rápido |
+| **Scale-up** | 50-200 | scaleup.yaml | 🟡 Médio | Estruturação, departamentos |
+| **Enterprise** | 200-1000 | enterprise.yaml | 🔴 Alto | Governança, compliance |
+| **Corporation** | 1000+ | corporation.yaml | 🔴 Máximo | Global, regulatório |
 
 ---
 

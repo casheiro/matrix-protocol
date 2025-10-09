@@ -398,13 +398,13 @@ These terms are used by multiple frameworks and have unified definitions:
 
 ## 6. Cross-References
 
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)
+- Matrix Protocol Integration Diagram  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese
+- MAL — Matrix Arbiter Layer

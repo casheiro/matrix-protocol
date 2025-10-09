@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md.
 
 > "A mente que se abre a uma nova ideia jamais voltará ao seu tamanho original." — Albert Einstein
 
@@ -543,8 +543,8 @@ derived_authority_implementation:
 
 ## 8. Referências Cruzadas
 
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

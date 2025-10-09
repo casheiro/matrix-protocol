@@ -58,8 +58,8 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
    - Definição de políticas de arbitragem
 
 #### Recursos Essenciais:
-- [Template MOC Básico](/templates/moc/basic-template.yaml) (universal)
-- [Templates Especializados](/templates/moc/) por tamanho organizacional
+- Template MOC Básico (universal)
+- Templates Especializados por tamanho organizacional
 - [Checklist de Validação](/manual/tools/validation-checklists.md)
 
 ---
@@ -239,8 +239,8 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 - **Parte V**: Integração e Compliance (Capítulos 13-15)
 
 ### **Templates Prontos**
-- 📋 [Template MOC Básico](/templates/moc/basic-template.yaml) (universal)
-- 🎯 [Templates Especializados](/templates/moc/): Startup, Scale-up, Enterprise, Corporation
+- 📋 Template MOC Básico (universal)
+- 🎯 Templates Especializados: Startup, Scale-up, Enterprise, Corporation
 - 🔧 [Templates UKI Multi-hierárquicos](/templates/uki/)
 - 📋 [Fases de Implementação Detalhadas](/manual/templates/IMPLEMENTATION_PHASES_DETAILED.md)
 
@@ -262,8 +262,8 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 
 ### **Se Você Quer Começar Hoje**
 1. 🚀 [Guia de Início Rápido](QUICK_START_PT.md) - 2-4 horas
-2. 📋 [Template MOC Básico](/templates/moc/basic-template.yaml) - Universal para qualquer tamanho
-3. 🎯 [Templates Especializados](/templates/moc/): Escolha baseado no tamanho da sua organização
+2. 📋 Template MOC Básico - Universal para qualquer tamanho
+3. 🎯 Templates Especializados: Escolha baseado no tamanho da sua organização
 4. ✅ [Primeiro UKI](QUICK_START_PT.md) - 30-60 minutos
 
 ### **Para Estudo Detalhado**

@@ -248,7 +248,7 @@ example_organizational_vocabulary:
 
 ## 8. Referências Cruzadas
 
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
+- MEF — Matrix Embedding Framework  
+- MOC — Matrix Ontology Catalog  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  

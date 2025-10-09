@@ -268,7 +268,7 @@ ZOF orchestrates workflows that span all Matrix Protocol frameworks through cano
 - **MEP (Matrix Epistemic Principle)**: Guides epistemological justification in EvaluateForEnrich; ensures derived authority principles in enrichment decisions; mandates explainability through signal recording; provides foundation for MAL epistemic rationale
 - **MAL (Matrix Arbiter Layer)**: Invoked by ZOF when EvaluateForEnrich detects unresolvable conflicts (H1/H2/H3); provides deterministic arbitration decisions; returns actions for ZOF execution (gate_enrich, deprecate, partition_scope)
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for detailed workflow integration patterns.
+See Matrix Protocol Integration Diagram for detailed workflow integration patterns.
 
 ---
 
@@ -727,13 +727,13 @@ matrix_component_integration:
 
 ## 8. Cross-References
 
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram  
+- Matrix Protocol Glossary  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese  
+- MEF — Matrix Embedding Framework  
+- MOC — Matrix Ontology Catalog  
+- OIF — Operator Intelligence Framework  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

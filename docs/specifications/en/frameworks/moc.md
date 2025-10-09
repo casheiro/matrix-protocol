@@ -460,7 +460,7 @@ MOC serves as the governance foundation that enables organizational customizatio
 - **MEP (Matrix Epistemic Principle)**: Implements organizational context for derived authority; provides taxonomic foundation for epistemological stratification; enables local flexibility with global coherence
 - **MAL (Matrix Arbiter Layer)**: Consumes MOC arbitration policies for precedence rule configuration; applies MOC authority hierarchies for P1 evaluation; uses MOC scope specificity rules for P2 evaluation; respects MOC timeout and conflict type policies
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for MOC validation and governance flows.
+See Matrix Protocol Integration Diagram for MOC validation and governance flows.
 
 ---
 
@@ -685,13 +685,13 @@ change_process:
 
 ## 8. Cross-References
 
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram  
+- Matrix Protocol Glossary  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

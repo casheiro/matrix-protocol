@@ -346,7 +346,7 @@ OIF intelligence archetypes bridge human-AI interaction across all Matrix Protoc
 - **MEP (Matrix Epistemic Principle)**: Implements derived authority principles in archetype responses; ensures epistemological humility through contextual explanations; mandates explainability in all intelligence operations; guides arbitration explanation rationale
 - **MAL (Matrix Arbiter Layer)**: Provides Decision Records that OIF MUST explain to users via Arbitration Explanation Templates; OIF maintains epistemic humility by not overriding MAL determinations; ensures arbitration transparency
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for intelligence archetype interaction patterns.
+See Matrix Protocol Integration Diagram for intelligence archetype interaction patterns.
 
 ---
 
@@ -787,13 +787,13 @@ capability_composition_rules:
 
 ## 8. Cross-References
 
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram  
+- Matrix Protocol Glossary  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

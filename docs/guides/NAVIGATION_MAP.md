@@ -85,7 +85,7 @@ See [MOC Example](./examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml)
 See [Quick Start Guide](./docs/guides/QUICK_START.md)
 
 # Template references
-See [MOC Templates](./templates/moc/startup.yaml)
+See MOC Templates
 
 # Visualization references
 See [MAL Flow Diagram](./visualizations/mal-arbitration-flow.md)

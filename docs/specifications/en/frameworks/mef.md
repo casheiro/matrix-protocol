@@ -148,7 +148,7 @@ MEF integrates with all Matrix Protocol frameworks through structured knowledge 
 - **OIF (Operator Intelligence Framework)**: Uses UKIs to feed Knowledge Agent semantic search and relationship mapping; processes UKI metadata for contextual filtering and explanation generation; accesses Decision Record data for arbitration explanations
 - **MAL (Matrix Arbiter Layer)**: Relies on MEF to persist immutable Decision Records as audit trail; MEF maintains arbitration outcome relationships (conflicts_with, supersedes, partitioned_by_scope); provides evidence density data for MAL precedence evaluation
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for complete end-to-end integration flows.
+See Matrix Protocol Integration Diagram for complete end-to-end integration flows.
 <!-- For interactive diagrams, see https://matrix-protocol.org/integration -->
 
 ---
@@ -362,18 +362,18 @@ knowledge_sources:
 ## 9. Cross-References
 
 ### Framework Dependencies
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md) <!-- Interactive version: https://matrix-protocol.org/protocol -->
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md) <!-- Interactive version: https://matrix-protocol.org/mep -->
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
+- Matrix Protocol — Main Specification <!-- Interactive version: https://matrix-protocol.org/protocol -->
+- MOC — Matrix Ontology Catalog <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
+- MEP — Matrix Epistemic Principle <!-- Interactive version: https://matrix-protocol.org/mep -->
+- ZOF — Zion Orchestration Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
+- OIF — Operator Intelligence Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
+- MAL — Matrix Arbiter Layer <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
 
 ### Supporting Documents
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) <!-- Interactive version: https://matrix-protocol.org/integration -->
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md) <!-- Interactive version: https://matrix-protocol.org/glossary -->
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md) <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
+- Matrix Protocol Integration Diagram <!-- Interactive version: https://matrix-protocol.org/integration -->
+- Matrix Protocol Glossary <!-- Interactive version: https://matrix-protocol.org/glossary -->
+- Matrix Protocol Integration Diagram — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
+- Matrix Protocol Glossary — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
 
 ### Examples and Templates
 - [MOC Squad Payments Example](../examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml) <!-- Download: https://matrix-protocol.org/downloads/examples/moc-example -->

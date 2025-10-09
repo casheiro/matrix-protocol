@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MEP_MATRIX_EPISTEMIC_PRINCIPLE.md](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MEP_MATRIX_EPISTEMIC_PRINCIPLE.md.
 
 > 📜 "O conhecimento é maleável; a autoridade é derivada; a explicabilidade é mandatória."
 
@@ -187,7 +187,7 @@ OIF comunica: Feedback claro com base epistemológica ao usuário
 
 ## 8. Referências Cruzadas
 
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  

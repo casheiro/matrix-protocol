@@ -6,6 +6,7 @@
     "frameworksOverviewDescription": "Complete frameworks architecture",
     "overviewBadge": "Overview", 
     "protocol": "Documentation",
+    "manual": "Manual",
     "resources": "Resources",
     "community": "Community",
     "homeLink": "Go to homepage",
@@ -358,6 +359,7 @@
     "relatedLinks": "Related Links",
     "learnMore": "Learn More",
     "getStarted": "Get Started",
+    "readMore": "Read More",
     "documentation": "View Documentation",
     "exploreFrameworks": "Explore Frameworks", 
     "github": "GitHub",
@@ -536,6 +538,47 @@
       "frameworks": "MEF, ZOF, OIF, MOC, MAL, Matrix Embedding Framework, Zion Orchestration Framework, Operator Intelligence Framework, Matrix Ontology Catalog, Matrix Arbiter Layer"
     },
     "author": "Casheiro"
+  },
+  "manual": {
+    "title": "Matrix Protocol Manual",
+    "description": "Complete documentation and resources for implementing Matrix Protocol in your organization",
+    "sections": {
+      "implementation": {
+        "title": "Implementation Guide",
+        "description": "Complete technical manual with over 4,600 lines covering all implementation aspects"
+      },
+      "templates": {
+        "title": "Templates and Structures",
+        "description": "MOC and UKI templates organized by enterprise size and specific use cases"
+      },
+      "tools": {
+        "title": "Tools and Checklists",
+        "description": "Practical verification lists and tools for implementation validation"
+      },
+      "examples": {
+        "title": "Examples and Case Studies",
+        "description": "Real implementations, organizational cases and practical usage examples"
+      },
+      "reference": {
+        "title": "Reference Material",
+        "description": "Detailed case studies and support material for implementation"
+      },
+      "quickstart": {
+        "title": "Quick Start",
+        "description": "Implement Matrix Protocol in 3 simple steps in 2-4 hours"
+      }
+    },
+    "download": {
+      "title": "Downloads",
+      "description": "Access complete guides and templates for download",
+      "complete": "Download Complete Manual",
+      "resources": "View All Resources"
+    },
+    "notFound": {
+      "title": "Content not found",
+      "description": "The requested page was not found or is still under development.",
+      "backToManual": "Back to Manual"
+    }
   },
   "footer": {
     "description": "Comprehensive framework for human-AI collaboration",

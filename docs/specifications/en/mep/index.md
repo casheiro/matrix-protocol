@@ -133,7 +133,7 @@ MEP provides the epistemological foundation that guides all framework operations
 - **OIF (Operator Intelligence Framework)**: Implements derived authority in archetype responses; provides mandatory explainability interface; ensures epistemological humility through contextual explanations
 - **MOC (Matrix Ontology Catalog)**: Provides organizational context foundation for derived authority; enables local taxonomic flexibility while maintaining epistemological coherence
 
-See [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) for epistemological principle application flows.
+See Matrix Protocol Integration Diagram for epistemological principle application flows.
 
 ---
 
@@ -190,12 +190,12 @@ OIF communicates: Clear feedback with epistemological basis to user
 
 ## 8. Cross-References
 
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md)  
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md)  
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md)  
-- [Matrix Protocol Integration Diagram — Portuguese](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [Matrix Protocol Glossary — Portuguese](MATRIX_PROTOCOL_GLOSSARY_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
+- Matrix Protocol — Main Specification  
+- Matrix Protocol Integration Diagram  
+- Matrix Protocol Glossary  
+- Matrix Protocol Integration Diagram — Portuguese  
+- Matrix Protocol Glossary — Portuguese  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  

@@ -39,9 +39,9 @@ See [MOC Squad Payments Example](./examples/knowledge-comparison/MOC_SQUAD_PAYME
 See [UKI Examples](./examples/knowledge-comparison/structured/)
 
 # Templates references
-See [MOC Templates](./templates/moc/)
+See MOC Templates
 See [UKI Templates](./templates/uki/)
-See [Startup MOC Template](./templates/moc/startup.yaml)
+See Startup MOC Template
 
 # Visualizations references
 See [ZOF Canonical States](./visualizations/zof-canonical-states.md)
@@ -95,13 +95,13 @@ See [English MEF](./MEF_MATRIX_EMBEDDING_FRAMEWORK.md)
 ## 8. Cross-References
 
 ### Framework Dependencies
-- [Matrix Protocol — Main Specification](MATRIX_PROTOCOL.md) <!-- Interactive version: https://matrix-protocol.org/protocol -->
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md) <!-- Interactive version: https://matrix-protocol.org/mep -->
+- Matrix Protocol — Main Specification <!-- Interactive version: https://matrix-protocol.org/protocol -->
+- MOC — Matrix Ontology Catalog <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
+- MEP — Matrix Epistemic Principle <!-- Interactive version: https://matrix-protocol.org/mep -->
 
 ### Supporting Documents
-- [Matrix Protocol Integration Diagram](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md) <!-- Interactive version: https://matrix-protocol.org/integration -->
-- [Matrix Protocol Glossary](MATRIX_PROTOCOL_GLOSSARY.md) <!-- Interactive version: https://matrix-protocol.org/glossary -->
+- Matrix Protocol Integration Diagram <!-- Interactive version: https://matrix-protocol.org/integration -->
+- Matrix Protocol Glossary <!-- Interactive version: https://matrix-protocol.org/glossary -->
 
 ### Examples and Templates
 - [MOC Examples](./examples/knowledge-comparison/) <!-- Download: https://matrix-protocol.org/downloads/examples -->
@@ -188,7 +188,7 @@ Explore [examples directory](https://github.com/user/matrix-protocol/tree/main/e
 #### Template and Example References
 ```markdown
 # Direct file links
-Download [MOC startup template](https://github.com/user/matrix-protocol/blob/main/templates/moc/startup.yaml)
+Download MOC startup template
 View [UKI example](https://github.com/user/matrix-protocol/blob/main/examples/knowledge-comparison/structured/business-rules/uki-pay-discount-logic-001.yaml)
 ```
 

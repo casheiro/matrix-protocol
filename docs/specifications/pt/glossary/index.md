@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [MATRIX_PROTOCOL_GLOSSARY.md](MATRIX_PROTOCOL_GLOSSARY.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MATRIX_PROTOCOL_GLOSSARY.md.
 
 > 📚 "Precisão na linguagem cria precisão no pensamento — e precisão no pensamento cria precisão na implementação."
 
@@ -380,10 +380,10 @@ Estes termos são utilizados por múltiplos frameworks e possuem definições un
 
 ## 6. Referências Cruzadas
 
-- [Diagrama de Integração do Protocolo Matrix](MATRIX_PROTOCOL_INTEGRATION_DIAGRAM_PT.md)  
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [ZOF — Zion Orchestration Framework](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [Protocolo Matrix — Especificação Principal](MATRIX_PROTOCOL.md)
+- Diagrama de Integração do Protocolo Matrix  
+- MEF — Matrix Embedding Framework  
+- ZOF — Zion Orchestration Framework  
+- OIF — Operator Intelligence Framework  
+- MOC — Matrix Ontology Catalog  
+- MEP — Matrix Epistemic Principle  
+- Protocolo Matrix — Especificação Principal

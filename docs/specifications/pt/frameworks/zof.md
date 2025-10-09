@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é ZOF_ZION_ORCHESTRATION_FRAMEWORK.md.
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém EXEMPLOS ILUSTRATIVOS (como `strategy`, `operations`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
 
@@ -418,8 +418,8 @@ benefits:
 
 ## 8. Referências Cruzadas
 
-- [MEF — Matrix Embedding Framework](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)  
-- [MOC — Matrix Ontology Catalog](MOC_MATRIX_ONTOLOGY_CATALOG.md)  
-- [OIF — Operator Intelligence Framework](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)  
-- [MEP — Matrix Epistemic Principle](MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)  
-- [MAL — Matrix Arbiter Layer](MAL_MATRIX_ARBITER_LAYER.md)  
+- MEF — Matrix Embedding Framework  
+- MOC — Matrix Ontology Catalog  
+- OIF — Operator Intelligence Framework  
+- MEP — Matrix Epistemic Principle  
+- MAL — Matrix Arbiter Layer  

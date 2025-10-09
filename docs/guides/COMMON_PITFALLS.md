@@ -291,7 +291,7 @@ Phase 3: Legacy deprecation (3 months)
 - Adoption metrics tracking
 
 ### **Templates and Examples**
-- [Organization-specific MOC templates](/templates/moc/)
+- Organization-specific MOC templates
 - [UKI structure templates](/templates/uki/)
 - [Real implementation examples](../examples/knowledge-comparison/)
 

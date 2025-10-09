@@ -6,6 +6,7 @@
     "frameworksOverviewDescription": "Arquitetura completa dos frameworks",
     "overviewBadge": "Visão Geral",
     "protocol": "Documentação",
+    "manual": "Manual",
     "resources": "Recursos",
     "community": "Comunidade",
     "homeLink": "Ir para página inicial",
@@ -358,6 +359,7 @@
     "relatedLinks": "Links Relacionados",
     "learnMore": "Saiba Mais",
     "getStarted": "Começar Agora",
+    "readMore": "Leia Mais",
     "documentation": "Ver Documentação",
     "exploreFrameworks": "Explorar Frameworks",
     "github": "GitHub",
@@ -536,6 +538,47 @@
       "frameworks": "MEF, ZOF, OIF, MOC, MAL, Matrix Embedding Framework, Zion Orchestration Framework, Operator Intelligence Framework, Matrix Ontology Catalog, Matrix Arbiter Layer"
     },
     "author": "Casheiro"
+  },
+  "manual": {
+    "title": "Manual do Matrix Protocol",
+    "description": "Documentação completa e recursos para implementação do Matrix Protocol na sua organização",
+    "sections": {
+      "implementation": {
+        "title": "Guia de Implementação",
+        "description": "Manual técnico completo com mais de 4.600 linhas cobrindo todos os aspectos da implementação"
+      },
+      "templates": {
+        "title": "Templates e Estruturas",
+        "description": "Templates MOC e UKI organizados por porte empresarial e casos de uso específicos"
+      },
+      "tools": {
+        "title": "Ferramentas e Checklists", 
+        "description": "Listas de verificação práticas e ferramentas para validação de implementação"
+      },
+      "examples": {
+        "title": "Exemplos e Casos de Estudo",
+        "description": "Implementações reais, casos organizacionais e exemplos práticos de uso"
+      },
+      "reference": {
+        "title": "Material de Referência",
+        "description": "Estudos de caso detalhados e material de suporte para implementação"
+      },
+      "quickstart": {
+        "title": "Início Rápido",
+        "description": "Implemente o Matrix Protocol em 3 passos simples em 2-4 horas"
+      }
+    },
+    "download": {
+      "title": "Downloads",
+      "description": "Acesse guias completos e templates para download",
+      "complete": "Baixar Manual Completo",
+      "resources": "Ver Todos os Recursos"
+    },
+    "notFound": {
+      "title": "Conteúdo não encontrado",
+      "description": "A página solicitada não foi encontrada ou ainda está em desenvolvimento.",
+      "backToManual": "Voltar ao Manual"
+    }
   },
   "footer": {
     "description": "Framework abrangente para colaboração humano-IA",
