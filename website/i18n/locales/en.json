@@ -18,6 +18,48 @@
     "closeSidebar": "Close sidebar navigation",
     "close": "Close"
   },
+  "docs": {
+    "navigation": {
+      "title": "Navigation"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "quickstart": "Quick Start",
+      "implementation": "Implementation",
+      "frameworks": "Frameworks",
+      "downloads": "Downloads"
+    },
+    "sections": {
+      "title": "Documentation",
+      "quickstart": "Quick Start Guide",
+      "implementation": "Implementation Guide",
+      "integration": "Integration",
+      "glossary": "Glossary",
+      "protocol": "Protocol Specification",
+      "frameworks": "Frameworks",
+      "mep": "Matrix Epistemic Principle",
+      "manual": "Complete Manual",
+      "examples": "Examples and Case Studies"
+    },
+    "frameworks": {
+      "mef": "MEF - Matrix Embedding Framework",
+      "zof": "ZOF - Zion Orchestration Framework", 
+      "oif": "OIF - Operator Intelligence Framework",
+      "moc": "MOC - Matrix Ontology Catalog",
+      "mal": "MAL - Matrix Arbiter Layer"
+    },
+    "manual": {
+      "templates": "Organizational Templates",
+      "tools": "Tools and Checklists",
+      "examples": "Practical Examples",
+      "reference": "Reference Material"
+    },
+    "notFound": {
+      "title": "Content not found",
+      "description": "The requested content was not found in the documentation.",
+      "backToDocs": "Back to Documentation"
+    }
+  },
   "resources": {
     "title": "Resource Center",
     "subtitle": "Everything you need to implement the Matrix Protocol",
@@ -472,51 +514,6 @@
           "examples": "Explore Examples"
         }
       }
-    }
-  },
-  "docs": {
-    "title": "Documentation",
-    "subtitle": "Complete Matrix Protocol Portal",
-    "quickLinks": "Quick Links",
-    "sections": {
-      "title": "Sections",
-      "protocol": "Protocol Specification",
-      "quickstart": "Quick Start Guide",
-      "implementation": "Implementation Guide",
-      "integration": "Integration",
-      "glossary": "Glossary",
-      "frameworks": "Frameworks",
-      "examples": "Examples"
-    },
-    "integration": {
-      "description": "Integration patterns and flows between Matrix Protocol frameworks"
-    },
-    "loading": {
-      "protocol": "Loading protocol...",
-      "quickstart": "Loading quick start...",
-      "implementation": "Loading implementation...",
-      "integration": "Loading integration...",
-      "glossary": "Loading glossary..."
-    },
-    "errors": {
-      "loadingError": "Error loading content",
-      "tryAgain": "Try again",
-      "sectionNotFound": "Section not found",
-      "sectionNotFoundDescription": "The section \"{section}\" does not exist or is under development.",
-      "backToProtocol": "Back to Protocol"
-    },
-    "protocol": {
-      "quickNavigation": "Quick Navigation",
-      "description": "Complete Matrix Protocol specification for human-AI collaboration"
-    },
-    "quickstart": {
-      "description": "Quick start guide to implement Matrix Protocol in your organization"
-    },
-    "implementation": {
-      "description": "Detailed implementation guide for Matrix Protocol"
-    },
-    "glossary": {
-      "description": "Complete glossary of Matrix Protocol terms"
     }
   },
   "downloads": {
