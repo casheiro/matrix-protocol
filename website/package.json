@@ -5,12 +5,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "npm run sync:templates && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "sync:templates": "bash scripts/sync-uki-templates.sh && bash scripts/create-uki-zips.sh",
     "typecheck": "nuxt typecheck",
     "clean": "rm -rf .nuxt .output dist"
   },
