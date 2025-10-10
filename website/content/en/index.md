@@ -10,16 +10,16 @@ Welcome to the complete Matrix Protocol documentation.
 ## Navigation
 
 ### Specifications
-- [Frameworks](/en/frameworks)
-- [Protocol](/en/protocol)
-- [MEP - Manifesto](/en/mep)
-- [Integration](/en/integration)
-- [Glossary](/en/glossary)
+- [Frameworks](./docs/frameworks/)
+- [Protocol](./docs/protocol)
+- [MEP - Manifesto](./docs/mep)
+- [Integration](./docs/integration)
+- [Glossary](./docs/glossary)
 
 ### Guides
-- [Implementation](/en/guides/implementation)
-- [Quick Start](/en/guides/quickstart)
+- [Implementation](./docs/implementation)
+- [Quick Start](./docs/quickstart)
 
 ### Manual
-- [Complete Manual](/en/manual)
-- [Examples](/en/examples)
+- [Complete Manual](./docs/manual)
+- [Examples](./docs/examples)

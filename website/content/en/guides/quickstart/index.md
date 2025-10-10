@@ -218,10 +218,10 @@ relationships:
 ### **Complete Journey**
 This is just the beginning! For complete organizational implementation:
 
-- 📚 **Detailed Study**: [Complete Implementation Guide](IMPLEMENTATION_ROADMAP.md)
-- 🏗️ **Fundamentals**: [Protocol Specification](../MATRIX_PROTOCOL.md) 
-- 🔍 **Reference**: [Unified Glossary](../MATRIX_PROTOCOL_GLOSSARY.md)
-- 🧩 **Frameworks**: [MEF](../MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](../ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](../OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](../MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](../MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Detailed Study**: [Complete Implementation Guide](../../docs/implementation.md)
+- 🏗️ **Fundamentals**: [Protocol Specification](../../docs/protocol/index.md) 
+- 🔍 **Reference**: [Unified Glossary](../../docs/glossary.md)
+- 🧩 **Frameworks**: [MEF](../../docs/frameworks/mef.md), [ZOF](../../docs/frameworks/zof.md), [OIF](../../docs/frameworks/oif.md), [MOC](../../docs/frameworks/moc.md), [MAL](../../docs/frameworks/mal.md)
 
 ---
 

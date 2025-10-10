@@ -7,7 +7,7 @@
 
 > 🎯 **Objective**: Implement Matrix Protocol in your organization in 3 simple steps, following a structured and practical approach.
 
-> ⚡ **Quick Start**: For those who want to start today. For detailed study, see the Complete Implementation Manual in `/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md`.
+> ⚡ **Quick Start**: For those who want to start today. For detailed study, see the [Complete Implementation Manual](./implementation).
 
 ---
 
@@ -166,7 +166,7 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Complete Manual](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN) - 4,600+ lines, 15 chapters
+- 📖 [Complete Manual](manual/implementation-guide.md) - 4,600+ lines, 15 chapters
 - ✅ [Validation Checklist](/manual/tools/validation-checklists) - Avoid common mistakes
 - 📊 [TechCorp Case](/manual/reference/techcorp-case-study-en) - Illustrative example
 
@@ -210,7 +210,7 @@ relationships:
 ## 📞 Support and Next Steps
 
 ### **If You Get Stuck**
-1. 🔍 **Consult Complete Manual**: [See here](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN)
+1. 🔍 **Consult Complete Manual**: [See here](manual/implementation-guide.md)
 2. ✅ **Use Checklist**: [Phase validation](/manual/tools/validation-checklists)
 3. 📖 **Study TechCorp Case**: [How it was implemented in practice](/manual/reference/techcorp-case-study-en)
 4. 💬 **GitHub Discussions**: For specific questions
@@ -218,10 +218,10 @@ relationships:
 ### **Complete Journey**
 This is just the beginning! For complete organizational implementation:
 
-- 📚 **Detailed Study**: [Complete Implementation Guide](IMPLEMENTATION_ROADMAP.md)
-- 🏗️ **Fundamentals**: [Protocol Specification](../MATRIX_PROTOCOL.md) 
-- 🔍 **Reference**: [Unified Glossary](../MATRIX_PROTOCOL_GLOSSARY.md)
-- 🧩 **Frameworks**: [MEF](../MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](../ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](../OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](../MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](../MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Detailed Study**: [Complete Implementation Guide](implementation.md)
+- 🏗️ **Fundamentals**: [Protocol Specification](protocol/index.md) 
+- 🔍 **Reference**: [Unified Glossary](glossary.md)
+- 🧩 **Frameworks**: [MEF](frameworks/mef.md), [ZOF](frameworks/zof.md), [OIF](frameworks/oif.md), [MOC](frameworks/moc.md), [MAL](frameworks/mal.md)
 
 ---
 

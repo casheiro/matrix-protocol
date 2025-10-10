@@ -210,11 +210,10 @@ sequenceDiagram
 
 #### Segunda-feira: Status Check
 ```bash
-# Executar script de verificação
-./scripts/check-internal-links.sh
-./scripts/validate-cross-references.sh
+# Scripts de validação foram removidos após consolidação 
+# Todo conteúdo está agora centralizado em website/content/
 
-# Verificar versões
+# Para validação, use ferramentas do website:
 grep -r "Version:" *.md | grep -v "0.0.1"
 ```
 
@@ -283,79 +282,39 @@ labels: 'sync-required, bug'
 
 ---
 
-## Ferramentas e Scripts
+## Processo de Validação Pós-Consolidação
 
-### Scripts de Validação
+### Status Atual da Validação
 
-#### 1. `scripts/check-internal-links.sh`
+⚠️ **Scripts de validação foram removidos** após a consolidação do conteúdo em `website/content/`.
 
+### Nova Estrutura de Validação
+
+Com a consolidação, o processo de validação agora é centralizado no website:
+
+#### 1. Validação de Build
 ```bash
-#!/bin/bash
-# Verifica links internos no repositório
-
-echo "🔍 Checking internal links..."
-
-# Check .md references
-find . -name "*.md" -exec grep -l "\[.*\](\..*\.md)" {} \; | while read file; do
-    echo "Checking $file..."
-    grep -n "\[.*\](\..*\.md)" "$file" | while read line; do
-        link=$(echo "$line" | sed 's/.*](\([^)]*\)).*/\1/')
-        if [[ ! -f "$link" ]]; then
-            echo "❌ Broken link in $file: $link"
-        fi
-    done
-done
-
-echo "✅ Internal links check complete"
+cd website/
+pnpm run build
 ```
+- **Propósito**: Detecta problemas de estrutura e links quebrados
+- **Uso**: Execute antes de commits importantes
 
-
-#### 2. `scripts/validate-cross-references.sh`
-
+#### 2. Validação de Desenvolvimento
 ```bash
-#!/bin/bash
-# Valida referências cruzadas entre frameworks
-
-echo "🔍 Validating cross-references..."
-
-# Check if all referenced files exist
-referenced_files=$(grep -r "\.md)" *.md | sed 's/.*](\([^)]*\.md\)).*/\1/' | sort -u)
-
-for file in $referenced_files; do
-    if [[ ! -f "$file" ]]; then
-        echo "❌ Referenced file not found: $file"
-    else
-        echo "✅ $file exists"
-    fi
-done
-
-echo "✅ Cross-references validation complete"
+cd website/
+pnpm run dev
 ```
+- **Propósito**: Navegação manual para identificar problemas de UX
+- **Uso**: Teste todas as páginas e links internos
 
-
-#### 3. `scripts/check-version-consistency.sh`
-
+#### 3. Validação de Versões
 ```bash
-#!/bin/bash
-# Verifica consistência de versões
+# Verificar versões em content files
+grep -r "version:" website/content/ | grep -v "1.0"
 
-echo "🔍 Checking version consistency..."
-
-target_version="0.0.1"
-files=(*.md)
-
-for file in "${files[@]}"; do
-    if [[ -f "$file" ]]; then
-        version=$(grep "Version:" "$file" | head -1 | sed 's/.*Version:\s*//' | tr -d '*')
-        if [[ "$version" != "$target_version" ]]; then
-            echo "❌ $file: incorrect version: $version (expected: $target_version)"
-        else
-            echo "✅ $file: version OK"
-        fi
-    fi
-done
-
-echo "✅ Version consistency check complete"
+# Verificar frontmatter
+find website/content -name "*.md" -exec head -10 {} \; | grep -E "(version|date)"
 ```
 
 
@@ -433,7 +392,7 @@ jobs:
 - [ ] Converter links website para referências .md
 - [ ] Remover dependências de Hugo/Nuxt
 - [ ] Aplicar no repositório
-- [ ] Executar validation scripts
+- [ ] Executar build do website para validação
 
 ### Post-Sync Checklist
 

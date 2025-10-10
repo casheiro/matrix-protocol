@@ -494,19 +494,3 @@ decision_record:
     reason_code: string               # Structured reason code
     next_steps: string                # Recommended actions
 ```
-
-
----
-
-## 9. Cross-References
-
-- Matrix Protocol — Main Specification  
-- Matrix Protocol Integration Diagram  
-- Matrix Protocol Glossary  
-- Matrix Protocol Integration Diagram — Portuguese  
-- Matrix Protocol Glossary — Portuguese  
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  

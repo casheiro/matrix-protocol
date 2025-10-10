@@ -59,7 +59,7 @@ This section contains practical tools, verification lists and resources to valid
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Complete Implementation Guide](../implementation-guide)
 - [Organizational Templates](../templates)
 - [Practical Examples](../examples)
 - [Reference Material](../reference)

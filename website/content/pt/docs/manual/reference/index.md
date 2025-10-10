@@ -93,7 +93,7 @@ Esta seção contém material de referência avançado, estudos de caso detalhad
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Ferramentas de Validação](../tools)

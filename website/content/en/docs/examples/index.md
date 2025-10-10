@@ -23,8 +23,8 @@ Comprehensive example demonstrating the transformation of chaotic knowledge into
 - **[Presentation Slides](./knowledge-comparison/presentation-slides)** - Presentation material
 
 ### Tool Integration
-- **[StackSpot Agent Prompt](./knowledge-comparison/stackspot-agent-prompt)** - StackSpot agent prompt
-- **[StackSpot Compatibility Guide](./knowledge-comparison/stackspot-compatibility-guide)** - StackSpot integration
+- **[StackSpot Agent Prompt](./knowledge-comparison/agent-prompt)** - StackSpot agent prompt
+- **[StackSpot Compatibility Guide](./knowledge-comparison/compatibility-guide)** - StackSpot integration
 
 ### Unstructured vs Structured Data
 

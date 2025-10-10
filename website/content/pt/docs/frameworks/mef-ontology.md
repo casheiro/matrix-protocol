@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é [Ontology_MEF_Support.md](Ontology_MEF_Support.md).
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é a versão em inglês.
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém **APENAS EXEMPLOS ILUSTRATIVOS** (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
 

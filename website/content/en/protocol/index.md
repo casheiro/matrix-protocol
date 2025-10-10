@@ -346,20 +346,20 @@ The next step **can only be taken by you**.
 - MOC — Matrix Ontology Catalog <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
 - MEP — Matrix Epistemic Principle <!-- Interactive version: https://matrix-protocol.org/mep -->
 - MAL — Matrix Arbiter Layer <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
-- [Ontology MEF Support](Ontology_MEF_Support.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
+- [Ontology MEF Support](../docs/frameworks/mef-ontology.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
 
 ### Practical Resources
-- [Quick Start Guide](../guides/QUICK_START.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
-- [Implementation Roadmap](../guides/IMPLEMENTATION_ROADMAP.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
-- [Common Pitfalls](../guides/COMMON_PITFALLS.md) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
+- [Quick Start Guide](../docs/quickstart.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
+- [Implementation Roadmap](../docs/implementation.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
+- [Common Pitfalls](../docs/implementation.md#common-pitfalls) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
 
 ### Examples and Templates
 - [Knowledge Comparison Examples](../examples/knowledge-comparison/) <!-- Download examples: https://matrix-protocol.org/downloads/examples -->
 - MOC Templates <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
-- [UKI Templates](./templates/uki/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
+- [UKI Templates](../docs/manual/templates/) <!-- Download templates: https://matrix-protocol.org/downloads/templates -->
 
 ### Visualizations
-- [ZOF Canonical States](./visualizations/zof-canonical-states.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/zof#canonical-states -->
-- [MAL Arbitration Flow](./visualizations/mal-arbitration-flow.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/mal#arbitration-flow -->
-- [MOC Hierarchies](./visualizations/moc-hierarchies.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/moc#hierarchies -->
-- [OIF Access Control](./visualizations/oif-access-control.md) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/oif#access-control -->  
+- [ZOF Canonical States](../docs/frameworks/zof.md#canonical-states) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/zof#canonical-states -->
+- [MAL Arbitration Flow](../docs/frameworks/mal.md#arbitration-flow) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/mal#arbitration-flow -->
+- [MOC Hierarchies](../docs/frameworks/moc.md#hierarchies) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/moc#hierarchies -->
+- [OIF Access Control](../docs/frameworks/oif.md#access-control) <!-- Interactive diagram: https://matrix-protocol.org/frameworks/oif#access-control -->  

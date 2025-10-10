@@ -27,8 +27,7 @@
 
 manual/
 ├── README_EN.md                                    # This file - main navigation
-├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md     # Complete manual in Portuguese (4,600+ lines)
-├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md     # Complete manual in English (base structure)
+├── implementation-guide.md     # Complete manual in English (base structure)
 ├── quick-start/
 │   ├── MOC_STARTER_TEMPLATE.yaml              # Ready-to-use templates (startup/scaleup/enterprise)
 │   └── MOC_STARTER_TEMPLATE_PT.yaml           # Portuguese version
@@ -65,7 +64,7 @@ manual/
    Understand technical implementation patterns
    Learn from successes and failures
 
-2. **Use the Main Manual** (`MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md` or `_EN.md`)
+2. **Use the Main Manual** (`implementation-guide.md`)
    - Phase-by-phase guide based on real experience
    - Templates customized by organizational size
    - Validated implementation processes
@@ -84,8 +83,7 @@ manual/
 ## 📚 Complete Documentation
 
 ### **Main Files:**
-- `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md` - Complete technical manual in Portuguese (4,600+ lines)
-- `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md` - Complete technical manual in English (base structure)
+- `implementation-guide.md` - Complete technical manual in English (base structure)
 
 **What You'll Find:**
 1. **Organizational Assessment**: Current state mapping and readiness evaluation
@@ -199,7 +197,7 @@ This manual is based on real experience and continues evolving. If you implement
 |------------------|----------|----------------|
 | **Start implementation today** | `quick-start/MOC_STARTER_TEMPLATE.yaml` | 2 hours |
 | **Understand technical approach** | `reference/techcorp-case-study-en.md` | 30 min |
-| **See complete implementation** | `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md` | 3-4 hours |
+| **See complete implementation** | `implementation-guide.md` | 3-4 hours |
 | **Validate each phase** | `tools/validation-checklists.md` | 45 min per phase |
 | **Study complete case** | `reference/techcorp-case-study-en.md` | 2 hours |
 

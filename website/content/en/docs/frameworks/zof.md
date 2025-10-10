@@ -380,13 +380,13 @@ evaluate_for_enrich_with_conflict:
         - existing_uki: "uki:squad-x:pattern:jwt-implementation-basic"
         - proposed_uki: "uki:squad-x:pattern:jwt-implementation-advanced"
       
-    local_resolution_attempts:
+    - local_resolution_attempts:
       - authority_check: "Both at squad level - equivalent authority"
       - scope_check: "Both squad-x scope - no hierarchy difference" 
       - maturity_check: "Both validated - no maturity difference"
       - result: "UNRESOLVABLE_LOCALLY"
     
-    mal_invocation:
+    - mal_invocation:
       event_id: "mal-evt-zof-20250826-001"
       event_type: "H1"
       arbitration_request:
@@ -404,7 +404,7 @@ evaluate_for_enrich_with_conflict:
           authority: "developer"
         operation: "enrich"
     
-    mal_decision_received:
+    - mal_decision_received:
       decision_id: "mal-dec-20250826-h1-001"
       outcome: "winner"
       winner: "uki:squad-x:pattern:jwt-implementation-advanced"
@@ -413,7 +413,7 @@ evaluate_for_enrich_with_conflict:
         - "deprecate:uki:squad-x:pattern:jwt-implementation-basic"
         - "allow_enrich:uki:squad-x:pattern:jwt-implementation-advanced"
       
-    zof_actions_execution:
+    - zof_actions_execution:
       - action: "deprecate"
         target: "uki:squad-x:pattern:jwt-implementation-basic"
         result: "UKI marked as deprecated with replacement reference"
@@ -421,7 +421,7 @@ evaluate_for_enrich_with_conflict:
         target: "uki:squad-x:pattern:jwt-implementation-advanced"
         result: "Enrichment approved, proceeding to Review state"
         
-    final_decision:
+    - final_decision:
       can_enrich_result: "APPROVED_BY_MAL"
       enrichment_scope: "squad-x"
       arbitration_ref: "mal-dec-20250826-h1-001"
@@ -721,19 +721,3 @@ matrix_component_integration:
     governance_rules: "MOC defines authority and visibility rules"
     evaluation_criteria: "MOC configures EvaluateForEnrich checkpoint criteria"
 ```
-
-
----
-
-## 8. Cross-References
-
-- Matrix Protocol — Main Specification  
-- Matrix Protocol Integration Diagram  
-- Matrix Protocol Glossary  
-- Matrix Protocol Integration Diagram — Portuguese  
-- Matrix Protocol Glossary — Portuguese  
-- MEF — Matrix Embedding Framework  
-- MOC — Matrix Ontology Catalog  
-- OIF — Operator Intelligence Framework  
-- MEP — Matrix Epistemic Principle  
-- MAL — Matrix Arbiter Layer  

@@ -28,52 +28,49 @@ This guide establishes the synchronization process between the **main repository
 3. **Bidirectional Synchronization** for improvements and corrections
 4. **Consistent Versioning** in both environments
 
-### Current Architecture
+### Post-Consolidation Architecture
 
 ```
 
-Repository (matrix-protocol/)     Website (matrix-protocol/website/)
-├── docs/specifications/en/   ↔   ├── content/en/frameworks/
-├── docs/specifications/pt/   ↔   ├── content/pt/frameworks/
-├── docs/guides/              ↔   ├── content/en/quickstart/
-├── docs/visualizations/      ↔   ├── content/en/integration/
-└── docs/examples/            ↔   └── public/downloads/
+CONSOLIDATED STRUCTURE (Current)
+Website (matrix-protocol/website/) - Single Source of Truth
+├── content/en/frameworks/          ← All framework specifications
+├── content/pt/frameworks/          ← Portuguese translations  
+├── content/en/quickstart/          ← Implementation guides
+├── content/en/integration/         ← Diagrams and visualizations
+└── public/downloads/examples/      ← Knowledge comparison examples
 ```
 
 
-**🎯 GOAL:** Eliminate manual synchronization by implementing unified `/docs/` structure as single source of truth.
+**✅ ACHIEVED:** Eliminated manual synchronization - website is now the single source of truth.
 
 ---
 
-## Files that MUST be Synchronized
+## Current Content Structure (Post-Consolidation)
 
-### 🏛️ Core Specifications (100% Sync Required)
+### 🏛️ Framework Specifications (Consolidated in Website)
 
-| Repository File | Website Route | Sync Type | Priority |
-|----------------|---------------|-----------|----------|
-| `docs/specifications/en/MATRIX_PROTOCOL.md` | `/protocol` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/MATRIX_PROTOCOL.md` | `/pt/protocol` | ✅ Mandatory | Critical |
-| `docs/specifications/en/MEF_MATRIX_EMBEDDING_FRAMEWORK.md` | `/frameworks/mef` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/MEF_MATRIX_EMBEDDING_FRAMEWORK.md` | `/pt/frameworks/mef` | ✅ Mandatory | Critical |
-| `docs/specifications/en/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md` | `/frameworks/zof` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md` | `/pt/frameworks/zof` | ✅ Mandatory | Critical |
-| `docs/specifications/en/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md` | `/frameworks/oif` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md` | `/pt/frameworks/oif` | ✅ Mandatory | Critical |
-| `docs/specifications/en/MOC_MATRIX_ONTOLOGY_CATALOG.md` | `/frameworks/moc` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/MOC_MATRIX_ONTOLOGY_CATALOG.md` | `/pt/frameworks/moc` | ✅ Mandatory | Critical |
-| `docs/specifications/en/MAL_MATRIX_ARBITER_LAYER.md` | `/frameworks/mal` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/MAL_MATRIX_ARBITER_LAYER.md` | `/pt/frameworks/mal` | ✅ Mandatory | Critical |
-| `docs/specifications/en/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md` | `/mep` | ✅ Mandatory | Critical |
-| `docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md` | `/pt/mep` | ✅ Mandatory | Critical |
+| Website Location | Route | Status | Language |
+|----------------|-------|--------|----------|
+| `website/content/en/frameworks/mal.md` | `/frameworks/mal` | ✅ Active | English |
+| `website/content/pt/frameworks/mal.md` | `/pt/frameworks/mal` | ✅ Active | Portuguese |
+| `website/content/en/frameworks/mef.md` | `/frameworks/mef` | ✅ Active | English |
+| `website/content/pt/frameworks/mef.md` | `/pt/frameworks/mef` | ✅ Active | Portuguese |
+| `website/content/en/frameworks/zof.md` | `/frameworks/zof` | ✅ Active | English |
+| `website/content/pt/frameworks/zof.md` | `/pt/frameworks/zof` | ✅ Active | Portuguese |
+| `website/content/en/frameworks/oif.md` | `/frameworks/oif` | ✅ Active | English |
+| `website/content/pt/frameworks/oif.md` | `/pt/frameworks/oif` | ✅ Active | Portuguese |
+| `website/content/en/frameworks/moc.md` | `/frameworks/moc` | ✅ Active | English |
+| `website/content/pt/frameworks/moc.md` | `/pt/frameworks/moc` | ✅ Active | Portuguese |
 
-### 📚 Support Documentation (High Sync Priority)
+### 📚 Support Documentation (Consolidated)
 
-| Repository File | Website Route | Sync Type | Priority |
-|----------------|---------------|-----------|----------|
-| `docs/specifications/en/MATRIX_PROTOCOL_GLOSSARY.md` | `/glossary` | ✅ Mandatory | High |
-| `docs/specifications/pt/MATRIX_PROTOCOL_GLOSSARY.md` | `/pt/glossary` | ✅ Mandatory | High |
-| `docs/specifications/en/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md` | `/integration` | ✅ Mandatory | High |
-| `docs/specifications/pt/MATRIX_PROTOCOL_INTEGRATION_DIAGRAM.md` | `/pt/integration` | ✅ Mandatory | High |
+| Website Location | Route | Status | Type |
+|----------------|-------|--------|------|
+| `website/content/en/protocol/index.md` | `/protocol` | ✅ Active | Core Protocol |
+| `website/content/pt/protocol/index.md` | `/pt/protocol` | ✅ Active | Protocolo Principal |
+| `website/content/en/mep/index.md` | `/mep` | ✅ Active | Epistemic Principle |
+| `website/content/pt/mep/index.md` | `/pt/mep` | ✅ Active | Princípio Epistemológico |
 
 ---
 
@@ -170,41 +167,47 @@ Repository (matrix-protocol/)     Website (matrix-protocol/website/)
 
 ---
 
-## Tools and Scripts
+## Validation Tools (Post-Consolidation)
 
-### 🤖 Automated Tools
+### 🔄 Current Validation Process
 
-#### `/scripts/check-sync.sh`
+⚠️ **Legacy scripts removed** - validation is now integrated into the website build process.
+
+#### Website Build Validation
 ```bash
-# Validates sync status between repository and website
-./scripts/check-sync.sh --report --fix-links
+cd website/
+pnpm run build
 ```
+- **Purpose**: Detects structural issues and broken links
+- **Usage**: Run before important commits
 
-
-#### `/scripts/validate-cross-references.sh`
+#### Development Testing
 ```bash
-# Validates all internal links and references
-./scripts/validate-cross-references.sh --verbose
+cd website/
+pnpm run dev
 ```
+- **Purpose**: Manual navigation to identify UX issues  
+- **Usage**: Test all pages and internal links
 
 
-#### GitHub Actions Workflow
+#### Future CI/CD Integration
 ```yaml
 
-# .github/workflows/sync-website.yml
-name: Sync to Website
+# Proposed: .github/workflows/website-validation.yml
+name: Website Validation
 on:
   push:
     paths:
-      - 'docs/**'
-      - 'guides/**'
-      - 'examples/**'
+      - 'website/**'
 jobs:
-  sync:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync content
-        run: ./scripts/sync-to-website.sh
+      - name: Build website
+        run: |
+          cd website/
+          pnpm install
+          pnpm run build
 ```
 
 
@@ -289,26 +292,28 @@ jobs:
 3. **Level 3:** Content team review and manual resolution
 4. **Level 4:** Architecture team for systemic changes
 
-### 🔧 Resolution Tools
+### 🔧 Resolution Tools (Post-Consolidation)
 
-#### Content Merge Tool
+#### Git-Based Version Control
 ```bash
-# Semi-automated content merging
-./scripts/merge-content.sh --source repository --target website --preview
+# All changes tracked through Git
+git log --oneline website/content/
+git revert <commit-hash>  # Rollback specific changes
 ```
 
-
-#### Diff Analysis
+#### Content Validation
 ```bash
-# Detailed difference analysis
-./scripts/analyze-diff.sh --detailed --format json
+# Manual validation through website build
+cd website/
+pnpm run build
+pnpm run dev  # Visual inspection
 ```
 
-
-#### Rollback Capability
+#### Backup and Recovery
 ```bash
-# Emergency rollback to last known good state
-./scripts/rollback-sync.sh --timestamp "2025-10-05T14:30:00Z"
+# Git provides complete version history
+git checkout <previous-commit> -- website/content/
+git commit -m "Rollback content to working state"
 ```
 
 

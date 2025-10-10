@@ -396,18 +396,3 @@ industry_specific_examples:
     types: ["standard_procedure", "quality_standard", "safety_protocol", "efficiency_metric"]
     special_relationships: ["quality_dependency", "safety_requirement"]
 ```
-
-
----
-
-## 8. Cross-References
-
-- Matrix Protocol — Main Specification  
-- Matrix Protocol Integration Diagram  
-- Matrix Protocol Glossary  
-- Matrix Protocol Integration Diagram — Portuguese  
-- Matrix Protocol Glossary — Portuguese  
-- MEF — Matrix Embedding Framework  
-- MOC — Matrix Ontology Catalog  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  

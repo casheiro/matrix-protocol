@@ -218,10 +218,10 @@ relationships:
 ### **Jornada Completa**
 Este é apenas o começo! Para implementação organizacional completa:
 
-- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](IMPLEMENTATION_ROADMAP_PT.md)
-- 🏗️ **Fundamentos**: [Especificação do Protocolo](/MATRIX_PROTOCOL.md) 
-- 🔍 **Referência**: [Glossário Unificado](/MATRIX_PROTOCOL_GLOSSARY.md)
-- 🧩 **Frameworks**: [MEF](/MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](/MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](/MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](../../docs/implementation.md)
+- 🏗️ **Fundamentos**: [Especificação do Protocolo](../../docs/protocol/index.md) 
+- 🔍 **Referência**: [Glossário Unificado](../../docs/glossary.md)
+- 🧩 **Frameworks**: [MEF](../../docs/frameworks/mef.md), [ZOF](../../docs/frameworks/zof.md), [OIF](../../docs/frameworks/oif.md), [MOC](../../docs/frameworks/moc.md), [MAL](../../docs/frameworks/mal.md)
 
 ---
 

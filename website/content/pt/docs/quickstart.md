@@ -7,7 +7,7 @@
 
 > 🎯 **Objetivo**: Implementar o Matrix Protocol na sua organização em 3 passos simples, seguindo uma abordagem estruturada e prática.
 
-> ⚡ **Início Rápido**: Para quem quer começar hoje. Para estudo detalhado, veja o Manual Completo de Implementação em `/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md`.
+> ⚡ **Início Rápido**: Para quem quer começar hoje. Para estudo detalhado, veja o [Manual Completo de Implementação](implementation.md).
 
 ---
 
@@ -166,14 +166,14 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Manual Completo](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT) - 4.600+ linhas, 15 capítulos
-- ✅ [Checklist de Validação](/manual/tools/validation-checklists) - Evite erros comuns
-- 📊 [Caso TechCorp](/manual/reference/techcorp-case-study-pt) - Exemplo ilustrativo
+- 📖 [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) - 4.600+ linhas, 15 capítulos
+- ✅ [Checklist de Validação](manual/tools/) - Evite erros comuns
+- 📊 [Caso TechCorp](manual/reference/) - Exemplo ilustrativo
 
 ### **Templates Prontos**
 - 🏢 Templates por Tamanho Organizacional - Estrutura completa de diretórios
-- 🔧 [Templates UKI Multi-hierárquicos](/templates/uki/) - Templates UKI completos
-- 📋 [Fases de Implementação Detalhadas](/manual/templates/IMPLEMENTATION_PHASES_DETAILED)
+- 🔧 [Templates UKI Multi-hierárquicos](manual/templates/) - Templates UKI completos
+- 📋 [Fases de Implementação Detalhadas](manual/templates/)
 
 ## 🎯 Escolha o Template Certo para sua Organização
 
@@ -210,18 +210,18 @@ relationships:
 ## 📞 Suporte e Próximos Passos
 
 ### **Se Você Ficar Preso**
-1. 🔍 **Consulte Manual Completo**: [Veja aqui](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT)
-2. ✅ **Use Checklist**: [Validação de fases](/manual/tools/validation-checklists)
-3. 📖 **Estude Caso TechCorp**: [Como foi implementado na prática](/manual/reference/techcorp-case-study-pt)
+1. 🔍 **Consulte Manual Completo**: [Veja aqui](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
+2. ✅ **Use Checklist**: [Validação de fases](manual/tools/)
+3. 📖 **Estude Caso TechCorp**: [Como foi implementado na prática](manual/reference/)
 4. 💬 **GitHub Discussions**: Para perguntas específicas
 
 ### **Jornada Completa**
 Este é apenas o começo! Para implementação organizacional completa:
 
-- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](IMPLEMENTATION_ROADMAP_PT.md)
-- 🏗️ **Fundamentos**: [Especificação do Protocolo](/MATRIX_PROTOCOL.md) 
-- 🔍 **Referência**: [Glossário Unificado](/MATRIX_PROTOCOL_GLOSSARY.md)
-- 🧩 **Frameworks**: [MEF](/MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](/MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](/MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](implementation.md)
+- 🏗️ **Fundamentos**: [Especificação do Protocolo](protocol/index.md) 
+- 🔍 **Referência**: [Glossário Unificado](glossary.md)
+- 🧩 **Frameworks**: [MEF](frameworks/mef.md), [ZOF](frameworks/zof.md), [OIF](frameworks/oif.md), [MOC](frameworks/moc.md), [MAL](frameworks/mal.md)
 
 ---
 

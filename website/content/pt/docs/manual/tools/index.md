@@ -59,7 +59,7 @@ Esta seção contém ferramentas práticas, listas de verificação e recursos p
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Material de Referência](../reference)

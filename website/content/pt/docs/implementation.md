@@ -5,11 +5,11 @@
 **Data:** Janeiro 2025  
 **Protocolo:** Matrix Protocol (protocolo semântico para colaboração humano-IA)
 
-> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md) (4.600+ linhas, 15 capítulos).
+> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) (4.600+ linhas, 15 capítulos).
 
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação para os frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
-> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](QUICK_START_PT.md).
+> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](quickstart.md).
 
 ---
 
@@ -229,7 +229,7 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🛠️ Recursos e Downloads
 
 ### **Manual Completo (4.600+ linhas)**
-📖 [Download Manual Completo](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT)
+📖 [Download Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
 
 **Conteúdo Detalhado:**
 - **Parte I**: Preparação e Avaliação (Capítulos 1-3)
@@ -241,18 +241,18 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ### **Templates Prontos**
 - 📋 Template MOC Básico (universal)
 - 🎯 Templates Especializados: Startup, Scale-up, Enterprise, Corporation
-- 🔧 [Templates UKI Multi-hierárquicos](/templates/uki/)
-- 📋 [Fases de Implementação Detalhadas](/manual/templates/IMPLEMENTATION_PHASES_DETAILED)
+- 🔧 [Templates UKI Multi-hierárquicos](manual/templates/)
+- 📋 [Fases de Implementação Detalhadas](manual/templates/)
 
 ### **Estudo de Caso Completo**
-📊 [Caso TechCorp](/manual/reference/techcorp-case-study-pt)
+📊 [Caso TechCorp](manual/reference/)
 - Implementação de 18 meses
 - 3 Divisões → 6 Tribos → 18 Squads
 - Dados quantitativos reais
 - Lições aprendidas e armadilhas evitadas
 
 ### **Ferramentas de Validação**
-- ✅ [Checklists de Validação](/manual/tools/validation-checklists)
+- ✅ [Checklists de Validação](manual/tools/)
 - 📊 Scripts de Validação -> Em construção
 - 🔧 Ferramentas de Migração -> Em construção
 
@@ -261,20 +261,20 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🤝 Próximos Passos
 
 ### **Se Você Quer Começar Hoje**
-1. 🚀 [Guia de Início Rápido](QUICK_START_PT.md) - 2-4 horas
+1. 🚀 [Guia de Início Rápido](quickstart.md) - 2-4 horas
 2. 📋 Template MOC Básico - Universal para qualquer tamanho
 3. 🎯 Templates Especializados: Escolha baseado no tamanho da sua organização
-4. ✅ [Primeiro UKI](QUICK_START_PT.md) - 30-60 minutos
+4. ✅ [Primeiro UKI](quickstart.md) - 30-60 minutos
 
 ### **Para Estudo Detalhado**
-1. 📖 [Manual Completo](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT) - 4.600+ linhas
-2. 📊 [Caso TechCorp](/manual/reference/techcorp-case-study-pt) - Implementação real
-3. 🏗️ [Especificação do Protocolo](/MATRIX_PROTOCOL.md) - Fundamentos
+1. 📖 [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) - 4.600+ linhas
+2. 📊 [Caso TechCorp](manual/reference/) - Implementação real
+3. 🏗️ [Especificação do Protocolo](protocol/index.md) - Fundamentos
 
 ### **Para Suporte Técnico**
 - 💬 **GitHub Discussions**: Perguntas específicas
-- 📚 **Documentação**: [Portal completo](/MATRIX_PROTOCOL.md)
-- 🧩 **Frameworks**: [MEF](/MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](/MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](/MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Documentação**: [Portal completo](protocol/index.md)
+- 🧩 **Frameworks**: [MEF](frameworks/mef.md), [ZOF](frameworks/zof.md), [OIF](frameworks/oif.md), [MOC](frameworks/moc.md), [MAL](frameworks/mal.md)
 
 ---
 

@@ -5,11 +5,11 @@
 **Date:** January 2025  
 **Protocol:** Matrix Protocol (semantic protocol for human-AI collaboration)
 
-> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, see the [Complete Manual](/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md) (4,600+ lines, 15 chapters).
+> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, see the [Complete Manual](../../docs/manual/implementation-guide.md) (4,600+ lines, 15 chapters).
 
 > 🎯 **Objective**: Provide technical specifications, configuration examples and implementation guides for the semantic frameworks that compose the Matrix Protocol (MEF, ZOF, MAL, OIF).
 
-> 🚀 **For Quick Implementation**: If you want to start today, use the [Quick Start Guide](QUICK_START.md).
+> 🚀 **For Quick Implementation**: If you want to start today, use the [Quick Start Guide](../../docs/quickstart.md).
 
 ---
 
@@ -261,20 +261,20 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 ## 🤝 Next Steps
 
 ### **If You Want to Start Today**
-1. 🚀 [Quick Start Guide](QUICK_START.md) - 2-4 hours
+1. 🚀 [Quick Start Guide](../../docs/quickstart.md) - 2-4 hours
 2. 📋 Basic MOC Template - Universal for any size
 3. 🎯 Specialized Templates: Choose based on your organization size
-4. ✅ [First UKI](QUICK_START.md) - 30-60 minutes
+4. ✅ [First UKI](../../docs/quickstart.md) - 30-60 minutes
 
 ### **For Detailed Study**
 1. 📖 [Complete Manual](/manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN) - 4,600+ lines
 2. 📊 [TechCorp Case](/manual/reference/techcorp-case-study-en) - Real implementation
-3. 🏗️ [Protocol Specification](../MATRIX_PROTOCOL.md) - Fundamentals
+3. 🏗️ [Protocol Specification](../../docs/protocol/index.md) - Fundamentals
 
 ### **For Technical Support**
 - 💬 **GitHub Discussions**: Specific questions
-- 📚 **Documentation**: [Complete portal](../MATRIX_PROTOCOL.md)
-- 🧩 **Frameworks**: [MEF](../MEF_MATRIX_EMBEDDING_FRAMEWORK.md), [ZOF](../ZOF_ZION_ORCHESTRATION_FRAMEWORK.md), [OIF](../OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md), [MOC](../MOC_MATRIX_ONTOLOGY_CATALOG.md), [MAL](../MAL_MATRIX_ARBITER_LAYER.md)
+- 📚 **Documentation**: [Complete portal](../../docs/protocol/index.md)
+- 🧩 **Frameworks**: [MEF](../../docs/frameworks/mef.md), [ZOF](../../docs/frameworks/zof.md), [OIF](../../docs/frameworks/oif.md), [MOC](../../docs/frameworks/moc.md), [MAL](../../docs/frameworks/mal.md)
 
 ---
 

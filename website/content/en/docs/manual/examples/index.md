@@ -73,7 +73,7 @@ This section presents practical examples, real case studies and organizational i
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Complete Implementation Guide](../implementation-guide)
 - [Organizational Templates](../templates)
 - [Validation Tools](../tools)
 - [Reference Material](../reference)

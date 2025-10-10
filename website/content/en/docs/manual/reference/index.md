@@ -93,7 +93,7 @@ This section contains advanced reference material, detailed case studies and sup
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Complete Implementation Guide](../implementation-guide)
 - [Organizational Templates](../templates)
 - [Practical Examples](../examples)
 - [Validation Tools](../tools)

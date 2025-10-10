@@ -781,19 +781,3 @@ capability_composition_rules:
       else:
         archetype.disable_capability("cross_domain_knowledge_synthesis")
 ```
-
-
----
-
-## 8. Cross-References
-
-- Matrix Protocol — Main Specification  
-- Matrix Protocol Integration Diagram  
-- Matrix Protocol Glossary  
-- Matrix Protocol Integration Diagram — Portuguese  
-- Matrix Protocol Glossary — Portuguese  
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- MAL — Matrix Arbiter Layer  

@@ -73,7 +73,7 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
 - [Templates Organizacionais](../templates)
 - [Ferramentas de Validação](../tools)
 - [Material de Referência](../reference)

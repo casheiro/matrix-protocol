@@ -27,8 +27,7 @@
 
 manual/
 ├── README.md                                       # Este arquivo - navegação principal
-├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md     # Manual completo em português (4.600+ linhas)
-├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md     # Manual completo em inglês (estrutura base)
+├── MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md     # Manual completo em português (4.600+ linhas)
 ├── quick-start/
 │   └── MOC_STARTER_TEMPLATE.yaml              # Templates prontos (startup/scaleup/enterprise)
 ├── reference/
@@ -68,7 +67,7 @@ cp quick-start/MOC_STARTER_TEMPLATE.yaml seu-projeto/moc-config.yaml
    - Entenda padrões de implementação técnica 
    - Aprenda com sucessos e falhas
 
-2. **Use o Manual Principal** (`MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md` ou `_EN.md`)
+2. **Use o Manual Principal** (`MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md`)
    - Guia fase por fase baseado em experiência real
    - Templates personalizados por porte organizacional
    - Processos validados de implementação
@@ -215,7 +214,7 @@ Este manual é baseado em experiência real e continua evoluindo. Se você imple
 |------------------|------------|----------------|
 | **Começar implementação hoje** | `quick-start/MOC_STARTER_TEMPLATE.yaml` | 2 horas |
 | **Entender o business case** | `reference/techcorp-case-study.md#resultados-quantitativos` | 30 min |
-| **Ver implementação completa** | `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md` | 3-4 horas |
+| **Ver implementação completa** | `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md` | 3-4 horas |
 | **Validar cada fase** | `tools/validation-checklists.md` | 45 min por fase |
 | **Estudar caso real completo** | `reference/techcorp-case-study.md` | 2 horas |
 

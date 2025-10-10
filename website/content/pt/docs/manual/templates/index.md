@@ -32,6 +32,6 @@ Esta seção contém todos os templates e estruturas necessárias para implement
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE)
+- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
 - [Exemplos Organizacionais](../examples)
 - [Ferramentas de Validação](../tools)

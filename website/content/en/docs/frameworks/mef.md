@@ -355,27 +355,3 @@ knowledge_sources:
   compliance_validation: "Strategic traceability verification"
   version_management: "Change propagation to dependent UKIs"
 ```
-
-
----
-
-## 9. Cross-References
-
-### Framework Dependencies
-- Matrix Protocol — Main Specification <!-- Interactive version: https://matrix-protocol.org/protocol -->
-- MOC — Matrix Ontology Catalog <!-- Interactive version: https://matrix-protocol.org/frameworks/moc -->
-- MEP — Matrix Epistemic Principle <!-- Interactive version: https://matrix-protocol.org/mep -->
-- ZOF — Zion Orchestration Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/zof -->
-- OIF — Operator Intelligence Framework <!-- Interactive version: https://matrix-protocol.org/frameworks/oif -->
-- MAL — Matrix Arbiter Layer <!-- Interactive version: https://matrix-protocol.org/frameworks/mal -->
-
-### Supporting Documents
-- Matrix Protocol Integration Diagram <!-- Interactive version: https://matrix-protocol.org/integration -->
-- Matrix Protocol Glossary <!-- Interactive version: https://matrix-protocol.org/glossary -->
-- Matrix Protocol Integration Diagram — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/integration -->
-- Matrix Protocol Glossary — Portuguese <!-- Interactive version: https://matrix-protocol.org/pt/glossary -->
-
-### Examples and Templates
-- [MOC Squad Payments Example](../examples/knowledge-comparison/MOC_SQUAD_PAYMENTS.yaml) <!-- Download: https://matrix-protocol.org/downloads/examples/moc-example -->
-- [UKI Examples](../examples/knowledge-comparison/structured/) <!-- Download: https://matrix-protocol.org/downloads/examples -->
-- [UKI Templates](./templates/uki/) <!-- Download: https://matrix-protocol.org/downloads/templates -->  

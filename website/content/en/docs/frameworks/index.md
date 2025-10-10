@@ -14,18 +14,18 @@ The Matrix Protocol consists of **5 interdependent frameworks** that work togeth
 ## 🏛️ Framework Architecture
 
 ### Oracle Layer (Strategic)
-- **[MEF - Matrix Embedding Framework](/docs/frameworks/mef)** - Versioned knowledge structuring
-- **[MEF Ontology](/docs/frameworks/mef-ontology)** - MEF-specific ontology
+- **[MEF - Matrix Embedding Framework](./mef)** - Versioned knowledge structuring
+- **[MEF Ontology](./mef-ontology)** - MEF-specific ontology
 
 ### Zion Layer (Orchestration)  
-- **[ZOF - Zion Orchestration Framework](/docs/frameworks/zof)** - AI-oriented workflows
+- **[ZOF - Zion Orchestration Framework](./zof)** - AI-oriented workflows
 
 ### Operator Layer (Execution)
-- **[OIF - Operator Intelligence Framework](/docs/frameworks/oif)** - AI agent archetypes
+- **[OIF - Operator Intelligence Framework](./oif)** - AI agent archetypes
 
 ### Transversal Layers
-- **[MOC - Matrix Ontology Catalog](/docs/frameworks/moc)** - Organizational ontological catalog
-- **[MAL - Matrix Arbiter Layer](/docs/frameworks/mal)** - Arbitration and conflict resolution
+- **[MOC - Matrix Ontology Catalog](./moc)** - Organizational ontological catalog
+- **[MAL - Matrix Arbiter Layer](./mal)** - Arbitration and conflict resolution
 
 ## 📊 Comparative Overview
 
@@ -40,16 +40,16 @@ The Matrix Protocol consists of **5 interdependent frameworks** that work togeth
 ## 🎯 Where to Start?
 
 ### For Beginners
-1. **[MOC](/docs/frameworks/moc)** - Start by defining your organizational ontology
-2. **[MEF](/docs/frameworks/mef)** - Learn to structure knowledge
-3. **[ZOF](/docs/frameworks/zof)** - Implement basic workflows
+1. **[MOC](./moc)** - Start by defining your organizational ontology
+2. **[MEF](./mef)** - Learn to structure knowledge
+3. **[ZOF](./zof)** - Implement basic workflows
 
 ### For Advanced Implementation
-1. **[OIF](/docs/frameworks/oif)** - Configure AI archetypes
-2. **[MAL](/docs/frameworks/mal)** - Set up arbitration and governance
+1. **[OIF](./oif)** - Configure AI archetypes
+2. **[MAL](./mal)** - Set up arbitration and governance
 
 ### For Theoretical Understanding
-1. **[MEF Ontology](/docs/frameworks/mef-ontology)** - MEF ontological foundations
+1. **[MEF Ontology](./mef-ontology)** - MEF ontological foundations
 
 ## 🔗 Interdependencies
 
@@ -74,20 +74,20 @@ graph TB
 ## 📖 Detailed Documentation
 
 ### MEF - Matrix Embedding Framework
-- **[Complete Specification](/docs/frameworks/mef)** - UKI structuring
-- **[MEF Ontology](/docs/frameworks/mef-ontology)** - Theoretical foundations
+- **[Complete Specification](./mef)** - UKI structuring
+- **[MEF Ontology](./mef-ontology)** - Theoretical foundations
 
 ### ZOF - Zion Orchestration Framework  
-- **[Complete Specification](/docs/frameworks/zof)** - Canonical states and workflows
+- **[Complete Specification](./zof)** - Canonical states and workflows
 
 ### OIF - Operator Intelligence Framework
-- **[Complete Specification](/docs/frameworks/oif)** - Archetypes and AI agents
+- **[Complete Specification](./oif)** - Archetypes and AI agents
 
 ### MOC - Matrix Ontology Catalog
-- **[Complete Specification](/docs/frameworks/moc)** - Ontological catalog
+- **[Complete Specification](./moc)** - Ontological catalog
 
 ### MAL - Matrix Arbiter Layer
-- **[Complete Specification](/docs/frameworks/mal)** - Deterministic arbitration
+- **[Complete Specification](./mal)** - Deterministic arbitration
 
 ## 🚀 Practical Resources
 
