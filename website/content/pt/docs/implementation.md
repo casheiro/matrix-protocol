@@ -9,7 +9,7 @@
 
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação para os frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
-> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](quickstart.md).
+> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](quickstart/index.md).
 
 ---
 
@@ -261,10 +261,10 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🤝 Próximos Passos
 
 ### **Se Você Quer Começar Hoje**
-1. 🚀 [Guia de Início Rápido](quickstart.md) - 2-4 horas
+1. 🚀 [Guia de Início Rápido](quickstart/index.md) - 2-4 horas
 2. 📋 Template MOC Básico - Universal para qualquer tamanho
 3. 🎯 Templates Especializados: Escolha baseado no tamanho da sua organização
-4. ✅ [Primeiro UKI](quickstart.md) - 30-60 minutos
+4. ✅ [Primeiro UKI](quickstart/index.md) - 30-60 minutos
 
 ### **Para Estudo Detalhado**
 1. 📖 [Manual Completo](manual/index.md) - 4.600+ linhas

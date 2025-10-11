@@ -349,7 +349,7 @@ The next step **can only be taken by you**.
 - [Ontology MEF Support](../frameworks/mef-ontology.md) <!-- Interactive version: https://matrix-protocol.org/frameworks/mef-ontology -->
 
 ### Practical Resources
-- [Quick Start Guide](../quickstart.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
+- [Quick Start Guide](../quickstart/index.md) <!-- Interactive tutorial: https://matrix-protocol.org/quickstart -->
 - [Implementation Roadmap](../implementation.md) <!-- Interactive guide: https://matrix-protocol.org/implementation -->
 - [Common Pitfalls](../implementation.md#common-pitfalls) <!-- Implementation tips: https://matrix-protocol.org/implementation#common-pitfalls -->
 

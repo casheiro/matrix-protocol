@@ -261,10 +261,10 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 ## 🤝 Next Steps
 
 ### **If You Want to Start Today**
-1. 🚀 [Quick Start Guide](quickstart.md) - 2-4 hours
+1. 🚀 [Quick Start Guide](quickstart/index.md) - 2-4 hours
 2. 📋 Basic MOC Template - Universal for any size
 3. 🎯 Specialized Templates: Choose based on your organization size
-4. ✅ [First UKI](quickstart.md) - 30-60 minutes
+4. ✅ [First UKI](quickstart/index.md) - 30-60 minutes
 
 ### **For Detailed Study**
 1. 📖 [Complete Manual](manual/index.md) - 4,600+ lines
