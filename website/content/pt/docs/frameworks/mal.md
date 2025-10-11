@@ -312,14 +312,3 @@ decision_record:
     decided_by: string                # Identificador da versão MAL
     timeout_used_ms: integer          # Tempo de processamento usado
 ```
-
-
----
-
-## 9. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  

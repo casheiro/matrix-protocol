@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MEF_MATRIX_EMBEDDING_FRAMEWORK.md.
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
 
 ---
 
@@ -211,13 +211,3 @@ relationships:
     target: uki:technical:pattern:authorization-rbac
     description: "Trabalha em conjunto com autorização baseada em papéis"
 ```
-
-
----
-
-## 9. Referências Cruzadas
-
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  

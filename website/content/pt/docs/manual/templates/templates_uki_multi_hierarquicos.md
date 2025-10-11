@@ -13,12 +13,12 @@
 
 ### Padrões de Relacionamentos Multi-Hierárquicos
 
-| Tipo de Template | Complexidade | Hierarquias Envolvidas | Relacionamentos | Casos de Uso |
-|------------------|-------------|------------------------|-----------------|--------------|
-| **Cross-Divisional** | Moderada | Escopo, Domínio, Autoridade | 5-8 | Políticas organizacionais |
-| **Multi-Domínio** | Complexa | Domínio, Maturidade, Tipo | 8-12 | Frameworks técnicos |
-| **Cross-Cutting** | Avançada | Todas as hierarquias | 12+ | Governança e compliance |
-| **Temporal-Espacial** | Muito Complexa | Escopo, Ciclo_vida, Autoridade | 15+ | Transformações organizacionais |
+| Tipo de Template      | Complexidade   | Hierarquias Envolvidas         | Relacionamentos | Casos de Uso                   |
+|-----------------------|----------------|--------------------------------|-----------------|--------------------------------|
+| **Cross-Divisional**  | Moderada       | Escopo, Domínio, Autoridade    | 5-8             | Políticas organizacionais      |
+| **Multi-Domínio**     | Complexa       | Domínio, Maturidade, Tipo      | 8-12            | Frameworks técnicos            |
+| **Cross-Cutting**     | Avançada       | Todas as hierarquias           | 12+             | Governança e compliance        |
+| **Temporal-Espacial** | Muito Complexa | Escopo, Ciclo_vida, Autoridade | 15+             | Transformações organizacionais |
 
 ---
 
@@ -232,7 +232,7 @@ conteudo: |
       medicao: "Trimestral via survey usuários"
   ```
 
-
+<!--TODO:("Ajustar e formatar adequadamente o conteúdo abaixo pois parecem desconexos") -->
 # === Exemplos ===
 exemplos:
   - entrada: "Equipe de produto quer implementar novo sistema de analytics de usuário"
@@ -326,8 +326,6 @@ relacionamentos_emergentes:
     descricao: "Framework de governança é pré-requisito para estratégias de monetização"
     confianca: 92%
     evidencia: "Parceiros externos requerem evidências de governança de dados"
-```
-
 
 ---
 

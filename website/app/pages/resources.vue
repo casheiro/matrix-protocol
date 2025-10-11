@@ -426,7 +426,7 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/README.md', 'README.md')"
+                  @click="downloadFile('/downloads/index.md', 'index.md')"
                   color="success"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
@@ -503,7 +503,7 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/examples/EXEMPLO_ORGANIZACIONAL_TECHCORP.md', 'EXEMPLO_ORGANIZACIONAL_TECHCORP.md')"
+                  @click="downloadFile('/downloads/examples/exemplo_organizacional_techcorp.md', 'exemplo_organizacional_techcorp.md')"
                   color="primary"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
@@ -547,7 +547,7 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/tools/validation-checklists-pt.md', 'validation-checklists-pt.md')"
+                  @click="downloadFile('/downloads/tools/validation-checklists.md', 'validation-checklists.md')"
                   color="neutral"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
@@ -580,7 +580,7 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/templates/FASES_IMPLEMENTACAO_DETALHADAS.md', 'FASES_IMPLEMENTACAO_DETALHADAS.md')"
+                  @click="downloadFile('/downloads/templates/fases_implementacao_detalhadas.md', 'fases_implementacao_detalhadas.md')"
                   color="success"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"

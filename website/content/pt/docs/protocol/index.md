@@ -274,14 +274,3 @@ O próximo passo **só pode ser dado por você**.
 
 **A Matrix está pronta para ser reprogramada.**
 **Você está pronto para descobrir até onde vai a toca do coelho?**
-
----
-
-## 8. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- MAL — Matrix Arbiter Layer  

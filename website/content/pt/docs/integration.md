@@ -68,40 +68,40 @@ Diferentemente da documentação individual de cada framework que foca em capaci
 
 graph TB
     %% Camada do Usuário
-    User[👤 Solicitação do Usuário<br/>Implementação de Autenticação]
+    User["👤 Solicitação do Usuário<br/>Implementação de Autenticação"]
     
     %% Camada OIF - Arquétipos de Inteligência
-    OIF_KA[🤖 Knowledge Agent<br/>OIF]
-    OIF_WA[🔄 Workflow Agent<br/>OIF]
-    OIF_EXP[💡 Interface de Explicabilidade<br/>OIF]
+    OIF_KA["🤖 Knowledge Agent<br/>OIF"]
+    OIF_WA["🔄 Workflow Agent<br/>OIF"]
+    OIF_EXP["💡 Interface de Explicabilidade<br/>OIF"]
     
     %% Camada ZOF - Orquestração de Workflow  
-    ZOF_INT[📥 Estado Intake<br/>ZOF]
-    ZOF_UND[🔍 Estado Understand<br/>ZOF]
-    ZOF_DEC[⚖️ Estado Decide<br/>ZOF]
-    ZOF_ACT[⚡ Estado Act<br/>ZOF]
-    ZOF_EVL[🎯 EvaluateForEnrich<br/>ZOF]
-    ZOF_ENR[📚 Estado Enrich<br/>ZOF]
+    ZOF_INT["📥 Estado Intake<br/>ZOF"]
+    ZOF_UND["🔍 Estado Understand<br/>ZOF"]
+    ZOF_DEC["⚖️ Estado Decide<br/>ZOF"]
+    ZOF_ACT["⚡ Estado Act<br/>ZOF"]
+    ZOF_EVL["🎯 EvaluateForEnrich<br/>ZOF"]
+    ZOF_ENR["📚 Estado Enrich<br/>ZOF"]
     
     %% Camada MEF - Estrutura de Conhecimento
-    MEF_UKI[📄 Repositório UKI<br/>MEF]
-    MEF_VER[🔄 Sistema de Versionamento<br/>MEF]
-    MEF_REL[🔗 Relacionamentos<br/>MEF]
+    MEF_UKI["📄 Repositório UKI<br/>MEF"]
+    MEF_VER["🔄 Sistema de Versionamento<br/>MEF"]
+    MEF_REL["🔗 Relacionamentos<br/>MEF"]
     
     %% Camada MOC - Taxonomia Organizacional
-    MOC_AUTH[🔐 Validação de Autoridade<br/>MOC]
-    MOC_HIER[🏗️ Hierarquias<br/>MOC]
-    MOC_CRIT[📊 Critérios de Avaliação<br/>MOC]
+    MOC_AUTH["🔐 Validação de Autoridade<br/>MOC"]
+    MOC_HIER["🏗️ Hierarquias<br/>MOC"]
+    MOC_CRIT["📊 Critérios de Avaliação<br/>MOC"]
     
     %% Camada MEP - Fundamento Epistemológico
-    MEP_PRINC[📜 Cinco Princípios<br/>MEP]
-    MEP_AUTH[👥 Autoridade Derivada<br/>MEP]
-    MEP_EXPL[💡 Explicabilidade Obrigatória<br/>MEP]
+    MEP_PRINC["📜 Cinco Princípios<br/>MEP"]
+    MEP_AUTH["👥 Autoridade Derivada<br/>MEP"]
+    MEP_EXPL["💡 Explicabilidade Obrigatória<br/>MEP"]
     
     %% Camada MAL - Arbitragem
-    MAL_ARB[⚖️ Árbitro de Conflitos<br/>MAL]
-    MAL_DEC[📋 Registros de Decisão<br/>MAL]
-    MAL_POL[📊 Políticas de Precedência<br/>MAL]
+    MAL_ARB["⚖️ Árbitro de Conflitos<br/>MAL"]
+    MAL_DEC["📋 Registros de Decisão<br/>MAL"]
+    MAL_POL["📊 Políticas de Precedência<br/>MAL"]
     
     %% Fluxo de Integração
     User --> OIF_WA
@@ -175,22 +175,22 @@ graph TB
 
 ## 4. Matriz de Pontos de Integração
 
-| **Do Framework** | **Para Framework** | **Ponto de Integração** | **Propósito** |
-|-------------------|---------------------|-------------------------|---------------|
-| **OIF → ZOF** | Workflow Agent | Orquestração de Estados Canônicos | Executar fluxos ZOF via arquétipos de inteligência |
-| **ZOF → OIF** | Consulta ao Oráculo | Query do Knowledge Agent | Consultar conhecimento existente durante estado Understand |
-| **ZOF → MEF** | Enriquecimento | Criação de UKI | Criar conhecimento estruturado durante estado Enrich |
-| **ZOF → MOC** | EvaluateForEnrich | Consulta de Critérios | Aplicar critérios de avaliação organizacionais |
-| **OIF → MOC** | Verificação de Autoridade | Validação Hierárquica | Validar autoridade do usuário para operações |
-| **MEF → MOC** | Validação de Campo | Referências *_ref | Validar todas as referências de campo hierárquicas |
-| **OIF → MEP** | Explicabilidade | Autoridade Derivada | Garantir respostas contextuais, não absolutas |
-| **ZOF → MEP** | Decisão de Enriquecimento | Justificativa Epistemológica | Aplicar princípios MEP na avaliação de enriquecimento |
-| **MEF → MEP** | Promoção de Conhecimento | Promoção Responsável | Documentar justificativa epistemológica para evolução de UKI |
-| **ZOF → MAL** | Detecção de Conflito | Invocação de Arbitragem | Invocar MAL quando EvaluateForEnrich detecta conflitos H1/H2/H3 |
-| **MAL → MEF** | Persistência de Decisão | Armazenamento de Registro de Decisão | Persistir decisões de arbitragem como registros de auditoria imutáveis |
-| **MAL → OIF** | Comunicação de Resultado | Explicação de Arbitragem | Explicar resultados de arbitragem usando templates estruturados |
-| **MOC → MAL** | Configuração de Política | Fornecimento de Regras de Precedência | Fornecer políticas de arbitragem e hierarquias de autoridade |
-| **MEP → MAL** | Fundamento Epistêmico | Geração de Justificativa | Orientar justificação epistemológica em decisões de arbitragem |
+| **Do Framework** | **Para Framework**        | **Ponto de Integração**               | **Propósito**                                                          |
+|------------------|---------------------------|---------------------------------------|------------------------------------------------------------------------|
+| **OIF → ZOF**    | Workflow Agent            | Orquestração de Estados Canônicos     | Executar fluxos ZOF via arquétipos de inteligência                     |
+| **ZOF → OIF**    | Consulta ao Oráculo       | Query do Knowledge Agent              | Consultar conhecimento existente durante estado Understand             |
+| **ZOF → MEF**    | Enriquecimento            | Criação de UKI                        | Criar conhecimento estruturado durante estado Enrich                   |
+| **ZOF → MOC**    | EvaluateForEnrich         | Consulta de Critérios                 | Aplicar critérios de avaliação organizacionais                         |
+| **OIF → MOC**    | Verificação de Autoridade | Validação Hierárquica                 | Validar autoridade do usuário para operações                           |
+| **MEF → MOC**    | Validação de Campo        | Referências *_ref                     | Validar todas as referências de campo hierárquicas                     |
+| **OIF → MEP**    | Explicabilidade           | Autoridade Derivada                   | Garantir respostas contextuais, não absolutas                          |
+| **ZOF → MEP**    | Decisão de Enriquecimento | Justificativa Epistemológica          | Aplicar princípios MEP na avaliação de enriquecimento                  |
+| **MEF → MEP**    | Promoção de Conhecimento  | Promoção Responsável                  | Documentar justificativa epistemológica para evolução de UKI           |
+| **ZOF → MAL**    | Detecção de Conflito      | Invocação de Arbitragem               | Invocar MAL quando EvaluateForEnrich detecta conflitos H1/H2/H3        |
+| **MAL → MEF**    | Persistência de Decisão   | Armazenamento de Registro de Decisão  | Persistir decisões de arbitragem como registros de auditoria imutáveis |
+| **MAL → OIF**    | Comunicação de Resultado  | Explicação de Arbitragem              | Explicar resultados de arbitragem usando templates estruturados        |
+| **MOC → MAL**    | Configuração de Política  | Fornecimento de Regras de Precedência | Fornecer políticas de arbitragem e hierarquias de autoridade           |
+| **MEP → MAL**    | Fundamento Epistêmico     | Geração de Justificativa              | Orientar justificação epistemológica em decisões de arbitragem         |
 
 ---
 
@@ -396,16 +396,3 @@ zof_workflow_modification:
     act: "Gerar solicitação de escalação com contexto"
     # EvaluateForEnrich pulado - sem enriquecimento para roteamento de escalação
 ```
-
-
----
-
-## 6. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- Glossário do Protocolo Matrix
-- MAL — Matrix Arbiter Layer

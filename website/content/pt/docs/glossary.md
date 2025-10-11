@@ -327,63 +327,51 @@ Estes termos são utilizados por múltiplos frameworks e possuem definições un
 
 ## 4. Índice Alfabético
 
-| **Termo** | **Framework** | **Referência de Página** |
-|----------|---------------|-------------------|
-| Arquétipos de Inteligência | OIF | Termos Específicos de Framework |
-| Autoridade Derivada | MEP | Termos Cross-Framework |
-| can_enrich() Função | ZOF | Termos Específicos de Framework |
-| Contexto Hierárquico | MOC | Termos Cross-Framework |
-| Elasticidade Semântica | MEP | Termos Específicos de Framework |
-| Enriquecimento de Conhecimento | MEF | Termos Cross-Framework |
-| Epistemologia Estratificada | MEP | Termos Específicos de Framework |
-| Estados Canônicos | ZOF | Termos Cross-Framework |
-| EvaluateForEnrich | ZOF | Termos Cross-Framework |
-| Eventos Canônicos | ZOF | Termos Específicos de Framework |
-| Governança Organizacional | MOC | Termos Específicos de Framework |
-| Hierarquias Configuráveis | MOC | Termos Específicos de Framework |
-| Humildade Epistemológica | MEP | Termos Específicos de Framework |
-| Integração MOC | MOC | Termos Cross-Framework |
-| Knowledge Agent | OIF | Termos Específicos de Framework |
-| MOC Organizacional | MOC | Termos Cross-Framework |
-| Modo de Escopo | ZOF | Termos Específicos de Framework |
-| Nós MOC | MOC | Termos Específicos de Framework |
-| Promoção de Conhecimento | MEF | Termos Específicos de Framework |
-| Promoção Responsável | MEP | Termos Específicos de Framework |
-| Referência de Escopo | MEF | Termos Cross-Framework |
-| Referência de Maturidade | MEF | Termos Específicos de Framework |
-| Relacionamentos Ontológicos | MEF | Termos Cross-Framework |
-| Serviço de Validação de Autoridade | MOC | Termos Cross-Framework |
-| Sinais de Explicabilidade | ZOF | Termos Cross-Framework |
-| UKI | MEF | Termos Cross-Framework |
-| Validação de Autoridade | MOC | Termos Cross-Framework |
-| Versionamento Semântico | MEF | Termos Específicos de Framework |
-| Workflow Agent | OIF | Termos Específicos de Framework |
+| **Termo**                          | **Framework** | **Referência de Página**        |
+|------------------------------------|---------------|---------------------------------|
+| Arquétipos de Inteligência         | OIF           | Termos Específicos de Framework |
+| Autoridade Derivada                | MEP           | Termos Cross-Framework          |
+| can_enrich() Função                | ZOF           | Termos Específicos de Framework |
+| Contexto Hierárquico               | MOC           | Termos Cross-Framework          |
+| Elasticidade Semântica             | MEP           | Termos Específicos de Framework |
+| Enriquecimento de Conhecimento     | MEF           | Termos Cross-Framework          |
+| Epistemologia Estratificada        | MEP           | Termos Específicos de Framework |
+| Estados Canônicos                  | ZOF           | Termos Cross-Framework          |
+| EvaluateForEnrich                  | ZOF           | Termos Cross-Framework          |
+| Eventos Canônicos                  | ZOF           | Termos Específicos de Framework |
+| Governança Organizacional          | MOC           | Termos Específicos de Framework |
+| Hierarquias Configuráveis          | MOC           | Termos Específicos de Framework |
+| Humildade Epistemológica           | MEP           | Termos Específicos de Framework |
+| Integração MOC                     | MOC           | Termos Cross-Framework          |
+| Knowledge Agent                    | OIF           | Termos Específicos de Framework |
+| MOC Organizacional                 | MOC           | Termos Cross-Framework          |
+| Modo de Escopo                     | ZOF           | Termos Específicos de Framework |
+| Nós MOC                            | MOC           | Termos Específicos de Framework |
+| Promoção de Conhecimento           | MEF           | Termos Específicos de Framework |
+| Promoção Responsável               | MEP           | Termos Específicos de Framework |
+| Referência de Escopo               | MEF           | Termos Cross-Framework          |
+| Referência de Maturidade           | MEF           | Termos Específicos de Framework |
+| Relacionamentos Ontológicos        | MEF           | Termos Cross-Framework          |
+| Serviço de Validação de Autoridade | MOC           | Termos Cross-Framework          |
+| Sinais de Explicabilidade          | ZOF           | Termos Cross-Framework          |
+| UKI                                | MEF           | Termos Cross-Framework          |
+| Validação de Autoridade            | MOC           | Termos Cross-Framework          |
+| Versionamento Semântico            | MEF           | Termos Específicos de Framework |
+| Workflow Agent                     | OIF           | Termos Específicos de Framework |
 
 ---
 
 ## 5. Matriz de Responsabilidade de Framework
 
-| **Domínio de Conceito** | **MEF** | **ZOF** | **OIF** | **MOC** | **MEP** |
-|-------------------|---------|---------|---------|---------|---------|
-| **Estrutura de Conhecimento** | 🟢 Primário | 🟡 Consumidor | 🟡 Processador | 🟡 Validador | 🔵 Princípios |
-| **Orquestração de Workflow** | 🟡 Produtor | 🟢 Primário | 🟡 Executor | 🟡 Governador | 🔵 Princípios |
-| **Arquétipos de Inteligência** | 🟡 Fonte de Dados | 🟡 Orquestrado | 🟢 Primário | 🟡 Controle de Acesso | 🔵 Princípios |
-| **Taxonomias Organizacionais** | 🟡 Consumidor | 🟡 Consumidor | 🟡 Consumidor | 🟢 Primário | 🔵 Princípios |
-| **Fundamento Epistemológico** | 🟡 Implementação | 🟡 Aplicação | 🟡 Expressão | 🟡 Contexto | 🟢 Primário |
+| **Domínio de Conceito**        | **MEF**           | **ZOF**        | **OIF**        | **MOC**               | **MEP**       |
+|--------------------------------|-------------------|----------------|----------------|-----------------------|---------------|
+| **Estrutura de Conhecimento**  | 🟢 Primário       | 🟡 Consumidor  | 🟡 Processador | 🟡 Validador          | 🔵 Princípios |
+| **Orquestração de Workflow**   | 🟡 Produtor       | 🟢 Primário    | 🟡 Executor    | 🟡 Governador         | 🔵 Princípios |
+| **Arquétipos de Inteligência** | 🟡 Fonte de Dados | 🟡 Orquestrado | 🟢 Primário    | 🟡 Controle de Acesso | 🔵 Princípios |
+| **Taxonomias Organizacionais** | 🟡 Consumidor     | 🟡 Consumidor  | 🟡 Consumidor  | 🟢 Primário           | 🔵 Princípios |
+| **Fundamento Epistemológico**  | 🟡 Implementação  | 🟡 Aplicação   | 🟡 Expressão   | 🟡 Contexto           | 🟢 Primário   |
 
 **Legenda:**
 - 🟢 Primário: Responsabilidade principal pela definição e implementação do conceito
 - 🟡 Secundário: Usa ou aplica o conceito definido em outro lugar  
 - 🔵 Princípios: Fornece fundamento filosófico/epistemológico
-
----
-
-## 6. Referências Cruzadas
-
-- Diagrama de Integração do Protocolo Matrix  
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- Protocolo Matrix — Especificação Principal

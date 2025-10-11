@@ -1,4 +1,13 @@
-# Knowledge Comparison: Unstructured vs MEF-Structured
+---
+title: Comparação de conhecimento
+description: Demonstração prática da transformação de conhecimento caótico em estruturas MEF organizadas através de exemplo real de squad de pagamentos
+icon: i-heroicons-rectangle-stack
+layout: docs
+sidebar: true
+toc: true
+---
+
+# Comparação de conhecimento: não estruturado vs MEF-estruturado
 
 Este exemplo demonstra a eficiência do **Matrix Embedding Framework (MEF)** através de uma comparação prática entre conhecimento não estruturado e estruturado de uma squad de pagamentos de e-commerce.
 
@@ -86,19 +95,19 @@ maturity_ref: validated      # → hierarchies.maturity.nodes[id="validated"]
 
 Simula a realidade atual de muitas organizações com conhecimento disperso:
 
-| Arquivo | Formato | Problemas Demonstrados |
-|---------|---------|------------------------|
-| `team-meeting-jan-2024.md` | Markdown | Decisões conflitantes com reunião março |
-| `team-meeting-mar-2024.md` | Markdown | Informal, contradiz decisões anteriores |
-| `slack-refunds-thread.txt` | Text | Conhecimento fragmentado, sem conclusão |
-| `confluence-payment-flow.md` | Markdown | Desatualizado (2022), links quebrados |
-| `jira-fraud-detection.txt` | Text | Mistura problema específico com regra geral |
-| `pci-compliance-email.txt` | Text | Requisitos técnicos misturados com administrativos |
-| `developer-handover.txt` | Text | Conhecimento crítico não documentado formalmente |
-| `postmortem-outage-dec.txt` | Text | Lições aprendidas, ações não implementadas |
-| `onboarding-checklist.txt` | Text | Desatualizado, informações obsoletas |
-| `random-notes-mixed.txt` | Text | Anotações pessoais, múltiplos assuntos misturados |
-| `security-audit-findings.txt` | Text | Relatório formal, status de ações unclear |
+| Arquivo                       | Formato  | Problemas Demonstrados                             |
+|-------------------------------|----------|----------------------------------------------------|
+| `team-meeting-jan-2024.md`    | Markdown | Decisões conflitantes com reunião março            |
+| `team-meeting-mar-2024.md`    | Markdown | Informal, contradiz decisões anteriores            |
+| `slack-refunds-thread.txt`    | Text     | Conhecimento fragmentado, sem conclusão            |
+| `confluence-payment-flow.md`  | Markdown | Desatualizado (2022), links quebrados              |
+| `jira-fraud-detection.txt`    | Text     | Mistura problema específico com regra geral        |
+| `pci-compliance-email.txt`    | Text     | Requisitos técnicos misturados com administrativos |
+| `developer-handover.txt`      | Text     | Conhecimento crítico não documentado formalmente   |
+| `postmortem-outage-dec.txt`   | Text     | Lições aprendidas, ações não implementadas         |
+| `onboarding-checklist.txt`    | Text     | Desatualizado, informações obsoletas               |
+| `random-notes-mixed.txt`      | Text     | Anotações pessoais, múltiplos assuntos misturados  |
+| `security-audit-findings.txt` | Text     | Relatório formal, status de ações unclear          |
 
 ### `structured/` - Conhecimento MEF Estruturado (17 UKIs)
 
@@ -300,5 +309,3 @@ Como rastreabilidade facilita auditoria e conformidade regulatória.
 ## 📝 Conclusão
 
 Este exemplo demonstra como o **Matrix Embedding Framework** transforma conhecimento caótico em ativos estruturados e governados, eliminando contradições, criando rastreabilidade e habilitando evolução controlada do conhecimento organizacional.
-
-**Resultado:** De 12 documentos dispersos e conflitantes para 17 UKIs estruturados com 42 relacionamentos semânticos explícitos.

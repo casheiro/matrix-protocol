@@ -18,29 +18,29 @@
 gantt
     title Cronograma de Implementação do Protocolo Matrix
     dateFormat YYYY-MM-DD
-    section Fase 1: Base MOC
+    section Fase 1 - Base MOC
     Design MOC        :p1a, 2024-01-01, 30d
     Implementação MOC :p1b, after p1a, 30d
     Validação MOC     :p1c, after p1b, 30d
     
-    section Fase 2: Piloto MEF
+    section Fase 2 - Piloto MEF
     Seleção Piloto    :p2a, after p1c, 15d
     Implementação MEF :p2b, after p2a, 60d
     Criação UKI       :p2c, after p2a, 75d
     
-    section Fase 3: Fluxos ZOF
+    section Fase 3 - Fluxos ZOF
     Design Fluxo      :p3a, after p2b, 30d
     Implementação ZOF :p3b, after p3a, 60d
     
-    section Fase 4: Inteligência OIF
+    section Fase 4 - Inteligência OIF
     Design Arquétipo  :p4a, after p3b, 30d
     Implementação OIF :p4b, after p4a, 60d
     
-    section Fase 5: Arbitragem MAL
+    section Fase 5 - Arbitragem MAL
     Config Política   :p5a, after p4b, 30d
     Implementação MAL :p5b, after p5a, 60d
     
-    section Fase 6: Maturidade Plena
+    section Fase 6 - Maturidade Plena
     Otimização        :p6a, after p5b, 60d
     Preparação Escala :p6b, after p6a, 30d
 ```
@@ -48,14 +48,14 @@ gantt
 
 ### Critérios de Sucesso por Fase
 
-| Fase | Métrica Primária de Sucesso | Métricas Secundárias | Impacto nos Negócios |
-|------|---------------------------|---------------------|---------------------|
-| **Fase 1** | MOC valida 100% estrutura org | Mapeamento autoridade completo | Base estabelecida |
-| **Fase 2** | 100+ UKIs validadas criadas | 50% redução conflitos conhecimento | Melhoria qualidade conhecimento |
-| **Fase 3** | Todos fluxos seguem estados canônicos | Consulta Oráculo 95%+ | Melhoria qualidade decisão |
-| **Fase 4** | Respostas IA citam fontes 100% | Tempo acesso conhecimento <5 min | Melhoria experiência usuário |
-| **Fase 5** | Conflitos resolvidos em <15 min | 90%+ satisfação stakeholders | Eficácia governança |
-| **Fase 6** | ROI >200% demonstrado | Sistema escala para tamanho org | Transformação completa |
+| Fase       | Métrica Primária de Sucesso           | Métricas Secundárias               | Impacto nos Negócios            |
+|------------|---------------------------------------|------------------------------------|---------------------------------|
+| **Fase 1** | MOC valida 100% estrutura org         | Mapeamento autoridade completo     | Base estabelecida               |
+| **Fase 2** | 100+ UKIs validadas criadas           | 50% redução conflitos conhecimento | Melhoria qualidade conhecimento |
+| **Fase 3** | Todos fluxos seguem estados canônicos | Consulta Oráculo 95%+              | Melhoria qualidade decisão      |
+| **Fase 4** | Respostas IA citam fontes 100%        | Tempo acesso conhecimento <5 min   | Melhoria experiência usuário    |
+| **Fase 5** | Conflitos resolvidos em <15 min       | 90%+ satisfação stakeholders       | Eficácia governança             |
+| **Fase 6** | ROI >200% demonstrado                 | Sistema escala para tamanho org    | Transformação completa          |
 
 ---
 

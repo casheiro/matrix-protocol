@@ -166,7 +166,7 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) - 4.600+ linhas, 15 capítulos
+- 📖 [Manual Completo](manual/index.md) - 4.600+ linhas, 15 capítulos
 - ✅ [Checklist de Validação](manual/tools/) - Evite erros comuns
 - 📊 [Caso TechCorp](manual/reference/) - Exemplo ilustrativo
 
@@ -177,13 +177,13 @@ relationships:
 
 ## 🎯 Escolha o Template Certo para sua Organização
 
-| Tamanho | Funcionários | Template | Complexidade | Quando Usar |
-|---------|--------------|----------|-------------|-------------|
-| **Universal** | 5-1000+ | basic-template.yaml | 🟢 Básico | Início rápido, POC |
-| **Startup** | 5-50 | startup.yaml | 🟢 Baixo | Agilidade, MVP, crescimento rápido |
-| **Scale-up** | 50-200 | scaleup.yaml | 🟡 Médio | Estruturação, departamentos |
-| **Enterprise** | 200-1000 | enterprise.yaml | 🔴 Alto | Governança, compliance |
-| **Corporation** | 1000+ | corporation.yaml | 🔴 Máximo | Global, regulatório |
+| Tamanho         | Funcionários | Template            | Complexidade | Quando Usar                        |
+|-----------------|--------------|---------------------|--------------|------------------------------------|
+| **Universal**   | 5-1000+      | basic-template.yaml | 🟢 Básico    | Início rápido, POC                 |
+| **Startup**     | 5-50         | startup.yaml        | 🟢 Baixo     | Agilidade, MVP, crescimento rápido |
+| **Scale-up**    | 50-200       | scaleup.yaml        | 🟡 Médio     | Estruturação, departamentos        |
+| **Enterprise**  | 200-1000     | enterprise.yaml     | 🔴 Alto      | Governança, compliance             |
+| **Corporation** | 1000+        | corporation.yaml    | 🔴 Máximo    | Global, regulatório                |
 
 ---
 
@@ -210,7 +210,7 @@ relationships:
 ## 📞 Suporte e Próximos Passos
 
 ### **Se Você Ficar Preso**
-1. 🔍 **Consulte Manual Completo**: [Veja aqui](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
+1. 🔍 **Consulte Manual Completo**: [Veja aqui](manual/index.md)
 2. ✅ **Use Checklist**: [Validação de fases](manual/tools/)
 3. 📖 **Estude Caso TechCorp**: [Como foi implementado na prática](manual/reference/)
 4. 💬 **GitHub Discussions**: Para perguntas específicas

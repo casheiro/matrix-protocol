@@ -199,8 +199,8 @@ export const useMatrixLinks = () => {
     },
     'validation-checklists-pt': {
       type: 'download',
-      path: 'tools/validation-checklists-pt.md',
-      filename: 'validation-checklists-pt.md'
+      path: 'tools/validation-checklists.md',
+      filename: 'validation-checklists.md'
     },
 
     // Templates UKI - Business Rules

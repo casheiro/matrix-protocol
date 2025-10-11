@@ -1,5 +1,7 @@
-# TechCorp Case Study - Implementação Completa Matrix Protocol
+# TechCorp Estudo de Caso - Implementação Completa Matrix Protocol
 **Estudo de Caso Hipotético: Implementação organizacional, 18 meses**
+
+<!-- TODO:("Ajustar o conteúdo pois tem muitas informações em inglês quando deveriam estar em português") -->
 
 > ⚠️ **IMPORTANTE**: Este é um exemplo hipotético/ilustrativo para demonstrar conceitos do Matrix Protocol. TechCorp e todos os dados apresentados são fictícios e servem apenas para fins educacionais de implementação do protocolo semântico.
 
@@ -14,24 +16,24 @@
 
 ### **Métricas de Conhecimento**
 
-| Métrica | Pré-Matrix | Pós-Matrix | Melhoria |
-|---------|------------|------------|----------|
-| **Tempo para encontrar informação** | 45 min | 3 min | 93% ↓ |
-| **Decisões revertidas** | 35% | 8% | 77% ↓ |
-| **Sistemas de documentação** | 47 | 3 | 94% ↓ |
-| **Onboarding novo funcionário** | 12 semanas | 3 semanas | 75% ↓ |
-| **Conhecimento duplicado** | 62% | 12% | 81% ↓ |
-| **Conflitos de decisão/mês** | 23 | 3 | 87% ↓ |
+| Métrica                             | Pré-Matrix | Pós-Matrix | Melhoria |
+|-------------------------------------|------------|------------|----------|
+| **Tempo para encontrar informação** | 45 min     | 3 min      | 93% ↓    |
+| **Decisões revertidas**             | 35%        | 8%         | 77% ↓    |
+| **Sistemas de documentação**        | 47         | 3          | 94% ↓    |
+| **Onboarding novo funcionário**     | 12 semanas | 3 semanas  | 75% ↓    |
+| **Conhecimento duplicado**          | 62%        | 12%        | 81% ↓    |
+| **Conflitos de decisão/mês**        | 23         | 3          | 87% ↓    |
 
 ### **Métricas de Produtividade**
 
-| Área | Baseline | Resultado | Impacto |
-|------|----------|-----------|---------|
-| **Development Velocity** | 40 story points/sprint | 67 story points/sprint | 68% ↑ |
-| **Bug Rate** | 2.3 bugs/feature | 0.7 bugs/feature | 70% ↓ |
-| **Feature Rollback** | 18% features | 4% features | 78% ↓ |
-| **Cross-team Collaboration** | 2.1/10 rating | 8.4/10 rating | 300% ↑ |
-| **Knowledge Reuse** | 15% | 73% | 387% ↑ |
+| Área                         | Baseline               | Resultado              | Impacto |
+|------------------------------|------------------------|------------------------|---------|
+| **Development Velocity**     | 40 story points/sprint | 67 story points/sprint | 68% ↑   |
+| **Bug Rate**                 | 2.3 bugs/feature       | 0.7 bugs/feature       | 70% ↓   |
+| **Feature Rollback**         | 18% features           | 4% features            | 78% ↓   |
+| **Cross-team Collaboration** | 2.1/10 rating          | 8.4/10 rating          | 300% ↑  |
+| **Knowledge Reuse**          | 15%                    | 73%                    | 387% ↑  |
 
 ### **Métricas Financeiras**
 

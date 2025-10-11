@@ -32,6 +32,6 @@ This section contains all templates and structures needed to implement Matrix Pr
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../implementation-guide)
+- [Complete Implementation Guide](../index)
 - [Organizational Examples](../examples)
 - [Validation Tools](../tools)

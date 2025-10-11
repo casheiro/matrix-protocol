@@ -55,15 +55,15 @@ Estrutura_TechCorp:
     - COO: "Emily Watson"
     - CHRO: "David Kim"
   
-  divisoes: 3
+  divisoes:
     Divisao_Produto:
       chefe: "VP Produto - Lisa Zhang"
       funcionarios: 320
-      tribos: 2
+      tribos:
         Tribo_Experiencia_Cliente:
           lider: "Diretor UX - James Park"
           funcionarios: 180
-          squads: 5
+          squads:
             - squad: "Mobile Apps"
               foco: "Aplicações iOS/Android"
               funcionarios: 35
@@ -83,7 +83,7 @@ Estrutura_TechCorp:
         Tribo_Engenharia_Plataforma:
           lider: "Diretor Plataforma - Ana Rodriguez"
           funcionarios: 140
-          squads: 3
+          squads:
             - squad: "API Gateway"
               foco: "Arquitetura de microsserviços"
               funcionarios: 45
@@ -97,11 +97,11 @@ Estrutura_TechCorp:
     Divisao_Engenharia:
       chefe: "VP Engenharia - Robert Johnson"
       funcionarios: 350
-      tribos: 3
+      tribos:
         Tribo_Sistemas_Core:
           lider: "Diretor Backend - Maria Santos"
           funcionarios: 140
-          squads: 4
+          squads:
             - squad: "Sistemas de Pagamento"
               foco: "Transações financeiras"
               funcionarios: 35
@@ -118,7 +118,7 @@ Estrutura_TechCorp:
         Tribo_Dados_IA:
           lider: "Diretor IA - Dr. Kevin Wu"
           funcionarios: 120
-          squads: 3
+          squads:
             - squad: "Machine Learning"
               foco: "Modelos ML/treinamento"
               funcionarios: 40
@@ -132,7 +132,7 @@ Estrutura_TechCorp:
         Tribo_DevOps:
           lider: "Diretor Infraestrutura - Tom Anderson"
           funcionarios: 90
-          squads: 2
+          squads:
             - squad: "Infraestrutura Cloud"
               foco: "AWS/Azure/GCP"
               funcionarios: 45
@@ -143,11 +143,11 @@ Estrutura_TechCorp:
     Divisao_Operacoes:
       chefe: "VP Operações - Jennifer Lee"
       funcionarios: 130
-      tribos: 1
+      tribos:
         Tribo_Operacoes_Negocio:
           lider: "Diretor Operações - Michael Brown"
           funcionarios: 130
-          squads: 3
+          squads:
             - squad: "Sucesso do Cliente"
               foco: "Gestão de relacionamento com clientes"
               funcionarios: 50
@@ -182,14 +182,14 @@ Estrutura_TechCorp:
 
 ### Problemas de Gestão do Conhecimento
 
-| Categoria | Métrica | Valor | Impacto |
-|-----------|---------|-------|---------|
-| **Tomada de Decisão** | Tempo médio para encontrar info relevante | 2,5 horas | $180K/mês em perda de produtividade |
-| **Onboarding** | Tempo até produtividade para novos contratados | 12 semanas | $85K por novo contratado |
-| **Retrabalho** | Projetos requerendo revisões importantes | 35% | $2,1M anuais |
-| **Perda de Conhecimento** | Conhecimento crítico em risco (pontos únicos) | 127 áreas | Alto risco de bus factor |
-| **Compliance** | Achados de auditoria por trimestre | 23 achados | Exposição regulatória |
-| **Inovação** | Tempo de ideia para protótipo | 8 semanas | Desvantagem competitiva |
+| Categoria                 | Métrica                                        | Valor      | Impacto                             |
+|---------------------------|------------------------------------------------|------------|-------------------------------------|
+| **Tomada de Decisão**     | Tempo médio para encontrar info relevante      | 2,5 horas  | $180K/mês em perda de produtividade |
+| **Onboarding**            | Tempo até produtividade para novos contratados | 12 semanas | $85K por novo contratado            |
+| **Retrabalho**            | Projetos requerendo revisões importantes       | 35%        | $2,1M anuais                        |
+| **Perda de Conhecimento** | Conhecimento crítico em risco (pontos únicos)  | 127 áreas  | Alto risco de bus factor            |
+| **Compliance**            | Achados de auditoria por trimestre             | 23 achados | Exposição regulatória               |
+| **Inovação**              | Tempo de ideia para protótipo                  | 8 semanas  | Desvantagem competitiva             |
 
 ### Pontos de Dor em Comunicação e Colaboração
 
@@ -843,7 +843,7 @@ conteudo: |
   ### Requisitos de Implementação
   
   #### Componentes React
-  ```typescript
+  ``typescript
   // Todos os componentes devem seguir este padrão de interface
   interface ComponentProps {
     className?: string;
@@ -872,11 +872,11 @@ conteudo: |
       </button>
     );
   };
-  ```
+  ``
 
   
   #### Componentes Vue
-  ```vue
+  ``vue
   <!-- Todos os componentes Vue devem incluir tipagem TypeScript adequada -->
   <template>
     <button 
@@ -904,7 +904,7 @@ conteudo: |
     testId: 'button'
   });
   </script>
-  ```
+  ``
 
   
   ### Requisitos de Teste
@@ -976,12 +976,12 @@ promocao:
 
 #### **Resultados Mensurados da FASE 2**
 
-| Área Piloto | UKIs Criadas | Conflitos de Conhecimento Resolvidos | Tempo para Encontrar Info | Satisfação do Usuário |
-|-------------|--------------|---------------------------------------|-------------------------|----------------------|
-| **Experiência do Cliente** | 156 UKIs | 23 inconsistências de design | 45min → 8min | 87% positivo |
-| **Segurança & Compliance** | 78 UKIs | 31 interpretações de política | 60min → 12min | 91% positivo |
-| **Comitê de Arquitetura** | 103 UKIs | 18 decisões arquiteturais | 90min → 15min | 84% positivo |
-| **Total** | **337 UKIs** | **72 conflitos** | **65min → 12min** | **87% satisfação** |
+| Área Piloto                | UKIs Criadas | Conflitos de Conhecimento Resolvidos | Tempo para Encontrar Info | Satisfação do Usuário |
+|----------------------------|--------------|--------------------------------------|---------------------------|-----------------------|
+| **Experiência do Cliente** | 156 UKIs     | 23 inconsistências de design         | 45min → 8min              | 87% positivo          |
+| **Segurança & Compliance** | 78 UKIs      | 31 interpretações de política        | 60min → 12min             | 91% positivo          |
+| **Comitê de Arquitetura**  | 103 UKIs     | 18 decisões arquiteturais            | 90min → 15min             | 84% positivo          |
+| **Total**                  | **337 UKIs** | **72 conflitos**                     | **65min → 12min**         | **87% satisfação**    |
 
 ### FASE 3: Fluxos ZOF (Julho - Setembro 2024)
 
@@ -1189,12 +1189,12 @@ integracao_mef:
 
 **Métricas de Performance de Fluxo**
 
-| Tipo de Fluxo | Antes ZOF | Depois ZOF | Melhoria |
-|---------------|-----------|-----------|----------|
-| **Decisões Arquiteturais** | 3-6 semanas | 1-2 semanas | **60% mais rápido** |
-| **Planejamento de Funcionalidades** | 45-90 min reuniões | 20-30 min | **65% redução** |
-| **Revisões de Segurança** | 5-8 dias | 2-3 dias | **50% mais rápido** |
-| **Resposta a Incidentes** | 4-8 horas MTTR | 1-3 horas | **70% melhoria** |
+| Tipo de Fluxo                       | Antes ZOF          | Depois ZOF  | Melhoria            |
+|-------------------------------------|--------------------|-------------|---------------------|
+| **Decisões Arquiteturais**          | 3-6 semanas        | 1-2 semanas | **60% mais rápido** |
+| **Planejamento de Funcionalidades** | 45-90 min reuniões | 20-30 min   | **65% redução**     |
+| **Revisões de Segurança**           | 5-8 dias           | 2-3 dias    | **50% mais rápido** |
+| **Resposta a Incidentes**           | 4-8 horas MTTR     | 1-3 horas   | **70% melhoria**    |
 
 **Benefícios de Integração de Conhecimento**
 - **Taxa de Consulta ao Oráculo:** 95% das decisões agora consultam conhecimento existente

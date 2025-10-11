@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md.
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
 
 > "A mente que se abre a uma nova ideia jamais voltará ao seu tamanho original." — Albert Einstein
 
@@ -536,15 +536,4 @@ derived_authority_implementation:
       
       A escolha depende dos requisitos específicos do seu projeto e 
       das políticas organizacionais definidas em hierarchies.domain.technical.governance."
-```
-
-
----
-
-## 8. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- MOC — Matrix Ontology Catalog  
-- MEP — Matrix Epistemic Principle  
-- MAL — Matrix Arbiter Layer  
+``` 

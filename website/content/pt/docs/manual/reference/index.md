@@ -11,7 +11,6 @@ Esta seção contém material de referência avançado, estudos de caso detalhad
 
 ### Casos de Implementação
 - **[Caso de Estudo TechCorp](./techcorp-case-study)** - Análise profunda da implementação de 18 meses na TechCorp
-- **[TechCorp Case Study EN](./techcorp-case-study-en)** - Versão em inglês do estudo de caso TechCorp
 
 ## 📖 Tipos de Material de Referência
 
@@ -93,7 +92,7 @@ Esta seção contém material de referência avançado, estudos de caso detalhad
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
+- [Guia de Implementação Completo](../index.md)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Ferramentas de Validação](../tools)

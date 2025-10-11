@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é a versão em inglês.
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém **APENAS EXEMPLOS ILUSTRATIVOS** (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
 
@@ -242,13 +242,3 @@ example_organizational_vocabulary:
     - "qualidade_atendimento"
     - "interoperabilidade_sistemas"
 ```
-
-
----
-
-## 8. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- MOC — Matrix Ontology Catalog  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  

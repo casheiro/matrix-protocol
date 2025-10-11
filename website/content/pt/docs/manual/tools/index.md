@@ -10,8 +10,7 @@ Esta seção contém ferramentas práticas, listas de verificação e recursos p
 ## ✅ Checklists de Validação
 
 ### Ferramentas de Verificação
-- **[Validation Checklists](./validation-checklists)** - Checklists de validação em inglês para todas as fases
-- **[Checklists de Validação PT](./validation-checklists-pt)** - Listas de verificação em português para implementação
+- **[Checklists de Validação](./validation-checklists)** - Listas de verificação para implementação
 
 ## 🛠️ Tipos de Validação
 
@@ -59,7 +58,7 @@ Esta seção contém ferramentas práticas, listas de verificação e recursos p
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
+- [Guia de Implementação Completo](../index.md)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Material de Referência](../reference)

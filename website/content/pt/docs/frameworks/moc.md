@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MOC_MATRIX_ONTOLOGY_CATALOG.md.
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
 
 > 🚨 **AVISO IMPORTANTE**: Este documento contém EXEMPLOS ILUSTRATIVOS (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. Cada organização define suas próprias hierarquias conforme suas necessidades específicas. Exemplos servem apenas como referência conceitual.
 
@@ -549,14 +549,3 @@ governance:
 - *Evolução*: Mudanças organizacionais não quebram o protocolo
 - *Interoperabilidade*: Diferentes organizações podem compartilhar conhecimento
 - *Contexto IA*: Inteligências entendem hierarquias organizacionais específicas
-
----
-
-## 8. Referências Cruzadas
-
-- Protocolo Matrix — Especificação Principal  
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MEP — Matrix Epistemic Principle  
-- MAL — Matrix Arbiter Layer  

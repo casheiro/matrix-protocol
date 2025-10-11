@@ -17,10 +17,7 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 Exemplo abrangente que demonstra a transformação de conhecimento caótico em estrutura organizada usando o Matrix Protocol.
 
 **Conteúdo incluído:**
-- **[Visão Geral](./knowledge-comparison/README)** - Introdução à demonstração
-- **[Script de Demonstração](./knowledge-comparison/demonstration-script)** - Roteiro detalhado
-- **[Roadmap de Implementação](./knowledge-comparison/implementation-roadmap)** - Plano de execução
-- **[Slides de Apresentação](./knowledge-comparison/presentation-slides)** - Material de apresentação
+- **[Visão Geral](./knowledge-comparison/index)** - Introdução à demonstração
 
 ### Integração com Ferramentas
 - **[StackSpot Agent Prompt](./knowledge-comparison/stackspot-agent-prompt)** - Prompt para agente StackSpot

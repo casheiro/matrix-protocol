@@ -10,7 +10,7 @@
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação dos frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
 ---
-
+<!-- TODO:("Ajustar ancoras pois como está implementado só funciona para renderização html além de abrir em uma nova página ao invés de navegar pelo arquivo") -->
 ## 📋 Sumário
 
 ### **PARTE I: PREPARAÇÃO E ASSESSMENT**
@@ -1117,16 +1117,16 @@ governance:
 
 #### **Comparativo de Templates por Porte**
 
-| Aspecto | Startup | Scale-up | Enterprise |
-|---------|---------|----------|------------|
-| **Hierarquias** | 4 | 5-6 | 7+ |
-| **Nós Total** | ~25 | ~60 | ~150+ |
-| **Níveis Autoridade** | 3 | 4 | 6 |
-| **Compliance** | Básico | Intermediário | Completo |
-| **Aprovação MOC** | Founder | Tribe Leads | Committee |
-| **Tempo Resolução** | 48h | 1 semana | 5 dias úteis |
-| **Auditoria** | 1 ano | 3 anos | 7 anos |
-| **Governança** | Informal | Semi-formal | Formal |
+| Aspecto               | Startup  | Scale-up      | Enterprise   |
+|-----------------------|----------|---------------|--------------|
+| **Hierarquias**       | 4        | 5-6           | 7+           |
+| **Nós Total**         | ~25      | ~60           | ~150+        |
+| **Níveis Autoridade** | 3        | 4             | 6            |
+| **Compliance**        | Básico   | Intermediário | Completo     |
+| **Aprovação MOC**     | Founder  | Tribe Leads   | Committee    |
+| **Tempo Resolução**   | 48h      | 1 semana      | 5 dias úteis |
+| **Auditoria**         | 1 ano    | 3 anos        | 7 anos       |
+| **Governança**        | Informal | Semi-formal   | Formal       |
 
 <a name="cap5-hierarquias"></a>
 ## Capítulo 5: Hierarquias e Governança
@@ -2751,28 +2751,28 @@ taxonomy_evolution:
 
 relationship_analysis:
   relationship_types_used:
-    depends_on: "34.2% (156 relationships)"
+    - depends_on: "34.2% (156 relationships)"
       example: "uki:platform:adr:microservices-001 depends_on uki:platform:infrastructure:kubernetes-setup-001"
       
-    implements: "22.7% (103 relationships)"
+    - implements: "22.7% (103 relationships)"
       example: "uki:backend:procedure:deployment-001 implements uki:platform:adr:ci-cd-strategy-001"
       
-    conflicts_with: "8.9% (41 relationships)"
+    - conflicts_with: "8.9% (41 relationships)"
       example: "uki:frontend:adr:state-management-redux-001 conflicts_with uki:frontend:adr:state-management-mobx-001"
       
-    complements: "12.4% (57 relationships)"
+    - complements: "12.4% (57 relationships)"
       example: "uki:security:procedure:incident-response-001 complements uki:security:procedure:postmortem-001"
       
-    overrides: "7.8% (36 relationships)"
+    - overrides: "7.8% (36 relationships)"
       example: "uki:platform:adr:database-postgres-v2-001 overrides uki:platform:adr:database-mysql-001"
       
-    amends: "6.7% (31 relationships)"
+    - amends: "6.7% (31 relationships)"
       example: "uki:api:procedure:versioning-v2-001 amends uki:api:procedure:versioning-001"
       
-    precedes: "4.8% (22 relationships)"
+    - precedes: "4.8% (22 relationships)"
       example: "uki:platform:procedure:environment-setup-001 precedes uki:platform:procedure:application-deployment-001"
       
-    equivalent_to: "2.5% (11 relationships)"
+    - equivalent_to: "2.5% (11 relationships)"
       example: "uki:mobile:adr:state-management-001 equivalent_to uki:web:adr:state-management-001"
       
   relationship_quality_metrics:

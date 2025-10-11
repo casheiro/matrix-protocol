@@ -12,11 +12,11 @@
 ## 📊 Visão Geral dos Templates
 
 | Tipo de Template | Porte da Organização | Funcionários | Complexidade | Hierarquias | Tempo de Implementação |
-|------------------|----------------------|--------------|-------------|-------------|------------------------|
-| **Startup** | Pequena | 5-50 | Simples | 4 centrais | 2-3 meses |
-| **Scale-up** | Média | 50-200 | Moderada | 5-6 | 3-4 meses |
-| **Enterprise** | Grande | 200-1000 | Complexa | 6-7 | 4-6 meses |
-| **Corporação** | Muito Grande | 1000+ | Avançada | 7+ | 6-12 meses |
+|------------------|----------------------|--------------|--------------|-------------|------------------------|
+| **Startup**      | Pequena              | 5-50         | Simples      | 4 centrais  | 2-3 meses              |
+| **Scale-up**     | Média                | 50-200       | Moderada     | 5-6         | 3-4 meses              |
+| **Enterprise**   | Grande               | 200-1000     | Complexa     | 6-7         | 4-6 meses              |
+| **Corporação**   | Muito Grande         | 1000+        | Avançada     | 7+          | 6-12 meses             |
 
 ---
 
@@ -1766,16 +1766,16 @@ politicas_arbitragem_nomeadas:
 
 ### Matriz de Decisão de Seleção de Template
 
-| Característica | Startup | Scale-up | Enterprise | Corporação |
-|----------------|---------|----------|------------|-------------|
-| **Contagem de Funcionários** | 5-50 | 50-200 | 200-1000 | 1000+ |
-| **Níveis de Hierarquia** | 2 níveis | 3 níveis | 4 níveis | 5+ níveis |
-| **Velocidade de Decisão** | Horas | Dias | Semanas | Meses |
-| **Complexidade de Compliance** | Básica | Moderada | Alta | Regulatória |
-| **Escopo Geográfico** | Local | Regional | Nacional | Global |
-| **Requisitos Regulatórios** | Mínimos | Setoriais | Multi-setoriais | Empresa pública |
-| **Tolerância a Mudança** | Alta | Média | Baixa | Muito Baixa |
-| **Nível de Formalidade** | Informal | Semi-formal | Formal | Altamente Formal |
+| Característica                 | Startup  | Scale-up    | Enterprise      | Corporação       |
+|--------------------------------|----------|-------------|-----------------|------------------|
+| **Contagem de Funcionários**   | 5-50     | 50-200      | 200-1000        | 1000+            |
+| **Níveis de Hierarquia**       | 2 níveis | 3 níveis    | 4 níveis        | 5+ níveis        |
+| **Velocidade de Decisão**      | Horas    | Dias        | Semanas         | Meses            |
+| **Complexidade de Compliance** | Básica   | Moderada    | Alta            | Regulatória      |
+| **Escopo Geográfico**          | Local    | Regional    | Nacional        | Global           |
+| **Requisitos Regulatórios**    | Mínimos  | Setoriais   | Multi-setoriais | Empresa pública  |
+| **Tolerância a Mudança**       | Alta     | Média       | Baixa           | Muito Baixa      |
+| **Nível de Formalidade**       | Informal | Semi-formal | Formal          | Altamente Formal |
 
 ### Diretrizes de Customização
 
@@ -1830,16 +1830,16 @@ Organizações tipicamente evoluem através dos templates conforme crescem:
 
 ## 📊 Resumo de Comparação de Templates
 
-| Funcionalidade | Startup | Scale-up | Enterprise | Corporação |
-|---------|---------|----------|------------|-------------|
-| **Hierarquias** | 4 centrais | 5 equilibradas | 6 abrangentes | 7+ avançadas |
-| **Níveis de Maturidade** | 3 simples | 4 moderados | 5 rigorosos | 6 regulatórios |
-| **Níveis de Autoridade** | 3 planos | 5 estruturados | 6 hierárquicos | 8 corporativos |
-| **Políticas de Arbitragem** | 1 velocidade | 1 equilibrada | 2 governança | 3+ compliance |
-| **Foco de Compliance** | Básico | Setorial | Multi-regulatório | Global/Público |
-| **Tempo de Implementação** | 2-3 meses | 3-4 meses | 4-6 meses | 6-12 meses |
-| **Esforço de Manutenção** | Baixo | Médio | Alto | Muito Alto |
-| **Sobrecarga de Governança** | Mínima | Moderada | Significativa | Extensiva |
+| Funcionalidade               | Startup      | Scale-up       | Enterprise        | Corporação     |
+|------------------------------|--------------|----------------|-------------------|----------------|
+| **Hierarquias**              | 4 centrais   | 5 equilibradas | 6 abrangentes     | 7+ avançadas   |
+| **Níveis de Maturidade**     | 3 simples    | 4 moderados    | 5 rigorosos       | 6 regulatórios |
+| **Níveis de Autoridade**     | 3 planos     | 5 estruturados | 6 hierárquicos    | 8 corporativos |
+| **Políticas de Arbitragem**  | 1 velocidade | 1 equilibrada  | 2 governança      | 3+ compliance  |
+| **Foco de Compliance**       | Básico       | Setorial       | Multi-regulatório | Global/Público |
+| **Tempo de Implementação**   | 2-3 meses    | 3-4 meses      | 4-6 meses         | 6-12 meses     |
+| **Esforço de Manutenção**    | Baixo        | Médio          | Alto              | Muito Alto     |
+| **Sobrecarga de Governança** | Mínima       | Moderada       | Significativa     | Extensiva      |
 
 Estes templates fornecem uma base sólida para implementação do Protocolo Matrix mantendo a flexibilidade para adaptar às necessidades e restrições organizacionais específicas.
 

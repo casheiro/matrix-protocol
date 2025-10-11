@@ -166,7 +166,7 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Complete Manual](manual/implementation-guide.md) - 4,600+ lines, 15 chapters
+- 📖 [Complete Manual](manual/index.md) - 4,600+ lines, 15 chapters
 - ✅ [Validation Checklist](/manual/tools/validation-checklists) - Avoid common mistakes
 - 📊 [TechCorp Case](/manual/reference/techcorp-case-study-en) - Illustrative example
 
@@ -210,7 +210,7 @@ relationships:
 ## 📞 Support and Next Steps
 
 ### **If You Get Stuck**
-1. 🔍 **Consult Complete Manual**: [See here](manual/implementation-guide.md)
+1. 🔍 **Consult Complete Manual**: [See here](manual/index.md)
 2. ✅ **Use Checklist**: [Phase validation](/manual/tools/validation-checklists)
 3. 📖 **Study TechCorp Case**: [How it was implemented in practice](/manual/reference/techcorp-case-study-en)
 4. 💬 **GitHub Discussions**: For specific questions

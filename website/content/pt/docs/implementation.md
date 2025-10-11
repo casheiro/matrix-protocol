@@ -5,7 +5,7 @@
 **Data:** Janeiro 2025  
 **Protocolo:** Matrix Protocol (protocolo semântico para colaboração humano-IA)
 
-> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) (4.600+ linhas, 15 capítulos).
+> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](manual/index.md) (4.600+ linhas, 15 capítulos).
 
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação para os frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
@@ -229,7 +229,7 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🛠️ Recursos e Downloads
 
 ### **Manual Completo (4.600+ linhas)**
-📖 [Download Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md)
+📖 [Download Manual Completo](manual/index.md)
 
 **Conteúdo Detalhado:**
 - **Parte I**: Preparação e Avaliação (Capítulos 1-3)
@@ -267,7 +267,7 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 4. ✅ [Primeiro UKI](quickstart.md) - 30-60 minutos
 
 ### **Para Estudo Detalhado**
-1. 📖 [Manual Completo](manual/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md) - 4.600+ linhas
+1. 📖 [Manual Completo](manual/index.md) - 4.600+ linhas
 2. 📊 [Caso TechCorp](manual/reference/) - Implementação real
 3. 🏗️ [Especificação do Protocolo](protocol/index.md) - Fundamentos
 

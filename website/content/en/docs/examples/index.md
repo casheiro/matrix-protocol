@@ -17,7 +17,7 @@ This section presents practical examples, real case studies and organizational i
 Comprehensive example demonstrating the transformation of chaotic knowledge into organized structure using Matrix Protocol.
 
 **Content included:**
-- **[Overview](./knowledge-comparison/README)** - Introduction to the demonstration
+- **[Overview](./knowledge-comparison/index)** - Introduction to the demonstration
 - **[Demonstration Script](./knowledge-comparison/demonstration-script)** - Detailed walkthrough
 - **[Implementation Roadmap](./knowledge-comparison/implementation-roadmap)** - Execution plan
 - **[Presentation Slides](./knowledge-comparison/presentation-slides)** - Presentation material

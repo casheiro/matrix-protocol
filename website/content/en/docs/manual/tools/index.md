@@ -59,7 +59,7 @@ This section contains practical tools, verification lists and resources to valid
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../implementation-guide)
+- [Complete Implementation Guide](../index)
 - [Organizational Templates](../templates)
 - [Practical Examples](../examples)
 - [Reference Material](../reference)

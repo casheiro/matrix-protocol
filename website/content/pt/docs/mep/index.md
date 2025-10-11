@@ -3,7 +3,7 @@
 **Versão:** 0.0.1-beta  
 **Última Atualização:** 2025-10-05  
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa. A versão autoritativa é MEP_MATRIX_EPISTEMIC_PRINCIPLE.md.
+> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
 
 > 📜 "O conhecimento é maleável; a autoridade é derivada; a explicabilidade é mandatória."
 
@@ -114,13 +114,13 @@ Implementações DEVEM fornecer:
 ### Complementaridade com Frameworks
 O MEP orienta a filosofia; frameworks executam a implementação:
 
-| Aspecto | MEP (Filosofia) | Framework (Implementação) |
-|---------|-----------------|---------------------------|
-| **Maturidade** | Por que estratificar conhecimento | MEF: campo `maturity_ref` |
-| **Promoção** | Quando promover UKI | MEF: campo `promotion_rationale` |
-| **Autoridade** | Por que autoridade é derivada | MEF: campos `scope_ref`, `governance_ref` |
-| **Arbitragem** | Critérios epistemológicos | MAL: lógica de decisão |
-| **Explicabilidade** | Por que é mandatória | OIF: interface de comunicação |
+| Aspecto             | MEP (Filosofia)                   | Framework (Implementação)                 |
+|---------------------|-----------------------------------|-------------------------------------------|
+| **Maturidade**      | Por que estratificar conhecimento | MEF: campo `maturity_ref`                 |
+| **Promoção**        | Quando promover UKI               | MEF: campo `promotion_rationale`          |
+| **Autoridade**      | Por que autoridade é derivada     | MEF: campos `scope_ref`, `governance_ref` |
+| **Arbitragem**      | Critérios epistemológicos         | MAL: lógica de decisão                    |
+| **Explicabilidade** | Por que é mandatória              | OIF: interface de comunicação             |
 
 ---
 
@@ -182,12 +182,3 @@ OIF comunica: Feedback claro com base epistemológica ao usuário
 *Mini-exemplo de Autoridade:* Squad não pode definir policy org-level — autoridade é derivada do scope_ref permitido.
 
 *Mini-exemplo de Explicabilidade:* Rejeição de UKI no evaluate_for_enrich gera feedback claro via OIF com base epistemológica.
-
----
-
-## 8. Referências Cruzadas
-
-- MEF — Matrix Embedding Framework  
-- ZOF — Zion Orchestration Framework  
-- OIF — Operator Intelligence Framework  
-- MOC — Matrix Ontology Catalog  
