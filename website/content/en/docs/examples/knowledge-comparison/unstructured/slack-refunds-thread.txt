@@ -1,0 +1,53 @@
+Slack Thread: #squad-payments - Topic: Refunds Policy
+
+[10:23] maria.po: team, we got another complaint about refund timeframe. customer said 7 days is too short
+
+[10:25] joao.techlead: our policy is 7 business days, right?
+
+[10:26] ana.qa: yes, but competition gives more time. amazon gives 15 days, walmart 30
+
+[10:45] pedro.senior: team, technically we can process in 2-3 days, the problem is manual process
+
+[11:02] carlos.devops: current gateway is slow. stripe takes time, paypal is faster
+
+[2 weeks later...]
+
+[14:12] maria.po: guys, VIP customer wants 14 days. can I approve as exception?
+
+[14:15] joao.techlead: we need to standardize this. different people saying different timeframes
+
+[14:18] ana.qa: accounting team mentioned they follow 30 days for their reconciliation
+
+[14:22] pedro.senior: but that's different process. we're talking about customer-facing refunds
+
+[14:30] carlos.devops: what about international customers? their banks take longer
+
+[15:45] maria.po: so what's the final rule? I have customer waiting
+
+[15:47] joao.techlead: let's approve 14 days for VIP this time, but we need proper policy next sprint
+
+[16:02] ana.qa: should I update the FAQ? what timeframe should I put?
+
+[16:15] pedro.senior: maybe "7-14 business days depending on customer tier"?
+
+[16:30] carlos.devops: that's too vague. customers won't like uncertainty
+
+[2 days later...]
+
+[09:15] maria.po: another complaint. customer says competitor promised instant refund for digital products
+
+[09:18] joao.techlead: we don't even differentiate digital vs physical yet
+
+[09:22] ana.qa: should we? that sounds complex
+
+[09:45] pedro.senior: technically possible but need product owner approval
+
+[10:30] carlos.devops: also affects taxes and accounting. not just technical change
+
+[11:15] maria.po: meanwhile what do I tell customers? each agent is saying different things
+
+[11:18] joao.techlead: use 7 days for now, escalate VIP to me
+
+[11:30] ana.qa: documenting current state is a mess. we need proper knowledge base
+
+[Conversation continues with 15+ more messages without clear resolution...]
