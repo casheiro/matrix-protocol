@@ -232,19 +232,39 @@ conteudo: |
       medicao: "Trimestral via survey usuários"
   ```
 
-<!--TODO:("Ajustar e formatar adequadamente o conteúdo abaixo pois parecem desconexos") -->
-# === Exemplos ===
-exemplos:
-  - entrada: "Equipe de produto quer implementar novo sistema de analytics de usuário"
-    saida: "Equipe consulta classificação de dados, implementa controles de privacidade apropriados, obtém aprovação do comitê de governança, e implementa com monitoramento de qualidade automático."
-    
-  - entrada: "Auditoria regulatória solicita evidências de compliance LGPD"
-    saida: "Sistema de governança fornece trilhas de auditoria completas, documentação de consentimentos, evidências de controles técnicos, e relatórios de qualidade de dados."
-    
-  - entrada: "Incidente de segurança potencialmente expondo dados de clientes"
-    saida: "Framework aciona plano de resposta, notifica autoridades conforme necessário, executa análise de impacto, implementa correções, e documenta lições aprendidas."
+## 📋 Exemplos de Aplicação
 
-# === Relacionamentos (Cross-Hierárquicos) ===
+### Cenário 1: Implementação de Sistema de Analytics
+**Situação**: Equipe de produto quer implementar novo sistema de analytics de usuário
+
+**Processo**:
+1. Equipe consulta framework de classificação de dados
+2. Implementa controles de privacidade apropriados 
+3. Obtém aprovação do comitê de governança
+4. Implementa com monitoramento de qualidade automático
+
+### Cenário 2: Auditoria Regulatória LGPD
+**Situação**: Auditoria regulatória solicita evidências de compliance LGPD
+
+**Resposta do Sistema**:
+1. Sistema de governança fornece trilhas de auditoria completas
+2. Documentação de consentimentos disponibilizada
+3. Evidências de controles técnicos apresentadas
+4. Relatórios de qualidade de dados gerados automaticamente
+
+### Cenário 3: Incidente de Segurança
+**Situação**: Incidente de segurança potencialmente expondo dados de clientes
+
+**Ações do Framework**:
+1. Framework aciona plano de resposta a incidentes
+2. Notifica autoridades conforme necessário
+3. Executa análise de impacto nos dados afetados
+4. Implementa correções imediatas
+5. Documenta lições aprendidas para melhoria contínua
+
+## 🔗 Relacionamentos Cross-Hierárquicos
+
+```yaml
 relacionamentos:
   # Relacionamentos Cross-Divisional
   - tipo: implementa
@@ -289,14 +309,20 @@ relacionamentos:
   - tipo: atende
     alvo: uki:regulatorio:sox:controle:acuracidade-relatorios-financeiros-001
     descricao: "Qualidade de dados financeiros atende controles SOX"
+```
 
-# === Governança Multi-Hierárquica ===
+## 🏛️ Governança Multi-Hierárquica
+
+```yaml
 dominio_influencia: "organizacao_completa"
 ref_ciclo_vida: framework_ativo
 ref_autoridade_aprovacao: comite_executivo
 ref_autoridade_manutencao: cdo_data_office
+```
 
-# Tracking de Evolução Cross-Organizacional
+## 📈 Tracking de Evolução Cross-Organizacional
+
+```yaml
 evolucao:
   impacto_divisoes:
     divisao_produto: "Implementação de privacy-by-design em todos os produtos"
@@ -312,8 +338,11 @@ evolucao:
     reducao_tempo_compliance: "65% (40h → 14h para auditorias)"
     melhoria_qualidade_dados: "34% (72% → 96% precisão média)"
     reducao_riscos_seguranca: "78% (18 → 4 incidentes anuais)"
+```
 
-# Relacionamentos Emergentes (Detectados pelo Sistema)
+## 🔍 Relacionamentos Emergentes (Detectados pelo Sistema)
+
+```yaml
 relacionamentos_emergentes:
   - tipo: habilita
     alvo: uki:organizacao:iniciativa:transformacao-digital-ai-001
@@ -326,6 +355,7 @@ relacionamentos_emergentes:
     descricao: "Framework de governança é pré-requisito para estratégias de monetização"
     confianca: 92%
     evidencia: "Parceiros externos requerem evidências de governança de dados"
+```
 
 ---
 

@@ -6,7 +6,6 @@ layout: docs
 sidebar: true
 toc: true
 ---
-<!-- TODO:("Ajustar esse conteúdo pois tem muitos links com textos diferentes que levam para o mesmo lugr, então precisa ser revisado") -->
 # Frameworks Matrix Protocol
 
 O Matrix Protocol é composto por **5 frameworks interdependentes** que trabalham em conjunto para criar um sistema robusto de colaboração humano-IA. Cada framework tem sua especialidade e se integra com os demais.
@@ -40,13 +39,13 @@ O Matrix Protocol é composto por **5 frameworks interdependentes** que trabalha
 ## 🎯 Por Onde Começar?
 
 ### Para Iniciantes
-1. **[MOC](./moc)** - Comece definindo sua ontologia organizacional
-2. **[MEF](./mef)** - Aprenda a estruturar conhecimento
-3. **[ZOF](./zof)** - Implemente workflows básicos
+1. **[MOC - Matrix Ontology Catalog](./moc)** - Comece definindo sua ontologia organizacional
+2. **[MEF - Matrix Embedding Framework](./mef)** - Aprenda a estruturar conhecimento
+3. **[ZOF - Zion Orchestration Framework](./zof)** - Implemente workflows básicos
 
 ### Para Implementação Avançada
-1. **[OIF](./oif)** - Configure arquétipos de IA
-2. **[MAL](./mal)** - Configure arbitragem e governança
+1. **[OIF - Operator Intelligence Framework](./oif)** - Configure arquétipos de IA
+2. **[MAL - Matrix Arbiter Layer](./mal)** - Configure arbitragem e governança
 
 ### Para Compreensão Teórica
 1. **[MEF Ontology](./mef-ontology)** - Fundamentos ontológicos do MEF
@@ -74,20 +73,20 @@ graph TB
 ## 📖 Documentação Detalhada
 
 ### MEF - Matrix Embedding Framework
-- **[Especificação Completa](./mef)** - Estruturação de UKIs
-- **[Ontologia MEF](./mef-ontology)** - Fundamentos teóricos
+- **[MEF - Matrix Embedding Framework](./mef)** - Estruturação de UKIs
+- **[MEF Ontology](./mef-ontology)** - Fundamentos teóricos
 
 ### ZOF - Zion Orchestration Framework  
-- **[Especificação Completa](./zof)** - Estados canônicos e workflows
+- **[ZOF - Zion Orchestration Framework](./zof)** - Estados canônicos e workflows
 
 ### OIF - Operator Intelligence Framework
-- **[Especificação Completa](./oif)** - Arquétipos e agentes IA
+- **[OIF - Operator Intelligence Framework](./oif)** - Arquétipos e agentes IA
 
 ### MOC - Matrix Ontology Catalog
-- **[Especificação Completa](./moc)** - Catálogo ontológico
+- **[MOC - Matrix Ontology Catalog](./moc)** - Catálogo ontológico
 
 ### MAL - Matrix Arbiter Layer
-- **[Especificação Completa](./mal)** - Arbitragem determinística
+- **[MAL - Matrix Arbiter Layer](./mal)** - Arbitragem determinística
 
 ## 🚀 Recursos Práticos
 

@@ -10,39 +10,37 @@
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação dos frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
 ---
-<!-- TODO:("Ajustar ancoras pois como está implementado só funciona para renderização html além de abrir em uma nova página ao invés de navegar pelo arquivo") -->
 ## 📋 Sumário
 
 ### **PARTE I: PREPARAÇÃO E ASSESSMENT**
-- [Capítulo 1: Assessment Organizacional](#cap1-assessment)
-- [Capítulo 2: Mapeamento de Sistemas e Conhecimento](#cap2-mapeamento)
-- [Capítulo 3: Análise de Fluxos de Decisão](#cap3-decisoes)
+- [Capítulo 1: Assessment Organizacional](#capítulo-1-assessment-organizacional)
+- [Capítulo 2: Mapeamento de Sistemas e Conhecimento](#capítulo-2-mapeamento-de-sistemas-e-conhecimento)
+- [Capítulo 3: Análise de Fluxos de Decisão](#capítulo-3-análise-de-fluxos-de-decisão)
 
 ### **PARTE II: DESIGN DO MOC**
-- [Capítulo 4: Seleção de Template por Porte](#cap4-templates)
-- [Capítulo 5: Hierarquias e Governança](#cap5-hierarquias)
-- [Capítulo 6: Políticas de Arbitragem](#cap6-arbitragem)
+- [Capítulo 4: Seleção de Template por Porte](#capítulo-4-seleção-de-template-por-porte)
+- [Capítulo 5: Hierarquias e Governança](#capítulo-5-hierarquias-e-governança)
+- [Capítulo 6: Políticas de Arbitragem](#capítulo-6-políticas-de-arbitragem)
 
 ### **PARTE III: IMPLEMENTAÇÃO MEF**
-- [Capítulo 7: Piloto MEF e Primeiras UKIs](#cap7-piloto)
-- [Capítulo 8: Estruturação de Conhecimento Legado](#cap8-legado)
-- [Capítulo 9: Validação e Promoção](#cap9-validacao)
+- [Capítulo 7: Estruturação de Conhecimento (MEF)](#capítulo-7-estruturação-de-conhecimento-mef)
+- [Capítulo 8: Sistema de Relacionamentos e Dependências](#capítulo-8-sistema-de-relacionamentos-e-dependências)
+- [Capítulo 9: Validação e Conformidade MEF](#capítulo-9-validação-e-conformidade-mef)
 
 ### **PARTE IV: WORKFLOWS ZOF**
-- [Capítulo 10: Estados Canônicos e Checkpoints](#cap10-workflows)
-- [Capítulo 11: Integração com Sistemas Existentes](#cap11-integracao)
-- [Capítulo 12: Orquestração e Enriquecimento](#cap12-orquestracao)
+- [Capítulo 10: Workflows ZOF - Implementação e Estados Canônicos](#capítulo-10-workflows-zof---implementação-e-estados-canônicos)
+- [Capítulo 11: Processo de Enriquecimento e Arbitragem](#capítulo-11-processo-de-enriquecimento-e-arbitragem)
+- [Capítulo 12: Cultura Oracle-First e Sustentabilidade](#capítulo-12-cultura-oracle-first-e-sustentabilidade)
 
 ### **PARTE V: INTEGRAÇÃO E CONFORMIDADE**
-- [Capítulo 13: Integração Cross-Framework](#cap13-integracao)
-- [Capítulo 14: Validação e Conformidade Técnica](#cap14-validacao)
-- [Capítulo 15: Guia de Implementação Organizacional](#cap15-implementacao)
+- [Capítulo 13: Integração Cross-Framework](#capítulo-13-integração-cross-framework)
+- [Capítulo 14: Validação e Conformidade Técnica](#capítulo-14-validação-e-conformidade-técnica)
+- [Capítulo 15: Guia de Implementação Organizacional](#capítulo-15-guia-de-implementação-organizacional)
 
 ---
 
 ## PARTE I: PREPARAÇÃO E ASSESSMENT
 
-<a name="cap1-assessment"></a>
 ## Capítulo 1: Assessment Organizacional
 
 ### 1.1 Metodologia de Assessment
@@ -154,7 +152,6 @@ avaliacao_qualidade:
 - **89 conflitos** identificados em padrões arquiteturais
 - **78% da documentação** desatualizada há mais de 6 meses
 
-<a name="cap2-mapeamento"></a>
 ## Capítulo 2: Mapeamento de Sistemas e Conhecimento
 
 ### 2.1 Inventário Completo de Ativos de Conhecimento
@@ -256,7 +253,6 @@ avaliacao_qualidade:
 | **Aprovação** | 8% | >95% | 98% |
 | **Controle Versão** | 19% | >85% | 89% |
 
-<a name="cap3-decisoes"></a>
 ## Capítulo 3: Análise de Fluxos de Decisão
 
 ### 3.1 Mapeamento de Autoridade Real vs Formal
@@ -381,7 +377,6 @@ resolucao_pre_matrix:
 
 ## PARTE II: DESIGN DO MOC
 
-<a name="cap4-templates"></a>
 ## Capítulo 4: Seleção de Template por Porte
 
 ### 4.1 Framework de Seleção de Template
@@ -1128,7 +1123,6 @@ governance:
 | **Auditoria**         | 1 ano    | 3 anos        | 7 anos       |
 | **Governança**        | Informal | Semi-formal   | Formal       |
 
-<a name="cap5-hierarquias"></a>
 ## Capítulo 5: Hierarquias e Governança
 
 ### 5.1 Configuração Real da TechCorp (MOC v3.0)
@@ -1754,7 +1748,6 @@ policy_violation_case:
 ```
 
 
-<a name="cap6-arbitragem"></a>
 ## Capítulo 6: Políticas de Arbitragem
 
 ### 6.1 Os 127 Casos Reais de Conflito da TechCorp
@@ -2382,7 +2375,7 @@ prevention_effectiveness:
 
 ---
 
-## **Capítulo 7: Estruturação de Conhecimento (MEF)**
+## Capítulo 7: Estruturação de Conhecimento (MEF)
 
 ### **7.1 Estrutura UKI e Versionamento Semântico**
 
@@ -2817,7 +2810,7 @@ complex_relationship_examples:
 
 ---
 
-## **Capítulo 8: Sistema de Relacionamentos e Dependências**
+## Capítulo 8: Sistema de Relacionamentos e Dependências
 
 ### **8.1 Mapeamento de Dependências Organizacionais**
 
@@ -3095,7 +3088,7 @@ knowledge_health_metrics:
 
 ---
 
-## **Capítulo 9: Validação e Conformidade MEF**
+## Capítulo 9: Validação e Conformidade MEF
 
 ### **9.1 Critérios de Qualidade e Validação Automatizada**
 
@@ -3433,7 +3426,7 @@ industry_benchmarks:
 
 ---
 
-## **Capítulo 10: Workflows ZOF - Implementação e Estados Canônicos**
+## Capítulo 10: Workflows ZOF - Implementação e Estados Canônicos
 
 ### **10.1 Estados Canônicos em Workflows Reais TechCorp**
 
@@ -3730,7 +3723,7 @@ tool_integration:
 
 ---
 
-## **Capítulo 11: Processo de Enriquecimento e Arbitragem**
+## Capítulo 11: Processo de Enriquecimento e Arbitragem
 
 ### **11.1 Fluxo de Enriquecimento Real TechCorp**
 
@@ -3982,7 +3975,7 @@ real_arbitration_cases:
 
 ---
 
-## **Capítulo 12: Cultura Oracle-First e Sustentabilidade**
+## Capítulo 12: Cultura Oracle-First e Sustentabilidade
 
 ### **12.1 Transformação Cultural TechCorp**
 
@@ -4252,7 +4245,7 @@ lessons_learned:
 
 ---
 
-## **Capítulo 13: Integração Cross-Framework**
+## Capítulo 13: Integração Cross-Framework
 
 ### **13.1 Fluxo de Integração entre Componentes**
 
@@ -4475,7 +4468,7 @@ technical_conformance:
 
 ---
 
-## **Capítulo 14: Validação e Conformidade Técnica**
+## Capítulo 14: Validação e Conformidade Técnica
 
 ### **14.1 Testes de Integração**
 
@@ -4601,7 +4594,7 @@ common_issues:
 
 ---
 
-## **Capítulo 15: Guia de Implementação Organizacional**
+## Capítulo 15: Guia de Implementação Organizacional
 
 ### **15.1 Preparação e Assessment**
 
