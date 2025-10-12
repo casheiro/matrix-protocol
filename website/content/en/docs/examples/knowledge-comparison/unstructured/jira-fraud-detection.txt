@@ -1,0 +1,64 @@
+JIRA Ticket: PAYMENTS-1234
+Title: Implement fraud detection system improvements
+Status: In Progress
+Assignee: Ana Santos (QA)
+Reporter: Maria (PO)
+Date: 02/24/2024
+
+DESCRIPTION:
+We had a 23% increase in chargebacks last month. We need to improve our fraud detection system.
+
+Specific cases identified:
+1. Same IP made 15 purchases with different cards in 2 hours (Friday night)
+2. Customer used 8 different shipping addresses on the same day 
+3. $12,000 transaction passed without review (our threshold is $5000 but didn't work?)
+
+CURRENT ANALYSIS:
+- $5000 rule not catching high values (BUG?)
+- IP blocking not working properly
+- Address validation too permissive
+- CVV validation passed card with obviously invalid CVV (000)
+
+PROPOSALS:
+1. Lower threshold to $3000 (but might generate too much friction)
+2. Implement machine learning (maybe too complex now)
+3. Credit bureau integration (expensive)
+4. Improve basic validations (CVV, address)
+
+John (Tech Lead) commented: "$5000 threshold might be too high. Let's start with $3500 and monitor for 2 weeks"
+
+Pedro (Senior Dev) added: "There's a bug in CVV validation. '000', '111', '999' are passing. I'll fix this week"
+
+Carlos (DevOps) noted: "Fraud logs are too basic. We need better observability to investigate suspicious cases"
+
+IMPEDIMENTS:
+- We don't have structured historical data for analysis
+- Credit bureau API not contracted yet  
+- BI team doesn't have availability for fraud dashboard
+
+ACCEPTANCE CRITERIA:
+- [ ] Threshold adjusted and tested
+- [ ] CVV validation fixed
+- [ ] Audit logs improved
+- [ ] Suspicious IP monitoring active
+- [ ] Process documentation updated
+
+TESTS:
+- Test with invalid cards (CVV 000, 123, etc)
+- Simulate multiple purchases same IP
+- Validate alerts for risk team
+
+---
+COMMENTS:
+
+Ana Santos - 02/25: "Started testing. CVV 000 is really passing. Absurd."
+
+Pedro Silva - 02/26: "CVV fix ready. Now blocks: 000, 111, 222, 333, 444, 555, 666, 777, 888, 999 and obvious sequences"
+
+John - 02/27: "Pedro, don't forget to handle case where CVV is required field but customer doesn't provide (null/empty)"
+
+Maria - 02/28: "Product questioned if low threshold will affect conversion. Can we A/B test?"
+
+Carlos - 03/01: "Configured Slack alerts when transaction > $3500. Channel #fraud-alerts"
+
+Ana Santos - 03/02: "Found another problem: customer can use same card with slightly different data (John vs Jon vs J. Smith) and pass validation"

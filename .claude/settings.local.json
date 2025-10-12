@@ -31,7 +31,8 @@
       "WebFetch(domain:content.nuxt.com)",
       "Bash(curl:*)",
       "Bash(pnpm build:*)",
-      "Bash(pnpm preview:*)"
+      "Bash(pnpm preview:*)",
+      "Bash(do cp \"/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/$file.md\" \"/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/\")"
     ],
     "deny": [],
     "ask": [],
