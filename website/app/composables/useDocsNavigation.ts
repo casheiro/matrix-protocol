@@ -1,8 +1,62 @@
 export const useDocsNavigation = () => {
   const { t } = useI18n()
 
+  // Helper function to build dynamic children for a section
+  const buildDynamicChildren = async (locale: string, basePath: string) => {
+    try {
+      console.log(`🔍 Building dynamic children for ${basePath} (locale: ${locale})`)
+
+      // Query all content under the base path for this locale
+      // Fix: Include locale prefix since collections have prefix: '/pt' or '/en'
+      const fullPath = `/${locale}${basePath}`
+      console.log(`🔍 Searching for content with path: ${fullPath}/%`)
+      
+      const allContent = await queryCollection(locale as 'pt' | 'en')
+        .where('path', 'LIKE', `${fullPath}/%`)
+        .all()
+
+      console.log(`📋 Found ${allContent?.length || 0} items under ${basePath}`)
+      allContent?.forEach((item, index) => {
+        if (index < 5) { // Show first 5 for debugging
+          console.log(`  ${index + 1}. ${item.path} - ${item.title || 'No title'}`)
+        }
+      })
+
+      if (!allContent || allContent.length === 0) {
+        console.log(`⚠️ No content found under ${basePath}`)
+        return []
+      }
+
+      // Simplified approach - create flat list first
+      const children = []
+
+      // Sort by path to ensure proper hierarchy
+      // Fix 3: Use 'path' instead of '_path'
+      allContent.sort((a, b) => a.path.localeCompare(b.path))
+
+      for (const content of allContent) {
+        // Skip index files at the base level (already handled by parent)
+        if (content.path === basePath) continue
+
+        // Create entry for each piece of content
+        // Ensure title is always a string
+        children.push({
+          title: content.title || content.path.split('/').pop()?.replace(/[-_]/g, ' ') || 'Untitled',
+          path: content.path,
+          icon: 'i-heroicons-document-text'
+        })
+      }
+
+      console.log(`✅ Built ${children.length} navigation items`)
+      return children
+    } catch (error) {
+      console.warn(`Failed to build dynamic children for ${basePath}:`, error)
+      return []
+    }
+  }
+
   const getDocsNavigation = async (locale: string) => {
-    // Base navigation structure for docs
+    // Base navigation structure for docs (keeping core structure)
     const navigation = [
       {
         title: t('docs.sections.quickstart'),
@@ -93,13 +147,25 @@ export const useDocsNavigation = () => {
             icon: 'i-heroicons-academic-cap'
           }
         ]
-      },
-      {
-        title: t('docs.sections.examples'),
-        path: `/docs/examples`,
-        icon: 'i-heroicons-rectangle-stack'
       }
     ]
+
+    // Build dynamic examples section
+    console.log('🔍 Starting dynamic examples navigation build...')
+    const examplesChildren = await buildDynamicChildren(locale, '/docs/examples')
+    console.log(`📁 Examples children count: ${examplesChildren.length}`)
+    
+    const examplesSection = {
+      title: t('docs.sections.examples'),
+      path: `/docs/examples`,
+      icon: 'i-heroicons-rectangle-stack',
+      children: examplesChildren
+    }
+    
+    navigation.push(examplesSection)
+    
+    console.log(`🎯 Final navigation items: ${navigation.length}`)
+    console.log('📋 Examples section:', JSON.stringify(examplesSection, null, 2))
 
     return navigation
   }
