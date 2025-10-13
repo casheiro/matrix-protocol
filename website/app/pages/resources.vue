@@ -502,7 +502,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <UButton
-            :to="localePath('/quickstart')"
+            :to="localePath('/docs/quickstart')"
             color="primary"
             size="lg"
             icon="i-heroicons-rocket-launch"
@@ -511,7 +511,7 @@
             {{ $t('resources.cta.quickstart') }}
           </UButton>
           <UButton
-            :to="localePath('/implementation')"
+            :to="localePath('/docs/implementation')"
             variant="outline"
             color="primary"
             size="lg"
