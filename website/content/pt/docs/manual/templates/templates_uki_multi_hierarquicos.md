@@ -1,3 +1,13 @@
+---
+title: Templates UKI Multi-hierárquicos
+description: Templates de UKI demonstrando relacionamentos cross-cutting organizacionais e padrões de conhecimento multi-hierárquicos
+icon: i-heroicons-squares-plus
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Templates UKI Multi-Hierárquicos
 **Templates de UKI Demonstrando Relacionamentos Cross-Cutting Organizacionais**
 

@@ -1,3 +1,13 @@
+---
+title: "Glossary"
+description: "Unified terminology definitions for the Matrix Protocol, ensuring semantic consistency across all documentation."
+icon: "i-heroicons-book-open"
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Matrix Protocol — Unified Glossary
 **Acronym:** Unified Glossary  
 **Version:** 0.0.1-beta  

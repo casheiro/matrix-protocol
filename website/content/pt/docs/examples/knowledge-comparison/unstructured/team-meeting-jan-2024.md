@@ -1,3 +1,13 @@
+---
+title: Ata de Reunião da Squad Pagamentos - Janeiro 2024
+description: "[EXEMPLO CAÓTICO] Ata de reunião formal com decisões contraditórias"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # Ata de Reunião da Squad Pagamentos - Janeiro 2024
 
 **Data:** 15/01/2024  

@@ -1,3 +1,13 @@
+---
+title: MEP — Matrix Epistemic Principle
+description: Epistemological manifesto that establishes the philosophical foundations of knowledge treatment in Matrix Protocol
+icon: i-heroicons-light-bulb
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # MEP — Matrix Epistemic Principle
 **Acronym:** MEP  
 **Version:** 0.0.1-beta  

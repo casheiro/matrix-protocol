@@ -1,3 +1,13 @@
+---
+title: Matrix Protocol
+description: Protocolo completo de colaboração humano-IA através de estruturas de conhecimento e workflows orquestrados
+icon: i-heroicons-squares-2x2
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Matrix Protocol — Protocolo de Colaboração Humano-IA
 **Acrônimo:** Matrix Protocol  
 **Versão:** 0.0.1-beta  

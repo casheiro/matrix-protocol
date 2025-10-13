@@ -1,3 +1,13 @@
+---
+title: OIF — Operator Intelligence Framework
+description: Framework for AI archetypes hierarchically aware of organizational governance in Matrix Protocol
+icon: i-heroicons-cpu-chip
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # OIF — Operator Intelligence Framework
 **Acronym:** OIF  
 **Version:** 0.0.1-beta  

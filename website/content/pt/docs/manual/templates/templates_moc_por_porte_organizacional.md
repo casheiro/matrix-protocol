@@ -1,3 +1,13 @@
+---
+title: Templates MOC por Porte
+description: Templates de Catálogo de Ontologia Matrix adaptados para organizações de diferentes portes, desde startups até grandes empresas
+icon: i-heroicons-document-duplicate
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Templates MOC por Porte Organizacional
 **Templates de Catálogo de Ontologia Matrix para Diferentes Tipos de Organização**
 

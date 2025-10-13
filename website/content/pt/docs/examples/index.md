@@ -5,6 +5,7 @@ icon: i-heroicons-rectangle-stack
 layout: docs
 sidebar: true
 toc: true
+navigation: true
 ---
 
 # Exemplos e Casos de Estudo

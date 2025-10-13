@@ -1,3 +1,13 @@
+---
+title: Fases de Implementação
+description: Guia detalhado de implementação gradual em 6 fases com checklists, marcos de validação e cronogramas específicos
+icon: i-heroicons-calendar
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Fases de Implementação do Protocolo Matrix - Guia Detalhado
 **Implementação Gradual em 6 Fases com Checklists e Marcos de Validação**
 

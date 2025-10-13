@@ -1,3 +1,13 @@
+---
+title: Payment Flow - Squad Wiki
+description: "[CHAOTIC EXAMPLE] Outdated internal wiki documentation about payment flows"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # Payment Flow - Squad Wiki
 
 *Last updated: March 2022*  

@@ -1,6 +1,11 @@
 ---
-title: Material de Referência
-description: Estudos de caso detalhados e material de suporte para implementação do Matrix Protocol
+title: Referência
+description: Estudos de caso detalhados, material de suporte avançado e documentação de referência para implementações complexas do Matrix Protocol
+icon: i-heroicons-bookmark
+layout: docs
+sidebar: true
+toc: true
+navigation: true
 ---
 
 # Material de Referência

@@ -1,6 +1,11 @@
 ---
-title: Exemplos e Casos de Estudo
-description: Implementações reais, casos organizacionais e exemplos práticos de uso do Matrix Protocol
+title: Exemplos
+description: Implementações práticas, casos organizacionais e exemplos concretos de uso do Matrix Protocol em diferentes contextos empresariais
+icon: i-heroicons-code-bracket
+layout: docs
+sidebar: true
+toc: true
+navigation: true
 ---
 
 # Exemplos e Casos de Estudo

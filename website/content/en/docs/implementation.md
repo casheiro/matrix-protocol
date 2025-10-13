@@ -1,3 +1,13 @@
+---
+title: Implementation Guide
+description: Complete technical manual for Matrix Protocol organizational implementation with roadmaps, phases and success criteria
+icon: i-heroicons-cog-6-tooth
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Implementation Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  
 **Organizational Implementation Technical Manual**

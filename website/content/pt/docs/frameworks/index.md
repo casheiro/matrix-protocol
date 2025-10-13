@@ -5,6 +5,7 @@ icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
+navigation: true
 ---
 # Frameworks Matrix Protocol
 

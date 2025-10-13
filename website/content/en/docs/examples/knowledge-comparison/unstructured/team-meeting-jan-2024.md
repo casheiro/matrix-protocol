@@ -1,3 +1,13 @@
+---
+title: "Payments Squad Meeting Minutes - January 2024"
+description: "[CHAOTIC EXAMPLE] Formal meeting minutes with contradictory decisions"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # Payments Squad Meeting Minutes - January 2024
 
 **Date:** 01/15/2024  

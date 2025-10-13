@@ -1,3 +1,13 @@
+---
+title: ZOF — Zion Orchestration Framework
+description: AI-oriented conceptual workflow orchestration framework for human-machine collaboration in Matrix Protocol
+icon: i-heroicons-bolt
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # ZOF — Zion Orchestration Framework
 **Acronym:** ZOF  
 **Version:** 0.0.1-beta  

@@ -1,3 +1,13 @@
+---
+title: Manual de Implementação
+description: Manual técnico completo para implementação do Matrix Protocol, incluindo guias práticos, templates e exemplos organizacionais
+icon: i-heroicons-document-text
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Guia de Implementação do Matrix Protocol v0.0.1-beta
 **Manual Técnico de Implementação**
 

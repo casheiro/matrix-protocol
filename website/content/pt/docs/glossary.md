@@ -1,3 +1,13 @@
+---
+title: "Glossário"
+description: "Definições unificadas de terminologia do Protocolo Matrix, garantindo consistência semântica em toda a documentação."
+icon: "i-heroicons-book-open"
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Protocolo Matrix — Glossário Unificado
 **Acrônimo:** Glossário Unificado  
 **Versão:** 0.0.1-beta  

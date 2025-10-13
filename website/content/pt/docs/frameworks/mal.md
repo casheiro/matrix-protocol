@@ -1,3 +1,13 @@
+---
+title: MAL — Matrix Arbiter Layer
+description: Camada de arbitragem determinística para resolução de conflitos de conhecimento no Matrix Protocol
+icon: i-heroicons-scale
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # MAL — Matrix Arbiter Layer
 **Acrônimo:** MAL  
 **Versão:** 0.0.1-beta  

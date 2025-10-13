@@ -1,3 +1,13 @@
+---
+title: StackSpot AI Knowledge Sources - Compatibility Guide
+description: Compatibility guide for integration with StackSpot AI Knowledge Sources
+icon: i-heroicons-puzzle-piece
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # StackSpot AI Knowledge Sources - Compatibility Guide
 
 ## 📋 **Formato Atual dos Arquivos**

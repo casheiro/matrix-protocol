@@ -1,3 +1,13 @@
+---
+title: StackSpot AI Agent System Prompt - E-commerce Payments Expert
+description: Configuração de agente especialista em pagamentos e-commerce para StackSpot AI
+icon: i-heroicons-cpu-chip
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # StackSpot AI Agent System Prompt - E-commerce Payments Expert
 
 ## Agent Configuration

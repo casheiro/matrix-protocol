@@ -1,3 +1,13 @@
+---
+title: "squad meeting - march"
+description: "[CHAOTIC EXAMPLE] Informal meeting notes with scattered discussions"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # squad meeting - march
 
 date: 03/18/2024

@@ -1,3 +1,13 @@
+---
+title: "reunião squad - março"
+description: "[EXEMPLO CAÓTICO] Notas informais de reunião com discussões dispersas"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # reunião squad - março
 
 data: 18/03/2024

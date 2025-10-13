@@ -1,3 +1,13 @@
+---
+title: Fluxo de Pagamentos - Wiki Squad
+description: "[EXEMPLO CAÓTICO] Documentação desatualizada de wiki interna sobre fluxos de pagamento"
+icon: i-heroicons-document
+layout: docs
+sidebar: true
+toc: false
+navigation: false
+---
+
 # Fluxo de Pagamentos - Wiki Squad
 
 *Última atualização: março 2022*  

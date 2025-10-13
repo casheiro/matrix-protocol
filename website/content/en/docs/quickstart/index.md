@@ -1,3 +1,13 @@
+---
+title: Quick Start Guide
+description: Implement Matrix Protocol in your organization in 3 simple steps in 2-4 hours
+icon: i-heroicons-rocket-launch
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
+
 # Quick Start Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  
 **Quick Implementation in 3 Steps**
