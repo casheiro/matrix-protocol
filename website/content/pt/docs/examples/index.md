@@ -14,22 +14,22 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 
 ## 📊 Comparação de Conhecimento
 
-### [Demonstração Completa](./knowledge-comparison)
+### [Demonstração Completa](./knowledge)
 Exemplo abrangente que demonstra a transformação de conhecimento caótico em estrutura organizada usando o Matrix Protocol.
 
 **Conteúdo incluído:**
-- **[Visão Geral](./knowledge-comparison/index)** - Introdução à demonstração
+- **[Visão Geral](./knowledge/index)** - Introdução à demonstração
 
 ### Integração com Ferramentas
-- **[StackSpot Agent Prompt](./knowledge-comparison/stackspot-agent-prompt)** - Prompt para agente StackSpot
-- **[Guia de Compatibilidade StackSpot](./knowledge-comparison/stackspot-compatibility-guide)** - Integração com StackSpot
+- **[StackSpot Agent Prompt](./knowledge/stackspot-agent-prompt)** - Prompt para agente StackSpot
+- **[Guia de Compatibilidade StackSpot](./knowledge/stackspot-compatibility-guide)** - Integração com StackSpot
 
 ### Dados Não Estruturados vs Estruturados
 
 #### Antes: Conhecimento Caótico
-- **[Team Meeting Jan 2024](./knowledge-comparison/unstructured/team-meeting-jan-2024)** - Ata de reunião sem estrutura
-- **[Team Meeting Mar 2024](./knowledge-comparison/unstructured/team-meeting-mar-2024)** - Ata de reunião fragmentada
-- **[Confluence Payment Flow](./knowledge-comparison/unstructured/confluence-payment-flow)** - Fluxo documentado de forma inconsistente
+- **[Team Meeting Jan 2024](./knowledge/unstructured/team-meeting-jan-2024)** - Ata de reunião sem estrutura
+- **[Team Meeting Mar 2024](./knowledge/unstructured/team-meeting-mar-2024)** - Ata de reunião fragmentada
+- **[Confluence Payment Flow](./knowledge/unstructured/confluence-payment-flow)** - Fluxo documentado de forma inconsistente
 
 #### Depois: Conhecimento Estruturado
 Os mesmos conhecimentos organizados usando MEF, com UKIs válidas, relacionamentos semânticos e versionamento adequado.

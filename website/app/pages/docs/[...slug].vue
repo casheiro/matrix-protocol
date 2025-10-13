@@ -75,64 +75,29 @@ const contentPath = computed(() => {
   return `${locale}/docs/${slug}`
 })
 
-// Buscar conteúdo da documentação
+// Buscar conteúdo da documentação usando padrão oficial @nuxt/content v3
 const { data: docsContent, error: contentError } = await useAsyncData(
-  `docs-${contentPath.value}-${$i18n.locale.value}`,
+  route.path,
   async () => {
     try {
       const locale = $i18n.locale.value
-      console.log('🔍 Loading docs content:', `/${contentPath.value}`)
       
-      // Tentar múltiplos formatos de path
-      let content = await queryCollection(locale).path(`/${contentPath.value}`).first()
+      console.log('🔍 Loading content using official pattern:')
+      console.log('  - Route path:', route.path)
+      console.log('  - Locale:', locale)
       
-      if (!content) {
-        console.log('🔄 Trying with .md extension...')
-        content = await queryCollection(locale).path(`/${contentPath.value}.md`).first()
-      }
+      // Use official pattern: queryCollection(locale).path(route.path).first()
+      const content = await queryCollection(locale).path(route.path).first()
       
       if (!content) {
-        console.log('🔄 Trying with /index...')
-        content = await queryCollection(locale).path(`/${contentPath.value}/index`).first()
-      }
-      
-      if (!content) {
-        console.log('🔄 Trying direct index.md...')
-        content = await queryCollection(locale).path(`/${contentPath.value}/index.md`).first()
-      }
-      
-      // Debug: Listar todo o conteúdo disponível
-      if (!content) {
-        const allContent = await queryCollection(locale).all()
-        console.log('📋 All available content (first 20):')
-        allContent?.slice(0, 20).forEach(item => {
-          console.log(`  - ${item.path} (${item.title || 'no title'})`)
-        })
-        
-        // Tentar paths específicos para debug
-        console.log('🔍 Testing specific paths for index:')
-        const testPaths = [
-          `/pt/docs`,
-          `/pt/docs/index`,
-          `docs/index`,
-          `docs`,
-          `/docs/index`,
-          `/docs`
-        ]
-        
-        for (const testPath of testPaths) {
-          const testContent = await queryCollection(locale).path(testPath).first()
-          console.log(`  ${testPath}: ${testContent ? '✅ FOUND' : '❌ not found'}`)
-        }
-        
-        console.warn(`Docs content not found after all attempts: ${contentPath.value}`)
+        console.warn(`❌ Content not found for path: ${route.path}`)
         return null
       }
       
-      console.log('📄 Docs content loaded:', content.title || content.path)
+      console.log('✅ Content loaded successfully:', content.title || 'No title')
       return content
     } catch (error) {
-      console.error('❌ Error loading docs content:', error)
+      console.error('❌ Error loading content:', error)
       return null
     }
   }
