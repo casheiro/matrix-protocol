@@ -67,23 +67,13 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE_PT.yaml', 'MOC_STARTER_TEMPLATE_PT.yaml')"
+                  @click="downloadMatrixFile('moc-starter-template')"
                   color="success"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE.yaml', 'MOC_STARTER_TEMPLATE.yaml')"
-                  color="success"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
+                  {{ $t('common.currentLanguage') }}
                 </UButton>
               </div>
             </UCard>
@@ -100,23 +90,13 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE_PT.yaml', 'MOC_STARTER_TEMPLATE_PT.yaml')"
+                  @click="downloadMatrixFile('moc-starter-template')"
                   color="info"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/quick-start/MOC_STARTER_TEMPLATE.yaml', 'MOC_STARTER_TEMPLATE.yaml')"
-                  color="info"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
+                  {{ $t('common.currentLanguage') }}
                 </UButton>
               </div>
             </UCard>
@@ -181,7 +161,7 @@
                 <!-- Download button -->
                 <div class="flex justify-center">
                   <UButton
-                    @click="downloadFile('/downloads/templates/MOC_UNIFIED_STRUCTURE.yaml', 'MOC_UNIFIED_STRUCTURE.yaml')"
+                    @click="downloadMatrixFile('moc-unified-structure')"
                     color="primary"
                     size="lg"
                     icon="i-heroicons-arrow-down-tray"
@@ -265,7 +245,7 @@
                 Hierarquia flat, processos leves, foco em velocidade.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_STARTUP.yaml', 'MOC_STARTUP.yaml')"
+                @click="downloadMatrixFile('moc-startup')"
                 color="success"
                 variant="outline"
                 size="sm"
@@ -296,7 +276,7 @@
                 Estrutura ágil escalada, coordenação entre times.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_SCALEUP.yaml', 'MOC_SCALEUP.yaml')"
+                @click="downloadMatrixFile('moc-scaleup')"
                 color="info"
                 variant="outline"
                 size="sm"
@@ -327,7 +307,7 @@
                 Compliance, processos formais, múltiplas divisões.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_ENTERPRISE.yaml', 'MOC_ENTERPRISE.yaml')"
+                @click="downloadMatrixFile('moc-enterprise')"
                 color="primary"
                 variant="outline"
                 size="sm"
@@ -358,7 +338,7 @@
                 Multi-regional, board governance, compliance total.
               </p>
               <UButton
-                @click="downloadFile('/downloads/templates/MOC_CORPORATION.yaml', 'MOC_CORPORATION.yaml')"
+                @click="downloadMatrixFile('moc-corporation')"
                 color="error"
                 variant="outline"
                 size="sm"
@@ -393,23 +373,13 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md', 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md')"
+                  @click="downloadMatrixFile('implementation-guide')"
                   color="info"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md', 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md')"
-                  color="info"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
+                  {{ $t('common.currentLanguage') }}
                 </UButton>
               </div>
             </UCard>
@@ -426,23 +396,13 @@
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/index.md', 'index.md')"
+                  @click="downloadReadmeFile()"
                   color="success"
                   icon="i-heroicons-arrow-down-tray"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/README_EN.md', 'README_EN.md')"
-                  color="success"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
+                  {{ $t('common.currentLanguage') }}
                 </UButton>
               </div>
             </UCard>
@@ -457,71 +417,26 @@
               {{ $t('resources.cases.title') }}
             </h3>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 gap-6">
             <UCard>
               <template #header>
                 <div class="flex items-center">
-                  <UIcon name="i-heroicons-building-office" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.cases.techcorp') }}</h4>
+                  <UIcon name="i-heroicons-academic-cap" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.cases.knowledgeComparison') }}</h4>
                 </div>
               </template>
               <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.cases.techcorpDescription') }}
+                {{ $t('resources.cases.knowledgeComparisonDescription') }}
               </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadFile('/downloads/reference/techcorp-case-study.md', 'techcorp-case-study.md')"
-                  color="warning"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/reference/techcorp-case-study-en.md', 'techcorp-case-study-en.md')"
-                  color="warning"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
-                </UButton>
-              </div>
-            </UCard>
-
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-users" class="w-5 h-5 text-indigo-600 dark:text-indigo-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.cases.organizational') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.cases.organizationalDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadFile('/downloads/examples/exemplo_organizacional_techcorp.md', 'exemplo_organizacional_techcorp.md')"
-                  color="primary"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/examples/TECHCORP_ORGANIZATIONAL_EXAMPLE.md', 'TECHCORP_ORGANIZATIONAL_EXAMPLE.md')"
-                  color="primary"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
-                </UButton>
-              </div>
+              <UButton
+                :to="localePath('/docs/examples/knowledge-comparison')"
+                color="warning"
+                icon="i-heroicons-eye"
+                size="sm"
+                class="cursor-pointer"
+              >
+                {{ $t('common.viewOnline') }}
+              </UButton>
             </UCard>
           </div>
         </section>
@@ -534,630 +449,46 @@
               {{ $t('resources.tools.title') }}
             </h3>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 gap-6">
             <UCard>
               <template #header>
                 <div class="flex items-center">
-                  <UIcon name="i-heroicons-clipboard-document-check" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.tools.validation') }}</h4>
+                  <UIcon name="i-heroicons-book-open" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.tools.documentation') }}</h4>
                 </div>
               </template>
               <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.tools.validationDescription') }}
+                {{ $t('resources.tools.documentationDescription') }}
               </p>
               <div class="flex space-x-3">
                 <UButton
-                  @click="downloadFile('/downloads/tools/validation-checklists.md', 'validation-checklists.md')"
-                  color="neutral"
-                  icon="i-heroicons-arrow-down-tray"
+                  :to="localePath('/docs')"
+                  color="primary"
+                  icon="i-heroicons-eye"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  Português
+                  {{ $t('common.viewDocumentation') }}
                 </UButton>
                 <UButton
-                  @click="downloadFile('/downloads/tools/validation-checklists.md', 'validation-checklists.md')"
-                  color="neutral"
+                  :to="localePath('/frameworks')"
+                  color="primary"
                   variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
+                  icon="i-heroicons-squares-2x2"
                   size="sm"
                   class="cursor-pointer"
                 >
-                  English
-                </UButton>
-              </div>
-            </UCard>
-
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-map" class="w-5 h-5 text-teal-600 dark:text-teal-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.tools.phases') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.tools.phasesDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadFile('/downloads/templates/fases_implementacao_detalhadas.md', 'fases_implementacao_detalhadas.md')"
-                  color="success"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  Português
-                </UButton>
-                <UButton
-                  @click="downloadFile('/downloads/templates/IMPLEMENTATION_PHASES_DETAILED.md', 'IMPLEMENTATION_PHASES_DETAILED.md')"
-                  color="success"
-                  variant="outline"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  English
+                  {{ $t('common.exploreFrameworks') }}
                 </UButton>
               </div>
             </UCard>
           </div>
         </section>
 
-        <!-- Framework Specific Resources -->
-        <!-- MEF Resources -->
-        <section id="basic-mef">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MEF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Embedding Framework - Recursos Básicos
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-document" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-2" />
-                  <h4 class="font-semibold">Templates UKI Básicos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Templates básicos para criação de Units of Knowledge Interlinked (UKIs)
-              </p>
-              <UButton
-                @click="downloadMatrixFile('basic-templates')"
-                color="success"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Templates
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-book-open" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-2" />
-                  <h4 class="font-semibold">Guia de Implementação MEF</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Guia passo a passo para implementar o Matrix Embedding Framework
-              </p>
-              <UButton
-                @click="downloadMatrixFile('implementation-guide-pt')"
-                color="success"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guia
-              </UButton>
-            </UCard>
-          </div>
-        </section>
 
-        <section id="advanced-mef">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MEF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Embedding Framework - Recursos Avançados
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-cog-6-tooth" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-2" />
-                  <h4 class="font-semibold">Templates UKI Avançados</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Templates complexos com relacionamentos ontológicos e versionamento avançado
-              </p>
-              <UButton
-                @click="downloadMatrixFile('advanced-templates')"
-                color="success"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Templates
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-academic-cap" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-2" />
-                  <h4 class="font-semibold">Casos de Uso Complexos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Exemplos de implementação MEF em organizações de grande porte
-              </p>
-              <UButton
-                @click="downloadMatrixFile('techcorp-case-study')"
-                color="success"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Casos
-              </UButton>
-            </UCard>
-          </div>
-        </section>
 
-        <!-- ZOF Resources -->
-        <section id="basic-zof">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">ZOF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Zion Orchestration Framework - Recursos Básicos
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-play" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">Workflows Básicos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Templates de workflows básicos para orquestração de tarefas
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/zof/basic-workflows.zip', 'zof-basic-workflows.zip')"
-                color="warning"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Workflows
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-document-text" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">Guia de Orquestração</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Manual completo para implementar orquestração de workflows
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/zof/ZOF_ORCHESTRATION_GUIDE.md', 'ZOF_ORCHESTRATION_GUIDE.md')"
-                color="warning"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guia
-              </UButton>
-            </UCard>
-          </div>
-        </section>
 
-        <section id="advanced-zof">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">ZOF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Zion Orchestration Framework - Recursos Avançados
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-cpu-chip" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">Workflows Complexos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Workflows avançados com checkpoints e orquestração multi-agente
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/zof/advanced-workflows.zip', 'zof-advanced-workflows.zip')"
-                color="warning"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Workflows
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-command-line" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">Integração de Sistemas</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Exemplos de integração ZOF com sistemas existentes
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/zof/system-integration.md', 'zof-system-integration.md')"
-                color="warning"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Exemplos
-              </UButton>
-            </UCard>
-          </div>
-        </section>
 
-        <!-- OIF Resources -->
-        <section id="basic-oif">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">OIF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Operator Intelligence Framework - Recursos Básicos
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-user-circle" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">Arquétipos Básicos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Templates de arquétipos de operadores para diferentes funções
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/oif/basic-archetypes.zip', 'oif-basic-archetypes.zip')"
-                color="info"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Arquétipos
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-light-bulb" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">Guia de Inteligência</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Manual para implementar sistemas de inteligência operacional
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/oif/OIF_INTELLIGENCE_GUIDE.md', 'OIF_INTELLIGENCE_GUIDE.md')"
-                color="info"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guia
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <section id="advanced-oif">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">OIF</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Operator Intelligence Framework - Recursos Avançados
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-beaker" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">Arquétipos Complexos</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Arquétipos avançados com IA integrada e adaptação dinâmica
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/oif/advanced-archetypes.zip', 'oif-advanced-archetypes.zip')"
-                color="info"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Arquétipos
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-chart-bar" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">Análise de Performance</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Ferramentas de análise e otimização de operadores inteligentes
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/oif/performance-analysis.md', 'oif-performance-analysis.md')"
-                color="info"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Ferramentas
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- MOC Resources -->
-        <section id="basic-moc">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MOC</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Ontology Catalog - Recursos Básicos
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-folder-open" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
-                  <h4 class="font-semibold">Ontologias Básicas</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Estruturas ontológicas básicas para diferentes tipos de organização
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/moc/basic-ontologies.zip', 'moc-basic-ontologies.zip')"
-                color="primary"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Ontologias
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-squares-plus" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
-                  <h4 class="font-semibold">Guia de Catalogação</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Manual para criar e manter catálogos ontológicos organizacionais
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/moc/MOC_CATALOGING_GUIDE.md', 'MOC_CATALOGING_GUIDE.md')"
-                color="primary"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guia
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <section id="advanced-moc">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MOC</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Ontology Catalog - Recursos Avançados
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-cube" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
-                  <h4 class="font-semibold">Ontologias Complexas</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Estruturas ontológicas avançadas para grandes corporações
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/moc/advanced-ontologies.zip', 'moc-advanced-ontologies.zip')"
-                color="primary"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Ontologias
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-arrow-path" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
-                  <h4 class="font-semibold">Migração de Sistemas</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Guias de migração de sistemas legados para MOC
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/moc/system-migration.md', 'moc-system-migration.md')"
-                color="primary"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guias
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- MAL Resources -->
-        <section id="basic-mal">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MAL</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Arbiter Layer - Recursos Básicos
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-scale" class="w-5 h-5 text-red-600 dark:text-red-400 mr-2" />
-                  <h4 class="font-semibold">Protocolos de Arbitragem</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Protocolos básicos para resolução de conflitos e arbitragem
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/mal/basic-protocols.zip', 'mal-basic-protocols.zip')"
-                color="error"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Protocolos
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-clipboard-document-check" class="w-5 h-5 text-red-600 dark:text-red-400 mr-2" />
-                  <h4 class="font-semibold">Guia de Arbitragem</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Manual completo para implementar camadas de arbitragem
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/mal/MAL_ARBITRATION_GUIDE.md', 'MAL_ARBITRATION_GUIDE.md')"
-                color="error"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Guia
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <section id="advanced-mal">
-          <div class="flex items-center mb-6">
-            <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-white font-bold text-sm">MAL</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              Matrix Arbiter Layer - Recursos Avançados
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-shield-check" class="w-5 h-5 text-red-600 dark:text-red-400 mr-2" />
-                  <h4 class="font-semibold">Arbitragem Complexa</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Protocolos avançados para arbitragem multi-domínio e hierárquica
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/mal/advanced-arbitration.zip', 'mal-advanced-arbitration.zip')"
-                color="error"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Protocolos
-              </UButton>
-            </UCard>
-            
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-document-magnifying-glass" class="w-5 h-5 text-red-600 dark:text-red-400 mr-2" />
-                  <h4 class="font-semibold">Auditoria e Compliance</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Ferramentas de auditoria e conformidade para sistemas MAL
-              </p>
-              <UButton
-                @click="downloadFile('/downloads/frameworks/mal/audit-compliance.md', 'mal-audit-compliance.md')"
-                color="error"
-                variant="outline"
-                icon="i-heroicons-arrow-down-tray"
-                size="sm"
-                class="cursor-pointer"
-              >
-                Download Ferramentas
-              </UButton>
-            </UCard>
-          </div>
-        </section>
 
       </div>
 
@@ -1196,7 +527,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const { resolveDownload } = useMatrixLinks()
@@ -1209,6 +540,14 @@ const downloadMatrixFile = async (key: string) => {
   } else {
     console.error(`MatrixLinks: Unknown download key "${key}"`)
   }
+}
+
+// Função específica para download do arquivo README
+const downloadReadmeFile = async () => {
+  const currentLocale = locale.value
+  const filename = currentLocale === 'pt' ? 'index.md' : 'README_EN.md'
+  const path = `/downloads/${currentLocale}/${filename}`
+  await downloadFile(path, filename)
 }
 
 // Função para fazer download de arquivos

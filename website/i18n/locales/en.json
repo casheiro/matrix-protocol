@@ -90,17 +90,13 @@
     },
     "cases": {
       "title": "Case Studies",
-      "techcorp": "TechCorp Case",
-      "techcorpDescription": "Complete 18-month implementation example for large-scale organization scenarios.",
-      "organizational": "Organizational Example",
-      "organizationalDescription": "Detailed organizational structure showing practical application of frameworks."
+      "knowledgeComparison": "Knowledge Comparison",
+      "knowledgeComparisonDescription": "Complete example showing transformation of unstructured knowledge into Matrix Protocol UKIs"
     },
     "tools": {
-      "title": "Tools and Checklists",
-      "validation": "Validation Checklists",
-      "validationDescription": "Practical checklists for each implementation phase.",
-      "phases": "Implementation Phases",
-      "phasesDescription": "Detailed roadmap with timeline and milestones for complete implementation."
+      "title": "Tools and Resources",
+      "documentation": "Complete Documentation",
+      "documentationDescription": "Access all detailed technical documentation for frameworks and implementation guides."
     },
     "cta": {
       "title": "Ready to get started?",
@@ -410,6 +406,9 @@
     "github": "GitHub",
     "discord": "Discord",
     "version": "Version",
+    "currentLanguage": "English",
+    "viewOnline": "View Online",
+    "viewDocumentation": "View Documentation",
     "language": "Language",
     "theme": "Theme",
     "light": "Light",

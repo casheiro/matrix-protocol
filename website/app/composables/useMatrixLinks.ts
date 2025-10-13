@@ -167,16 +167,11 @@ export const useMatrixLinks = () => {
       filename: 'MOC_CORPORATION.yaml'
     },
 
-    // Downloads - Guias de implementação
+    // Downloads - Guias de implementação (language-aware)
     'implementation-guide': {
       type: 'download',
-      path: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md',
-      filename: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md'
-    },
-    'implementation-guide-en': {
-      type: 'download',
-      path: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md',
-      filename: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md'
+      path: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md', // PT default
+      filename: 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE.md'
     },
 
     // Downloads - Casos de uso
@@ -348,8 +343,10 @@ export const useMatrixLinks = () => {
       case 'page':
         return localePath(`/${mapping.slug}`)
         
-      case 'download':
-        return `/downloads/${mapping.path}`
+      case 'download': {
+        const downloadInfo = resolveDownload(key)
+        return downloadInfo ? downloadInfo.url : `/downloads/${locale}/${mapping.path}`
+      }
         
       case 'external':
         return mapping.url || '#'
@@ -361,6 +358,7 @@ export const useMatrixLinks = () => {
 
   /**
    * Resolve um link de download com informações completas
+   * Considera a linguagem atual para arquivos localizados
    */
   const resolveDownload = (key: string) => {
     const mapping = linkMappings[key]
@@ -370,10 +368,46 @@ export const useMatrixLinks = () => {
       return null
     }
 
+    const locale = $i18n.locale.value
+    
+    // Arquivos compartilhados (ZIPs) que não dependem da linguagem
+    const sharedFiles = [
+      'frameworks/mef/basic-templates.zip',
+      'frameworks/mef/advanced-templates.zip',
+      'frameworks/mef/all-uki-templates.zip',
+      'frameworks/mef/business-rules-templates.zip',
+      'frameworks/mef/technical-patterns-templates.zip',
+      'frameworks/mef/procedures-templates.zip'
+    ]
+    
+    let url: string
+    let filename: string
+    let actualPath: string
+    
+    // Verifica se é um arquivo compartilhado
+    if (sharedFiles.some(sharedPath => mapping.path?.includes(sharedPath))) {
+      url = `/downloads/shared/${mapping.path}`
+      actualPath = mapping.path
+      filename = mapping.filename || mapping.path?.split('/').pop() || 'download'
+    } else {
+      // Para arquivos localizados, adapta o caminho e nome conforme idioma
+      if (key === 'implementation-guide') {
+        // Caso especial para guia de implementação
+        actualPath = locale === 'pt' ? 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md' : 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md'
+        filename = `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_${locale.toUpperCase()}.md`
+      } else {
+        actualPath = mapping.path
+        filename = mapping.filename || mapping.path?.split('/').pop() || 'download'
+      }
+      
+      url = `/downloads/${locale}/${actualPath}`
+    }
+
     return {
-      url: `/downloads/${mapping.path}`,
-      filename: mapping.filename || mapping.path?.split('/').pop() || 'download',
-      path: mapping.path
+      url,
+      filename,
+      path: actualPath,
+      locale
     }
   }
 
