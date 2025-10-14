@@ -1,13 +1,12 @@
 export const useDocsNavigation = () => {
   const { t } = useI18n()
 
-  // Helper function to build dynamic children for a section
+  // Helper function to build hierarchical navigation tree
   const buildDynamicChildren = async (locale: string, basePath: string) => {
     try {
-      console.log(`🔍 Building dynamic children for ${basePath} (locale: ${locale})`)
+      console.log(`🔍 Building hierarchical children for ${basePath} (locale: ${locale})`)
 
       // Query all content under the base path for this locale
-      // Fix: Include locale prefix since collections have prefix: '/pt' or '/en'
       const fullPath = `/${locale}${basePath}`
       console.log(`🔍 Searching for content with path: ${fullPath}/%`)
       
@@ -16,41 +15,99 @@ export const useDocsNavigation = () => {
         .all()
 
       console.log(`📋 Found ${allContent?.length || 0} items under ${basePath}`)
-      allContent?.forEach((item, index) => {
-        if (index < 5) { // Show first 5 for debugging
-          console.log(`  ${index + 1}. ${item.path} - ${item.title || 'No title'}`)
-        }
-      })
 
       if (!allContent || allContent.length === 0) {
         console.log(`⚠️ No content found under ${basePath}`)
         return []
       }
 
-      // Simplified approach - create flat list first
-      const children = []
-
       // Sort by path to ensure proper hierarchy
-      // Fix 3: Use 'path' instead of '_path'
       allContent.sort((a, b) => a.path.localeCompare(b.path))
 
-      for (const content of allContent) {
-        // Skip index files at the base level (already handled by parent)
-        if (content.path === basePath) continue
-
-        // Create entry for each piece of content
-        // Ensure title is always a string
-        // Remove locale prefix from path since DocSidebar will add it back via localePath()
-        const pathWithoutLocale = content.path.replace(/^\/[a-z]{2}/, '')
-        children.push({
-          title: content.title || content.path.split('/').pop()?.replace(/[-_]/g, ' ') || 'Untitled',
-          path: pathWithoutLocale,
-          icon: 'i-heroicons-document-text'
+      // Build hierarchical structure
+      const buildHierarchy = (items: any[], currentPath: string): any[] => {
+        const children = []
+        const processedPaths = new Set()
+        
+        for (const item of items) {
+          const pathWithoutLocale = item.path.replace(/^\/[a-z]{2}/, '')
+          
+          // Skip if already processed or if it's the exact base path
+          if (processedPaths.has(pathWithoutLocale) || pathWithoutLocale === currentPath) {
+            continue
+          }
+          
+          // Get relative path from current level
+          const relativePath = pathWithoutLocale.substring(currentPath.length)
+          const segments = relativePath.split('/').filter(Boolean)
+          
+          if (segments.length === 0) continue
+          
+          const firstSegment = segments[0]
+          const nextPath = `${currentPath}/${firstSegment}`
+          
+          // Check if this is a directory (has an index.md or other files under it)
+          const isDirectory = items.some(other => {
+            const otherPathWithoutLocale = other.path.replace(/^\/[a-z]{2}/, '')
+            return otherPathWithoutLocale.startsWith(nextPath + '/') && 
+                   otherPathWithoutLocale !== nextPath
+          })
+          
+          if (isDirectory) {
+            // Find the index file for this directory if it exists
+            const indexFile = items.find(other => {
+              const otherPathWithoutLocale = other.path.replace(/^\/[a-z]{2}/, '')
+              return otherPathWithoutLocale === nextPath || 
+                     otherPathWithoutLocale === `${nextPath}/index`
+            })
+            
+            // Get all items under this directory
+            const childItems = items.filter(other => {
+              const otherPathWithoutLocale = other.path.replace(/^\/[a-z]{2}/, '')
+              return otherPathWithoutLocale.startsWith(nextPath + '/')
+            })
+            
+            // Recursively build children for this directory
+            const grandChildren: any[] = buildHierarchy(childItems, nextPath)
+            
+            children.push({
+              title: indexFile?.title || firstSegment.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+              path: nextPath,
+              icon: 'i-heroicons-folder',
+              children: grandChildren
+            })
+            
+            // Mark all paths under this directory as processed
+            childItems.forEach(child => {
+              processedPaths.add(child.path.replace(/^\/[a-z]{2}/, ''))
+            })
+            processedPaths.add(nextPath)
+            
+          } else if (segments.length === 1) {
+            // This is a direct file under current directory
+            children.push({
+              title: item.title || firstSegment.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+              path: pathWithoutLocale,
+              icon: 'i-heroicons-document-text'
+            })
+            processedPaths.add(pathWithoutLocale)
+          }
+        }
+        
+        // Sort: directories first, then files, both alphabetically
+        return children.sort((a, b) => {
+          if (a.children && !b.children) return -1
+          if (!a.children && b.children) return 1
+          return a.title.localeCompare(b.title)
         })
       }
 
-      console.log(`✅ Built ${children.length} navigation items`)
-      return children
+      const result = buildHierarchy(allContent, basePath)
+      
+      console.log(`✅ Built hierarchical navigation with ${result.length} top-level items`)
+      console.log('📁 Hierarchy preview:', JSON.stringify(result, null, 2))
+      
+      return result
     } catch (error) {
       console.warn(`Failed to build dynamic children for ${basePath}:`, error)
       return []

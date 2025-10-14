@@ -30,71 +30,16 @@
       <!-- Scrollable Content -->
       <div class="flex-1 overflow-y-auto p-4">
         <nav class="space-y-1">
-        <template v-for="item in navigation" :key="item.path">
-          <!-- Top level items -->
-          <div v-if="!item.children || item.children.length === 0">
-            <UButton
-              :to="localePath(item.path)"
-              variant="ghost"
-              size="sm"
-              :icon="item.icon || 'i-heroicons-document-text'"
-              class="w-full justify-start"
-              :class="isActivePath(item.path) ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' : ''"
-            >
-              {{ item.title }}
-            </UButton>
-          </div>
-          
-          <!-- Items with children -->
-          <div v-else class="space-y-1">
-            <!-- Parent item with toggle -->
-            <div class="flex items-center gap-1">
-              <UButton
-                variant="ghost"
-                size="xs"
-                :icon="isExpanded(item.path) ? 'i-heroicons-chevron-down' : 'i-heroicons-chevron-right'"
-                @click="toggleExpanded(item.path)"
-                class="flex-shrink-0 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-transform duration-200"
-                :class="{ 'rotate-90': isExpanded(item.path) }"
-              />
-              <UButton
-                :to="localePath(item.path)"
-                variant="ghost"
-                size="sm"
-                :icon="item.icon || 'i-heroicons-folder'"
-                class="flex-1 justify-start font-medium"
-                :class="isActivePath(item.path) ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' : ''"
-              >
-                {{ item.title }}
-              </UButton>
-            </div>
-            
-            <!-- Children items with transition -->
-            <Transition
-              enter-active-class="transition-all duration-200 ease-out"
-              enter-from-class="max-h-0 opacity-0"
-              enter-to-class="max-h-96 opacity-100"
-              leave-active-class="transition-all duration-200 ease-in"
-              leave-from-class="max-h-96 opacity-100"
-              leave-to-class="max-h-0 opacity-0"
-            >
-              <div v-if="isExpanded(item.path)" class="ml-6 space-y-1 overflow-hidden">
-                <UButton
-                  v-for="child in item.children"
-                  :key="child.path"
-                  :to="localePath(child.path)"
-                  variant="ghost"
-                  size="sm"
-                  :icon="child.icon || 'i-heroicons-document'"
-                  class="w-full justify-start text-sm"
-                  :class="isActivePath(child.path) ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' : ''"
-                >
-                  {{ child.title }}
-                </UButton>
-              </div>
-            </Transition>
-          </div>
-        </template>
+          <!-- Use recursive NavItem component for each top-level navigation item -->
+          <NavItem
+            v-for="item in navigation"
+            :key="item.path"
+            :item="item"
+            :level="0"
+            :is-expanded="isExpanded"
+            :toggle-expanded="toggleExpanded"
+            :is-active-path="isActivePath"
+          />
         </nav>
       </div>
     </div>
@@ -153,6 +98,9 @@
 </template>
 
 <script setup>
+// Import NavItem component explicitly
+import NavItem from './NavItem.vue'
+
 const props = defineProps({
   navigation: {
     type: Array,

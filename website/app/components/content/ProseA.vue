@@ -94,7 +94,8 @@ const resolveRelativePath = (href) => {
   // Se é relativo com ./
   if (href.startsWith('./')) {
     const relativePath = href.substring(2) // Remove "./"
-    const currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'))
+    // Para links ./, usar o diretório atual sem remover o último segmento
+    const currentDir = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
     return `${currentDir}/${relativePath}`
   }
   
