@@ -9,6 +9,14 @@
     <slot />
   </a>
   
+  <!-- Link de Âncora -->
+  <a v-else-if="isAnchorLink"
+     :href="href"
+     class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline decoration-1 underline-offset-2 transition-colors"
+     v-bind="$attrs">
+    <slot />
+  </a>
+  
   <!-- Link Interno Normal -->
   <NuxtLink v-else-if="isInternalLink" 
             :to="localizedPath" 
@@ -40,10 +48,16 @@ const props = defineProps({
 
 // Composables
 const localePath = useLocalePath()
+const route = useRoute()
+const { $i18n } = useNuxtApp()
 
 // Computed
 const isDownloadLink = computed(() => {
   return props.href && props.href.startsWith('/downloads/')
+})
+
+const isAnchorLink = computed(() => {
+  return props.href && props.href.startsWith('#')
 })
 
 const isInternalLink = computed(() => {
@@ -65,17 +79,51 @@ const isInternalLink = computed(() => {
   return true
 })
 
-const localizedPath = computed(() => {
-  if (!props.href) return '#'
+// Função para resolver paths relativos
+const resolveRelativePath = (href) => {
+  if (!href) return '#'
   
-  // Se já tem barra, usa direto
-  if (props.href.startsWith('/')) {
-    return localePath(props.href)
+  // Se já é absoluto, usa direto
+  if (href.startsWith('/')) {
+    return href
   }
   
-  // Se é relativo tipo "mep" ou "frameworks/moc"
-  // Adiciona barra e usa localePath
-  return localePath('/' + props.href)
+  // Obter o path atual sem locale (remove apenas no início)
+  const currentPath = route.path.replace(new RegExp(`^/${$i18n.locale.value}`), '')
+  
+  // Se é relativo com ./
+  if (href.startsWith('./')) {
+    const relativePath = href.substring(2) // Remove "./"
+    const currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'))
+    return `${currentDir}/${relativePath}`
+  }
+  
+  // Se é relativo com ../
+  if (href.startsWith('../')) {
+    let pathParts = currentPath.split('/').filter(Boolean)
+    const hrefParts = href.split('/').filter(Boolean)
+    
+    // Remove partes do path atual para cada "../"
+    for (const part of hrefParts) {
+      if (part === '..') {
+        pathParts.pop()
+      } else {
+        pathParts.push(part)
+      }
+    }
+    
+    return '/' + pathParts.join('/')
+  }
+  
+  // Se é relativo simples (ex: "mef", "frameworks/moc")
+  // Adiciona ao diretório atual
+  const currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'))
+  return `${currentDir}/${href}`
+}
+
+const localizedPath = computed(() => {
+  const resolvedPath = resolveRelativePath(props.href)
+  return localePath(resolvedPath)
 })
 
 // Função de download (mesma da resources.vue)

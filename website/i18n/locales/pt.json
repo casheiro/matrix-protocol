@@ -20,7 +20,9 @@
   },
   "docs": {
     "navigation": {
-      "title": "Navegação"
+      "title": "Navegação",
+      "expandAll": "Expandir todos",
+      "collapseAll": "Recolher todos"
     },
     "quickLinks": {
       "title": "Links Rápidos",

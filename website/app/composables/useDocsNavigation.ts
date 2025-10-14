@@ -40,9 +40,11 @@ export const useDocsNavigation = () => {
 
         // Create entry for each piece of content
         // Ensure title is always a string
+        // Remove locale prefix from path since DocSidebar will add it back via localePath()
+        const pathWithoutLocale = content.path.replace(/^\/[a-z]{2}/, '')
         children.push({
           title: content.title || content.path.split('/').pop()?.replace(/[-_]/g, ' ') || 'Untitled',
-          path: content.path,
+          path: pathWithoutLocale,
           icon: 'i-heroicons-document-text'
         })
       }
