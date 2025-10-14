@@ -593,7 +593,38 @@
       "content": "Conteúdo",
       "examples": "Exemplos",
       "relationships": "Relacionamentos",
-      "metadata": "Metadados"
+      "metadata": "Metadados",
+      "technicalInfo": "Informações Técnicas",
+      "lifecycle": "Ciclo de Vida"
+    },
+    "fields": {
+      "schema": "Esquema",
+      "ontologyReference": "Referência da Ontologia",
+      "id": "Identificador",
+      "scopeRef": "Escopo",
+      "scopeMode": "Modo do Escopo",
+      "domainRef": "Domínio",
+      "domainOfInfluence": "Domínio de Influência",
+      "createdDate": "Data de Criação",
+      "lastModified": "Última Modificação",
+      "changeSummary": "Resumo das Mudanças",
+      "changeImpact": "Impacto da Mudança",
+      "status": "Status"
+    },
+    "scopeModes": {
+      "restricted": "restrito",
+      "propagated": "propagado"
+    },
+    "changeImpacts": {
+      "major": "maior",
+      "minor": "menor",
+      "patch": "correção"
+    },
+    "documentStatus": {
+      "active": "ativo",
+      "deprecated": "depreciado",
+      "archived": "arquivado",
+      "draft": "rascunho"
     },
     "status": {
       "validated": "validado",

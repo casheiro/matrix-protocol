@@ -76,6 +76,88 @@
           </div>
         </div>
 
+        <!-- Technical Information Section -->
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">{{ t('viewer.sections.technicalInfo') }}</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <!-- Schema & Ontology -->
+            <div v-if="data.schema">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.schema') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data.schema }}</span>
+            </div>
+            <div v-if="data.ontology_reference">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.ontologyReference') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data.ontology_reference }}</span>
+            </div>
+            
+            <!-- ID and Scope -->
+            <div v-if="data.id" class="md:col-span-2">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.id') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2 font-mono text-xs">{{ data.id }}</span>
+            </div>
+            <div v-if="data.scope_ref">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.scopeRef') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data.scope_ref }}</span>
+            </div>
+            <div v-if="data.scope_mode">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.scopeMode') }}:</label>
+              <span class="inline-flex items-center gap-1 ml-2">
+                <UBadge :color="getScopeModeColor(data.scope_mode)" size="xs">
+                  {{ t(`viewer.scopeModes.${data.scope_mode}`) || data.scope_mode }}
+                </UBadge>
+              </span>
+            </div>
+            
+            <!-- Domain -->
+            <div v-if="data.domain_ref">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.domainRef') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data.domain_ref }}</span>
+            </div>
+            <div v-if="data.domain_of_influence">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.domainOfInfluence') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data.domain_of_influence }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lifecycle Information Section -->
+        <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">{{ t('viewer.sections.lifecycle') }}</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <!-- Dates -->
+            <div v-if="data.created_date">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.createdDate') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ formatDate(data.created_date) }}</span>
+            </div>
+            <div v-if="data.last_modified">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.lastModified') }}:</label>
+              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ formatDate(data.last_modified) }}</span>
+            </div>
+            
+            <!-- Changes -->
+            <div v-if="data.change_summary" class="md:col-span-2">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.changeSummary') }}:</label>
+              <p class="text-gray-600 dark:text-gray-400 mt-1">{{ data.change_summary }}</p>
+            </div>
+            <div v-if="data.change_impact">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.changeImpact') }}:</label>
+              <span class="inline-flex items-center gap-1 ml-2">
+                <UBadge :color="getChangeImpactColor(data.change_impact)" size="xs">
+                  {{ t(`viewer.changeImpacts.${data.change_impact}`) || data.change_impact }}
+                </UBadge>
+              </span>
+            </div>
+            <div v-if="data.status">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.status') }}:</label>
+              <span class="inline-flex items-center gap-1 ml-2">
+                <UBadge :color="getDocumentStatusColor(data.status)" size="xs">
+                  {{ t(`viewer.documentStatus.${data.status}`) || data.status }}
+                </UBadge>
+              </span>
+            </div>
+          </div>
+        </div>
+
         <!-- UKI Content -->
         <div v-if="data.content" class="prose dark:prose-invert max-w-none">
           <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">{{ t('viewer.sections.content') }}</h3>
@@ -231,6 +313,47 @@ const getRelationshipVariant = (type: string) => {
     complements: 'purple'
   }
   return variants[type] || 'gray'
+}
+
+const formatDate = (dateString: string) => {
+  try {
+    const date = new Date(dateString)
+    const { locale } = useI18n()
+    return date.toLocaleDateString(locale.value === 'pt' ? 'pt-BR' : 'en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
+  } catch (error) {
+    return dateString
+  }
+}
+
+const getScopeModeColor = (mode: string) => {
+  const colors: Record<string, string> = {
+    restricted: 'orange',
+    propagated: 'green'
+  }
+  return colors[mode] || 'gray'
+}
+
+const getChangeImpactColor = (impact: string) => {
+  const colors: Record<string, string> = {
+    major: 'red',
+    minor: 'orange',
+    patch: 'green'
+  }
+  return colors[impact] || 'gray'
+}
+
+const getDocumentStatusColor = (status: string) => {
+  const colors: Record<string, string> = {
+    active: 'green',
+    deprecated: 'red',
+    archived: 'gray',
+    draft: 'orange'
+  }
+  return colors[status] || 'blue'
 }
 </script>
 
