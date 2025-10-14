@@ -17,6 +17,15 @@
     <slot />
   </a>
   
+  <!-- Link para Arquivo (YAML, TXT, etc.) -->
+  <NuxtLink v-else-if="isFileViewerLink"
+            :to="fileViewerPath"
+            class="inline-flex items-center gap-1.5 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline decoration-1 underline-offset-2 transition-colors"
+            v-bind="$attrs">
+    <UIcon :name="getFileIcon()" class="w-4 h-4" />
+    <slot />
+  </NuxtLink>
+  
   <!-- Link Interno Normal -->
   <NuxtLink v-else-if="isInternalLink" 
             :to="localizedPath" 
@@ -60,11 +69,20 @@ const isAnchorLink = computed(() => {
   return props.href && props.href.startsWith('#')
 })
 
+const isFileViewerLink = computed(() => {
+  if (!props.href) return false
+  const resolvedPath = resolveRelativePath(props.href)
+  return /\.(yaml|yml|txt|json)$/i.test(resolvedPath)
+})
+
 const isInternalLink = computed(() => {
   if (!props.href) return false
   
   // Se é link de download, não é link interno normal
   if (isDownloadLink.value) return false
+  
+  // Se é arquivo para viewer, não é link interno normal
+  if (isFileViewerLink.value) return false
   
   // Se começa com http, é externo
   if (props.href.startsWith('http')) return false
@@ -126,6 +144,29 @@ const localizedPath = computed(() => {
   const resolvedPath = resolveRelativePath(props.href)
   return localePath(resolvedPath)
 })
+
+const fileViewerPath = computed(() => {
+  const resolvedPath = resolveRelativePath(props.href)
+  // Create a special viewer route with the file path as a parameter
+  return localePath(`/docs/viewer?file=${encodeURIComponent(resolvedPath)}`)
+})
+
+const getFileIcon = () => {
+  const resolvedPath = resolveRelativePath(props.href)
+  const extension = resolvedPath.split('.').pop()?.toLowerCase()
+  
+  switch (extension) {
+    case 'yaml':
+    case 'yml':
+      return 'i-heroicons-document-text'
+    case 'txt':
+      return 'i-heroicons-document'
+    case 'json':
+      return 'i-heroicons-code-bracket'
+    default:
+      return 'i-heroicons-document'
+  }
+}
 
 // Função de download (mesma da resources.vue)
 const handleDownload = async () => {

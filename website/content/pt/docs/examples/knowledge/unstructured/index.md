@@ -33,46 +33,46 @@ Esta secao apresenta **12 documentos** que demonstram os problemas tipicos de co
 - **Impacto**: Informacoes incorretas sendo seguidas
 
 ### 💬 Conversas Informais
-**slack-refunds-thread.txt**
+**[slack-refunds-thread.txt](./slack-refunds-thread.txt)**
 - **Contexto**: Thread do Slack sobre processo de reembolsos
 - **Problemas**: Informacao dispersa, sem conclusao formal
 - **Impacto**: Diferentes interpretacoes do processo
 
-**random-notes-mixed.txt**
+**[random-notes-mixed.txt](./random-notes-mixed.txt)**
 - **Contexto**: Anotacoes diversas misturadas
 - **Problemas**: Sem contexto, sem organizacao tematica
 - **Impacto**: Informacoes valiosas perdidas
 
 ### 🔧 Documentacao Tecnica
-**developer-handover.txt**
+**[developer-handover.txt](./developer-handover.txt)**
 - **Contexto**: Handover de desenvolvedor que saiu
 - **Problemas**: Conhecimento critico nao formalizado
 - **Impacto**: Perda de know-how tecnico
 
-**postmortem-outage-dec.txt**
+**[postmortem-outage-dec.txt](./postmortem-outage-dec.txt)**
 - **Contexto**: Post-mortem de incidente em dezembro
 - **Problemas**: Licoes aprendidas nao integradas aos processos
 - **Impacto**: Repeticao de problemas similares
 
 ### 🛡️ Seguranca e Compliance
-**security-audit-findings.txt**
+**[security-audit-findings.txt](./security-audit-findings.txt)**
 - **Contexto**: Resultados de auditoria de seguranca
 - **Problemas**: Recomendacoes nao rastreadas adequadamente
 - **Impacto**: Nao conformidade prolongada
 
-**pci-compliance-email.txt**
+**[pci-compliance-email.txt](./pci-compliance-email.txt)**
 - **Contexto**: Email sobre conformidade PCI
 - **Problemas**: Requisitos enterrados em email, sem follow-up
 - **Impacto**: Risco de nao conformidade
 
 ### 🐛 Issues e Bugs
-**jira-fraud-detection.txt**
+**[jira-fraud-detection.txt](./jira-fraud-detection.txt)**
 - **Contexto**: Discussao sobre deteccao de fraude no JIRA
 - **Problemas**: Decisoes tomadas em comentarios nao visiveis
 - **Impacto**: Implementacao inconsistente
 
 ### ✅ Processos
-**onboarding-checklist.txt**
+**[onboarding-checklist.txt](./onboarding-checklist.txt)**
 - **Contexto**: Checklist de onboarding de novos membros
 - **Problemas**: Lista desatualizada, sem responsaveis definidos
 - **Impacto**: Onboarding inconsistente

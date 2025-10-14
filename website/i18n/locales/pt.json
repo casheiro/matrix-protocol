@@ -581,6 +581,47 @@
       "backToManual": "Voltar ao Manual"
     }
   },
+  "viewer": {
+    "buttons": {
+      "formatted": "Formatado",
+      "raw": "Código",
+      "download": "Baixar",
+      "copy": "Copiar",
+      "search": "Buscar"
+    },
+    "sections": {
+      "content": "Conteúdo",
+      "examples": "Exemplos",
+      "relationships": "Relacionamentos",
+      "metadata": "Metadados"
+    },
+    "status": {
+      "validated": "validado",
+      "endorsed": "aprovado",
+      "draft": "rascunho",
+      "active": "ativo",
+      "deprecated": "depreciado",
+      "archived": "arquivado"
+    },
+    "types": {
+      "business_rule": "Regra de Negócio",
+      "technical_pattern": "Padrão Técnico",
+      "procedure": "Procedimento",
+      "pattern": "Padrão"
+    },
+    "messages": {
+      "noContent": "Nenhum campo de conteúdo encontrado neste documento.",
+      "unsupportedFile": "Este tipo de arquivo não é suportado para visualização.",
+      "downloadFile": "Baixar Arquivo"
+    },
+    "document": {
+      "yamlDocument": "Documento YAML",
+      "textDocument": "Documento de Texto",
+      "lines": "linhas",
+      "characters": "caracteres", 
+      "words": "palavras"
+    }
+  },
   "footer": {
     "description": "Framework abrangente para colaboração humano-IA",
     "links": "Links Úteis",

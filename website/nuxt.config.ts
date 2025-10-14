@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import { resolve } from 'path'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -17,9 +18,28 @@ export default defineNuxtConfig({
     experimental: {
       sqliteConnector: 'native' // usa node:sqlite (Node >= 22.5)
     },
+    sources: {
+      content: {
+        driver: 'fs',
+        prefix: '/docs', // all contents inside content/ folders will be prefixed with /docs
+        base: resolve('./content')
+      }
+    },
     highlight: {
       theme: 'github-dark',
-      preload: ['yaml', 'javascript', 'typescript', 'bash', 'json', 'markdown', 'vue', 'css', 'html']
+      preload: ['yaml', 'javascript', 'typescript', 'bash', 'json', 'markdown', 'vue', 'css', 'html', 'text']
+    },
+    // Enable processing of non-markdown files
+    extensions: ['.md', '.yaml', '.yml', '.txt', '.json'],
+    transformers: {
+      yaml: {
+        // Parse YAML files as structured content
+        parser: true
+      },
+      txt: {
+        // Parse TXT files as plain text content
+        parser: false
+      }
     }
   },
   typescript: {

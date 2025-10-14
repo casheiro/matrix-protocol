@@ -581,6 +581,47 @@
       "backToManual": "Back to Manual"
     }
   },
+  "viewer": {
+    "buttons": {
+      "formatted": "Formatted",
+      "raw": "Raw",
+      "download": "Download",
+      "copy": "Copy",
+      "search": "Search"
+    },
+    "sections": {
+      "content": "Content",
+      "examples": "Examples",
+      "relationships": "Relationships",
+      "metadata": "Metadata"
+    },
+    "status": {
+      "validated": "validated",
+      "endorsed": "endorsed",
+      "draft": "draft",
+      "active": "active",
+      "deprecated": "deprecated",
+      "archived": "archived"
+    },
+    "types": {
+      "business_rule": "Business Rule",
+      "technical_pattern": "Technical Pattern",
+      "procedure": "Procedure",
+      "pattern": "Pattern"
+    },
+    "messages": {
+      "noContent": "No content field found in this document.",
+      "unsupportedFile": "This file type is not supported for viewing.",
+      "downloadFile": "Download File"
+    },
+    "document": {
+      "yamlDocument": "YAML Document",
+      "textDocument": "Text Document",
+      "lines": "lines",
+      "characters": "characters", 
+      "words": "words"
+    }
+  },
   "footer": {
     "description": "Comprehensive framework for human-AI collaboration",
     "links": "Useful Links", 
