@@ -1,10 +1,24 @@
-# 🚀 **NAVEGAÇÃO DINÂMICA - DOCUMENTAÇÃO EXECUTÁVEL**
+# 🚀 **NAVEGAÇÃO DINÂMICA - DOCUMENTAÇÃO FUNDAMENTAL**
 
 ## 📋 **VISÃO GERAL**
 
-Este diretório contém toda a documentação estruturada para o projeto de **Navegação Dinâmica**, adaptada especificamente para execução por **agents IA** de forma **assíncrona** e **colaborativa**.
+Esta pasta contém a **documentação fundamental e permanente** do projeto de Navegação Dinâmica. Aqui estão os documentos que raramente mudam e fornecem o contexto base do projeto.
 
-## 📁 **ESTRUTURA DE ARQUIVOS**
+## 📁 **ESTRUTURA REORGANIZADA DO PROJETO**
+
+O projeto foi reestruturado semanticamente para melhor organização:
+
+```
+docs/dynamic-navigation/
+├── 📋 00-project/          # ← VOCÊ ESTÁ AQUI
+├── 🔄 01-planning/         # Planejamento e rituais
+├── 📊 02-execution/        # Execução e tracking
+├── 📦 03-deliverables/     # Entregáveis por STORY
+├── 📈 04-reports/          # Relatórios e análises
+└── 🔧 05-tools/           # Ferramentas e configs
+```
+
+## 📄 **ARQUIVOS DESTA PASTA**
 
 ### **🎯 PROJECT_OVERVIEW.md**
 - **Propósito**: Contexto completo do problema e solução
@@ -16,48 +30,54 @@ Este diretório contém toda a documentação estruturada para o projeto de **Na
 - **Conteúdo**: 5 agents especializados com suas atribuições e autoridades
 - **Uso**: Consultar antes de executar tasks para validar responsabilidades
 
-### **📖 BACKLOG_EXECUTABLE.md**
-- **Propósito**: Épicos, stories e tasks estruturadas para execução
-- **Conteúdo**: 3 épicos, 6 stories, 24 tasks atômicas com responsáveis
-- **Uso**: Guia principal para execução de trabalho
+### **📖 README.md** (este arquivo)
+- **Propósito**: Índice principal e guia de navegação
+- **Conteúdo**: Mapa da documentação e como usar cada seção
+- **Uso**: Primeira consulta para localizar qualquer informação
 
-### **🔄 AGILE_RITUALS.md**
-- **Propósito**: Ritos ágeis adaptados para execução por IA
-- **Conteúdo**: Planning, Daily, Review, Retrospective com protocolos específicos
-- **Uso**: Seguir protocolos durante execução dos ritos
+## 🗺️ **NAVEGAÇÃO RÁPIDA**
 
-### **📊 EXECUTION_LOG.md**
-- **Propósito**: Status em tempo real e histórico de atividades
-- **Conteúdo**: Progress tracking, logs de agents, dependencies, escalations
-- **Uso**: Atualizar após cada atividade, consultar para continuidade
+### **📋 Planejamento** → `../01-planning/`
+- **AGILE_RITUALS.md**: Ritos ágeis adaptados para IA
+- **BACKLOG_EXECUTABLE.md**: Épicos, stories e tasks
+- **todo-sync-config.json**: Configuração do sistema
+
+### **📊 Execução** → `../02-execution/`
+- **EXECUTION_LOG.md**: Status em tempo real e histórico
+- **sprint-reports/**: Relatórios de cada sprint
+
+### **📦 Entregáveis** → `../03-deliverables/`
+- **story-1.1-audit/**: Todos os deliverables da STORY 1.1
+- **story-1.2-metadata/**: Preparado para STORY 1.2
+- **story-2.1-discovery/**: Preparado para STORY 2.1
+
+### **📈 Relatórios** → `../04-reports/`
+- **audit-reports/**: Relatórios JSON de auditoria
+- **mapping/**: Mapeamentos estruturais
+- **archived/**: Versões antigas de documentos
+
+### **🔧 Ferramentas** → `../05-tools/`
+- **scripts-docs/**: Documentação das ferramentas CLI
 
 ## 🤖 **COMO USAR - GUIA PARA AGENTS IA**
 
 ### **🏁 Para Iniciar Trabalho no Projeto**
-1. **Ler** `PROJECT_OVERVIEW.md` para entender contexto
-2. **Consultar** `TEAM_AGENTS.md` para confirmar seu papel
-3. **Verificar** `EXECUTION_LOG.md` para status atual
-4. **Seguir** protocolos em `AGILE_RITUALS.md`
+1. **Ler** `PROJECT_OVERVIEW.md` (esta pasta)
+2. **Consultar** `TEAM_AGENTS.md` (esta pasta)
+3. **Verificar** `../02-execution/EXECUTION_LOG.md` para status atual
+4. **Seguir** protocolos em `../01-planning/AGILE_RITUALS.md`
 
 ### **📋 Para Executar uma Task**
-1. **Localizar task** em `BACKLOG_EXECUTABLE.md`
+1. **Localizar task** em `../01-planning/BACKLOG_EXECUTABLE.md`
 2. **Verificar dependencies** e responsável atribuído
-3. **Atualizar status** para IN_PROGRESS em `EXECUTION_LOG.md`
+3. **Atualizar status** em `../02-execution/EXECUTION_LOG.md`
 4. **Executar work** usando ferramentas MCP atribuídas
-5. **Registrar progress** conforme protocolo Daily
-6. **Marcar completed** e gerar handoff se necessário
-
-### **🔄 Para Participar de Ritos**
-1. **Sprint Planning**: Seguir protocolo em `AGILE_RITUALS.md`
-2. **Daily Updates**: Usar templates de log definidos
-3. **Sprint Review**: Executar validation checklists
-4. **Retrospective**: Fornecer feedback estruturado
+5. **Registrar entregáveis** em `../03-deliverables/`
 
 ### **🚦 Para Resolver Bloqueios**
 1. **Identificar impedimento** e classificar urgência
-2. **Usar escalation protocol** definido nos ritos
-3. **Atualizar status** para BLOCKED em `EXECUTION_LOG.md`
-4. **Aguardar resolução** do líder técnico
+2. **Usar escalation protocol** em `../01-planning/AGILE_RITUALS.md`
+3. **Atualizar status** para BLOCKED em `../02-execution/EXECUTION_LOG.md`
 
 ## 📊 **STATUS ATUAL DO PROJETO**
 
