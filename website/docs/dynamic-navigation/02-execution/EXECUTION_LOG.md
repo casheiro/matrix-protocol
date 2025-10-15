@@ -4,9 +4,10 @@
 
 **Projeto**: Sistema de Navegação Dinâmica  
 **Início**: 2025-01-14  
-**Status Atual**: ✅ STORY 1.1 CONCLUÍDA - ÉPICO 2 LIBERADO  
-**Sprint Ativa**: MILESTONE 1 (Desbloqueio)  
-**Próximo Marco**: Implementação Core (ÉPICO 2)  
+**Status Atual**: ✅ SPRINT 1 INICIADA - MILESTONE 1 DESBLOQUEIO  
+**Sprint Ativa**: SPRINT 1 - MILESTONE 1 (Desbloqueio Crítico)  
+**Sprint Goal**: Eliminar 20 bloqueadores críticos para liberar ÉPICO 2  
+**Próximo Marco**: ÉPICO 2 liberado após Sprint 1 (4.5 dias)  
 
 ---
 
@@ -47,38 +48,38 @@
 ## 👥 **STATUS DOS AGENTS**
 
 ### **🎯 Alex Santos - Líder Técnico**
-**Status**: READY  
-**Current Task**: Nenhuma
-**Last Update**: 2025-10-15 - TASK_1.1.4 COMPLETED
-**Next Action**: Executar Sprint Planning para Sprint 1  
+**Status**: COORDINATING SPRINT 1  
+**Current Task**: Sprint coordination + Quality Gates
+**Last Update**: 2025-10-15 - SPRINT 1 PLANNING COMPLETED
+**Next Action**: Monitor sprint execution + blocker removal  
 **Blocked**: ❌ Não  
 
 ### **💻 Marina Costa - Frontend Developer**
-**Status**: READY  
-**Current Task**: Nenhuma  
-**Last Update**: 2025-01-14 - Aguardando Sprint Planning  
-**Next Action**: Aguardar atribuição de tasks Sprint 1  
+**Status**: SPRINT 1 COMMITTED  
+**Current Task**: MILESTONE 1.2 - Criar 12 arquivos index.md EN  
+**Last Update**: 2025-10-15 - SPRINT 1 PLANNING  
+**Next Action**: Revisar estrutura EN + preparar ambiente (1h)  
 **Blocked**: ❌ Não  
 
 ### **🔧 Ricardo Lima - Nuxt Specialist**
-**Status**: READY  
-**Current Task**: Nenhuma  
-**Last Update**: 2025-01-14 - Aguardando Sprint Planning  
-**Next Action**: Preparar para auditoria de conteúdo  
+**Status**: SPRINT 1 COMMITTED  
+**Current Task**: MILESTONE 1.3 - Corrigir Frontmatter Faltante  
+**Last Update**: 2025-10-15 - SPRINT 1 PLANNING  
+**Next Action**: Preparar scripts de frontmatter (1h)  
 **Blocked**: ❌ Não  
 
 ### **🧪 Camila Rodriguez - QA Engineer**
-**Status**: READY  
-**Current Task**: Nenhuma  
-**Last Update**: 2025-01-14 - Aguardando Sprint Planning  
-**Next Action**: Definir critérios de aceite para Sprint 1  
+**Status**: SPRINT 1 COMMITTED  
+**Current Task**: MILESTONE 1.4 - Validação Estrutural Automatizada  
+**Last Update**: 2025-10-15 - SPRINT 1 PLANNING  
+**Next Action**: Configurar validação automática (1h)  
 **Blocked**: ❌ Não  
 
 ### **✍️ Bruno Oliveira - Content Specialist**
-**Status**: READY  
-**Current Task**: Nenhuma  
-**Last Update**: 2025-10-15 - TASK_1.1.2 COMPLETED  
-**Next Action**: Aguardar próxima task (TASK_1.2.1 ou TASK_1.2.4)  
+**Status**: SPRINT 1 COMMITTED  
+**Current Task**: MILESTONE 1.1 - Criar 8 arquivos index.md PT  
+**Last Update**: 2025-10-15 - SPRINT 1 PLANNING  
+**Next Action**: Criar template padrão para index.md (2h)  
 **Blocked**: ❌ Não  
 
 ---

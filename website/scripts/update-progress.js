@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = resolve(__filename, '..')
 const projectRoot = resolve(__dirname, '..')
-const docsPath = resolve(projectRoot, 'docs/dynamic-navigation')
+const docsPath = resolve(projectRoot, 'docs/dynamic-navigation/02-execution')
 const logPath = resolve(docsPath, 'EXECUTION_LOG.md')
 
 /**
