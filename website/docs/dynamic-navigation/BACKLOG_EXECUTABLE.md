@@ -77,7 +77,7 @@ interface ContentAuditReport {
 #### **Critérios de Aceite**
 - ✅ Schema de frontmatter padronizado definido e documentado
 - ✅ Todos os arquivos `.md` têm frontmatter completo e válido
-- ✅ Propriedades obrigatórias: `title`, `description`, `order`, `icon`, `category`
+- ✅ Propriedades obrigatórias: `title`, `description` | Opcionais: `order`, `icon`
 - ✅ Validação automática de schema implementada
 
 #### **Tasks Executáveis**
@@ -95,9 +95,8 @@ interface ContentAuditReport {
 ---
 title: "Título do Documento"           # OBRIGATÓRIO
 description: "Descrição resumida"      # OBRIGATÓRIO  
-order: 1                              # OPCIONAL - para ordenação
+order: 1                              # OPCIONAL - para ordenação na pasta
 icon: "i-heroicons-document-text"     # OPCIONAL - ícone específico
-category: "framework"                 # OPCIONAL - categorização
 navigation:
   title: "Título na Navegação"        # OPCIONAL - override do title
   hidden: false                       # OPCIONAL - ocultar da navegação
@@ -215,9 +214,9 @@ export const useContentDiscovery = () => {
 
 #### **Critérios de Aceite**
 - ✅ Geração automática de títulos a partir de nomes de arquivos
-- ✅ Ícones padrão por categoria/tipo de conteúdo
-- ✅ Ordenação inteligente (alfabética + prioridades)
-- ✅ Categorização automática baseada em estrutura de pastas
+- ✅ Ícones padrão baseados na estrutura de pastas
+- ✅ Ordenação inteligente (alfabética + ordem especificada)
+- ✅ Navegação automática baseada na hierarquia de arquivos/pastas
 
 #### **Tasks Executáveis**
 
@@ -229,10 +228,10 @@ export const useContentDiscovery = () => {
 - **Dependências**: STORY 2.1 concluída
 - **Status**: TODO
 
-**TASK 2.2.2: Criar Mapeamento Categoria → Ícone**
+**TASK 2.2.2: Criar Mapeamento Pasta → Ícone**
 - **Responsável**: Bruno (Content Specialist)
 - **Ferramentas**: Write + Context7
-- **Entregável**: `/config/navigation-icons.ts`
+- **Entregável**: `/config/folder-icons.ts`
 - **Estimativa**: 3h
 - **Dependências**: TASK 2.2.1
 - **Status**: TODO
@@ -245,10 +244,10 @@ export const useContentDiscovery = () => {
 - **Dependências**: TASK 2.2.1
 - **Status**: TODO
 
-**TASK 2.2.4: Adicionar Detecção Automática de Categorias**
+**TASK 2.2.4: Implementar Descoberta Automática de Estrutura**
 - **Responsável**: Ricardo (Nuxt Specialist)
 - **Ferramentas**: Read + Glob + Write
-- **Entregável**: `/utils/category-detector.ts`
+- **Entregável**: `/utils/structure-detector.ts`
 - **Estimativa**: 4h
 - **Dependências**: TASK 2.2.2, TASK 2.2.3
 - **Status**: TODO
