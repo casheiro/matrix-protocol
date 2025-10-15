@@ -1,244 +1,243 @@
-# Ontologia de Suporte MEF — MEF Support Ontology
-**Acrônimo:** MEF Support Ontology  
-**Versão:** 0.0.1-beta  
-**Última Atualização:** 2025-10-05  
+---
+title: MEF Support Ontology
+description: Reference controlled vocabularies for UKI structure and Matrix Embedding Framework implementation
+icon: i-heroicons-cube
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+---
 
-> ⚠️ **IMPORTANTE**: Este documento é uma tradução informativa.
+# MEF Support Ontology — Ontologia de Suporte MEF
+**Acronym:** MEF Support Ontology  
+**Version:** 0.0.1-beta  
+**Last Updated:** 2025-10-05  
 
-> 🚨 **AVISO IMPORTANTE**: Este documento contém **APENAS EXEMPLOS ILUSTRATIVOS** (como `technical`, `business`, `draft`, etc.) que NÃO são taxonomias obrigatórias. O **MOC (Matrix Ontology Catalog)** é a única fonte definitiva para taxonomias organizacionais.
+> ⚠️ **IMPORTANT**: This document is an informative translation.
+
+> 🚨 **IMPORTANT WARNING**: This document contains **ONLY ILLUSTRATIVE EXAMPLES** (such as `technical`, `business`, `draft`, etc.) that are NOT mandatory taxonomies. The **MOC (Matrix Ontology Catalog)** is the only definitive source for organizational taxonomies.
 
 ---
 
-## 1. Introdução
+## 1. Introduction
 
-A **Ontologia de Suporte MEF** define os vocabulários controlados de referência que podem ser utilizados na estrutura das UKIs, servindo como conjunto inicial (starter set) para organizações implementando o Matrix Embedding Framework.
+The **MEF Support Ontology** defines the reference controlled vocabularies that can be used in UKI structure, serving as a starter set for organizations implementing the Matrix Embedding Framework.
 
-Este documento fornece exemplos ilustrativos de domínios, tipos, relacionamentos e outros elementos estruturais que organizações podem usar como ponto de partida ao configurar seu próprio MOC organizacional.
+This document provides illustrative examples of domains, types, relationships, and other structural elements that organizations can use as a starting point when configuring their own organizational MOC.
 
-É importante enfatizar que estes são **exemplos de referência**, não taxonomias obrigatórias.
-
----
-
-## 2. Termos e Definições
-
-- **Vocabulários Controlados**: Conjuntos padronizados de termos para garantir consistência
-- **Starter Set**: Conjunto inicial de exemplos para facilitar implementação
-- **Domínios de Referência**: Exemplos de áreas de conhecimento organizacional
-- **Tipos de UKI**: Categorias estruturais de unidades de conhecimento
-- **Relacionamentos Ontológicos**: Conexões semânticas entre UKIs
-- **Níveis de Severidade**: Classificações de impacto de mudanças
-
-Referências definitivas no **MOC organizacional** para taxonomias específicas validadas.
+It is important to emphasize that these are **reference examples**, not mandatory taxonomies.
 
 ---
 
-## 3. Conceitos Centrais
+## 2. Terms and Definitions
 
-### Princípio de Flexibilidade Organizacional
-Todos os elementos neste documento são **sugestões configuráveis**:
-- Organizações podem usar como base
-- Podem adicionar elementos específicos 
-- Podem modificar ou remover conforme necessidade
-- Devem definir hierarquias próprias no MOC
+- **Controlled Vocabularies**: Standardized sets of terms to ensure consistency
+- **Starter Set**: Initial set of examples to facilitate implementation
+- **Reference Domains**: Examples of organizational knowledge areas
+- **UKI Types**: Structural categories of knowledge units
+- **Ontological Relationships**: Semantic connections between UKIs
+- **Severity Levels**: Classifications of change impact
 
-### Separação Referência vs Implementação
-- **Este Documento**: Exemplos ilustrativos e orientações
-- **MOC Organizacional**: Definições autoritativas específicas
-- **Implementações**: Devem consultar MOC, não este documento
+Definitive references in the **organizational MOC** for specific validated taxonomies.
 
 ---
 
-## 4. Regras Normativas
+## 3. Core Concepts
 
-> ⚠️ Esta seção é **normativa**.
+### Organizational Flexibility Principle
+All elements in this document are **configurable suggestions**:
+- Organizations can use as a foundation
+- Can add specific elements
+- Can modify or remove as needed
+- Must define own hierarchies in the MOC
 
-### Uso de Vocabulários de Referência
-- Organizações PODEM usar os exemplos deste documento como ponto de partida
-- Organizações DEVEM definir seus vocabulários específicos no MOC organizacional
-- Sistemas DEVEM validar campos UKI contra o MOC organizacional, não contra este documento
-- Implementações DEVEM tratar este documento apenas como referência ilustrativa
-
-### Extensibilidade Controlada
-- Vocabulários PODEM ser estendidos através do MOC organizacional
-- Validação semântica DEVE ser centralizada no MOC
-- Mudanças DEVEM seguir processo de governança organizacional definido
-
----
-
-## 5. Interoperabilidade
-
-- **MEF (Matrix Embedding Framework)**: Usa vocabulários definidos no MOC organizacional
-- **MOC (Matrix Ontology Catalog)**: Fonte autoritativa de todos os vocabulários organizacionais
-- **ZOF (Zion Orchestration Framework)**: Consulta vocabulários durante checkpoint EvaluateForEnrich
-- **OIF (Operator Intelligence Framework)**: Aplica vocabulários na filtragem e explicações
+### Reference vs Implementation Separation
+- **This Document**: Illustrative examples and guidance
+- **Organizational MOC**: Specific authoritative definitions
+- **Implementations**: Must consult MOC, not this document
 
 ---
 
-## 6. Convenções e Exemplos
+## 4. Normative Rules
 
-Todos os exemplos neste documento são **meramente ilustrativos** e não definem comportamento normativo.  
-A semântica normativa (escopos, governança, arquétipos, critérios de enriquecimento) é sempre derivada do **MOC (Matrix Ontology Catalog)** de cada organização.  
-Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos contextos locais, mas NÃO DEVEM ser tratados como obrigações no nível do protocolo.
+> ⚠️ This section is **normative**.
+
+### Use of Reference Vocabularies
+- Organizations MAY use the examples in this document as a starting point
+- Organizations MUST define their specific vocabularies in the organizational MOC
+- Systems MUST validate UKI fields against the organizational MOC, not against this document
+- Implementations MUST treat this document only as illustrative reference
+
+### Controlled Extensibility
+- Vocabularies MAY be extended through the organizational MOC
+- Semantic validation MUST be centralized in the MOC
+- Changes MUST follow defined organizational governance process
 
 ---
 
-## 7. Exemplos Ilustrativos (Apêndice)
+## 5. Interoperability
 
-> **Exemplo (Informativo, Dependente do MOC)**
+- **MEF (Matrix Embedding Framework)**: Uses vocabularies defined in the organizational MOC
+- **MOC (Matrix Ontology Catalog)**: Authoritative source of all organizational vocabularies
+- **ZOF (Zion Orchestration Framework)**: Consults vocabularies during EvaluateForEnrich checkpoint
+- **OIF (Operator Intelligence Framework)**: Applies vocabularies in filtering and explanations
 
-### **Domínios de Referência**
+---
+
+## 6. Conventions and Examples
+
+All examples in this document are **merely illustrative** and do not define normative behavior.  
+Normative semantics (scopes, governance, archetypes, enrichment criteria) are always derived from each organization's **MOC (Matrix Ontology Catalog)**.  
+Examples are provided for clarity purposes and MAY be adapted to local contexts, but MUST NOT be treated as protocol-level obligations.
+
+---
+
+## 7. Illustrative Examples (Appendix)
+
+> **Example (Informative, MOC-Dependent)**
+
+### **Reference Domains**
 ```yaml
-
-# --- Exemplos Ilustrativos ---
+# --- Illustrative Examples ---
 domains_examples:
-  strategy: "Decisões de alto nível, planejamento estratégico"
-  operations: "Processos operacionais, execução e procedimentos"
-  security: "Segurança, proteção e gerenciamento de riscos"
-  governance: "Governança, controle e supervisão"
-  communication: "Comunicação, colaboração e relacionamentos"
+  strategy: "High-level decisions, strategic planning"
+  operations: "Operational processes, execution and procedures"
+  security: "Security, protection and risk management"
+  governance: "Governance, control and oversight"
+  communication: "Communication, collaboration and relationships"
 
-# Sua organização pode usar termos completamente diferentes:
+# Your organization can use completely different terms:
 alternative_domains:
-  inovacao: "Processos de inovação organizacional"
-  qualidade: "Gestão da qualidade e melhoria contínua"
-  sustentabilidade: "Práticas sustentáveis e responsabilidade ambiental"
-  experiencia_cliente: "Gestão da experiência do cliente"
+  innovation: "Organizational innovation processes"
+  quality: "Quality management and continuous improvement"
+  sustainability: "Sustainable practices and environmental responsibility"
+  customer_experience: "Customer experience management"
 ```
 
-
-### **Tipos de UKI de Referência**
+### **Reference UKI Types**
 ```yaml
-
-# --- Exemplos Ilustrativos ---
+# --- Illustrative Examples ---
 types_examples:
-  pattern: "Solução reutilizável para problema comum"
-  rule: "Lógica de negócio ou restrição"
-  guideline: "Recomendação de boa prática"
-  template: "Formato estruturado para uso específico"
-  constraint: "Limitação ou requisito"
-  decision: "Escolha estratégica ou tática feita"
-  example: "Instância concreta de implementação"
+  pattern: "Reusable solution for common problem"
+  rule: "Business logic or constraint"
+  guideline: "Best practice recommendation"
+  template: "Structured format for specific use"
+  constraint: "Limitation or requirement"
+  decision: "Strategic or tactical choice made"
+  example: "Concrete implementation instance"
 
-# Sua organização pode usar categorias específicas:
+# Your organization can use specific categories:
 alternative_types:
-  procedimento: "Sequência operacional padronizada"
-  politica: "Diretriz institucional organizacional"
-  metrica: "Indicador quantitativo de desempenho"
-  conceito: "Definição ou modelo teórico"
+  procedure: "Standardized operational sequence"
+  policy: "Institutional organizational directive"
+  metric: "Quantitative performance indicator"
+  concept: "Definition or theoretical model"
 ```
 
-
-### **Relacionamentos Ontológicos**
+### **Ontological Relationships**
 ```yaml
-
-# --- Exemplos Ilustrativos ---
+# --- Illustrative Examples ---
 relationship_types:
-  depends_on: "Depende semanticamente de outra UKI"
-  overrides: "Substitui ou anula conteúdo de outra UKI"
-  conflicts_with: "Contradiz propositalmente outra UKI"
-  complements: "Expande ou detalha outra UKI"
-  amends: "Corrige ou atualiza parcialmente"
-  precedes: "Estabelece ordem ou prioridade"
-  equivalent_to: "Representa equivalência semântica"
+  depends_on: "Semantically depends on another UKI"
+  overrides: "Replaces or overrules content from another UKI"
+  conflicts_with: "Purposefully contradicts another UKI"
+  complements: "Expands or details another UKI"
+  amends: "Partially corrects or updates"
+  precedes: "Establishes order or priority"
+  equivalent_to: "Represents semantic equivalence"
 
 relationship_usage_examples:
   dependency_example:
     source: "uki:technical:pattern:jwt-authentication"
     target: "uki:technical:constraint:security-requirements"
     type: "depends_on"
-    description: "Implementa requisitos de segurança definidos"
+    description: "Implements defined security requirements"
   
   override_example:
     source: "uki:technical:pattern:oauth2-enhanced"
     target: "uki:technical:pattern:basic-auth-deprecated"
     type: "overrides"
-    description: "Substitui padrão de autenticação básica obsoleto"
+    description: "Replaces obsolete basic authentication pattern"
 ```
 
-
-### **Níveis de Severidade**
+### **Severity Levels**
 ```yaml
-
-# --- Exemplos Ilustrativos ---
+# --- Illustrative Examples ---
 severity_levels:
   low:
-    description: "Impacto menor, informacional ou sugestões"
-    impact: "Impacto mínimo nos negócios ou técnico"
-    examples: ["melhorias de documentação", "sugestões de otimização"]
+    description: "Minor impact, informational or suggestions"
+    impact: "Minimal business or technical impact"
+    examples: ["documentation improvements", "optimization suggestions"]
   
   medium:
-    description: "Impacto moderado, afeta funcionalidades específicas"
-    impact: "Impacto localizado na funcionalidade"
-    examples: ["mudanças em API não crítica", "ajustes de processo"]
+    description: "Moderate impact, affects specific functionalities"
+    impact: "Localized functionality impact"
+    examples: ["non-critical API changes", "process adjustments"]
   
   high:
-    description: "Impacto significativo, afeta funcionalidades centrais"
-    impact: "Impacto substancial na funcionalidade do sistema"
-    examples: ["mudanças em API crítica", "alterações arquiteturais"]
+    description: "Significant impact, affects core functionalities"
+    impact: "Substantial system functionality impact"
+    examples: ["critical API changes", "architectural alterations"]
   
   critical:
-    description: "Impacto crítico, falha do sistema ou grande disrupção"
-    impact: "Impacto severo causando falha ou disrupção major"
-    examples: ["mudanças que quebram compatibilidade", "alterações de segurança críticas"]
+    description: "Critical impact, system failure or major disruption"
+    impact: "Severe impact causing failure or major disruption"
+    examples: ["breaking compatibility changes", "critical security alterations"]
 ```
 
-
-### **Ciclo de Vida**
+### **Lifecycle**
 ```yaml
-
-# --- Exemplos Ilustrativos ---
+# --- Illustrative Examples ---
 lifecycle_states:
   active:
-    description: "UKI ativa e em uso normal"
-    usage: "Conhecimento atual e válido"
-    actions: ["pode ser referenciada", "pode ser atualizada"]
+    description: "Active UKI in normal use"
+    usage: "Current and valid knowledge"
+    actions: ["can be referenced", "can be updated"]
   
   deprecated:
-    description: "UKI descontinuada mas ainda referenciada"
-    usage: "Conhecimento obsoleto, evitar uso"
-    actions: ["não usar em novas implementações", "migrar para alternativa"]
+    description: "Discontinued UKI but still referenced"
+    usage: "Obsolete knowledge, avoid use"
+    actions: ["do not use in new implementations", "migrate to alternative"]
   
   archived:
-    description: "UKI arquivada para consulta histórica"
-    usage: "Preservação histórica, não usar"
-    actions: ["consulta apenas histórica", "não referenciar"]
+    description: "Archived UKI for historical consultation"
+    usage: "Historical preservation, do not use"
+    actions: ["historical consultation only", "do not reference"]
 ```
 
-
-### **Guia de Customização Organizacional**
+### **Organizational Customization Guide**
 ```yaml
-
-# --- Exemplo de Como Customizar ---
+# --- Example of How to Customize ---
 customization_guide:
   step_1_analysis:
-    - "Analise domínios específicos da sua organização"
-    - "Identifique tipos de conhecimento únicos do seu contexto"
-    - "Mapeie relacionamentos importantes para seu negócio"
+    - "Analyze your organization's specific domains"
+    - "Identify unique knowledge types in your context"
+    - "Map relationships important to your business"
   
   step_2_moc_definition:
-    - "Defina hierarquias no seu MOC organizacional"
-    - "Estabeleça regras de governança específicas"
-    - "Configure critérios de avaliação apropriados"
+    - "Define hierarchies in your organizational MOC"
+    - "Establish specific governance rules"
+    - "Configure appropriate evaluation criteria"
   
   step_3_validation:
-    - "Configure validação automática baseada no MOC"
-    - "Estabeleça processo de evolução de vocabulários"
-    - "Implemente monitoramento de consistência"
+    - "Configure automatic validation based on MOC"
+    - "Establish vocabulary evolution process"
+    - "Implement consistency monitoring"
 
 example_organizational_vocabulary:
-  # Exemplo para empresa de tecnologia financeira
+  # Example for fintech company
   fintech_domains:
-    - "pagamentos"
-    - "credito"
-    - "compliance_financeiro"
-    - "experiencia_usuario"
-    - "seguranca_financeira"
+    - "payments"
+    - "credit"
+    - "financial_compliance"
+    - "user_experience"
+    - "financial_security"
   
-  # Exemplo para empresa de healthcare
+  # Example for healthcare company
   healthcare_domains:
-    - "clinico"
-    - "regulatorio_saude"
-    - "privacidade_paciente"
-    - "qualidade_atendimento"
-    - "interoperabilidade_sistemas"
+    - "clinical"
+    - "health_regulatory"
+    - "patient_privacy"
+    - "care_quality"
+    - "systems_interoperability"
 ```

@@ -1,0 +1,209 @@
+{
+  "sprintNumber": 1,
+  "timestamp": "2025-10-15T18:21:01.795Z",
+  "sprintGoal": "0 bloqueadores detectados",
+  "successCriteria": {
+    "filesCreated": {
+      "description": "19 arquivos index.md criados",
+      "expected": 19,
+      "actual": 0,
+      "status": "FAILED",
+      "progress": "0/19",
+      "details": {
+        "missingCount": 19,
+        "missingFiles": [
+          "pt/docs/manual/templates/corporation",
+          "pt/docs/manual/templates/enterprise",
+          "pt/docs/manual/templates/scaleup",
+          "pt/docs/manual/templates/startup",
+          "pt/docs/manual/templates/unified"
+        ]
+      }
+    },
+    "zeroBlockers": {
+      "description": "0 bloqueadores detectados pelo script",
+      "expected": 0,
+      "actual": 19,
+      "status": "FAILED",
+      "progress": "0/19 resolvidos",
+      "details": {
+        "baseline": 19,
+        "current": 19,
+        "resolved": 0
+      }
+    },
+    "ptEnParity": {
+      "description": "Paridade PT/EN 100% confirmada",
+      "expected": "PT files = EN files = 0",
+      "actual": "PT: 6, EN: 13",
+      "status": "PARTIAL",
+      "progress": "Desbalance: 7",
+      "details": {
+        "ptPending": 6,
+        "enPending": 13,
+        "balanced": false
+      }
+    },
+    "templateValidated": {
+      "description": "Template reutilizável validado",
+      "expected": "Template funcional e reutilizável",
+      "actual": "Template criado pelo Bruno",
+      "status": "PASSED",
+      "progress": "100%",
+      "details": {
+        "owner": "Bruno",
+        "completedAt": "Gate 1",
+        "reusable": true
+      }
+    },
+    "dynamicNavigation": {
+      "description": "Navegação dinâmica funcional",
+      "expected": "Sistema de navegação operacional",
+      "actual": "Dependente de arquivos",
+      "status": "BLOCKED",
+      "progress": "Blocked by missing files",
+      "details": {
+        "blockedBy": "Missing index.md files",
+        "dependencies": "All index.md files must exist"
+      }
+    }
+  },
+  "qualityGatesStatus": {
+    "gate1": {
+      "name": "Template Validation",
+      "description": "Template aprovado e funcional",
+      "criteria": [
+        "Bruno template completed",
+        "Definition of Done validated",
+        "Reusable structure confirmed"
+      ],
+      "status": "PASSED",
+      "blockers": 0,
+      "timestamp": "2025-10-15T18:21:01.829Z"
+    },
+    "gate2": {
+      "name": "First 5 Files Validation",
+      "description": "Primeiros 5 arquivos criados e validados",
+      "criteria": [
+        "5 index.md files created with complete frontmatter",
+        "Hierarchical structure respected",
+        "No audit script failures"
+      ],
+      "status": "PENDING",
+      "blockers": 19,
+      "timestamp": "2025-10-15T18:21:01.829Z"
+    },
+    "gate3": {
+      "name": "PT/EN Parity Validation",
+      "description": "Paridade PT/EN confirmada",
+      "criteria": [
+        "All PT files have EN equivalents",
+        "Structure mirrored between locales",
+        "No locale-specific blockers"
+      ],
+      "status": "PENDING",
+      "blockers": 7,
+      "timestamp": "2025-10-15T18:21:01.829Z"
+    },
+    "gate4": {
+      "name": "Final Sprint Validation",
+      "description": "Auditoria final 0 bloqueadores",
+      "criteria": [
+        "All 19 blockers resolved",
+        "content-audit.js reports 0 missing index files",
+        "Dynamic navigation functional",
+        "Complete frontmatter validation"
+      ],
+      "status": "PENDING",
+      "blockers": 19,
+      "timestamp": "2025-10-15T18:21:01.829Z"
+    }
+  },
+  "blockerAnalysis": {
+    "resolved": [],
+    "pending": [
+      "pt/docs/manual/templates/corporation",
+      "pt/docs/manual/templates/enterprise",
+      "pt/docs/manual/templates/scaleup",
+      "pt/docs/manual/templates/startup",
+      "pt/docs/manual/templates/unified",
+      "pt/docs/quickstart/templates",
+      "en/docs/examples/knowledge/structured",
+      "en/docs/examples/knowledge/structured/business-rules",
+      "en/docs/examples/knowledge/structured/procedures",
+      "en/docs/examples/knowledge/structured/technical-patterns",
+      "en/docs/examples/knowledge/unstructured",
+      "en/docs/manual",
+      "en/docs/manual/templates/basic",
+      "en/docs/manual/templates/corporation",
+      "en/docs/manual/templates/enterprise",
+      "en/docs/manual/templates/scaleup",
+      "en/docs/manual/templates/startup",
+      "en/docs/manual/templates/unified",
+      "en/docs/quickstart/templates"
+    ],
+    "newlyDetected": []
+  },
+  "teamPerformance": {
+    "bruno": {
+      "responsibility": "Template + PT files",
+      "templateStatus": "COMPLETED",
+      "ptFilesAssigned": 6,
+      "ptFilesCompleted": 0,
+      "ptFilesRemaining": 6,
+      "overallStatus": "IN_PROGRESS",
+      "contribution": "Template foundation + PT implementation"
+    },
+    "marina": {
+      "responsibility": "EN files + coordination",
+      "enFilesAssigned": 13,
+      "enFilesCompleted": 0,
+      "enFilesRemaining": 13,
+      "overallStatus": "IN_PROGRESS",
+      "contribution": "EN implementation + PT/EN coordination"
+    },
+    "ricardo": {
+      "responsibility": "Scripts + auditoria",
+      "auditScriptStatus": "COMPLETED",
+      "validationToolsStatus": "AVAILABLE",
+      "overallStatus": "COMPLETED",
+      "contribution": "Infrastructure + monitoring tools"
+    },
+    "camila": {
+      "responsibility": "QA + validation automation",
+      "validationPipelineStatus": "COMPLETED",
+      "qualityGatesStatus": "IMPLEMENTED",
+      "overallStatus": "COMPLETED",
+      "contribution": "Quality assurance + automated validation"
+    }
+  },
+  "riskAssessment": {
+    "risks": [
+      {
+        "type": "DELIVERY_RISK",
+        "severity": "MEDIUM",
+        "description": "2 success criteria não atingidos",
+        "impact": "Sprint goal não alcançado",
+        "mitigation": "Acelerar criação de arquivos pendentes"
+      },
+      {
+        "type": "COORDINATION_RISK",
+        "severity": "MEDIUM",
+        "description": "Desbalance entre PT e EN",
+        "impact": "Paridade não mantida",
+        "mitigation": "Sincronizar criação paralela"
+      }
+    ],
+    "riskLevel": "AUTO_CALCULATED"
+  },
+  "finalVerdict": "SPRINT_NEEDS_WORK",
+  "confidenceLevel": 21,
+  "recommendationsForNextSprint": [
+    {
+      "category": "URGENCY",
+      "title": "Finalizar arquivos pendentes imediatamente",
+      "description": "Sprint goal não foi atingido",
+      "action": "Priorizar criação dos arquivos restantes"
+    }
+  ]
+}
