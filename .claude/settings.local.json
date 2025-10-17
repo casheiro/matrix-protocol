@@ -36,7 +36,8 @@
       "WebFetch(domain:nuxt.com)",
       "WebFetch(domain:ui.nuxt.com)",
       "Bash(pnpm typecheck:*)",
-      "WebFetch(domain:i18n.nuxtjs.org)"
+      "WebFetch(domain:i18n.nuxtjs.org)",
+      "WebFetch(domain:claudelog.com)"
     ],
     "deny": [],
     "ask": [],
