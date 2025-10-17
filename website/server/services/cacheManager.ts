@@ -9,9 +9,10 @@
  * @task TASK-2.2
  */
 
-import { watch, FSWatcher } from 'fs'
+import { watch } from 'fs'
+import type { FSWatcher } from 'fs'
 import { join } from 'path'
-import type { ContentTree } from './contentDiscovery'
+// Tipos auto-importados do shared/types/
 
 export interface CacheEntry<T> {
   data: T
@@ -218,7 +219,7 @@ export class NavigationCacheManager extends CacheManager {
   /**
    * Cache navigation tree for a locale
    */
-  setNavigationTree(locale: string, tree: ContentTree[string]): void {
+  setNavigationTree(locale: string, tree: ContentNode[]): void {
     const key = `navigation_tree_${locale}`
     this.set(key, tree, { ttl: this.NAVIGATION_TTL })
   }
@@ -226,7 +227,7 @@ export class NavigationCacheManager extends CacheManager {
   /**
    * Get cached navigation tree for a locale
    */
-  getNavigationTree(locale: string): ContentTree[string] | null {
+  getNavigationTree(locale: string): ContentNode[] | null {
     const key = `navigation_tree_${locale}`
     return this.get(key)
   }

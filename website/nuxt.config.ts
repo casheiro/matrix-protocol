@@ -17,29 +17,6 @@ export default defineNuxtConfig({
     // Disable database to avoid better-sqlite3 issues
     experimental: {
       sqliteConnector: 'native' // usa node:sqlite (Node >= 22.5)
-    },
-    sources: {
-      content: {
-        driver: 'fs',
-        prefix: '/docs', // all contents inside content/ folders will be prefixed with /docs
-        base: resolve('./content')
-      }
-    },
-    highlight: {
-      theme: 'github-dark',
-      preload: ['yaml', 'javascript', 'typescript', 'bash', 'json', 'markdown', 'vue', 'css', 'html', 'text']
-    },
-    // Enable processing of non-markdown files
-    extensions: ['.md', '.yaml', '.yml', '.txt', '.json'],
-    transformers: {
-      yaml: {
-        // Parse YAML files as structured content
-        parser: true
-      },
-      txt: {
-        // Parse TXT files as plain text content
-        parser: false
-      }
     }
   },
   typescript: {
@@ -50,18 +27,26 @@ export default defineNuxtConfig({
       { 
         code: 'pt', 
         name: 'Português',
-        file: 'pt.json'
+        file: 'pt.json',
+        iso: 'pt-BR'
       },
       { 
         code: 'en', 
         name: 'English',
-        file: 'en.json'
+        file: 'en.json',
+        iso: 'en-US'
       }
     ],
     defaultLocale: 'pt',
     strategy: 'prefix',
     langDir: './locales/',
-    detectBrowserLanguage: false
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'matrix_locale',
+      redirectOn: 'root',  
+      alwaysRedirect: false,
+      fallbackLocale: 'pt'
+    }
   },
   googleFonts: {
     families: {
@@ -101,5 +86,12 @@ export default defineNuxtConfig({
     experimental: {
       wasm: true
     }
+  },
+  // Auto-imports configuração para Nuxt 4.x
+  imports: {
+    dirs: [
+      'shared/types/**',
+      'shared/utils/**'
+    ]
   }
 })

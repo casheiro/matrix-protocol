@@ -9,9 +9,9 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
-import type { NavigationTreeResponse } from '~/server/types/navigation'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
+// Tipos auto-importados do shared/types/
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
@@ -19,7 +19,8 @@ export default defineEventHandler(async (event) => {
   try {
     // Parse query parameters
     const query = getQuery(event)
-    const locale = (query.locale as string) || 'pt'
+    const localeParam = (query.locale as string) || "pt"
+    const locale = isValidLocale(localeParam) ? localeParam : "pt"
     const depth = query.depth ? parseInt(query.depth as string) : undefined
     const enableCache = query.cache !== 'false'
 
@@ -40,20 +41,21 @@ export default defineEventHandler(async (event) => {
     }
 
     // Check cache first (if enabled)
-    let tree
+    let tree: ContentNode[] = []
     let cached = false
     
     if (enableCache) {
       const cacheKey = `navigation_tree_${locale}_${depth || 'full'}`
-      tree = navigationCache.get(cacheKey)
+      const cachedTree = navigationCache.get<ContentNode[]>(cacheKey)
       
-      if (tree) {
+      if (cachedTree) {
+        tree = cachedTree
         cached = true
       }
     }
 
     // Get tree from service if not cached
-    if (!tree) {
+    if (!cached) {
       tree = await contentDiscovery.getNavigationTree(locale, depth)
       
       // Cache the result (if caching enabled)
@@ -92,7 +94,7 @@ export default defineEventHandler(async (event) => {
     console.error('Navigation tree API error:', error)
     
     // Handle specific errors
-    if (error.statusCode) {
+    if ((error as any)?.statusCode) {
       throw error
     }
 
@@ -101,7 +103,7 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'Failed to fetch navigation tree',
       data: {
-        error: error.message,
+        error: (error as Error).message,
         timestamp: Date.now()
       }
     })

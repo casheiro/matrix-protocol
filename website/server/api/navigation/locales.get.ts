@@ -9,9 +9,9 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
-import type { LocalesResponse } from '~/server/types/navigation'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
+// Tipos auto-importados do shared/types/
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
@@ -80,7 +80,7 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'Failed to fetch available locales',
       data: {
-        error: error.message,
+        error: (error as Error).message,
         timestamp: Date.now()
       }
     })

@@ -9,8 +9,8 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
@@ -18,7 +18,8 @@ export default defineEventHandler(async (event) => {
   try {
     // Parse query parameters
     const query = getQuery(event)
-    const locale = (query.locale as string) || 'pt'
+    const localeParam = (query.locale as string) || "pt"
+    const locale = isValidLocale(localeParam) ? localeParam : "pt"
     const includeCache = query.cache !== 'false'
 
     // Validate locale
@@ -85,7 +86,7 @@ export default defineEventHandler(async (event) => {
     const errorResponse = {
       system: {
         status: 'error',
-        error: error.message,
+        error: (error as Error).message,
         timestamp: Date.now()
       },
       content: null,

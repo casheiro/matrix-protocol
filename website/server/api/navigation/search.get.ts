@@ -9,18 +9,20 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
-import type { SearchResponse, SearchResult } from '~/server/types/navigation'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
+// Tipos auto-importados do shared/types/
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
+  
+  // Parse query parameters outside try block for error handling access
+  const query = getQuery(event)
+  const searchQuery = query.q as string
+  const localeParam = (query.locale as string) || "pt"
+  const locale = isValidLocale(localeParam) ? localeParam : "pt"
 
   try {
-    // Parse query parameters
-    const query = getQuery(event)
-    const searchQuery = query.q as string
-    const locale = (query.locale as string) || 'pt'
     const limit = query.limit ? parseInt(query.limit as string) : 10
     const section = query.section as string
     const enableCache = query.cache !== 'false'
@@ -127,7 +129,7 @@ export default defineEventHandler(async (event) => {
     console.error('Search API error:', error)
     
     // Handle specific errors
-    if (error.statusCode) {
+    if (error instanceof Error && 'statusCode' in error) {
       throw error
     }
 
@@ -136,9 +138,9 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'Failed to perform search',
       data: {
-        error: error.message,
-        query: query.q,
-        locale: query.locale,
+        error: error instanceof Error ? error.message : 'Unknown error',
+        query: searchQuery,
+        locale: locale,
         timestamp: Date.now()
       }
     })

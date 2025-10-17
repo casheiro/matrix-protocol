@@ -50,7 +50,7 @@ const { data, error, pending, refresh } = await useAsyncData(
       const allContent = await queryCollection(locale).all()
       console.log('📋 All content in collection:', allContent?.length || 0, 'items')
       if (allContent?.length > 0) {
-        console.log('📄 Sample paths:', allContent.slice(0, 3).map(c => c._path || c.path))
+        console.log('📄 Sample paths:', allContent.slice(0, 3).map(c => c.path))
       }
       
       // Try without leading slash since collection has prefix configured

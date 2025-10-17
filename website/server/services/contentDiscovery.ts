@@ -12,42 +12,7 @@
 import { readdir, readFile, stat } from 'fs/promises'
 import { join, relative, basename, dirname } from 'path'
 import { parse as parseYaml } from 'yaml'
-
-// Types for content discovery
-export interface ContentNode {
-  path: string
-  title: string
-  description: string
-  icon?: string
-  locale: string
-  level: number
-  type: 'index' | 'content'
-  children: ContentNode[]
-  metadata: {
-    sidebar: boolean
-    toc: boolean
-    navigation: boolean
-    layout: string
-    parentPath?: string
-    breadcrumbs: string[]
-    order?: number
-  }
-}
-
-export interface FrontmatterData {
-  title: string
-  description: string
-  icon?: string
-  layout?: string
-  sidebar?: boolean
-  toc?: boolean
-  navigation?: boolean
-  order?: number
-}
-
-export interface ContentTree {
-  [locale: string]: ContentNode[]
-}
+// Tipos auto-importados do shared/types/
 
 /**
  * Content Discovery Service Class
@@ -66,7 +31,7 @@ export class ContentDiscoveryService {
   /**
    * Get complete navigation tree for a locale
    */
-  async getNavigationTree(locale: string, maxDepth?: number): Promise<ContentNode[]> {
+  async getNavigationTree(locale: Locale, maxDepth?: number): Promise<ContentNode[]> {
     const tree = await this.getContentTree()
     const localeTree = tree[locale] || []
     
@@ -80,7 +45,7 @@ export class ContentDiscoveryService {
   /**
    * Get breadcrumb trail for a specific path
    */
-  async getBreadcrumbs(path: string, locale: string): Promise<ContentNode[]> {
+  async getBreadcrumbs(path: string, locale: Locale): Promise<ContentNode[]> {
     const tree = await this.getNavigationTree(locale)
     return this.findBreadcrumbs(tree, path)
   }
@@ -88,7 +53,7 @@ export class ContentDiscoveryService {
   /**
    * Get sibling pages for a specific path
    */
-  async getSiblings(path: string, locale: string): Promise<ContentNode[]> {
+  async getSiblings(path: string, locale: Locale): Promise<ContentNode[]> {
     const tree = await this.getNavigationTree(locale)
     return this.findSiblings(tree, path)
   }
@@ -96,7 +61,7 @@ export class ContentDiscoveryService {
   /**
    * Search content by query string
    */
-  async searchContent(query: string, locale: string): Promise<ContentNode[]> {
+  async searchContent(query: string, locale: Locale): Promise<ContentNode[]> {
     const tree = await this.getNavigationTree(locale)
     const results: ContentNode[] = []
     
@@ -113,9 +78,9 @@ export class ContentDiscoveryService {
   /**
    * Get available locales
    */
-  async getAvailableLocales(): Promise<string[]> {
+  async getAvailableLocales(): Promise<Locale[]> {
     const tree = await this.getContentTree()
-    return Object.keys(tree)
+    return Object.keys(tree) as Locale[]
   }
 
   /**
@@ -158,18 +123,24 @@ export class ContentDiscoveryService {
       const contentPath = this.resolveContentPath()
       const locales = await this.getDirectories(contentPath)
       
-      for (const locale of locales) {
-        const docsPath = join(contentPath, locale, 'docs')
+      for (const localeDir of locales) {
+        // Validate locale
+        if (!isValidLocale(localeDir)) {
+          console.warn(`Invalid locale directory: ${localeDir}`)
+          continue
+        }
+        
+        const docsPath = join(contentPath, localeDir, 'docs')
         
         try {
           // Check if docs directory exists
           await stat(docsPath)
           
           // Build tree for this locale
-          tree[locale] = await this.scanDirectory(docsPath, locale, 0, '/docs')
+          tree[localeDir] = await this.scanDirectory(docsPath, localeDir, 0, '/docs')
         } catch (error) {
-          console.warn(`Docs directory not found for locale ${locale}:`, error)
-          tree[locale] = []
+          console.warn(`Docs directory not found for locale ${localeDir}:`, error)
+          tree[localeDir] = []
         }
       }
       
@@ -185,7 +156,7 @@ export class ContentDiscoveryService {
    */
   private async scanDirectory(
     dirPath: string, 
-    locale: string, 
+    locale: Locale, 
     level: number, 
     urlPath: string,
     parentPath?: string
@@ -284,7 +255,7 @@ export class ContentDiscoveryService {
    */
   private async createContentNode(
     filePath: string,
-    locale: string,
+    locale: Locale,
     level: number,
     urlPath: string,
     type: 'index' | 'content',
@@ -339,6 +310,9 @@ export class ContentDiscoveryService {
     
     try {
       const yamlContent = frontmatterMatch[1]
+      if (!yamlContent) {
+        return { title: '', description: '' }
+      }
       const parsed = parseYaml(yamlContent) as FrontmatterData
       
       return {

@@ -25,6 +25,11 @@ export interface ContentNode {
   metadata: ContentMetadata
 }
 
+// Alias for components compatibility  
+export interface NavigationNode extends ContentNode {
+  children: NavigationNode[]
+}
+
 export interface ContentMetadata {
   sidebar: boolean
   toc: boolean
@@ -72,8 +77,13 @@ export interface BreadcrumbsResponse {
   timestamp: number
 }
 
+// Additional response type for breadcrumbs
+export interface BreadcrumbResponse extends BreadcrumbsResponse {}
+
 export interface SiblingsResponse {
   siblings: ContentNode[]
+  parent: ContentNode | null
+  children: ContentNode[]
   currentPath: string
   locale: string
   totalSiblings: number
@@ -142,6 +152,7 @@ export interface BreadcrumbItem {
   path: string
   isLast: boolean
   icon?: string
+  type?: 'index' | 'content'
 }
 
 // ============================================================================

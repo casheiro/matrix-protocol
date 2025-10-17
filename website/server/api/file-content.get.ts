@@ -61,7 +61,7 @@ export default defineEventHandler(async (event) => {
   } catch (error) {
     console.error('Error reading file:', error)
     
-    if (error.statusCode) {
+    if (error instanceof Error && 'statusCode' in error) {
       throw error
     }
     

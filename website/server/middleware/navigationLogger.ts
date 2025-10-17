@@ -8,6 +8,8 @@
  * @task TASK-2.3
  */
 
+import { getHeader, getQuery } from 'h3'
+
 interface RequestLog {
   timestamp: number
   method: string
@@ -35,7 +37,7 @@ export default defineEventHandler(async (event) => {
   const url = event.node.req.url
   const method = event.node.req.method || 'GET'
   const userAgent = getHeader(event, 'user-agent')
-  const ip = getClientIP(event)
+  const ip = getHeader(event, 'x-forwarded-for') || getHeader(event, 'x-real-ip') || event.node.req.socket.remoteAddress || 'unknown'
 
   // Create initial log entry
   const logEntry: RequestLog = {

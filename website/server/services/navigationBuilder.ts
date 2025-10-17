@@ -9,7 +9,7 @@
  * @task TASK-2.2
  */
 
-import type { ContentNode } from './contentDiscovery'
+// Tipos auto-importados do shared/types/
 import { navigationCache } from './cacheManager'
 
 export interface NavigationItem {

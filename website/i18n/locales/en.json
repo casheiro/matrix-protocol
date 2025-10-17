@@ -16,7 +16,46 @@
     "toggleFrameworkSidebar": "Toggle framework navigation",
     "backToHome": "Back to home",
     "closeSidebar": "Close sidebar navigation",
-    "close": "Close"
+    "close": "Close",
+    
+    "dynamicNavLabel": "Dynamic navigation",
+    "dynamicTitle": "Navigation",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "errorTitle": "Navigation error",
+    "retry": "Try again",
+    "noContent": "No content found",
+    "debugInfo": "Debug info",
+    "totalPages": "Total pages",
+    "cacheHit": "Cache hit",
+    "locale": "Locale",
+    "fetchError": "Error fetching navigation data",
+    
+    "treeLabel": "Navigation tree",
+    "loadMore": "Load more ({count})",
+    "indexBadge": "Index",
+    "goToPage": "Go to {title}",
+    
+    "breadcrumbsLabel": "Breadcrumb trail",
+    "breadcrumbsError": "Error loading breadcrumbs",
+    "showAllBreadcrumbs": "Show all items",
+    "noBreadcrumbs": "No breadcrumb trail available",
+    
+    "relatedPagesLabel": "Related pages",
+    "relatedPages": "Related Pages",
+    "refreshRelated": "Refresh related pages",
+    "parentPage": "Parent Page",
+    "siblingPages": "Sibling Pages",
+    "childPages": "Child Pages",
+    "showMoreSiblings": "Show {count} more sibling pages",
+    "showMoreChildren": "Show {count} more child pages",
+    "noRelatedPages": "No related pages found",
+    
+    "switchingLanguage": "Switching language...",
+    "languageSwitchError": "Language switch error",
+    "languageSwitchGenericError": "Could not switch language. Please try again.",
+    "pageNotAvailable": "Page not available",
+    "pageRedirectedMessage": "The page was redirected because it does not exist in {locale}."
   },
   "docs": {
     "navigation": {
@@ -417,6 +456,7 @@
     "dark": "Dark",
     "githubLink": "Visit GitHub repository",
     "selectLanguage": "Select language",
+    "switchToLanguage": "Switch to {language}",
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
     "discordLink": "Join our community on Discord",

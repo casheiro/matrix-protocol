@@ -12,7 +12,8 @@ export function useCollapsibleNav(navigation: any[], currentPath: string) {
       try {
         const stored = localStorage.getItem(STORAGE_KEY)
         if (stored) {
-          const storedSet = new Set(JSON.parse(stored))
+          const storedArray = JSON.parse(stored) as string[]
+          const storedSet = new Set(storedArray)
           expandedItems.value = storedSet
         }
       } catch (error) {

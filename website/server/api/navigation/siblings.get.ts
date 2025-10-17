@@ -9,18 +9,20 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
-import type { SiblingsResponse } from '~/server/types/navigation'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
+// Tipos auto-importados do shared/types/
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
+  
+  // Parse query parameters outside try block for error handling access
+  const query = getQuery(event)
+  const path = query.path as string
+  const localeParam = (query.locale as string) || "pt"
+  const locale = isValidLocale(localeParam) ? localeParam : "pt"
 
   try {
-    // Parse query parameters
-    const query = getQuery(event)
-    const path = query.path as string
-    const locale = (query.locale as string) || 'pt'
     const limit = query.limit ? parseInt(query.limit as string) : undefined
     const enableCache = query.cache !== 'false'
 
@@ -108,6 +110,8 @@ export default defineEventHandler(async (event) => {
     // Prepare response
     const response: SiblingsResponse = {
       siblings,
+      parent: null, // TODO: Implement parent detection if needed
+      children: [], // TODO: Implement children detection if needed
       currentPath: path,
       locale,
       totalSiblings,
@@ -120,7 +124,7 @@ export default defineEventHandler(async (event) => {
     console.error('Siblings API error:', error)
     
     // Handle specific errors
-    if (error.statusCode) {
+    if (error instanceof Error && 'statusCode' in error) {
       throw error
     }
 
@@ -129,9 +133,9 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'Failed to fetch siblings',
       data: {
-        error: error.message,
-        path: query.path,
-        locale: query.locale,
+        error: error instanceof Error ? error.message : 'Unknown error',
+        path: path,
+        locale: locale,
         timestamp: Date.now()
       }
     })

@@ -137,11 +137,16 @@ const yamlData = computed(() => {
   }
 })
 
+interface PathSegment {
+  name: string
+  path: string
+}
+
 const pathSegments = computed(() => {
   if (!filePath.value) return []
   
   const segments = filePath.value.split('/').filter(Boolean)
-  const result = []
+  const result: PathSegment[] = []
   let currentPath = ''
   
   segments.forEach((segment, index) => {

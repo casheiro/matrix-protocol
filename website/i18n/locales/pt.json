@@ -16,7 +16,46 @@
     "toggleFrameworkSidebar": "Alternar navegação do framework",
     "backToHome": "Voltar ao início",
     "closeSidebar": "Fechar navegação lateral",
-    "close": "Fechar"
+    "close": "Fechar",
+    
+    "dynamicNavLabel": "Navegação dinâmica",
+    "dynamicTitle": "Navegação",
+    "expand": "Expandir",
+    "collapse": "Recolher",
+    "errorTitle": "Erro na navegação",
+    "retry": "Tentar novamente",
+    "noContent": "Nenhum conteúdo encontrado",
+    "debugInfo": "Info de debug",
+    "totalPages": "Total de páginas",
+    "cacheHit": "Cache hit",
+    "locale": "Localização",
+    "fetchError": "Erro ao buscar dados de navegação",
+    
+    "treeLabel": "Árvore de navegação",
+    "loadMore": "Carregar mais ({count})",
+    "indexBadge": "Índice",
+    "goToPage": "Ir para {title}",
+    
+    "breadcrumbsLabel": "Trilha de navegação",
+    "breadcrumbsError": "Erro ao carregar trilha de navegação",
+    "showAllBreadcrumbs": "Mostrar todos os itens",
+    "noBreadcrumbs": "Nenhuma trilha de navegação disponível",
+    
+    "relatedPagesLabel": "Páginas relacionadas",
+    "relatedPages": "Páginas Relacionadas",
+    "refreshRelated": "Atualizar páginas relacionadas",
+    "parentPage": "Página Superior",
+    "siblingPages": "Páginas do Mesmo Nível",
+    "childPages": "Subpáginas",
+    "showMoreSiblings": "Mostrar mais {count} páginas do mesmo nível",
+    "showMoreChildren": "Mostrar mais {count} subpáginas",
+    "noRelatedPages": "Nenhuma página relacionada encontrada",
+    
+    "switchingLanguage": "Mudando idioma...",
+    "languageSwitchError": "Erro ao mudar idioma",
+    "languageSwitchGenericError": "Não foi possível mudar o idioma. Tente novamente.",
+    "pageNotAvailable": "Página não disponível",
+    "pageRedirectedMessage": "A página foi redirecionada porque não existe em {locale}."
   },
   "docs": {
     "navigation": {
@@ -417,6 +456,7 @@
     "dark": "Escuro",
     "githubLink": "Visitar repositório no GitHub",
     "selectLanguage": "Selecionar idioma",
+    "switchToLanguage": "Mudar para {language}",
     "switchToLight": "Mudar para modo claro",
     "switchToDark": "Mudar para modo escuro",
     "discordLink": "Junte-se à nossa comunidade no Discord",

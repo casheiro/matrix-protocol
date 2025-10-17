@@ -32,7 +32,11 @@
       "Bash(curl:*)",
       "Bash(pnpm build:*)",
       "Bash(pnpm preview:*)",
-      "Bash(do cp \"/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/$file.md\" \"/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/\")"
+      "Bash(do cp \"/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/$file.md\" \"/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/\")",
+      "WebFetch(domain:nuxt.com)",
+      "WebFetch(domain:ui.nuxt.com)",
+      "Bash(pnpm typecheck:*)",
+      "WebFetch(domain:i18n.nuxtjs.org)"
     ],
     "deny": [],
     "ask": [],

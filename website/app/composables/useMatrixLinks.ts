@@ -385,7 +385,7 @@ export const useMatrixLinks = () => {
     let actualPath: string
     
     // Verifica se é um arquivo compartilhado
-    if (sharedFiles.some(sharedPath => mapping.path?.includes(sharedPath))) {
+    if (mapping.path && sharedFiles.some(sharedPath => mapping.path?.includes(sharedPath))) {
       url = `/downloads/shared/${mapping.path}`
       actualPath = mapping.path
       filename = mapping.filename || mapping.path?.split('/').pop() || 'download'
@@ -396,7 +396,7 @@ export const useMatrixLinks = () => {
         actualPath = locale === 'pt' ? 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md' : 'MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md'
         filename = `MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_${locale.toUpperCase()}.md`
       } else {
-        actualPath = mapping.path
+        actualPath = mapping.path || 'download'
         filename = mapping.filename || mapping.path?.split('/').pop() || 'download'
       }
       

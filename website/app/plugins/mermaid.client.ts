@@ -48,7 +48,7 @@ export default defineNuxtPlugin(() => {
     // Function to update theme based on dark mode
     const updateMermaidTheme = (isDark: boolean) => {
       const themeConfig = {
-        theme: 'base',
+        theme: (isDark ? 'dark' : 'default') as 'base' | 'default' | 'dark' | 'forest' | 'neutral' | 'null',
         themeVariables: isDark ? {
           // Dark theme colors
           primaryColor: '#3b82f6', // blue-500
@@ -76,12 +76,12 @@ export default defineNuxtPlugin(() => {
         },
         fontFamily: 'Source Code Pro, monospace',
         fontSize: 14,
-        securityLevel: 'loose',
+        securityLevel: 'loose' as 'loose' | 'strict' | 'antiscript' | 'sandbox',
         htmlLabels: true,
         flowchart: {
           useMaxWidth: true,
           htmlLabels: true,
-          curve: 'basis'
+          curve: 'basis' as 'basis' | 'bumpX' | 'bumpY' | 'cardinal' | 'catmullRom' | 'linear' | 'monotoneX' | 'monotoneY' | 'natural' | 'step' | 'stepAfter' | 'stepBefore'
         }
       }
       

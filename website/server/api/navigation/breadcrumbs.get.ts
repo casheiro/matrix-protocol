@@ -9,18 +9,20 @@
  * @task TASK-2.3
  */
 
-import { contentDiscovery } from '~/server/services/contentDiscovery'
-import { navigationCache } from '~/server/services/cacheManager'
-import type { BreadcrumbsResponse } from '~/server/types/navigation'
+import { contentDiscovery } from '../../services/contentDiscovery'
+import { navigationCache } from '../../services/cacheManager'
+// Tipos auto-importados do shared/types/
 
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
+  
+  // Parse query parameters outside try block for error handling access
+  const query = getQuery(event)
+  const path = query.path as string
+  const localeParam = (query.locale as string) || "pt"
+  const locale = isValidLocale(localeParam) ? localeParam : "pt"
 
   try {
-    // Parse query parameters
-    const query = getQuery(event)
-    const path = query.path as string
-    const locale = (query.locale as string) || 'pt'
     const enableCache = query.cache !== 'false'
 
     // Validate required parameters
@@ -99,7 +101,7 @@ export default defineEventHandler(async (event) => {
     console.error('Breadcrumbs API error:', error)
     
     // Handle specific errors
-    if (error.statusCode) {
+    if (error instanceof Error && 'statusCode' in error) {
       throw error
     }
 
@@ -108,9 +110,9 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'Failed to fetch breadcrumbs',
       data: {
-        error: error.message,
-        path: query.path,
-        locale: query.locale,
+        error: error instanceof Error ? error.message : 'Unknown error',
+        path: path,
+        locale: locale,
         timestamp: Date.now()
       }
     })
