@@ -12,7 +12,10 @@ Contém a documentação **dinâmica** de execução, status em tempo real e tra
 
 ### **sprint-reports/** (pasta)
 - **Descrição**: Relatórios de cada sprint executada
-- **Conteúdo**: Retrospectives, métricas, lições aprendidas
+- **Conteúdo**: Retrospectives, métricas, lições aprendidas (formato JSON + Markdown)
+- **Arquivos disponíveis**: 
+  - **Sprint 1**: `SPRINT_1_REPORT.md`, JSONs de auditoria automática
+  - **Sprint 2**: `SPRINT_2_REPORT.md`, JSONs de métricas de performance
 - **Quando usar**: Ao final de cada sprint para documentar resultados
 
 ## 🔗 **Navegação rápida**
