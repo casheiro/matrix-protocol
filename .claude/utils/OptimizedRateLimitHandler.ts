@@ -6,6 +6,9 @@
  * Mensagem de exemplo: "5-hour limit reached ∙ resets 5pm"
  */
 
+import { ParallelClaudeRunner, claudeRunner } from '../core/ParallelClaudeRunner'
+import chalk from 'chalk'
+
 interface RateLimitState {
   isLimited: boolean
   resetTime: Date | null
@@ -23,7 +26,7 @@ interface CycleOptimization {
   backgroundQueue: ExecutionTask[]
 }
 
-interface ExecutionTask {
+export interface ExecutionTask {
   id: string
   agentName: string
   taskType: 'sprint-planning' | 'daily' | 'retro' | 'implementation' | 'validation'
@@ -38,8 +41,10 @@ export class OptimizedRateLimitHandler {
   private state: RateLimitState
   private optimization: CycleOptimization
   private timers: Map<string, NodeJS.Timeout> = new Map()
+  private claudeRunner: ParallelClaudeRunner
 
-  constructor() {
+  constructor(runner?: ParallelClaudeRunner) {
+    this.claudeRunner = runner || claudeRunner
     this.state = {
       isLimited: false,
       resetTime: null,
@@ -243,25 +248,100 @@ export class OptimizedRateLimitHandler {
   }
 
   /**
-   * Simulação da execução do Claude CLI
-   * Na implementação real, aqui chamaria o ParallelClaudeRunner
+   * Execução real do Claude CLI através do ParallelClaudeRunner
    */
   private async executeClaudeTask(task: ExecutionTask): Promise<any> {
-    // Aqui seria a chamada real para o Claude CLI
-    // Por exemplo: await claudeRunner.run(task.agentName, task.context)
-    
-    // Simular tempo de execução baseado no tipo de task
-    const executionTime = this.getExecutionTime(task.taskType)
-    await new Promise(resolve => setTimeout(resolve, executionTime))
-    
-    return {
-      taskId: task.id,
-      agent: task.agentName,
-      type: task.taskType,
-      status: 'completed',
-      promptsUsed: task.estimatedPrompts,
-      timestamp: new Date().toISOString()
+    try {
+      console.log(chalk.blue(`🔧 Executando agent: ${task.agentName}`))
+      console.log(chalk.gray(`📋 Task type: ${task.taskType}`))
+      
+      // Preparar prompt baseado no tipo de task
+      const prompt = this.buildTaskPrompt(task)
+      
+      // Executar Claude CLI real
+      const result = await this.claudeRunner.executeAgent(
+        task.agentName,
+        prompt,
+        task.context
+      )
+      
+      console.log(chalk.green(`✅ Task ${task.id} completada com sucesso`))
+      
+      return {
+        taskId: task.id,
+        agent: task.agentName,
+        type: task.taskType,
+        status: 'completed',
+        promptsUsed: task.estimatedPrompts,
+        timestamp: new Date().toISOString(),
+        result: result,
+        success: true
+      }
+      
+    } catch (error: any) {
+      console.error(chalk.red(`❌ Erro na execução da task ${task.id}:`), error.message)
+      
+      // Verificar se é erro de rate limit
+      if (this.claudeRunner.isRateLimitError && this.claudeRunner.isRateLimitError(error.message)) {
+        throw new Error(`Rate limit: ${error.message}`)
+      }
+      
+      throw error
     }
+  }
+
+  /**
+   * Constrói prompt otimizado baseado no tipo de task
+   */
+  private buildTaskPrompt(task: ExecutionTask): string {
+    const basePrompts = {
+      'sprint-planning': `Como ${task.agentName}, conduza o sprint planning com foco em:
+- Análise do backlog atual
+- Estimativa de esforço para tarefas
+- Definição de metas do sprint
+- Identificação de dependências
+- Distribuição de responsabilidades
+
+Context: ${JSON.stringify(task.context, null, 2)}`,
+
+      'daily': `Como ${task.agentName}, conduza a daily scrum focando em:
+- O que foi feito desde a última reunião
+- O que será feito até a próxima
+- Impedimentos identificados
+- Progresso em relação às metas do sprint
+- Necessidade de colaboração
+
+Context: ${JSON.stringify(task.context, null, 2)}`,
+
+      'retro': `Como ${task.agentName}, conduza a retrospectiva do sprint com:
+- O que funcionou bem (keep doing)
+- O que pode melhorar (improve)
+- O que deve ser interrompido (stop doing)
+- Ações concretas para o próximo sprint
+- Métricas e lições aprendidas
+
+Context: ${JSON.stringify(task.context, null, 2)}`,
+
+      'implementation': `Como ${task.agentName}, trabalhe na implementação com foco em:
+- Desenvolvimento de funcionalidades
+- Resolução de issues técnicos
+- Code review e qualidade
+- Documentação técnica
+- Testes e validação
+
+Context: ${JSON.stringify(task.context, null, 2)}`,
+
+      'validation': `Como ${task.agentName}, execute validação com:
+- Testes de funcionalidade
+- Verificação de critérios de aceitação
+- Quality assurance
+- Validação de performance
+- Preparação para deploy
+
+Context: ${JSON.stringify(task.context, null, 2)}`
+    }
+
+    return basePrompts[task.taskType] || `Execute task ${task.taskType} como ${task.agentName}. Context: ${JSON.stringify(task.context, null, 2)}`
   }
 
   /**
@@ -347,11 +427,13 @@ export class OptimizedRateLimitHandler {
       }
     }
 
+    const result = status as any
+    
     if (this.state.resetTime) {
-      status.timeToReset = this.state.resetTime.getTime() - Date.now()
+      result.timeToReset = this.state.resetTime.getTime() - Date.now()
     }
 
-    return status as any
+    return result
   }
 
   /**

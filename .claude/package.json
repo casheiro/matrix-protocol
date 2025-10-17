@@ -4,13 +4,18 @@
   "description": "Sistema completo de execução automatizada de sprints com agents Claude especializados",
   "main": "MatrixProtocolSystem.js",
   "scripts": {
-    "start": "ts-node MatrixProtocolSystem.ts",
-    "demo": "ts-node MatrixProtocolSystem.ts",
+    "start": "ts-node MatrixProtocolSystem.ts --mode=interactive",
+    "demo": "ts-node MatrixProtocolSystem.ts --mode=demo",
+    "monitor": "ts-node MatrixProtocolSystem.ts --mode=monitoring",
+    "sprint": "ts-node MatrixProtocolSystem.ts --mode=sprint",
+    "sprint:custom": "ts-node MatrixProtocolSystem.ts --mode=sprint --sprint=",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only MatrixProtocolSystem.ts",
+    "dev": "ts-node-dev --respawn --transpile-only MatrixProtocolSystem.ts --mode=interactive",
+    "dev:demo": "ts-node-dev --respawn --transpile-only MatrixProtocolSystem.ts --mode=demo",
     "test": "jest",
     "lint": "eslint . --ext .ts",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "help": "node -e \"console.log('\\n🚀 MATRIX PROTOCOL - COMANDOS DISPONÍVEIS\\n'); console.log('npm start        - Modo interativo com menu'); console.log('npm run demo     - Demonstração completa automatizada'); console.log('npm run monitor  - Dashboard em tempo real'); console.log('npm run sprint   - Executar sprint exemplo'); console.log('npm run dev      - Desenvolvimento interativo'); console.log('npm run build    - Build para produção'); console.log('\\n📖 Para mais detalhes, consulte o README.md\\n')\""
   },
   "keywords": [
     "claude",
@@ -22,16 +27,21 @@
   ],
   "author": "Matrix Protocol Team",
   "license": "MIT",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "inquirer": "^8.2.4"
+  },
   "devDependencies": {
+    "@types/inquirer": "^8.2.1",
+    "@types/jest": "^29.5.8",
     "@types/node": "^20.10.0",
-    "ts-node": "^10.9.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.3.0",
-    "eslint": "^9.38.0",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^9.38.0",
     "jest": "^29.7.0",
-    "@types/jest": "^29.5.8"
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
   },
   "engines": {
     "node": ">=18.0.0"

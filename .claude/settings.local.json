@@ -37,7 +37,11 @@
       "WebFetch(domain:ui.nuxt.com)",
       "Bash(pnpm typecheck:*)",
       "WebFetch(domain:i18n.nuxtjs.org)",
-      "WebFetch(domain:claudelog.com)"
+      "WebFetch(domain:claudelog.com)",
+      "Bash(npm run type-check:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npx ts-node:*)"
     ],
     "deny": [],
     "ask": [],

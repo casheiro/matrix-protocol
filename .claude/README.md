@@ -180,20 +180,74 @@ npm install
 # Verificar se todos os 5 agents estão presentes
 ls -la agents/
 
-# Executar demonstração completa
-npm run demo
-# ou
-npm start
-# ou
-npx ts-node MatrixProtocolSystem.ts
+# Ver comandos disponíveis
+npm run help
 ```
 
-### Uso Básico
+### Comandos Disponíveis
+
+```bash
+# 🎮 MODO INTERATIVO - Sistema ativo com menu de controle
+npm start
+# Dashboard em tempo real + menu interativo
+# Controle total sobre execução de sprints e operações
+
+# 🎭 MODO DEMONSTRAÇÃO - Execução automatizada completa  
+npm run demo
+# Demonstra todas as funcionalidades em sequência
+# Executa as 5 fases: Planning → Daily → Implementation → Validation → Retrospective
+
+# 📊 MODO MONITORAMENTO - Dashboard apenas observação
+npm run monitor  
+# Sistema ativo apenas para observação
+# Dashboard em tempo real sem execução de operações
+
+# 🏃‍♂️ MODO SPRINT - Execução de sprint específica
+npm run sprint
+# Executa uma sprint completa (exemplo)
+# Para sprint customizada: npm run sprint:custom=sprint-id
+
+# 🔧 DESENVOLVIMENTO
+npm run dev         # Desenvolvimento interativo com hot reload
+npm run dev:demo    # Desenvolvimento modo demo com hot reload
+npm run build       # Build para produção
+```
+
+### Fluxo de Uso Típico
+
+#### 1. **Primeira Execução - Modo Demo**
+```bash
+npm run demo
+```
+Executa demonstração completa mostrando todas as funcionalidades em sequência automatizada.
+
+#### 2. **Uso Interativo - Controle Manual**
+```bash
+npm start
+```
+Sistema ativo com menu interativo:
+- ✅ Executar Sprint Completa
+- ✅ Batch Operations individuais (Planning, Daily, Implementation, etc.)
+- ✅ Tasks individuais por agent
+- ✅ Dashboard em tempo real
+- ✅ Status do sistema
+
+#### 3. **Monitoramento Passivo**
+```bash
+npm run monitor
+```
+Dashboard em tempo real para observação sem execução de operações.
+
+### Uso Programático
 
 ```typescript
-import { createMatrixProtocolSystem } from './.claude/MatrixProtocolSystem'
+import { 
+  createMatrixProtocolSystem, 
+  runDemoMode, 
+  runInteractiveMode 
+} from './.claude/MatrixProtocolSystem'
 
-// Criar sistema com configuração
+// Sistema customizado
 const system = createMatrixProtocolSystem({
   enableMonitoring: true,
   enableBatchOperations: true,
@@ -201,37 +255,112 @@ const system = createMatrixProtocolSystem({
   maxConcurrentSprints: 1
 })
 
-// Iniciar sistema
 await system.start()
 
 // Executar sprint completa
 const sprint = system.createExampleSprint()
 const result = await system.executeSprint(sprint)
 
-// Batch operation específica
-await system.executeBatchOperation(
-  ['alex-santos', 'marina-costa', 'ricardo-lima'],
-  'sprint-planning',
-  { sprintGoal: 'Dynamic Navigation Implementation' }
-)
+// Ou executar modos específicos
+await runDemoMode()        // Demonstração completa
+await runInteractiveMode() // Menu interativo
 ```
+
+## 🎮 Modos de Execução Detalhados
+
+### 🎭 **Modo Demo** (`npm run demo`)
+**Demonstração completa automatizada das capacidades do sistema**
+
+```
+🎯 FASE 1: SPRINT PLANNING
+├── Alex coordena planning com todos os 5 agents
+├── Cada agent define responsabilidades específicas  
+└── Camila define critérios de validação
+
+🤝 FASE 2: DAILY STANDUP  
+├── Daily sincronizado com todos os agents
+├── Progress reports individuais
+└── Identificação de blockers
+
+💻 FASE 3: IMPLEMENTATION
+├── Marina: Frontend (useDocsNavigation.ts)
+├── Ricardo: Backend (Content Discovery APIs)
+└── Bruno: Documentation & i18n
+
+🔍 FASE 4: VALIDATION
+├── Camila executa validação crítica
+├── Performance <200ms
+└── WCAG AA compliance
+
+🔄 FASE 5: RETROSPECTIVE
+├── Coleta feedback de todos agents
+├── Alex consolida retrospectiva
+└── Gera action items
+
+📊 RELATÓRIO FINAL
+└── Status completo do sistema
+```
+
+### 🎮 **Modo Interativo** (`npm start`)
+**Controle total com menu de opções**
+
+```
+═══════════════════════════════════════
+🎮 MATRIX PROTOCOL - MENU INTERATIVO
+═══════════════════════════════════════
+1 - Executar Sprint Completa
+2 - Batch: Sprint Planning  
+3 - Batch: Daily Standup
+4 - Batch: Implementation
+5 - Batch: Validation
+6 - Batch: Retrospective
+7 - Adicionar Task Individual
+8 - Ver Status do Sistema
+9 - Executar Demonstração
+0 - Sair
+═══════════════════════════════════════
+```
+
+**Funcionalidades:**
+- Dashboard em tempo real
+- Execução sob demanda
+- Controle granular de operações
+- Monitoramento contínuo
+
+### 📊 **Modo Monitoramento** (`npm run monitor`)
+**Dashboard passivo para observação**
+
+- Sistema ativo apenas para observação
+- Dashboard atualizado a cada 15 segundos
+- Métricas em tempo real
+- Sem execução de operações
+
+### 🏃‍♂️ **Modo Sprint** (`npm run sprint`)
+**Execução focada de sprint específica**
+
+- Executa uma sprint completa
+- Relatório detalhado de resultados
+- Métricas de performance
+- Status final da sprint
 
 ### Uso Avançado
 
 ```typescript
-// Queue task individual
+// CLI com argumentos personalizados
+npx ts-node MatrixProtocolSystem.ts --mode=sprint --sprint=custom-sprint-id
+
+// Queue task individual com deadline
 const taskId = await system.enqueueTask(
   'camila-rodriguez',
-  'validation',
+  'validation', 
   'critical',
   { validationType: 'comprehensive' },
   { deadline: new Date(Date.now() + 2 * 60 * 60 * 1000) }
 )
 
-// Monitorar status em tempo real
-setInterval(() => {
-  system.displaySystemStatus()
-}, 30000) // A cada 30 segundos
+// Monitoramento programático
+const metrics = system.usageMonitor.getCurrentMetrics()
+console.log(`Eficiência: ${metrics.efficiency.overall * 100}%`)
 ```
 
 ## 📊 Otimizações para Claude Code Pro Plan

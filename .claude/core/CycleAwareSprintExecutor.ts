@@ -8,6 +8,8 @@
 
 import { rateLimitHandler, createSprintTask, type ExecutionTask } from '../utils/OptimizedRateLimitHandler'
 import { ContextOptimizer } from '../utils/ContextOptimizer'
+import { claudeRunner } from './ParallelClaudeRunner'
+import chalk from 'chalk'
 
 interface SprintDefinition {
   id: string
