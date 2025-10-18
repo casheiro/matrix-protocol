@@ -41,7 +41,8 @@
       "Bash(npm run type-check:*)",
       "Bash(pnpm install:*)",
       "Bash(pnpm add:*)",
-      "Bash(npx ts-node:*)"
+      "Bash(npx ts-node:*)",
+      "WebFetch(domain:docs.claude.com)"
     ],
     "deny": [],
     "ask": [],
