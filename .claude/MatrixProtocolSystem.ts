@@ -5,7 +5,7 @@
  * com gerenciamento de rate limits otimizado para Claude Code Pro plan
  */
 
-import { ParallelClaudeRunner, claudeRunner } from './core/ParallelClaudeRunner'
+import { TaskDelegator, taskDelegator } from './core/TaskDelegator'
 import { rateLimitHandler, createSprintTask } from './utils/OptimizedRateLimitHandler'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -73,7 +73,7 @@ interface SprintPhaseResult {
 }
 
 export class MatrixProtocolSystem {
-  private claudeRunner: ParallelClaudeRunner
+  private taskDelegator: TaskDelegator
   private configuration: SystemConfiguration
   private isRunning: boolean = false
   private executionHistory: any[] = []
@@ -89,7 +89,7 @@ export class MatrixProtocolSystem {
       ...config
     }
 
-    this.claudeRunner = claudeRunner
+    this.taskDelegator = taskDelegator
     this.initializeSprintCatalog()
   }
 
@@ -646,11 +646,12 @@ export class MatrixProtocolSystem {
       }
     }
 
-    // Verificar disponibilidade do Claude CLI
-    if (!this.claudeRunner) {
-      console.log(chalk.yellow('⚠️ Claude CLI não detectado - modo de simulação'))
+    // Verificar disponibilidade do Task tool
+    const taskToolAvailable = await TaskDelegator.checkTaskToolAvailable()
+    if (!taskToolAvailable) {
+      console.log(chalk.yellow('⚠️ Task tool não detectado - modo de simulação'))
     } else {
-      console.log(chalk.green('✅ Claude CLI detectado e disponível'))
+      console.log(chalk.green('✅ Task tool detectado e disponível'))
     }
 
     console.log(chalk.green('✅ Validação do ambiente completada'))
@@ -727,8 +728,8 @@ export class MatrixProtocolSystem {
         spinner.text = chalk.blue(`⚡ Executando ${agentName}... (${timeElapsed}s)`)
       }, 1000)
 
-      // Executar via Claude Runner com rate limiting otimizado
-      const result = await this.claudeRunner.executeAgent(agentName, this.buildPrompt(agentName, 'execute', { prompt, ...context }))
+      // Executar via Task Delegator com tools nativos do Claude Code
+      const result = await this.taskDelegator.executeAgent(agentName, this.buildPrompt(agentName, 'execute', { prompt, ...context }))
       
       if (executionTimer) {
         clearTimeout(executionTimer)
@@ -950,7 +951,7 @@ Context: ${JSON.stringify(context, null, 2)}`
     
     // Rate Limit Status
     const rateLimitStatus = rateLimitHandler.getStatus()
-    const claudeStatus = this.claudeRunner.getExecutionStatus()
+    const claudeStatus = this.taskDelegator.getExecutionStatus()
     
     // Prompts disponíveis
     const promptsRemaining = rateLimitStatus.state.promptsRemaining

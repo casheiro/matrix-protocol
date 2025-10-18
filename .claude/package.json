@@ -28,16 +28,17 @@
   "author": "Matrix Protocol Team",
   "license": "MIT",
   "dependencies": {
+    "@anthropic-ai/claude-code": "^2.0.22",
     "chalk": "4.1.2",
+    "cli-progress": "^3.12.0",
     "inquirer": "^8.2.4",
-    "ora": "^5.4.1",
-    "cli-progress": "^3.12.0"
+    "ora": "^5.4.1"
   },
   "devDependencies": {
+    "@types/cli-progress": "^3.11.0",
     "@types/inquirer": "^8.2.1",
     "@types/jest": "^29.5.8",
     "@types/node": "^20.10.0",
-    "@types/cli-progress": "^3.11.0",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^9.38.0",
