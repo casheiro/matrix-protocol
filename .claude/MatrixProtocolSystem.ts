@@ -9,7 +9,10 @@ import { ParallelClaudeRunner, claudeRunner } from './core/ParallelClaudeRunner'
 import { rateLimitHandler, createSprintTask } from './utils/OptimizedRateLimitHandler'
 import * as fs from 'fs'
 import * as path from 'path'
-import chalk from 'chalk'
+import * as inquirer from 'inquirer'
+const ora = require('ora')
+import * as cliProgress from 'cli-progress'
+const chalk = require('chalk')
 
 interface SystemConfiguration {
   enableMonitoring: boolean
@@ -144,39 +147,78 @@ export class MatrixProtocolSystem {
   }
 
   /**
-   * Executar agent individual
+   * Executar agent individual com feedback visual
    */
   async executeAgent(agentName: string, prompt: string, context?: any): Promise<any> {
     if (!this.isRunning) {
       throw new Error('Sistema não está em execução')
     }
 
-    console.log(chalk.blue(`🤖 Executando agent: ${agentName}`))
-    
+    // Criar spinner para feedback visual
+    const spinner = ora({
+      text: chalk.blue(`Iniciando execução do agent ${agentName}...`),
+      color: 'cyan'
+    }).start()
+
+    const startTime = Date.now()
+    let intervalId: NodeJS.Timeout | null = null
+
     try {
+      // Atualizar spinner com timer
+      intervalId = setInterval(() => {
+        const elapsed = Math.round((Date.now() - startTime) / 1000)
+        spinner.text = chalk.blue(`🤖 Executando ${agentName} | ⏱️  ${elapsed}s | 🔄 Aguardando resposta...`)
+      }, 1000)
+
+      // Executar agent
       const result = await this.claudeRunner.executeAgent(agentName, prompt, context)
+      
+      // Limpar interval e mostrar sucesso
+      if (intervalId) clearInterval(intervalId)
+      const totalTime = Math.round((Date.now() - startTime) / 1000)
+      
+      spinner.succeed(chalk.green(`✅ Agent ${agentName} executado com sucesso em ${totalTime}s`))
       
       this.executionHistory.push({
         agentName,
         prompt: prompt.substring(0, 100) + '...',
         timestamp: new Date(),
         success: true,
-        result: result.substring(0, 200) + '...'
+        result: result.substring(0, 200) + '...',
+        executionTime: totalTime
       })
 
-      console.log(chalk.green(`✅ Agent ${agentName} executado com sucesso`))
       return result
 
     } catch (error: any) {
+      // Limpar interval e mostrar erro
+      if (intervalId) clearInterval(intervalId)
+      const totalTime = Math.round((Date.now() - startTime) / 1000)
+      
+      // Verificar se é rate limit para feedback específico
+      if (this.claudeRunner.isRateLimitError(error.message)) {
+        spinner.warn(chalk.yellow(`⏳ Rate limit detectado para ${agentName} após ${totalTime}s`))
+        
+        // Extrair tempo de reset da mensagem
+        const resetMatch = error.message.match(/resets?\s+(?:at\s+)?(\d{1,2})(am|pm)/i)
+        if (resetMatch) {
+          const resetTime = `${resetMatch[1]}${resetMatch[2]}`
+          console.log(chalk.blue(`🕒 Sistema aguardará até ${resetTime} para continuar`))
+        }
+      } else {
+        spinner.fail(chalk.red(`❌ Erro na execução do agent ${agentName} após ${totalTime}s`))
+        console.log(chalk.gray(`Detalhes: ${error.message}`))
+      }
+      
       this.executionHistory.push({
         agentName,
         prompt: prompt.substring(0, 100) + '...',
         timestamp: new Date(),
         success: false,
-        error: error.message
+        error: error.message,
+        executionTime: totalTime
       })
 
-      console.error(chalk.red(`❌ Erro na execução do agent ${agentName}:`), error.message)
       throw error
     }
   }
@@ -254,10 +296,13 @@ Context: ${JSON.stringify(context, null, 2)}`
   }
 
   /**
-   * Executar demonstração completa do sistema
+   * Executar demonstração completa do sistema com feedback visual
    */
   async runDemonstration(): Promise<void> {
-    console.log(chalk.blue('🎭 Iniciando demonstração do Matrix Protocol System'))
+    const demoSpinner = ora({
+      text: chalk.blue('Preparando demonstração do Matrix Protocol System...'),
+      color: 'cyan'
+    }).start()
     
     const demonstrations = [
       {
@@ -304,19 +349,30 @@ Context: ${JSON.stringify(context, null, 2)}`
     ]
 
     try {
+      demoSpinner.succeed(chalk.green('✅ Demonstração iniciada'))
+      
       const results = await this.executeAgentSequence(demonstrations)
       
-      console.log(chalk.green('✅ Demonstração concluída com sucesso'))
-      console.log(chalk.cyan(`📊 Resumo: ${results.filter(r => r.success).length}/${results.length} agents executados com sucesso`))
+      const successCount = results.filter(r => r.success).length
+      const failureCount = results.length - successCount
+      
+      console.log(chalk.green('\n🎉 Demonstração concluída!'))
+      console.log(chalk.cyan('='.repeat(50)))
+      console.log(chalk.yellow(`📊 RESUMO DA DEMONSTRAÇÃO:`))
+      console.log(chalk.white(`✅ Sucessos: ${successCount}/${results.length}`))
+      console.log(chalk.white(`❌ Falhas: ${failureCount}/${results.length}`))
+      console.log(chalk.white(`🚀 Taxa de Sucesso: ${Math.round((successCount / results.length) * 100)}%`))
+      console.log(chalk.cyan('='.repeat(50)))
 
     } catch (error: any) {
-      console.error(chalk.red('❌ Erro na demonstração:'), error.message)
+      demoSpinner.fail(chalk.red('❌ Erro na demonstração'))
+      console.error(chalk.red('Detalhes:'), error.message)
       throw error
     }
   }
 
   /**
-   * Mostrar status do sistema
+   * Mostrar status do sistema com visual aprimorado
    */
   displayStatus(): void {
     console.log(chalk.cyan('\n📊 Status do Matrix Protocol System'))
@@ -325,15 +381,75 @@ Context: ${JSON.stringify(context, null, 2)}`
     const rateLimitStatus = rateLimitHandler.getStatus()
     const claudeStatus = this.claudeRunner.getExecutionStatus()
     
-    console.log(`🔋 Rate Limit: ${rateLimitStatus.state.promptsRemaining} prompts restantes`)
-    console.log(`⚡ Claude Runner: ${claudeStatus.running} execuções ativas`)
+    // Rate Limit Status com indicadores visuais
+    const promptsRemaining = rateLimitStatus.state.promptsRemaining
+    const promptsUsed = rateLimitStatus.state.promptsUsed
+    const totalEstimated = promptsRemaining + promptsUsed
+    
+    let rateLimitColor = chalk.green
+    if (promptsRemaining < 10) rateLimitColor = chalk.red
+    else if (promptsRemaining < 20) rateLimitColor = chalk.yellow
+    
+    console.log(`🔋 Rate Limit: ${rateLimitColor(promptsRemaining)} prompts restantes`)
+    
+    // Barra visual de rate limit
+    if (totalEstimated > 0) {
+      const usedPercentage = Math.round((promptsUsed / totalEstimated) * 100)
+      const barLength = 20
+      const filledBars = Math.round((usedPercentage / 100) * barLength)
+      const emptyBars = barLength - filledBars
+      
+      const progressBar = chalk.red('█'.repeat(filledBars)) + chalk.gray('░'.repeat(emptyBars))
+      console.log(`📊 Uso: [${progressBar}] ${usedPercentage}% (${promptsUsed}/${totalEstimated})`)
+    }
+    
+    // Status de reset com countdown
+    if (rateLimitStatus.state.resetTime) {
+      const resetTime = rateLimitStatus.state.resetTime
+      const now = new Date()
+      const timeUntilReset = resetTime.getTime() - now.getTime()
+      
+      if (timeUntilReset > 0) {
+        const hours = Math.floor(timeUntilReset / (1000 * 60 * 60))
+        const minutes = Math.floor((timeUntilReset % (1000 * 60 * 60)) / (1000 * 60))
+        console.log(`⏰ Próximo Reset: ${resetTime.toLocaleTimeString()} (${hours}h ${minutes}m)`)
+      } else {
+        console.log(`⏰ Próximo Reset: ${chalk.green('Disponível agora!')}`)
+      }
+    }
+    
+    // Claude Runner Status
+    const runningColor = claudeStatus.running > 0 ? chalk.yellow : chalk.green
+    console.log(`⚡ Claude Runner: ${runningColor(claudeStatus.running)} execuções ativas`)
+    
+    // System Status
+    const systemStatusColor = this.isRunning ? chalk.green : chalk.red
+    const systemStatusText = this.isRunning ? '🟢 Ativo' : '🔴 Inativo'
+    console.log(`🎯 Status: ${systemStatusColor(systemStatusText)}`)
+    
+    // Execution History com detalhes
     console.log(`📈 Histórico: ${this.executionHistory.length} execuções realizadas`)
-    console.log(`🎯 Status: ${this.isRunning ? 'Ativo' : 'Inativo'}`)
     
     if (this.executionHistory.length > 0) {
       const successCount = this.executionHistory.filter(h => h.success).length
+      const failureCount = this.executionHistory.length - successCount
       const successRate = Math.round((successCount / this.executionHistory.length) * 100)
-      console.log(`✅ Taxa de sucesso: ${successRate}%`)
+      
+      let successRateColor = chalk.green
+      if (successRate < 70) successRateColor = chalk.red
+      else if (successRate < 90) successRateColor = chalk.yellow
+      
+      console.log(`✅ Sucessos: ${chalk.green(successCount)} | ❌ Falhas: ${chalk.red(failureCount)} | Taxa: ${successRateColor(successRate + '%')}`)
+      
+      // Mostrar execuções recentes
+      const recentExecutions = this.executionHistory.slice(-3)
+      console.log(chalk.gray('📋 Últimas execuções:'))
+      recentExecutions.forEach(exec => {
+        const status = exec.success ? chalk.green('✅') : chalk.red('❌')
+        const time = exec.executionTime ? `${exec.executionTime}s` : 'N/A'
+        const timestamp = new Date(exec.timestamp).toLocaleTimeString()
+        console.log(chalk.gray(`   ${status} ${exec.agentName} - ${time} (${timestamp})`))
+      })
     }
     
     console.log('=' .repeat(50))
@@ -344,6 +460,346 @@ Context: ${JSON.stringify(context, null, 2)}`
    */
   getExecutionHistory(): any[] {
     return [...this.executionHistory]
+  }
+
+  /**
+   * Menu interativo com opções reais
+   */
+  async runInteractiveMenu(): Promise<void> {
+    while (this.isRunning) {
+      console.log('\n' + '='.repeat(60))
+      console.log(chalk.cyan('🎯 MATRIX PROTOCOL - MENU INTERATIVO'))
+      console.log('='.repeat(60))
+      
+      this.displayStatus()
+      
+      const { action } = await inquirer.prompt([
+        {
+          type: 'list',
+          name: 'action',
+          message: 'Escolha uma opção:',
+          choices: [
+            { name: '🤖 Executar Agent Individual', value: 'execute_agent' },
+            { name: '🎭 Executar Demonstração Completa', value: 'run_demo' },
+            { name: '🏃‍♂️ Executar Sprint REAL', value: 'run_sprint' },
+            { name: '📊 Atualizar Status do Sistema', value: 'show_status' },
+            { name: '🔋 Monitorar Rate Limits', value: 'monitor_limits' },
+            { name: '🚪 Sair', value: 'exit' }
+          ]
+        }
+      ])
+
+      try {
+        switch (action) {
+          case 'execute_agent':
+            await this.handleExecuteAgent()
+            break
+            
+          case 'run_demo':
+            await this.runDemonstration()
+            break
+            
+          case 'run_sprint':
+            await this.handleRealSprint()
+            break
+            
+          case 'show_status':
+            // Status já é mostrado no início do loop
+            console.log(chalk.green('✅ Status atualizado'))
+            break
+            
+          case 'monitor_limits':
+            this.displayRateLimitDetails()
+            break
+            
+          case 'exit':
+            console.log(chalk.yellow('🛑 Finalizando sistema...'))
+            await this.stop()
+            return
+            
+          default:
+            console.log(chalk.red('❌ Opção inválida'))
+        }
+        
+        if (action !== 'exit') {
+          await inquirer.prompt([
+            {
+              type: 'confirm',
+              name: 'continue',
+              message: 'Pressione Enter para voltar ao menu...',
+              default: true
+            }
+          ])
+        }
+        
+      } catch (error: any) {
+        console.error(chalk.red('❌ Erro na execução:'), error.message)
+        
+        const { retry } = await inquirer.prompt([
+          {
+            type: 'confirm',
+            name: 'retry',
+            message: 'Tentar novamente?',
+            default: true
+          }
+        ])
+        
+        if (!retry) {
+          await this.stop()
+          return
+        }
+      }
+    }
+  }
+
+  /**
+   * Executar agent individual via menu com feedback visual
+   */
+  private async handleExecuteAgent(): Promise<void> {
+    const availableAgents = [
+      { name: '🧑‍💼 Alex Santos (Tech Lead)', value: 'alex-santos' },
+      { name: '👩‍💻 Marina Costa (Frontend)', value: 'marina-costa' },
+      { name: '👨‍💻 Ricardo Lima (Backend)', value: 'ricardo-lima' },
+      { name: '👩‍🔬 Camila Rodriguez (QA)', value: 'camila-rodriguez' },
+      { name: '🎨 Bruno Oliveira (UX/UI)', value: 'bruno-oliveira' }
+    ]
+
+    const { agentName } = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'agentName',
+        message: 'Escolha o agent para executar:',
+        choices: availableAgents
+      }
+    ])
+
+    const { prompt } = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'prompt',
+        message: 'Digite o prompt para o agent:',
+        validate: (input: string) => input.trim().length > 0 || 'Prompt não pode estar vazio'
+      }
+    ])
+
+    console.log(chalk.blue(`\n🤖 Preparando execução personalizada...`))
+    
+    try {
+      const result = await this.executeAgent(agentName, prompt)
+      
+      // Mostrar resultado com formato melhorado
+      console.log(chalk.green('\n🎉 Execução concluída com sucesso!'))
+      console.log(chalk.cyan('='.repeat(70)))
+      console.log(chalk.yellow('📋 RESULTADO:'))
+      console.log(chalk.gray('─'.repeat(70)))
+      
+      // Truncar resultado se muito longo
+      const maxLength = 500
+      const displayResult = result.length > maxLength 
+        ? result.substring(0, maxLength) + chalk.gray('\n... (resultado truncado, verifique logs completos)')
+        : result
+      
+      console.log(chalk.white(displayResult))
+      console.log(chalk.gray('─'.repeat(70)))
+      console.log(chalk.cyan('='.repeat(70)))
+      
+    } catch (error: any) {
+      console.log(chalk.red('\n❌ Falha na execução personalizada'))
+      console.log(chalk.gray(`Erro: ${error.message}`))
+      
+      // Oferecer opção de retry
+      const { retry } = await inquirer.prompt([
+        {
+          type: 'confirm',
+          name: 'retry',
+          message: 'Tentar executar novamente?',
+          default: false
+        }
+      ])
+      
+      if (retry) {
+        await this.handleExecuteAgent() // Recursivo para retry
+      }
+    }
+  }
+
+  /**
+   * Executar sprint REAL com progress tracking visual
+   */
+  private async handleRealSprint(): Promise<void> {
+    console.log(chalk.blue('🏃‍♂️ Iniciando execução de Sprint REAL...'))
+    
+    // Definir fases do sprint
+    const sprintPhases = [
+      { 
+        name: 'Sprint Planning', 
+        icon: '📋', 
+        agent: 'alex-santos',
+        prompt: 'Conduza um sprint planning real para o dynamic navigation system. Analise o backlog atual, estime esforço das tarefas, defina metas claras do sprint e identifique possíveis riscos ou dependências.'
+      },
+      { 
+        name: 'Daily Scrum', 
+        icon: '📅', 
+        agent: 'marina-costa',
+        prompt: 'Conduza uma daily scrum reportando o progresso atual do desenvolvimento frontend do dynamic navigation. Identifique impedimentos e próximos passos.'
+      },
+      { 
+        name: 'Implementation', 
+        icon: '⚡', 
+        agent: 'ricardo-lima',
+        prompt: 'Execute a implementação das APIs do dynamic navigation system. Desenvolva os endpoints necessários seguindo as especificações técnicas.'
+      },
+      { 
+        name: 'Validation', 
+        icon: '🔍', 
+        agent: 'camila-rodriguez',
+        prompt: 'Execute validação completa do dynamic navigation system. Teste as funcionalidades implementadas e verifique critérios de aceitação.'
+      },
+      { 
+        name: 'Retrospective', 
+        icon: '🔄', 
+        agent: 'alex-santos',
+        prompt: 'Conduza uma retrospectiva do sprint de dynamic navigation. Analise o que funcionou bem, identifique pontos de melhoria e proponha ações para próximos sprints.'
+      }
+    ]
+
+    // Criar barra de progresso
+    const progressBar = new cliProgress.SingleBar({
+      format: '🏃‍♂️ Sprint Progress |' + chalk.cyan('{bar}') + '| {percentage}% | {value}/{total} Fases | {phase}',
+      barCompleteChar: '█',
+      barIncompleteChar: '░',
+      hideCursor: true
+    }, cliProgress.Presets.shades_classic)
+
+    progressBar.start(sprintPhases.length, 0, { phase: 'Preparando...' })
+
+    const sprintStartTime = Date.now()
+    const phaseResults: any[] = []
+
+    try {
+      // Executar cada fase com tracking visual
+      for (let i = 0; i < sprintPhases.length; i++) {
+        const phase = sprintPhases[i]
+        
+        // Atualizar progress bar
+        progressBar.update(i, { phase: `${phase.icon} ${phase.name}` })
+        
+        console.log(chalk.cyan(`\n${phase.icon} FASE ${i + 1}: ${phase.name}`))
+        
+        const phaseStartTime = Date.now()
+        
+        try {
+          // Executar agent da fase
+          const result = await this.executeAgent(phase.agent, phase.prompt)
+          
+          const phaseTime = Math.round((Date.now() - phaseStartTime) / 1000)
+          
+          phaseResults.push({
+            phase: phase.name,
+            agent: phase.agent,
+            success: true,
+            executionTime: phaseTime,
+            result: result.substring(0, 150) + '...'
+          })
+          
+          console.log(chalk.green(`✅ ${phase.name} concluída em ${phaseTime}s`))
+          
+        } catch (error: any) {
+          const phaseTime = Math.round((Date.now() - phaseStartTime) / 1000)
+          
+          phaseResults.push({
+            phase: phase.name,
+            agent: phase.agent,
+            success: false,
+            executionTime: phaseTime,
+            error: error.message
+          })
+          
+          console.log(chalk.red(`❌ Erro na ${phase.name} após ${phaseTime}s`))
+          
+          // Perguntar se deve continuar
+          progressBar.stop()
+          const { shouldContinue } = await inquirer.prompt([
+            {
+              type: 'confirm',
+              name: 'shouldContinue',
+              message: `Erro na fase ${phase.name}. Continuar com próxima fase?`,
+              default: true
+            }
+          ])
+          
+          if (!shouldContinue) {
+            throw new Error(`Sprint interrompido na fase: ${phase.name}`)
+          }
+          
+          progressBar.start(sprintPhases.length, i, { phase: 'Continuando...' })
+        }
+      }
+      
+      // Finalizar progress bar
+      progressBar.update(sprintPhases.length, { phase: 'Sprint Concluído! ✅' })
+      progressBar.stop()
+      
+      const totalSprintTime = Math.round((Date.now() - sprintStartTime) / 1000)
+      const successfulPhases = phaseResults.filter(p => p.success).length
+      
+      console.log(chalk.green('\n🎉 Sprint REAL executado com sucesso!'))
+      console.log(chalk.cyan('='.repeat(60)))
+      console.log(chalk.yellow(`📊 RESUMO DO SPRINT:`))
+      console.log(chalk.white(`⏱️  Tempo Total: ${Math.floor(totalSprintTime / 60)}m ${totalSprintTime % 60}s`))
+      console.log(chalk.white(`✅ Fases Concluídas: ${successfulPhases}/${sprintPhases.length}`))
+      console.log(chalk.white(`🚀 Taxa de Sucesso: ${Math.round((successfulPhases / sprintPhases.length) * 100)}%`))
+      
+      // Mostrar detalhes de cada fase
+      console.log(chalk.cyan('\n📋 DETALHES POR FASE:'))
+      phaseResults.forEach((phase, index) => {
+        const status = phase.success ? chalk.green('✅') : chalk.red('❌')
+        const time = `${phase.executionTime}s`
+        console.log(`${status} ${index + 1}. ${phase.phase} (${phase.agent}) - ${time}`)
+      })
+      
+      console.log(chalk.cyan('='.repeat(60)))
+      
+    } catch (error: any) {
+      progressBar.stop()
+      console.log(chalk.red(`❌ Sprint interrompido: ${error.message}`))
+      
+      // Mostrar resultados parciais
+      if (phaseResults.length > 0) {
+        console.log(chalk.yellow('\n📊 PROGRESSO PARCIAL:'))
+        phaseResults.forEach((phase, index) => {
+          const status = phase.success ? chalk.green('✅') : chalk.red('❌')
+          console.log(`${status} ${index + 1}. ${phase.phase} - ${phase.executionTime}s`)
+        })
+      }
+      
+      throw error
+    }
+  }
+
+  /**
+   * Mostrar detalhes dos rate limits
+   */
+  private displayRateLimitDetails(): void {
+    console.log(chalk.cyan('\n🔋 DETALHES DOS RATE LIMITS'))
+    console.log('=' .repeat(50))
+    
+    const rateLimitStatus = rateLimitHandler.getStatus()
+    
+    console.log(`📊 Prompts Restantes: ${rateLimitStatus.state.promptsRemaining}`)
+    console.log(`⏰ Próximo Reset: ${rateLimitStatus.state.resetTime?.toLocaleTimeString() || 'Não definido'}`)
+    console.log(`🔄 Estado Atual: ${rateLimitStatus.state.isLimited ? 'Limitado' : 'Disponível'}`)
+    console.log(`📈 Ciclo Atual: ${rateLimitStatus.state.currentCycle}`)
+    console.log(`📋 Prompts Usados: ${rateLimitStatus.state.promptsUsed}`)
+    
+    if (rateLimitStatus.state.isLimited && rateLimitStatus.state.resetTime) {
+      const waitTime = rateLimitStatus.state.resetTime.getTime() - Date.now()
+      if (waitTime > 0) {
+        console.log(`⏳ Tempo até liberação: ${Math.round(waitTime / 60000)} minutos`)
+      }
+    }
+    
+    console.log('=' .repeat(50))
   }
 }
 
@@ -371,14 +827,10 @@ async function main() {
     switch (mode) {
       case 'interactive':
         console.log(chalk.blue('🎯 Modo Interativo - Matrix Protocol System'))
-        console.log(chalk.gray('Use Ctrl+C para sair'))
+        console.log(chalk.gray('Use as setas para navegar e Enter para selecionar'))
         
         await system.start()
-        system.displayStatus()
-        
-        // Keep alive for interactive mode
-        const keepAlive = () => setTimeout(keepAlive, 1000)
-        keepAlive()
+        await system.runInteractiveMenu()
         break
 
       case 'demo':
