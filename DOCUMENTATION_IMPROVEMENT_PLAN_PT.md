@@ -8,6 +8,8 @@ Escopo: Diretório `website/content/pt`
 
 Elevar a robustez e eficiência da documentação em português, conectando conceitos do MEP/MEF/ZOF/OIF à prática, padronizando estrutura e metadados, enriquecendo exemplos e melhorando a navegabilidade. Baseado em `aprimoramentos.md` e nos relatórios de auditoria de navegação dinâmica.
 
+Requisito obrigatório: padronizar todos os nomes de arquivos em inglês; usar `kebab-case` para diretórios, `snake_case` para arquivos específicos e maiúsculas para documentos principais sob `website/docs`.
+
 ## 1. Avaliação Detalhada (Pontos de Aprimoramento)
 
 - Conexão conceito→prática limitada: faltam “roteiros conceituais” que mostrem UKIs atravessando MEP→MEF→ZOF→OIF.
