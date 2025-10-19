@@ -111,32 +111,32 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 ## 5) Histórias de Usuário
 
 **Padronização Estrutural**
-- Como Editor de Documentação, eu quero um padrão de frontmatter para garantir consistência e facilitar auditorias.
-- Como Maintainer, eu quero `index.md` em todos os diretórios para estruturar corretamente a navegação.
+- US-01: Como Editor de Documentação, eu quero um padrão de frontmatter para garantir consistência e facilitar auditorias.
+- US-02: Como Maintainer, eu quero `index.md` em todos os diretórios para estruturar corretamente a navegação.
 
 **Conteúdo Conceitual**
-- Como Leitor, eu quero roteiros conceituais com fluxogramas para entender a jornada da UKI entre frameworks.
-- Como Engenheiro de Conhecimento, eu quero páginas sobre inferência (DL/Datalog, KGE, GNN) para conectar teoria à prática conceitual.
+- US-03: Como Leitor, eu quero roteiros conceituais com fluxogramas para entender a jornada da UKI entre frameworks.
+- US-04: Como Engenheiro de Conhecimento, eu quero páginas sobre inferência (DL/Datalog, KGE, GNN) para conectar teoria à prática conceitual.
 
 **Explicabilidade**
-- Como UX Writer, eu quero templates XAI/NLG para comunicar decisões de forma clara e auditável.
-- Como Leitor, eu quero exemplos visuais de justificativas para confiar nas recomendações do MAL/OIF.
+- US-05: Como UX Writer, eu quero templates XAI/NLG para comunicar decisões de forma clara e auditável.
+- US-06: Como Leitor, eu quero exemplos visuais de justificativas para confiar nas recomendações do MAL/OIF.
 
 **Governança MOC**
-- Como Especialista de Domínio, eu quero documentar precedências por escopo para orientar decisões consistentes.
-- Como Gestor de Governança, eu quero uma matriz de políticas para supervisionar coerência organizacional.
+- US-07: Como Especialista de Domínio, eu quero documentar precedências por escopo para orientar decisões consistentes.
+- US-08: Como Gestor de Governança, eu quero uma matriz de políticas para supervisionar coerência organizacional.
 
 **Navegação & Interlinks**
-- Como Leitor, eu quero recursos relacionados em cada página para aprofundar rapidamente.
-- Como Maintainer, eu quero auditorias de links para manter integridade da navegação dinâmica.
+- US-09: Como Leitor, eu quero recursos relacionados em cada página para aprofundar rapidamente.
+- US-10: Como Maintainer, eu quero auditorias de links para manter integridade da navegação dinâmica.
 
 **Harmonização PT↔EN**
-- Como Editor, eu quero paridade mínima PT↔EN para reduzir ambiguidades entre idiomas.
-- Como Leitor, eu quero notas de divergência quando houver diferenças justificadas.
+- US-11: Como Editor, eu quero paridade mínima PT↔EN para reduzir ambiguidades entre idiomas.
+- US-12: Como Leitor, eu quero notas de divergência quando houver diferenças justificadas.
 
 **Métricas & QA**
-- Como Gestor, eu quero KPIs editoriais para avaliar evolução da documentação.
-- Como Time, eu quero um checklist de DoD para garantir qualidade antes de publicar.
+- US-13: Como Gestor, eu quero KPIs editoriais para avaliar evolução da documentação.
+- US-14: Como Time, eu quero um checklist de DoD para garantir qualidade antes de publicar.
 
 ## 6) Sprints (Cronograma e Entregáveis)
 
@@ -146,6 +146,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
   - Inventário de `index.md` faltantes com priorização
   - Versão inicial do checklist editorial
   - Política de nomenclatura English-only documentada e comunicada
+- Histórias associadas: US-01, US-02
 - Critérios de Aceite:
   - Documento de padrão publicado
   - Backlog de diretórios sem `index.md` com status
@@ -155,6 +156,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 - Entregáveis:
   - Criação/ajuste de `index.md` nas pastas prioritárias
   - Aplicação do frontmatter padronizado
+- Histórias associadas: US-01, US-02
 - Critérios de Aceite:
   - Cobertura de `index.md` ≥ 80% das pastas alvo da sprint
 
@@ -162,6 +164,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 - Entregáveis:
   - `pt/docs/examples/roteiros-conceituais.md` com ≥3 fluxogramas
   - `pt/docs/frameworks/inferencia-raciocinio.md` com ≥3 exemplos
+- Histórias associadas: US-03, US-04
 - Critérios de Aceite:
   - Publicação das páginas e validação conceitual por Eng. de Conhecimento
 
@@ -169,6 +172,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 - Entregáveis:
   - `pt/docs/manual/tools/explicabilidade.md` com ≥3 templates
   - `pt/docs/manual/governanca-moc.md` com matriz de políticas e ≥3 casos
+- Histórias associadas: US-05, US-06, US-07, US-08
 - Critérios de Aceite:
   - Revisão do UX Writer e Especialista de Domínio
 
@@ -177,6 +181,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
   - Interlinks e recursos relacionados revisados
   - Auditoria de links e atualização de navegação dinâmica (scripts)
   - `pt/docs/manual/tools/feedback-loop.md` com métricas e triggers
+- Histórias associadas: US-09, US-10, US-13
 - Critérios de Aceite:
   - Links válidos ≥98%; página publicada e revisada
 
@@ -184,6 +189,7 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 - Entregáveis:
   - Paridade PT↔EN ≥90% nas seções-chave
   - Baseline de KPIs e relatório de QA final
+- Histórias associadas: US-11, US-12, US-14, US-13
 - Critérios de Aceite:
   - Checklist DoD aprovado em 100% das alterações
 
@@ -215,3 +221,19 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 
 ---
 Este plano Scrum operacionaliza o `PLANO_MELHORIAS_DOCUMENTACAO_PT.md`, garantindo execução iterativa, mensurável e alinhada às prioridades de robustez e eficiência da documentação em português.
+
+## Rastreamento de Histórias (US → Sprint)
+- US-01: Sprint 1, Sprint 2
+- US-02: Sprint 1, Sprint 2
+- US-03: Sprint 3
+- US-04: Sprint 3
+- US-05: Sprint 4
+- US-06: Sprint 4
+- US-07: Sprint 4
+- US-08: Sprint 4
+- US-09: Sprint 5
+- US-10: Sprint 5
+- US-11: Sprint 6
+- US-12: Sprint 6
+- US-13: Sprint 5, Sprint 6
+- US-14: Sprint 6
