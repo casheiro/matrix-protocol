@@ -15,6 +15,7 @@
 
 ### **Trigger de Execução**
 ```yaml
+
 QUANDO: 
   - Sprint anterior concluída OU projeto iniciado
   - Todas as stories da sprint definidas
@@ -99,6 +100,7 @@ QUANDO:
 
 ### **Trigger de Execução**
 ```yaml
+
 QUANDO:
   - Agent inicia trabalho em uma task
   - Agent completa uma task
@@ -182,6 +184,7 @@ Quando task completa afeta próxima task de outro agent:
 
 ### **Trigger de Execução**
 ```yaml
+
 QUANDO:
   - Todas as tasks da sprint marcadas como COMPLETED
   - Critérios de aceite verificados por QA
@@ -257,6 +260,7 @@ QUANDO:
 
 ### **Trigger de Execução**
 ```yaml
+
 QUANDO:
   - Sprint Review concluída
   - Todos entregáveis validados
@@ -351,6 +355,7 @@ Cada agent responde:
 
 ### **Trigger de Execução**
 ```yaml
+
 QUANDO:
   - 50% da sprint atual completa
   - Novas stories precisam ser detalhadas
@@ -396,6 +401,7 @@ QUANDO:
 
 ### **Status Definitions**
 ```yaml
+
 TASK_STATUS:
   - TODO: Task definida, aguardando início
   - IN_PROGRESS: Agent trabalhando ativamente

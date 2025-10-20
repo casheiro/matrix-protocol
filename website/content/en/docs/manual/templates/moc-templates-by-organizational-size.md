@@ -41,6 +41,7 @@ navigation: true
 ### MOC Configuration
 
 ```yaml
+
 # MOC_TEMPLATE_STARTUP.yaml
 moc_version: "1.0"
 organization: "[STARTUP_NAME]"
@@ -318,6 +319,7 @@ evaluation_criteria:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_TEMPLATE_SCALEUP.yaml
 moc_version: "1.0"
 organization: "[SCALEUP_NAME]"
@@ -709,6 +711,7 @@ evaluation_criteria:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_TEMPLATE_ENTERPRISE.yaml
 moc_version: "1.0"
 organization: "[ENTERPRISE_NAME]"
@@ -1237,6 +1240,7 @@ evaluation_criteria:
 ### MOC Configuration
 
 ```yaml
+
 # MOC_TEMPLATE_CORPORATION.yaml
 moc_version: "1.0"
 organization: "[CORPORATION_NAME]"

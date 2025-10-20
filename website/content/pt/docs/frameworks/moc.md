@@ -133,6 +133,7 @@ O MOC DEVE fornecer configuração para gestão de ciclo de vida do conhecimento
 #### Configuração de Ciclo de Vida
 ```yaml
 
+
 # --- Configuração Normativa ---
 lifecycle_management:
   default_lifecycle_policies:
@@ -196,6 +197,7 @@ Implementações MOC DEVEM fornecer configuração para políticas de arbitragem
 #### Configuração Obrigatória de Arbitragem
 ```yaml
 
+
 # --- Configuração Normativa ---
 arbitration_policies:
   default_precedence_order:           # Ordem padrão P1-P6 (MAL pode sobrepor)
@@ -246,6 +248,7 @@ arbitration_policies:
 
 #### Exemplos de Políticas de Arbitragem Nomeadas
 ```yaml
+
 
 # --- Exemplos de Políticas Organizacionais ---
 named_arbitration_policies:
@@ -303,6 +306,7 @@ named_arbitration_policies:
 #### Estrutura de Namespace de Referência de Política
 ```yaml
 
+
 # --- Especificação de Namespace Normativa ---
 policy_reference_structure:
   namespace_format: "moc:arbitration:{policy_name}"
@@ -342,6 +346,7 @@ O MOC DEVE implementar mecanismos de feedback para atualização taxonômica bas
 #### Análise de Padrões de Promoção
 ```yaml
 
+
 # --- Configuração Normativa ---
 promotion_analysis:
   monitoring_window_days: 90              # Janela de análise para padrões de promoção
@@ -374,6 +379,7 @@ promotion_analysis:
 #### Critérios para Evolução Taxonômica
 ```yaml
 
+
 # --- Critérios Normativos ---
 evolution_criteria:
   taxonomy_refinement_indicators:
@@ -396,6 +402,7 @@ evolution_criteria:
 
 ##### Loop de Feedback Promoção ↔ Ontologia
 ```yaml
+
 
 # --- Configuração Normativa ---
 ontology_evolution:
@@ -470,6 +477,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Estrutura Base do MOC**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 moc_version: "1.0"
 organization: "[Nome da Organização]"
@@ -500,6 +508,7 @@ hierarchies:
 ### **Integração MEF**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 # Campos MOC no MEF:
 scope_ref: "team"           # Referência ao nó MOC
@@ -510,6 +519,7 @@ maturity_ref: "approved"    # Referência ao nó MOC
 
 ### **Integração ZOF**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 # Checkpoint EvaluateForEnrich:
@@ -526,6 +536,7 @@ flow_execution:
 ### **Integração OIF**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 # Controle de Acesso:
 user_context:
@@ -540,6 +551,7 @@ access_control:
 
 ### **Governança e Versionamento**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 governance:

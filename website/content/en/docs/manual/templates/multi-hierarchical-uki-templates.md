@@ -38,6 +38,7 @@ navigation: true
 This template demonstrates how a data governance policy crosses multiple divisions, requires different authority levels, and relates to various knowledge domains.
 
 ```yaml
+
 # uki:organization:framework:enterprise-data-governance-001.yaml
 schema: "1.0"
 ontology_reference: "EXAMPLE_ORGANIZATION_MOC v1.0"
@@ -78,6 +79,7 @@ content: |
   
   #### 2. Classification and Cataloging
   ```yaml
+
   data_classification:
     public:
       definition: "Data that can be shared externally"
@@ -112,6 +114,7 @@ content: |
   
   **Quality Metrics by Classification:**
   ```yaml
+
   quality_targets:
     highly_confidential:
       accuracy: 99.9%
@@ -148,6 +151,7 @@ content: |
   
   **Security Controls by Classification:**
   ```yaml
+
   security_controls:
     highly_confidential:
       encryption: "AES-256 at rest and in transit"
@@ -166,6 +170,7 @@ content: |
   
   #### Governance Structure
   ```yaml
+
   data_governance_committee:
     chair: "Chief Data Officer"
     permanent_members:
@@ -339,6 +344,7 @@ business_impact:
 This template demonstrates a technical pattern that spans multiple domains (security, performance, scalability) and shows how technical knowledge connects across different team boundaries.
 
 ```yaml
+
 # uki:engineering:pattern:microservices-security-pattern-001.yaml
 schema: "1.0"
 ontology_reference: "EXAMPLE_ORGANIZATION_MOC v1.0"
@@ -382,6 +388,7 @@ content: |
   
   #### 1. Service Identity and Authentication
   ```yaml
+
   service_identity_framework:
     identity_provider: "SPIFFE/SPIRE"
     identity_format: "spiffe://trust-domain.com/service/service-name"
@@ -400,6 +407,7 @@ content: |
   
   #### 2. Authorization and Access Control
   ```yaml
+
   authorization_model:
     policy_engine: "Open Policy Agent (OPA)"
     policy_language: "Rego"
@@ -420,6 +428,7 @@ content: |
   
   #### 3. Network Security
   ```yaml
+
   network_security_controls:
     service_mesh: "Istio with Envoy proxy"
     encryption: "mTLS for all service-to-service communication"
@@ -437,6 +446,7 @@ content: |
   
   #### 4. Secrets Management
   ```yaml
+
   secrets_management:
     vault_system: "HashiCorp Vault with auto-unseal"
     secret_injection: "Vault Agent sidecar pattern"
@@ -460,6 +470,7 @@ content: |
   
   #### 5. Monitoring and Auditing
   ```yaml
+
   security_monitoring:
     observability_stack:
       metrics: "Prometheus with custom security metrics"
@@ -487,6 +498,7 @@ content: |
   
   #### Phase 1: Foundation (Weeks 1-4)
   ```yaml
+
   foundation_tasks:
     - task: "Deploy SPIFFE/SPIRE infrastructure"
       owner: "Platform Engineering"
@@ -503,6 +515,7 @@ content: |
   
   #### Phase 2: Service Integration (Weeks 5-8)
   ```yaml
+
   integration_tasks:
     - task: "Migrate user service to zero trust"
       owner: "User Team"
@@ -519,6 +532,7 @@ content: |
   
   #### Phase 3: Advanced Features (Weeks 9-12)
   ```yaml
+
   advanced_tasks:
     - task: "Implement dynamic secrets for databases"
       owner: "Database Team + Security Engineering"
@@ -535,6 +549,7 @@ content: |
   
   ### Technology Stack
   ```yaml
+
   required_components:
     identity_and_authentication:
       - "SPIFFE/SPIRE 1.5+"
@@ -672,6 +687,7 @@ compliance_impact:
 This template demonstrates how organizational transformation knowledge cuts across all hierarchies - from individual behavior change to board-level governance, spanning multiple domains and involving complex temporal relationships.
 
 ```yaml
+
 # uki:organization:framework:digital-transformation-change-001.yaml
 schema: "1.0"
 ontology_reference: "EXAMPLE_ORGANIZATION_MOC v1.0"
@@ -707,6 +723,7 @@ content: |
   
   #### 1. Individual Level Transformation
   ```yaml
+
   individual_change:
     digital_literacy:
       basic_skills: ["email_productivity", "collaboration_tools", "data_literacy"]
@@ -736,6 +753,7 @@ content: |
   
   #### 2. Team Level Transformation
   ```yaml
+
   team_change:
     collaboration_evolution:
       communication:
@@ -769,6 +787,7 @@ content: |
   
   #### 3. Departmental Level Transformation
   ```yaml
+
   departmental_change:
     functional_digitization:
       human_resources:
@@ -798,6 +817,7 @@ content: |
   
   #### 4. Organizational Level Transformation
   ```yaml
+
   organizational_change:
     structure_evolution:
       hierarchy:
@@ -828,6 +848,7 @@ content: |
   
   #### Phase 1: Assessment and Visioning (Months 1-2)
   ```yaml
+
   assessment_activities:
     current_state_analysis:
       digital_maturity_assessment:
@@ -858,6 +879,7 @@ content: |
   
   #### Phase 2: Foundation Building (Months 3-6)
   ```yaml
+
   foundation_activities:
     infrastructure_preparation:
       technology_upgrades:
@@ -888,6 +910,7 @@ content: |
   
   #### Phase 3: Pilot Implementation (Months 7-9)
   ```yaml
+
   pilot_activities:
     pilot_selection:
       criteria:
@@ -913,6 +936,7 @@ content: |
   
   #### Phase 4: Scaled Rollout (Months 10-18)
   ```yaml
+
   rollout_activities:
     wave_based_deployment:
       wave_planning:
@@ -939,6 +963,7 @@ content: |
   
   #### Governance Structure
   ```yaml
+
   governance_framework:
     transformation_steering_committee:
       chair: "CEO"
@@ -959,6 +984,7 @@ content: |
   
   #### Success Metrics
   ```yaml
+
   measurement_framework:
     business_outcomes:
       revenue_impact:
@@ -1135,6 +1161,7 @@ financial_impact:
 
 #### 1. Hierarchy Adaptation
 ```yaml
+
 customization_steps:
   scope_hierarchy:
     - map_to_actual_org_structure: "Use real division, department, team names"
@@ -1149,6 +1176,7 @@ customization_steps:
 
 #### 2. Relationship Complexity
 ```yaml
+
 relationship_management:
   start_simple:
     - begin_with_core_relationships: "5-8 most critical connections"
@@ -1163,6 +1191,7 @@ relationship_management:
 
 #### 3. Content Depth
 ```yaml
+
 content_strategy:
   layered_approach:
     - executive_summary: "High-level overview for leadership"

@@ -135,6 +135,7 @@ en/docs/quickstart/templates/
 
 ### Template para Navegação Dinâmica:
 ```yaml
+
 ---
 # Identificação
 title: "Título da Página"

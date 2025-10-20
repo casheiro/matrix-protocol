@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # MOC Unified Structure - Normative Template
 # Matrix Protocol v1.0 - Official specification compliance template
 # THIS IS THE CANONICAL STRUCTURE - All MOCs MUST implement these 4 hierarchies

@@ -30,6 +30,7 @@ Validação completa do template criado por Bruno na MILESTONE 1.1, garantindo q
 
 ### **Frontmatter do Exemplo Criado:**
 ```yaml
+
 ---
 title: "Templates Básicos"                    ✅ String válida
 description: "Templates essenciais para..." ✅ 105 chars (50-150)

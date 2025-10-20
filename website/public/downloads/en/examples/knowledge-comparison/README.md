@@ -25,6 +25,7 @@ Antes de qualquer UKI ser criado, o **Matrix Ontology Catalog (MOC)** define a t
 #### 📋 Estrutura Oficial MOC
 ```yaml
 
+
 moc_version: "1.0"
 organization: "Example E-commerce Company" 
 version: "0.0.1-beta"
@@ -63,6 +64,7 @@ hierarchies:
 
 #### 🔗 Integração UKI ↔ MOC
 ```yaml
+
 
 # Como UKIs referenciam o MOC
 scope_ref: squad-payments    # → hierarchies.scope.nodes[id="squad-payments"]
@@ -179,6 +181,7 @@ Durante a criação inicial, foram utilizados campos que não existem na especif
 ### 1. **Resolução de Conflitos**
 ```yaml
 
+
 # Exemplo: uki-pay-refund-policy-002.yaml
 change_summary: "Unificação de prazos conflitantes e definição de SLA por gateway"
 promotion:
@@ -192,6 +195,7 @@ promotion:
 ### 2. **Relacionamentos Semânticos Explícitos**
 ```yaml
 
+
 relationships:
   - type: relates_to
     target: uki:squad-payments:business_rule:discount-logic-001
@@ -202,6 +206,7 @@ relationships:
 ### 3. **Versionamento e Evolução**
 ```yaml
 
+
 version: 2.1.0
 change_impact: minor
 previous_version: 2.0.0
@@ -211,6 +216,7 @@ change_summary: "Ajuste de thresholds baseado em análise de falsos positivos"
 
 ### 4. **Estrutura Oficial MEF com Integração MOC**
 ```yaml
+
 
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"  # Referência ao MOC da squad
@@ -225,6 +231,7 @@ domain_of_influence: "engineering_teams"
 
 ### 5. **Governança e Promoção**
 ```yaml
+
 
 promotion:
   promotion_rationale: |

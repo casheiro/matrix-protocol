@@ -627,6 +627,7 @@
       "raw": "Raw",
       "download": "Download",
       "copy": "Copy",
+      "copyLink": "Copy link",
       "search": "Search"
     },
     "sections": {
@@ -635,7 +636,8 @@
       "relationships": "Relationships",
       "metadata": "Metadata",
       "technicalInfo": "Technical Information",
-      "lifecycle": "Lifecycle"
+      "lifecycle": "Lifecycle",
+      "jumpTo": "Jump to…"
     },
     "fields": {
       "schema": "Schema",
@@ -691,6 +693,12 @@
       "lines": "lines",
       "characters": "characters", 
       "words": "words"
+    },
+    "search": {
+      "placeholder": "Search in document",
+      "previous": "Previous",
+      "next": "Next",
+      "clear": "Clear"
     }
   },
   "footer": {

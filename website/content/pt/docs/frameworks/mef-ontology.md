@@ -101,6 +101,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Domínios de Referência**
 ```yaml
 
+
 # --- Exemplos Ilustrativos ---
 domains_examples:
   strategy: "Decisões de alto nível, planejamento estratégico"
@@ -120,6 +121,7 @@ alternative_domains:
 
 ### **Tipos de UKI de Referência**
 ```yaml
+
 
 # --- Exemplos Ilustrativos ---
 types_examples:
@@ -142,6 +144,7 @@ alternative_types:
 
 ### **Relacionamentos Ontológicos**
 ```yaml
+
 
 # --- Exemplos Ilustrativos ---
 relationship_types:
@@ -171,6 +174,7 @@ relationship_usage_examples:
 ### **Níveis de Severidade**
 ```yaml
 
+
 # --- Exemplos Ilustrativos ---
 severity_levels:
   low:
@@ -198,6 +202,7 @@ severity_levels:
 ### **Ciclo de Vida**
 ```yaml
 
+
 # --- Exemplos Ilustrativos ---
 lifecycle_states:
   active:
@@ -219,6 +224,7 @@ lifecycle_states:
 
 ### **Guia de Customização Organizacional**
 ```yaml
+
 
 # --- Exemplo de Como Customizar ---
 customization_guide:

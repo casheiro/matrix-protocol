@@ -212,6 +212,7 @@ graph TB
 
 ```yaml
 
+
 # Fluxo Completo de Integração
 user_story: "Como desenvolvedor, preciso implementar autenticação JWT"
 
@@ -304,6 +305,7 @@ oif_explanation:
 
 ```yaml
 
+
 # Conflito de Implementação JWT Concorrente
 user_story: "Dois times implementando autenticação JWT simultaneamente"
 
@@ -372,6 +374,7 @@ mef_decision_record:
 ### **Exemplo 3: Cenário de Escalação de Autoridade**
 
 ```yaml
+
 
 # Tentativa de Criação de Política Organizacional
 user_request: "Criar política de segurança organizacional"

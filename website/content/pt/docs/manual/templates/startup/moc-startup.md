@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Startup MOC Template - 5-50 Employees
 # Optimized for startups with simple structure and fast iteration
 # Focus on agility, experimentation, and rapid scaling

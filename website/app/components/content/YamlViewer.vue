@@ -10,6 +10,46 @@
         </div>
       </div>
       <div class="flex items-center gap-2">
+        <!-- Search & Navigation -->
+        <UInput
+          v-model="searchQuery"
+          :placeholder="t('viewer.search.placeholder') || 'Search in document'"
+          size="sm"
+          icon="i-heroicons-magnifying-glass"
+          class="w-56"
+        />
+        <UButton
+          variant="ghost"
+          size="sm"
+          icon="i-heroicons-chevron-up"
+          :disabled="matchesCount === 0"
+          @click="prevMatch"
+          :title="t('viewer.search.previous') || 'Previous'"
+        />
+        <UButton
+          variant="ghost"
+          size="sm"
+          icon="i-heroicons-chevron-down"
+          :disabled="matchesCount === 0"
+          @click="nextMatch"
+          :title="t('viewer.search.next') || 'Next'"
+        />
+        <UBadge v-if="matchesCount > 0" color="primary" size="sm">{{ currentMatchDisplay }}</UBadge>
+        <UButton
+          v-if="debouncedQuery"
+          variant="ghost"
+          size="sm"
+          icon="i-heroicons-x-mark"
+          @click="clearSearch"
+          :title="t('viewer.search.clear') || 'Clear'"
+        />
+        <!-- Section jump (top-level keys) -->
+        <select v-if="sectionOptions.length" v-model="selectedSection" @change="onSectionChange" class="h-8 px-2 rounded border text-sm bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white">
+          <option value="">{{ t('viewer.sections.jumpTo') || 'Jump to…' }}</option>
+          <option v-for="opt in sectionOptions" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
+        </select>
+        
+        <!-- View toggle -->
         <UButton
           variant="ghost"
           size="sm"
@@ -18,6 +58,18 @@
         >
           {{ isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw') }}
         </UButton>
+        
+        <!-- Copy viewer link -->
+        <UButton
+          variant="outline"
+          size="sm"
+          icon="i-heroicons-link"
+          @click="copyViewerLink"
+        >
+          {{ t('viewer.buttons.copyLink') || 'Copy link' }}
+        </UButton>
+        
+        <!-- Download file -->
         <UButton
           variant="outline"
           size="sm"
@@ -41,7 +93,7 @@
           @click="copyToClipboard"
           :title="t('viewer.buttons.copy')"
         />
-        <pre class="language-yaml"><code class="language-yaml" v-html="highlightedContent"></code></pre>
+        <pre class="language-yaml"><code ref="codeEl" class="language-yaml" v-html="highlightedContent"></code></pre>
       </div>
 
       <!-- Structured view (for UKI files) -->
@@ -213,6 +265,7 @@
 
 <script setup lang="ts">
 import { marked } from 'marked'
+import { nextTick } from 'vue'
 
 interface Props {
   content: string
@@ -223,6 +276,7 @@ interface Props {
 
 const props = defineProps<Props>()
 const { t } = useI18n()
+const route = useRoute()
 
 // Configure marked for safe HTML output
 marked.setOptions({
@@ -232,19 +286,133 @@ marked.setOptions({
 
 // State
 const isRawView = ref(true)
+const searchQuery = ref('')
+const debouncedQuery = ref('')
+let searchTimer: any = null
+const matchesCount = ref(0)
+const currentMatchIndex = ref(-1)
+const codeEl = ref<HTMLElement | null>(null)
+
+watch(searchQuery, (val) => {
+  clearTimeout(searchTimer)
+  searchTimer = setTimeout(() => {
+    debouncedQuery.value = val
+  }, 200)
+})
 
 // Computed
 const isUKI = computed(() => {
   return props.data?.schema && props.data?.id?.startsWith('uki:')
 })
 
-const highlightedContent = computed(() => {
-  // This would need a proper syntax highlighter
-  // For now, return the raw content
-  return props.content
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
+function escapeRegExp(str: string) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function injectSectionAnchors(escaped: string) {
+  const lines = escaped.split('\n')
+  const processed = lines.map((line) => {
+    const m = line.match(/^([A-Za-z][\w-]*):\s*/)
+    if (m) {
+      const id = `yaml-sec-${m[1]?.toLowerCase()}`
+      return `<span id="${id}"></span>` + line
+    }
+    return line
+  })
+  return processed.join('\n')
+}
+
+const sectionOptions = computed(() => {
+  const opts: { id: string; label: string }[] = []
+  const seen = new Set<string>()
+  const lines = (props.content || '').split('\n')
+  for (const line of lines) {
+    const m = line.match(/^([A-Za-z][\w-]*):\s*/)
+    if (m) {
+      const id = `yaml-sec-${m[1]?.toLowerCase()}`
+      if (!seen.has(id)) {
+        seen.add(id)
+        opts.push({ id, label: m[1]! })
+      }
+    }
+  }
+  return opts
 })
 
-// Methods
+const selectedSection = ref('')
+function onSectionChange() {
+  if (!selectedSection.value) return
+  const el = document.getElementById(selectedSection.value)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+
+const highlightedContent = computed(() => {
+  const raw = props.content || ''
+  const escaped = escapeHtml(raw)
+  let html = injectSectionAnchors(escaped)
+
+  const q = (debouncedQuery.value || '').trim()
+  if (!q) {
+    matchesCount.value = 0
+    currentMatchIndex.value = -1
+    return html
+  }
+  const regex = new RegExp(escapeRegExp(q), 'gi')
+  let count = 0
+  html = html.replace(regex, (m) => {
+    count++
+    return `<mark class="yaml-highlight">${m}</mark>`
+  })
+  matchesCount.value = count
+  if (count > 0 && currentMatchIndex.value < 0) currentMatchIndex.value = 0
+  nextTick(() => scrollToCurrentMatch())
+  return html
+})
+
+const currentMatchDisplay = computed(() => {
+  return matchesCount.value > 0 ? `${currentMatchIndex.value + 1}/${matchesCount.value}` : '0/0'
+})
+
+function scrollToCurrentMatch() {
+  const container = codeEl.value
+  if (!container) return
+  const marks = container.querySelectorAll('mark.yaml-highlight')
+  if (!marks.length) return
+  const index = Math.max(0, Math.min(currentMatchIndex.value, marks.length - 1))
+  const el = marks[index] as HTMLElement
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+}
+
+function nextMatch() {
+  if (matchesCount.value === 0) return
+  currentMatchIndex.value = (currentMatchIndex.value + 1) % matchesCount.value
+  scrollToCurrentMatch()
+}
+
+function prevMatch() {
+  if (matchesCount.value === 0) return
+  currentMatchIndex.value = (currentMatchIndex.value - 1 + matchesCount.value) % matchesCount.value
+  scrollToCurrentMatch()
+}
+
+function clearSearch() {
+  searchQuery.value = ''
+  debouncedQuery.value = ''
+  matchesCount.value = 0
+  currentMatchIndex.value = -1
+}
+
 const toggleView = () => {
   isRawView.value = !isRawView.value
 }
@@ -259,6 +427,16 @@ const downloadFile = () => {
   a.click()
   document.body.removeChild(a)
   URL.revokeObjectURL(url)
+}
+
+const copyViewerLink = async () => {
+  try {
+    const href = (typeof window !== 'undefined') ? window.location.href : route.fullPath
+    await navigator.clipboard.writeText(href)
+    // Optionally: toast
+  } catch (error) {
+    console.error('Failed to copy viewer link:', error)
+  }
 }
 
 const copyToClipboard = async () => {
@@ -371,5 +549,12 @@ const getDocumentStatusColor = (status?: string): "neutral" | "primary" | "secon
 
 .yaml-viewer .language-yaml {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Inconsolata, "Liberation Mono", "Courier New", monospace; /* font-mono */
+}
+
+mark.yaml-highlight {
+  background-color: #fde68a; /* amber-200 */
+  color: #1f2937; /* gray-800 */
+  padding: 0 2px;
+  border-radius: 2px;
 }
 </style>

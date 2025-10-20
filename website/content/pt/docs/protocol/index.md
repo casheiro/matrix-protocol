@@ -140,6 +140,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Camada Oráculo - Governança Estratégica**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 # Função: Núcleo de sabedoria do Protocolo Matrix
 oracle_responsibilities:
@@ -159,6 +160,7 @@ oracle_responsibilities:
 
 ### **Camada Zion - Framework Conceitual de Workflows**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 # Estados Canônicos ZOF
@@ -192,6 +194,7 @@ authentication_flow:
 ### **Camada Operador - Framework de Inteligência**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 # Arquétipos de Inteligência OIF
 intelligence_archetypes:
@@ -221,6 +224,7 @@ jwt_implementation_oif:
 ### **Integração MEF com Protocolo Matrix**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 # MEF como Implementação da Camada Oráculo
 mef_oracle_implementation:
@@ -246,6 +250,7 @@ lifecycle_flow:
 ### **Ordem Operacional para Consultas Oracle**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 mandatory_operational_sequence:
   1: "Contexto MOC: Identificar hierarquia, autoridades e escopo via MOC"
@@ -260,6 +265,7 @@ important: "A filtragem SEMPRE precede a consulta, nunca o contrário"
 
 ### **Benefícios do Framework**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 organizational_benefits:

@@ -57,6 +57,7 @@ last_updated: 2025-10-20
 
 ```yaml
 
+
 Estrutura_TechCorp:
   organizacao: "TechCorp Solutions"
   total_funcionarios: 800
@@ -236,6 +237,7 @@ Estrutura_TechCorp:
 #### **Design MOC para TechCorp**
 
 ```yaml
+
 
 # MOC_TECHCORP_SOLUTIONS.yaml - Ontologia Organizacional Completa
 moc_version: "1.0"
@@ -804,6 +806,7 @@ Três pilotos estrategicamente escolhidos para maximizar aprendizado e impacto:
 **UKIs da Tribo Experiência do Cliente (Exemplo)**
 ```yaml
 
+
 # uki:tribo-experiencia-cliente:padrao:componentes-design-system-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_TECHCORP_SOLUTIONS v1.0"
@@ -1008,6 +1011,7 @@ promocao:
 #### **Fluxo de Revisão de Decisão Arquitetural (Exemplo ZOF)**
 
 ```yaml
+
 
 # Fluxo ZOF: Processo de Revisão de Decisão Arquitetural
 id_fluxo: "techcorp-revisao-decisao-arquitetural"

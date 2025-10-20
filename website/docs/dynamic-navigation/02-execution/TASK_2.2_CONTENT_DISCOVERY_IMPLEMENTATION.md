@@ -201,6 +201,7 @@ interface NavigationSection {
 
 ### **Benchmarks Achieved**
 ```yaml
+
 content_discovery:
   full_scan_time: '<100ms'          # 72 files per locale
   cache_hit_ratio: '>85%'           # In-memory cache effectiveness

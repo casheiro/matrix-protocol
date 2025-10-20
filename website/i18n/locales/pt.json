@@ -627,6 +627,7 @@
       "raw": "Código",
       "download": "Baixar",
       "copy": "Copiar",
+      "copyLink": "Copiar link",
       "search": "Buscar"
     },
     "sections": {
@@ -635,7 +636,8 @@
       "relationships": "Relacionamentos",
       "metadata": "Metadados",
       "technicalInfo": "Informações Técnicas",
-      "lifecycle": "Ciclo de Vida"
+      "lifecycle": "Ciclo de Vida",
+      "jumpTo": "Ir para…"
     },
     "fields": {
       "schema": "Esquema",
@@ -691,6 +693,12 @@
       "lines": "linhas",
       "characters": "caracteres", 
       "words": "palavras"
+    },
+    "search": {
+      "placeholder": "Buscar no documento",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "clear": "Limpar"
     }
   },
   "footer": {

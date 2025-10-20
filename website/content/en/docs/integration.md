@@ -210,6 +210,7 @@ graph TB
 
 ```yaml
 
+
 # Complete Integration Flow
 user_story: "As a developer, I need to implement JWT authentication"
 
@@ -302,6 +303,7 @@ oif_explanation:
 
 ```yaml
 
+
 # Concurrent JWT Implementation Conflict
 user_story: "Two teams implementing JWT authentication simultaneously"
 
@@ -371,6 +373,7 @@ mef_decision_record:
 
 ```yaml
 
+
 # Organizational Policy Creation Attempt
 user_request: "Create organizational security policy"
 user_context: {scope: "team", authority: "developer", domain: "technical"}
@@ -413,6 +416,7 @@ zof_workflow_modification:
 
 ### **❌ Anti-pattern 1: Direct Framework Communication**
 ```yaml
+
 # WRONG: Direct MEF → MOC bypass
 direct_bad_pattern:
   problem: "MEF validates *_ref fields by directly querying MOC"
@@ -426,6 +430,7 @@ authority_mediated_pattern:
 
 ### **❌ Anti-pattern 2: ZOF Oracle Bypass**
 ```yaml
+
 # WRONG: ZOF skips Understand state
 oracle_bypass_bad:
   problem: "ZOF proceeds directly from Intake to Decide"
@@ -439,6 +444,7 @@ oracle_first_correct:
 
 ### **❌ Anti-pattern 3: MAL Circumvention**
 ```yaml
+
 # WRONG: Local conflict resolution without MAL
 mal_bypass_bad:
   problem: "ZOF attempts manual conflict resolution in EvaluateForEnrich"

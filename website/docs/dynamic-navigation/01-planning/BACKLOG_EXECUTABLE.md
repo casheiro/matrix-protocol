@@ -91,6 +91,7 @@ interface ContentAuditReport {
 - **Status**: TODO
 
 ```yaml
+
 # Exemplo do schema esperado
 ---
 title: "Título do Documento"           # OBRIGATÓRIO

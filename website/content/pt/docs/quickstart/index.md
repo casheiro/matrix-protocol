@@ -67,6 +67,7 @@ nodes:
 #### **🎯 Domínio (Domínio de Especialização)**
 ```yaml
 
+
 nodes:
   - tecnico     # Conhecimento técnico
   - produto     # Conhecimento de produto
@@ -77,6 +78,7 @@ nodes:
 #### **📋 Tipo (Tipo de Conteúdo)**
 
 ```yaml
+
 
 nodes:
   - decisao     # Registros de decisão
@@ -93,6 +95,7 @@ Estruture informações importantes no formato UKI:
 
 #### **Template UKI Básico**
 ```yaml
+
 
 id: "uki:tecnico:decisao:abordagem-autenticacao"
 scope_ref: "engenharia"

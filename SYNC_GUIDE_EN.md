@@ -193,6 +193,7 @@ pnpm run dev
 #### Future CI/CD Integration
 ```yaml
 
+
 # Proposed: .github/workflows/website-validation.yml
 name: Website Validation
 on:

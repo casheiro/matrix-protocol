@@ -342,6 +342,7 @@
 
 - Aplicar padrão de frontmatter em todos os `.md` de `website/content/{pt|en}`:
 ```yaml
+
 ---
 title: "[Title]"
 description: "[Description]"

@@ -55,6 +55,7 @@ assignees: ''
 
 ```yaml
 
+
 # Practical example of how it would be used
 ```
 

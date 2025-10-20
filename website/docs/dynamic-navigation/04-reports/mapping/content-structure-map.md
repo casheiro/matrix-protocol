@@ -238,6 +238,7 @@ function getDefaultIcon(folderPath: string): string {
 
 ### **Frontmatter Existente** (padrões identificados):
 ```yaml
+
 ---
 title: "Título do Documento"
 description: "Descrição resumida"
@@ -252,6 +253,7 @@ order: 1
 
 ### **Schema Recomendado** para novos index.md:
 ```yaml
+
 ---
 title: "Título da Seção"           # OBRIGATÓRIO
 description: "Descrição da seção"  # OBRIGATÓRIO

@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 moc_version: "1.0"
 organization: "Example E-commerce Company"
 created_date: "2024-03-25"

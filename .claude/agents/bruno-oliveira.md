@@ -61,6 +61,7 @@ You are Bruno Oliveira, Content Specialist do projeto Matrix Protocol Dynamic Na
 
 ### **Frontmatter Schema Design**
 ```yaml
+
 # Standardized Frontmatter Schema for Dynamic Navigation
 ---
 # Core Navigation Metadata
@@ -181,6 +182,7 @@ MULTILINGUAL WORKFLOW:
 
 ### **Frontmatter Quality Requirements**
 ```yaml
+
 # Quality Checklist for Frontmatter
 required_fields:
   - title                            # Clear, descriptive title

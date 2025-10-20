@@ -22,6 +22,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 57 ocorrências (100% dos arquivos com frontmatter)
 - **Padrões Identificados**:
   ```yaml
+
   # Formato Padrão
   title: "Nome da Seção"
   
@@ -38,6 +39,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 55 ocorrências (96% dos arquivos)
 - **Padrões Identificados**:
   ```yaml
+
   # Formato Técnico
   description: "17 UKIs (Unidades de Conhecimento Integravel) organizados seguindo a especificacao MEF v1.0.0"
   
@@ -54,6 +56,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 55 ocorrências (96% dos arquivos)
 - **Valores Únicos**: 
   ```yaml
+
   layout: "docs"  # 100% dos casos - padrão absoluto
   ```
 
@@ -63,6 +66,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 55 ocorrências (96% dos arquivos)
 - **Valores Únicos**:
   ```yaml
+
   sidebar: true   # 100% dos casos - sempre ativo
   ```
 
@@ -72,6 +76,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 55 ocorrências (96% dos arquivos)
 - **Valores Identificados**:
   ```yaml
+
   toc: true   # 98% dos casos
   toc: false  # 2% dos casos (rare)
   ```
@@ -84,6 +89,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 45 ocorrências (79% dos arquivos)
 - **Padrões de Valor**:
   ```yaml
+
   # Categorias por Seção
   icon: "i-heroicons-book-open"           # Documentação geral
   icon: "i-heroicons-cube"                # Frameworks
@@ -106,6 +112,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 - **Frequência**: 45 ocorrências (79% dos arquivos)
 - **Valores Identificados**:
   ```yaml
+
   navigation: true   # 85% dos casos com navigation
   navigation: false  # 15% dos casos com navigation
   ```
@@ -114,6 +121,7 @@ Catálogo detalhado de todos os padrões de frontmatter existentes na documenta�
 
 #### **3.1 Campos de Metadados Personalizados**
 ```yaml
+
 # Campos encontrados em contextos específicos (não padrão)
 last_modified: "2025-10-14"      # Timestamps customizados
 category: "examples"             # Categorização manual
@@ -129,6 +137,7 @@ locale: "pt"                     # Idioma específico
 
 #### **1. Documentação Root (`/docs/index.md`)**
 ```yaml
+
 ---
 title: "Documentação"
 description: "Centro de documentação completo do Matrix Protocol"
@@ -141,6 +150,7 @@ toc: true
 
 #### **2. Frameworks (`/frameworks/*.md`)**
 ```yaml
+
 ---
 title: "MEF — Matrix Embedding Framework"
 description: "Estruturação de conhecimento versionado com UKIs"
@@ -154,6 +164,7 @@ navigation: true
 
 #### **3. Exemplos Estruturados (`/examples/knowledge/structured/*.md`)**
 ```yaml
+
 ---
 title: "Regras de Negocio MEF"
 description: "6 UKIs estruturados contendo as regras fundamentais de negocio da squad de pagamentos"
@@ -166,6 +177,7 @@ toc: true
 
 #### **4. Manual de Implementação (`/manual/*.md`)**
 ```yaml
+
 ---
 title: "Guia de Implementação"
 description: "Manual técnico completo para implementação organizacional do Matrix Protocol"
@@ -242,6 +254,7 @@ Arquivos importantes sem navigation: true:
 ### **Template Padronizado Recomendado**
 
 ```yaml
+
 ---
 # === CAMPOS OBRIGATÓRIOS ===
 title: "Título da Página"
@@ -287,6 +300,7 @@ version: "1.0.0"  # Versão do conteúdo (semantic versioning)
 ### **Sistema de Ícones Hierárquico**
 
 ```yaml
+
 # CATEGORIAS PRINCIPAIS
 quickstart: "i-heroicons-rocket-launch"      # 🚀 Início rápido
 frameworks: "i-heroicons-cube"               # ⚙️ Frameworks  

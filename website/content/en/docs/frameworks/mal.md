@@ -169,6 +169,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Horizontal Conflict Arbitration (H1)**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-001"
@@ -220,6 +221,7 @@ decision_record:
 
 ### **Concurrent Enrichment Arbitration (H2)**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-002"
@@ -244,6 +246,7 @@ decision_record:
 
 ### **Promotion Contention Arbitration (H3)**
 ```yaml
+
 # --- Illustrative Example ---
 arbitration_event:
   event_id: "mal-evt-20250826-003"
@@ -272,6 +275,7 @@ decision_record:
 
 ### Arbitration Event Input Schema
 ```yaml
+
 # --- Normative Interface ---
 arbitration_event:
   event_id: string                    # Mandatory: Unique arbitration identifier
@@ -296,6 +300,7 @@ arbitration_event:
 
 ### Decision Record Output Schema
 ```yaml
+
 # --- Normative Interface ---
 decision_record:
   decision_id: string                 # Mandatory: Unique decision identifier

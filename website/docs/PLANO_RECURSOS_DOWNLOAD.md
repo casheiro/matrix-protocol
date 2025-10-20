@@ -101,6 +101,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 #### 1.1 Atualizar MOC_BASIC_TEMPLATE.yaml
 ```yaml
 
+
 # Adicionar após hierarquia 'maturity':
 evaluation_criteria:
   metadata:
@@ -127,6 +128,7 @@ unified_structure_compliance:
 #### 1.2 Revisar MOC_STARTER_TEMPLATE.yaml
 - Adicionar header comment:
 ```yaml
+
 
 # LEGACY TEMPLATE - For reference only
 # For production use, please select normalized templates:

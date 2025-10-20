@@ -56,6 +56,7 @@ Camada de arbitragem determinística para resolução de conflitos com 6 regras 
 
 ### MOC (Matrix Ontology Catalog)
 ```yaml
+
 moc_version: "1.0"
 organization: "Sua Organização"
 hierarchies:
@@ -67,6 +68,7 @@ hierarchies:
 
 ### UKI (Units of Knowledge Interlinked)
 ```yaml
+
 schema: "1.0"
 id: uki:[scope_ref]:[type_ref]:[slug-id]
 title: "Título Descritivo"

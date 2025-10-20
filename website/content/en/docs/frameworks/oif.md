@@ -152,6 +152,7 @@ Each archetype definition in OIF MUST include an `archetype_level` field to expl
 
 #### Normative Archetype Definitions
 ```yaml
+
 # Canonical Archetypes (Protocol Core)
 archetype_id: kag
 archetype_name: Knowledge Agent
@@ -194,6 +195,7 @@ OIF MUST implement immutable prompt protection for canonical archetypes to prese
 
 #### Archetype Customization Matrix
 ```yaml
+
 # --- Normative Customization Rules ---
 archetype_customization_matrix:
   canonical_archetypes:
@@ -221,6 +223,7 @@ archetype_customization_matrix:
 
 #### Prompt Immutability Application
 ```yaml
+
 # --- Normative Protection Rules ---
 canonical_prompt_protection:
   immutability_scope:
@@ -244,6 +247,7 @@ canonical_prompt_protection:
 
 #### Specialized Archetype Extension Patterns
 ```yaml
+
 # --- Normative Extension Rules ---
 specialized_extension_patterns:
   inheritance_model: "composition_over_modification"
@@ -281,6 +285,7 @@ OIF implementations MUST provide a standardized template for explaining MAL arbi
 
 #### Mandatory Template Fields
 ```yaml
+
 # --- Normative Interface ---
 arbitration_explanation_template:
   decision_id: string                 # Mandatory: MAL decision identifier
@@ -346,6 +351,7 @@ Examples are provided for clarity and MAY be adapted to local contexts, but MUST
 
 ### **Knowledge Agent - Oracle Intelligence**
 ```yaml
+
 # --- Illustrative Example ---
 knowledge_agent_archetype:
   archetype_id: kag
@@ -383,6 +389,7 @@ knowledge_agent_archetype:
 
 ### **Workflow Agent - Zion Intelligence**
 ```yaml
+
 # --- Illustrative Example ---
 workflow_agent_archetype:
   archetype_id: wag
@@ -422,6 +429,7 @@ workflow_agent_archetype:
 
 ### **Governance-Aware Implementation**
 ```yaml
+
 # --- Illustrative Example ---
 governance_aware_implementation:
   moc_based_access_control:
@@ -456,6 +464,7 @@ governance_aware_implementation:
 
 ### **Quality Metrics for Intelligences**
 ```yaml
+
 # --- Illustrative Example ---
 quality_metrics:
   explainability_metrics:
@@ -506,6 +515,7 @@ continuous_monitoring:
 
 ### **Derived Authority: Denial of Absolute Truths**
 ```yaml
+
 # --- Illustrative Example ---
 derived_authority_implementation:
   prohibited_patterns:

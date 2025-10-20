@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Corporation MOC Template - 1000+ Employees
 # Optimized for large corporations with complex global operations
 # Focus on global governance, regulatory compliance, and board oversight

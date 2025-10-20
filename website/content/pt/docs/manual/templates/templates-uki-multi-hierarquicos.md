@@ -46,6 +46,7 @@ Este template demonstra como uma política de governança de dados atravessa mú
 
 ```yaml
 
+
 # uki:organizacao:framework:governanca-dados-empresarial-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_ORGANIZACAO_EXEMPLO v1.0"
@@ -87,6 +88,7 @@ conteudo: |
   #### 2. Classificação e Catalogação
   ```yaml
 
+
   classificacao_dados:
     publicos:
       definicao: "Dados que podem ser compartilhados externamente"
@@ -122,6 +124,7 @@ conteudo: |
   
   **Métricas de Qualidade por Classificação:**
   ```yaml
+
 
   metas_qualidade:
     altamente_confidenciais:
@@ -161,6 +164,7 @@ conteudo: |
   **Controles de Segurança por Classificação:**
   ```yaml
 
+
   controles_seguranca:
     altamente_confidenciais:
       criptografia: "AES-256 em repouso e trânsito"
@@ -180,6 +184,7 @@ conteudo: |
   
   #### Estrutura de Governança
   ```yaml
+
 
   comite_governanca_dados:
     presidente: "Chief Data Officer"
@@ -230,6 +235,7 @@ conteudo: |
   
   #### Métricas de Sucesso
   ```yaml
+
 
   kpis_governanca:
     qualidade_dados:
@@ -282,6 +288,7 @@ conteudo: |
 ## 🔗 Relacionamentos Cross-Hierárquicos
 
 ```yaml
+
 relacionamentos:
   # Relacionamentos Cross-Divisional
   - tipo: implementa
@@ -331,6 +338,7 @@ relacionamentos:
 ## 🏛️ Governança Multi-Hierárquica
 
 ```yaml
+
 dominio_influencia: "organizacao_completa"
 ref_ciclo_vida: framework_ativo
 ref_autoridade_aprovacao: comite_executivo
@@ -340,6 +348,7 @@ ref_autoridade_manutencao: cdo_data_office
 ## 📈 Tracking de Evolução Cross-Organizacional
 
 ```yaml
+
 evolucao:
   impacto_divisoes:
     divisao_produto: "Implementação de privacy-by-design em todos os produtos"
@@ -360,6 +369,7 @@ evolucao:
 ## 🔍 Relacionamentos Emergentes (Detectados pelo Sistema)
 
 ```yaml
+
 relacionamentos_emergentes:
   - tipo: habilita
     alvo: uki:organizacao:iniciativa:transformacao-digital-ai-001
@@ -382,6 +392,7 @@ relacionamentos_emergentes:
 Este template demonstra como uma arquitetura técnica complexa atravessa domínios de segurança, técnico e operacional, envolvendo múltiplos níveis de maturidade e tipos de conhecimento.
 
 ```yaml
+
 
 # uki:organizacao:arquitetura:zero-trust-security-001.yaml
 schema: "1.0"
@@ -425,6 +436,7 @@ conteudo: |
   **Gerenciamento de Identidade e Acesso (IAM):**
   ```yaml
 
+
   componentes_iam:
     identity_provider:
       primario: "Azure Active Directory"
@@ -446,6 +458,7 @@ conteudo: |
   
   **Políticas de Acesso Condicional:**
   ```yaml
+
 
   politicas_condicionais:
     localizacao:
@@ -472,6 +485,7 @@ conteudo: |
   
   **Microsegmentação:**
   ```yaml
+
 
   arquitetura_rede:
     zonas_seguranca:
@@ -510,6 +524,7 @@ conteudo: |
   **Estratégia Multi-Camadas:**
   ```yaml
 
+
   protecao_endpoints:
     endpoint_detection_response:
       solucao: "CrowdStrike Falcon"
@@ -534,6 +549,7 @@ conteudo: |
   
   **Classificação e Proteção:**
   ```yaml
+
 
   protecao_dados:
     data_loss_prevention:
@@ -564,6 +580,7 @@ conteudo: |
   #### Domínio Técnico/Engenharia
   ```yaml
 
+
   implementacao_engenharia:
     infrastructure_as_code:
       ferramentas: ["Terraform", "ARM Templates", "CloudFormation"]
@@ -586,6 +603,7 @@ conteudo: |
   
   #### Domínio Operacional
   ```yaml
+
 
   implementacao_operacoes:
     security_operations_center:
@@ -610,6 +628,7 @@ conteudo: |
   #### Domínio de Negócio/Produto
   ```yaml
 
+
   implementacao_produto:
     privacy_by_design:
       data_minimization: "collect_only_necessary_data"
@@ -627,6 +646,7 @@ conteudo: |
   
   #### Estrutura de Governança
   ```yaml
+
 
   governanca_zero_trust:
     comite_seguranca:
@@ -663,6 +683,7 @@ conteudo: |
   #### Fase 1: Fundação (Meses 1-6)
   ```yaml
 
+
   fase_1:
     identidade:
       - "Migração para Azure AD Premium"
@@ -684,6 +705,7 @@ conteudo: |
   #### Fase 2: Aprimoramento (Meses 7-12)
   ```yaml
 
+
   fase_2:
     dados:
       - "Implementação DLP abrangente"
@@ -704,6 +726,7 @@ conteudo: |
   
   #### Fase 3: Otimização (Meses 13-18)
   ```yaml
+
 
   fase_3:
     automacao:
@@ -861,6 +884,7 @@ Este template representa o ápice da complexidade organizacional, atravessando t
 
 ```yaml
 
+
 # uki:organizacao:processo:resposta-incidentes-empresarial-001.yaml
 schema: "1.0"
 referencia_ontologia: "MOC_ORGANIZACAO_EXEMPLO v1.0"
@@ -913,6 +937,7 @@ conteudo: |
   
   #### Por Domínio de Impacto
   ```yaml
+
 
   categorias_incidentes:
     seguranca_cibernetica:
@@ -975,6 +1000,7 @@ conteudo: |
   #### Por Severidade Multi-Escalar
   ```yaml
 
+
   niveis_severidade:
     critico:
       definicao: "Impacto severo em segurança, receita ou reputação"
@@ -1016,6 +1042,7 @@ conteudo: |
   #### Comitê de Gestão de Crise (Nível Executivo)
   ```yaml
 
+
   comite_gestao_crise:
     presidente: "CEO"
     membros_permanentes:
@@ -1042,6 +1069,7 @@ conteudo: |
   
   #### Equipes de Resposta Especializadas
   ```yaml
+
 
   equipes_resposta:
     cert_security:
@@ -1081,6 +1109,7 @@ conteudo: |
   #### Estado 1: Detecção e Classificação
   ```yaml
 
+
   deteccao_classificacao:
     canais_deteccao:
       automatizados:
@@ -1111,6 +1140,7 @@ conteudo: |
   #### Estado 2: Mobilização e Ativação
   ```yaml
 
+
   mobilizacao_ativacao:
     automacao_mobilizacao:
       notificacao_simultanea:
@@ -1134,6 +1164,7 @@ conteudo: |
   
   #### Estado 3: Investigação e Análise (Understand - ZOF)
   ```yaml
+
 
   investigacao_analise:
     consulta_oraculo_conhecimento:
@@ -1168,6 +1199,7 @@ conteudo: |
   #### Estado 4: Contenção e Estabilização (Act - ZOF)
   ```yaml
 
+
   contencao_estabilizacao:
     acoes_contencao_rapida:
       automatizadas:
@@ -1193,6 +1225,7 @@ conteudo: |
   
   #### Estado 5: Avaliação para Enriquecimento (EvaluateForEnrich - ZOF)
   ```yaml
+
 
   avaliacao_enriquecimento:
     criterios_moc_organizacionais:
@@ -1226,6 +1259,7 @@ conteudo: |
   #### Estado 6: Recuperação e Restauração
   ```yaml
 
+
   recuperacao_restauracao:
     fases_recuperacao:
       immediate_restoration:
@@ -1247,6 +1281,7 @@ conteudo: |
   
   #### Estado 7: Revisão e Aprendizado (Review - ZOF)
   ```yaml
+
 
   revisao_aprendizado:
     post_incident_review:
@@ -1273,6 +1308,7 @@ conteudo: |
   
   #### Estado 8: Enriquecimento Organizacional (Enrich - ZOF)
   ```yaml
+
 
   enriquecimento_organizacional:
     criacao_conhecimento:
@@ -1309,6 +1345,7 @@ conteudo: |
   #### Matriz de Comunicação por Severidade
   ```yaml
 
+
   comunicacao_stakeholders:
     critico:
       timing: "imediato_0_15min"
@@ -1344,6 +1381,7 @@ conteudo: |
   #### Eficácia Operacional
   ```yaml
 
+
   metricas_operacionais:
     tempo_resposta:
       mttr: "Mean Time to Response"
@@ -1365,6 +1403,7 @@ conteudo: |
   
   #### Impacto nos Negócios
   ```yaml
+
 
   metricas_negocio:
     financeiro:
@@ -1582,6 +1621,7 @@ inovacao_response:
 #### **Padrão 1: Cascata de Autoridade Multi-Nível**
 ```yaml
 
+
 cascata_autoridade:
   organizacao → divisao → tribo → squad
   exemplo: "Framework governança de dados"
@@ -1592,6 +1632,7 @@ cascata_autoridade:
 
 #### **Padrão 2: Convergência Multi-Domínio**
 ```yaml
+
 
 convergencia_dominios:
   [seguranca + tecnico + operacional + negocio] → resultado_integrado
@@ -1604,6 +1645,7 @@ convergencia_dominios:
 #### **Padrão 3: Evolução Temporal Controlada**
 ```yaml
 
+
 evolucao_temporal:
   legacy → atual → futuro
   exemplo: "Resposta a incidentes multi-generacional"
@@ -1614,6 +1656,7 @@ evolucao_temporal:
 
 #### **Padrão 4: Compliance Regulatório Distributivo**
 ```yaml
+
 
 compliance_distributivo:
   regulatorio_global → implementacao_local

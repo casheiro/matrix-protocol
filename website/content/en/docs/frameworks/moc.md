@@ -72,6 +72,7 @@ The MOC mandates these **universal hierarchy types** that every organization mus
 Each organization implements the universal concepts according to their specific needs:
 
 ```yaml
+
 # Example organizational MOC
 moc_version: "1.0"
 organization: "TechCorp Inc"
@@ -136,6 +137,7 @@ MOC provides the **Authority Validation Service** that determines:
 Each MOC node can define:
 
 ```yaml
+
 governance:
   # Who can create knowledge at this level
   creation_authority: "team_lead" | "domain_expert" | "any_member"
@@ -181,6 +183,7 @@ MOC itself follows semantic versioning:
 MOC supports dynamic taxonomy evolution:
 
 ```yaml
+
 # Feedback mechanism for taxonomy improvement
 taxonomic_evolution:
   feedback_collection: true
@@ -212,6 +215,7 @@ When MOC evolves, it provides:
 All UKI `*_ref` fields must reference valid MOC nodes:
 
 ```yaml
+
 # UKI references MOC
 scope_ref: "team-backend"     # Must exist in MOC scope hierarchy
 domain_ref: "technical"       # Must exist in MOC domain hierarchy
@@ -224,6 +228,7 @@ maturity_ref: "draft"         # Must exist in MOC maturity hierarchy
 ZOF **EvaluateForEnrich** checkpoint uses MOC criteria:
 
 ```yaml
+
 # MOC defines enrichment evaluation criteria
 evaluation_criteria:
   - id: "business_impact"
@@ -237,6 +242,7 @@ evaluation_criteria:
 MAL arbitration uses MOC-defined precedence rules:
 
 ```yaml
+
 # MOC configures MAL arbitration policies
 arbitration_policies:
   default_policy:
@@ -250,6 +256,7 @@ arbitration_policies:
 OIF archetypes respect MOC authority structure:
 
 ```yaml
+
 # OIF agent respects MOC permissions
 agent_configuration:
   authority_context: "team-backend"  # MOC scope
@@ -266,6 +273,7 @@ agent_configuration:
 
 **Step 1**: Map organizational structure
 ```yaml
+
 # Start with basic organizational levels
 scope:
   nodes:
@@ -274,6 +282,7 @@ scope:
 
 **Step 2**: Identify knowledge domains
 ```yaml
+
 # Map functional areas
 domain:
   nodes:
@@ -282,6 +291,7 @@ domain:
 
 **Step 3**: Define knowledge types
 ```yaml
+
 # Start simple, expand as needed
 type:
   nodes:
@@ -290,6 +300,7 @@ type:
 
 **Step 4**: Establish maturity progression
 ```yaml
+
 # Align with organizational validation process
 maturity:
   nodes:
@@ -307,6 +318,7 @@ maturity:
 
 **Startup Pattern** (5-50 people):
 ```yaml
+
 scope: [personal, team, company]
 domain: [technical, business, product]
 type: [decision, process, knowledge]
@@ -315,6 +327,7 @@ maturity: [draft, validated]
 
 **Enterprise Pattern** (200+ people):
 ```yaml
+
 scope: [team, department, division, organization]
 domain: [technical, business, product, legal, compliance]
 type: [policy, procedure, decision, guideline, reference]
@@ -357,6 +370,7 @@ MOC enables comprehensive knowledge auditing:
 Large organizations can implement hierarchical MOCs:
 
 ```yaml
+
 # Corporate MOC with subsidiary MOCs
 corporate_moc:
   subsidiaries:
@@ -371,6 +385,7 @@ corporate_moc:
 MOC supports knowledge sharing between organizations:
 
 ```yaml
+
 # External knowledge references
 external_references:
   - organization: "partner_company"
@@ -384,6 +399,7 @@ external_references:
 MOC can integrate with identity systems:
 
 ```yaml
+
 # LDAP/Active Directory integration
 identity_integration:
   provider: "ldap"

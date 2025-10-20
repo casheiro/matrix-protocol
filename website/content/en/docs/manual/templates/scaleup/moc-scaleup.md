@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Scale-up MOC Template - 50-200 Employees
 # Optimized for growing companies with multiple teams and structured processes
 # Focus on coordination, standardization, and governance

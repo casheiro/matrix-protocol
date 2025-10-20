@@ -156,6 +156,7 @@ Examples are provided for clarity purposes and MAY be adapted to local contexts,
 ### **Scenario 1: UKI Conflict** (Informative, MOC-Dependent)
 ```yaml
 
+
 # --- Illustrative Example ---
 Situation: Two UKIs about "JWT authentication" conflict
 MEP guides: Derived authority → check scope_ref and maturity_ref
@@ -166,6 +167,7 @@ MAL executes: Arbitration based on epistemological hierarchy
 ### **Scenario 2: Rule Promotion** (Informative, MOC-Dependent)
 ```yaml
 
+
 # --- Illustrative Example ---
 Situation: Squad-level rule wants to become organizational policy  
 MEP guides: Responsible promotion → requires promotion_rationale
@@ -175,6 +177,7 @@ MEF records: Field with complete epistemological justification
 
 ### **Scenario 3: Enrichment Rejection** (Informative, MOC-Dependent)
 ```yaml
+
 
 # --- Illustrative Example ---
 Situation: UKI rejected in ZOF evaluate_for_enrich

@@ -102,6 +102,7 @@ docs/
 All Markdown files consistently use this structure:
 
 ```yaml
+
 ---
 title: string                 # Page title (required)
 description: string           # Page description (required)

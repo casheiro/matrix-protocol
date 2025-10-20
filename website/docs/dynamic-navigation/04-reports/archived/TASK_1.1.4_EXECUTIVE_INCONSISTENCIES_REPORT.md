@@ -128,6 +128,7 @@ Arquivos com Descriptions > 150 chars:
 
 #### **Template Automático de Index.md**
 ```yaml
+
 ---
 title: "{{ NOME_PASTA | title-case }}"
 description: "{{ CONTEXTO_AUTOMATICO | based-on-content }}"

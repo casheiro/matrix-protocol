@@ -33,6 +33,7 @@ Before any UKI is created, the **Matrix Ontology Catalog (MOC)** defines the org
 
 #### 📋 Official MOC Structure
 ```yaml
+
 moc_version: "1.0"
 organization: "Example E-commerce Company" 
 version: "0.0.1-beta"
@@ -70,6 +71,7 @@ hierarchies:
 
 #### 🔗 UKI ↔ MOC Integration
 ```yaml
+
 # How UKIs reference the MOC
 scope_ref: squad-payments    # → hierarchies.scope.nodes[id="squad-payments"]
 domain_ref: business         # → hierarchies.domain.nodes[id="business"] 
@@ -183,6 +185,7 @@ During initial creation, fields that don't exist in the official MEF specificati
 
 ### 1. **Conflict Resolution**
 ```yaml
+
 # Example: uki-pay-refund-policy-002.yaml
 change_summary: "Unification of conflicting deadlines and SLA definition per gateway"
 promotion:
@@ -194,6 +197,7 @@ promotion:
 
 ### 2. **Explicit Semantic Relationships**
 ```yaml
+
 relationships:
   - type: relates_to
     target: uki:squad-payments:business_rule:discount-logic-001
@@ -202,6 +206,7 @@ relationships:
 
 ### 3. **Versioning and Evolution**
 ```yaml
+
 version: 2.1.0
 change_impact: minor
 previous_version: 2.0.0
@@ -210,6 +215,7 @@ change_summary: "Threshold adjustment based on false positive analysis"
 
 ### 4. **Official MEF Structure with MOC Integration**
 ```yaml
+
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"  # Squad MOC reference
 scope_ref: squad-payments                      # Scope defined in MOC
@@ -222,6 +228,7 @@ domain_of_influence: "engineering_teams"
 
 ### 5. **Governance and Promotion**
 ```yaml
+
 promotion:
   promotion_rationale: |
     Policy affects multiple squads - candidate for promotion to tribe scope

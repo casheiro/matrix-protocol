@@ -23,6 +23,7 @@ last_updated: 2025-10-20
 **Estrutura Padrão**:
 ```yaml
 
+
 schema: "1.0"
 id: uki:squad-payments:business_rule:discount-logic-001
 title: "Regras de Desconto por Volume e Cupons"

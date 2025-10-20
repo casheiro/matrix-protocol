@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"
 version: "1.5.0"

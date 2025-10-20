@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Template Inicial MOC - Pronto para Usar
 # Baseado na implementação hipotética TechCorp e padrões organizacionais
 # Selecione e personalize o template que corresponde ao tamanho da sua organização

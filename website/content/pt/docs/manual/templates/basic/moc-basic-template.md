@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Basic MOC Template - Ready to Use
 # Ultra-simplified template for quick Matrix Protocol implementation
 # Suitable for any organization size (5-1000+ people)

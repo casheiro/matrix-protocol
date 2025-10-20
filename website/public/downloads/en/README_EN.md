@@ -56,6 +56,7 @@ Deterministic arbitration layer for conflict resolution with 6 precedence rules.
 
 ### MOC (Matrix Ontology Catalog)
 ```yaml
+
 moc_version: "1.0"
 organization: "Your Organization"
 hierarchies:
@@ -67,6 +68,7 @@ hierarchies:
 
 ### UKI (Units of Knowledge Interlinked)
 ```yaml
+
 schema: "1.0"
 id: uki:[scope_ref]:[type_ref]:[slug-id]
 title: "Descriptive Title"

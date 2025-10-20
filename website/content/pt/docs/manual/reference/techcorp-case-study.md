@@ -50,6 +50,7 @@ last_updated: 2025-10-20
 
 ```yaml
 
+
 roi_calculation:
   investment:
     platform_development: "$800k"
@@ -87,6 +88,7 @@ roi_calculation:
 ### **Hierarquia Executiva**
 
 ```yaml
+
 
 executive_structure:
   ceo: "Sarah Chen"
@@ -134,6 +136,7 @@ divisional_breakdown:
 #### **Divisão de Tecnologia**
 ```yaml
 
+
 problems_technology:
   knowledge_silos:
     - platform_team: "Conhecimento de infra concentrado em 3 pessoas"
@@ -154,6 +157,7 @@ problems_technology:
 
 #### **Divisão de Produto**
 ```yaml
+
 
 problems_product:
   requirements_chaos:
@@ -185,6 +189,7 @@ problems_product:
 **Mês 1: Assessment e Design**
 ```yaml
 
+
 week_1_2:
   stakeholder_interviews: "28 pessoas (100% dos target roles)"
   systems_inventory: "47 sistemas catalogados"
@@ -201,6 +206,7 @@ week_3_4:
 
 **Mês 2: Implementação Piloto**
 ```yaml
+
 
 platform_tribe_pilot:
   scope: "Engineering Platform tribe (45 pessoas)"
@@ -220,6 +226,7 @@ platform_tribe_pilot:
 
 **Mês 3: Validação e Expansão**
 ```yaml
+
 
 validation_metrics:
   adoption_rate: "89% (40/45 pessoas criaram pelo menos 1 UKI)"
@@ -260,6 +267,7 @@ expansion_readiness:
 
 ```yaml
 
+
 tribes_phase_2:
   engineering_platform: "45 pessoas (já implementado)"
   product_core: "67 pessoas (novo)"
@@ -274,6 +282,7 @@ tribes_phase_2:
 **Estratégia por Tipo de Conteúdo:**
 
 ```yaml
+
 
 legacy_migration:
   architectural_decisions:
@@ -302,6 +311,7 @@ legacy_migration:
 **Exemplo Real: Migração ADR**
 
 ```yaml
+
 
 # Exemplo: Migração de decisão sobre Fila de Mensagens
 legacy_decision:
@@ -356,6 +366,7 @@ migrated_adr:
 
 ```yaml
 
+
 metrics_month_6:
   knowledge_assets:
     ukis_created: "467 UKIs"
@@ -392,6 +403,7 @@ metrics_month_6:
 **Workflow Real: Feature Development Process**
 
 ```yaml
+
 
 # Workflow TechCorp: Feature Development
 workflow_id: "techcorp_feature_development"
@@ -478,6 +490,7 @@ canonical_states:
 
 ```yaml
 
+
 evaluate_for_enrich_config:
   evaluation_criteria:
     technical_novelty:
@@ -521,6 +534,7 @@ evaluate_for_enrich_config:
 **Exemplo Real: Feature "Smart Recommendations"**
 
 ```yaml
+
 
 # Caso Real: Feature que passou por ZOF completo
 feature_case_study:
@@ -606,6 +620,7 @@ feature_case_study:
 
 ```yaml
 
+
 zof_implementation_results:
   workflow_adoption:
     workflows_zof_compliant: "12 core workflows converted"
@@ -674,6 +689,7 @@ zof_implementation_results:
 #### **Recomendações Universais**
 
 ```yaml
+
 
 critical_success_factors:
   executive_sponsorship: "C-level champion necessário"

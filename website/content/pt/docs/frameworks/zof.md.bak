@@ -132,6 +132,7 @@ ZOF DEVE implementar regras específicas para operações de enriquecimento que 
 #### Detecção de Enriquecimento Cross-boundary
 ```yaml
 
+
 # --- Configuração Normativa ---
 cross_boundary_detection:
   scope_crossing:
@@ -159,6 +160,7 @@ cross_boundary_detection:
 
 #### Regras de Enriquecimento Cross-boundary
 ```yaml
+
 
 # --- Regras Normativas ---
 cross_boundary_enrichment_rules:
@@ -201,6 +203,7 @@ O ZOF DEVE implementar validação scope_mode para operações de enriquecimento
 ##### Tipos de Modo de Escopo
 ```yaml
 
+
 # --- Configuração Normativa ---
 scope_mode_validation:
   validation_types:
@@ -236,6 +239,7 @@ scope_mode_validation:
 
 ##### Exemplos de Aplicação do Modo de Escopo
 ```yaml
+
 
 # --- Exemplos Ilustrativos ---
 scope_mode_scenarios:
@@ -294,6 +298,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Estados Canônicos com Sinais**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 flow_execution:
   - state: "intake"
@@ -319,6 +324,7 @@ flow_execution:
 ### **Checkpoint EvaluateForEnrich**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 evaluate_for_enrich:
   checkpoint_execution:
@@ -340,6 +346,7 @@ evaluate_for_enrich:
 
 ### **Perfil Mínimo can_enrich?() - Adoção Inicial**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 # Para organizações iniciando com ZOF, função simplificada com 3 perguntas básicas
@@ -380,6 +387,7 @@ minimum_can_enrich_profile:
 ### **Eventos Canônicos**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 canonical_events:
   knowledge.added: "Novo conteúdo disponível"
@@ -401,6 +409,7 @@ workflow_patterns:
 
 ### **Implementação Livre**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 zof_prescribes:

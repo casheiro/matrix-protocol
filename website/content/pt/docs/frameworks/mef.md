@@ -162,6 +162,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Estrutura Padrão UKI**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"
@@ -191,6 +192,7 @@ relationships:
 ### **Promoção de Conhecimento**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 promotion:
   is_promoted_from: uki:technical:example:local-auth-impl
@@ -208,6 +210,7 @@ impact_analysis:
 
 ### **Relacionamentos Ontológicos**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 relationships:

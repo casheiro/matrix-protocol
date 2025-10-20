@@ -54,6 +54,7 @@ navigation: true
 ### Hierarchical Breakdown
 
 ```yaml
+
 TechCorp_Structure:
   organization: "TechCorp Solutions"
   total_employees: 800
@@ -232,6 +233,7 @@ TechCorp_Structure:
 #### **MOC Design for TechCorp**
 
 ```yaml
+
 # MOC_TECHCORP_SOLUTIONS.yaml - Complete Organizational Ontology
 moc_version: "1.0"
 organization: "TechCorp Solutions"
@@ -797,6 +799,7 @@ Three strategically chosen pilots to maximize learning and impact:
 
 **Customer Experience Tribe UKIs (Example)**
 ```yaml
+
 # uki:customer-experience-tribe:standard:design-system-components-001.yaml
 schema: "1.0"
 ontology_reference: "MOC_TECHCORP_SOLUTIONS v1.0"
@@ -998,6 +1001,7 @@ promotion:
 #### **Architectural Decision Review Workflow (ZOF Example)**
 
 ```yaml
+
 # ZOF Flow: Architectural Decision Review Process
 flow_id: "techcorp-architectural-decision-review"
 flow_type: "governance"

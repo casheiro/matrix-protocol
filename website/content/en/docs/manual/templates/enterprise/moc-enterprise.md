@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 # Enterprise MOC Template - 200-1000 Employees
 # Optimized for established companies with formal governance and compliance
 # Focus on standardization, auditability, and risk management

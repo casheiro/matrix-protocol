@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"
 id: uki:squad-payments:procedure:monitoring-alerts-016
@@ -141,6 +142,7 @@ content: |
   
   ### Alert Routing
   ```yaml
+
 
   alert_routing:
     business_hours: # 9:00-18:00 BRT, Mon-Fri

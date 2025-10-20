@@ -16,6 +16,7 @@ navigation: true
 
 
 ```yaml
+
 schema: "1.0"
 ontology_reference: "moc:squad-payments:v1.0"
 id: uki:squad-payments:procedure:performance-optimization-017
@@ -167,6 +168,7 @@ content: |
   
   ### Performance Test Automation
   ```yaml
+
   # JMeter test configuration
   load_test_config:
     threads: 1000

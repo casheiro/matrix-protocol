@@ -32,6 +32,7 @@
 
 #### **CAMPOS OBRIGATÓRIOS** (96% cobertura)
 ```yaml
+
 # Extraídos da auditoria real
 title: "string"        # 57/59 arquivos - títulos únicos
 description: "string"  # 57/59 arquivos - descrições detalhadas
@@ -41,6 +42,7 @@ sidebar: true          # 55/59 arquivos - valor único (100%)
 
 #### **CAMPOS OPCIONAIS** (50-95% cobertura)  
 ```yaml
+
 icon: "i-heroicons-*"  # 55/59 arquivos - 25 ícones únicos
 toc: true|false        # 55/59 arquivos - maioria true
 navigation: true|false # 45/59 arquivos - maioria true
@@ -50,6 +52,7 @@ navigation: true|false # 45/59 arquivos - maioria true
 
 ### **Schema Mínimo Focado em Estrutura**
 ```yaml
+
 ---
 # === CAMPOS OBRIGATÓRIOS ===
 title: "Título da Seção"                    # String - extraído ou formatado

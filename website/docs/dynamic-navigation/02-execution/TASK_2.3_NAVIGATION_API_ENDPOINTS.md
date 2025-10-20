@@ -473,6 +473,7 @@ curl "http://localhost:3000/api/navigation/stats?locale=pt&cache=true"
 
 ### **Expected Response Times**
 ```yaml
+
 performance_benchmarks:
   tree_endpoint: '<200ms'          # Complete navigation tree
   breadcrumbs_endpoint: '<50ms'    # Breadcrumb generation

@@ -61,6 +61,7 @@ nodes:
 
 #### **🎯 Domain (Specialization Domain)**
 ```yaml
+
 nodes:
   - technical     # Technical knowledge
   - product       # Product knowledge
@@ -70,6 +71,7 @@ nodes:
 #### **📋 Type (Content Type)**
 
 ```yaml
+
 nodes:
   - decision      # Decision records
   - process       # Processes and procedures
@@ -84,6 +86,7 @@ Structure important information in UKI format:
 
 #### **Basic UKI Template**
 ```yaml
+
 id: "uki:technical:decision:authentication-approach"
 scope_ref: "engineering"
 domain_ref: "technical" 

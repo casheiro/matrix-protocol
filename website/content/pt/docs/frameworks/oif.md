@@ -155,6 +155,7 @@ Cada definição de arquétipo no OIF DEVE incluir um campo `archetype_level` pa
 #### Definições Normativas de Arquétipos
 ```yaml
 
+
 # Arquétipos Canônicos (Core do Protocolo)
 archetype_id: kag
 archetype_name: Knowledge Agent
@@ -198,6 +199,7 @@ O OIF DEVE implementar proteção imutável de prompts para arquétipos canônic
 #### Matriz de Customização de Arquétipos
 ```yaml
 
+
 # --- Regras de Customização Normativas ---
 archetype_customization_matrix:
   canonical_archetypes:
@@ -226,6 +228,7 @@ archetype_customization_matrix:
 #### Aplicação de Imutabilidade de Prompts
 ```yaml
 
+
 # --- Regras de Proteção Normativas ---
 canonical_prompt_protection:
   immutability_scope:
@@ -249,6 +252,7 @@ canonical_prompt_protection:
 
 #### Padrões de Extensão de Arquétipos Especializados
 ```yaml
+
 
 # --- Regras de Extensão Normativas ---
 specialized_extension_patterns:
@@ -287,6 +291,7 @@ Implementações OIF DEVEM fornecer um template padronizado para explicar decis�
 
 #### Campos Obrigatórios do Template
 ```yaml
+
 
 # --- Interface Normativa ---
 arbitration_explanation_template:
@@ -354,6 +359,7 @@ Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos conte
 ### **Knowledge Agent - Oracle Intelligence**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 knowledge_agent_archetype:
   archetype_id: kag
@@ -391,6 +397,7 @@ knowledge_agent_archetype:
 
 ### **Workflow Agent - Zion Intelligence**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 workflow_agent_archetype:
@@ -432,6 +439,7 @@ workflow_agent_archetype:
 ### **Implementação Ciente de Governança**
 ```yaml
 
+
 # --- Exemplo Ilustrativo ---
 governance_aware_implementation:
   moc_based_access_control:
@@ -466,6 +474,7 @@ governance_aware_implementation:
 
 ### **Métricas de Qualidade para Inteligências**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 quality_metrics:
@@ -517,6 +526,7 @@ continuous_monitoring:
 
 ### **Autoridade Derivada: Negação de Verdades Absolutas**
 ```yaml
+
 
 # --- Exemplo Ilustrativo ---
 derived_authority_implementation:

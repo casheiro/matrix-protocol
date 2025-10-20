@@ -96,6 +96,7 @@ graph LR
 
 ```yaml
 
+
 ---
 title: "Matrix Embedding Framework"
 description: "Framework para estruturação de conhecimento via UKIs"
@@ -323,6 +324,7 @@ find website/content -name "*.md" -exec head -10 {} \; | grep -E "(version|date)
 #### GitHub Actions Workflow (`.github/workflows/sync-validation.yml`)
 
 ```yaml
+
 
 name: Sync Validation
 

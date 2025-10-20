@@ -91,6 +91,7 @@
 
 ### **Template Structure Applied**
 ```yaml
+
 # Frontmatter Template Applied to All Files:
 ---
 title: "{{TITULO_GERADO}}"           # Generated per organizational type

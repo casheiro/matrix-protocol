@@ -49,6 +49,7 @@ tags:
 
 ```yaml
 
+
 # MOC_TEMPLATE_STARTUP.yaml
 moc_version: "1.0"
 organizacao: "[NOME_STARTUP]"
@@ -300,6 +301,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 
 # MOC_TEMPLATE_SCALEUP.yaml
 moc_version: "1.0"
@@ -669,6 +671,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 
 # MOC_TEMPLATE_ENTERPRISE.yaml
 moc_version: "1.0"
@@ -1187,6 +1190,7 @@ politicas_arbitragem_nomeadas:
 ### Configuração MOC
 
 ```yaml
+
 
 # MOC_TEMPLATE_CORPORACAO.yaml
 moc_version: "1.0"

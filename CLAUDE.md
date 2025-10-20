@@ -141,6 +141,7 @@ Every decision generates auditable epistemological narrative. Explainability is 
 ### Current UKI Structure (Mandatory Fields)
 ```yaml
 
+
 # --- Mandatory Header ---
 schema: "1.0"
 ontology_reference: "[moc-reference]"  # Points to organizational MOC
@@ -193,6 +194,7 @@ domain_of_influence: "[organizational-reference]"
 ### Real Example from Repository
 ```yaml
 
+
 # From examples/knowledge-comparison/structured/business-rules/uki-pay-discount-logic-001.yaml
 schema: "1.0"
 ontology_reference: "Ontology_MEF_Support v1.0"  # Standard MEF ontology reference
@@ -215,6 +217,7 @@ relationships:
 
 ### Real MOC Implementation from Repository
 ```yaml
+
 
 # --- Actual MOC_SQUAD_PAYMENTS.yaml from examples/knowledge-comparison/ ---
 moc_version: "1.0"
@@ -410,6 +413,7 @@ All ZOF workflows MUST follow this exact sequence:
 Each state transition MUST record:
 ```yaml
 
+
 signals:
   context: "[What entered this state]"
   decision: "[Why it transitioned to next state]"
@@ -425,6 +429,7 @@ signals:
 
 ### ZOF Flow Example (Conceptual)
 ```yaml
+
 
 # Technology-independent workflow description
 flow_id: "zof-payment-gateway-selection"
@@ -473,6 +478,7 @@ canonical_states:
 
 ```yaml
 
+
 # Arbitration Event
 arbitration_event:
   event_id: "mal-evt-20250826-001"
@@ -514,6 +520,7 @@ decision_record:
 
 ```yaml
 
+
 # Concurrent enrichment detected within 30-second window
 arbitration_event:
   event_type: "H2"
@@ -548,6 +555,7 @@ decision_record:
 
 ```yaml
 
+
 # Knowledge Agent behavior demonstrating derived authority
 user_query: "What's the correct way to implement JWT authentication?"
 
@@ -576,6 +584,7 @@ knowledge_agent_response:
 ### OIF Arbitration Explanation Template
 
 ```yaml
+
 
 # OIF explaining MAL decision to user
 arbitration_explanation:
@@ -627,6 +636,7 @@ arbitration_explanation:
 ### MEP Conformance Example
 
 ```yaml
+
 
 # How MEP principles are validated in practice
 mep_conformance_check:

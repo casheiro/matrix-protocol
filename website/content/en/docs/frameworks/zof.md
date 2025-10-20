@@ -95,6 +95,7 @@ Every ZOF workflow MUST follow this exact sequence:
 Each state transition MUST record:
 
 ```yaml
+
 signals:
   context: "[What entered this state]"
   decision: "[Why it transitioned to next state]"
@@ -120,6 +121,7 @@ The **EvaluateForEnrich** checkpoint is the critical decision point that determi
 ### 4.2 can_enrich?() Function
 
 ```yaml
+
 # Conceptual implementation
 function can_enrich(workflow_context, action_results, moc_criteria):
   
@@ -146,6 +148,7 @@ function can_enrich(workflow_context, action_results, moc_criteria):
 EvaluateForEnrich uses MOC-defined criteria:
 
 ```yaml
+
 # Example MOC evaluation criteria
 evaluation_criteria:
   - id: "business_impact"
@@ -182,6 +185,7 @@ ZOF defines standard events that trigger workflows:
 
 #### **knowledge.added**
 ```yaml
+
 event_type: "knowledge.added"
 payload:
   uki_id: "uki:team:decision:auth-strategy"
@@ -191,6 +195,7 @@ payload:
 
 #### **work.proposed**
 ```yaml
+
 event_type: "work.proposed"
 payload:
   work_description: "Implement new payment gateway"
@@ -200,6 +205,7 @@ payload:
 
 #### **decision.required**
 ```yaml
+
 event_type: "decision.required"
 payload:
   decision_context: "Choose between technical alternatives"
@@ -209,6 +215,7 @@ payload:
 
 #### **conflict.detected**
 ```yaml
+
 event_type: "conflict.detected"
 payload:
   conflicting_ukis: ["uki:a", "uki:b"]
@@ -221,6 +228,7 @@ payload:
 Events are routed based on MOC scope and domain:
 
 ```yaml
+
 # Event routing configuration
 event_routing:
   knowledge.added:
@@ -247,6 +255,7 @@ ZOF is **technology-agnostic**:
 
 **Simple Implementation** (Manual process):
 ```yaml
+
 workflow_implementation: "manual"
 tools:
   - "Confluence for documentation"
@@ -257,6 +266,7 @@ state_tracking: "Manual spreadsheet"
 
 **Advanced Implementation** (Automated orchestration):
 ```yaml
+
 workflow_implementation: "automated"
 tools:
   - "GitHub Actions for orchestration"
@@ -270,6 +280,7 @@ state_tracking: "Database with API"
 ZOF integrates with existing organizational tools:
 
 ```yaml
+
 # Integration with existing systems
 integrations:
   project_management: "Jira, Linear, Asana"
@@ -288,6 +299,7 @@ integrations:
 ZOF workflows must comply with MOC governance:
 
 ```yaml
+
 # Workflow governance rules
 workflow_governance:
   authority_validation:
@@ -305,6 +317,7 @@ workflow_governance:
 ### 7.2 Compliance Tracking
 
 ```yaml
+
 # Compliance tracking requirements
 compliance_tracking:
   state_transitions: "All transitions logged with timestamps"
@@ -331,6 +344,7 @@ ZOF maintains complete audit trails:
 ZOF supports parallel workflow execution:
 
 ```yaml
+
 # Parallel workflow configuration
 parallel_workflows:
   - workflow_id: "technical-review"
@@ -346,6 +360,7 @@ parallel_workflows:
 ### 8.2 Conditional Branching
 
 ```yaml
+
 # Conditional workflow branching
 conditional_branches:
   - condition: "business_impact == 'high'"
@@ -360,6 +375,7 @@ conditional_branches:
 ### 8.3 Escalation Patterns
 
 ```yaml
+
 # Escalation configuration
 escalation_patterns:
   decision_timeout:
@@ -380,6 +396,7 @@ escalation_patterns:
 ZOF creates and consults MEF UKIs:
 
 ```yaml
+
 # ZOF → MEF integration
 mef_integration:
   oracle_consultation:
@@ -395,6 +412,7 @@ mef_integration:
 ZOF respects MOC governance:
 
 ```yaml
+
 # ZOF → MOC integration
 moc_integration:
   authority_validation: "Check MOC permissions before actions"
@@ -407,6 +425,7 @@ moc_integration:
 ZOF triggers MAL arbitration:
 
 ```yaml
+
 # ZOF → MAL integration
 mal_integration:
   conflict_detection: "Identify conflicting knowledge during consultation"
@@ -419,6 +438,7 @@ mal_integration:
 ZOF configures OIF agents:
 
 ```yaml
+
 # ZOF → OIF integration
 oif_integration:
   agent_configuration: "Configure agents based on workflow context"

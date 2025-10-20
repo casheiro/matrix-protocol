@@ -98,6 +98,7 @@ Examples are provided for clarity purposes and MAY be adapted to local contexts,
 
 ### **Reference Domains**
 ```yaml
+
 # --- Illustrative Examples ---
 domains_examples:
   strategy: "High-level decisions, strategic planning"
@@ -116,6 +117,7 @@ alternative_domains:
 
 ### **Reference UKI Types**
 ```yaml
+
 # --- Illustrative Examples ---
 types_examples:
   pattern: "Reusable solution for common problem"
@@ -136,6 +138,7 @@ alternative_types:
 
 ### **Ontological Relationships**
 ```yaml
+
 # --- Illustrative Examples ---
 relationship_types:
   depends_on: "Semantically depends on another UKI"
@@ -162,6 +165,7 @@ relationship_usage_examples:
 
 ### **Severity Levels**
 ```yaml
+
 # --- Illustrative Examples ---
 severity_levels:
   low:
@@ -187,6 +191,7 @@ severity_levels:
 
 ### **Lifecycle**
 ```yaml
+
 # --- Illustrative Examples ---
 lifecycle_states:
   active:
@@ -207,6 +212,7 @@ lifecycle_states:
 
 ### **Organizational Customization Guide**
 ```yaml
+
 # --- Example of How to Customize ---
 customization_guide:
   step_1_analysis:

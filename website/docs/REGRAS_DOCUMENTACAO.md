@@ -195,6 +195,7 @@ Esta seção complementa as regras de `/docs` e define padrões para páginas de
 - Escopo: arquivos `.md` em `website/content/{pt|en}/**`.
 - Frontmatter obrigatório:
 ```yaml
+
 ---
 title: "Título da página"
 description: "Resumo curto"

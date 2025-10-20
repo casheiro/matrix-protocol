@@ -46,6 +46,7 @@ navigation: true
 ### **Financial Metrics**
 
 ```yaml
+
 roi_calculation:
   investment:
     platform_development: "$800k"
@@ -82,6 +83,7 @@ roi_calculation:
 ### **Executive Hierarchy**
 
 ```yaml
+
 executive_structure:
   ceo: "Sarah Chen"
   direct_reports:
@@ -126,6 +128,7 @@ divisional_breakdown:
 
 #### **Technology Division**
 ```yaml
+
 problems_technology:
   knowledge_silos:
     - platform_team: "Infrastructure knowledge concentrated in 3 people"
@@ -145,6 +148,7 @@ problems_technology:
 
 #### **Product Division**
 ```yaml
+
 problems_product:
   requirements_chaos:
     - feature_specs: "78% of specs changed after development started"
@@ -173,6 +177,7 @@ problems_product:
 
 **Month 1: Assessment and Design**
 ```yaml
+
 week_1_2:
   stakeholder_interviews: "28 people (100% of target roles)"
   systems_inventory: "47 systems catalogued"
@@ -188,6 +193,7 @@ week_3_4:
 
 **Month 2: Pilot Implementation**
 ```yaml
+
 platform_tribe_pilot:
   scope: "Engineering Platform tribe (45 people)"
   ukis_target: "50 UKIs in 4 weeks"
@@ -205,6 +211,7 @@ platform_tribe_pilot:
 
 **Month 3: Validation and Expansion**
 ```yaml
+
 validation_metrics:
   adoption_rate: "89% (40/45 people created at least 1 UKI)"
   quality_score: "4.2/5.0 (peer review average)"
@@ -242,6 +249,7 @@ expansion_readiness:
 #### **Expansion Scope**
 
 ```yaml
+
 tribes_phase_2:
   engineering_platform: "45 people (already implemented)"
   product_core: "67 people (new)"
@@ -255,6 +263,7 @@ tribes_phase_2:
 **Strategy by Content Type:**
 
 ```yaml
+
 legacy_migration:
   architectural_decisions:
     source_systems: ["Confluence", "Google Docs", "Email threads"]
@@ -281,6 +290,7 @@ legacy_migration:
 **Real Example: ADR Migration**
 
 ```yaml
+
 # Example: Message Queue decision migration
 legacy_decision:
   original_format: "Email thread with 47 messages"
@@ -332,6 +342,7 @@ migrated_adr:
 #### **PHASE 2 Results**
 
 ```yaml
+
 metrics_month_6:
   knowledge_assets:
     ukis_created: "467 UKIs"
@@ -367,6 +378,7 @@ metrics_month_6:
 **Real Workflow: Feature Development Process**
 
 ```yaml
+
 # TechCorp Workflow: Feature Development
 workflow_id: "techcorp_feature_development"
 canonical_states:
@@ -450,6 +462,7 @@ canonical_states:
 #### **EvaluateForEnrich Checkpoint - TechCorp Configuration**
 
 ```yaml
+
 evaluate_for_enrich_config:
   evaluation_criteria:
     technical_novelty:
@@ -492,6 +505,7 @@ evaluate_for_enrich_config:
 **Real Example: "Smart Recommendations" Feature**
 
 ```yaml
+
 # Real Case: Feature that went through complete ZOF
 feature_case_study:
   feature_name: "AI-Powered Smart Recommendations"
@@ -574,6 +588,7 @@ feature_case_study:
 #### **PHASE 3 Results**
 
 ```yaml
+
 zof_implementation_results:
   workflow_adoption:
     workflows_zof_compliant: "12 core workflows converted"
@@ -641,6 +656,7 @@ zof_implementation_results:
 #### **Universal Recommendations**
 
 ```yaml
+
 critical_success_factors:
   executive_sponsorship: "C-level champion required"
   change_management: "Invest 40% of budget in people/process vs technology"
