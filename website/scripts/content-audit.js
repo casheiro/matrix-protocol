@@ -82,6 +82,9 @@ class MetadataPattern {
 /**
  * Extrai frontmatter de um arquivo markdown
  */
+import Ajv from 'ajv'
+const schemaPath = path.join(__dirname, './frontmatter-schema.json')
+const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf-8'))
 function extractFrontmatter(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf-8')
@@ -172,20 +175,58 @@ function mapDirectoryStructure(dirPath, relativePath = '', depth = 0) {
 /**
  * Analisa padrões de frontmatter em todos os arquivos
  */
+function validateFrontmatterSchema(metadata, filePath, ajv, report) {
+  const validate = ajv.getSchema('frontmatter') || ajv.compile({ $id: 'frontmatter', ...schema })
+  const valid = validate(metadata || {})
+  if (!valid) {
+    report.metadataInconsistencies.push({
+      type: 'schema_violation',
+      file: filePath,
+      errors: validate.errors
+    })
+  }
+}
+
 function analyzeFrontmatterPatterns(structure, patterns = new Map(), report) {
+  const ajv = new Ajv({ allErrors: true })
   // Analisar arquivos na pasta atual
   for (const file of structure.files) {
     if (file.extension === '.md') {
       const metadata = extractFrontmatter(file.path)
       if (metadata) {
+        validateFrontmatterSchema(metadata, file.relativePath, ajv, report)
         for (const [key, value] of Object.entries(metadata)) {
           if (!patterns.has(key)) {
             patterns.set(key, new MetadataPattern(key))
           }
           patterns.get(key).addValue(value, file.relativePath)
         }
+        // Política de nomes: apenas inglês para arquivos e diretórios
+        const namePolicyViolations = []
+        const rel = file.relativePath
+        const segments = rel.split('/')
+        for (const seg of segments) {
+          if (seg.endsWith('.md')) {
+            const base = seg.replace(/\.md$/, '')
+            // Files: allow kebab-case or snake_case, English-only
+            if (!/^[a-z0-9_-]+$/.test(base)) {
+              namePolicyViolations.push({ segment: seg, rule: 'kebab-case or snake_case (content files)' })
+            }
+          } else {
+            // Directories: enforce kebab-case (no underscores), English-only
+            if (!/^[a-z0-9-]+$/.test(seg)) {
+              namePolicyViolations.push({ segment: seg, rule: 'kebab-case (directories)' })
+            }
+          }
+        }
+        if (namePolicyViolations.length) {
+          report.metadataInconsistencies.push({
+            type: 'naming_policy_violation',
+            file: file.relativePath,
+            violations: namePolicyViolations
+          })
+        }
       } else if (file.name !== 'index.md') {
-        // Arquivo sem frontmatter
         report.metadataInconsistencies.push({
           type: 'missing_frontmatter',
           file: file.relativePath,

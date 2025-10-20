@@ -336,3 +336,91 @@
      - Estrutura existente do projeto Nuxt 4.x
      - Padrões de migração estabelecidos
      - Compatibilidade bilíngue PT/EN
+
+
+## ✅ FASE 5: Padronização de Frontmatter e Nomenclatura (Conteúdo)
+
+- Aplicar padrão de frontmatter em todos os `.md` de `website/content/{pt|en}`:
+```yaml
+---
+title: "[Title]"
+description: "[Description]"
+icon: "i-heroicons-[name]"
+layout: "docs"
+sidebar: true
+toc: true
+navigation: true
+order: 0
+---
+```
+- Nomenclatura:
+  - Diretórios: `kebab-case` obrigatório.
+  - Arquivos: `kebab-case` ou `snake_case`.
+- Automação:
+  - Rodar `node website/scripts/content-audit.js` e `node website/scripts/validation-automation.js`.
+  - Corrigir inconsistências até `Quality Gates: PASSED`.
+- Critérios de sucesso:
+  - 0 bloqueadores.
+  - PT/EN paridade confirmada.
+  - Esquema validado para todos os novos conteúdos.
+
+     Adicionar diagramas para:
+     - Estrutura organizacional TechCorp
+     - Fluxo de implementação por fase
+     - Métricas de evolução
+
+     5.2 Templates UKI Multi-hierárquicos
+
+     Arquivos afetados:
+     - /public/downloads/templates/TEMPLATES_UKI_MULTI_HIERARQUICOS.md
+     - /public/downloads/templates/MULTI_HIERARCHICAL_UKI_TEMPLATES.md
+
+     Visualizar relações entre UKIs:
+     graph LR
+         UKI1[uki:team:pattern:auth] -->|depends_on| UKI2[uki:org:policy:security]
+         UKI3[uki:team:guide:jwt] -->|overrides| UKI1
+         UKI3 -->|complements| UKI2
+
+     🚀 FASE 6: Navegação e Índices Visuais
+
+     6.1 Framework Navigator
+
+     Criar componente visual para navegar entre frameworks (já parcialmente implementado)
+
+     6.2 Implementation Roadmap
+
+     Página interativa com progresso de implementação
+
+     6.3 Glossary Integration
+
+     Links automáticos para termos do glossário
+
+     📊 Métricas de Sucesso
+
+     - ✅ 15+ diagramas Mermaid implementados
+     - ✅ 4 templates MOC normalizados
+     - ✅ 100% dos code blocks com syntax highlighting
+     - ✅ Frontmatter padronizado em todos os arquivos
+     - ✅ Navegação visual entre frameworks
+     - ✅ Sem quebra de links existentes
+     - ✅ Mantém compatibilidade com Nuxt 4.x
+
+     ⏱️ Timeline Estimada
+
+     - Semana 1: Fases 1-2 (Diagramas críticos + Templates MOC)
+     - Semana 2: Fases 3-4 (Processos + Padronização)
+     - Semana 3: Fases 5-6 (Exemplos + Navegação)
+     - Semana 4: Testes, ajustes e documentação
+
+     🔍 Prioridades
+
+     1. CRÍTICO: Templates MOC normalizados (base para tudo)
+     2. ALTO: Diagramas de relacionamento entre frameworks
+     3. MÉDIO: Padronização de formatação
+     4. BAIXO: Melhorias de navegação
+
+     Todas as mudanças respeitarão:
+     - Especificações normativas do Matrix Protocol
+     - Estrutura existente do projeto Nuxt 4.x
+     - Padrões de migração estabelecidos
+     - Compatibilidade bilíngue PT/EN

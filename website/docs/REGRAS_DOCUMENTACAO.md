@@ -187,3 +187,34 @@ Para dúvidas sobre estas regras, consulte:
 **Data de Criação**: Janeiro 2025  
 **Status**: Ativo  
 **Responsável**: Casheiro
+
+### 11. Frontmatter e Política de Nomes (Conteúdo do Site)
+
+Esta seção complementa as regras de `/docs` e define padrões para páginas de conteúdo do site em `website/content/{pt|en}`.
+
+- Escopo: arquivos `.md` em `website/content/{pt|en}/**`.
+- Frontmatter obrigatório:
+```yaml
+---
+title: "Título da página"
+description: "Resumo curto"
+icon: "i-heroicons-[nome]"
+layout: "docs"
+sidebar: true
+toc: true
+navigation: true
+order: 0
+---
+```
+- Regras de validação:
+  - `icon`: deve seguir o padrão `i-heroicons-*`.
+  - `layout`: obrigatoriamente `docs`.
+  - `sidebar`, `toc`, `navigation`: valores booleanos.
+  - `order`: inteiro não negativo.
+- Política de nomes:
+  - Pastas: `kebab-case` obrigatório.
+  - Arquivos: `kebab-case` ou `snake_case`.
+- Validação automatizada:
+  - Scripts: `website/scripts/content-audit.js` e `website/scripts/validation-automation.js`.
+  - Esquema: `website/scripts/frontmatter-schema.json` (Ajv).
+  - Quality Gates: PRs que quebrarem o padrão serão bloqueados pelo CI.

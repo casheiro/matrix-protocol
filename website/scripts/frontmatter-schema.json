@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Frontmatter Schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "title",
+    "description",
+    "icon",
+    "layout",
+    "sidebar",
+    "toc",
+    "navigation"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "description": {
+      "type": "string",
+      "minLength": 30
+    },
+    "icon": {
+      "type": "string",
+      "pattern": "^i-heroicons-[a-z0-9-]+$"
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["docs"]
+    },
+    "sidebar": {
+      "type": "boolean"
+    },
+    "toc": {
+      "type": "boolean"
+    },
+    "navigation": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "number"
+    }
+  }
+}
