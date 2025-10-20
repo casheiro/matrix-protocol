@@ -154,11 +154,24 @@ Este plano detalha a execução em Scrum das melhorias de documentação em port
 
 **Sprint 2 – Normalização Estrutural (Semana 2)**
 - Entregáveis:
-  - Criação/ajuste de `index.md` nas pastas prioritárias
-  - Aplicação do frontmatter padronizado
+  - Criação/ajuste de `index.md` nas pastas prioritárias (pt/docs/*)
+  - Aplicação do frontmatter padronizado (schema + checklist editorial)
+  - Interlinks atualizados e seção “📖 Recursos Relacionados” nas páginas tocadas
+  - Relatórios de cobertura (CSV/JSON) e dashboard QA atualizados
 - Histórias associadas: US-01, US-02
 - Critérios de Aceite:
-  - Cobertura de `index.md` ≥ 80% das pastas alvo da sprint
+  - Cobertura de `index.md` ≥ 80% nas pastas alvo da sprint
+  - ≥80% das páginas alvo com frontmatter válido conforme `scripts/frontmatter-schema.json`
+  - 100% das alterações com checklist editorial aprovado
+  - Navegação sem 404; interlinks consistentes; taxa de links válidos ≥98%
+- Responsáveis:
+  - Maintainer Nuxt Content: auditorias, scripts e validação de navegação
+  - Editor de Documentação: aplicação do frontmatter e revisão editorial
+  - Engenheiro de Conhecimento: validação de `framework`/`maturity` e taxonomias
+  - UX Writer: refinamento de `title`/`description` e consistência narrativa
+- Acompanhamento & Relatórios:
+  - Auditoria: `scripts/content-audit.js`; atualização: `scripts/update-progress.js`
+  - Validação: `scripts/validation-automation.js`; QA: `scripts/qa-dashboard.js`
 
 **Sprint 3 – Conteúdo Conceitual I (Semana 3)**
 - Entregáveis:

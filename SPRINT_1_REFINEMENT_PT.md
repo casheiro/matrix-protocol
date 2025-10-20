@@ -150,3 +150,9 @@ Bem-vindo. Esta página organiza os recursos do diretório.
 - 10 páginas piloto com frontmatter padrão e checklist aprovado.
 - Inventário de `index.md` completo; 10 criados nas pastas prioritárias.
 - Sem links quebrados; novos arquivos seguem nomes em inglês.
+
+---
+
+## Próximos Passos
+- Ver documento: `SPRINT_2_REFINEMENT_PT.md` (normalização estrutural e aplicação padronizada).
+- Referência contínua: `SCRUM_PLAN_DOCUMENTATION_IMPROVEMENTS_PT.md` — Sprint 2.
