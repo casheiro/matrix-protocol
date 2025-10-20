@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Idempotency Keys 011](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml)
 
+> 📄 Type: YAML • 📦 Size: 5.1 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

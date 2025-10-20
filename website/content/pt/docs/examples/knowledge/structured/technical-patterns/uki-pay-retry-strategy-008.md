@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Retry Strategy 008](/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 4.4 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

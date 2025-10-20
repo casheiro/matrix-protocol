@@ -20,6 +20,7 @@ function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive
 
 const args = process.argv.slice(2)
 const APPLY_MODE = args.includes('--apply')
+const UPDATE_MODE = args.includes('--update') || args.includes('--force')
 
 function toKebab(str) {
   return str
@@ -34,6 +35,16 @@ function titleCaseFromBase(base) {
   // Convert "MOC_STARTUP" -> "Moc Startup"
   const words = base.replace(/[-_]+/g, ' ').toLowerCase().split(' ')
   return words.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
+function formatSize(bytes) {
+  if (bytes < 1024) return `${bytes} B`
+  const kb = bytes / 1024
+  if (kb < 1024) return `${kb.toFixed(1)} KB`
+  const mb = kb / 1024
+  if (mb < 1024) return `${mb.toFixed(2)} MB`
+  const gb = mb / 1024
+  return `${gb.toFixed(2)} GB`
 }
 
 function listYamlFiles() {
@@ -75,6 +86,15 @@ function buildWrapperContent(yamlPath, yamlContent) {
   const ctaText = locale === 'pt' ? 'Abrir no Visualizador' : 'Open in Viewer'
   const ctaPath = `/${locale}/docs/viewer?file=${fileParam}`
 
+  // Badges: tipo, tamanho, última modificação
+  const stat = fs.statSync(yamlPath)
+  const typeLabel = yamlPath.toLowerCase().endsWith('.yml') ? 'YML' : 'YAML'
+  const sizeLabel = formatSize(stat.size)
+  const updatedLabel = new Date(stat.mtime).toISOString().split('T')[0]
+  const infoText = locale === 'pt'
+    ? `📄 Tipo: ${typeLabel} • 📦 Tamanho: ${sizeLabel} • 🕒 Última modificação: ${updatedLabel}`
+    : `📄 Type: ${typeLabel} • 📦 Size: ${sizeLabel} • 🕒 Last updated: ${updatedLabel}`
+
   return `---\n`+
          `title: "${title}"\n`+
          `description: "${description}"\n`+
@@ -85,6 +105,7 @@ function buildWrapperContent(yamlPath, yamlContent) {
          `---\n\n`+
          `> Source YAML: \`${rel}\`\n\n`+
          `**${ctaText}:** [${title}](${ctaPath})\n\n`+
+         `> ${infoText}\n\n`+
          `\n\n`+
          `\`\`\`yaml\n`+
          `${yamlContent}\n`+
@@ -171,7 +192,7 @@ async function main() {
     const yamlContent = fs.readFileSync(y, 'utf-8')
     const mdContent = buildWrapperContent(y, yamlContent)
     wrapperPlans.push({ yaml: path.relative(CONTENT_ROOT, y), wrapper: path.relative(CONTENT_ROOT, wrapperPath), exists })
-    if (APPLY_MODE && !exists) {
+    if (APPLY_MODE && (!exists || UPDATE_MODE)) {
       fs.writeFileSync(wrapperPath, mdContent)
     }
   }

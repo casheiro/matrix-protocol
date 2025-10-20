@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Security Headers 010](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml)
 
+> 📄 Type: YAML • 📦 Size: 4.9 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

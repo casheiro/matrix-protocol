@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Deployment Process 015](/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml)
 
+> 📄 Type: YAML • 📦 Size: 6.6 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

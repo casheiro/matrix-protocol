@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `en/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml`
 
-**Open in Viewer:** [Moc Unified Structure](/en/docs/viewer?file=/docs/manual/templates/unified/MOC-UNIFIED-STRUCTURE.yaml)
+**Open in Viewer:** [Moc Unified Structure](/en/docs/viewer?file=/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml)
+
+> 📄 Type: YAML • 📦 Size: 16.9 KB • 🕒 Last updated: 2025-10-12
 
 
 

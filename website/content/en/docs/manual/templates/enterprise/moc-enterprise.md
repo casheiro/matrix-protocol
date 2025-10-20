@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml`
 
-**Open in Viewer:** [Moc Enterprise](/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC-ENTERPRISE.yaml)
+**Open in Viewer:** [Moc Enterprise](/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml)
+
+> 📄 Type: YAML • 📦 Size: 15.0 KB • 🕒 Last updated: 2025-10-12
 
 
 

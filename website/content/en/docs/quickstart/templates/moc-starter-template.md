@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml`
 
-**Open in Viewer:** [Moc Starter Template](/en/docs/viewer?file=/docs/quickstart/templates/MOC-STARTER-TEMPLATE.yaml)
+**Open in Viewer:** [Moc Starter Template](/en/docs/viewer?file=/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml)
+
+> 📄 Type: YAML • 📦 Size: 16.0 KB • 🕒 Last updated: 2025-10-12
 
 
 

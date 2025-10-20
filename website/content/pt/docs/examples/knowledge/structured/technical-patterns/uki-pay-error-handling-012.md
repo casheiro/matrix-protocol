@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Error Handling 012](/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 6.0 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

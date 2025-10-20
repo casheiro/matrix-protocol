@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml`
 
-**Abrir no Visualizador:** [Moc Corporation](/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC-CORPORATION.yaml)
+**Abrir no Visualizador:** [Moc Corporation](/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml)
+
+> 📄 Tipo: YAML • 📦 Tamanho: 17.5 KB • 🕒 Última modificação: 2025-10-11
 
 
 

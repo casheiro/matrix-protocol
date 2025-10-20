@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Refund Policy 002](/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 2.9 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Gateway Integration 007](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml)
 
+> 📄 Type: YAML • 📦 Size: 3.6 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

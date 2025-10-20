@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `pt/docs/manual/templates/startup/MOC_STARTUP.yaml`
 
-**Abrir no Visualizador:** [Moc Startup](/pt/docs/viewer?file=/docs/manual/templates/startup/MOC-STARTUP.yaml)
+**Abrir no Visualizador:** [Moc Startup](/pt/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml)
+
+> 📄 Tipo: YAML • 📦 Tamanho: 9.8 KB • 🕒 Última modificação: 2025-10-11
 
 
 

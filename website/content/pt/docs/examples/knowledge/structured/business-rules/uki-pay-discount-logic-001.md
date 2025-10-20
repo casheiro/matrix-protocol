@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Discount Logic 001](/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 2.2 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Webhook Handling 009](/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 4.5 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

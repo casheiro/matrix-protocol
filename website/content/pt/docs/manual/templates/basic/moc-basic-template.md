@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `pt/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml`
 
-**Abrir no Visualizador:** [Moc Basic Template](/pt/docs/viewer?file=/docs/manual/templates/basic/MOC-BASIC-TEMPLATE.yaml)
+**Abrir no Visualizador:** [Moc Basic Template](/pt/docs/viewer?file=/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml)
+
+> 📄 Tipo: YAML • 📦 Tamanho: 5.5 KB • 🕒 Última modificação: 2025-10-11
 
 
 

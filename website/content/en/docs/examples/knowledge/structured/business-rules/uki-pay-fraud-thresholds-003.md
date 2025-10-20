@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Fraud Thresholds 003](/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml)
 
+> 📄 Type: YAML • 📦 Size: 2.9 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

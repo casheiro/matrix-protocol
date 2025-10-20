@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Pci Compliance 013](/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 5.7 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

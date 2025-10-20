@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Currency Rates 004](/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 3.0 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

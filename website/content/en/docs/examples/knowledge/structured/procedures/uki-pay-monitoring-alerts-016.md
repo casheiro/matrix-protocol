@@ -11,6 +11,8 @@ navigation: true
 
 **Open in Viewer:** [Uki Pay Monitoring Alerts 016](/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml)
 
+> 📄 Type: YAML • 📦 Size: 6.6 KB • 🕒 Last updated: 2025-10-12
+
 
 
 ```yaml

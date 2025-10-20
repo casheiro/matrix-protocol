@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Fee Calculation 005](/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 2.9 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

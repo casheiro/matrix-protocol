@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml`
 
-**Open in Viewer:** [Moc Squad Payments](/en/docs/viewer?file=/docs/examples/knowledge/MOC-SQUAD-PAYMENTS.yaml)
+**Open in Viewer:** [Moc Squad Payments](/en/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml)
+
+> 📄 Type: YAML • 📦 Size: 9.3 KB • 🕒 Last updated: 2025-10-12
 
 
 

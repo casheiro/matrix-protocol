@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Chargeback Rules 006](/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 4.0 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

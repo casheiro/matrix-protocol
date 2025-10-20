@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Performance Optimization 017](/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 7.9 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

@@ -11,6 +11,8 @@ navigation: true
 
 **Abrir no Visualizador:** [Uki Pay Incident Response 014](/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml)
 
+> 📄 Tipo: YAML • 📦 Tamanho: 6.4 KB • 🕒 Última modificação: 2025-10-10
+
 
 
 ```yaml

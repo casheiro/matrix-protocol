@@ -9,7 +9,9 @@ navigation: true
 
 > Source YAML: `pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml`
 
-**Abrir no Visualizador:** [Moc Scaleup](/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC-SCALEUP.yaml)
+**Abrir no Visualizador:** [Moc Scaleup](/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml)
+
+> 📄 Tipo: YAML • 📦 Tamanho: 12.8 KB • 🕒 Última modificação: 2025-10-11
 
 
 
