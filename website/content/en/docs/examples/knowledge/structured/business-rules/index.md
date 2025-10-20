@@ -27,8 +27,8 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 ## 📋 Available Business Rules UKIs
 
 ### 💰 Financial Rules
-1. **[discount-logic-001](uki-pay-discount-logic-001.yaml)** - Volume and coupon discount calculations
-2. **[fee-calculation-005](uki-pay-fee-calculation-005.yaml)** - Commission and transaction fee structures
+1. **[discount-logic-001](uki-pay-discount-logic-001.md)** - Volume and coupon discount calculations
+2. **[fee-calculation-005](uki-pay-fee-calculation-005.md)** - Commission and transaction fee structures
 3. **[refund-policy-003](uki-pay-refund-policy-003.yaml)** - Customer refund processing guidelines
 
 ### 🔐 Security & Validation Rules  
@@ -96,7 +96,7 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 
 - [Technical Patterns](../technical-patterns/) - Implementation patterns for these business rules
 - [Procedures](../procedures/) - Operational procedures implementing these rules
-- [MOC_SQUAD_PAYMENTS.yaml](../../MOC_SQUAD_PAYMENTS.yaml) - Organizational governance foundation
+- [MOC_SQUAD_PAYMENTS.yaml](../../moc-squad-payments.md) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic business rule sources
 
 ### Implementation Resources:

@@ -7,8 +7,9 @@ sidebar: true
 toc: true
 navigation: true
 order: 6
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Pilot 06 — Layout Enforcement
 
 Validar que o `layout: docs` é aplicado corretamente.

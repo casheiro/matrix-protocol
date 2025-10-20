@@ -17,6 +17,15 @@
     <slot />
   </a>
   
+  <!-- Link já apontando para o Viewer -->
+  <NuxtLink v-else-if="isPrebuiltViewerLink"
+            :to="prebuiltViewerPath"
+            class="inline-flex items-center gap-1.5 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline decoration-1 underline-offset-2 transition-colors"
+            v-bind="$attrs">
+    <UIcon :name="getFileIcon()" class="w-4 h-4" />
+    <slot />
+  </NuxtLink>
+  
   <!-- Link para Arquivo (YAML, TXT, etc.) -->
   <NuxtLink v-else-if="isFileViewerLink"
             :to="fileViewerPath"
@@ -69,10 +78,19 @@ const isAnchorLink = computed(() => {
   return props.href && props.href.startsWith('#')
 })
 
+// Detecta links já formatados para o viewer
+const isPrebuiltViewerLink = computed(() => {
+  if (!props.href) return false
+  const hrefLower = props.href.toLowerCase()
+  return hrefLower.includes('/docs/viewer') && hrefLower.includes('?file=')
+})
+
 const isFileViewerLink = computed(() => {
   if (!props.href) return false
+  // Não reescrever se já é link do viewer
+  if (isPrebuiltViewerLink.value) return false
   const resolvedPath = resolveRelativePath(props.href)
-  return /\.(yaml|yml|txt|json)$/i.test(resolvedPath)
+  return /(\.yaml|\.yml|\.txt|\.json)$/i.test(resolvedPath)
 })
 
 const isInternalLink = computed(() => {
@@ -83,6 +101,9 @@ const isInternalLink = computed(() => {
   
   // Se é arquivo para viewer, não é link interno normal
   if (isFileViewerLink.value) return false
+
+  // Link do viewer pré-formatado é interno, mas não precisa de localePath
+  if (isPrebuiltViewerLink.value) return false
   
   // Se começa com http, é externo
   if (props.href.startsWith('http')) return false
@@ -107,7 +128,7 @@ const resolveRelativePath = (href) => {
   }
   
   // Obter o path atual sem locale (remove apenas no início)
-  const currentPath = route.path.replace(new RegExp(`^/${$i18n.locale.value}`), '')
+  const currentPath = route.path.replace(new RegExp(`^\/${$i18n.locale.value}`), '')
   
   // Se é relativo com ./
   if (href.startsWith('./')) {
@@ -145,6 +166,11 @@ const localizedPath = computed(() => {
   return localePath(resolvedPath)
 })
 
+const prebuiltViewerPath = computed(() => {
+  // Não alterar o path — já contém locale e query correta
+  return props.href
+})
+
 const fileViewerPath = computed(() => {
   const resolvedPath = resolveRelativePath(props.href)
   // Create a special viewer route with the file path as a parameter
@@ -152,8 +178,9 @@ const fileViewerPath = computed(() => {
 })
 
 const getFileIcon = () => {
-  const resolvedPath = resolveRelativePath(props.href)
-  const extension = resolvedPath.split('.').pop()?.toLowerCase()
+  const resolvedPath = isPrebuiltViewerLink.value ? props.href : resolveRelativePath(props.href)
+  const extensionMatch = resolvedPath.match(/\.(yaml|yml|txt|json)/i)
+  const extension = extensionMatch?.[1]?.toLowerCase()
   
   switch (extension) {
     case 'yaml':

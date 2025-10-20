@@ -114,7 +114,7 @@ This section contains **6 compliant technical pattern UKIs** from the Example E-
 
 - [Business Rules](../business-rules/) - Business requirements implemented by these patterns
 - [Procedures](../procedures/) - Operational procedures following these technical standards
-- [MOC_SQUAD_PAYMENTS.yaml](../../MOC_SQUAD_PAYMENTS.yaml) - Organizational governance foundation
+- [MOC_SQUAD_PAYMENTS.yaml](../../moc-squad-payments.md) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic technical documentation
 
 ### Implementation Resources:

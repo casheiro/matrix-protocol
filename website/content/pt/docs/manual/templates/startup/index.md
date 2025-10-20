@@ -1,13 +1,19 @@
 ---
-title: "Templates Startup"
-description: "Templates ágeis para startups com estruturas enxutas e processos simplificados"
-icon: "i-heroicons-rocket-launch"
-layout: "docs"
+title: Templates Startup
+description: Templates ágeis para startups com estruturas enxutas e processos simplificados
+icon: i-heroicons-rocket-launch
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Templates Startup
 
 Templates ágeis para startups com estruturas enxutas e processos simplificados, projetados para máxima agilidade e preparação para crescimento futuro.

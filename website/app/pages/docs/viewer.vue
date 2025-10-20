@@ -83,6 +83,7 @@ import { parse as parseYaml } from 'yaml'
 // Get file parameter from query
 const route = useRoute()
 const localePath = useLocalePath()
+const { $i18n } = useNuxtApp()
 
 const filePath = computed(() => {
   return route.query.file as string
@@ -91,7 +92,8 @@ const filePath = computed(() => {
 // Fetch file content
 const { data: fileData, pending, error } = await useFetch(`/api/file-content`, {
   query: {
-    path: filePath
+    path: filePath,
+    locale: $i18n.locale.value
   },
   server: false // Only run on client side for now
 })

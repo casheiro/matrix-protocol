@@ -96,7 +96,7 @@ This section demonstrates a complete transformation from unstructured organizati
 ## 📖 Related Resources
 
 - [Unstructured Knowledge Examples](../unstructured/) - Original chaotic state
-- [MOC_SQUAD_PAYMENTS.yaml](../MOC_SQUAD_PAYMENTS.yaml) - Organizational taxonomy
+- [MOC_SQUAD_PAYMENTS.yaml](../moc-squad-payments.md) - Organizational taxonomy
 - [MEF Specification](../../../frameworks/mef/) - Knowledge structuring framework
 - [Implementation Templates](../../../manual/templates/) - Ready-to-use organizational templates
 

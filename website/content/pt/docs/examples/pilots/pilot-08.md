@@ -1,4 +1,15 @@
 ---
+title: Pilot 08
+description: Página de documentação para Pilot 08
+icon: i-heroicons-code-bracket
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: pt
+last_updated: 2025-10-20
+---
+---
 title: Pilot 08 — Navigation Flag
 description: Validação do uso de navigation: true nas páginas navegáveis
 icon: i-heroicons-map

@@ -6,8 +6,9 @@ layout: docs
 sidebar: true
 toc: false
 navigation: false
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Ata de Reunião da Squad Pagamentos - Janeiro 2024
 
 **Data:** 15/01/2024  

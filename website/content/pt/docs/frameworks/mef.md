@@ -1,13 +1,15 @@
 ---
 title: MEF — Matrix Embedding Framework
-description: Framework para estruturação de conhecimento versionado através de UKIs (Units of Knowledge Interlinked) no Matrix Protocol
+description: Framework para estruturação de conhecimento versionado através de
+  UKIs (Units of Knowledge Interlinked) no Matrix Protocol
 icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # MEF — Matrix Embedding Framework
 **Acrônimo:** MEF  
 **Versão:** 0.0.1-beta  

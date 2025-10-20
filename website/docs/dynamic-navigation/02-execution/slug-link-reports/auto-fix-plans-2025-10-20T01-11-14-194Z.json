@@ -1,0 +1,103 @@
+{
+  "timestamp": "2025-10-20T01:11:14.194Z",
+  "dirPlans": [],
+  "linkPlans": [
+    {
+      "file": "pt/docs/manual/templates/index.md",
+      "updates": [
+        {
+          "from": "./templates_moc_por_porte_organizacional",
+          "to": "./templates-moc-por-porte-organizacional"
+        },
+        {
+          "from": "./templates_uki_multi_hierarquicos",
+          "to": "./templates-uki-multi-hierarquicos"
+        },
+        {
+          "from": "./fases_implementacao_detalhadas",
+          "to": "./fases-implementacao-detalhadas"
+        }
+      ]
+    },
+    {
+      "file": "pt/docs/manual/examples/index.md",
+      "updates": [
+        {
+          "from": "./exemplo_organizacional_techcorp",
+          "to": "./exemplo-organizacional-techcorp"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/manual/templates/index.md",
+      "updates": [
+        {
+          "from": "./templates_moc_por_porte_organizacional",
+          "to": "./templates-moc-por-porte-organizacional"
+        },
+        {
+          "from": "./templates_uki_multi_hierarquicos",
+          "to": "./templates-uki-multi-hierarquicos"
+        },
+        {
+          "from": "./fases_implementacao_detalhadas",
+          "to": "./fases-implementacao-detalhadas"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/manual/examples/index.md",
+      "updates": [
+        {
+          "from": "./organizational_example_techcorp",
+          "to": "./organizational-example-techcorp"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/index.md",
+      "updates": [
+        {
+          "from": "../MOC_SQUAD_PAYMENTS.yaml",
+          "to": "../MOC-SQUAD-PAYMENTS.yaml"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "updates": [
+        {
+          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "to": "../../MOC-SQUAD-PAYMENTS.yaml"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/index.md",
+      "updates": [
+        {
+          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "to": "../../MOC-SQUAD-PAYMENTS.yaml"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/index.md",
+      "updates": [
+        {
+          "from": "../MOC_SQUAD_PAYMENTS.yaml",
+          "to": "../MOC-SQUAD-PAYMENTS.yaml"
+        }
+      ]
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/index.md",
+      "updates": [
+        {
+          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "to": "../../MOC-SQUAD-PAYMENTS.yaml"
+        }
+      ]
+    }
+  ]
+}

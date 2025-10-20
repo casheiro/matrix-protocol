@@ -1,13 +1,20 @@
 ---
-title: "Templates Scaleup"
-description: "Templates otimizados para empresas em crescimento rápido com necessidades escaláveis"
-icon: "i-heroicons-chart-bar-square"
-layout: "docs"
+title: Templates Scaleup
+description: Templates otimizados para empresas em crescimento rápido com
+  necessidades escaláveis
+icon: i-heroicons-chart-bar-square
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Templates Scaleup
 
 Templates otimizados para empresas em crescimento rápido com necessidades escaláveis, projetados para acompanhar a expansão acelerada sem comprometer a governança.

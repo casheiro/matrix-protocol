@@ -15,7 +15,7 @@ This section presents practical examples, real case studies, and organizational 
 ## 🏢 Organizational Cases
 
 ### Enterprise Examples
-- **[TechCorp Organizational Example](./organizational_example_techcorp)** - Detailed implementation case in a Brazilian technology company
+- **[TechCorp Organizational Example](./organizational-example-techcorp)** - Detailed implementation case in a Brazilian technology company
 
 ## 📊 Types of Examples
 

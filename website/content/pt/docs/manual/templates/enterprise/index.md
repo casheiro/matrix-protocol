@@ -1,13 +1,20 @@
 ---
-title: "Templates Enterprise"
-description: "Templates Enterprise para organizações com requisitos avançados de governança e compliance"
-icon: "i-heroicons-building-office"
-layout: "docs"
+title: Templates Enterprise
+description: Templates Enterprise para organizações com requisitos avançados de
+  governança e compliance
+icon: i-heroicons-building-office
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Templates Enterprise
 
 Templates Enterprise para organizações com requisitos avançados de governança e compliance, projetados para máxima segurança, auditoria e controle granular.

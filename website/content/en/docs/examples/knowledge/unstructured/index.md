@@ -114,7 +114,7 @@ This section contains **12 problematic documents** from the Example E-commerce C
 ## 📖 Related Resources
 
 - [Structured Knowledge Examples](../structured/) - Transformed versions of this chaotic knowledge
-- [MOC_SQUAD_PAYMENTS.yaml](../MOC_SQUAD_PAYMENTS.yaml) - Governance foundation solving these problems
+- [MOC_SQUAD_PAYMENTS.yaml](../moc-squad-payments.md) - Governance foundation solving these problems
 - [MEF Framework](../../../frameworks/mef/) - Knowledge structuring specification
 - [Implementation Templates](../../../manual/templates/) - Ready-to-use organizational solutions
 

@@ -1,0 +1,2847 @@
+{
+  "timestamp": "2025-10-20T01:10:09.323Z",
+  "locales": [
+    "pt",
+    "en"
+  ],
+  "results": [
+    {
+      "file": "pt/docs/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./knowledge/stackspot-agent-prompt",
+            "segment": "stackspot-agent-prompt.md"
+          },
+          {
+            "href": "./knowledge/stackspot-compatibility-guide",
+            "segment": "stackspot-compatibility-guide.md"
+          },
+          {
+            "href": "./knowledge/unstructured/team-meeting-jan-2024",
+            "segment": "team-meeting-jan-2024.md"
+          },
+          {
+            "href": "./knowledge/unstructured/team-meeting-mar-2024",
+            "segment": "team-meeting-mar-2024.md"
+          },
+          {
+            "href": "./knowledge/unstructured/confluence-payment-flow",
+            "segment": "confluence-payment-flow.md"
+          },
+          {
+            "href": "../implementation",
+            "segment": "implementation.md"
+          }
+        ],
+        "linkCount": 11
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "slugIssues": [
+        {
+          "type": "filename_non_conform",
+          "segment": "stackspot-compatibility-guide"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "stackspot-compatibility-guide",
+          "proposed": "stackspot-compatibility-guide",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/unstructured/images/payment-flow-2022.png"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "segment": "payment-flow-2022.png"
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./team-meeting-jan-2024.md",
+            "segment": "team-meeting-jan-2024.md"
+          },
+          {
+            "href": "./team-meeting-mar-2024.md",
+            "segment": "team-meeting-mar-2024.md"
+          },
+          {
+            "href": "./confluence-payment-flow.md",
+            "segment": "confluence-payment-flow.md"
+          },
+          {
+            "href": "./slack-refunds-thread.txt",
+            "segment": "slack-refunds-thread.txt"
+          },
+          {
+            "href": "./random-notes-mixed.txt",
+            "segment": "random-notes-mixed.txt"
+          },
+          {
+            "href": "./developer-handover.txt",
+            "segment": "developer-handover.txt"
+          },
+          {
+            "href": "./postmortem-outage-dec.txt",
+            "segment": "postmortem-outage-dec.txt"
+          },
+          {
+            "href": "./security-audit-findings.txt",
+            "segment": "security-audit-findings.txt"
+          },
+          {
+            "href": "./pci-compliance-email.txt",
+            "segment": "pci-compliance-email.txt"
+          },
+          {
+            "href": "./jira-fraud-detection.txt",
+            "segment": "jira-fraud-detection.txt"
+          },
+          {
+            "href": "./onboarding-checklist.txt",
+            "segment": "onboarding-checklist.txt"
+          }
+        ],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 3
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-01.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-02.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-03.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-04.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 2
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-05.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-06.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-07.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-08.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-09.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot_10.md",
+      "slugIssues": [
+        {
+          "type": "filename_non_conform",
+          "segment": "pilot_10"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "pilot_10",
+          "proposed": "pilot-10",
+          "needs_translation": false
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "../implementation",
+            "segment": "implementation.md"
+          }
+        ],
+        "linkCount": 22
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mal.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mef-ontology.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mef.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/moc.md",
+      "slugIssues": [
+        {
+          "type": "filename_non_conform",
+          "segment": "moc"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "moc",
+          "proposed": "moc",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/oif.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/zof.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/glossary.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/implementation.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "resolved": "/manual/tools/validation-checklists.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "segment": ".."
+          },
+          {
+            "href": "frameworks/mef.md",
+            "segment": "mef.md"
+          },
+          {
+            "href": "frameworks/zof.md",
+            "segment": "zof.md"
+          },
+          {
+            "href": "frameworks/oif.md",
+            "segment": "oif.md"
+          },
+          {
+            "href": "frameworks/moc.md",
+            "segment": "moc.md"
+          },
+          {
+            "href": "frameworks/mal.md",
+            "segment": "mal.md"
+          }
+        ],
+        "linkCount": 19
+      }
+    },
+    {
+      "file": "pt/docs/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./implementation",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          },
+          {
+            "href": "./glossary",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "./frameworks/mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./frameworks/zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./frameworks/oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./frameworks/moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./frameworks/mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./implementation",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          }
+        ],
+        "linkCount": 27
+      }
+    },
+    {
+      "file": "pt/docs/integration.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/examples/exemplo_organizacional_techcorp.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "exemplo_organizacional_techcorp"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "exemplo_organizacional_techcorp",
+          "proposed": "exemplo-organizacional-techcorp",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/examples/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./exemplo_organizacional_techcorp",
+            "segment": "exemplo_organizacional_techcorp.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "#capítulo-1-assessment-organizacional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-1-assessment-organizacional"
+          },
+          {
+            "href": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-2-mapeamento-de-sistemas-e-conhecimento"
+          },
+          {
+            "href": "#capítulo-3-análise-de-fluxos-de-decisão",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-3-análise-de-fluxos-de-decisão"
+          },
+          {
+            "href": "#capítulo-4-seleção-de-template-por-porte",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-4-seleção-de-template-por-porte"
+          },
+          {
+            "href": "#capítulo-5-hierarquias-e-governança",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-5-hierarquias-e-governança"
+          },
+          {
+            "href": "#capítulo-6-políticas-de-arbitragem",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-6-políticas-de-arbitragem"
+          },
+          {
+            "href": "#capítulo-7-estruturação-de-conhecimento-mef",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-7-estruturação-de-conhecimento-mef"
+          },
+          {
+            "href": "#capítulo-8-sistema-de-relacionamentos-e-dependências",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-8-sistema-de-relacionamentos-e-dependências"
+          },
+          {
+            "href": "#capítulo-9-validação-e-conformidade-mef",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-9-validação-e-conformidade-mef"
+          },
+          {
+            "href": "#capítulo-10-workflows-zof---implementação-e-estados-canônicos",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-10-workflows-zof---implementação-e-estados-canônicos"
+          },
+          {
+            "href": "#capítulo-11-processo-de-enriquecimento-e-arbitragem",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-11-processo-de-enriquecimento-e-arbitragem"
+          },
+          {
+            "href": "#capítulo-12-cultura-oracle-first-e-sustentabilidade",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-12-cultura-oracle-first-e-sustentabilidade"
+          },
+          {
+            "href": "#capítulo-13-integração-cross-framework",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-13-integração-cross-framework"
+          },
+          {
+            "href": "#capítulo-14-validação-e-conformidade-técnica",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-14-validação-e-conformidade-técnica"
+          },
+          {
+            "href": "#capítulo-15-guia-de-implementação-organizacional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-15-guia-de-implementação-organizacional"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "#capítulo-1-assessment-organizacional",
+            "segment": "#capítulo-1-assessment-organizacional"
+          },
+          {
+            "href": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento",
+            "segment": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento"
+          },
+          {
+            "href": "#capítulo-3-análise-de-fluxos-de-decisão",
+            "segment": "#capítulo-3-análise-de-fluxos-de-decisão"
+          },
+          {
+            "href": "#capítulo-4-seleção-de-template-por-porte",
+            "segment": "#capítulo-4-seleção-de-template-por-porte"
+          },
+          {
+            "href": "#capítulo-5-hierarquias-e-governança",
+            "segment": "#capítulo-5-hierarquias-e-governança"
+          },
+          {
+            "href": "#capítulo-6-políticas-de-arbitragem",
+            "segment": "#capítulo-6-políticas-de-arbitragem"
+          },
+          {
+            "href": "#capítulo-7-estruturação-de-conhecimento-mef",
+            "segment": "#capítulo-7-estruturação-de-conhecimento-mef"
+          },
+          {
+            "href": "#capítulo-8-sistema-de-relacionamentos-e-dependências",
+            "segment": "#capítulo-8-sistema-de-relacionamentos-e-dependências"
+          },
+          {
+            "href": "#capítulo-9-validação-e-conformidade-mef",
+            "segment": "#capítulo-9-validação-e-conformidade-mef"
+          },
+          {
+            "href": "#capítulo-10-workflows-zof---implementação-e-estados-canônicos",
+            "segment": "#capítulo-10-workflows-zof---implementação-e-estados-canônicos"
+          },
+          {
+            "href": "#capítulo-11-processo-de-enriquecimento-e-arbitragem",
+            "segment": "#capítulo-11-processo-de-enriquecimento-e-arbitragem"
+          },
+          {
+            "href": "#capítulo-12-cultura-oracle-first-e-sustentabilidade",
+            "segment": "#capítulo-12-cultura-oracle-first-e-sustentabilidade"
+          },
+          {
+            "href": "#capítulo-13-integração-cross-framework",
+            "segment": "#capítulo-13-integração-cross-framework"
+          },
+          {
+            "href": "#capítulo-14-validação-e-conformidade-técnica",
+            "segment": "#capítulo-14-validação-e-conformidade-técnica"
+          },
+          {
+            "href": "#capítulo-15-guia-de-implementação-organizacional",
+            "segment": "#capítulo-15-guia-de-implementação-organizacional"
+          }
+        ],
+        "linkCount": 15
+      }
+    },
+    {
+      "file": "pt/docs/manual/reference/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./techcorp-case-study",
+            "segment": "techcorp-case-study.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/reference/techcorp-case-study.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/basic/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/corporation/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/enterprise/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/fases_implementacao_detalhadas.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "fases_implementacao_detalhadas"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "fases_implementacao_detalhadas",
+          "proposed": "fases-implementacao-detalhadas",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./templates_moc_por_porte_organizacional",
+            "segment": "templates_moc_por_porte_organizacional.md"
+          },
+          {
+            "href": "./templates_uki_multi_hierarquicos",
+            "segment": "templates_uki_multi_hierarquicos.md"
+          },
+          {
+            "href": "./fases_implementacao_detalhadas",
+            "segment": "fases_implementacao_detalhadas.md"
+          }
+        ],
+        "linkCount": 6
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/scaleup/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/startup/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/templates_moc_por_porte_organizacional.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "templates_moc_por_porte_organizacional"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates_moc_por_porte_organizacional",
+          "proposed": "templates-moc-por-porte-organizacional",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/templates_uki_multi_hierarquicos.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "templates_uki_multi_hierarquicos"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates_uki_multi_hierarquicos",
+          "proposed": "templates-uki-multi-hierarquicos",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/unified/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "pt/docs/manual/tools/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/tools/validation-checklists.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/mep/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/protocol/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/quickstart/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "manual/tools/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/reference.md"
+          },
+          {
+            "href": "manual/templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/templates.md"
+          },
+          {
+            "href": "manual/templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/templates.md"
+          },
+          {
+            "href": "manual/tools/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/manual/reference.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../implementation.md",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "manual/tools/",
+            "segment": "tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "segment": "reference.md"
+          },
+          {
+            "href": "manual/templates/",
+            "segment": "templates.md"
+          },
+          {
+            "href": "manual/templates/",
+            "segment": "templates.md"
+          },
+          {
+            "href": "manual/tools/",
+            "segment": "tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "segment": "reference.md"
+          },
+          {
+            "href": "../implementation.md",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "../glossary.md",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "../frameworks/mef.md",
+            "segment": "mef.md"
+          },
+          {
+            "href": "../frameworks/zof.md",
+            "segment": "zof.md"
+          },
+          {
+            "href": "../frameworks/oif.md",
+            "segment": "oif.md"
+          },
+          {
+            "href": "../frameworks/moc.md",
+            "segment": "moc.md"
+          },
+          {
+            "href": "../frameworks/mal.md",
+            "segment": "mal.md"
+          }
+        ],
+        "linkCount": 17
+      }
+    },
+    {
+      "file": "pt/docs/quickstart/templates/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "../../implementation",
+            "segment": "implementation.md"
+          }
+        ],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "en/docs/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "slugIssues": [
+        {
+          "type": "filename_non_conform",
+          "segment": "stackspot-compatibility-guide"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "stackspot-compatibility-guide",
+          "proposed": "stackspot-compatibility-guide",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-pay-refund-policy-003.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-003.yaml"
+          },
+          {
+            "href": "uki-pay-fraud-detection-002.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-detection-002.yaml"
+          },
+          {
+            "href": "uki-pay-customer-validation-004.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-customer-validation-004.yaml"
+          },
+          {
+            "href": "uki-pay-payment-processing-006.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-payment-processing-006.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../../../../frameworks/mef/",
+            "segment": "mef.md"
+          }
+        ],
+        "linkCount": 14
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "../../../frameworks/mef/",
+            "segment": "mef.md"
+          }
+        ],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-proc-pci-compliance-001.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-pci-compliance-001.yaml"
+          },
+          {
+            "href": "uki-proc-incident-response-003.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-incident-response-003.yaml"
+          },
+          {
+            "href": "uki-proc-deployment-process-002.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-deployment-process-002.yaml"
+          },
+          {
+            "href": "uki-proc-monitoring-operations-004.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-monitoring-operations-004.yaml"
+          },
+          {
+            "href": "uki-proc-user-onboarding-005.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-user-onboarding-005.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../../../../frameworks/mef/",
+            "segment": "mef.md"
+          }
+        ],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-tech-gateway-integration-007.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-gateway-integration-007.yaml"
+          },
+          {
+            "href": "uki-tech-api-design-009.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-api-design-009.yaml"
+          },
+          {
+            "href": "uki-tech-security-protocols-008.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-security-protocols-008.yaml"
+          },
+          {
+            "href": "uki-tech-retry-mechanisms-010.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-retry-mechanisms-010.yaml"
+          },
+          {
+            "href": "uki-tech-database-patterns-011.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-database-patterns-011.yaml"
+          },
+          {
+            "href": "uki-tech-monitoring-setup-012.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-monitoring-setup-012.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../../../../frameworks/mef/",
+            "segment": "mef.md"
+          }
+        ],
+        "linkCount": 14
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/images/payment-flow-2022.png"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "segment": "payment-flow-2022.png"
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "email-chain-discount-policy.txt",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/email-chain-discount-policy.txt"
+          },
+          {
+            "href": "standup-notes-fragmented.md",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/standup-notes-fragmented.md"
+          },
+          {
+            "href": "legacy-payment-rules.docx",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/legacy-payment-rules.docx"
+          },
+          {
+            "href": "old-integration-guide.pdf",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/old-integration-guide.pdf"
+          },
+          {
+            "href": "outdated-compliance-checklist.xlsx",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/outdated-compliance-checklist.xlsx"
+          },
+          {
+            "href": "wiki-page-broken-links.html",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/wiki-page-broken-links.html"
+          },
+          {
+            "href": "confluence-page-conflicting.md",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/confluence-page-conflicting.md"
+          },
+          {
+            "href": "readme-incomplete.md",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/readme-incomplete.md"
+          },
+          {
+            "href": "policy-draft-never-finalized.txt",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/policy-draft-never-finalized.txt"
+          },
+          {
+            "href": "procedure-multiple-versions.md",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/procedure-multiple-versions.md"
+          },
+          {
+            "href": "../../../manual/versioning/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/versioning.md"
+          },
+          {
+            "href": "../../../manual/relationships/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/relationships.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "team-meeting-jan-2024.md",
+            "segment": "team-meeting-jan-2024.md"
+          },
+          {
+            "href": "slack-refunds-thread.txt",
+            "segment": "slack-refunds-thread.txt"
+          },
+          {
+            "href": "email-chain-discount-policy.txt",
+            "segment": "email-chain-discount-policy.txt"
+          },
+          {
+            "href": "standup-notes-fragmented.md",
+            "segment": "standup-notes-fragmented.md"
+          },
+          {
+            "href": "legacy-payment-rules.docx",
+            "segment": "legacy-payment-rules.docx"
+          },
+          {
+            "href": "old-integration-guide.pdf",
+            "segment": "old-integration-guide.pdf"
+          },
+          {
+            "href": "outdated-compliance-checklist.xlsx",
+            "segment": "outdated-compliance-checklist.xlsx"
+          },
+          {
+            "href": "wiki-page-broken-links.html",
+            "segment": "wiki-page-broken-links.html"
+          },
+          {
+            "href": "confluence-page-conflicting.md",
+            "segment": "confluence-page-conflicting.md"
+          },
+          {
+            "href": "readme-incomplete.md",
+            "segment": "readme-incomplete.md"
+          },
+          {
+            "href": "policy-draft-never-finalized.txt",
+            "segment": "policy-draft-never-finalized.txt"
+          },
+          {
+            "href": "procedure-multiple-versions.md",
+            "segment": "procedure-multiple-versions.md"
+          },
+          {
+            "href": "../../../frameworks/mef/",
+            "segment": "mef.md"
+          },
+          {
+            "href": "../../../frameworks/mef/",
+            "segment": "mef.md"
+          },
+          {
+            "href": "../../../frameworks/moc/",
+            "segment": "moc.md"
+          },
+          {
+            "href": "../../../manual/versioning/",
+            "segment": "versioning.md"
+          },
+          {
+            "href": "../../../manual/relationships/",
+            "segment": "relationships.md"
+          }
+        ],
+        "linkCount": 21
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./mef-ontology",
+            "segment": "mef-ontology.md"
+          },
+          {
+            "href": "./zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "../implementation",
+            "segment": "implementation.md"
+          }
+        ],
+        "linkCount": 22
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mal.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mef-ontology.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mef.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/moc.md",
+      "slugIssues": [
+        {
+          "type": "filename_non_conform",
+          "segment": "moc"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "moc",
+          "proposed": "moc",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/oif.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/zof.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/glossary.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/implementation.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "resolved": "/manual/tools/validation-checklists.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "segment": ".."
+          },
+          {
+            "href": "frameworks/mef.md",
+            "segment": "mef.md"
+          },
+          {
+            "href": "frameworks/zof.md",
+            "segment": "zof.md"
+          },
+          {
+            "href": "frameworks/oif.md",
+            "segment": "oif.md"
+          },
+          {
+            "href": "frameworks/moc.md",
+            "segment": "moc.md"
+          },
+          {
+            "href": "frameworks/mal.md",
+            "segment": "mal.md"
+          }
+        ],
+        "linkCount": 19
+      }
+    },
+    {
+      "file": "en/docs/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./implementation",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          },
+          {
+            "href": "./glossary",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "./frameworks/mef",
+            "segment": "mef.md"
+          },
+          {
+            "href": "./frameworks/zof",
+            "segment": "zof.md"
+          },
+          {
+            "href": "./frameworks/oif",
+            "segment": "oif.md"
+          },
+          {
+            "href": "./frameworks/moc",
+            "segment": "moc.md"
+          },
+          {
+            "href": "./frameworks/mal",
+            "segment": "mal.md"
+          },
+          {
+            "href": "./implementation",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          }
+        ],
+        "linkCount": 27
+      }
+    },
+    {
+      "file": "en/docs/integration.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/examples/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./organizational_example_techcorp",
+            "segment": "organizational_example_techcorp.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/examples/organizational_example_techcorp.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "organizational_example_techcorp"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "organizational_example_techcorp",
+          "proposed": "organizational-example-techcorp",
+          "needs_translation": false
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "tools/content-audit/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/content-audit.md"
+          },
+          {
+            "href": "tools/moc-generation/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/moc-generation.md"
+          },
+          {
+            "href": "tools/uki-templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/uki-templates.md"
+          },
+          {
+            "href": "reference/best-practices/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/best-practices.md"
+          },
+          {
+            "href": "reference/patterns/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/patterns.md"
+          },
+          {
+            "href": "reference/troubleshooting/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/troubleshooting.md"
+          },
+          {
+            "href": "examples/migration/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/migration.md"
+          },
+          {
+            "href": "examples/success/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/success.md"
+          },
+          {
+            "href": "assessment/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/assessment.md"
+          },
+          {
+            "href": "planning/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/planning.md"
+          },
+          {
+            "href": "moc-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/moc-setup.md"
+          },
+          {
+            "href": "authority-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/authority-setup.md"
+          },
+          {
+            "href": "tools-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools-setup.md"
+          },
+          {
+            "href": "content-audit/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/content-audit.md"
+          },
+          {
+            "href": "uki-creation/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/uki-creation.md"
+          },
+          {
+            "href": "relationship-mapping/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/relationship-mapping.md"
+          },
+          {
+            "href": "training/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/training.md"
+          },
+          {
+            "href": "process-integration/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/process-integration.md"
+          },
+          {
+            "href": "improvement/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/improvement.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "tools/content-audit/",
+            "segment": "content-audit.md"
+          },
+          {
+            "href": "tools/moc-generation/",
+            "segment": "moc-generation.md"
+          },
+          {
+            "href": "tools/uki-templates/",
+            "segment": "uki-templates.md"
+          },
+          {
+            "href": "reference/best-practices/",
+            "segment": "best-practices.md"
+          },
+          {
+            "href": "reference/patterns/",
+            "segment": "patterns.md"
+          },
+          {
+            "href": "reference/troubleshooting/",
+            "segment": "troubleshooting.md"
+          },
+          {
+            "href": "examples/migration/",
+            "segment": "migration.md"
+          },
+          {
+            "href": "examples/success/",
+            "segment": "success.md"
+          },
+          {
+            "href": "assessment/",
+            "segment": "assessment.md"
+          },
+          {
+            "href": "planning/",
+            "segment": "planning.md"
+          },
+          {
+            "href": "moc-setup/",
+            "segment": "moc-setup.md"
+          },
+          {
+            "href": "authority-setup/",
+            "segment": "authority-setup.md"
+          },
+          {
+            "href": "tools-setup/",
+            "segment": "tools-setup.md"
+          },
+          {
+            "href": "content-audit/",
+            "segment": "content-audit.md"
+          },
+          {
+            "href": "uki-creation/",
+            "segment": "uki-creation.md"
+          },
+          {
+            "href": "relationship-mapping/",
+            "segment": "relationship-mapping.md"
+          },
+          {
+            "href": "training/",
+            "segment": "training.md"
+          },
+          {
+            "href": "process-integration/",
+            "segment": "process-integration.md"
+          },
+          {
+            "href": "improvement/",
+            "segment": "improvement.md"
+          }
+        ],
+        "linkCount": 39
+      }
+    },
+    {
+      "file": "en/docs/manual/reference/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./techcorp-case-study",
+            "segment": "techcorp-case-study.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/reference/techcorp-case-study.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/basic/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/corporation/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/detailed_implementation_phases.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "detailed_implementation_phases"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "detailed_implementation_phases",
+          "proposed": "detailed-implementation-phases",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/enterprise/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./templates_moc_por_porte_organizacional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/templates_moc_por_porte_organizacional.md"
+          },
+          {
+            "href": "./templates_uki_multi_hierarquicos",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/templates_uki_multi_hierarquicos.md"
+          },
+          {
+            "href": "./fases_implementacao_detalhadas",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/fases_implementacao_detalhadas.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./templates_moc_por_porte_organizacional",
+            "segment": "templates_moc_por_porte_organizacional.md"
+          },
+          {
+            "href": "./templates_uki_multi_hierarquicos",
+            "segment": "templates_uki_multi_hierarquicos.md"
+          },
+          {
+            "href": "./fases_implementacao_detalhadas",
+            "segment": "fases_implementacao_detalhadas.md"
+          },
+          {
+            "href": "../../implementation",
+            "segment": "implementation.md"
+          }
+        ],
+        "linkCount": 6
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/moc_templates_by_organizational_size.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "moc_templates_by_organizational_size"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "moc_templates_by_organizational_size",
+          "proposed": "moc-templates-by-organizational-size",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/multi_hierarchical_uki_templates.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        },
+        {
+          "type": "filename_non_conform",
+          "segment": "multi_hierarchical_uki_templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        },
+        {
+          "segment": "multi_hierarchical_uki_templates",
+          "proposed": "multi-hierarchical-uki-templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/scaleup/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/startup/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/unified/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        },
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        },
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "en/docs/manual/tools/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/tools/validation-checklists.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "manual"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "manual",
+          "proposed": "manual",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/mep/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/protocol/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/quickstart/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "manual/tools/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/reference.md"
+          },
+          {
+            "href": "manual/templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/templates.md"
+          },
+          {
+            "href": "manual/templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/templates.md"
+          },
+          {
+            "href": "manual/tools/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/manual/reference.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../implementation.md",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "manual/tools/",
+            "segment": "tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "segment": "reference.md"
+          },
+          {
+            "href": "manual/templates/",
+            "segment": "templates.md"
+          },
+          {
+            "href": "manual/templates/",
+            "segment": "templates.md"
+          },
+          {
+            "href": "manual/tools/",
+            "segment": "tools.md"
+          },
+          {
+            "href": "manual/reference/",
+            "segment": "reference.md"
+          },
+          {
+            "href": "../implementation.md",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "../glossary.md",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "../frameworks/mef.md",
+            "segment": "mef.md"
+          },
+          {
+            "href": "../frameworks/zof.md",
+            "segment": "zof.md"
+          },
+          {
+            "href": "../frameworks/oif.md",
+            "segment": "oif.md"
+          },
+          {
+            "href": "../frameworks/moc.md",
+            "segment": "moc.md"
+          },
+          {
+            "href": "../frameworks/mal.md",
+            "segment": "mal.md"
+          }
+        ],
+        "linkCount": 17
+      }
+    },
+    {
+      "file": "en/docs/quickstart/templates/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "templates"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "templates",
+          "proposed": "templates",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "../../community",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/community.md"
+          },
+          {
+            "href": "../../professional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/professional.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "../../implementation",
+            "segment": "implementation.md"
+          },
+          {
+            "href": "../../community",
+            "segment": "community.md"
+          },
+          {
+            "href": "../../professional",
+            "segment": "professional.md"
+          }
+        ],
+        "linkCount": 17
+      }
+    }
+  ]
+}

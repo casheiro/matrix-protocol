@@ -1,13 +1,15 @@
 ---
 title: MOC — Matrix Ontology Catalog
-description: Catálogo organizacional que define taxonomias, hierarquias e governança para conhecimento estruturado no Matrix Protocol
+description: Catálogo organizacional que define taxonomias, hierarquias e
+  governança para conhecimento estruturado no Matrix Protocol
 icon: i-heroicons-building-library
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # MOC — Matrix Ontology Catalog
 **Acrônimo:** MOC  
 **Versão:** 0.0.1-beta  

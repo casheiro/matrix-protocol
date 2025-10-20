@@ -1,0 +1,818 @@
+{
+  "locale": "pt",
+  "executedAt": "2025-10-20T00:47:57.536Z",
+  "updated": [
+    {
+      "file": "examples/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/stackspot-agent-prompt.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/stackspot-compatibility-guide.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/structured/business-rules/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/structured/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/structured/procedures/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/structured/technical-patterns/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/unstructured/confluence-payment-flow.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/unstructured/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-01.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-02.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-03.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-04.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-05.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-06.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-07.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-08.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot-09.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "examples/pilots/pilot_10.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "order",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/mal.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/mef-ontology.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/mef.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/moc.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/oif.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "frameworks/zof.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "glossary.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "implementation.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "integration.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/examples/exemplo_organizacional_techcorp.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/examples/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/reference/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/reference/techcorp-case-study.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/templates/basic/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/corporation/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/enterprise/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/fases_implementacao_detalhadas.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/scaleup/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/startup/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/templates_moc_por_porte_organizacional.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/templates_uki_multi_hierarquicos.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/templates/unified/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated",
+        "framework",
+        "maturity",
+        "tags"
+      ]
+    },
+    {
+      "file": "manual/tools/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "manual/tools/validation-checklists.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "mep/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "protocol/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "quickstart/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    },
+    {
+      "file": "quickstart/templates/index.md",
+      "changes": [
+        "title",
+        "description",
+        "icon",
+        "layout",
+        "sidebar",
+        "toc",
+        "navigation",
+        "lang",
+        "last_updated"
+      ]
+    }
+  ],
+  "created": [],
+  "skipped": []
+}
