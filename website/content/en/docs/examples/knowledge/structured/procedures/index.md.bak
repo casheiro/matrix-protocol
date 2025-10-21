@@ -1,13 +1,14 @@
 ---
-title: "Procedures MEF"
-description: "UKIs structured documenting operational processes and organizational procedures"
-icon: "i-heroicons-clipboard-document-list"
-layout: "docs"
+title: Procedures MEF
+description: UKIs structured documenting operational processes and organizational procedures
+icon: i-heroicons-clipboard-document-list
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Procedures MEF
 
 UKIs structured documenting operational processes and organizational procedures, demonstrating how operational workflows transform from informal practices into governed, auditable procedure knowledge.

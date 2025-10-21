@@ -1,13 +1,19 @@
 ---
-title: "Scaleup Templates"
-description: "Templates optimized for rapidly growing companies with scalable needs"
-icon: "i-heroicons-chart-bar-square"
-layout: "docs"
+title: Scaleup Templates
+description: Templates optimized for rapidly growing companies with scalable needs
+icon: i-heroicons-chart-bar-square
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Scaleup Templates
 
 Templates optimized for rapidly growing companies with scalable needs, designed for organizations experiencing rapid growth and requiring flexible, scalable structures.

@@ -8,6 +8,7 @@ toc: false
 navigation: false
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 # Ata de Reunião da Squad Pagamentos - Janeiro 2024
 

@@ -1,6 +1,6 @@
 {
   "locale": "pt",
-  "executedAt": "2025-10-21T16:36:10.431Z",
+  "executedAt": "2025-10-21T16:53:52.769Z",
   "updated": [
     {
       "file": "examples/index.md",
@@ -13,7 +13,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -27,7 +28,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -41,7 +43,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -55,7 +58,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -69,7 +73,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -83,7 +88,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -97,7 +103,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -111,7 +118,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -125,7 +133,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -139,7 +148,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -153,7 +163,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -167,7 +178,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -181,7 +193,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -195,7 +208,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -209,7 +223,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -223,7 +238,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -237,7 +253,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -251,7 +268,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -265,7 +283,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -279,7 +298,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -293,7 +313,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -307,7 +328,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -321,7 +343,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -335,7 +358,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -349,7 +373,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -363,7 +388,8 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -377,7 +403,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -391,7 +418,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -405,7 +433,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -419,127 +448,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/index.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-01.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-02.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-03.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-04.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-05.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-06.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-07.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -553,37 +463,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-09.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
-      ]
-    },
-    {
-      "file": "examples/pilots/pilot-10.md",
-      "changes": [
-        "title",
-        "description",
-        "icon",
-        "layout",
-        "sidebar",
-        "toc",
-        "navigation",
-        "order",
-        "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -597,7 +478,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -611,7 +493,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -625,7 +508,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -639,7 +523,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -653,7 +538,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -667,7 +553,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -681,7 +568,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -695,7 +583,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -709,7 +598,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -723,7 +613,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -737,7 +628,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -751,7 +643,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -765,7 +658,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -779,7 +673,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -793,7 +688,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -807,7 +703,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -824,7 +721,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -841,7 +739,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -858,7 +757,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -875,7 +775,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -892,7 +793,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -909,7 +811,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -926,7 +829,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -943,7 +847,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -960,7 +865,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -977,7 +883,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -994,7 +901,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1011,7 +919,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1028,7 +937,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1045,7 +955,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1062,7 +973,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1079,7 +991,8 @@
         "last_updated",
         "framework",
         "maturity",
-        "tags"
+        "tags",
+        "order"
       ]
     },
     {
@@ -1093,7 +1006,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1107,7 +1021,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1121,7 +1036,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1135,7 +1051,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1149,7 +1066,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1163,7 +1081,8 @@
         "toc",
         "navigation",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     },
     {
@@ -1177,10 +1096,22 @@
         "navigation",
         "icon",
         "lang",
-        "last_updated"
+        "last_updated",
+        "order"
       ]
     }
   ],
   "created": [],
-  "skipped": []
+  "skipped": [
+    "examples/pilots/index.md",
+    "examples/pilots/pilot-01.md",
+    "examples/pilots/pilot-02.md",
+    "examples/pilots/pilot-03.md",
+    "examples/pilots/pilot-04.md",
+    "examples/pilots/pilot-05.md",
+    "examples/pilots/pilot-06.md",
+    "examples/pilots/pilot-07.md",
+    "examples/pilots/pilot-09.md",
+    "examples/pilots/pilot-10.md"
+  ]
 }

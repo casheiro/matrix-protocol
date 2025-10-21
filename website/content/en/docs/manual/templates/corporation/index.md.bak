@@ -1,13 +1,20 @@
 ---
-title: "Corporation Templates"
-description: "Specific templates for large established corporations with multiple divisions and departments"
-icon: "i-heroicons-building-office-2"
-layout: "docs"
+title: Corporation Templates
+description: Specific templates for large established corporations with multiple
+  divisions and departments
+icon: i-heroicons-building-office-2
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Corporation Templates
 
 Specific templates for large established corporations with multiple divisions and departments, designed for complex organizational structures with robust governance and formalized processes.

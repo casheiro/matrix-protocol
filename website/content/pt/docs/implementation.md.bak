@@ -8,7 +8,7 @@ sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-20
+last_updated: 2025-10-21
 ---
 # Guia de Implementação - Matrix Protocol
 **Versão:** v0.0.1 Beta  

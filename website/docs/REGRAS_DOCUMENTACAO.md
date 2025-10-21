@@ -194,25 +194,37 @@ Para dúvidas sobre estas regras, consulte:
 Esta seção complementa as regras de `/docs` e define padrões para páginas de conteúdo do site em `website/content/{pt|en}`.
 
 - Escopo: arquivos `.md` em `website/content/{pt|en}/**`.
-- Frontmatter obrigatório:
+- Frontmatter obrigatório e recomendado:
 ```yaml
-
 ---
+# Obrigatórios
 title: "Título da página"
-description: "Resumo curto"
+description: "Resumo curto (50–150 caracteres)"
 icon: "i-heroicons-[nome]"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 order: 0
+
+# Recomendados (validados pelo schema)
+lang: "pt|en"                     # Idioma do conteúdo
+last_updated: "2025-10-21"        # AAAA-MM-DD
+framework: "MEF|MOC|MAL|OIF|ZOF"  # Enum suportado
+maturity: "stable|beta|experimental" # Estado do conteúdo
+tags: ["manual", "templates"]     # lower-kebab, únicas, 1–24 chars
 ---
 ```
 - Regras de validação:
   - `icon`: deve seguir o padrão `i-heroicons-*`.
   - `layout`: obrigatoriamente `docs`.
   - `sidebar`, `toc`, `navigation`: valores booleanos.
-  - `order`: inteiro não negativo.
+  - `order`: inteiro não negativo (default: `0` para `index.md`, `10` para páginas).
+  - `lang`: `pt` ou `en`.
+  - `last_updated`: formato `AAAA-MM-DD`.
+  - `framework`: um de `MEF|MOC|MAL|OIF|ZOF`.
+  - `maturity`: um de `stable|beta|experimental`.
+  - `tags`: lista de strings em `lower-kebab`, únicas, com 1–24 caracteres.
 - Política de nomes:
   - Pastas: `kebab-case` minúsculo obrigatório.
   - Arquivos: `kebab-case` minúsculo obrigatório (sem underscores, espaços, acentos ou maiúsculas).

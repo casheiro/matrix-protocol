@@ -1,13 +1,20 @@
 ---
 title: MOC Templates by Size
-description: Matrix Ontology Catalog templates adapted for organizations of different sizes, from startups to large enterprises
+description: Matrix Ontology Catalog templates adapted for organizations of
+  different sizes, from startups to large enterprises
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # MOC Templates by Organizational Size
 **Matrix Ontology Catalog Templates for Different Organization Types**
 

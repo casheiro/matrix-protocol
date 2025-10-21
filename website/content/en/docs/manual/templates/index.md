@@ -13,6 +13,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 0
 ---
 # Templates and MOC Structures
 

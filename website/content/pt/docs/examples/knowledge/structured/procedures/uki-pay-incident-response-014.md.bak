@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Incident Response 014"
-description: "Página wrapper para o asset YAML uki-pay-incident-response-014.yaml"
-layout: "docs"
+title: Uki Pay Incident Response 014
+description: Página wrapper para o asset YAML uki-pay-incident-response-014.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: pt
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml`
 
 **Abrir no Visualizador:** [Uki Pay Incident Response 014](/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml)

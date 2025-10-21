@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Security Headers 010"
-description: "Wrapper page for YAML asset uki-pay-security-headers-010.yaml"
-layout: "docs"
+title: Uki Pay Security Headers 010
+description: Wrapper page for YAML asset uki-pay-security-headers-010.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: en
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `en/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml`
 
 **Open in Viewer:** [Uki Pay Security Headers 010](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml)

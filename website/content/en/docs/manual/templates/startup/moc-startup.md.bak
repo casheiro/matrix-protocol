@@ -1,12 +1,19 @@
 ---
-title: "Moc Startup"
-description: "Wrapper page for YAML asset moc-startup.yaml"
-layout: "docs"
+title: Moc Startup
+description: Wrapper page for YAML asset moc-startup.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 > Source YAML: `en/docs/manual/templates/startup/moc-startup.yaml`
 
 **Open in Viewer:** [Moc Startup](/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml)

@@ -9,6 +9,7 @@ toc: true
 navigation: true
 lang: en
 last_updated: 2025-10-21
+order: 10
 ---
 # OIF — Operator Intelligence Framework
 **Acronym:** OIF  

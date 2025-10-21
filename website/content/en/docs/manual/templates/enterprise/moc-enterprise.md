@@ -13,6 +13,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 10
 ---
 > Source YAML: `en/docs/manual/templates/enterprise/moc-enterprise.yaml`
 

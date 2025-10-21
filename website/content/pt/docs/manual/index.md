@@ -9,6 +9,7 @@ toc: true
 navigation: true
 lang: pt
 last_updated: 2025-10-21
+order: 0
 ---
 # Guia de Implementação do Matrix Protocol v0.0.1-beta
 **Manual Técnico de Implementação**

@@ -1,13 +1,19 @@
 ---
-title: "Startup Templates"
-description: "Agile templates for startups with lean structures and simplified processes"
-icon: "i-heroicons-rocket-launch"
-layout: "docs"
+title: Startup Templates
+description: Agile templates for startups with lean structures and simplified processes
+icon: i-heroicons-rocket-launch
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Startup Templates
 
 Agile templates for startups with lean structures and simplified processes, designed for maximum agility and preparation for future growth.

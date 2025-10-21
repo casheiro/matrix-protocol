@@ -9,6 +9,7 @@ toc: false
 navigation: false
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 # Fluxo de Pagamentos - Wiki Squad
 

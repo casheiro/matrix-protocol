@@ -14,6 +14,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 10
 ---
 # Matrix Protocol Implementation Phases - Detailed Guide
 **Gradual Implementation in 6 Phases with Checklists and Validation Milestones**

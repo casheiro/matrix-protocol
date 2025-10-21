@@ -14,6 +14,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 0
 ---
 # Enterprise Templates
 

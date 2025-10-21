@@ -9,6 +9,7 @@ toc: true
 navigation: true
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 # TechCorp Estudo de Caso - Implementação Completa Matrix Protocol
 **Estudo de Caso Hipotético: Implementação organizacional, 18 meses**

@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Deployment Process 015"
-description: "Wrapper page for YAML asset uki-pay-deployment-process-015.yaml"
-layout: "docs"
+title: Uki Pay Deployment Process 015
+description: Wrapper page for YAML asset uki-pay-deployment-process-015.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: en
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml`
 
 **Open in Viewer:** [Uki Pay Deployment Process 015](/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml)

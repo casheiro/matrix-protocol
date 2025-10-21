@@ -1,12 +1,15 @@
 ---
 title: Knowledge comparison
-description: Practical demonstration of transforming chaotic knowledge into organized MEF structures through a real e-commerce payments squad example
+description: Practical demonstration of transforming chaotic knowledge into
+  organized MEF structures through a real e-commerce payments squad example
 icon: i-heroicons-rectangle-stack
 layout: docs
 sidebar: true
 toc: true
+navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Knowledge comparison: unstructured vs MEF-structured
 
 This example demonstrates the efficiency of the **Matrix Embedding Framework (MEF)** through a practical comparison between unstructured and structured knowledge from an e-commerce payments squad.

@@ -14,6 +14,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 10
 ---
 # MOC Templates by Organizational Size
 **Matrix Ontology Catalog Templates for Different Organization Types**

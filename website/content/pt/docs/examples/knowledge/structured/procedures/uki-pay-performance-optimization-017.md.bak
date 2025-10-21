@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Performance Optimization 017"
-description: "Página wrapper para o asset YAML uki-pay-performance-optimization-017.yaml"
-layout: "docs"
+title: Uki Pay Performance Optimization 017
+description: Página wrapper para o asset YAML uki-pay-performance-optimization-017.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: pt
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml`
 
 **Abrir no Visualizador:** [Uki Pay Performance Optimization 017](/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml)

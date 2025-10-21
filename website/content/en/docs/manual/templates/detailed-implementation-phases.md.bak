@@ -1,13 +1,20 @@
 ---
 title: Implementation Phases
-description: Detailed gradual implementation guide in 6 phases with checklists, validation milestones and specific timelines
+description: Detailed gradual implementation guide in 6 phases with checklists,
+  validation milestones and specific timelines
 icon: i-heroicons-calendar
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Matrix Protocol Implementation Phases - Detailed Guide
 **Gradual Implementation in 6 Phases with Checklists and Validation Milestones**
 

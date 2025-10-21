@@ -1,13 +1,15 @@
 ---
 title: Examples
-description: Practical implementations, organizational cases and concrete examples of Matrix Protocol usage in different business contexts
+description: Practical implementations, organizational cases and concrete
+  examples of Matrix Protocol usage in different business contexts
 icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Examples and Case Studies
 
 This section presents practical examples, real case studies, and organizational implementations of the Matrix Protocol, demonstrating how to apply the concepts in practice.

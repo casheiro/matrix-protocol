@@ -6,8 +6,9 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Quick Start Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  
 **Quick Implementation in 3 Steps**

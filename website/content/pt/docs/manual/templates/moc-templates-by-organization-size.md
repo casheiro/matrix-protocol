@@ -14,6 +14,7 @@ maturity: stable
 tags:
   - manual
   - templates
+order: 10
 ---
 # Templates MOC por Porte Organizacional
 **Templates de Catálogo de Ontologia Matrix para Diferentes Tipos de Organização**

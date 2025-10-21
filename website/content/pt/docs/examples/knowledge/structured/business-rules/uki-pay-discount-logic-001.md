@@ -8,6 +8,7 @@ navigation: true
 icon: i-heroicons-code-bracket
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml`
 

@@ -350,18 +350,29 @@ function generateRecommendations(report) {
     })
   }
   
-  // Recomendações sobre frontmatter
-  const inconsistentFields = Array.from(report.frontmatterPatterns.values())
-    .filter(pattern => pattern.values.size > 10) // Muita variação
-  
+  // Recomendações sobre frontmatter (focar em violações reais de schema)
+  const schemaViolationFields = new Set()
+  for (const inc of report.metadataInconsistencies) {
+    if (inc.type === 'schema_violation' && Array.isArray(inc.errors)) {
+      for (const err of inc.errors) {
+        const fieldPath = (err.instancePath || '').replace(/^\//, '')
+        const missing = err.params && err.params.missingProperty
+        const field = fieldPath || missing
+        if (field) schemaViolationFields.add(field)
+      }
+    }
+  }
+  const focusFields = ['description', 'icon', 'tags'] // ignorar variação natural de title
+  const inconsistentFields = Array.from(schemaViolationFields).filter(f => focusFields.includes(f))
+
   if (inconsistentFields.length > 0) {
     recommendations.push({
       priority: 'MEDIUM',
       category: 'Metadata',
       title: 'Padronizar campos de frontmatter',
-      description: `${inconsistentFields.length} campos com alta variação de valores`,
-      action: 'Revisar e padronizar valores dos campos',
-      fields: inconsistentFields.map(f => f.field)
+      description: `${inconsistentFields.length} campos com violações de schema`,
+      action: 'Corrigir valores fora das regras e padronizar',
+      fields: inconsistentFields
     })
   }
   

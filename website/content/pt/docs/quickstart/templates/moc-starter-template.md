@@ -8,6 +8,7 @@ navigation: true
 icon: i-heroicons-document-duplicate
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 > Source YAML: `pt/docs/quickstart/templates/moc-starter-template.yaml`
 

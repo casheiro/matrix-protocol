@@ -6,8 +6,9 @@ layout: docs
 sidebar: true
 toc: false
 navigation: false
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Payment Flow - Squad Wiki
 
 *Last updated: March 2022*  

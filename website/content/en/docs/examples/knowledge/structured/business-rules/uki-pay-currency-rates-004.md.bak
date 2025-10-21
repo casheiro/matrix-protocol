@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Currency Rates 004"
-description: "Wrapper page for YAML asset uki-pay-currency-rates-004.yaml"
-layout: "docs"
+title: Uki Pay Currency Rates 004
+description: Wrapper page for YAML asset uki-pay-currency-rates-004.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: en
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml`
 
 **Open in Viewer:** [Uki Pay Currency Rates 004](/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml)

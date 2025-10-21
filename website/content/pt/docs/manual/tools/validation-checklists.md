@@ -9,6 +9,7 @@ toc: true
 navigation: true
 lang: pt
 last_updated: 2025-10-21
+order: 10
 ---
 # Checklists de Validação - Implementação do Matrix Protocol
 **Checklists práticos baseados na experiência TechCorp e 12 organizações**

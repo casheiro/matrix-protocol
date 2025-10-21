@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Refund Policy 002"
-description: "Wrapper page for YAML asset uki-pay-refund-policy-002.yaml"
-layout: "docs"
+title: Uki Pay Refund Policy 002
+description: Wrapper page for YAML asset uki-pay-refund-policy-002.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: en
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml`
 
 **Open in Viewer:** [Uki Pay Refund Policy 002](/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml)

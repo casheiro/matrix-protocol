@@ -95,6 +95,10 @@ function buildFrontmatter(existing, filePath) {
   fm.toc = fm.toc !== undefined ? fm.toc : true
   fm.navigation = fm.navigation !== undefined ? fm.navigation : true
 
+  // Definição de ordem padrão (prioriza índice)
+  const parsedOrder = Number.isFinite(Number(fm.order)) ? Number(fm.order) : undefined
+  fm.order = parsedOrder !== undefined && parsedOrder >= 0 ? parsedOrder : (isIndex ? 0 : 10)
+
   // Campos recomendados por Sprint 2
   fm.lang = LOCALE
   fm.last_updated = now
@@ -108,6 +112,26 @@ function buildFrontmatter(existing, filePath) {
     if (!tags.includes('templates')) tags.push('templates')
     fm.tags = tags
   }
+
+  // Normalização geral de tags/framework/maturity
+  const normalizeTag = (t) => String(t)
+    .toLowerCase()
+    .replace(/[\s_]+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+    .trim()
+  if (fm.tags) {
+    const list = Array.isArray(fm.tags) ? fm.tags : [fm.tags]
+    fm.tags = [...new Set(list
+      .map(normalizeTag)
+      .filter(Boolean)
+      .filter(t => t.length >= 1 && t.length <= 24)
+    )]
+  }
+  const frameworks = new Set(['MEF', 'MOC', 'MAL', 'OIF', 'ZOF'])
+  if (fm.framework && !frameworks.has(fm.framework)) fm.framework = 'MEF'
+  const maturities = new Set(['stable', 'beta', 'experimental'])
+  if (fm.maturity && !maturities.has(fm.maturity)) fm.maturity = 'stable'
 
   return fm
 }

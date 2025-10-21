@@ -9,6 +9,7 @@ toc: true
 navigation: true
 lang: en
 last_updated: 2025-10-21
+order: 10
 ---
 # Implementation Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  

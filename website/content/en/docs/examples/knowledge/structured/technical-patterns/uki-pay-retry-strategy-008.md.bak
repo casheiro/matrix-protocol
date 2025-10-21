@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Retry Strategy 008"
-description: "Wrapper page for YAML asset uki-pay-retry-strategy-008.yaml"
-layout: "docs"
+title: Uki Pay Retry Strategy 008
+description: Wrapper page for YAML asset uki-pay-retry-strategy-008.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: en
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `en/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml`
 
 **Open in Viewer:** [Uki Pay Retry Strategy 008](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml)

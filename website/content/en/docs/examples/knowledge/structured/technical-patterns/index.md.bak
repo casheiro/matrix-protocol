@@ -1,13 +1,14 @@
 ---
-title: "Technical Patterns MEF"
-description: "UKIs structured defining technical implementation and architecture patterns"
-icon: "i-heroicons-cog-6-tooth"
-layout: "docs"
+title: Technical Patterns MEF
+description: UKIs structured defining technical implementation and architecture patterns
+icon: i-heroicons-cog-6-tooth
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Technical Patterns MEF
 
 UKIs structured defining technical implementation and architecture patterns, demonstrating how technical decisions transform from scattered documentation into governed, reusable architectural knowledge.

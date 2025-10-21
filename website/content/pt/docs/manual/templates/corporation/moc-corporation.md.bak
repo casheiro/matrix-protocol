@@ -1,12 +1,19 @@
 ---
-title: "Moc Corporation"
-description: "Página wrapper para o asset YAML moc-corporation.yaml"
-layout: "docs"
+title: Moc Corporation
+description: Página wrapper para o asset YAML moc-corporation.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: pt
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 > Source YAML: `pt/docs/manual/templates/corporation/moc-corporation.yaml`
 
 **Abrir no Visualizador:** [Moc Corporation](/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml)

@@ -8,6 +8,7 @@ navigation: true
 icon: i-heroicons-code-bracket
 lang: en
 last_updated: 2025-10-21
+order: 10
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml`
 

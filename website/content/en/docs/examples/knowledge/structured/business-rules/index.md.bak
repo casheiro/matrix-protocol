@@ -1,13 +1,15 @@
 ---
-title: "Business Rules MEF"
-description: "UKIs structured containing fundamental business rules following MEF v1.0.0 specification"
-icon: "i-heroicons-building-office"
-layout: "docs"
+title: Business Rules MEF
+description: UKIs structured containing fundamental business rules following MEF
+  v1.0.0 specification
+icon: i-heroicons-building-office
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Business Rules MEF
 
 UKIs structured containing fundamental business rules following MEF v1.0.0 specification, demonstrating how organizational business logic transforms from scattered policies into governed knowledge units.

@@ -1,12 +1,19 @@
 ---
-title: "Moc Unified Structure"
-description: "Página wrapper para o asset YAML moc-unified-structure.yaml"
-layout: "docs"
+title: Moc Unified Structure
+description: Página wrapper para o asset YAML moc-unified-structure.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: pt
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 > Source YAML: `pt/docs/manual/templates/unified/moc-unified-structure.yaml`
 
 **Abrir no Visualizador:** [Moc Unified Structure](/pt/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml)
