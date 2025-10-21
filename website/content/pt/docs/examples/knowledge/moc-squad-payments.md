@@ -1,15 +1,15 @@
 ---
 title: "Moc Squad Payments"
-description: "Página wrapper para o asset YAML MOC_SQUAD_PAYMENTS.yaml"
+description: "Página wrapper para o asset YAML moc-squad-payments.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `pt/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml`
+> Source YAML: `pt/docs/examples/knowledge/moc-squad-payments.yaml`
 
-**Abrir no Visualizador:** [Moc Squad Payments](/pt/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml)
+**Abrir no Visualizador:** [Moc Squad Payments](/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml)
 
 > 📄 Tipo: YAML • 📦 Tamanho: 9.3 KB • 🕒 Última modificação: 2025-10-10
 

@@ -47,7 +47,7 @@ docs/
 │       ├── index.md
 │       ├── stackspot-agent-prompt.md
 │       ├── stackspot-compatibility-guide.md
-│       ├── MOC_SQUAD_PAYMENTS.yaml
+│       ├── moc-squad-payments.yaml
 │       ├── structured/        # MEF-structured knowledge
 │       │   ├── index.md
 │       │   ├── business-rules/
@@ -91,7 +91,7 @@ docs/
     ├── index.md
     └── templates/
         ├── index.md
-        └── MOC_STARTER_TEMPLATE.yaml
+        └── moc-starter-template.yaml
 ```
 
 ---

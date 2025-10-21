@@ -111,7 +111,7 @@ This section contains **5 compliant procedure UKIs** from the Example E-commerce
 
 - [Business Rules](../business-rules/) - Business logic implemented by these procedures
 - [Technical Patterns](../technical-patterns/) - Technical standards guiding procedure implementation
-- [MOC_SQUAD_PAYMENTS.yaml](../../moc-squad-payments.md) - Organizational governance foundation
+- [moc-squad-payments.yaml](../../moc-squad-payments.md) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic operational documentation
 
 ### Implementation Resources:

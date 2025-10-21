@@ -96,7 +96,7 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 
 - [Technical Patterns](../technical-patterns/) - Implementation patterns for these business rules
 - [Procedures](../procedures/) - Operational procedures implementing these rules
-- [MOC_SQUAD_PAYMENTS.yaml](../../moc-squad-payments.md) - Organizational governance foundation
+- [moc-squad-payments.yaml](../../moc-squad-payments.md) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic business rule sources
 
 ### Implementation Resources:

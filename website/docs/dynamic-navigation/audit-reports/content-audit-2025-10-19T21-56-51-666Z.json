@@ -65,9 +65,9 @@
               "depth": 2,
               "files": [
                 {
-                  "name": "MOC_SQUAD_PAYMENTS.yaml",
-                  "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
-                  "relativePath": "pt/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+                  "name": "moc-squad-payments.yaml",
+                  "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/moc-squad-payments.yaml",
+                  "relativePath": "pt/docs/examples/knowledge/moc-squad-payments.yaml",
                   "extension": ".yaml",
                   "size": 9543,
                   "modified": "2025-10-10T17:49:28.609Z"
@@ -714,9 +714,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_BASIC_TEMPLATE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
-                      "relativePath": "pt/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+                      "name": "moc-basic-template.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/basic/moc-basic-template.yaml",
+                      "relativePath": "pt/docs/manual/templates/basic/moc-basic-template.yaml",
                       "extension": ".yaml",
                       "size": 5659,
                       "modified": "2025-10-11T16:47:00.705Z"
@@ -752,9 +752,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_CORPORATION.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
-                      "relativePath": "pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+                      "name": "moc-corporation.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/corporation/moc-corporation.yaml",
+                      "relativePath": "pt/docs/manual/templates/corporation/moc-corporation.yaml",
                       "extension": ".yaml",
                       "size": 17946,
                       "modified": "2025-10-11T16:46:54.859Z"
@@ -790,9 +790,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_ENTERPRISE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
-                      "relativePath": "pt/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+                      "name": "moc-enterprise.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/enterprise/moc-enterprise.yaml",
+                      "relativePath": "pt/docs/manual/templates/enterprise/moc-enterprise.yaml",
                       "extension": ".yaml",
                       "size": 15318,
                       "modified": "2025-10-11T16:46:50.199Z"
@@ -828,9 +828,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_SCALEUP.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
-                      "relativePath": "pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+                      "name": "moc-scaleup.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/scaleup/moc-scaleup.yaml",
+                      "relativePath": "pt/docs/manual/templates/scaleup/moc-scaleup.yaml",
                       "extension": ".yaml",
                       "size": 13128,
                       "modified": "2025-10-11T16:46:42.564Z"
@@ -866,9 +866,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_STARTUP.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/startup/MOC_STARTUP.yaml",
-                      "relativePath": "pt/docs/manual/templates/startup/MOC_STARTUP.yaml",
+                      "name": "moc-startup.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/startup/moc-startup.yaml",
+                      "relativePath": "pt/docs/manual/templates/startup/moc-startup.yaml",
                       "extension": ".yaml",
                       "size": 10078,
                       "modified": "2025-10-11T16:46:34.797Z"
@@ -904,9 +904,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_UNIFIED_STRUCTURE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
-                      "relativePath": "pt/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+                      "name": "moc-unified-structure.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/unified/moc-unified-structure.yaml",
+                      "relativePath": "pt/docs/manual/templates/unified/moc-unified-structure.yaml",
                       "extension": ".yaml",
                       "size": 17319,
                       "modified": "2025-10-11T16:47:08.256Z"
@@ -1081,9 +1081,9 @@
               "depth": 2,
               "files": [
                 {
-                  "name": "MOC_STARTER_TEMPLATE.yaml",
-                  "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
-                  "relativePath": "pt/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+                  "name": "moc-starter-template.yaml",
+                  "path": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/templates/moc-starter-template.yaml",
+                  "relativePath": "pt/docs/quickstart/templates/moc-starter-template.yaml",
                   "extension": ".yaml",
                   "size": 16395,
                   "modified": "2025-10-11T16:47:31.607Z"
@@ -1204,9 +1204,9 @@
               "depth": 2,
               "files": [
                 {
-                  "name": "MOC_SQUAD_PAYMENTS.yaml",
-                  "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
-                  "relativePath": "en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+                  "name": "moc-squad-payments.yaml",
+                  "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml",
+                  "relativePath": "en/docs/examples/knowledge/moc-squad-payments.yaml",
                   "extension": ".yaml",
                   "size": 9543,
                   "modified": "2025-10-12T19:45:29.823Z"
@@ -1857,9 +1857,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_BASIC_TEMPLATE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
-                      "relativePath": "en/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+                      "name": "moc-basic-template.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/basic/moc-basic-template.yaml",
+                      "relativePath": "en/docs/manual/templates/basic/moc-basic-template.yaml",
                       "extension": ".yaml",
                       "size": 5659,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -1895,9 +1895,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_CORPORATION.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
-                      "relativePath": "en/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+                      "name": "moc-corporation.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/corporation/moc-corporation.yaml",
+                      "relativePath": "en/docs/manual/templates/corporation/moc-corporation.yaml",
                       "extension": ".yaml",
                       "size": 17946,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -1933,9 +1933,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_ENTERPRISE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
-                      "relativePath": "en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+                      "name": "moc-enterprise.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/enterprise/moc-enterprise.yaml",
+                      "relativePath": "en/docs/manual/templates/enterprise/moc-enterprise.yaml",
                       "extension": ".yaml",
                       "size": 15318,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -1971,9 +1971,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_SCALEUP.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
-                      "relativePath": "en/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+                      "name": "moc-scaleup.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/scaleup/moc-scaleup.yaml",
+                      "relativePath": "en/docs/manual/templates/scaleup/moc-scaleup.yaml",
                       "extension": ".yaml",
                       "size": 13128,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -2009,9 +2009,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_STARTUP.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/startup/MOC_STARTUP.yaml",
-                      "relativePath": "en/docs/manual/templates/startup/MOC_STARTUP.yaml",
+                      "name": "moc-startup.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/startup/moc-startup.yaml",
+                      "relativePath": "en/docs/manual/templates/startup/moc-startup.yaml",
                       "extension": ".yaml",
                       "size": 10078,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -2047,9 +2047,9 @@
                   "depth": 3,
                   "files": [
                     {
-                      "name": "MOC_UNIFIED_STRUCTURE.yaml",
-                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
-                      "relativePath": "en/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+                      "name": "moc-unified-structure.yaml",
+                      "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/unified/moc-unified-structure.yaml",
+                      "relativePath": "en/docs/manual/templates/unified/moc-unified-structure.yaml",
                       "extension": ".yaml",
                       "size": 17319,
                       "modified": "2025-10-12T19:47:01.022Z"
@@ -2224,9 +2224,9 @@
               "depth": 2,
               "files": [
                 {
-                  "name": "MOC_STARTER_TEMPLATE.yaml",
-                  "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
-                  "relativePath": "en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+                  "name": "moc-starter-template.yaml",
+                  "path": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/templates/moc-starter-template.yaml",
+                  "relativePath": "en/docs/quickstart/templates/moc-starter-template.yaml",
                   "extension": ".yaml",
                   "size": 16395,
                   "modified": "2025-10-12T20:33:08.664Z"
@@ -3252,7 +3252,7 @@
       "count": 50,
       "totalSize": 373615,
       "files": [
-        "pt/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+        "pt/docs/examples/knowledge/moc-squad-payments.yaml",
         "pt/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
         "pt/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
         "pt/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
@@ -3270,14 +3270,14 @@
         "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
         "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
         "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
-        "pt/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
-        "pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
-        "pt/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
-        "pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
-        "pt/docs/manual/templates/startup/MOC_STARTUP.yaml",
-        "pt/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
-        "pt/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
-        "en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+        "pt/docs/manual/templates/basic/moc-basic-template.yaml",
+        "pt/docs/manual/templates/corporation/moc-corporation.yaml",
+        "pt/docs/manual/templates/enterprise/moc-enterprise.yaml",
+        "pt/docs/manual/templates/scaleup/moc-scaleup.yaml",
+        "pt/docs/manual/templates/startup/moc-startup.yaml",
+        "pt/docs/manual/templates/unified/moc-unified-structure.yaml",
+        "pt/docs/quickstart/templates/moc-starter-template.yaml",
+        "en/docs/examples/knowledge/moc-squad-payments.yaml",
         "en/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
         "en/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
         "en/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
@@ -3295,13 +3295,13 @@
         "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
         "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
         "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
-        "en/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
-        "en/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
-        "en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
-        "en/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
-        "en/docs/manual/templates/startup/MOC_STARTUP.yaml",
-        "en/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
-        "en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml"
+        "en/docs/manual/templates/basic/moc-basic-template.yaml",
+        "en/docs/manual/templates/corporation/moc-corporation.yaml",
+        "en/docs/manual/templates/enterprise/moc-enterprise.yaml",
+        "en/docs/manual/templates/scaleup/moc-scaleup.yaml",
+        "en/docs/manual/templates/startup/moc-startup.yaml",
+        "en/docs/manual/templates/unified/moc-unified-structure.yaml",
+        "en/docs/quickstart/templates/moc-starter-template.yaml"
       ]
     },
     ".txt": {

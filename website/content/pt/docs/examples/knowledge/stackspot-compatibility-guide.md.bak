@@ -80,7 +80,7 @@ relationships:
    - `/business-rules/` (6 UKIs)
    - `/technical-patterns/` (6 UKIs)  
    - `/procedures/` (5 UKIs)
-3. **Upload adicional**: `MOC_SQUAD_PAYMENTS.yaml` (contexto organizacional)
+3. **Upload adicional**: `moc-squad-payments.yaml` (contexto organizacional)
 4. **Agent Configuration**: Usar `/stackspot-agent-prompt.md`
 5. **Nome do Agent**: "Payments Expert - MEF Structured"
 
@@ -136,7 +136,7 @@ Se StackSpot AI não processar YAML adequadamente:
 
 - [ ] Upload de todos os 12 arquivos não estruturados no Agent A
 - [ ] Upload de todos os 17 UKIs estruturados no Agent B  
-- [ ] Upload do MOC_SQUAD_PAYMENTS.yaml no Agent B
+- [ ] Upload do moc-squad-payments.yaml no Agent B
 - [ ] Configuração do system prompt personalizado no Agent B
 - [ ] Teste das 5 perguntas estratégicas em ambos os agents
 - [ ] Verificação das diferenças qualitativas esperadas

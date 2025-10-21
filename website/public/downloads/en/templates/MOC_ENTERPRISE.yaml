@@ -408,7 +408,7 @@ implementation_notes:
 
 unified_structure_compliance:
   template_version: "enterprise-v1.0"
-  base_structure: "MOC_UNIFIED_STRUCTURE.yaml v1.0"
+  base_structure: "moc-unified-structure.yaml v1.0"
   compliance_level: "full"
   
   implemented_features:

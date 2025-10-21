@@ -31,7 +31,7 @@ This repository contains comprehensive Matrix Protocol documentation and example
 
 ### 💡 Practical Examples
 - `examples/knowledge-comparison/` - Complete comparison between unstructured and MEF-structured knowledge
-  - Real organizational MOC example (`MOC_SQUAD_PAYMENTS.yaml`)
+  - Real organizational MOC example (`moc-squad-payments.yaml`)
   - 17 compliant UKI examples across business rules, technical patterns, and procedures
   - Demonstrates knowledge evolution from chaotic to structured
   
@@ -219,7 +219,7 @@ relationships:
 ```yaml
 
 
-# --- Actual MOC_SQUAD_PAYMENTS.yaml from examples/knowledge-comparison/ ---
+# --- Actual moc-squad-payments.yaml from examples/knowledge-comparison/ ---
 moc_version: "1.0"
 organization: "Example E-commerce Company"
 created_date: "2024-03-25"
@@ -325,14 +325,14 @@ The `examples/knowledge-comparison/` directory contains the primary demonstratio
 ### Knowledge Transformation Example
 - **Problem**: Chaotic, contradictory knowledge across 12 unstructured documents
 - **Solution**: 17 compliant MEF UKIs with semantic relationships
-- **Foundation**: `MOC_SQUAD_PAYMENTS.yaml` - organizational ontology catalog
+- **Foundation**: `moc-squad-payments.yaml` - organizational ontology catalog
 - **Result**: From dispersed information to governed, traceable knowledge
 
 ### Structure Overview
 ```
 
 examples/knowledge-comparison/
-├── MOC_SQUAD_PAYMENTS.yaml              # Organizational taxonomy (FOUNDATIONAL)
+├── moc-squad-payments.yaml              # Organizational taxonomy (FOUNDATIONAL)
 ├── unstructured/                        # 12 problematic documents
 │   ├── team-meeting-jan-2024.md        # Contradictory decisions
 │   ├── slack-refunds-thread.txt        # Fragmented conversations

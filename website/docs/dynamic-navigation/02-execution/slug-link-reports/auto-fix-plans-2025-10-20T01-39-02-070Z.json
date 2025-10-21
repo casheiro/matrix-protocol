@@ -1882,7 +1882,7 @@
       "file": "pt/docs/manual/templates/startup/moc-startup.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml",
+          "from": "/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
           "to": "/pt/docs/viewer?file=/docs/manual/templates/startup/MOC-STARTUP.yaml"
         }
       ]
@@ -1891,7 +1891,7 @@
       "file": "pt/docs/manual/templates/scaleup/moc-scaleup.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+          "from": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
           "to": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC-SCALEUP.yaml"
         }
       ]
@@ -1917,7 +1917,7 @@
       "file": "pt/docs/manual/templates/enterprise/moc-enterprise.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+          "from": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
           "to": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/MOC-ENTERPRISE.yaml"
         }
       ]
@@ -1926,7 +1926,7 @@
       "file": "pt/docs/manual/templates/corporation/moc-corporation.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+          "from": "/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
           "to": "/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC-CORPORATION.yaml"
         }
       ]
@@ -1935,7 +1935,7 @@
       "file": "pt/docs/manual/templates/basic/moc-basic-template.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+          "from": "/pt/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
           "to": "/pt/docs/viewer?file=/docs/manual/templates/basic/MOC-BASIC-TEMPLATE.yaml"
         }
       ]
@@ -1953,7 +1953,7 @@
       "file": "pt/docs/examples/knowledge/moc-squad-payments.md",
       "updates": [
         {
-          "from": "/pt/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+          "from": "/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
           "to": "/pt/docs/viewer?file=/docs/examples/knowledge/MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -1962,7 +1962,7 @@
       "file": "en/docs/quickstart/templates/moc-starter-template.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+          "from": "/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
           "to": "/en/docs/viewer?file=/docs/quickstart/templates/MOC-STARTER-TEMPLATE.yaml"
         }
       ]
@@ -1971,7 +1971,7 @@
       "file": "en/docs/manual/templates/unified/moc-unified-structure.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/unified/MOC-UNIFIED-STRUCTURE.yaml"
         }
       ]
@@ -1980,7 +1980,7 @@
       "file": "en/docs/manual/templates/startup/moc-startup.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/startup/MOC-STARTUP.yaml"
         }
       ]
@@ -1989,7 +1989,7 @@
       "file": "en/docs/manual/templates/scaleup/moc-scaleup.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/scaleup/MOC-SCALEUP.yaml"
         }
       ]
@@ -2015,7 +2015,7 @@
       "file": "en/docs/manual/templates/enterprise/moc-enterprise.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC-ENTERPRISE.yaml"
         }
       ]
@@ -2024,7 +2024,7 @@
       "file": "en/docs/manual/templates/corporation/moc-corporation.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/corporation/MOC-CORPORATION.yaml"
         }
       ]
@@ -2033,7 +2033,7 @@
       "file": "en/docs/manual/templates/basic/moc-basic-template.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+          "from": "/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
           "to": "/en/docs/viewer?file=/docs/manual/templates/basic/MOC-BASIC-TEMPLATE.yaml"
         }
       ]
@@ -2051,7 +2051,7 @@
       "file": "en/docs/examples/knowledge/moc-squad-payments.md",
       "updates": [
         {
-          "from": "/en/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+          "from": "/en/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
           "to": "/en/docs/viewer?file=/docs/examples/knowledge/MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -2061,12 +2061,12 @@
   "appliedLinkUpdates": [
     {
       "file": "pt/docs/manual/templates/startup/moc-startup.md",
-      "from": "/pt/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml",
+      "from": "/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
       "to": "/pt/docs/viewer?file=/docs/manual/templates/startup/MOC-STARTUP.yaml"
     },
     {
       "file": "pt/docs/manual/templates/scaleup/moc-scaleup.md",
-      "from": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+      "from": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
       "to": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC-SCALEUP.yaml"
     },
     {
@@ -2086,17 +2086,17 @@
     },
     {
       "file": "pt/docs/manual/templates/enterprise/moc-enterprise.md",
-      "from": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+      "from": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
       "to": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/MOC-ENTERPRISE.yaml"
     },
     {
       "file": "pt/docs/manual/templates/corporation/moc-corporation.md",
-      "from": "/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+      "from": "/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
       "to": "/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC-CORPORATION.yaml"
     },
     {
       "file": "pt/docs/manual/templates/basic/moc-basic-template.md",
-      "from": "/pt/docs/viewer?file=/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+      "from": "/pt/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
       "to": "/pt/docs/viewer?file=/docs/manual/templates/basic/MOC-BASIC-TEMPLATE.yaml"
     },
     {
@@ -2106,27 +2106,27 @@
     },
     {
       "file": "pt/docs/examples/knowledge/moc-squad-payments.md",
-      "from": "/pt/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+      "from": "/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
       "to": "/pt/docs/viewer?file=/docs/examples/knowledge/MOC-SQUAD-PAYMENTS.yaml"
     },
     {
       "file": "en/docs/quickstart/templates/moc-starter-template.md",
-      "from": "/en/docs/viewer?file=/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+      "from": "/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
       "to": "/en/docs/viewer?file=/docs/quickstart/templates/MOC-STARTER-TEMPLATE.yaml"
     },
     {
       "file": "en/docs/manual/templates/unified/moc-unified-structure.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/unified/MOC-UNIFIED-STRUCTURE.yaml"
     },
     {
       "file": "en/docs/manual/templates/startup/moc-startup.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/startup/MOC-STARTUP.yaml"
     },
     {
       "file": "en/docs/manual/templates/scaleup/moc-scaleup.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/scaleup/MOC-SCALEUP.yaml"
     },
     {
@@ -2146,17 +2146,17 @@
     },
     {
       "file": "en/docs/manual/templates/enterprise/moc-enterprise.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC-ENTERPRISE.yaml"
     },
     {
       "file": "en/docs/manual/templates/corporation/moc-corporation.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/corporation/MOC-CORPORATION.yaml"
     },
     {
       "file": "en/docs/manual/templates/basic/moc-basic-template.md",
-      "from": "/en/docs/viewer?file=/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+      "from": "/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
       "to": "/en/docs/viewer?file=/docs/manual/templates/basic/MOC-BASIC-TEMPLATE.yaml"
     },
     {
@@ -2166,7 +2166,7 @@
     },
     {
       "file": "en/docs/examples/knowledge/moc-squad-payments.md",
-      "from": "/en/docs/viewer?file=/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+      "from": "/en/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
       "to": "/en/docs/viewer?file=/docs/examples/knowledge/MOC-SQUAD-PAYMENTS.yaml"
     }
   ]

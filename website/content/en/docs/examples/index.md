@@ -27,7 +27,7 @@ Demonstrate how MEF transforms chaotic and dispersed knowledge into:
 
 ## 🏗️ Foundational Structure: MOC (Matrix Ontology Catalog)
 
-### `MOC_SQUAD_PAYMENTS.yaml` - Organizational Ontology (MOC v0.0.1-beta)
+### `moc-squad-payments.yaml` - Organizational Ontology (MOC v0.0.1-beta)
 
 Before any UKI is created, the **Matrix Ontology Catalog (MOC)** defines the organizational taxonomy following the official specification:
 

@@ -1,15 +1,15 @@
 ---
 title: "Moc Starter Template"
-description: "Wrapper page for YAML asset MOC_STARTER_TEMPLATE.yaml"
+description: "Wrapper page for YAML asset moc-starter-template.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml`
+> Source YAML: `en/docs/quickstart/templates/moc-starter-template.yaml`
 
-**Open in Viewer:** [Moc Starter Template](/en/docs/viewer?file=/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml)
+**Open in Viewer:** [Moc Starter Template](/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml)
 
 > 📄 Type: YAML • 📦 Size: 16.0 KB • 🕒 Last updated: 2025-10-12
 

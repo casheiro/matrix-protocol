@@ -1,15 +1,15 @@
 ---
 title: "Moc Scaleup"
-description: "Página wrapper para o asset YAML MOC_SCALEUP.yaml"
+description: "Página wrapper para o asset YAML moc-scaleup.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml`
+> Source YAML: `pt/docs/manual/templates/scaleup/moc-scaleup.yaml`
 
-**Abrir no Visualizador:** [Moc Scaleup](/pt/docs/viewer?file=/docs/manual/templates/scaleup/MOC_SCALEUP.yaml)
+**Abrir no Visualizador:** [Moc Scaleup](/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml)
 
 > 📄 Tipo: YAML • 📦 Tamanho: 12.8 KB • 🕒 Última modificação: 2025-10-11
 
@@ -375,7 +375,7 @@ implementation_notes:
 
 unified_structure_compliance:
   template_version: "scaleup-v1.0"
-  base_structure: "MOC_UNIFIED_STRUCTURE.yaml v1.0"
+  base_structure: "moc-unified-structure.yaml v1.0"
   compliance_level: "full"
   
   implemented_features:

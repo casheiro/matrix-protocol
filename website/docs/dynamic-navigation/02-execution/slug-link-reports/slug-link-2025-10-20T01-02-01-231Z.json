@@ -2233,8 +2233,8 @@
             "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-payment-processing-006.yaml.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml.md"
           }
         ],
         "nonConformPaths": [
@@ -2271,8 +2271,8 @@
             "segment": "index.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "segment": "MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "segment": "moc-squad-payments.yaml.md"
           },
           {
             "href": "../../unstructured/",
@@ -2305,8 +2305,8 @@
       "linkAnalysis": {
         "broken": [
           {
-            "href": "../MOC_SQUAD_PAYMENTS.yaml",
-            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../moc-squad-payments.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml.md"
           }
         ],
         "nonConformPaths": [
@@ -2331,8 +2331,8 @@
             "segment": "index.md"
           },
           {
-            "href": "../MOC_SQUAD_PAYMENTS.yaml",
-            "segment": "MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../moc-squad-payments.yaml",
+            "segment": "moc-squad-payments.yaml.md"
           },
           {
             "href": "../../../frameworks/mef/",
@@ -2373,8 +2373,8 @@
             "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-user-onboarding-005.yaml.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml.md"
           }
         ],
         "nonConformPaths": [
@@ -2407,8 +2407,8 @@
             "segment": "index.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "segment": "MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "segment": "moc-squad-payments.yaml.md"
           },
           {
             "href": "../../unstructured/",
@@ -2465,8 +2465,8 @@
             "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-monitoring-setup-012.yaml.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml.md"
           }
         ],
         "nonConformPaths": [
@@ -2503,8 +2503,8 @@
             "segment": "index.md"
           },
           {
-            "href": "../../MOC_SQUAD_PAYMENTS.yaml",
-            "segment": "MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../../moc-squad-payments.yaml",
+            "segment": "moc-squad-payments.yaml.md"
           },
           {
             "href": "../../unstructured/",
@@ -2601,8 +2601,8 @@
             "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/procedure-multiple-versions.md"
           },
           {
-            "href": "../MOC_SQUAD_PAYMENTS.yaml",
-            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../moc-squad-payments.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.yaml.md"
           },
           {
             "href": "../../../manual/versioning/",
@@ -2671,8 +2671,8 @@
             "segment": "index.md"
           },
           {
-            "href": "../MOC_SQUAD_PAYMENTS.yaml",
-            "segment": "MOC_SQUAD_PAYMENTS.yaml.md"
+            "href": "../moc-squad-payments.yaml",
+            "segment": "moc-squad-payments.yaml.md"
           },
           {
             "href": "../../../frameworks/mef/",

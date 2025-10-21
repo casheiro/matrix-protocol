@@ -17,7 +17,7 @@ Esta secao apresenta **17 UKIs (Unidades de Conhecimento Integravel)** criados s
 ## 📊 Visao Geral da Estruturacao
 
 ### 🏗️ Fundacao: MOC (Matrix Ontology Catalog)
-Todos os UKIs seguem a ontologia organizacional definida em `MOC_SQUAD_PAYMENTS.yaml`, garantindo:
+Todos os UKIs seguem a ontologia organizacional definida em `moc-squad-payments.yaml`, garantindo:
 - ✅ **Consistencia taxonomica** - Todos referenciam os mesmos nos MOC
 - ✅ **Governanca clara** - Autoridade e validacao definidas por hierarquia
 - ✅ **Escalabilidade** - Estrutura reutilizavel para outras squads

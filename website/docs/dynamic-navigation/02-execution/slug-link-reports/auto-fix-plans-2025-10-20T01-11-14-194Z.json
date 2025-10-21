@@ -58,7 +58,7 @@
       "file": "en/docs/examples/knowledge/unstructured/index.md",
       "updates": [
         {
-          "from": "../MOC_SQUAD_PAYMENTS.yaml",
+          "from": "../moc-squad-payments.yaml",
           "to": "../MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -67,7 +67,7 @@
       "file": "en/docs/examples/knowledge/structured/technical-patterns/index.md",
       "updates": [
         {
-          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "from": "../../moc-squad-payments.yaml",
           "to": "../../MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -76,7 +76,7 @@
       "file": "en/docs/examples/knowledge/structured/procedures/index.md",
       "updates": [
         {
-          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "from": "../../moc-squad-payments.yaml",
           "to": "../../MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -85,7 +85,7 @@
       "file": "en/docs/examples/knowledge/structured/index.md",
       "updates": [
         {
-          "from": "../MOC_SQUAD_PAYMENTS.yaml",
+          "from": "../moc-squad-payments.yaml",
           "to": "../MOC-SQUAD-PAYMENTS.yaml"
         }
       ]
@@ -94,7 +94,7 @@
       "file": "en/docs/examples/knowledge/structured/business-rules/index.md",
       "updates": [
         {
-          "from": "../../MOC_SQUAD_PAYMENTS.yaml",
+          "from": "../../moc-squad-payments.yaml",
           "to": "../../MOC-SQUAD-PAYMENTS.yaml"
         }
       ]

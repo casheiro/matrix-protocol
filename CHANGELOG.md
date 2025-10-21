@@ -108,7 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **[MEF]** UKI format corrected on line 64 (EN + PT)
   - **Before:** `uki:[domain_ref]:[type_ref]:[slug]`
   - **After:** `uki:[scope_ref]:[type_ref]:[slug]`
-- **[MOC]** Hierarchical levels corrected in `MOC_SQUAD_PAYMENTS.yaml`
+- **[MOC]** Hierarchical levels corrected in `moc-squad-payments.yaml`
   - **organization:** level 0 (root)
   - **tribe-commerce:** level 1 (intermediate)
   - **squad-payments:** level 2 (most specific)

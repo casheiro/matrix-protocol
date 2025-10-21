@@ -20,7 +20,7 @@ This section demonstrates a complete transformation from unstructured organizati
 
 - **17 compliant UKIs** across business, technical, and procedural domains
 - **Complete semantic relationships** between knowledge units
-- **Organizational MOC** (`MOC_SQUAD_PAYMENTS.yaml`) as governance foundation
+- **Organizational MOC** (`moc-squad-payments.yaml`) as governance foundation
 - **Audit trails** and version control for all knowledge evolution
 
 ## 📋 Content Structure
@@ -89,14 +89,14 @@ This section demonstrates a complete transformation from unstructured organizati
 
 ### Navigation Tips:
 - Each UKI shows complete MEF v1.0.0 compliance
-- All `*_ref` fields reference `MOC_SQUAD_PAYMENTS.yaml` nodes
+- All `*_ref` fields reference `moc-squad-payments.yaml` nodes
 - Semantic versioning tracks knowledge evolution
 - Relationship types follow Matrix Protocol standards
 
 ## 📖 Related Resources
 
 - [Unstructured Knowledge Examples](../unstructured/) - Original chaotic state
-- [MOC_SQUAD_PAYMENTS.yaml](../moc-squad-payments.md) - Organizational taxonomy
+- [moc-squad-payments.yaml](../moc-squad-payments.md) - Organizational taxonomy
 - [MEF Specification](../../../frameworks/mef/) - Knowledge structuring framework
 - [Implementation Templates](../../../manual/templates/) - Ready-to-use organizational templates
 

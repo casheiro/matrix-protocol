@@ -129,8 +129,8 @@ export const useMatrixLinks = () => {
     // Downloads - Templates principais (existentes)
     'moc-starter-template': {
       type: 'download',
-      path: 'quick-start/MOC_STARTER_TEMPLATE.yaml',
-      filename: 'MOC_STARTER_TEMPLATE.yaml'
+      path: 'quick-start/moc-starter-template.yaml',
+      filename: 'moc-starter-template.yaml'
     },
     'moc-starter-template-pt': {
       type: 'download',
@@ -141,30 +141,30 @@ export const useMatrixLinks = () => {
     // Downloads - Template unificado (normativo)
     'moc-unified-structure': {
       type: 'download',
-      path: 'templates/MOC_UNIFIED_STRUCTURE.yaml',
-      filename: 'MOC_UNIFIED_STRUCTURE.yaml'
+      path: 'templates/moc-unified-structure.yaml',
+      filename: 'moc-unified-structure.yaml'
     },
 
     // Downloads - Templates organizacionais por tamanho
     'moc-startup': {
       type: 'download',
-      path: 'templates/MOC_STARTUP.yaml',
-      filename: 'MOC_STARTUP.yaml'
+      path: 'templates/moc-startup.yaml',
+      filename: 'moc-startup.yaml'
     },
     'moc-scaleup': {
       type: 'download',
-      path: 'templates/MOC_SCALEUP.yaml',
-      filename: 'MOC_SCALEUP.yaml'
+      path: 'templates/moc-scaleup.yaml',
+      filename: 'moc-scaleup.yaml'
     },
     'moc-enterprise': {
       type: 'download',
-      path: 'templates/MOC_ENTERPRISE.yaml',
-      filename: 'MOC_ENTERPRISE.yaml'
+      path: 'templates/moc-enterprise.yaml',
+      filename: 'moc-enterprise.yaml'
     },
     'moc-corporation': {
       type: 'download',
-      path: 'templates/MOC_CORPORATION.yaml',
-      filename: 'MOC_CORPORATION.yaml'
+      path: 'templates/moc-corporation.yaml',
+      filename: 'moc-corporation.yaml'
     },
 
     // Downloads - Guias de implementação (language-aware)

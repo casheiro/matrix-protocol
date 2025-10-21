@@ -1,15 +1,15 @@
 ---
 title: "Moc Enterprise"
-description: "Wrapper page for YAML asset MOC_ENTERPRISE.yaml"
+description: "Wrapper page for YAML asset moc-enterprise.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml`
+> Source YAML: `en/docs/manual/templates/enterprise/moc-enterprise.yaml`
 
-**Open in Viewer:** [Moc Enterprise](/en/docs/viewer?file=/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml)
+**Open in Viewer:** [Moc Enterprise](/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml)
 
 > 📄 Type: YAML • 📦 Size: 15.0 KB • 🕒 Last updated: 2025-10-12
 
@@ -427,7 +427,7 @@ implementation_notes:
 
 unified_structure_compliance:
   template_version: "enterprise-v1.0"
-  base_structure: "MOC_UNIFIED_STRUCTURE.yaml v1.0"
+  base_structure: "moc-unified-structure.yaml v1.0"
   compliance_level: "full"
   
   implemented_features:

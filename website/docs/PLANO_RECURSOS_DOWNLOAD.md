@@ -13,9 +13,9 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 ### ✅ Arquivos EXISTENTES (21 arquivos)
 
 #### 1. Quick Start Templates
-- ✅ `/downloads/quick-start/MOC_BASIC_TEMPLATE.yaml`
+- ✅ `/downloads/quick-start/moc-basic-template.yaml`
 - ✅ `/downloads/quick-start/MOC_BASIC_TEMPLATE_PT.yaml`
-- ✅ `/downloads/quick-start/MOC_STARTER_TEMPLATE.yaml`
+- ✅ `/downloads/quick-start/moc-starter-template.yaml`
 - ✅ `/downloads/quick-start/MOC_STARTER_TEMPLATE_PT.yaml`
 
 #### 2. Templates Organizacionais
@@ -23,7 +23,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 - ✅ `/downloads/templates/MOC_SCALEUP_TEMPLATE.yaml`
 - ✅ `/downloads/templates/MOC_ENTERPRISE_TEMPLATE.yaml`
 - ✅ `/downloads/templates/MOC_CORPORATION_TEMPLATE.yaml`
-- ✅ `/downloads/templates/MOC_UNIFIED_STRUCTURE.yaml`
+- ✅ `/downloads/templates/moc-unified-structure.yaml`
 
 #### 3. Guias de Implementação
 - ✅ `/downloads/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md`
@@ -79,7 +79,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 
 ## 🔧 PROBLEMAS IDENTIFICADOS NOS ARQUIVOS EXISTENTES
 
-### 1. MOC_BASIC_TEMPLATE.yaml - Precisa atualização
+### 1. moc-basic-template.yaml - Precisa atualização
 - **Problema**: Não segue a estrutura unificada v1.0
 - **Faltando**: Hierarquia `evaluation_criteria` (obrigatória segundo especificação MOC)
 - **Ajuste Necessário**: 
@@ -87,7 +87,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
   - Adicionar seção de conformidade com unified structure
   - Manter simplicidade (3 níveis de complexidade)
 
-### 2. MOC_STARTER_TEMPLATE.yaml - Precisa revisão
+### 2. moc-starter-template.yaml - Precisa revisão
 - **Problema**: Formato antigo com múltiplos configs em um único arquivo
 - **Sugestão**: 
   - Manter como exemplo legado para referência
@@ -98,7 +98,7 @@ Este documento mapeia todos os recursos de download da página de recursos do Ma
 
 ### FASE 1: Ajustar Templates Existentes (Prioridade Alta)
 
-#### 1.1 Atualizar MOC_BASIC_TEMPLATE.yaml
+#### 1.1 Atualizar moc-basic-template.yaml
 ```yaml
 
 
@@ -125,7 +125,7 @@ unified_structure_compliance:
 ```
 
 
-#### 1.2 Revisar MOC_STARTER_TEMPLATE.yaml
+#### 1.2 Revisar moc-starter-template.yaml
 - Adicionar header comment:
 ```yaml
 
@@ -384,7 +384,7 @@ Documentação:
 
 ## ⚡ QUICK WINS (Implementar Primeiro)
 
-1. **Ajustar MOC_BASIC_TEMPLATE.yaml** (30 min)
+1. **Ajustar moc-basic-template.yaml** (30 min)
    - Adicionar evaluation_criteria
    - Adicionar conformidade
 
@@ -441,6 +441,6 @@ Documentação:
 ## 📚 REFERÊNCIAS
 
 - [Matrix Protocol v1.0 Specification](../content/pt/protocol/index.md)
-- [MOC Unified Structure v1.0](../public/downloads/templates/MOC_UNIFIED_STRUCTURE.yaml)
+- [MOC Unified Structure v1.0](../public/downloads/templates/moc-unified-structure.yaml)
 - [Página de Recursos](../app/pages/resources.vue)
 - [Documentação dos Frameworks](../content/pt/frameworks/)

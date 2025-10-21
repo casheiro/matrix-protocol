@@ -3,37 +3,37 @@
   "applyMode": true,
   "wrapperPlans": [
     {
-      "yaml": "pt/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+      "yaml": "pt/docs/quickstart/templates/moc-starter-template.yaml",
       "wrapper": "pt/docs/quickstart/templates/moc-starter-template.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+      "yaml": "pt/docs/manual/templates/unified/moc-unified-structure.yaml",
       "wrapper": "pt/docs/manual/templates/unified/moc-unified-structure.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/startup/MOC_STARTUP.yaml",
+      "yaml": "pt/docs/manual/templates/startup/moc-startup.yaml",
       "wrapper": "pt/docs/manual/templates/startup/moc-startup.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+      "yaml": "pt/docs/manual/templates/scaleup/moc-scaleup.yaml",
       "wrapper": "pt/docs/manual/templates/scaleup/moc-scaleup.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+      "yaml": "pt/docs/manual/templates/enterprise/moc-enterprise.yaml",
       "wrapper": "pt/docs/manual/templates/enterprise/moc-enterprise.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+      "yaml": "pt/docs/manual/templates/corporation/moc-corporation.yaml",
       "wrapper": "pt/docs/manual/templates/corporation/moc-corporation.md",
       "exists": true
     },
     {
-      "yaml": "pt/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+      "yaml": "pt/docs/manual/templates/basic/moc-basic-template.yaml",
       "wrapper": "pt/docs/manual/templates/basic/moc-basic-template.md",
       "exists": true
     },
@@ -123,42 +123,42 @@
       "exists": true
     },
     {
-      "yaml": "pt/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+      "yaml": "pt/docs/examples/knowledge/moc-squad-payments.yaml",
       "wrapper": "pt/docs/examples/knowledge/moc-squad-payments.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/quickstart/templates/MOC_STARTER_TEMPLATE.yaml",
+      "yaml": "en/docs/quickstart/templates/moc-starter-template.yaml",
       "wrapper": "en/docs/quickstart/templates/moc-starter-template.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/unified/MOC_UNIFIED_STRUCTURE.yaml",
+      "yaml": "en/docs/manual/templates/unified/moc-unified-structure.yaml",
       "wrapper": "en/docs/manual/templates/unified/moc-unified-structure.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/startup/MOC_STARTUP.yaml",
+      "yaml": "en/docs/manual/templates/startup/moc-startup.yaml",
       "wrapper": "en/docs/manual/templates/startup/moc-startup.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/scaleup/MOC_SCALEUP.yaml",
+      "yaml": "en/docs/manual/templates/scaleup/moc-scaleup.yaml",
       "wrapper": "en/docs/manual/templates/scaleup/moc-scaleup.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/enterprise/MOC_ENTERPRISE.yaml",
+      "yaml": "en/docs/manual/templates/enterprise/moc-enterprise.yaml",
       "wrapper": "en/docs/manual/templates/enterprise/moc-enterprise.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/corporation/MOC_CORPORATION.yaml",
+      "yaml": "en/docs/manual/templates/corporation/moc-corporation.yaml",
       "wrapper": "en/docs/manual/templates/corporation/moc-corporation.md",
       "exists": true
     },
     {
-      "yaml": "en/docs/manual/templates/basic/MOC_BASIC_TEMPLATE.yaml",
+      "yaml": "en/docs/manual/templates/basic/moc-basic-template.yaml",
       "wrapper": "en/docs/manual/templates/basic/moc-basic-template.md",
       "exists": true
     },
@@ -248,7 +248,7 @@
       "exists": true
     },
     {
-      "yaml": "en/docs/examples/knowledge/MOC_SQUAD_PAYMENTS.yaml",
+      "yaml": "en/docs/examples/knowledge/moc-squad-payments.yaml",
       "wrapper": "en/docs/examples/knowledge/moc-squad-payments.md",
       "exists": true
     }

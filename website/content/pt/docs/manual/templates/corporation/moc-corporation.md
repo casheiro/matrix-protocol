@@ -1,15 +1,15 @@
 ---
 title: "Moc Corporation"
-description: "Página wrapper para o asset YAML MOC_CORPORATION.yaml"
+description: "Página wrapper para o asset YAML moc-corporation.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `pt/docs/manual/templates/corporation/MOC_CORPORATION.yaml`
+> Source YAML: `pt/docs/manual/templates/corporation/moc-corporation.yaml`
 
-**Abrir no Visualizador:** [Moc Corporation](/pt/docs/viewer?file=/docs/manual/templates/corporation/MOC_CORPORATION.yaml)
+**Abrir no Visualizador:** [Moc Corporation](/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml)
 
 > 📄 Tipo: YAML • 📦 Tamanho: 17.5 KB • 🕒 Última modificação: 2025-10-11
 
@@ -468,7 +468,7 @@ implementation_notes:
 
 unified_structure_compliance:
   template_version: "corporation-v1.0"
-  base_structure: "MOC_UNIFIED_STRUCTURE.yaml v1.0"
+  base_structure: "moc-unified-structure.yaml v1.0"
   compliance_level: "full"
   
   implemented_features:

@@ -1,15 +1,15 @@
 ---
 title: "Moc Startup"
-description: "Página wrapper para o asset YAML MOC_STARTUP.yaml"
+description: "Página wrapper para o asset YAML moc-startup.yaml"
 layout: "docs"
 sidebar: true
 toc: true
 navigation: true
 ---
 
-> Source YAML: `pt/docs/manual/templates/startup/MOC_STARTUP.yaml`
+> Source YAML: `pt/docs/manual/templates/startup/moc-startup.yaml`
 
-**Abrir no Visualizador:** [Moc Startup](/pt/docs/viewer?file=/docs/manual/templates/startup/MOC_STARTUP.yaml)
+**Abrir no Visualizador:** [Moc Startup](/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml)
 
 > 📄 Tipo: YAML • 📦 Tamanho: 9.8 KB • 🕒 Última modificação: 2025-10-11
 
@@ -299,7 +299,7 @@ implementation_notes:
 
 unified_structure_compliance:
   template_version: "startup-v1.0"
-  base_structure: "MOC_UNIFIED_STRUCTURE.yaml v1.0"
+  base_structure: "moc-unified-structure.yaml v1.0"
   compliance_level: "full"
   
   implemented_features:
