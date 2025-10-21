@@ -1,12 +1,15 @@
 ---
 title: Comparação de conhecimento
-description: Demonstração prática da transformação de conhecimento caótico em estruturas MEF organizadas através de exemplo real de squad de pagamentos
+description: Demonstração prática da transformação de conhecimento caótico em
+  estruturas MEF organizadas através de exemplo real de squad de pagamentos
 icon: i-heroicons-rectangle-stack
 layout: docs
 sidebar: true
 toc: true
+navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Comparação de conhecimento: não estruturado vs MEF-estruturado
 
 Este exemplo demonstra a eficiência do **Matrix Embedding Framework (MEF)** através de uma comparação prática entre conhecimento não estruturado e estruturado de uma squad de pagamentos de e-commerce.

@@ -1,13 +1,15 @@
 ---
-title: "Integration Guide"
-description: "Integration patterns and examples between Matrix Protocol frameworks, demonstrating how MEF, ZOF, OIF and MAL work together."
-icon: "i-heroicons-puzzle-piece"
+title: Integration Guide
+description: Integration patterns and examples between Matrix Protocol
+  frameworks, demonstrating how MEF, ZOF, OIF and MAL work together.
+icon: i-heroicons-puzzle-piece
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Matrix Protocol — Integration Diagram
 **Acronym:** Integration Diagram  
 **Version:** 0.0.1-beta  

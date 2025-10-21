@@ -1,13 +1,15 @@
 ---
 title: TechCorp Organizational Example
-description: Complete example of Matrix Protocol organizational configuration at TechCorp, demonstrating practical structuring and implementation
+description: Complete example of Matrix Protocol organizational configuration at
+  TechCorp, demonstrating practical structuring and implementation
 icon: i-heroicons-building-storefront
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # TechCorp Digital Transformation
 ## Complete Example of Matrix Protocol Organizational Implementation
 

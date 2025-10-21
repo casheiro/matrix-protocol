@@ -1,12 +1,14 @@
 ---
-title: "Moc Starter Template"
-description: "Página wrapper para o asset YAML moc-starter-template.yaml"
-layout: "docs"
+title: Moc Starter Template
+description: Página wrapper para o asset YAML moc-starter-template.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: pt
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `pt/docs/quickstart/templates/moc-starter-template.yaml`
 
 **Abrir no Visualizador:** [Moc Starter Template](/pt/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml)

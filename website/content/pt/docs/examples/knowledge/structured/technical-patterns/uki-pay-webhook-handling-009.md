@@ -1,12 +1,14 @@
 ---
-title: "Uki Pay Webhook Handling 009"
-description: "Página wrapper para o asset YAML uki-pay-webhook-handling-009.yaml"
-layout: "docs"
+title: Uki Pay Webhook Handling 009
+description: Página wrapper para o asset YAML uki-pay-webhook-handling-009.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-code-bracket
+lang: pt
+last_updated: 2025-10-21
 ---
-
 > Source YAML: `pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml`
 
 **Abrir no Visualizador:** [Uki Pay Webhook Handling 009](/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml)

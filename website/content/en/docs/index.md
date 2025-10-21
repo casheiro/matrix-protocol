@@ -5,8 +5,10 @@ icon: i-heroicons-book-open
 layout: docs
 sidebar: true
 toc: true
+navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Matrix Protocol Documentation
 
 Welcome to the complete documentation center for Matrix Protocol. Here you'll find everything you need to understand, implement, and use the protocol.

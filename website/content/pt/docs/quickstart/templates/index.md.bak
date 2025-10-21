@@ -1,13 +1,14 @@
 ---
-title: "Templates de Início Rápido"
-description: "Templates prontos para uso imediato do Matrix Protocol em diferentes cenários"
-icon: "i-heroicons-document-duplicate"
-layout: "docs"
+title: Templates de Início Rápido
+description: Templates prontos para uso imediato do Matrix Protocol em diferentes cenários
+icon: i-heroicons-document-duplicate
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Templates de Início Rápido
 
 Templates prontos para implementação imediata do Matrix Protocol, organizados por cenário de uso e porte organizacional.

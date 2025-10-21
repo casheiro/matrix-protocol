@@ -1,13 +1,20 @@
 ---
 title: Multi-Hierarchical UKI Templates
-description: UKI templates demonstrating cross-cutting organizational relationships and multi-hierarchical knowledge patterns
+description: UKI templates demonstrating cross-cutting organizational
+  relationships and multi-hierarchical knowledge patterns
 icon: i-heroicons-squares-plus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Multi-Hierarchical UKI Templates
 **UKI Templates Demonstrating Cross-Cutting Organizational Relationships**
 

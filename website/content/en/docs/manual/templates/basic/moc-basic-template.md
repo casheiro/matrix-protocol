@@ -1,12 +1,19 @@
 ---
-title: "Moc Basic Template"
-description: "Wrapper page for YAML asset moc-basic-template.yaml"
-layout: "docs"
+title: Moc Basic Template
+description: Wrapper page for YAML asset moc-basic-template.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 > Source YAML: `en/docs/manual/templates/basic/moc-basic-template.yaml`
 
 **Open in Viewer:** [Moc Basic Template](/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml)

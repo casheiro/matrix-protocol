@@ -9,7 +9,7 @@ toc: true
 navigation: true
 order: 1
 lang: pt
-last_updated: 2025-10-20
+last_updated: 2025-10-21
 ---
 # Pilot 01 — Frontmatter Conformance
 

@@ -7,8 +7,9 @@ sidebar: true
 toc: true
 navigation: true
 order: 3
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Pilot 03 — Editorial Checklist
 
 Texto curto validando estrutura editorial padrão.

@@ -1,13 +1,20 @@
 ---
-title: "Templates Corporativos"
-description: "Templates específicos para grandes corporações com estruturas complexas e múltiplas divisões"
-icon: "i-heroicons-building-office-2"
-layout: "docs"
+title: Templates Corporativos
+description: Templates específicos para grandes corporações com estruturas
+  complexas e múltiplas divisões
+icon: i-heroicons-building-office-2
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Templates Corporativos
 
 Templates específicos para grandes corporações com estruturas complexas e múltiplas divisões, projetados para governança robusta e integração entre departamentos.

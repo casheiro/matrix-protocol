@@ -1,12 +1,19 @@
 ---
-title: "Moc Enterprise"
-description: "Wrapper page for YAML asset moc-enterprise.yaml"
-layout: "docs"
+title: Moc Enterprise
+description: Wrapper page for YAML asset moc-enterprise.yaml
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+icon: i-heroicons-document-duplicate
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 > Source YAML: `en/docs/manual/templates/enterprise/moc-enterprise.yaml`
 
 **Open in Viewer:** [Moc Enterprise](/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml)

@@ -83,30 +83,17 @@ class MetadataPattern {
  * Extrai frontmatter de um arquivo markdown
  */
 import Ajv from 'ajv'
+import YAML from 'yaml'
 const schemaPath = path.join(__dirname, './frontmatter-schema.json')
 const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf-8'))
 function extractFrontmatter(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf-8')
     const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
-    
-    if (!frontmatterMatch) {
-      return null
-    }
+    if (!frontmatterMatch) return null
 
     const frontmatterText = frontmatterMatch[1]
-    const metadata = {}
-    
-    // Parser simples de YAML (para as propriedades que nos interessam)
-    const lines = frontmatterText.split('\n')
-    for (const line of lines) {
-      const match = line.match(/^(\w+):\s*(.*)$/)
-      if (match) {
-        const [, key, value] = match
-        metadata[key] = value.replace(/^["']|["']$/g, '') // Remove aspas
-      }
-    }
-    
+    const metadata = YAML.parse(frontmatterText) || {}
     return metadata
   } catch (error) {
     console.warn(`Erro ao extrair frontmatter de ${filePath}:`, error.message)

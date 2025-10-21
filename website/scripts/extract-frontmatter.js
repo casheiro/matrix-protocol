@@ -6,11 +6,11 @@
  * Ricardo Lima - Nuxt Specialist
  */
 
-const fs = require('fs');
-const path = require('path');
-const yaml = require('js-yaml');
+import fs from 'fs'
+import path from 'path'
+import YAML from 'yaml'
 
-const CONTENT_ROOT = '/home/neto/projects/matrix-protocol/website/content';
+const CONTENT_ROOT = '/home/neto/projects/matrix-protocol/website/content'
 
 class FrontmatterExtractor {
     constructor() {
@@ -44,7 +44,7 @@ class FrontmatterExtractor {
                 return null;
             }
             
-            return yaml.load(frontmatterMatch[1]);
+            return YAML.parse(frontmatterMatch[1]);
         } catch (error) {
             console.error(`Erro ao extrair frontmatter de ${filePath}:`, error.message);
             return null;
@@ -329,15 +329,18 @@ class FrontmatterExtractor {
     }
 }
 
-// Executar se chamado diretamente
-if (require.main === module) {
-    try {
-        const extractor = new FrontmatterExtractor();
-        extractor.run();
-    } catch (error) {
-        console.error('❌ Erro na execução:', error);
-        process.exit(1);
-    }
+async function main() {
+  const extractor = new FrontmatterExtractor();
+  extractor.run();
 }
 
-module.exports = FrontmatterExtractor;
+if (import.meta.url === `file://${process.argv[1]}`) {
+  try {
+    await main();
+  } catch (error) {
+    console.error('❌ Erro na execução:', error);
+    process.exit(1);
+  }
+}
+
+export default FrontmatterExtractor;

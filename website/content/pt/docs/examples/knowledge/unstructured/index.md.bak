@@ -1,12 +1,15 @@
 ---
 title: Conhecimento Nao Estruturado
-description: 12 documentos caoticos demonstrando os problemas tipicos de conhecimento disperso antes da aplicacao do MEF
+description: 12 documentos caoticos demonstrando os problemas tipicos de
+  conhecimento disperso antes da aplicacao do MEF
 icon: i-heroicons-document-minus
 layout: docs
 sidebar: true
 toc: true
+navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Conhecimento Nao Estruturado
 
 Esta secao apresenta **12 documentos** que demonstram os problemas tipicos de conhecimento organizacional caotico: informacoes dispersas, contraditorias, desatualizadas e sem governanca clara.

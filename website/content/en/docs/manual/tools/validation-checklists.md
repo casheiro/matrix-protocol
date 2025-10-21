@@ -1,13 +1,15 @@
 ---
 title: Validation Checklists
-description: Practical checklists and actionable validation criteria for each Matrix Protocol implementation phase
+description: Practical checklists and actionable validation criteria for each
+  Matrix Protocol implementation phase
 icon: i-heroicons-check-circle
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Validation Checklists - Matrix Protocol Implementation
 **Practical checklists based on TechCorp experience and 12 organizations**
 

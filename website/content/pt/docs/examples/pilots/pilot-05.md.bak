@@ -7,8 +7,9 @@ sidebar: true
 toc: true
 navigation: true
 order: 5
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Pilot 05 — Icon Consistency
 
 Confirmar que ícones seguem o padrão `i-heroicons-*`.

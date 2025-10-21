@@ -1,13 +1,15 @@
 ---
-title: "Quick Start Templates"
-description: "Ready-to-use templates for immediate Matrix Protocol implementation in different scenarios"
-icon: "i-heroicons-document-duplicate"
-layout: "docs"
+title: Quick Start Templates
+description: Ready-to-use templates for immediate Matrix Protocol implementation
+  in different scenarios
+icon: i-heroicons-document-duplicate
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Quick Start Templates
 
 Ready-to-use templates for immediate Matrix Protocol implementation, organized by usage scenario and organizational size for rapid deployment.

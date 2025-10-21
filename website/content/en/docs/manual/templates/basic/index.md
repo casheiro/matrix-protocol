@@ -1,13 +1,20 @@
 ---
-title: "Basic Templates"
-description: "Essential templates for initial Matrix Protocol implementation in small and medium organizations"
-icon: "i-heroicons-building-storefront"
-layout: "docs"
+title: Basic Templates
+description: Essential templates for initial Matrix Protocol implementation in
+  small and medium organizations
+icon: i-heroicons-building-storefront
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Basic Templates
 
 Essential templates for initial Matrix Protocol implementation in small and medium organizations, focusing on simple organizational structures with few hierarchical levels.

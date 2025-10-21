@@ -14,7 +14,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const projectRoot = path.resolve(__dirname, '..')
 
-const LOCALE = 'pt'
+// Support CLI arg: --locale=pt|en (default: pt)
+const argLocale = (process.argv.find(a => a.startsWith('--locale=')) || '').split('=')[1] || 'pt'
+const LOCALE = argLocale
 const CONTENT_ROOT = path.join(projectRoot, 'content', LOCALE, 'docs')
 const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution')
 
@@ -163,7 +165,7 @@ async function main() {
     skipped: []
   }
 
-  // 1) Normalizar todos os .md em pt/docs
+  // 1) Normalizar todos os .md na base do locale
   const mdFiles = walk(CONTENT_ROOT)
   for (const file of mdFiles) {
     try { normalizeFile(file, report) } catch (e) {
@@ -184,10 +186,10 @@ async function main() {
 
   // 3) Salvar relatório
   ensureDir(OUTPUT_DIR)
-  const latestFile = path.join(OUTPUT_DIR, 'frontmatter-normalization-latest.json')
+  const latestFile = path.join(OUTPUT_DIR, `frontmatter-normalization-latest-${LOCALE}.json`)
   fs.writeFileSync(latestFile, JSON.stringify(report, null, 2))
 
-  console.log('✅ Frontmatter normalization concluída')
+  console.log(`✅ Frontmatter normalization concluída para locale: ${LOCALE}`)
   console.log(`📄 Atualizados: ${report.updated.length}`)
   console.log(`🆕 Criados: ${report.created.length}`)
   console.log(`⏭️ Ignorados: ${report.skipped.length}`)

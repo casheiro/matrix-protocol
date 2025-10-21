@@ -7,8 +7,9 @@ sidebar: true
 toc: true
 navigation: true
 order: 9
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Pilot 09 — Order Field
 
 Verificar ordenação relativa via campo `order`.

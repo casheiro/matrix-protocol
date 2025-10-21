@@ -1,13 +1,15 @@
 ---
-title: "Structured MEF Knowledge"
-description: "Complete demonstration of knowledge organized according to MEF v1.0.0 specification"
-icon: "i-heroicons-squares-2x2"
-layout: "docs"
+title: Structured MEF Knowledge
+description: Complete demonstration of knowledge organized according to MEF
+  v1.0.0 specification
+icon: i-heroicons-squares-2x2
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Structured MEF Knowledge
 
 Complete demonstration of knowledge organized according to MEF v1.0.0 specification, showing how chaotic information transforms into governed, traceable knowledge structures.

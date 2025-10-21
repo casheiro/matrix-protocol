@@ -1,13 +1,15 @@
 ---
 title: Tools
-description: Practical checklists, validation tools and resources to monitor Matrix Protocol implementation
+description: Practical checklists, validation tools and resources to monitor
+  Matrix Protocol implementation
 icon: i-heroicons-wrench-screwdriver
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Tools and Checklists
 
 This section contains practical tools, checklists and resources to validate and monitor Matrix Protocol implementation in your organization.

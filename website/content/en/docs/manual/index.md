@@ -1,13 +1,14 @@
 ---
-title: "Implementation Manual"
-description: "Complete guide for implementing Matrix Protocol in your organization"
-icon: "i-heroicons-book-open"
-layout: "docs"
+title: Implementation Manual
+description: Complete guide for implementing Matrix Protocol in your organization
+icon: i-heroicons-book-open
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: en
+last_updated: 2025-10-21
 ---
-
 # Implementation Manual
 
 Complete guide for implementing Matrix Protocol in your organization, providing step-by-step instructions, templates, and tools for successful adoption of human-AI collaboration frameworks.

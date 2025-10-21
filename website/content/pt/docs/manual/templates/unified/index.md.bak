@@ -1,13 +1,19 @@
 ---
-title: "Templates Unificados"
-description: "Templates unificados combinando múltiplas abordagens para máxima flexibilidade"
-icon: "i-heroicons-squares-plus"
-layout: "docs"
+title: Templates Unificados
+description: Templates unificados combinando múltiplas abordagens para máxima flexibilidade
+icon: i-heroicons-squares-plus
+layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
+framework: MEF
+maturity: stable
+tags:
+  - manual
+  - templates
 ---
-
 # Templates Unificados
 
 Templates unificados combinando múltiplas abordagens para máxima flexibilidade, projetados para organizações híbridas com necessidades mistas e contextos diversos.

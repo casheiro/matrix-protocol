@@ -1,13 +1,14 @@
 ---
-title: "Unstructured Knowledge"
-description: "12 chaotic documents demonstrating typical problems of dispersed knowledge before applying MEF"
-icon: "i-heroicons-document-minus"
-layout: "docs"
+title: Unstructured Knowledge
+description: 12 chaotic documents demonstrating typical problems of dispersed
+  knowledge before applying MEF
+icon: i-heroicons-document-minus
+layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-20
+last_updated: 2025-10-21
 ---
 # Unstructured Knowledge
 

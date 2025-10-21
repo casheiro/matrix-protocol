@@ -1,13 +1,15 @@
 ---
 title: Exemplos
-description: Implementações práticas, casos organizacionais e exemplos concretos de uso do Matrix Protocol em diferentes contextos empresariais
+description: Implementações práticas, casos organizacionais e exemplos concretos
+  de uso do Matrix Protocol em diferentes contextos empresariais
 icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # Exemplos e Casos de Estudo
 
 Esta seção apresenta exemplos práticos, casos de estudo reais e implementações organizacionais do Matrix Protocol, demonstrando como aplicar os conceitos na prática.
@@ -15,7 +17,7 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 ## 🏢 Casos Organizacionais
 
 ### Exemplos Empresariais
-- **[Exemplo Organizacional TechCorp](./exemplo_organizacional_techcorp)** - Caso detalhado de implementação em empresa de tecnologia brasileira
+- **[Exemplo Organizacional TechCorp](./exemplo-organizacional-techcorp)** - Caso detalhado de implementação em empresa de tecnologia brasileira
 
 ## 📊 Tipos de Exemplos
 

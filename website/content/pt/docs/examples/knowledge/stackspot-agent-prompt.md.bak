@@ -6,8 +6,9 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
+lang: pt
+last_updated: 2025-10-20
 ---
-
 # StackSpot AI Agent System Prompt - E-commerce Payments Expert
 
 ## Agent Configuration
