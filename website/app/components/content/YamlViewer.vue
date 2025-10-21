@@ -9,16 +9,18 @@
           <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('viewer.document.yamlDocument') }}</p>
         </div>
       </div>
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 gap-y-2 flex-wrap w-full md:w-auto justify-between md:justify-end lg:flex-nowrap">
         <!-- Search & Navigation -->
         <UInput
+         v-if="isRawView"
           v-model="searchQuery"
           :placeholder="t('viewer.search.placeholder') || 'Search in document'"
           size="sm"
           icon="i-heroicons-magnifying-glass"
-          class="w-56"
+          class="min-w-0 flex-1 sm:flex-none w-40 sm:w-48 md:w-56"
         />
         <UButton
+         v-if="isRawView"
           variant="ghost"
           size="sm"
           icon="i-heroicons-chevron-up"
@@ -27,6 +29,7 @@
           :title="t('viewer.search.previous') || 'Previous'"
         />
         <UButton
+         v-if="isRawView"
           variant="ghost"
           size="sm"
           icon="i-heroicons-chevron-down"
@@ -34,9 +37,9 @@
           @click="nextMatch"
           :title="t('viewer.search.next') || 'Next'"
         />
-        <UBadge v-if="matchesCount > 0" color="primary" size="sm">{{ currentMatchDisplay }}</UBadge>
+        <UBadge v-if="isRawView && matchesCount > 0" color="primary" size="sm">{{ currentMatchDisplay }}</UBadge>
         <UButton
-          v-if="debouncedQuery"
+          v-if="isRawView && debouncedQuery"
           variant="ghost"
           size="sm"
           icon="i-heroicons-x-mark"
@@ -44,7 +47,7 @@
           :title="t('viewer.search.clear') || 'Clear'"
         />
         <!-- Section jump (top-level keys) -->
-        <select v-if="sectionOptions.length" v-model="selectedSection" @change="onSectionChange" class="h-8 px-2 rounded border text-sm bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white">
+        <select v-if="isRawView && sectionOptions.length" v-model="selectedSection" @change="onSectionChange" class="h-8 px-2 rounded border text-sm bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white">
           <option value="">{{ t('viewer.sections.jumpTo') || 'Jump to…' }}</option>
           <option v-for="opt in sectionOptions" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
         </select>
@@ -54,9 +57,12 @@
           variant="ghost"
           size="sm"
           icon="i-heroicons-eye"
+          class="ml-auto shrink-0"
           @click="toggleView"
+          :title="isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw')"
+          :aria-label="isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw')"
         >
-          {{ isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw') }}
+          <span class="hidden lg:inline">{{ isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw') }}</span>
         </UButton>
         
         <!-- Copy viewer link -->
@@ -65,8 +71,10 @@
           size="sm"
           icon="i-heroicons-link"
           @click="copyViewerLink"
+         :title="t('viewer.buttons.copyLink') || 'Copy link'"
+         :aria-label="t('viewer.buttons.copyLink') || 'Copy link'"
         >
-          {{ t('viewer.buttons.copyLink') || 'Copy link' }}
+          <span class="hidden lg:inline">{{ t('viewer.buttons.copyLink') || 'Copy link' }}</span>
         </UButton>
         
         <!-- Download file -->
@@ -75,8 +83,10 @@
           size="sm"
           icon="i-heroicons-arrow-down-tray"
           @click="downloadFile"
+         :title="t('viewer.buttons.download')"
+         :aria-label="t('viewer.buttons.download')"
         >
-          {{ t('viewer.buttons.download') }}
+          <span class="hidden lg:inline">{{ t('viewer.buttons.download') }}</span>
         </UButton>
       </div>
     </div>
