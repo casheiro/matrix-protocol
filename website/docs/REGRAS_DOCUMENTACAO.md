@@ -61,10 +61,11 @@ docs/
 
 ### 5. Padrões de Nomenclatura
 
-#### Arquivos:
-- **MAIÚSCULAS**: Para documentos principais (`INDEX.md`, `REGRAS_DOCUMENTACAO.md`)
-- **snake_case**: Para documentos específicos (`guia_instalacao.md`)
-- **kebab-case**: Para pastas (`configuracao-avancada/`)
+#### Arquivos e Pastas:
+- `kebab-case` minúsculo obrigatório para todos os arquivos `.md` e pastas.
+- `index.md` obrigatório em pastas com conteúdo.
+- Não permitir `snake_case`, espaços, acentos ou maiúsculas nos nomes.
+- Exemplos: `quickstart`, `manual/reference`, `frameworks/mef.md`.
 
 #### Estrutura de Arquivos:
 ```markdown
@@ -213,8 +214,8 @@ order: 0
   - `sidebar`, `toc`, `navigation`: valores booleanos.
   - `order`: inteiro não negativo.
 - Política de nomes:
-  - Pastas: `kebab-case` obrigatório.
-  - Arquivos: `kebab-case` ou `snake_case`.
+  - Pastas: `kebab-case` minúsculo obrigatório.
+  - Arquivos: `kebab-case` minúsculo obrigatório (sem underscores, espaços, acentos ou maiúsculas).
 - Validação automatizada:
   - Scripts: `website/scripts/content-audit.js` e `website/scripts/validation-automation.js`.
   - Esquema: `website/scripts/frontmatter-schema.json` (Ajv).

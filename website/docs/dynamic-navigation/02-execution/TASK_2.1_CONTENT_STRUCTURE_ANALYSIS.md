@@ -152,9 +152,9 @@ navigation: boolean          # Navigation inclusion (default: true)
 ### **File Name Consistency**
 ✅ **Naming Conventions:**
 - Index files: Always `index.md`
-- Content files: Descriptive kebab-case names
+- Content files: Descriptive kebab-case lowercase names only
 - Technical files: Framework acronyms (mef.md, zof.md, etc.)
-- Templates: Descriptive names with underscores for readability
+- Templates: Descriptive names in kebab-case lowercase (no underscores)
 
 ---
 

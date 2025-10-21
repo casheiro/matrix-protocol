@@ -208,14 +208,14 @@ function analyzeFrontmatterPatterns(structure, patterns = new Map(), report) {
         for (const seg of segments) {
           if (seg.endsWith('.md')) {
             const base = seg.replace(/\.md$/, '')
-            // Files: allow kebab-case or snake_case, English-only
-            if (!/^[a-z0-9_-]+$/.test(base)) {
-              namePolicyViolations.push({ segment: seg, rule: 'kebab-case or snake_case (content files)' })
+            // Files: enforce kebab-case lowercase only
+            if (!/^[a-z0-9-]+$/.test(base)) {
+              namePolicyViolations.push({ segment: seg, rule: 'kebab-case lowercase (content files)' })
             }
           } else {
-            // Directories: enforce kebab-case (no underscores), English-only
+            // Directories: enforce kebab-case lowercase only (no underscores)
             if (!/^[a-z0-9-]+$/.test(seg)) {
-              namePolicyViolations.push({ segment: seg, rule: 'kebab-case (directories)' })
+              namePolicyViolations.push({ segment: seg, rule: 'kebab-case lowercase (directories)' })
             }
           }
         }
