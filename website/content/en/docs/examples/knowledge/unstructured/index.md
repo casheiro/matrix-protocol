@@ -20,18 +20,18 @@ This section presents **12 documents** that demonstrate typical organizational k
 ## 📂 Problematic Documents
 
 ### 📋 Meeting Notes
-**[team-meeting-jan-2024.md](./team-meeting-jan-2024.md)**
+**[team-meeting-jan-2024.md](./team-meeting-jan-2024)**
 - **Context**: Squad planning meeting (January 2024)
 - **Problems**: Decisions not formally documented, lost action items
 - **Impact**: Disputes about what was decided
 
-**[team-meeting-mar-2024.md](./team-meeting-mar-2024.md)**
+**[team-meeting-mar-2024.md](./team-meeting-mar-2024)**
 - **Context**: March 2024 retrospective
 - **Problems**: Contradictions with previous decisions
 - **Impact**: Rework and confusion in the team
 
 ### 📖 Wiki Documentation
-**[confluence-payment-flow.md](./confluence-payment-flow.md)**
+**[confluence-payment-flow.md](./confluence-payment-flow)**
 - **Context**: Internal wiki about payment flows
 - **Problems**: Outdated (March 2022), author no longer at the company
 - **Impact**: Incorrect information being followed

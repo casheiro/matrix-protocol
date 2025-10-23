@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Texto curto validando estrutura editorial padrão.
 
 ## Recursos Relacionados
-- [Manual](../../manual/index.md)
+- [Manual](../../manual)

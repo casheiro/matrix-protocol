@@ -6,5 +6,15 @@
   "inicio": "start",
   "guia": "guide",
   "referencia": "reference",
-  "glossario": "glossary"
+  "glossario": "glossary",
+  "implementacao": "implementation",
+  "implementação": "implementation",
+  "fases": "phases",
+  "detalhadas": "detailed",
+  "exemplo": "example",
+  "organizacional": "organizational",
+  "exemplo-organizacional-techcorp": "organizational-example-techcorp",
+  "fases-implementacao-detalhadas": "implementation-phases-detailed",
+  "templates": "templates",
+  "knowledge": "knowledge"
 }

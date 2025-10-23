@@ -1,0 +1,2545 @@
+{
+  "timestamp": "2025-10-23T02:49:44.462Z",
+  "locales": [
+    "pt",
+    "en"
+  ],
+  "results": [
+    {
+      "file": "pt/docs/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 11
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/moc-squad-payments.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./slack-refunds-thread.txt",
+            "segment": "slack-refunds-thread.txt"
+          },
+          {
+            "href": "./random-notes-mixed.txt",
+            "segment": "random-notes-mixed.txt"
+          },
+          {
+            "href": "./developer-handover.txt",
+            "segment": "developer-handover.txt"
+          },
+          {
+            "href": "./postmortem-outage-dec.txt",
+            "segment": "postmortem-outage-dec.txt"
+          },
+          {
+            "href": "./security-audit-findings.txt",
+            "segment": "security-audit-findings.txt"
+          },
+          {
+            "href": "./pci-compliance-email.txt",
+            "segment": "pci-compliance-email.txt"
+          },
+          {
+            "href": "./jira-fraud-detection.txt",
+            "segment": "jira-fraud-detection.txt"
+          },
+          {
+            "href": "./onboarding-checklist.txt",
+            "segment": "onboarding-checklist.txt"
+          }
+        ],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 3
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-01.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-02.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-03.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-04.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 2
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-05.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-06.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-07.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-08.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-09.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/examples/pilots/pilot-10.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 22
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mal.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mef-ontology.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/mef.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/moc.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/oif.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/frameworks/zof.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/glossary.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/implementation.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "manual/tools/validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 19
+      }
+    },
+    {
+      "file": "pt/docs/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          },
+          {
+            "href": "./glossary",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          }
+        ],
+        "linkCount": 27
+      }
+    },
+    {
+      "file": "pt/docs/integration.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./exemplo-organizacional-techcorp",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/examples/exemplo-organizacional-techcorp.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./exemplo-organizacional-techcorp",
+            "segment": "exemplo-organizacional-techcorp.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/examples/organizational-example-techcorp.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "#capítulo-1-assessment-organizacional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-1-assessment-organizacional"
+          },
+          {
+            "href": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-2-mapeamento-de-sistemas-e-conhecimento"
+          },
+          {
+            "href": "#capítulo-3-análise-de-fluxos-de-decisão",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-3-análise-de-fluxos-de-decisão"
+          },
+          {
+            "href": "#capítulo-4-seleção-de-template-por-porte",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-4-seleção-de-template-por-porte"
+          },
+          {
+            "href": "#capítulo-5-hierarquias-e-governança",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-5-hierarquias-e-governança"
+          },
+          {
+            "href": "#capítulo-6-políticas-de-arbitragem",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-6-políticas-de-arbitragem"
+          },
+          {
+            "href": "#capítulo-7-estruturação-de-conhecimento-mef",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-7-estruturação-de-conhecimento-mef"
+          },
+          {
+            "href": "#capítulo-8-sistema-de-relacionamentos-e-dependências",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-8-sistema-de-relacionamentos-e-dependências"
+          },
+          {
+            "href": "#capítulo-9-validação-e-conformidade-mef",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-9-validação-e-conformidade-mef"
+          },
+          {
+            "href": "#capítulo-10-workflows-zof---implementação-e-estados-canônicos",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-10-workflows-zof---implementação-e-estados-canônicos"
+          },
+          {
+            "href": "#capítulo-11-processo-de-enriquecimento-e-arbitragem",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-11-processo-de-enriquecimento-e-arbitragem"
+          },
+          {
+            "href": "#capítulo-12-cultura-oracle-first-e-sustentabilidade",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-12-cultura-oracle-first-e-sustentabilidade"
+          },
+          {
+            "href": "#capítulo-13-integração-cross-framework",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-13-integração-cross-framework"
+          },
+          {
+            "href": "#capítulo-14-validação-e-conformidade-técnica",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-14-validação-e-conformidade-técnica"
+          },
+          {
+            "href": "#capítulo-15-guia-de-implementação-organizacional",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/#capítulo-15-guia-de-implementação-organizacional"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "#capítulo-1-assessment-organizacional",
+            "segment": "#capítulo-1-assessment-organizacional"
+          },
+          {
+            "href": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento",
+            "segment": "#capítulo-2-mapeamento-de-sistemas-e-conhecimento"
+          },
+          {
+            "href": "#capítulo-3-análise-de-fluxos-de-decisão",
+            "segment": "#capítulo-3-análise-de-fluxos-de-decisão"
+          },
+          {
+            "href": "#capítulo-4-seleção-de-template-por-porte",
+            "segment": "#capítulo-4-seleção-de-template-por-porte"
+          },
+          {
+            "href": "#capítulo-5-hierarquias-e-governança",
+            "segment": "#capítulo-5-hierarquias-e-governança"
+          },
+          {
+            "href": "#capítulo-6-políticas-de-arbitragem",
+            "segment": "#capítulo-6-políticas-de-arbitragem"
+          },
+          {
+            "href": "#capítulo-8-sistema-de-relacionamentos-e-dependências",
+            "segment": "#capítulo-8-sistema-de-relacionamentos-e-dependências"
+          },
+          {
+            "href": "#capítulo-11-processo-de-enriquecimento-e-arbitragem",
+            "segment": "#capítulo-11-processo-de-enriquecimento-e-arbitragem"
+          },
+          {
+            "href": "#capítulo-12-cultura-oracle-first-e-sustentabilidade",
+            "segment": "#capítulo-12-cultura-oracle-first-e-sustentabilidade"
+          },
+          {
+            "href": "#capítulo-13-integração-cross-framework",
+            "segment": "#capítulo-13-integração-cross-framework"
+          },
+          {
+            "href": "#capítulo-14-validação-e-conformidade-técnica",
+            "segment": "#capítulo-14-validação-e-conformidade-técnica"
+          },
+          {
+            "href": "#capítulo-15-guia-de-implementação-organizacional",
+            "segment": "#capítulo-15-guia-de-implementação-organizacional"
+          }
+        ],
+        "linkCount": 15
+      }
+    },
+    {
+      "file": "pt/docs/manual/reference/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./techcorp-case-study",
+            "segment": "techcorp-case-study.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/reference/techcorp-case-study.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/basic/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/basic/moc-basic-template.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/corporation/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/corporation/moc-corporation.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/enterprise/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/enterprise/moc-enterprise.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/implementation-phases-detailed.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./fases-implementacao-detalhadas",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/fases-implementacao-detalhadas.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./fases-implementacao-detalhadas",
+            "segment": "fases-implementacao-detalhadas.md"
+          }
+        ],
+        "linkCount": 6
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/moc-templates-by-organization-size.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/scaleup/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/scaleup/moc-scaleup.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/startup/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/startup/moc-startup.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/templates-uki-multi-hierarquicos.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/unified/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "pt/docs/manual/templates/unified/moc-unified-structure.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "pt/docs/manual/tools/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "pt/docs/manual/tools/validation-checklists.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/mep/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/protocol/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "pt/docs/quickstart/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "../glossary",
+            "segment": "glossary.md"
+          }
+        ],
+        "linkCount": 18
+      }
+    },
+    {
+      "file": "pt/docs/quickstart/templates/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "pt/docs/quickstart/templates/moc-starter-template.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
+            "resolved": "/pt/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/pt/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/moc-squad-payments.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/moc-squad-payments.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-pay-refund-policy-003.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-003.yaml"
+          },
+          {
+            "href": "uki-pay-fraud-detection-002.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-detection-002.yaml"
+          },
+          {
+            "href": "uki-pay-customer-validation-004.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-customer-validation-004.yaml"
+          },
+          {
+            "href": "uki-pay-payment-processing-006.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-payment-processing-006.yaml"
+          }
+        ],
+        "nonConformPaths": [],
+        "linkCount": 14
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 8
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-proc-pci-compliance-001.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-pci-compliance-001.yaml"
+          },
+          {
+            "href": "uki-proc-incident-response-003.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-incident-response-003.yaml"
+          },
+          {
+            "href": "uki-proc-deployment-process-002.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-deployment-process-002.yaml"
+          },
+          {
+            "href": "uki-proc-monitoring-operations-004.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-monitoring-operations-004.yaml"
+          },
+          {
+            "href": "uki-proc-user-onboarding-005.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-proc-user-onboarding-005.yaml"
+          }
+        ],
+        "nonConformPaths": [],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "uki-tech-gateway-integration-007.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-gateway-integration-007.yaml"
+          },
+          {
+            "href": "uki-tech-api-design-009.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-api-design-009.yaml"
+          },
+          {
+            "href": "uki-tech-security-protocols-008.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-security-protocols-008.yaml"
+          },
+          {
+            "href": "uki-tech-retry-mechanisms-010.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-retry-mechanisms-010.yaml"
+          },
+          {
+            "href": "uki-tech-database-patterns-011.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-database-patterns-011.yaml"
+          },
+          {
+            "href": "uki-tech-monitoring-setup-012.yaml",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-tech-monitoring-setup-012.yaml"
+          }
+        ],
+        "nonConformPaths": [],
+        "linkCount": 14
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/images/payment-flow-2022.png"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "./images/payment-flow-2022.png",
+            "segment": "payment-flow-2022.png"
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./slack-refunds-thread.txt",
+            "segment": "slack-refunds-thread.txt"
+          },
+          {
+            "href": "./random-notes-mixed.txt",
+            "segment": "random-notes-mixed.txt"
+          },
+          {
+            "href": "./developer-handover.txt",
+            "segment": "developer-handover.txt"
+          },
+          {
+            "href": "./postmortem-outage-dec.txt",
+            "segment": "postmortem-outage-dec.txt"
+          },
+          {
+            "href": "./security-audit-findings.txt",
+            "segment": "security-audit-findings.txt"
+          },
+          {
+            "href": "./pci-compliance-email.txt",
+            "segment": "pci-compliance-email.txt"
+          },
+          {
+            "href": "./jira-fraud-detection.txt",
+            "segment": "jira-fraud-detection.txt"
+          },
+          {
+            "href": "./onboarding-checklist.txt",
+            "segment": "onboarding-checklist.txt"
+          }
+        ],
+        "linkCount": 13
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/examples/pilots/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 22
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mal.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mef-ontology.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/mef.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/moc.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/oif.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/frameworks/zof.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/glossary.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/implementation.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "resolved": "/manual/tools/validation-checklists.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/manual/tools/validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 19
+      }
+    },
+    {
+      "file": "en/docs/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          },
+          {
+            "href": "./glossary",
+            "segment": "glossary.md"
+          },
+          {
+            "href": "./integration",
+            "segment": "integration.md"
+          }
+        ],
+        "linkCount": 27
+      }
+    },
+    {
+      "file": "en/docs/integration.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/examples/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./organizational-example-techcorp",
+            "segment": "organizational-example-techcorp.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/examples/organizational-example-techcorp.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "tools/content-audit/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/content-audit.md"
+          },
+          {
+            "href": "tools/moc-generation/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/moc-generation.md"
+          },
+          {
+            "href": "tools/uki-templates/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/uki-templates.md"
+          },
+          {
+            "href": "reference/best-practices/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/best-practices.md"
+          },
+          {
+            "href": "reference/patterns/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/patterns.md"
+          },
+          {
+            "href": "reference/troubleshooting/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/troubleshooting.md"
+          },
+          {
+            "href": "examples/migration/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/migration.md"
+          },
+          {
+            "href": "examples/success/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/success.md"
+          },
+          {
+            "href": "assessment/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/assessment.md"
+          },
+          {
+            "href": "planning/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/planning.md"
+          },
+          {
+            "href": "moc-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/moc-setup.md"
+          },
+          {
+            "href": "authority-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/authority-setup.md"
+          },
+          {
+            "href": "tools-setup/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools-setup.md"
+          },
+          {
+            "href": "content-audit/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/content-audit.md"
+          },
+          {
+            "href": "uki-creation/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/uki-creation.md"
+          },
+          {
+            "href": "relationship-mapping/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/relationship-mapping.md"
+          },
+          {
+            "href": "training/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/training.md"
+          },
+          {
+            "href": "process-integration/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/process-integration.md"
+          },
+          {
+            "href": "improvement/",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/improvement.md"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "tools/content-audit/",
+            "segment": "content-audit.md"
+          },
+          {
+            "href": "reference/best-practices/",
+            "segment": "best-practices.md"
+          },
+          {
+            "href": "reference/patterns/",
+            "segment": "patterns.md"
+          },
+          {
+            "href": "reference/troubleshooting/",
+            "segment": "troubleshooting.md"
+          },
+          {
+            "href": "examples/migration/",
+            "segment": "migration.md"
+          },
+          {
+            "href": "examples/success/",
+            "segment": "success.md"
+          },
+          {
+            "href": "assessment/",
+            "segment": "assessment.md"
+          },
+          {
+            "href": "planning/",
+            "segment": "planning.md"
+          },
+          {
+            "href": "authority-setup/",
+            "segment": "authority-setup.md"
+          },
+          {
+            "href": "tools-setup/",
+            "segment": "tools-setup.md"
+          },
+          {
+            "href": "content-audit/",
+            "segment": "content-audit.md"
+          },
+          {
+            "href": "uki-creation/",
+            "segment": "uki-creation.md"
+          },
+          {
+            "href": "relationship-mapping/",
+            "segment": "relationship-mapping.md"
+          },
+          {
+            "href": "training/",
+            "segment": "training.md"
+          },
+          {
+            "href": "process-integration/",
+            "segment": "process-integration.md"
+          },
+          {
+            "href": "improvement/",
+            "segment": "improvement.md"
+          }
+        ],
+        "linkCount": 39
+      }
+    },
+    {
+      "file": "en/docs/manual/reference/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./techcorp-case-study",
+            "segment": "techcorp-case-study.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/reference/techcorp-case-study.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/basic/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/basic/moc-basic-template.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/basic/moc-basic-template.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/corporation/index.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/corporation/moc-corporation.md",
+      "slugIssues": [
+        {
+          "type": "slug_non_conform",
+          "segment": "corporation"
+        }
+      ],
+      "slugRecommendations": [
+        {
+          "segment": "corporation",
+          "proposed": "corporation",
+          "needs_translation": true
+        }
+      ],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/corporation/moc-corporation.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/detailed-implementation-phases.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/enterprise/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/enterprise/moc-enterprise.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/enterprise/moc-enterprise.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "./templates-moc-by-organization-size",
+            "resolved": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/templates-moc-by-organization-size.md"
+          }
+        ],
+        "nonConformPaths": [],
+        "linkCount": 6
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/moc-templates-by-organizational-size.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/multi-hierarchical-uki-templates.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/scaleup/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/scaleup/moc-scaleup.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/scaleup/moc-scaleup.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/startup/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 7
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/startup/moc-startup.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/startup/moc-startup.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/unified/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 9
+      }
+    },
+    {
+      "file": "en/docs/manual/templates/unified/moc-unified-structure.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/manual/templates/unified/moc-unified-structure.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    },
+    {
+      "file": "en/docs/manual/tools/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "./validation-checklists",
+            "segment": "validation-checklists.md"
+          }
+        ],
+        "linkCount": 5
+      }
+    },
+    {
+      "file": "en/docs/manual/tools/validation-checklists.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/mep/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/protocol/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 0
+      }
+    },
+    {
+      "file": "en/docs/quickstart/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [
+          {
+            "href": "../glossary",
+            "segment": "glossary.md"
+          }
+        ],
+        "linkCount": 17
+      }
+    },
+    {
+      "file": "en/docs/quickstart/templates/index.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [],
+        "nonConformPaths": [],
+        "linkCount": 15
+      }
+    },
+    {
+      "file": "en/docs/quickstart/templates/moc-starter-template.md",
+      "slugIssues": [],
+      "slugRecommendations": [],
+      "linkAnalysis": {
+        "broken": [
+          {
+            "href": "/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
+            "resolved": "/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml"
+          }
+        ],
+        "nonConformPaths": [
+          {
+            "href": "/en/docs/viewer?file=/docs/quickstart/templates/moc-starter-template.yaml",
+            "segment": "viewer?file="
+          }
+        ],
+        "linkCount": 1
+      }
+    }
+  ]
+}

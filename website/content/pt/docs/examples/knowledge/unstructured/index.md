@@ -20,18 +20,18 @@ Esta secao apresenta **12 documentos** que demonstram os problemas tipicos de co
 ## 📂 Documentos Problematicos
 
 ### 📋 Atas e Reunioes
-**[team-meeting-jan-2024.md](./team-meeting-jan-2024.md)**
+**[team-meeting-jan-2024.md](./team-meeting-jan-2024)**
 - **Contexto**: Reuniao de planejamento da squad (Janeiro 2024)
 - **Problemas**: Decisoes nao documentadas formalmente, action items perdidos
 - **Impacto**: Conflitos sobre o que foi decidido
 
-**[team-meeting-mar-2024.md](./team-meeting-mar-2024.md)**
+**[team-meeting-mar-2024.md](./team-meeting-mar-2024)**
 - **Contexto**: Retrospectiva de marco 2024
 - **Problemas**: Contradicoes com decisoes anteriores
 - **Impacto**: Retrabalho e confusao na equipe
 
 ### 📖 Documentacao Wiki
-**[confluence-payment-flow.md](./confluence-payment-flow.md)**
+**[confluence-payment-flow.md](./confluence-payment-flow)**
 - **Contexto**: Wiki interna sobre fluxos de pagamento
 - **Problemas**: Desatualizada (marco 2022), autor nao esta mais na empresa
 - **Impacto**: Informacoes incorretas sendo seguidas

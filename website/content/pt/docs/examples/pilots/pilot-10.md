@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Arquivo criado com `snake_case` para validar aceitação conforme política (arquivos podem usar `snake_case`; diretórios devem usar `kebab-case`).
 
 ## Recursos Relacionados
-- [Templates](../../manual/templates/index.md)
+- [Templates](../../manual/templates)

@@ -18,42 +18,42 @@ Esta secao contem **6 UKIs** que estruturam os padroes tecnicos fundamentais par
 ## 📋 UKIs de Padroes Tecnicos
 
 ### 🔌 Integracao com Gateways
-**[uki-pay-gateway-integration-007.yaml](uki-pay-gateway-integration-007.md)**
+**[uki-pay-gateway-integration-007.yaml](uki-pay-gateway-integration-007)**
 - **Titulo**: Padrao de Integracao com Gateways de Pagamento
 - **Versao**: 1.2.0 (validated)
 - **Escopo**: Interface unificada para multiplos provedores de pagamento
 - **Fallback**: Estrategia de failover entre gateways
 
 ### 🔄 Estrategia de Retry
-**[uki-pay-retry-strategy-008.yaml](uki-pay-retry-strategy-008.md)**
+**[uki-pay-retry-strategy-008.yaml](uki-pay-retry-strategy-008)**
 - **Titulo**: Estrategia de Retry e Circuit Breaker
 - **Versao**: 2.0.0 (validated)
 - **Escopo**: Politicas de retry com backoff exponencial
 - **Protecao**: Circuit breaker para protecao contra cascata de falhas
 
 ### 🔗 Processamento de Webhooks
-**[uki-pay-webhook-handling-009.yaml](uki-pay-webhook-handling-009.md)**
+**[uki-pay-webhook-handling-009.yaml](uki-pay-webhook-handling-009)**
 - **Titulo**: Processamento Seguro de Webhooks
 - **Versao**: 1.1.0 (validated)
 - **Escopo**: Validacao, autenticacao e processamento idempotente
 - **Seguranca**: Verificacao de assinatura e rate limiting
 
 ### 🔒 Cabecalhos de Seguranca
-**[uki-pay-security-headers-010.yaml](uki-pay-security-headers-010.md)**
+**[uki-pay-security-headers-010.yaml](uki-pay-security-headers-010)**
 - **Titulo**: Cabecalhos de Seguranca Obrigatorios
 - **Versao**: 1.0.0 (validated)
 - **Escopo**: Headers HTTP para conformidade PCI e seguranca
 - **Compliance**: Validacao automatizada de headers
 
 ### 🔑 Chaves de Idempotencia
-**[uki-pay-idempotency-keys-011.yaml](uki-pay-idempotency-keys-011.md)**
+**[uki-pay-idempotency-keys-011.yaml](uki-pay-idempotency-keys-011)**
 - **Titulo**: Implementacao de Chaves de Idempotencia
 - **Versao**: 1.3.0 (validated)
 - **Escopo**: Prevencao de transacoes duplicadas
 - **TTL**: Gestao de lifecycle das chaves
 
 ### ⚠️ Tratamento de Erros
-**[uki-pay-error-handling-012.yaml](uki-pay-error-handling-012.md)**
+**[uki-pay-error-handling-012.yaml](uki-pay-error-handling-012)**
 - **Titulo**: Padrao de Tratamento de Erros
 - **Versao**: 1.0.0 (validated)
 - **Escopo**: Categorizacao, logging e response de erros

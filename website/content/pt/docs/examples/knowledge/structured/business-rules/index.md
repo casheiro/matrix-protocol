@@ -18,42 +18,42 @@ Esta secao contem **6 UKIs** que estruturam as regras fundamentais de negocio da
 ## 📋 UKIs de Regras de Negocio
 
 ### 💰 Descontos e Promocoes
-**[uki-pay-discount-logic-001.yaml](uki-pay-discount-logic-001.md)**
+**[uki-pay-discount-logic-001.yaml](uki-pay-discount-logic-001)**
 - **Titulo**: Regras de Desconto por Volume e Cupons
 - **Versao**: 2.1.0 (validated)
 - **Escopo**: Logica de aplicacao de descontos automaticos e cupons
 - **Precedencia**: Define ordem de aplicacao entre descontos por volume vs cupons
 
 ### 🔄 Reembolsos
-**[uki-pay-refund-policy-002.yaml](uki-pay-refund-policy-002.md)**
+**[uki-pay-refund-policy-002.yaml](uki-pay-refund-policy-002)**
 - **Titulo**: Politica de Reembolsos e Estornos
 - **Versao**: 1.2.0 (validated)
 - **Escopo**: Regras para processamento de reembolsos parciais e totais
 - **Timeline**: Prazos especificos por tipo de transacao
 
 ### 🛡️ Deteccao de Fraude
-**[uki-pay-fraud-thresholds-003.yaml](uki-pay-fraud-thresholds-003.md)**
+**[uki-pay-fraud-thresholds-003.yaml](uki-pay-fraud-thresholds-003)**
 - **Titulo**: Thresholds de Deteccao de Fraude
 - **Versao**: 3.0.0 (validated)
 - **Escopo**: Limites e criterios para flagging de transacoes suspeitas
 - **Automacao**: Regras para bloqueio automatico vs analise manual
 
 ### 💱 Taxas de Cambio
-**[uki-pay-currency-rates-004.yaml](uki-pay-currency-rates-004.md)**
+**[uki-pay-currency-rates-004.yaml](uki-pay-currency-rates-004)**
 - **Titulo**: Gestao de Taxas de Cambio
 - **Versao**: 1.1.0 (validated)
 - **Escopo**: Atualizacao e aplicacao de taxas para transacoes internacionais
 - **Fallback**: Estrategias quando APIs de cambio falham
 
 ### 💳 Calculo de Taxas
-**[uki-pay-fee-calculation-005.yaml](uki-pay-fee-calculation-005.md)**
+**[uki-pay-fee-calculation-005.yaml](uki-pay-fee-calculation-005)**
 - **Titulo**: Calculo de Taxas por Gateway
 - **Versao**: 2.0.0 (validated)
 - **Escopo**: Formulas especificas para cada gateway de pagamento
 - **Transparencia**: Exibicao de taxas para o cliente final
 
 ### ⚖️ Chargebacks
-**[uki-pay-chargeback-rules-006.yaml](uki-pay-chargeback-rules-006.md)**
+**[uki-pay-chargeback-rules-006.yaml](uki-pay-chargeback-rules-006)**
 - **Titulo**: Regras de Chargeback e Contestacao
 - **Versao**: 1.0.0 (validated)
 - **Escopo**: Processo de contestacao e documentacao necessaria

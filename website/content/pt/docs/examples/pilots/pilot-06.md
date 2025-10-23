@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Validar que o `layout: docs` é aplicado corretamente.
 
 ## Recursos Relacionados
-- [Manual](../../manual/index.md)
+- [Manual](../../manual)

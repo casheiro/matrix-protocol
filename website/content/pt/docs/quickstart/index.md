@@ -20,7 +20,7 @@ order: 0
 
 > 🎯 **Objetivo**: Implementar o Matrix Protocol na sua organização em 3 passos simples, seguindo uma abordagem estruturada e prática.
 
-> ⚡ **Início Rápido**: Para quem quer começar hoje. Para estudo detalhado, veja o [Manual Completo de Implementação](../implementation.md).
+> ⚡ **Início Rápido**: Para quem quer começar hoje. Para estudo detalhado, veja o [Manual Completo de Implementação](../implementation).
 
 ---
 
@@ -182,14 +182,15 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Manual Completo](../manual/index.md) - 4.600+ linhas, 15 capítulos
-- ✅ [Checklist de Validação](manual/tools/) - Evite erros comuns
-- 📊 [Caso TechCorp](manual/reference/) - Exemplo ilustrativo
+- 📖 [Manual Completo](../manual) - 4.600+ linhas, 15 capítulos
+- ✅ [Checklist de Validação](../manual/tools/) - Evite erros comuns
+- 📊 [Caso TechCorp](../manual/reference/) - Exemplo ilustrativo
 
 ### **Templates Prontos**
+- 🎯 [Templates por Porte](../manual/templates/) - Escolha o template ideal
 - 🏢 Templates por Tamanho Organizacional - Estrutura completa de diretórios
-- 🔧 [Templates UKI Multi-hierárquicos](manual/templates/) - Templates UKI completos
-- 📋 [Fases de Implementação Detalhadas](manual/templates/)
+- 🔧 [Templates UKI Multi-hierárquicos](../manual/templates/) - Templates UKI completos
+- 📋 [Fases de Implementação Detalhadas](../manual/templates/)
 
 ## 🎯 Escolha o Template Certo para sua Organização
 
@@ -226,18 +227,18 @@ relationships:
 ## 📞 Suporte e Próximos Passos
 
 ### **Se Você Ficar Preso**
-1. 🔍 **Consulte Manual Completo**: [Veja aqui](../manual/index.md)
-2. ✅ **Use Checklist**: [Validação de fases](manual/tools/)
-3. 📖 **Estude Caso TechCorp**: [Como foi implementado na prática](manual/reference/)
+1. 🔍 **Consulte Manual Completo**: [Veja aqui](../manual)
+2. ✅ **Use Checklist**: [Validação de fases](../manual/tools/)
+3. 📖 **Estude Caso TechCorp**: [Como foi implementado na prática](../manual/reference/)
 4. 💬 **GitHub Discussions**: Para perguntas específicas
 
 ### **Jornada Completa**
 Este é apenas o começo! Para implementação organizacional completa:
 
-- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](../implementation.md)
-- 🏗️ **Fundamentos**: [Especificação do Protocolo](../protocol/index.md) 
-- 🔍 **Referência**: [Glossário Unificado](../glossary.md)
-- 🧩 **Frameworks**: [MEF](../frameworks/mef.md), [ZOF](../frameworks/zof.md), [OIF](../frameworks/oif.md), [MOC](../frameworks/moc.md), [MAL](../frameworks/mal.md)
+- 📚 **Estudo Detalhado**: [Guia Completo de Implementação](../implementation)
+- 🏗️ **Fundamentos**: [Especificação do Protocolo](../protocol) 
+- 🔍 **Referência**: [Glossário Unificado](../glossary)
+- 🧩 **Frameworks**: [MEF](../frameworks/mef), [ZOF](../frameworks/zof), [OIF](../frameworks/oif), [MOC](../frameworks/moc), [MAL](../frameworks/mal)
 
 ---
 

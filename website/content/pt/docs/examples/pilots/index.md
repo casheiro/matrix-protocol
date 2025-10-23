@@ -21,6 +21,6 @@ Estas páginas piloto validam os padrões de frontmatter, checklist editorial e 
 - Verificar padronização de nomes
 
 ## Recursos Relacionados
-- [Guides](../../manual/index.md)
-- [Templates](../../manual/templates/index.md)
-- [Examples](../index.md)
+- [Guides](../../manual)
+- [Templates](../../manual/templates)
+- [Examples](..)

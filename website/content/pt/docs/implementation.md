@@ -18,11 +18,11 @@ order: 10
 **Data:** Janeiro 2025  
 **Protocolo:** Matrix Protocol (protocolo semântico para colaboração humano-IA)
 
-> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](manual/index.md) (4.600+ linhas, 15 capítulos).
+> ⚠️ **IMPORTANTE**: Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o [Manual Completo](manual) (4.600+ linhas, 15 capítulos).
 
 > 🎯 **Objetivo**: Fornecer especificações técnicas, exemplos de configuração e guias de implementação para os frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF).
 
-> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](quickstart/index.md).
+> 🚀 **Para Implementação Rápida**: Se você quer começar hoje, use o [Guia de Início Rápido](quickstart).
 
 ---
 
@@ -73,7 +73,7 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 #### Recursos Essenciais:
 - Template MOC Básico (universal)
 - Templates Especializados por tamanho organizacional
-- [Checklist de Validação](/manual/tools/validation-checklists)
+- [Checklist de Validação](manual/tools/validation-checklists)
 
 ---
 
@@ -242,7 +242,7 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🛠️ Recursos e Downloads
 
 ### **Manual Completo (4.600+ linhas)**
-📖 [Download Manual Completo](manual/index.md)
+📖 [Download Manual Completo](manual)
 
 **Conteúdo Detalhado:**
 - **Parte I**: Preparação e Avaliação (Capítulos 1-3)
@@ -274,20 +274,20 @@ O Matrix Protocol é implementado através de **5 frameworks integrados**:
 ## 🤝 Próximos Passos
 
 ### **Se Você Quer Começar Hoje**
-1. 🚀 [Guia de Início Rápido](quickstart/index.md) - 2-4 horas
+1. 🚀 [Guia de Início Rápido](quickstart) - 2-4 horas
 2. 📋 Template MOC Básico - Universal para qualquer tamanho
 3. 🎯 Templates Especializados: Escolha baseado no tamanho da sua organização
-4. ✅ [Primeiro UKI](quickstart/index.md) - 30-60 minutos
+4. ✅ [Primeiro UKI](quickstart) - 30-60 minutos
 
 ### **Para Estudo Detalhado**
-1. 📖 [Manual Completo](manual/index.md) - 4.600+ linhas
+1. 📖 [Manual Completo](manual) - 4.600+ linhas
 2. 📊 [Caso TechCorp](manual/reference/) - Implementação real
-3. 🏗️ [Especificação do Protocolo](protocol/index.md) - Fundamentos
+3. 🏗️ [Especificação do Protocolo](protocol) - Fundamentos
 
 ### **Para Suporte Técnico**
 - 💬 **GitHub Discussions**: Perguntas específicas
-- 📚 **Documentação**: [Portal completo](protocol/index.md)
-- 🧩 **Frameworks**: [MEF](frameworks/mef.md), [ZOF](frameworks/zof.md), [OIF](frameworks/oif.md), [MOC](frameworks/moc.md), [MAL](frameworks/mal.md)
+- 📚 **Documentação**: [Portal completo](protocol)
+- 🧩 **Frameworks**: [MEF](frameworks/mef), [ZOF](frameworks/zof), [OIF](frameworks/oif), [MOC](frameworks/moc), [MAL](frameworks/mal)
 
 ---
 

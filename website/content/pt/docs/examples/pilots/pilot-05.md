@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Confirmar que ícones seguem o padrão `i-heroicons-*`.
 
 ## Recursos Relacionados
-- [Frameworks](../../frameworks/index.md)
+- [Frameworks](../../frameworks)

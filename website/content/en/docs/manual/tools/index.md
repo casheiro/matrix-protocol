@@ -66,7 +66,7 @@ This section contains practical tools, checklists and resources to validate and 
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../index.md)
+- [Complete Implementation Guide](..)
 - [Organizational Templates](../templates)
 - [Practical Examples](../examples)
 - [Reference Material](../reference)

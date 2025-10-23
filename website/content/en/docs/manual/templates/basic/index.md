@@ -68,8 +68,8 @@ This section contains templates specific for small and medium enterprises, inclu
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Simple Organizational Examples](../../../examples)
 - [Basic Validation Tools](../../tools)
 

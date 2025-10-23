@@ -1,0 +1,2527 @@
+{
+  "timestamp": "2025-10-23T12:18:59.728Z",
+  "taxonomy": {
+    "frameworks": [
+      "mef",
+      "zof",
+      "oif",
+      "moc",
+      "mal",
+      "matrix-protocol"
+    ],
+    "domains": [
+      "business",
+      "technical",
+      "product",
+      "strategy",
+      "culture"
+    ],
+    "types": [
+      "business-rule",
+      "pattern",
+      "procedure",
+      "guideline",
+      "decision",
+      "template"
+    ],
+    "maturity": [
+      "draft",
+      "validated",
+      "approved",
+      "deprecated",
+      "archived"
+    ],
+    "scope": [
+      "startup",
+      "scaleup",
+      "corporation",
+      "enterprise",
+      "unified",
+      "basic"
+    ],
+    "sections": [
+      "manual",
+      "examples",
+      "quickstart",
+      "implementation",
+      "frameworks"
+    ],
+    "categories": [
+      "business-rules",
+      "technical-patterns",
+      "procedures",
+      "templates",
+      "tools",
+      "reference",
+      "assessment",
+      "planning"
+    ]
+  },
+  "summary": {
+    "totalFiles": 158,
+    "passed": 91,
+    "warnings": 91,
+    "errors": 67,
+    "averageScore": 10.41869522882181,
+    "tagUsage": {
+      "mostUsed": [
+        {
+          "tag": "manual",
+          "count": 31
+        },
+        {
+          "tag": "templates",
+          "count": 31
+        },
+        {
+          "tag": "examples",
+          "count": 1
+        },
+        {
+          "tag": "pilots",
+          "count": 1
+        }
+      ],
+      "taxonomyCoverage": {
+        "frameworks": {
+          "total": 6,
+          "used": 0,
+          "coverage": 0
+        },
+        "domains": {
+          "total": 5,
+          "used": 0,
+          "coverage": 0
+        },
+        "types": {
+          "total": 6,
+          "used": 0,
+          "coverage": 0
+        },
+        "maturity": {
+          "total": 5,
+          "used": 0,
+          "coverage": 0
+        },
+        "scope": {
+          "total": 6,
+          "used": 0,
+          "coverage": 0
+        },
+        "sections": {
+          "total": 5,
+          "used": 2,
+          "coverage": 40
+        },
+        "categories": {
+          "total": 8,
+          "used": 1,
+          "coverage": 12.5
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/basic/moc-basic-template.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/corporation/moc-corporation.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/detailed-implementation-phases.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/enterprise/moc-enterprise.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/multi-hierarchical-uki-templates.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/scaleup/moc-scaleup.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/startup/moc-startup.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/unified/moc-unified-structure.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/basic/moc-basic-template.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/corporation/moc-corporation.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/enterprise/moc-enterprise.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/scaleup/moc-scaleup.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/startup/moc-startup.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/unified/moc-unified-structure.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"manual\" mentioned in content",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 60
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/moc-templates-by-organizational-size.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 53.333333333333336
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/moc-templates-by-organization-size.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 53.333333333333336
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/templates-uki-multi-hierarquicos.md",
+      "issues": [
+        "❌ Missing required category: \"maturity\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Required category \"manual\" present",
+        "✅ No forbidden tags from \"draft\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 53.333333333333336
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/pilots/index.md",
+      "issues": [
+        "❌ Unknown tag: \"pilots\" (not in taxonomy)",
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Maturity \"stable\" not in tags"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"examples\"",
+        "✅ Valid tag format: \"pilots\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"examples\"",
+        "✅ Tag \"examples\" mentioned in content",
+        "✅ Tag \"pilots\" mentioned in content"
+      ],
+      "score": 46.15384615384615
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/basic/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/corporation/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/enterprise/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/scaleup/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/startup/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/unified/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/basic/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/corporation/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/enterprise/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/scaleup/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/startup/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/unified/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\"",
+        "⚠️ Framework \"mef\" not in tags",
+        "⚠️ Maturity \"stable\" not in tags",
+        "⚠️ Tag \"manual\" not found in content"
+      ],
+      "validations": [
+        "✅ Valid tag format: \"manual\"",
+        "✅ Valid tag format: \"templates\"",
+        "✅ No duplicate tags",
+        "✅ Valid taxonomy tag: \"manual\"",
+        "✅ Valid taxonomy tag: \"templates\"",
+        "✅ Tag \"templates\" mentioned in content"
+      ],
+      "score": 42.857142857142854
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/moc-squad-payments.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/mal.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/mef-ontology.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/mef.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/moc.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/oif.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/frameworks/zof.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/glossary.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/implementation.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/integration.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/assessment.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/examples/organizational-example-techcorp.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/moc-setup.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/planning.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/reference/techcorp-case-study.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/templates/templates-moc-by-organization-size.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/content-audit.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/moc-generation.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/uki-templates.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/manual/tools/validation-checklists.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/mep/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/protocol/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/templates/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/en/docs/quickstart/templates/moc-starter-template.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/moc-squad-payments.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/stackspot-agent-prompt.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/stackspot-compatibility-guide.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-currency-rates-004.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-security-headers-010.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-webhook-handling-009.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/unstructured/confluence-payment-flow.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/unstructured/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/unstructured/team-meeting-jan-2024.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/knowledge/unstructured/team-meeting-mar-2024.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-01.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-02.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-03.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-04.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-05.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-06.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-07.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-08.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-09.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/examples/pilots/pilot-10.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/mal.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/mef-ontology.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/mef.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/moc.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/oif.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/frameworks/zof.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/glossary.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/implementation.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/integration.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/assessment.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/examples/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/examples/organizational-example-techcorp.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/reference/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/reference/techcorp-case-study.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/templates/implementation-phases-detailed.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/tools/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/manual/tools/validation-checklists.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/mep/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/protocol/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/templates/index.md",
+      "issues": [
+        "❌ Missing required category: \"section\""
+      ],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Missing recommended category: \"category\"",
+        "⚠️ Missing recommended category: \"maturity\""
+      ],
+      "validations": [],
+      "score": 0
+    },
+    {
+      "file": "/home/neto/projects/matrix-protocol/website/content/pt/docs/quickstart/templates/moc-starter-template.md",
+      "issues": [],
+      "warnings": [
+        "⚠️ No framework tags specified",
+        "⚠️ No domain tags specified",
+        "⚠️ No section tags specified",
+        "⚠️ Could not determine file type for tag requirements"
+      ],
+      "validations": [],
+      "score": 0
+    }
+  ]
+}

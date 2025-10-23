@@ -18,7 +18,7 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 ## 🏢 Casos Organizacionais
 
 ### Exemplos Empresariais
-- **[Exemplo Organizacional TechCorp](./exemplo-organizacional-techcorp)** - Caso detalhado de implementação em empresa de tecnologia brasileira
+- **[Exemplo Organizacional TechCorp](./organizational-example-techcorp)** - Caso detalhado de implementação em empresa de tecnologia brasileira
 
 ## 📊 Tipos de Exemplos
 
@@ -80,7 +80,7 @@ Esta seção apresenta exemplos práticos, casos de estudo reais e implementaç�
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../index.md)
+- [Guia de Implementação Completo](..)
 - [Templates Organizacionais](../templates)
 - [Ferramentas de Validação](../tools)
 - [Material de Referência](../reference)

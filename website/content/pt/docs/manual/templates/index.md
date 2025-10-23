@@ -23,7 +23,7 @@ Esta seção contém todos os templates e estruturas necessárias para implement
 ## 📋 Templates por Porte Organizacional
 
 ### Templates Principais
-- **[Templates MOC por Porte Organizacional](./templates-moc-por-porte-organizacional)** - Estruturas adaptadas para diferentes tamanhos de empresa
+- **[Templates MOC por Porte Organizacional](./moc-templates-by-organization-size)** - Estruturas adaptadas para diferentes tamanhos de empresa
 
 ### Templates UKI Multi-hierárquicos
 - **[Templates UKI Multi-hierárquicos](./templates-uki-multi-hierarquicos)** - Estruturas avançadas para conhecimento interconectado
@@ -31,7 +31,7 @@ Esta seção contém todos os templates e estruturas necessárias para implement
 ## 🚀 Fases de Implementação
 
 ### Roadmaps Detalhados
-- **[Fases de Implementação Detalhadas](./fases-implementacao-detalhadas)** - Cronograma completo de implementação
+- **[Fases de Implementação Detalhadas](./implementation-phases-detailed)** - Cronograma completo de implementação
 
 ## 💡 Como Usar
 
@@ -42,6 +42,6 @@ Esta seção contém todos os templates e estruturas necessárias para implement
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../index.md)
+- [Guia de Implementação Completo](..)
 - [Exemplos Organizacionais](../examples)
 - [Ferramentas de Validação](../tools)

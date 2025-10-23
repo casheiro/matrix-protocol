@@ -67,8 +67,8 @@ This section contains templates specific for startup and emerging organizations,
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Agile Organizational Examples](../../../examples)
 - [Fast Validation Tools](../../tools)
 

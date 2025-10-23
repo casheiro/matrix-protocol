@@ -67,8 +67,8 @@ Esta seção contém templates específicos para organizações organizações h
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Geral](../../index.md)
-- [Outros Templates por Porte](../index.md)
+- [Guia de Implementação Geral](../..)
+- [Outros Templates por Porte](..)
 - [Exemplos Organizacionais Híbridos](../../../examples)
 - [Ferramentas de Validação Modulares](../../tools)
 

@@ -85,8 +85,8 @@ This section contains templates specific for large established corporations, inc
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Corporate Organizational Examples](../../../examples)
 - [Enterprise Validation Tools](../../tools)
 

@@ -29,13 +29,13 @@ This section contains **5 compliant procedure UKIs** from the Example E-commerce
 ## 📋 Available Procedure UKIs
 
 ### 🔒 Compliance Procedures
-1. **[pci-compliance-001](uki-proc-pci-compliance-001.yaml)** - PCI DSS security compliance operational procedures
-2. **[incident-response-003](uki-proc-incident-response-003.yaml)** - Crisis management and resolution procedures
+1. **[pci-compliance-013](uki-pay-pci-compliance-013.yaml)** - PCI DSS security compliance operational procedures
+2. **[incident-response-014](uki-pay-incident-response-014.yaml)** - Crisis management and resolution procedures
 
 ### 🚀 Operations Procedures
-3. **[deployment-process-002](uki-proc-deployment-process-002.yaml)** - Release and deployment workflows
-4. **[monitoring-operations-004](uki-proc-monitoring-operations-004.yaml)** - System health monitoring procedures
-5. **[user-onboarding-005](uki-proc-user-onboarding-005.yaml)** - Customer registration and validation procedures
+3. **[deployment-process-015](uki-pay-deployment-process-015.yaml)** - Release and deployment workflows
+4. **[monitoring-alerts-016](uki-pay-monitoring-alerts-016.yaml)** - System health monitoring procedures
+5. **[performance-optimization-017](uki-pay-performance-optimization-017.yaml)** - Performance tuning and optimization procedures
 
 ## 🔗 Demonstrated Relationships
 
@@ -113,7 +113,7 @@ This section contains **5 compliant procedure UKIs** from the Example E-commerce
 
 - [Business Rules](../business-rules/) - Business logic implemented by these procedures
 - [Technical Patterns](../technical-patterns/) - Technical standards guiding procedure implementation
-- [moc-squad-payments.yaml](../../moc-squad-payments.md) - Organizational governance foundation
+- [moc-squad-payments.yaml](../../moc-squad-payments) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic operational documentation
 
 ### Implementation Resources:

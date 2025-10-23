@@ -121,8 +121,8 @@ Each template includes:
 ### Support Resources:
 - **[Framework Documentation](../../frameworks)** - Detailed framework specifications
 - **[Protocol Specification](../../protocol)** - Complete Matrix Protocol documentation
-- **[Community Resources](../../community)** - Support forums and best practices
-- **[Professional Services](../../professional)** - Expert consulting and support
+- **Community Resources** - Support forums and best practices
+- **Professional Services** - Expert consulting and support
 
 ## 🎯 Success Factors
 

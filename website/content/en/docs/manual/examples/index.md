@@ -80,7 +80,7 @@ This section presents practical examples, real case studies, and organizational 
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../index.md)
+- [Complete Implementation Guide](..)
 - [Organizational Templates](../templates)
 - [Validation Tools](../tools)
 - [Reference Material](../reference)

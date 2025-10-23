@@ -16,4 +16,4 @@ last_updated: 2025-10-21
 Conteúdo mínimo para validar o schema.
 
 ## Recursos Relacionados
-- [Tools](../../manual/tools/index.md)
+- [Tools](../../manual/tools)

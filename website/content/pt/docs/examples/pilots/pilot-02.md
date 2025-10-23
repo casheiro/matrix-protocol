@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Verificação de `kebab-case` em diretórios e `kebab-case|snake_case` em arquivos.
 
 ## Recursos Relacionados
-- [Frameworks](../../frameworks/index.md)
+- [Frameworks](../../frameworks)

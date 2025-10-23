@@ -20,8 +20,22 @@ function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive
 
 const LOCALES = ['pt', 'en']
 
+// Palavras genuinamente em português (removidos termos ingleses como 'manual', 'templates', 'moc')
 const PT_WORDS = [
-  'de','para','por','organizacional','exemplos','manual','modelo','temas','templates','fases','implementacao','implementação','governanca','governança','moc','protocolo','protocole','rapido','inicio','guia','referencia','glossario'
+  'de','para','por','organizacional','exemplos','modelo','temas','fases','implementacao','implementação','governanca','governança','protocolo','protocole','rapido','inicio','guia','referencia','glossario'
+]
+
+// Termos técnicos válidos do projeto que não devem ser considerados não conformes
+const VALID_TECH_TERMS = [
+  'mef','zof','oif','moc','mal', // Frameworks do Matrix Protocol
+  'implementation','manual','templates', // Termos técnicos em inglês
+  'business-rules','technical-patterns','procedures', // Categorias UKI
+  'stackspot','team-meeting','confluence', // Nomes específicos do projeto
+  'unstructured','structured','knowledge', // Termos do domínio
+  'uki-pay', 'pilot', // Prefixos comuns
+  'corporation','enterprise','startup','scaleup','basic','unified', // Templates organizacionais
+  'frameworks','examples','quickstart', // Seções principais
+  'viewer', 'audit', 'validation' // Funcionalidades do sistema
 ]
 
 function hasAccents(str) {
@@ -33,6 +47,11 @@ function isAsciiKebab(str) {
 function containsPTWord(str) {
   const s = str.toLowerCase()
   return PT_WORDS.some(w => s.includes(w))
+}
+
+function isValidTechTerm(str) {
+  const s = str.toLowerCase()
+  return VALID_TECH_TERMS.some(term => s === term || s.startsWith(term + '-') || s.includes(term))
 }
 function sanitizeSegment(seg) {
   return seg
@@ -61,7 +80,8 @@ function analyzeSlug(filePath) {
   for (let i = 0; i < segments.length - 1; i++) { // diretorios
     const seg = segments[i]
     if (seg === 'content' || seg === 'docs' || seg === 'pt' || seg === 'en') continue
-    const hasIssue = !isAsciiKebab(seg) || hasAccents(seg) || containsPTWord(seg) || /_/.test(seg) || /\s/.test(seg)
+    // Só considera problema se não for um termo técnico válido
+    const hasIssue = !isValidTechTerm(seg) && (!isAsciiKebab(seg) || hasAccents(seg) || containsPTWord(seg) || /_/.test(seg) || /\s/.test(seg))
     if (hasIssue) {
       const sanitized = sanitizeSegment(seg)
       const rec = { segment: seg, proposed: sanitized, needs_translation: containsPTWord(seg) }
@@ -72,7 +92,8 @@ function analyzeSlug(filePath) {
 
   const fileName = path.basename(filePath, '.md')
   if (fileName !== 'index') {
-    if (!isAsciiKebab(fileName) || hasAccents(fileName) || containsPTWord(fileName) || /_/.test(fileName) || /\s/.test(fileName)) {
+    // Só considera problema se não for um termo técnico válido
+    if (!isValidTechTerm(fileName) && (!isAsciiKebab(fileName) || hasAccents(fileName) || containsPTWord(fileName) || /_/.test(fileName) || /\s/.test(fileName))) {
       const sanitized = sanitizeSegment(fileName)
       issues.push({ type: 'filename_non_conform', segment: fileName })
       recommendations.push({ segment: fileName, proposed: sanitized, needs_translation: containsPTWord(fileName) })
@@ -92,11 +113,30 @@ function extractLinks(mdContent) {
   return links
 }
 
-function isExternal(href) { return /^(https?:)?\/\//i.test(href) }
+function isExternal(href) { 
+  // URLs com protocolo (http/https) são externos
+  if (/^(https?:)?\/\//i.test(href)) return true
+  // URLs do viewer com query strings são internos mas dinâmicos
+  if (/\/docs\/viewer\?/.test(href)) return true
+  // Âncoras são consideradas internas (navegação na página)
+  if (/^#/.test(href)) return true
+  return false
+}
 
 function resolveTarget(baseDir, href) {
-  // Tratar âncoras (#) e query strings como externos para este checker
-  if (/^#/.test(href) || /\?/.test(href)) return path.resolve(baseDir, href)
+  // Âncoras são sempre válidas (navegação na página)
+  if (/^#/.test(href)) return null // Null = skip validation
+  
+  // URLs do viewer são válidas se o arquivo referenciado existir
+  if (/\/docs\/viewer\?file=(.+)/.test(href)) {
+    const match = href.match(/\/docs\/viewer\?file=(.+)/)
+    if (match) {
+      const filePath = match[1]
+      // Converter para caminho físico no content directory
+      const physicalPath = path.join(CONTENT_ROOT, filePath.replace(/^\/docs/, 'pt/docs'))
+      return physicalPath
+    }
+  }
   const ext = path.extname(href).toLowerCase()
   const isDirLike = !ext || href.endsWith('/')
 
@@ -133,6 +173,10 @@ function analyzeLinks(filePath) {
   for (const href of links) {
     if (isExternal(href)) continue
     const targetPath = resolveTarget(baseDir, href)
+    
+    // Skip validation for null paths (anchors, etc.)
+    if (targetPath === null) continue
+    
     const exists = fs.existsSync(targetPath)
     if (!exists) {
       broken.push({ href, resolved: targetPath })
@@ -143,7 +187,8 @@ function analyzeLinks(filePath) {
     const isIndex = segsRaw[segsRaw.length - 1] === 'index.md'
     const isAsset = /\.(yaml|yml)$/i.test(segsRaw[segsRaw.length - 1] || '')
     const segs = isIndex || isAsset ? segsRaw.slice(0, -1) : segsRaw
-    const badSeg = segs.find(seg => !isAsciiKebab(seg) || hasAccents(seg) || /_/.test(seg) || /\s/.test(seg))
+    // Só considera problema se não for um termo técnico válido E não for ".." (link relativo válido)
+    const badSeg = segs.find(seg => seg !== '..' && !isValidTechTerm(seg) && (!isAsciiKebab(seg) || hasAccents(seg) || /_/.test(seg) || /\s/.test(seg)))
     if (badSeg) {
       nonConformPaths.push({ href, segment: badSeg })
     }

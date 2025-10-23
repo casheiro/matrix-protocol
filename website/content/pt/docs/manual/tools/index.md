@@ -66,7 +66,7 @@ Esta seção contém ferramentas práticas, listas de verificação e recursos p
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../index.md)
+- [Guia de Implementação Completo](..)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Material de Referência](../reference)

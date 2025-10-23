@@ -100,7 +100,7 @@ This section contains advanced reference material, detailed case studies, and su
 
 ## 📖 Related Resources
 
-- [Complete Implementation Guide](../index.md)
+- [Complete Implementation Guide](..)
 - [Organizational Templates](../templates)
 - [Practical Examples](../examples)
 - [Validation Tools](../tools)

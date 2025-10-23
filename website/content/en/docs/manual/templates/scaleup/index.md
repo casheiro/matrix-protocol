@@ -101,8 +101,8 @@ This section contains templates specific for rapidly growing scaleup organizatio
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Scaleup Organizational Examples](../../../examples)
 - [Scalability Validation Tools](../../tools)
 

@@ -102,8 +102,8 @@ This section contains templates specific for enterprise organizations with advan
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Enterprise Organizational Examples](../../../examples)
 - [Advanced Validation Tools](../../tools)
 

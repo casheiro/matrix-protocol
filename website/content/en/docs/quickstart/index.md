@@ -19,7 +19,7 @@ order: 0
 
 > 🎯 **Objective**: Implement Matrix Protocol in your organization in 3 simple steps, following a structured and practical approach.
 
-> ⚡ **Quick Start**: For those who want to start today. For detailed study, see the [Complete Implementation Manual](../implementation.md).
+> ⚡ **Quick Start**: For those who want to start today. For detailed study, see the [Complete Implementation Manual](../implementation).
 
 ---
 
@@ -172,14 +172,14 @@ relationships:
   - 📈 Scale-up (50-200)
   - 🏢 Enterprise (200-1000)
   - 🏛️ Corporation (1000+)
-- 📖 [Complete Manual](../manual/index.md) - 4,600+ lines, 15 chapters
-- ✅ [Validation Checklist](manual/tools/) - Avoid common mistakes
-- 📊 [TechCorp Case](manual/reference/) - Illustrative example
+- 📖 [Complete Manual](../manual) - 4,600+ lines, 15 chapters
+- ✅ [Validation Checklist](../manual/tools/) - Avoid common mistakes
+- 📊 [TechCorp Case](../manual/reference/) - Illustrative example
 
 ### **Ready-to-Use Templates**
 - 🏢 Templates by Organization Size - Complete directory structure
-- 🔧 [Multi-hierarchical UKI Templates](manual/templates/) - Complete UKI templates
-- 📋 [Detailed Implementation Phases](manual/templates/)
+- 🔧 [Multi-hierarchical UKI Templates](../manual/templates/) - Complete UKI templates
+- 📋 [Detailed Implementation Phases](../manual/templates/)
 
 ## 🎯 Choose the Right Template for your Organization
 
@@ -216,18 +216,18 @@ relationships:
 ## 📞 Support and Next Steps
 
 ### **If You Get Stuck**
-1. 🔍 **Consult Complete Manual**: [See here](../manual/index.md)
-2. ✅ **Use Checklist**: [Phase validation](manual/tools/)
-3. 📖 **Study TechCorp Case**: [How it was implemented in practice](manual/reference/)
+1. 🔍 **Consult Complete Manual**: [See here](../manual)
+2. ✅ **Use Checklist**: [Phase validation](../manual/tools/)
+3. 📖 **Study TechCorp Case**: [How it was implemented in practice](../manual/reference/)
 4. 💬 **GitHub Discussions**: For specific questions
 
 ### **Complete Journey**
 This is just the beginning! For full organizational implementation:
 
-- 📚 **Detailed Study**: [Complete Implementation Guide](../implementation.md)
-- 🏗️ **Fundamentals**: [Protocol Specification](../protocol/index.md) 
-- 🔍 **Reference**: [Unified Glossary](../glossary.md)
-- 🧩 **Frameworks**: [MEF](../frameworks/mef.md), [ZOF](../frameworks/zof.md), [OIF](../frameworks/oif.md), [MOC](../frameworks/moc.md), [MAL](../frameworks/mal.md)
+- 📚 **Detailed Study**: [Complete Implementation Guide](../implementation)
+- 🏗️ **Fundamentals**: [Protocol Specification](../protocol) 
+- 🔍 **Reference**: [Unified Glossary](../glossary)
+- 🧩 **Frameworks**: [MEF](../frameworks/mef), [ZOF](../frameworks/zof), [OIF](../frameworks/oif), [MOC](../frameworks/moc), [MAL](../frameworks/mal)
 
 ---
 

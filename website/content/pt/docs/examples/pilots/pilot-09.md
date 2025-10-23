@@ -15,4 +15,4 @@ last_updated: 2025-10-21
 Verificar ordenação relativa via campo `order`.
 
 ## Recursos Relacionados
-- [Reference](../../manual/reference/index.md)
+- [Reference](../../manual/reference)

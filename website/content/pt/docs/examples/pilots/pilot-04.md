@@ -15,5 +15,5 @@ last_updated: 2025-10-21
 Verificação de links para recursos relacionados com caminhos relativos.
 
 ## Recursos Relacionados
-- [Quickstart](../../quickstart/index.md)
-- [Examples](../index.md)
+- [Quickstart](../../quickstart)
+- [Examples](..)

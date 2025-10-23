@@ -101,8 +101,8 @@ This section contains templates specific for hybrid organizations with mixed nee
 
 ## 📖 Related Resources
 
-- [General Implementation Guide](../../index.md)
-- [Other Templates by Size](../index.md)
+- [General Implementation Guide](../..)
+- [Other Templates by Size](..)
 - [Hybrid Organizational Examples](../../../examples)
 - [Flexible Validation Tools](../../tools)
 

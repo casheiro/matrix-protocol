@@ -68,8 +68,8 @@ Esta seção contém templates específicos para organizações pequenas e médi
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Geral](../../index.md)
-- [Outros Templates por Porte](../index.md)
+- [Guia de Implementação Geral](../..)
+- [Outros Templates por Porte](..)
 - [Exemplos Organizacionais Simples](../../../examples)
 - [Ferramentas de Validação Básicas](../../tools)
 

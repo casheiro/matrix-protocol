@@ -68,8 +68,8 @@ Esta seção contém templates específicos para organizações empresas em cres
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Geral](../../index.md)
-- [Outros Templates por Porte](../index.md)
+- [Guia de Implementação Geral](../..)
+- [Outros Templates por Porte](..)
 - [Exemplos Organizacionais de Crescimento](../../../examples)
 - [Ferramentas de Validação Escaláveis](../../tools)
 

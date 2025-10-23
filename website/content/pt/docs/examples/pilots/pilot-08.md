@@ -26,4 +26,4 @@ order: 8
 Validar que `navigation: true` mantém a página integrada à navegação dinâmica.
 
 ## Recursos Relacionados
-- [Manual](../../manual/index.md)
+- [Manual](../../manual)

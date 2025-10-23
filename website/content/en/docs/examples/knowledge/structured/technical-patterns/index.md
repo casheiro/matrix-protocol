@@ -29,16 +29,16 @@ This section contains **6 compliant technical pattern UKIs** from the Example E-
 ## 📋 Available Technical Pattern UKIs
 
 ### 🔌 Integration Patterns
-1. **[gateway-integration-007](uki-tech-gateway-integration-007.yaml)** - Payment gateway connection patterns and configurations
-2. **[api-design-009](uki-tech-api-design-009.yaml)** - RESTful API architectural patterns and standards
+1. **[gateway-integration-007](uki-pay-gateway-integration-007.yaml)** - Payment gateway connection patterns and configurations
+2. **[webhook-handling-009](uki-pay-webhook-handling-009.yaml)** - RESTful API and webhook processing patterns
 
 ### 🔐 Security & Reliability Patterns
-3. **[security-protocols-008](uki-tech-security-protocols-008.yaml)** - Authentication and authorization architectural patterns
-4. **[retry-mechanisms-010](uki-tech-retry-mechanisms-010.yaml)** - Failure handling and recovery strategies
+3. **[security-headers-010](uki-pay-security-headers-010.yaml)** - Security headers and protection patterns
+4. **[retry-strategy-008](uki-pay-retry-strategy-008.yaml)** - Failure handling and recovery strategies
 
 ### 🗄️ Data & Monitoring Patterns
-5. **[database-patterns-011](uki-tech-database-patterns-011.yaml)** - Data persistence and transaction management patterns
-6. **[monitoring-setup-012](uki-tech-monitoring-setup-012.yaml)** - Observability and alerting architectural configurations
+5. **[idempotency-keys-011](uki-pay-idempotency-keys-011.yaml)** - Data consistency and transaction safety patterns
+6. **[error-handling-012](uki-pay-error-handling-012.yaml)** - Error handling and monitoring configurations
 
 ## 🔗 Demonstrated Relationships
 
@@ -116,7 +116,7 @@ This section contains **6 compliant technical pattern UKIs** from the Example E-
 
 - [Business Rules](../business-rules/) - Business requirements implemented by these patterns
 - [Procedures](../procedures/) - Operational procedures following these technical standards
-- [moc-squad-payments.yaml](../../moc-squad-payments.md) - Organizational governance foundation
+- [moc-squad-payments.yaml](../../moc-squad-payments) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic technical documentation
 
 ### Implementation Resources:

@@ -100,7 +100,7 @@ Esta seção contém material de referência avançado, estudos de caso detalhad
 
 ## 📖 Recursos Relacionados
 
-- [Guia de Implementação Completo](../index.md)
+- [Guia de Implementação Completo](..)
 - [Templates Organizacionais](../templates)
 - [Exemplos Práticos](../examples)
 - [Ferramentas de Validação](../tools)

@@ -18,11 +18,11 @@ order: 10
 **Date:** January 2025  
 **Protocol:** Matrix Protocol (semantic protocol for human-AI collaboration)
 
-> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, consult the [Complete Manual](manual/index.md) (4,600+ lines, 15 chapters).
+> ⚠️ **IMPORTANT**: This is an executive summary of the Technical Implementation Manual. For complete details, consult the [Complete Manual](manual) (4,600+ lines, 15 chapters).
 
 > 🎯 **Objective**: Provide technical specifications, configuration examples and implementation guides for the semantic frameworks that compose Matrix Protocol (MEF, ZOF, MAL, OIF).
 
-> 🚀 **For Quick Implementation**: If you want to start today, use the [Quick Start Guide](quickstart/index.md).
+> 🚀 **For Quick Implementation**: If you want to start today, use the [Quick Start Guide](quickstart).
 
 ---
 
@@ -242,7 +242,7 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 ## 🛠️ Resources and Downloads
 
 ### **Complete Manual (4,600+ lines)**
-📖 [Download Complete Manual](manual/index.md)
+📖 [Download Complete Manual](manual)
 
 **Detailed Content:**
 - **Part I**: Preparation and Assessment (Chapters 1-3)
@@ -274,20 +274,20 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 ## 🤝 Next Steps
 
 ### **If You Want to Start Today**
-1. 🚀 [Quick Start Guide](quickstart/index.md) - 2-4 hours
+1. 🚀 [Quick Start Guide](quickstart) - 2-4 hours
 2. 📋 Basic MOC Template - Universal for any size
 3. 🎯 Specialized Templates: Choose based on your organization size
-4. ✅ [First UKI](quickstart/index.md) - 30-60 minutes
+4. ✅ [First UKI](quickstart) - 30-60 minutes
 
 ### **For Detailed Study**
-1. 📖 [Complete Manual](manual/index.md) - 4,600+ lines
+1. 📖 [Complete Manual](manual) - 4,600+ lines
 2. 📊 [TechCorp Case](manual/reference/) - Real implementation
-3. 🏗️ [Protocol Specification](protocol/index.md) - Fundamentals
+3. 🏗️ [Protocol Specification](protocol) - Fundamentals
 
 ### **For Technical Support**
 - 💬 **GitHub Discussions**: Specific questions
-- 📚 **Documentation**: [Complete portal](protocol/index.md)
-- 🧩 **Frameworks**: [MEF](frameworks/mef.md), [ZOF](frameworks/zof.md), [OIF](frameworks/oif.md), [MOC](frameworks/moc.md), [MAL](frameworks/mal.md)
+- 📚 **Documentation**: [Complete portal](protocol)
+- 🧩 **Frameworks**: [MEF](frameworks/mef), [ZOF](frameworks/zof), [OIF](frameworks/oif), [MOC](frameworks/moc), [MAL](frameworks/mal)
 
 ---
 

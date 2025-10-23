@@ -30,14 +30,14 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 ## 📋 Available Business Rules UKIs
 
 ### 💰 Financial Rules
-1. **[discount-logic-001](uki-pay-discount-logic-001.md)** - Volume and coupon discount calculations
-2. **[fee-calculation-005](uki-pay-fee-calculation-005.md)** - Commission and transaction fee structures
-3. **[refund-policy-003](uki-pay-refund-policy-003.yaml)** - Customer refund processing guidelines
+1. **[discount-logic-001](uki-pay-discount-logic-001)** - Volume and coupon discount calculations
+2. **[fee-calculation-005](uki-pay-fee-calculation-005)** - Commission and transaction fee structures
+3. **[refund-policy-002](uki-pay-refund-policy-002.yaml)** - Customer refund processing guidelines
 
 ### 🔐 Security & Validation Rules  
-4. **[fraud-detection-002](uki-pay-fraud-detection-002.yaml)** - Payment security and risk assessment
-5. **[customer-validation-004](uki-pay-customer-validation-004.yaml)** - Identity verification requirements
-6. **[payment-processing-006](uki-pay-payment-processing-006.yaml)** - Core payment workflow business logic
+4. **[fraud-thresholds-003](uki-pay-fraud-thresholds-003.yaml)** - Payment security and risk assessment
+5. **[currency-rates-004](uki-pay-currency-rates-004.yaml)** - Currency conversion and validation
+6. **[chargeback-rules-006](uki-pay-chargeback-rules-006.yaml)** - Chargeback processing and dispute handling
 
 ## 🔗 Demonstrated Relationships
 
@@ -99,7 +99,7 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 
 - [Technical Patterns](../technical-patterns/) - Implementation patterns for these business rules
 - [Procedures](../procedures/) - Operational procedures implementing these rules
-- [moc-squad-payments.yaml](../../moc-squad-payments.md) - Organizational governance foundation
+- [moc-squad-payments.yaml](../../moc-squad-payments) - Organizational governance foundation
 - [Unstructured Examples](../../unstructured/) - Original chaotic business rule sources
 
 ### Implementation Resources:
