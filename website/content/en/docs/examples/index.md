@@ -306,3 +306,22 @@ How traceability facilitates auditing and regulatory compliance.
 ## 📝 Conclusion
 
 This example demonstrates how the **Matrix Embedding Framework** transforms chaotic knowledge into structured and governed assets, eliminating contradictions, creating traceability and enabling controlled evolution of organizational knowledge.
+
+## 📖 Related Resources
+
+### Knowledge Structuring
+- [Structured MEF Knowledge](knowledge/structured/) - 17 UKIs organized by business rules, technical patterns, and procedures
+- [Unstructured Knowledge](knowledge/unstructured/) - Original chaotic 12 documents demonstrating typical organizational problems
+- [MOC - Matrix Ontology Catalog](../frameworks/moc) - Organizational taxonomy that governs all UKIs
+
+### Implementation Guidance
+- [MEF - Matrix Embedding Framework](../frameworks/mef) - Complete knowledge structuring specification
+- [Quick Start Guide](../quickstart/) - 3-step implementation for immediate use
+- [Templates by Organization Size](../manual/templates/) - Ready-to-use structures for different organization types
+- [TechCorp Organizational Example](../manual/examples/) - Detailed implementation case study
+
+### Understanding Materials
+- [Conceptual Roadmaps](conceptual-roadmaps) - Visual journey from unstructured to structured knowledge
+- [Matrix Protocol Specification](../protocol) - Complete protocol documentation
+- [Unified Glossary](../glossary) - Comprehensive terminology reference
+- [Implementation Manual](../implementation) - Step-by-step organizational adoption guide

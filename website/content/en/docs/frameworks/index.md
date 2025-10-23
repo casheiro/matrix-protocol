@@ -102,3 +102,23 @@ graph TB
 ---
 
 > **💡 Tip**: The frameworks are designed to be implemented gradually. Start with MOC and MEF, then expand to the others as your organization matures.
+
+## 📖 Related Resources
+
+### Implementation Materials
+- [Complete Implementation Manual](../implementation) - Comprehensive guide for all frameworks
+- [Quick Start Guide](../quickstart/) - 3-step implementation in 2-4 hours
+- [Templates by Organization Size](../manual/templates/) - Startup, Scaleup, Enterprise, Corporation
+- [TechCorp Organizational Example](../manual/examples/) - Real-world implementation case
+
+### Technical Resources
+- [Matrix Protocol Specification](../protocol) - Complete protocol documentation
+- [Validation Tools & Checklists](../manual/tools/) - Quality assurance for each framework
+- [Unified Glossary](../glossary) - Complete terminology reference
+- [Examples & Knowledge Comparison](../examples/) - Structured vs unstructured knowledge
+
+### Understanding Materials
+- [Conceptual Roadmaps](../examples/conceptual-roadmaps) - Visual framework connections
+- [Inference & Reasoning](inference-reasoning) - Technical foundations
+- [Explainability & Templates](../manual/tools/explainability) - XAI/NLG for decisions
+- [MOC Governance](../manual/moc-governance) - Organizational policies

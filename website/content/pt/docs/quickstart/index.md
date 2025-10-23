@@ -251,3 +251,24 @@ Este é apenas o começo! Para implementação organizacional completa:
 > ℹ️ **Nota**: O Matrix Protocol é um framework conceitual para colaboração humano-IA. Os exemplos apresentados, incluindo a TechCorp, são ilustrativos para demonstrar a aplicação dos conceitos do protocolo.
 
 *Este início rápido foi desenvolvido para fornecer uma abordagem estruturada para diferentes tamanhos organizacionais - startups, scaleups e enterprises.*
+
+## 📖 Recursos Relacionados
+
+### Frameworks Matrix Protocol
+- [MEF - Matrix Embedding Framework](../frameworks/mef) - Estruturação de conhecimento via UKIs
+- [ZOF - Zion Orchestration Framework](../frameworks/zof) - Orquestração de workflows e estados canônicos
+- [OIF - Operator Intelligence Framework](../frameworks/oif) - Archetypes de IA para execução
+- [MOC - Matrix Ontology Catalog](../frameworks/moc) - Governança de taxonomia organizacional
+- [MAL - Matrix Arbiter Layer](../frameworks/mal) - Resolução de conflitos e regras de precedência
+
+### Recursos de Implementação
+- [Manual Completo de Implementação](../implementation) - Guia abrangente com 4.600+ linhas
+- [Templates por Porte Organizacional](../manual/templates/) - Startup, Scaleup, Enterprise, Corporation
+- [Exemplo Organizacional TechCorp](../manual/examples/) - Caso de implementação real
+- [Ferramentas de Validação e Checklists](../manual/tools/) - Garantia de qualidade e validação
+
+### Materiais de Início
+- [Especificação do Matrix Protocol](../protocol) - Documentação completa do protocolo
+- [Exemplos e Comparação de Conhecimento](../examples/) - Conhecimento estruturado vs não estruturado
+- [Downloads de Templates](templates/) - Templates MOC e UKI prontos para uso
+- [Glossário Unificado](../glossary) - Referência completa de terminologia
