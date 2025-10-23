@@ -13,7 +13,7 @@ order: 0
 ---
 # Structured MEF Knowledge
 
-Complete demonstration of knowledge organized according to MEF v1.0.0 specification, showing how chaotic information transforms into governed, traceable knowledge structures.
+Complete demonstration of knowledge organized according to MEF v0.0.1-beta specification, showing how chaotic information transforms into governed, traceable knowledge structures.
 
 ## 📊 Organization Overview
 
@@ -91,7 +91,7 @@ This section demonstrates a complete transformation from unstructured organizati
 5. **Compare with [Unstructured](../unstructured/)** - Appreciate transformation value
 
 ### Navigation Tips:
-- Each UKI shows complete MEF v1.0.0 compliance
+- Each UKI shows complete MEF v0.0.1-beta compliance
 - All `*_ref` fields reference `moc-squad-payments.yaml` nodes
 - Semantic versioning tracks knowledge evolution
 - Relationship types follow Matrix Protocol standards

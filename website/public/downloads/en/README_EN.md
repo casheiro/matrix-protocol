@@ -1,6 +1,6 @@
 # Matrix Protocol - Resources and Downloads
 
-> **Version:** 1.0.0 Beta  
+> **Version:** 0.0.1-beta  
 > **Last updated:** January 2025
 
 ## About Matrix Protocol
@@ -95,7 +95,7 @@ relationships:
 ## 📊 Success Metrics
 
 ### Technical
-- 100% MEF v1.0.0 compliance
+- 100% MEF v0.0.1-beta compliance
 - ZOF workflows without failures
 - MAL arbitration <5min
 - OIF performance <2s
@@ -127,4 +127,4 @@ This resource package is regularly updated. Stay informed about new versions thr
 
 ---
 
-**Matrix Protocol v1.0.0** - Framework for human-AI collaboration
+**Matrix Protocol v0.0.1-beta** - Framework for human-AI collaboration

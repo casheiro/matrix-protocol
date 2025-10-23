@@ -1,13 +1,13 @@
 # Guia de Implementação do Matrix Protocol
 
-> **Versão:** 1.0.0  
+> **Versão:** 0.0.1-beta  
 > **Status:** Beta  
 > **Idioma:** Português  
 > **Data:** Janeiro 2025
 
 ## Introdução
 
-O Matrix Protocol v1.0.0 é um framework abrangente para colaboração humano-IA através de três camadas interdependentes:
+O Matrix Protocol v0.0.1-beta é um framework abrangente para colaboração humano-IA através de três camadas interdependentes:
 
 - **🔮 Oracle Layer**: Governança estratégica & gestão de base de conhecimento (MEF)
 - **⚡ Zion Layer**: Framework conceitual de workflow para equipes orientadas por IA (ZOF)
@@ -88,7 +88,7 @@ O Matrix Protocol v1.0.0 é um framework abrangente para colaboração humano-IA
 ## Critérios de Sucesso
 
 ### Métricas Técnicas
-- 100% dos UKIs seguem padrão MEF v1.0.0
+- 100% dos UKIs seguem padrão MEF v0.0.1-beta
 - Workflows ZOF executam sem falhas
 - Arbitragem MAL resolve conflitos em <5min
 - Performance OIF mantém <2s de resposta
@@ -126,4 +126,4 @@ Para suporte adicional ou dúvidas específicas sobre implementação, consulte 
 
 ---
 
-**Matrix Protocol v1.0.0** - Protocolo idealizado, criado e mantido pela **[Casheiro](https://casheiro.com.br)**
+**Matrix Protocol v0.0.1-beta** - Protocolo idealizado, criado e mantido pela **[Casheiro](https://casheiro.com.br)**

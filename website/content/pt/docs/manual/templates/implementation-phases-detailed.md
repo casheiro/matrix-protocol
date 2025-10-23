@@ -71,7 +71,7 @@ Este documento detalha as fases específicas para implementação bem-sucedida d
 ### Atividades Principais
 1. **Criação de UKIs Iniciais**
    - Conversão de conhecimento existente
-   - Estruturação conforme MEF v1.0.0
+   - Estruturação conforme MEF v0.0.1-beta
    - Estabelecimento de relacionamentos
 
 2. **Validação de Processos**

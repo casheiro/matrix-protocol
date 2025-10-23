@@ -15,7 +15,7 @@ order: 3
 
 ## Overview
 
-UKI (Universal Knowledge Identifier) templates provide standardized formats for creating MEF v1.0.0 compliant knowledge units.
+UKI (Universal Knowledge Identifier) templates provide standardized formats for creating MEF v0.0.1-beta compliant knowledge units.
 
 ## Available Templates
 

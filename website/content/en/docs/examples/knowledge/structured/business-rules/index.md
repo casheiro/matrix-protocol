@@ -13,7 +13,7 @@ order: 0
 ---
 # Business Rules MEF
 
-UKIs structured containing fundamental business rules following MEF v1.0.0 specification, demonstrating how organizational business logic transforms from scattered policies into governed knowledge units.
+UKIs structured containing fundamental business rules following MEF v0.0.1-beta specification, demonstrating how organizational business logic transforms from scattered policies into governed knowledge units.
 
 ## 📊 Business Context Overview
 
@@ -55,7 +55,7 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 
 ## ✅ MEF Compliance Demonstrated
 
-### Required MEF v1.0.0 Fields:
+### Required MEF v0.0.1-beta Fields:
 - ✅ **Complete Frontmatter** - Schema version, ontology reference, versioning
 - ✅ **MOC References** - All `*_ref` fields point to organizational taxonomy
 - ✅ **Semantic Versioning** - MAJOR.MINOR.PATCH with change impact tracking
@@ -83,7 +83,7 @@ This section contains **6 compliant business rule UKIs** from the Example E-comm
 
 ## 🎯 How to Navigate
 
-1. **Read UKI Structure** - Notice MEF v1.0.0 compliance in each file
+1. **Read UKI Structure** - Notice MEF v0.0.1-beta compliance in each file
 2. **Study Relationships** - See how business rules interconnect logically
 3. **Check MOC References** - Understand organizational governance context
 4. **Compare Versions** - Notice semantic versioning and change tracking

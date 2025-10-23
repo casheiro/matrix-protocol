@@ -1,7 +1,7 @@
 ---
 title: Conhecimento Estruturado MEF
 description: 17 UKIs (Unidades de Conhecimento Integravel) organizados seguindo
-  a especificacao MEF v1.0.0 para demonstrar a eficiencia da estruturacao
+  a especificacao MEF v0.0.1-beta para demonstrar a eficiencia da estruturacao
 icon: i-heroicons-squares-2x2
 layout: docs
 sidebar: true
@@ -13,7 +13,7 @@ order: 0
 ---
 # Conhecimento Estruturado MEF
 
-Esta secao apresenta **17 UKIs (Unidades de Conhecimento Integravel)** criados seguindo a especificacao oficial **MEF v1.0.0**, demonstrando como conhecimento caotico pode ser transformado em estruturas organizadas, versionadas e relacionadas semanticamente.
+Esta secao apresenta **17 UKIs (Unidades de Conhecimento Integravel)** criados seguindo a especificacao oficial **MEF v0.0.1-beta**, demonstrando como conhecimento caotico pode ser transformado em estruturas organizadas, versionadas e relacionadas semanticamente.
 
 ## 📊 Visao Geral da Estruturacao
 

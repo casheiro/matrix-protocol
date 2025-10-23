@@ -52,7 +52,7 @@ This section contains **5 compliant procedure UKIs** from the Example E-commerce
 
 ## ✅ MEF Compliance Demonstrated
 
-### Required MEF v1.0.0 Fields:
+### Required MEF v0.0.1-beta Fields:
 - ✅ **Complete Frontmatter** - Schema version, ontology reference, versioning
 - ✅ **MOC References** - All `*_ref` fields point to organizational taxonomy
 - ✅ **Semantic Versioning** - MAJOR.MINOR.PATCH with operational impact tracking
@@ -80,7 +80,7 @@ This section contains **5 compliant procedure UKIs** from the Example E-commerce
 
 ## 🎯 How to Navigate
 
-1. **Study Procedure Structure** - Notice MEF v1.0.0 compliance in operational context
+1. **Study Procedure Structure** - Notice MEF v0.0.1-beta compliance in operational context
 2. **Follow Execution Flow** - See step-by-step operational workflows
 3. **Check Authority Requirements** - Understand who can execute procedures
 4. **Analyze Dependencies** - Notice relationships to business rules and technical patterns

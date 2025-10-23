@@ -24,7 +24,7 @@ O **Protocolo Matrix** é um framework integral para colaboração humano-IA atr
 
 O protocolo é orientado pelo **Matrix Epistemic Principle (MEP)** — um manifesto acessível que estabelece como o conhecimento é tratado, avaliado e promovido no ecossistema Matrix.
 
-**📜 [Leia o Manifesto MEP](docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)**
+**📜 [Leia o Manifesto MEP](website/content/pt/docs/mep/index.md)**
 
 ---
 
@@ -34,24 +34,24 @@ O protocolo é orientado pelo **Matrix Epistemic Principle (MEP)** — um manife
 
 | Documento | Descrição | Status |
 |-----------|-----------|--------|
-| **[MATRIX_PROTOCOL.md](docs/specifications/pt/MATRIX_PROTOCOL.md)** | Especificação completa do protocolo | ✅ Ativo |
-| **[MEP_MATRIX_EPISTEMIC_PRINCIPLE.md](docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)** | Manifesto epistemológico | ✅ Ativo |
-| **[MOC_MATRIX_ONTOLOGY_CATALOG.md](docs/specifications/pt/MOC_MATRIX_ONTOLOGY_CATALOG.md)** | Catálogo de hierarquias organizacionais | ✅ Ativo |
+| **[Matrix Protocol](website/content/pt/docs/protocol/index.md)** | Especificação completa do protocolo | ✅ Ativo |
+| **[MEP - Matrix Epistemic Principle](website/content/pt/docs/mep/index.md)** | Manifesto epistemológico | ✅ Ativo |
+| **[MOC - Matrix Ontology Catalog](website/content/pt/docs/frameworks/moc.md)** | Catálogo de hierarquias organizacionais | ✅ Ativo |
 
 ### 🔧 Frameworks Técnicos
 
 | Framework | Descrição | Status |
 |-----------|-----------|--------|
-| **[MEF_MATRIX_EMBEDDING_FRAMEWORK.md](docs/specifications/pt/MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** | Estruturação de conhecimento versionado | ✅ Ativo |
-| **[ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](docs/specifications/pt/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** | Workflows conceituais para equipes IA-orientadas | ✅ Ativo |
-| **[OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](docs/specifications/pt/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)** | Arquétipos de inteligência artificial | ✅ Ativo |
-| **[MAL_MATRIX_ARBITER_LAYER.md](docs/specifications/pt/MAL_MATRIX_ARBITER_LAYER.md)** | Arbitragem de conflitos e concorrência | ✅ Ativo |
+| **[MEF - Matrix Embedding Framework](website/content/pt/docs/frameworks/mef.md)** | Estruturação de conhecimento versionado | ✅ Ativo |
+| **[ZOF - Zion Orchestration Framework](website/content/pt/docs/frameworks/zof.md)** | Workflows conceituais para equipes IA-orientadas | ✅ Ativo |
+| **[OIF - Operator Intelligence Framework](website/content/pt/docs/frameworks/oif.md)** | Arquétipos de inteligência artificial | ✅ Ativo |
+| **[MAL - Matrix Arbiter Layer](website/content/pt/docs/frameworks/mal.md)** | Arbitragem de conflitos e concorrência | ✅ Ativo |
 
 ### 📖 Material de Suporte
 
 | Documento | Descrição |
 |-----------|-----------|
-| **[Ontology_MEF_Support.md](docs/specifications/pt/Ontology_MEF_Support.md)** | Ontologia de vocabulários controlados |
+| **[Guia de Implementação](website/public/downloads/pt/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_PT.md)** | Guia prático completo de implementação |
 | **[CLAUDE.md](CLAUDE.md)** | Instruções para Claude Code |
 
 ---
@@ -129,19 +129,19 @@ Fluxos conceituais seguindo estados canônicos:
 ## 🚀 Como Começar
 
 ### 1. 📜 Leia o Manifesto
-Comece pelo **[Matrix Epistemic Principle (MEP)](docs/specifications/pt/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)** para entender os fundamentos filosóficos.
+Comece pelo **[Matrix Epistemic Principle (MEP)](website/content/pt/docs/mep/index.md)** para entender os fundamentos filosóficos.
 
 ### 2. 🏛️ Compreenda a Arquitetura
-Consulte o **[Protocolo Matrix](docs/specifications/pt/MATRIX_PROTOCOL.md)** para visão completa das três camadas.
+Consulte o **[Protocolo Matrix](website/content/pt/docs/protocol/index.md)** para visão completa das três camadas.
 
 ### 3. 🔧 Implemente Conhecimento
-Use o **[MEF](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** para estruturar UKIs.
+Use o **[MEF](website/content/pt/docs/frameworks/mef.md)** para estruturar UKIs.
 
 ### 4. ⚡ Organize Workflows
-Aplique o **[ZOF](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** para fluxos conceituais.
+Aplique o **[ZOF](website/content/pt/docs/frameworks/zof.md)** para fluxos conceituais.
 
 ### 5. 🧠 Configure IA
-Defina arquétipos com o **[OIF](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)**.
+Defina arquétipos com o **[OIF](website/content/pt/docs/frameworks/oif.md)**.
 
 ---
 
@@ -160,7 +160,7 @@ The **Matrix Protocol** is a comprehensive framework for human-AI collaboration 
 
 The protocol is guided by the **Matrix Epistemic Principle (MEP)** — an accessible manifesto that establishes how knowledge is treated, evaluated, and promoted in the Matrix ecosystem.
 
-**📜 [Read the MEP Manifesto](docs/specifications/en/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)**
+**📜 [Read the MEP Manifesto](website/content/en/docs/mep/index.md)**
 
 ---
 
@@ -170,24 +170,24 @@ The protocol is guided by the **Matrix Epistemic Principle (MEP)** — an access
 
 | Document | Description | Status |
 |----------|-------------|--------|
-| **[MATRIX_PROTOCOL.md](docs/specifications/en/MATRIX_PROTOCOL.md)** | Complete protocol specification | ✅ Active |
-| **[MEP_MATRIX_EPISTEMIC_PRINCIPLE.md](docs/specifications/en/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)** | Epistemological manifesto | ✅ Active |
-| **[MOC_MATRIX_ONTOLOGY_CATALOG.md](docs/specifications/en/MOC_MATRIX_ONTOLOGY_CATALOG.md)** | Organizational hierarchies catalog | ✅ Active |
+| **[Matrix Protocol](website/content/en/docs/protocol/index.md)** | Complete protocol specification | ✅ Active |
+| **[MEP - Matrix Epistemic Principle](website/content/en/docs/mep/index.md)** | Epistemological manifesto | ✅ Active |
+| **[MOC - Matrix Ontology Catalog](website/content/en/docs/frameworks/moc.md)** | Organizational hierarchies catalog | ✅ Active |
 
 ### 🔧 Technical Frameworks
 
 | Framework | Description | Status |
 |-----------|-------------|--------|
-| **[MEF_MATRIX_EMBEDDING_FRAMEWORK.md](docs/specifications/en/MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** | Versioned knowledge structuring | ✅ Active |
-| **[ZOF_ZION_ORCHESTRATION_FRAMEWORK.md](docs/specifications/en/ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** | Conceptual workflows for AI-oriented teams | ✅ Active |
-| **[OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md](docs/specifications/en/OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)** | Artificial intelligence archetypes | ✅ Active |
-| **[MAL_MATRIX_ARBITER_LAYER.md](docs/specifications/en/MAL_MATRIX_ARBITER_LAYER.md)** | Conflict & concurrency arbitration | ✅ Active |
+| **[MEF - Matrix Embedding Framework](website/content/en/docs/frameworks/mef.md)** | Versioned knowledge structuring | ✅ Active |
+| **[ZOF - Zion Orchestration Framework](website/content/en/docs/frameworks/zof.md)** | Conceptual workflows for AI-oriented teams | ✅ Active |
+| **[OIF - Operator Intelligence Framework](website/content/en/docs/frameworks/oif.md)** | Artificial intelligence archetypes | ✅ Active |
+| **[MAL - Matrix Arbiter Layer](website/content/en/docs/frameworks/mal.md)** | Conflict & concurrency arbitration | ✅ Active |
 
 ### 📖 Support Material
 
 | Document | Description |
 |----------|-------------|
-| **[Ontology_MEF_Support.md](docs/specifications/en/Ontology_MEF_Support.md)** | Controlled vocabularies ontology |
+| **[Implementation Guide](website/public/downloads/en/MATRIX_PROTOCOL_IMPLEMENTATION_GUIDE_EN.md)** | Complete practical implementation guide |
 | **[CLAUDE.md](CLAUDE.md)** | Instructions for Claude Code |
 
 ---
@@ -265,19 +265,19 @@ Conceptual flows following canonical states:
 ## 🚀 Getting Started
 
 ### 1. 📜 Read the Manifesto
-Start with the **[Matrix Epistemic Principle (MEP)](docs/specifications/en/MEP_MATRIX_EPISTEMIC_PRINCIPLE.md)** to understand the philosophical foundations.
+Start with the **[Matrix Epistemic Principle (MEP)](website/content/en/docs/mep/index.md)** to understand the philosophical foundations.
 
 ### 2. 🏛️ Understand the Architecture
-Consult the **[Matrix Protocol](docs/specifications/en/MATRIX_PROTOCOL.md)** for complete three-layer overview.
+Consult the **[Matrix Protocol](website/content/en/docs/protocol/index.md)** for complete three-layer overview.
 
 ### 3. 🔧 Implement Knowledge
-Use **[MEF](MEF_MATRIX_EMBEDDING_FRAMEWORK.md)** to structure UKIs.
+Use **[MEF](website/content/en/docs/frameworks/mef.md)** to structure UKIs.
 
 ### 4. ⚡ Organize Workflows
-Apply **[ZOF](ZOF_ZION_ORCHESTRATION_FRAMEWORK.md)** for conceptual flows.
+Apply **[ZOF](website/content/en/docs/frameworks/zof.md)** for conceptual flows.
 
 ### 5. 🧠 Configure AI
-Define archetypes with **[OIF](OIF_OPERATOR_INTELLIGENCE_FRAMEWORK.md)**.
+Define archetypes with **[OIF](website/content/en/docs/frameworks/oif.md)**.
 
 ---
 
