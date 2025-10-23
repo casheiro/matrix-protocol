@@ -1,10 +1,10 @@
 # Slugs & Links Report
 
 - Locales: pt, en
-- Files scanned: 158
+- Files scanned: 162
 - Flagged slugs: 0
-- Non-conform links: 51
-- Broken links: 23
+- Non-conform links: 63
+- Broken links: 73
 
 ## Top Recommendations
 - Revisar links internos para apontar para slugs kebab-case
