@@ -23,10 +23,6 @@ Exemplo abrangente que demonstra a transformação de conhecimento caótico em e
 **Conteúdo incluído:**
 - **[Visão Geral](./knowledge)** - Introdução à demonstração
 
-### Integração com Ferramentas
-- **[StackSpot Agent Prompt](./knowledge/stackspot-agent-prompt)** - Prompt para agente StackSpot
-- **[Guia de Compatibilidade StackSpot](./knowledge/stackspot-compatibility-guide)** - Integração com StackSpot
-
 ### Dados Não Estruturados vs Estruturados
 
 #### Antes: Conhecimento Caótico

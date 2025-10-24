@@ -22,7 +22,7 @@ This section contains all templates and structures needed to implement Matrix Pr
 ## 📋 Templates by Organization Size
 
 ### Main Templates
-- **[MOC Templates by Organization Size](./templates-moc-by-organization-size)** - Structures adapted for different company sizes
+- **[MOC Templates by Organization Size](./moc-templates-by-organization-size)** - Structures adapted for different company sizes
 
 ### Multi-hierarchical UKI Templates
 - **[Multi-hierarchical UKI Templates](./multi-hierarchical-uki-templates)** - Advanced structures for interconnected knowledge
@@ -30,7 +30,7 @@ This section contains all templates and structures needed to implement Matrix Pr
 ## 🚀 Implementation Phases
 
 ### Detailed Roadmaps
-- **[Detailed Implementation Phases](./detailed-implementation-phases)** - Complete implementation timeline
+- **[Detailed Implementation Phases](./implementation-phases-detailed)** - Complete implementation timeline
 
 ## 💡 How to Use
 
