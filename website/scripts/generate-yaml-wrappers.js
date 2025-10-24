@@ -14,7 +14,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const projectRoot = path.resolve(__dirname, '..')
 const CONTENT_ROOT = path.join(projectRoot, 'content')
-const REPORT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
+// REPORT_DIR removed - no longer needed after cleanup
+// const REPORT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
 
 function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }) }
 
@@ -181,7 +182,8 @@ function updateLinksInMarkdown(filePath, yamlToWrapperMap) {
 }
 
 async function main() {
-  ensureDir(REPORT_DIR)
+  // Report functionality removed after cleanup
+  // ensureDir(REPORT_DIR)
   const yamlFiles = listYamlFiles()
   const yamlToWrapperMap = computeYamlToWrapperMap(yamlFiles)
 
@@ -207,17 +209,18 @@ async function main() {
     }
   }
 
-  const ts = new Date().toISOString().replace(/[:.]/g, '-')
-  const outJson = path.join(REPORT_DIR, `yaml-wrappers-report-${ts}.json`)
-  const latestJson = path.join(REPORT_DIR, 'yaml-wrappers-report-latest.json')
-  const report = { timestamp: new Date().toISOString(), applyMode: APPLY_MODE, wrapperPlans, linkPlans }
-  fs.writeFileSync(outJson, JSON.stringify(report, null, 2))
-  fs.writeFileSync(latestJson, JSON.stringify(report, null, 2))
+  // Report generation removed - no longer needed
+  // const ts = new Date().toISOString().replace(/[:.]/g, '-')
+  // const outJson = path.join(REPORT_DIR, `yaml-wrappers-report-${ts}.json`)
+  // const latestJson = path.join(REPORT_DIR, 'yaml-wrappers-report-latest.json')
+  // const report = { timestamp: new Date().toISOString(), applyMode: APPLY_MODE, wrapperPlans, linkPlans }
+  // fs.writeFileSync(outJson, JSON.stringify(report, null, 2))
+  // fs.writeFileSync(latestJson, JSON.stringify(report, null, 2))
 
   console.log(`✅ YAML Wrappers ${APPLY_MODE ? 'APPLIED' : 'DRY-RUN'}`)
   console.log(`📄 Wrappers planned: ${wrapperPlans.length} (missing: ${wrapperPlans.filter(p => !p.exists).length})`)
   console.log(`🔗 Files with link updates: ${linkPlans.length}`)
-  console.log(`🗂️ Report: ${latestJson}`)
+  // console.log(`🗂️ Report: ${latestJson}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

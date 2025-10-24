@@ -24,7 +24,6 @@ Contém toda a documentação relacionada ao **planejamento do projeto** e **rit
 
 - **← Projeto** → `../00-project/`
 - **Execução →** → `../02-execution/`
-- **Entregáveis →** → `../03-deliverables/`
 
 ## 📋 **Como usar**
 

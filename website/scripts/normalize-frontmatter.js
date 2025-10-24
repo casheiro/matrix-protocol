@@ -18,7 +18,8 @@ const projectRoot = path.resolve(__dirname, '..')
 const argLocale = (process.argv.find(a => a.startsWith('--locale=')) || '').split('=')[1] || 'pt'
 const LOCALE = argLocale
 const CONTENT_ROOT = path.join(projectRoot, 'content', LOCALE, 'docs')
-const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution')
+// OUTPUT_DIR removed - no longer needed after cleanup
+// const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution')
 
 const REQUIRED_FIELDS = ['title', 'description', 'icon', 'layout', 'sidebar', 'toc', 'navigation']
 
@@ -208,10 +209,10 @@ async function main() {
     }
   }
 
-  // 3) Salvar relatório
-  ensureDir(OUTPUT_DIR)
-  const latestFile = path.join(OUTPUT_DIR, `frontmatter-normalization-latest-${LOCALE}.json`)
-  fs.writeFileSync(latestFile, JSON.stringify(report, null, 2))
+  // Report saving removed - no longer needed after cleanup
+  // ensureDir(OUTPUT_DIR)
+  // const latestFile = path.join(OUTPUT_DIR, `frontmatter-normalization-latest-${LOCALE}.json`)
+  // fs.writeFileSync(latestFile, JSON.stringify(report, null, 2))
 
   console.log(`✅ Frontmatter normalization concluída para locale: ${LOCALE}`)
   console.log(`📄 Atualizados: ${report.updated.length}`)

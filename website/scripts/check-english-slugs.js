@@ -14,7 +14,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const projectRoot = path.resolve(__dirname, '..')
 const CONTENT_ROOT = path.join(projectRoot, 'content')
-const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
+// OUTPUT_DIR removed - no longer needed after cleanup
+// const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
 
 function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }) }
 
@@ -198,27 +199,29 @@ function analyzeLinks(filePath) {
 }
 
 function saveReports(summary, detailed) {
-  ensureDir(OUTPUT_DIR)
-  const ts = new Date().toISOString().replace(/[:.]/g, '-')
-  const latestJson = path.join(OUTPUT_DIR, 'slug-link-latest.json')
-  const tsJson = path.join(OUTPUT_DIR, `slug-link-${ts}.json`)
-  const md = path.join(OUTPUT_DIR, 'slug-link-summary.md')
+  // Report saving removed - no longer needed after cleanup
+  // ensureDir(OUTPUT_DIR)
+  // const ts = new Date().toISOString().replace(/[:.]/g, '-')
+  // const latestJson = path.join(OUTPUT_DIR, 'slug-link-latest.json')
+  // const tsJson = path.join(OUTPUT_DIR, `slug-link-${ts}.json`)
+  // const md = path.join(OUTPUT_DIR, 'slug-link-summary.md')
 
-  fs.writeFileSync(latestJson, JSON.stringify(detailed, null, 2))
-  fs.writeFileSync(tsJson, JSON.stringify(detailed, null, 2))
+  // fs.writeFileSync(latestJson, JSON.stringify(detailed, null, 2))
+  // fs.writeFileSync(tsJson, JSON.stringify(detailed, null, 2))
 
-  const mdContent = `# Slugs & Links Report\n\n` +
-    `- Locales: ${summary.locales.join(', ')}\n` +
-    `- Files scanned: ${summary.filesScanned}\n` +
-    `- Flagged slugs: ${summary.flaggedSlugs}\n` +
-    `- Non-conform links: ${summary.nonConformLinks}\n` +
-    `- Broken links: ${summary.brokenLinks}\n\n` +
-    `## Top Recommendations\n` +
-    summary.topRecommendations.map(r => `- ${r}`).join('\n') + '\n'
+  // Markdown report generation removed - no longer needed
+  // const mdContent = `# Slugs & Links Report\n\n` +
+  //   `- Locales: ${summary.locales.join(', ')}\n` +
+  //   `- Files scanned: ${summary.filesScanned}\n` +
+  //   `- Flagged slugs: ${summary.flaggedSlugs}\n` +
+  //   `- Non-conform links: ${summary.nonConformLinks}\n` +
+  //   `- Broken links: ${summary.brokenLinks}\n\n` +
+  //   `## Top Recommendations\n` +
+  //   summary.topRecommendations.map(r => `- ${r}`).join('\n') + '\n'
 
-  fs.writeFileSync(md, mdContent)
+  // fs.writeFileSync(md, mdContent)
 
-  return { latestJson, tsJson, md }
+  return { summary, detailed }
 }
 
 async function main() {
@@ -268,15 +271,17 @@ async function main() {
     topRecommendations: Array.from(topRecs)
   }
 
-  const out = saveReports(summary, detailed)
+  // Report saving removed - output only to console
+  saveReports(summary, detailed)
 
   console.log('✅ Slugs & Links check concluído')
   console.log(`📄 Arquivos escaneados: ${filesScanned}`)
   console.log(`⚠️ Slugs sinalizados: ${flaggedSlugs}`)
   console.log(`🔗 Links não conformes: ${nonConformLinks}`)
   console.log(`❌ Links quebrados: ${brokenLinks}`)
-  console.log(`🗂️ Report: ${out.latestJson}`)
-  console.log(`📝 Summary: ${out.md}`)
+  // Report file references removed
+  // console.log(`🗂️ Report: ${out.latestJson}`)
+  // console.log(`📝 Summary: ${out.md}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

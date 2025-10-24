@@ -12,10 +12,7 @@ O projeto foi reestruturado semanticamente para melhor organização:
 docs/dynamic-navigation/
 ├── 📋 00-project/          # ← VOCÊ ESTÁ AQUI
 ├── 🔄 01-planning/         # Planejamento e rituais
-├── 📊 02-execution/        # Execução e tracking
-├── 📦 03-deliverables/     # Entregáveis por STORY
-├── 📈 04-reports/          # Relatórios e análises
-└── 🔧 05-tools/           # Ferramentas e configs
+└── 📊 02-execution/        # Execução e tracking
 ```
 
 ## 📄 **ARQUIVOS DESTA PASTA**
@@ -44,20 +41,8 @@ docs/dynamic-navigation/
 
 ### **📊 Execução** → `../02-execution/`
 - **EXECUTION_LOG.md**: Status em tempo real e histórico
-- **sprint-reports/**: Relatórios de cada sprint
-
-### **📦 Entregáveis** → `../03-deliverables/`
-- **story-1.1-audit/**: Todos os deliverables da STORY 1.1
-- **story-1.2-metadata/**: Preparado para STORY 1.2
-- **story-2.1-discovery/**: Preparado para STORY 2.1
-
-### **📈 Relatórios** → `../04-reports/`
-- **audit-reports/**: Relatórios JSON de auditoria
-- **mapping/**: Mapeamentos estruturais
-- **archived/**: Versões antigas de documentos
-
-### **🔧 Ferramentas** → `../05-tools/`
-- **scripts-docs/**: Documentação das ferramentas CLI
+- **TASK_2.*.md**: Implementações técnicas core
+- **frontmatter-catalog.json**: Dados técnicos
 
 ## 🤖 **COMO USAR - GUIA PARA AGENTS IA**
 
@@ -72,7 +57,6 @@ docs/dynamic-navigation/
 2. **Verificar dependencies** e responsável atribuído
 3. **Atualizar status** em `../02-execution/EXECUTION_LOG.md`
 4. **Executar work** usando ferramentas MCP atribuídas
-5. **Registrar entregáveis** em `../03-deliverables/`
 
 ### **🚦 Para Resolver Bloqueios**
 1. **Identificar impedimento** e classificar urgência

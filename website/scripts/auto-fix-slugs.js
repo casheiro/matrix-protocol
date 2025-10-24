@@ -13,7 +13,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const projectRoot = path.resolve(__dirname, '..')
 const CONTENT_ROOT = path.join(projectRoot, 'content')
-const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
+// OUTPUT_DIR removed - no longer needed after cleanup  
+// const OUTPUT_DIR = path.join(projectRoot, 'docs', 'dynamic-navigation', '02-execution', 'slug-link-reports')
 
 function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }) }
 const translationMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'slug-translation-map.json'), 'utf-8'))
@@ -250,13 +251,14 @@ async function main() {
     appliedLinkUpdates = applyLinkFixes(filesAfterRenames, finalMap)
   }
 
-  ensureDir(OUTPUT_DIR)
-  const ts = new Date().toISOString().replace(/[:.]/g, '-')
-  const outJson = path.join(OUTPUT_DIR, `auto-fix-plans-${ts}.json`)
-  const latestJson = path.join(OUTPUT_DIR, 'auto-fix-plans-latest.json')
-  const report = { timestamp: new Date().toISOString(), applyMode: APPLY_MODE, renamePlans, linkPlans, appliedRenames, appliedLinkUpdates }
-  fs.writeFileSync(outJson, JSON.stringify(report, null, 2))
-  fs.writeFileSync(latestJson, JSON.stringify(report, null, 2))
+  // Report generation removed - no longer needed
+  // ensureDir(OUTPUT_DIR)
+  // const ts = new Date().toISOString().replace(/[:.]/g, '-')
+  // const outJson = path.join(OUTPUT_DIR, `auto-fix-plans-${ts}.json`)
+  // const latestJson = path.join(OUTPUT_DIR, 'auto-fix-plans-latest.json')
+  // const report = { timestamp: new Date().toISOString(), applyMode: APPLY_MODE, renamePlans, linkPlans, appliedRenames, appliedLinkUpdates }
+  // fs.writeFileSync(outJson, JSON.stringify(report, null, 2))
+  // fs.writeFileSync(latestJson, JSON.stringify(report, null, 2))
 
   console.log(APPLY_MODE ? '✅ Auto-fix aplicado' : '✅ Auto-fix (dry-run) concluído')
   console.log(`📁 Propostas de renome: ${renamePlans.length}`)

@@ -10,19 +10,21 @@ Contém a documentação **dinâmica** de execução, status em tempo real e tra
 - **Conteúdo**: Status dos agents, progresso das tasks, logs de atividades
 - **Quando usar**: Atualizar após cada task, consultar para continuidade
 
-### **sprint-reports/** (pasta)
-- **Descrição**: Relatórios de cada sprint executada
-- **Conteúdo**: Retrospectives, métricas, lições aprendidas (formato JSON + Markdown)
-- **Arquivos disponíveis**: 
-  - **Sprint 1**: `SPRINT_1_REPORT.md`, JSONs de auditoria automática
-  - **Sprint 2**: `SPRINT_2_REPORT.md`, JSONs de métricas de performance
-- **Quando usar**: Ao final de cada sprint para documentar resultados
+### **TASK_2.*.md** (arquivos técnicos)
+- **Descrição**: Implementações técnicas core das features de navegação dinâmica
+- **Conteúdo**: Análise, implementação e especificações dos componentes
+- **Arquivos incluídos**:
+  - **TASK_2.1**: Content Structure Analysis
+  - **TASK_2.2**: Content Discovery Implementation 
+  - **TASK_2.3**: Navigation API Endpoints
+  - **TASK_2.4**: Frontend Components
+  - **TASK_2.5**: Multilingual Support
+- **Quando usar**: Para entender implementação técnica das features
 
 ## 🔗 **Navegação rápida**
 
 - **← Planejamento** → `../01-planning/`
-- **Entregáveis →** → `../03-deliverables/`
-- **Relatórios →** → `../04-reports/`
+- **← Projeto** → `../00-project/`
 
 ## 📋 **Como usar**
 
