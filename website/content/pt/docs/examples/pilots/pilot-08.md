@@ -1,6 +1,6 @@
 ---
 title: Pilot 08 — Navigation Flag
-description: Validação do uso de navigation: true nas páginas navegáveis
+description: 'Validação do uso de navigation: true nas páginas navegáveis'
 icon: i-heroicons-map
 layout: docs
 sidebar: true
@@ -9,6 +9,10 @@ navigation: true
 lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 8
+tags:
+  - examples
+  - pilots
+  - implementation
 framework: general
 keywords:
   - Matrix Protocol

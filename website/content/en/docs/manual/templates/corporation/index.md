@@ -9,6 +9,9 @@ keywords:
   - complex hierarchies
   - audit compliance
   - cross-divisional integration
+  - large corporations
+  - robust governance
+  - formalized processes
 framework: general
 icon: i-heroicons-building-office-2
 layout: docs
@@ -22,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - corporation
+  - enterprise
+  - governance
 ---
 # Corporation Templates
 

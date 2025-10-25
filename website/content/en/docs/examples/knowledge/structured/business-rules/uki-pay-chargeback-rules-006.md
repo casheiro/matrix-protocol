@@ -10,13 +10,21 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - business-rules
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - chargeback management
   - payment disputes
   - fraud prevention
   - business rules
+  - dispute resolution
+  - financial compliance
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-chargeback-rules-006.yaml`
 

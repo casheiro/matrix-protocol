@@ -10,8 +10,13 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - performance optimization
   - payment systems
@@ -19,6 +24,9 @@ keywords:
   - JVM optimization
   - load testing
   - capacity planning
+  - operational procedures
+  - system optimization
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml`
 

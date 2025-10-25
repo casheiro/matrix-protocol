@@ -25,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - scaleup
+  - MOC
+  - YAML
 ---
 > Source YAML: `pt/docs/manual/templates/scaleup/moc-scaleup.yaml`
 

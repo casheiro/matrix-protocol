@@ -10,17 +10,23 @@ lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
+  - UKI
   - monitoring alerts
   - SLA thresholds
   - payment success rate
   - revenue per hour
   - gateway availability
   - response time P95
-  - PagerDuty Slack
   - alert routing
   - false positive reduction
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml`
 

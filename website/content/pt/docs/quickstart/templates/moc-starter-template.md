@@ -1,6 +1,10 @@
 ---
 title: Moc Starter Template
 description: Página wrapper para o asset YAML moc-starter-template.yaml
+tags:
+  - implementation
+  - quickstart
+  - templates
 keywords:
   - Matrix Protocol
   - MOC starter template

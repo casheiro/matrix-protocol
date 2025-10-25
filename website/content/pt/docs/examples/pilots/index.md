@@ -17,6 +17,10 @@ keywords:
   - checklist editorial
   - frontmatter schema
   - política de nomenclatura
+tags:
+  - examples
+  - pilots
+  - implementation
 ---
 # Pilot Pages — Validation Suite
 

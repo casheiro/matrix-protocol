@@ -4,10 +4,14 @@ description: Essential templates for initial Matrix Protocol implementation in s
 keywords:
   - Matrix Protocol
   - templates
+  - basic templates
   - implementation
   - manual
   - guide
   - organizational
+  - small medium enterprises
+  - simple structure
+  - quick setup
 framework: general
 icon: i-heroicons-building-storefront
 layout: docs
@@ -21,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - basic
+  - implementation
+  - organizational
 ---
 # Basic Templates
 

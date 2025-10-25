@@ -10,6 +10,10 @@ lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - business-rules
 keywords:
   - Matrix Protocol
   - MEF

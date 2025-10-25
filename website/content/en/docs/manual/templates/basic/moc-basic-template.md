@@ -4,10 +4,14 @@ description: Wrapper page for YAML asset moc-basic-template.yaml
 keywords:
   - Matrix Protocol
   - templates
+  - basic template
+  - MOC template
   - implementation
-  - MOC
   - manual
   - guide
+  - YAML template
+  - organizational structure
+  - quick start
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
@@ -21,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - basic
+  - MOC
+  - YAML
 ---
 > Source YAML: `en/docs/manual/templates/basic/moc-basic-template.yaml`
 

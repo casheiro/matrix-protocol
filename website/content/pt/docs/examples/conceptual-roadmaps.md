@@ -10,20 +10,19 @@ last_updated: '2025-10-23'
 order: 1
 tags:
   - examples
-  - uki
-  - mep
-  - mef
-  - zof
-  - oif
   - conceptual
-  - flowcharts
+  - mef
+  - frameworks
 maturity: beta
 framework: general
 keywords:
   - Matrix Protocol
-  - examples
-  - use cases
-  - epistemology
+  - roteiros conceituais
+  - fluxos epistemológicos
+  - MEP MEF ZOF OIF integração
+  - transformação conhecimento
+  - orquestração workflow
+  - processos arbitragem
 ---
 
 # Roteiros Conceituais da UKI

@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - corporation
+  - MOC
+  - YAML
 ---
 > Source YAML: `pt/docs/manual/templates/corporation/moc-corporation.yaml`
 

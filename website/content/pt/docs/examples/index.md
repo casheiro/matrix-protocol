@@ -17,6 +17,10 @@ keywords:
   - implementações organizacionais
   - transformação de conhecimento
   - comparação estruturado vs não estruturado
+tags:
+  - examples
+  - knowledge
+  - comparison
 ---
 # Exemplos e Casos de Estudo
 

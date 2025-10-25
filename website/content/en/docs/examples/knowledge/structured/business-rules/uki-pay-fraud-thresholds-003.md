@@ -10,14 +10,21 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - business-rules
 keywords:
   - Matrix Protocol
-  - examples
-  - use cases
-  - knowledge
-  - structured
-  - business rules
+  - MEF
   - UKI
+  - fraud detection
+  - risk thresholds
+  - payment security
+  - business rules
+  - behavioral analysis
+  - geographic rules
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-fraud-thresholds-003.yaml`
 

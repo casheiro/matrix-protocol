@@ -10,13 +10,9 @@ last_updated: '2025-10-23'
 order: 1
 tags:
   - examples
-  - uki
-  - mep
-  - mef
-  - zof
-  - oif
   - conceptual
-  - flowcharts
+  - mef
+  - frameworks
 maturity: beta
 framework: general
 keywords:

@@ -12,6 +12,10 @@ keywords:
   - versionamento
   - relacionamentos semânticos
   - governança MOC
+tags:
+  - examples
+  - knowledge
+  - comparison
 framework: general
 icon: i-heroicons-squares-2x2
 layout: docs

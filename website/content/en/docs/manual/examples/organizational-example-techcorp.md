@@ -18,6 +18,10 @@ keywords:
   - guide
   - organizational
   - implementation
+tags:
+  - manual
+  - examples
+  - organizational
 ---
 # TechCorp Digital Transformation
 ## Complete Example of Matrix Protocol Organizational Implementation

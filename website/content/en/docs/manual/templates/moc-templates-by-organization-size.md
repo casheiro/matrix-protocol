@@ -23,6 +23,7 @@ maturity: stable
 tags:
   - manual
   - templates
+  - organizational
 ---
 
 # MOC Templates by Organizational Size

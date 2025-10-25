@@ -8,13 +8,9 @@ last_updated: '2025-10-23'
 order: 6
 tags:
   - frameworks
-  - inference
-  - reasoning
-  - deep-learning
-  - datalog
-  - kge
-  - gnn
-  - matrix-protocol
+  - inference-reasoning
+  - technical
+  - core
 maturity: beta
 framework: general
 keywords:

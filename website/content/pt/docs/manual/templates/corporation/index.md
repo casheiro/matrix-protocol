@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - corporation
+  - enterprise
+  - governança
 ---
 # Templates Corporativos
 

@@ -12,6 +12,10 @@ keywords:
   - falta de governança
   - antes MEF
   - anti-patterns
+tags:
+  - examples
+  - unstructured
+  - knowledge
 framework: general
 icon: i-heroicons-document-minus
 layout: docs

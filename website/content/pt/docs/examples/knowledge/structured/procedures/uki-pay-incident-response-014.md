@@ -10,8 +10,14 @@ lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
+  - UKI
   - incident response
   - classificação severidade
   - P0 P1 P2 P3
@@ -19,8 +25,8 @@ keywords:
   - war room
   - post-mortem
   - runbook integration
-  - SLA resposta
   - escalation matrix
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml`
 

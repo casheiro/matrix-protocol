@@ -1,6 +1,10 @@
 ---
 title: Procedures MEF
 description: UKIs structured documenting operational processes and organizational procedures
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
   - MEF procedures
@@ -10,6 +14,8 @@ keywords:
   - incident response
   - deployment process
   - monitoring procedures
+  - squad payments
+  - compliance procedures
 framework: general
 icon: i-heroicons-clipboard-document-list
 layout: docs

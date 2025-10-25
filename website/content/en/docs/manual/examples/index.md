@@ -18,6 +18,10 @@ keywords:
   - guide
   - organizational
   - implementation
+tags:
+  - manual
+  - examples
+  - organizational
 ---
 # Examples and Case Studies
 

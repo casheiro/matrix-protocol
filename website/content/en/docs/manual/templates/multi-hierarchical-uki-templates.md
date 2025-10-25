@@ -22,6 +22,7 @@ maturity: stable
 tags:
   - manual
   - templates
+  - uki
 ---
 # Multi-Hierarchical UKI Templates
 **UKI Templates Demonstrating Cross-Cutting Organizational Relationships**

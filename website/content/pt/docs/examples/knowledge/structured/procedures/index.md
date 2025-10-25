@@ -1,8 +1,13 @@
 ---
 title: Procedimentos MEF
 description: 5 UKIs estruturados documentando processos operacionais criticos da squad de pagamentos, demonstrando padronizacao e rastreabilidade
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
   - procedimentos operacionais
   - PCI compliance
   - deployment process

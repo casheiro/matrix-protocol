@@ -8,6 +8,10 @@ keywords:
   - knowledge
   - structured
   - unstructured
+tags:
+  - examples
+  - unstructured
+  - knowledge
 framework: general
 icon: i-heroicons-document
 layout: docs

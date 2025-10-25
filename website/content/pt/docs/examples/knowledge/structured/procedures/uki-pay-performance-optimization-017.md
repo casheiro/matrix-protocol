@@ -10,8 +10,14 @@ lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
+  - UKI
   - performance optimization
   - load testing
   - JMeter scenarios
@@ -20,7 +26,7 @@ keywords:
   - JVM tuning G1GC
   - capacity planning
   - connection pool
-  - baseline SLA
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml`
 

@@ -12,6 +12,10 @@ keywords:
   - taxonomia empresarial
   - YAML MOC
   - exemplo organizacional
+tags:
+  - examples
+  - moc
+  - organizational
 framework: general
 icon: i-heroicons-code-bracket
 layout: docs

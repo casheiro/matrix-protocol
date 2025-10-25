@@ -10,8 +10,14 @@ lang: pt
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
+  - UKI
   - deployment process
   - blue-green deployment
   - canary release
@@ -20,7 +26,7 @@ keywords:
   - change windows
   - PCI validation
   - emergency deployment
-  - production SLA
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml`
 

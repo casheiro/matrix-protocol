@@ -8,6 +8,10 @@ keywords:
   - formal governance
   - compliance standards
   - risk management
+  - business units
+  - YAML template
+  - enterprise structure
+  - audit trails
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
@@ -21,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - enterprise
+  - MOC
+  - YAML
 ---
 > Source YAML: `en/docs/manual/templates/enterprise/moc-enterprise.yaml`
 

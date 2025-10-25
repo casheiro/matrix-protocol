@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - startup
+  - agile
+  - lean
 ---
 # Templates Startup
 

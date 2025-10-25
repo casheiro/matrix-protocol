@@ -10,18 +10,19 @@ lang: en
 last_updated: 2025-10-23T00:00:00.000Z
 order: 1
 framework: general
+tags:
+  - implementation
+  - assessment
+  - readiness
 keywords:
   - Matrix Protocol
   - organizational assessment
   - readiness evaluation
+  - implementation planning
   - knowledge maturity
   - governance capacity
-  - technical capacity
-  - change culture
-  - process gaps
-  - training needs
-  - organizational barriers
-  - maturity indicators
+  - resource assessment
+  - Matrix Protocol adoption
 ---
 
 # Organizational Assessment

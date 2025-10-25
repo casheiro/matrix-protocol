@@ -3,11 +3,15 @@ title: Moc Startup
 description: Wrapper page for YAML asset moc-startup.yaml
 keywords:
   - Matrix Protocol
-  - MOC template
+  - MOC startup template
   - startup organizations
   - 5-50 employees
   - organizational structure
   - agile implementation
+  - lean structures
+  - YAML template
+  - rapid iteration
+  - minimum viable
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
@@ -21,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - startup
+  - MOC
+  - YAML
 ---
 > Source YAML: `en/docs/manual/templates/startup/moc-startup.yaml`
 

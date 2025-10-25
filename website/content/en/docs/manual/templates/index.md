@@ -21,6 +21,7 @@ maturity: stable
 tags:
   - manual
   - templates
+  - implementation
 ---
 # Templates and MOC Structures
 

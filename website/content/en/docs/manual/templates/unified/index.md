@@ -3,10 +3,11 @@ title: Unified Templates
 description: Unified templates combining multiple approaches for maximum flexibility
 keywords:
   - Matrix Protocol
-  - templates
-  - implementation
-  - manual
-  - guide
+  - unified templates
+  - hybrid approaches
+  - organizational flexibility
+  - multi-context implementation
+  - adaptive structures
 framework: general
 icon: i-heroicons-squares-plus
 layout: docs
@@ -20,6 +21,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - unified
+  - hybrid
+  - flexible
 ---
 # Unified Templates
 

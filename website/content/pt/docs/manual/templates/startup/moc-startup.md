@@ -26,6 +26,7 @@ maturity: stable
 tags:
   - manual
   - templates
+  - startup
 ---
 > Source YAML: `pt/docs/manual/templates/startup/moc-startup.yaml`
 

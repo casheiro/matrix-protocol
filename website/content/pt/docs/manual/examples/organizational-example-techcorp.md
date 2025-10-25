@@ -9,6 +9,11 @@ navigation: true
 lang: pt
 last_updated: 2025-10-23T00:00:00.000Z
 order: 1
+tags:
+  - examples
+  - implementation
+  - case-studies
+  - techcorp
 framework: general
 keywords:
   - Matrix Protocol

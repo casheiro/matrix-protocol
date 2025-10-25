@@ -22,6 +22,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - unified
+  - MOC
+  - YAML
 ---
 > Source YAML: `pt/docs/manual/templates/unified/moc-unified-structure.yaml`
 

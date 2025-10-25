@@ -22,6 +22,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - unified
+  - híbrido
+  - flexível
 ---
 # Templates Unificados
 

@@ -12,6 +12,10 @@ keywords:
   - documentação problemática
   - exemplo negativo
   - janeiro 2024
+tags:
+  - examples
+  - unstructured
+  - knowledge
 framework: general
 icon: i-heroicons-document
 layout: docs

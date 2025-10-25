@@ -9,6 +9,10 @@ keywords:
   - structured
   - unstructured
   - structures
+tags:
+  - examples
+  - unstructured
+  - knowledge
 framework: general
 icon: i-heroicons-document-minus
 layout: docs

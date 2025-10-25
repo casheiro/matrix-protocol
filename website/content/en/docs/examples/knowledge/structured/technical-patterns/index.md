@@ -9,6 +9,10 @@ keywords:
   - structured
   - technical patterns
   - architecture
+tags:
+  - examples
+  - structured
+  - technical-patterns
 framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs

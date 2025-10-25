@@ -22,6 +22,10 @@ keywords:
   - success metrics
   - timeline planning
   - phase-based approach
+tags:
+  - implementation
+  - planning
+  - manual
 ---
 
 # Implementation Planning

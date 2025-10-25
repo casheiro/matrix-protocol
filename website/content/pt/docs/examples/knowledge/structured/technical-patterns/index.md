@@ -13,6 +13,10 @@ keywords:
   - idempotência
   - tratamento de erros
   - squad payments
+tags:
+  - examples
+  - structured
+  - technical-patterns
 framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs

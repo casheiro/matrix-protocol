@@ -9,6 +9,9 @@ keywords:
   - organizational evolution
   - flexible hierarchies
   - growth optimization
+  - growing companies
+  - adaptive governance
+  - scaling processes
 framework: general
 icon: i-heroicons-chart-bar-square
 layout: docs
@@ -22,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - scaleup
+  - growth
+  - scalability
 ---
 # Scaleup Templates
 

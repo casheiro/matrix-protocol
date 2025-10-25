@@ -21,6 +21,10 @@ keywords:
   - cronograma implementação
   - critérios sucesso
   - guia detalhado
+tags:
+  - manual
+  - templates
+  - phases
 ---
 
 # Fases de Implementação Detalhadas

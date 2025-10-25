@@ -10,14 +10,22 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - incident response
   - payment system
   - emergency procedures
   - P0 P1 P2 P3 severity
   - war room protocols
+  - crisis management
+  - operational procedures
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml`
 

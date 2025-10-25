@@ -13,6 +13,10 @@ keywords:
   - startup template
   - enterprise template
   - Oracle-first mindset
+tags:
+  - implementation
+  - quickstart
+  - templates
 icon: i-heroicons-rocket-launch
 layout: docs
 sidebar: true

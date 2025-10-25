@@ -10,8 +10,13 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - deployment process
   - payment systems
@@ -19,6 +24,8 @@ keywords:
   - canary release
   - PCI compliance
   - rollback procedures
+  - operational procedures
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml`
 

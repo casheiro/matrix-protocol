@@ -10,8 +10,19 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 framework: general
+tags:
+  - frameworks
+  - core
+  - overview
 keywords:
   - Matrix Protocol
+  - frameworks overview
+  - MEF embedding framework
+  - ZOF orchestration framework
+  - OIF intelligence framework
+  - MOC ontology catalog
+  - MAL arbiter layer
+  - human-AI collaboration
 ---
 # Matrix Protocol Frameworks
 

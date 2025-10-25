@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - basic
+  - implementação
+  - organizacional
 ---
 # Templates Básicos
 

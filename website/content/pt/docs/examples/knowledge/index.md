@@ -12,6 +12,10 @@ keywords:
   - e-commerce
   - transformação conhecimento
   - versionamento semântico
+tags:
+  - examples
+  - knowledge
+  - comparison
 framework: general
 icon: i-heroicons-rectangle-stack
 layout: docs

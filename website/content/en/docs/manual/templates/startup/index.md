@@ -9,6 +9,9 @@ keywords:
   - MVP implementation
   - rapid iteration
   - minimum viable MOC
+  - emerging companies
+  - flexible governance
+  - maximum agility
 framework: general
 icon: i-heroicons-rocket-launch
 layout: docs
@@ -22,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - startup
+  - agile
+  - lean
 ---
 # Startup Templates
 

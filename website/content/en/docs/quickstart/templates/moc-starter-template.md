@@ -8,6 +8,10 @@ keywords:
   - initial setup
   - quickstart template
   - organizational baseline
+tags:
+  - implementation
+  - quickstart
+  - templates
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs

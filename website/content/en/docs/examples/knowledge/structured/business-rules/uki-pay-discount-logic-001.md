@@ -10,13 +10,21 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - business-rules
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - discount logic
   - volume discounts
   - coupon management
   - pricing rules
+  - business rules
+  - promotional logic
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml`
 

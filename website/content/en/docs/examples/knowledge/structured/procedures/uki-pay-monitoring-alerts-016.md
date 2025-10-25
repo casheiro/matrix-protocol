@@ -10,14 +10,22 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
+tags:
+  - examples
+  - structured
+  - procedures
 keywords:
   - Matrix Protocol
+  - MEF
   - UKI
   - monitoring alerts
   - payment metrics
   - PagerDuty
   - system health
   - performance thresholds
+  - operational procedures
+  - system monitoring
+  - squad payments
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml`
 

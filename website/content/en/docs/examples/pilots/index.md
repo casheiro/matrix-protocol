@@ -13,11 +13,17 @@ maturity: stable
 tags:
   - examples
   - pilots
+  - implementation
 framework: general
 keywords:
-  - Matrix Protocol
-  - examples
-  - use cases
+  - Matrix Protocol pilots
+  - implementation examples
+  - use cases validation
+  - framework testing
+  - pilot projects
+  - case studies templates
+  - adoption validation
+  - practical implementation
 ---
 # Pilots
 

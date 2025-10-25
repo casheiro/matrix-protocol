@@ -9,6 +9,9 @@ keywords:
   - regulatory compliance
   - board oversight
   - multi-jurisdictional
+  - complex organizations
+  - enterprise template
+  - YAML template
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
@@ -22,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - corporation
+  - MOC
+  - YAML
 ---
 > Source YAML: `en/docs/manual/templates/corporation/moc-corporation.yaml`
 

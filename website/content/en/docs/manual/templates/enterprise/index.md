@@ -4,11 +4,15 @@ description: Enterprise templates for organizations with advanced governance and
 keywords:
   - Matrix Protocol
   - templates
+  - enterprise templates
   - implementation
   - enterprise
   - manual
   - guide
   - organizational
+  - advanced governance
+  - compliance requirements
+  - audit capabilities
 framework: general
 icon: i-heroicons-building-office
 layout: docs
@@ -22,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - enterprise
+  - governance
+  - compliance
 ---
 # Enterprise Templates
 

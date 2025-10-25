@@ -9,6 +9,9 @@ keywords:
   - cross-team coordination
   - structured governance
   - organizational scaling
+  - growing companies
+  - YAML template
+  - scalable structure
 framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
@@ -22,6 +25,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - scaleup
+  - MOC
+  - YAML
 ---
 > Source YAML: `en/docs/manual/templates/scaleup/moc-scaleup.yaml`
 

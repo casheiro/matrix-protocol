@@ -23,29 +23,59 @@ const REQUIRED_KEYWORDS_MAX = 12;
 const REQUIRED_TAGS_MIN = 3;
 const REQUIRED_TAGS_MAX = 8;
 
-// Tag taxonomy rules
-const TAG_TAXONOMY = {
+// Tag taxonomy rules - English
+const TAG_TAXONOMY_EN = {
   'manual/tools': {
     required: ['manual', 'tools'],
-    optional: ['validation', 'quality', 'automation', 'dod', 'feedback', 'explainability', 'uki', 'templates', 'moc', 'generation', 'audit', 'assessment']
+    optional: ['validation', 'quality', 'automation', 'dod', 'feedback', 'explainability', 'uki', 'templates', 'moc', 'generation', 'audit', 'assessment', 'checklist', 'checklists', 'xai', 'nlg', 'decisions', 'metrics', 'kpi', 'feedback-loop', 'zof', 'continuous-improvement', 'divergence', 'bilingual', 'harmonization', 'transparency']
   },
   'manual/templates': {
     required: ['manual', 'templates'],
-    optional: ['startup', 'scaleup', 'enterprise', 'corporation', 'unified', 'basic', 'implementation', 'phases', 'uki']
+    optional: ['startup', 'scaleup', 'enterprise', 'corporation', 'unified', 'basic', 'implementation', 'phases', 'uki', 'MOC', 'YAML', 'governance', 'compliance', 'agile', 'lean', 'organizational', 'growth', 'scalability', 'hybrid', 'flexible']
   },
   'examples': {
     required: ['examples'],
-    optional: ['knowledge', 'structured', 'unstructured', 'pilots', 'conceptual', 'business-rules', 'technical-patterns', 'procedures', 'mef', 'comparison', 'moc', 'organizational', 'yaml']
+    optional: ['knowledge', 'structured', 'unstructured', 'pilots', 'conceptual', 'business-rules', 'technical-patterns', 'procedures', 'mef', 'comparison', 'moc', 'organizational', 'yaml', 'frameworks', 'implementation', 'case-studies', 'techcorp', 'manual']
   },
   'frameworks': {
     required: ['frameworks'],
-    optional: ['mef', 'zof', 'oif', 'moc', 'mal', 'core']
+    optional: ['mef', 'zof', 'oif', 'moc', 'mal', 'core', 'overview', 'inference-reasoning', 'technical', 'ontology']
   },
   'implementation': {
     required: ['implementation'],
-    optional: ['quickstart', 'assessment', 'planning', 'manual']
+    optional: ['quickstart', 'assessment', 'planning', 'manual', 'templates', 'readiness']
   }
 };
+
+// Tag taxonomy rules - Portuguese
+const TAG_TAXONOMY_PT = {
+  'manual/tools': {
+    required: ['manual', 'ferramentas'],
+    optional: ['validacao', 'qualidade', 'automacao', 'dod', 'feedback', 'explicabilidade', 'uki', 'modelos', 'moc', 'geracao', 'auditoria', 'avaliacao', 'checklist', 'checklists', 'xai', 'nlg', 'decisoes', 'metricas', 'kpi', 'loop-feedback', 'zof', 'melhoria-continua', 'divergencia', 'bilingue', 'harmonizacao', 'transparencia']
+  },
+  'manual/templates': {
+    required: ['manual', 'modelos'],
+    optional: ['startup', 'scaleup', 'empresa', 'corporacao', 'unificado', 'basico', 'implementacao', 'fases', 'uki', 'MOC', 'YAML', 'governanca', 'compliance', 'agile', 'lean', 'organizacional', 'crescimento', 'escalabilidade', 'hibrido', 'flexivel']
+  },
+  'examples': {
+    required: ['exemplos'],
+    optional: ['conhecimento', 'estruturado', 'nao-estruturado', 'pilotos', 'conceitual', 'regras-negocio', 'padroes-tecnicos', 'procedimentos', 'mef', 'comparacao', 'moc', 'organizacional', 'yaml', 'frameworks', 'implementacao', 'casos-estudo', 'techcorp', 'manual']
+  },
+  'frameworks': {
+    required: ['frameworks'],
+    optional: ['mef', 'zof', 'oif', 'moc', 'mal', 'core', 'visao-geral', 'inferencia-raciocinio', 'tecnico', 'ontologia']
+  },
+  'implementation': {
+    required: ['implementacao'],
+    optional: ['inicio-rapido', 'avaliacao', 'planejamento', 'manual', 'modelos', 'prontidao']
+  }
+};
+
+// Get appropriate taxonomy based on file language
+function getTaxonomy(frontmatter) {
+  const lang = frontmatter?.lang || 'en';
+  return lang === 'pt' ? TAG_TAXONOMY_PT : TAG_TAXONOMY_EN;
+}
 
 // Files that MUST have tags (by path pattern)
 const MUST_HAVE_TAGS = [
@@ -88,12 +118,13 @@ function getAllMarkdownFiles(dir) {
 }
 
 function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return null;
   
   try {
     return load(match[1]);
   } catch (error) {
+    console.error('YAML parse error:', error.message);
     return null;
   }
 }

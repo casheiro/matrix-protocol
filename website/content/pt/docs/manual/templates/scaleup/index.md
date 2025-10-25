@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - scaleup
+  - crescimento
+  - escalabilidade
 ---
 # Templates Scaleup
 

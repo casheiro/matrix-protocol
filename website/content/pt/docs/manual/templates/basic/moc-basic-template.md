@@ -26,6 +26,9 @@ maturity: stable
 tags:
   - manual
   - templates
+  - basic
+  - MOC
+  - YAML
 ---
 > Source YAML: `pt/docs/manual/templates/basic/moc-basic-template.yaml`
 

@@ -17,6 +17,10 @@ keywords:
   - quickstart
   - getting started
   - tutorial
+tags:
+  - implementation
+  - quickstart
+  - templates
 ---
 # Quick Start Templates
 
