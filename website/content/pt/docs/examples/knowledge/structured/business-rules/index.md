@@ -2,9 +2,9 @@
 title: Regras de Negocio MEF
 description: 6 UKIs estruturados contendo as regras fundamentais de negocio da squad de pagamentos, demonstrando como o MEF organiza conhecimento critico
 tags:
-  - examples
-  - structured
-  - business-rules
+  - exemplos
+  - estruturado
+  - regras-negocio
 keywords:
   - Matrix Protocol
   - MEF

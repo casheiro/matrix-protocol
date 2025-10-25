@@ -25,10 +25,10 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
-  - corporation
-  - enterprise
-  - governança
+  - modelos
+  - corporacao
+  - empresa
+  - governanca
 ---
 # Templates Corporativos
 

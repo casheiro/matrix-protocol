@@ -23,8 +23,8 @@ keywords:
   - guia detalhado
 tags:
   - manual
-  - templates
-  - phases
+  - modelos
+  - fases
 ---
 
 # Fases de Implementação Detalhadas

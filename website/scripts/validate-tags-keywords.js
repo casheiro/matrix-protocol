@@ -51,7 +51,7 @@ const TAG_TAXONOMY_EN = {
 const TAG_TAXONOMY_PT = {
   'manual/tools': {
     required: ['manual', 'ferramentas'],
-    optional: ['validacao', 'qualidade', 'automacao', 'dod', 'feedback', 'explicabilidade', 'uki', 'modelos', 'moc', 'geracao', 'auditoria', 'avaliacao', 'checklist', 'checklists', 'xai', 'nlg', 'decisoes', 'metricas', 'kpi', 'loop-feedback', 'zof', 'melhoria-continua', 'divergencia', 'bilingue', 'harmonizacao', 'transparencia']
+    optional: ['validacao', 'qualidade', 'automacao', 'dod', 'feedback', 'explicabilidade', 'uki', 'modelos', 'templates', 'moc', 'geracao', 'auditoria', 'avaliacao', 'checklist', 'checklists', 'xai', 'nlg', 'decisoes', 'metricas', 'kpi', 'loop-feedback', 'zof', 'melhoria-continua', 'divergencia', 'bilingue', 'harmonizacao', 'transparencia']
   },
   'manual/templates': {
     required: ['manual', 'modelos'],
@@ -59,11 +59,11 @@ const TAG_TAXONOMY_PT = {
   },
   'examples': {
     required: ['exemplos'],
-    optional: ['conhecimento', 'estruturado', 'nao-estruturado', 'pilotos', 'conceitual', 'regras-negocio', 'padroes-tecnicos', 'procedimentos', 'mef', 'comparacao', 'moc', 'organizacional', 'yaml', 'frameworks', 'implementacao', 'casos-estudo', 'techcorp', 'manual']
+    optional: ['conhecimento', 'estruturado', 'nao-estruturado', 'pilotos', 'conceitual', 'regras-negocio', 'padroes-tecnicos', 'procedimentos', 'mef', 'comparacao', 'moc', 'organizacional', 'yaml', 'frameworks', 'implementacao', 'casos-estudo', 'estudos-de-caso', 'techcorp', 'manual']
   },
   'frameworks': {
     required: ['frameworks'],
-    optional: ['mef', 'zof', 'oif', 'moc', 'mal', 'core', 'visao-geral', 'inferencia-raciocinio', 'tecnico', 'ontologia']
+    optional: ['mef', 'zof', 'oif', 'moc', 'mal', 'core', 'visao-geral', 'inferencia-raciocinio', 'inference-reasoning', 'tecnico', 'technical', 'ontologia', 'ontology']
   },
   'implementation': {
     required: ['implementacao'],
@@ -181,10 +181,11 @@ function validateKeywords(keywords, relativePath) {
   return issues;
 }
 
-function validateTags(tags, relativePath) {
+function validateTags(tags, relativePath, frontmatter) {
   const issues = [];
   const category = determineCategoryFromPath(relativePath);
-  const rules = TAG_TAXONOMY[category];
+  const taxonomy = getTaxonomy(frontmatter);
+  const rules = taxonomy[category];
   
   if (!tags || !Array.isArray(tags)) {
     if (shouldHaveTags(relativePath)) {
@@ -239,7 +240,7 @@ function validateFile(filePath) {
   
   // Validate tags (conditional)
   if (shouldHaveTags(relativePath) || frontmatter.tags) {
-    const tagIssues = validateTags(frontmatter.tags, relativePath);
+    const tagIssues = validateTags(frontmatter.tags, relativePath, frontmatter);
     issues.push(...tagIssues.map(issue => `Tags: ${issue}`));
   }
   

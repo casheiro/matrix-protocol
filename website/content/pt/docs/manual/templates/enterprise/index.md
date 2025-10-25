@@ -25,9 +25,9 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
-  - enterprise
-  - governança
+  - modelos
+  - empresa
+  - governanca
   - compliance
 ---
 # Templates Enterprise

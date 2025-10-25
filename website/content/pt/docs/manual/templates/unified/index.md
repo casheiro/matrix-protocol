@@ -21,10 +21,10 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
-  - unified
-  - híbrido
-  - flexível
+  - modelos
+  - unificado
+  - hibrido
+  - flexivel
 ---
 # Templates Unificados
 

@@ -11,11 +11,11 @@ last_updated: '2025-10-23'
 order: 6
 tags:
   - manual
-  - tools
-  - divergence
-  - bilingual
-  - harmonization
-  - transparency
+  - ferramentas
+  - divergencia
+  - bilingue
+  - harmonizacao
+  - transparencia
 maturity: production
 framework: general
 keywords:

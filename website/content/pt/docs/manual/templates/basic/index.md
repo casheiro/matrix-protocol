@@ -25,9 +25,9 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
-  - basic
-  - implementação
+  - modelos
+  - basico
+  - implementacao
   - organizacional
 ---
 # Templates Básicos

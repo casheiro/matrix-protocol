@@ -25,8 +25,8 @@ order: 10
 maturity: stable
 tags:
   - manual
-  - templates
-  - enterprise
+  - modelos
+  - empresa
   - MOC
   - YAML
 ---

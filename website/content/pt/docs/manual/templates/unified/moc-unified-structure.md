@@ -21,8 +21,8 @@ order: 10
 maturity: stable
 tags:
   - manual
-  - templates
-  - unified
+  - modelos
+  - unificado
   - MOC
   - YAML
 ---

@@ -11,9 +11,9 @@ last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
 tags:
-  - examples
-  - unstructured
-  - knowledge
+  - exemplos
+  - nao-estruturado
+  - conhecimento
 keywords:
   - Matrix Protocol
   - wiki desatualizada

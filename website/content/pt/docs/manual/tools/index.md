@@ -12,9 +12,9 @@ order: 0
 framework: general
 tags:
   - manual
-  - tools
-  - validation
-  - quality
+  - ferramentas
+  - validacao
+  - qualidade
 keywords:
   - Matrix Protocol
   - ferramentas validação

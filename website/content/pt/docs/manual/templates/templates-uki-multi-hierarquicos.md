@@ -22,7 +22,7 @@ order: 10
 maturity: stable
 tags:
   - manual
-  - templates
+  - modelos
   - uki
 ---
 # Templates UKI Multi-Hierárquicos

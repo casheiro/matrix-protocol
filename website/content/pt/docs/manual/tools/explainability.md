@@ -10,12 +10,12 @@ last_updated: '2025-10-23'
 order: 3
 tags:
   - manual
-  - tools
-  - explainability
+  - ferramentas
+  - explicabilidade
   - xai
   - nlg
   - templates
-  - decisions
+  - decisoes
 maturity: beta
 framework: general
 keywords:

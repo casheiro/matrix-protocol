@@ -13,9 +13,9 @@ keywords:
   - transformação conhecimento
   - versionamento semântico
 tags:
-  - examples
-  - knowledge
-  - comparison
+  - exemplos
+  - conhecimento
+  - comparacao
 framework: general
 icon: i-heroicons-rectangle-stack
 layout: docs

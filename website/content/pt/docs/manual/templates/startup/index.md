@@ -25,7 +25,7 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
+  - modelos
   - startup
   - agile
   - lean

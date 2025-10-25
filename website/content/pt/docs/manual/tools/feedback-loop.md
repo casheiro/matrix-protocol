@@ -11,12 +11,12 @@ last_updated: 2025-10-23T00:00:00.000Z
 order: 4
 tags:
   - manual
-  - tools
-  - feedback-loop
-  - metrics
+  - ferramentas
+  - loop-feedback
+  - metricas
   - kpi
   - zof
-  - continuous-improvement
+  - melhoria-continua
 maturity: beta
 framework: general
 keywords:

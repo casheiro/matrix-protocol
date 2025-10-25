@@ -24,8 +24,8 @@ order: 0
 maturity: stable
 tags:
   - manual
-  - templates
-  - implementation
+  - modelos
+  - implementacao
 ---
 # Templates e Estruturas MOC
 

@@ -13,9 +13,9 @@ keywords:
   - antes MEF
   - anti-patterns
 tags:
-  - examples
-  - unstructured
-  - knowledge
+  - exemplos
+  - nao-estruturado
+  - conhecimento
 framework: general
 icon: i-heroicons-document-minus
 layout: docs

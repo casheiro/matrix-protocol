@@ -18,9 +18,9 @@ keywords:
   - frontmatter schema
   - política de nomenclatura
 tags:
-  - examples
-  - pilots
-  - implementation
+  - exemplos
+  - pilotos
+  - implementacao
 ---
 # Pilot Pages — Validation Suite
 

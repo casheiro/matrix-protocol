@@ -13,9 +13,9 @@ keywords:
   - relacionamentos semânticos
   - governança MOC
 tags:
-  - examples
-  - knowledge
-  - comparison
+  - exemplos
+  - conhecimento
+  - comparacao
 framework: general
 icon: i-heroicons-squares-2x2
 layout: docs

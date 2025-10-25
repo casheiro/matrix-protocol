@@ -9,8 +9,8 @@ lang: pt
 last_updated: '2025-10-23'
 order: 1
 tags:
-  - examples
-  - conceptual
+  - exemplos
+  - conceitual
   - mef
   - frameworks
 maturity: beta

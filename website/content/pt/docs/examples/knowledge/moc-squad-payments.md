@@ -13,9 +13,9 @@ keywords:
   - YAML MOC
   - exemplo organizacional
 tags:
-  - examples
+  - exemplos
   - moc
-  - organizational
+  - organizacional
 framework: general
 icon: i-heroicons-code-bracket
 layout: docs

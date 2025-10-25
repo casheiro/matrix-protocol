@@ -13,9 +13,9 @@ keywords:
   - exemplo negativo
   - janeiro 2024
 tags:
-  - examples
-  - unstructured
-  - knowledge
+  - exemplos
+  - nao-estruturado
+  - conhecimento
 framework: general
 icon: i-heroicons-document
 layout: docs

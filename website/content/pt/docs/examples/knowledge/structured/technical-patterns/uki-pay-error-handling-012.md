@@ -11,15 +11,15 @@ last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 framework: general
 tags:
-  - examples
-  - structured
-  - technical-patterns
+  - exemplos
+  - estruturado
+  - padroes-tecnicos
 keywords:
   - Matrix Protocol
   - error handling
   - data masking
   - PCI compliance
-  - structured logging
+  - estruturado logging
   - correlation ID
   - exception hierarchy
   - stack trace management

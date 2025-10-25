@@ -14,9 +14,9 @@ keywords:
   - tratamento de erros
   - squad payments
 tags:
-  - examples
-  - structured
-  - technical-patterns
+  - exemplos
+  - estruturado
+  - padroes-tecnicos
 framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs

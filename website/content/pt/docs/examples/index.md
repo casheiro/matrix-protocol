@@ -18,9 +18,9 @@ keywords:
   - transformação de conhecimento
   - comparação estruturado vs não estruturado
 tags:
-  - examples
-  - knowledge
-  - comparison
+  - exemplos
+  - conhecimento
+  - comparacao
 ---
 # Exemplos e Casos de Estudo
 

@@ -11,12 +11,12 @@ last_updated: '2025-10-23'
 order: 5
 tags:
   - manual
-  - tools
+  - ferramentas
   - dod
-  - quality
+  - qualidade
   - checklist
-  - validation
-  - automation
+  - validacao
+  - automacao
 maturity: production
 framework: general
 keywords:
