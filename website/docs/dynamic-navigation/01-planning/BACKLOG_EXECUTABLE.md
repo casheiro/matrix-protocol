@@ -269,44 +269,44 @@ export const useContentDiscovery = () => {
 
 ---
 
-## **🔄 ÉPICO 3: MIGRAÇÃO GRADUAL E INTEGRAÇÃO** ❌ PENDENTE
-*Implementar a solução preservando estabilidade*
+## **🔄 ÉPICO 3: OTIMIZAÇÃO E QUALIDADE** ❌ PENDENTE
+*Implementar automação de qualidade para sistema funcionando*
 
-### **📖 STORY 3.1: Migração por Feature Flag**
+### **📖 STORY 3.1: Automação de Qualidade**
 
 #### **Descrição**
-**Como** usuário  
-**Eu quero** que a nova navegação seja ativada gradualmente  
-**Para que** não haja quebras na experiência atual
+**Como** desenvolvedor  
+**Eu quero** que o sistema tenha automação de qualidade  
+**Para que** possamos detectar problemas automaticamente
 
 #### **Critérios de Aceite**
-- ❌ Feature flag `DYNAMIC_NAVIGATION` implementada
-- ❌ Coexistência das duas versões de navegação
-- ❌ A/B testing entre versão atual e nova
-- ❌ Rollback instantâneo se necessário
+- ❌ Performance benchmarks automatizados
+- ❌ Content validation automatizada
+- ❌ Visual regression testing implementado
+- ❌ Quality metrics documentados
 
 #### **Tasks Executáveis**
 
-**TASK 3.1.1: Implementar Sistema de Feature Flags**
+**TASK 3.1.1: Implementar Performance Benchmarks**
 - **Responsável**: Alex (Líder Técnico)
 - **Ferramentas**: Context7 + Write + Edit
-- **Entregável**: `/utils/feature-flags.ts`
+- **Entregável**: `/tests/performance-benchmarks.js`
 - **Estimativa**: 4h
 - **Dependências**: ÉPICO 2 concluído
 - **Status**: ❌ TODO
 
-**TASK 3.1.2: Adaptar useDocsNavigation para Duas Versões**
+**TASK 3.1.2: Implementar Content Validation Automatizada**
 - **Responsável**: Marina (Frontend Developer)
 - **Ferramentas**: Edit + MultiEdit + Read
-- **Entregável**: `useDocsNavigation.ts` com flag support
-- **Estimativa**: 6h
+- **Entregável**: `/scripts/validate-content.js`
+- **Estimativa**: 4h
 - **Dependências**: TASK 3.1.1
 - **Status**: ❌ TODO
 
-**TASK 3.1.3: Criar Interface de Comparação A/B**
+**TASK 3.1.3: Implementar Visual Regression Testing**
 - **Responsável**: Camila (QA Engineer)
 - **Ferramentas**: Bash + Read + Context7
-- **Entregável**: Scripts de teste A/B
+- **Entregável**: `/tests/visual-regression.spec.js`
 - **Estimativa**: 4h
 - **Dependências**: TASK 3.1.2
 - **Status**: ❌ TODO
@@ -414,11 +414,11 @@ export const useContentDiscovery = () => {
   - ❌ Arquivos index.md faltantes não adicionados
 
 **❌ PENDENTE:**
-- ÉPICO 3 (0%): Migração e feature flags críticos para produção
-  - Sistema de feature flags não implementado
-  - A/B testing não configurado
+- ÉPICO 3 (0%): Otimização e qualidade críticos para produção
   - Performance benchmarks não criados
-  - Testes de regressão não implementados
+  - Content validation não automatizada
+  - Visual regression testing não implementado
+  - Quality metrics não documentados
 
 ### **🚨 PRÓXIMOS PASSOS CRÍTICOS:**
 

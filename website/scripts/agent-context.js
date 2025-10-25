@@ -83,12 +83,12 @@ const AGENT_TASKS = {
   'alex': [
     { id: 'TASK_1.1.4', title: 'Gerar Relatório de Inconsistências', status: 'TODO', dependencies: ['TASK_1.1.2', 'TASK_1.1.3'] },
     { id: 'TASK_2.1.2', title: 'Criar Algoritmo de Construção de Árvore', status: 'TODO', dependencies: ['TASK_2.1.1'] },
-    { id: 'TASK_3.1.1', title: 'Implementar Sistema de Feature Flags', status: 'TODO', dependencies: ['ÉPICO_2'] }
+    { id: 'TASK_3.1.1', title: 'Implementar Performance Benchmarks', status: 'TODO', dependencies: ['ÉPICO_2'] }
   ],
   'marina': [
     { id: 'TASK_2.1.3', title: 'Integrar Cache de Navegação', status: 'TODO', dependencies: ['TASK_2.1.1'] },
     { id: 'TASK_2.2.1', title: 'Implementar Sistema de Fallbacks', status: 'TODO', dependencies: ['STORY_2.1'] },
-    { id: 'TASK_3.1.2', title: 'Adaptar useDocsNavigation para Duas Versões', status: 'TODO', dependencies: ['TASK_3.1.1'] },
+    { id: 'TASK_3.1.2', title: 'Implementar Content Validation', status: 'TODO', dependencies: ['TASK_3.1.1'] },
     { id: 'TASK_3.2.2', title: 'Criar Testes de Regressão Visual', status: 'TODO', dependencies: ['TASK_3.2.1'] }
   ],
   'ricardo': [
@@ -100,7 +100,7 @@ const AGENT_TASKS = {
   ],
   'camila': [
     { id: 'TASK_2.1.4', title: 'Adicionar Tratamento de Erros', status: 'TODO', dependencies: ['TASK_2.1.2', 'TASK_2.1.3'] },
-    { id: 'TASK_3.1.3', title: 'Criar Interface de Comparação A/B', status: 'TODO', dependencies: ['TASK_3.1.2'] },
+    { id: 'TASK_3.1.3', title: 'Implementar Quality Metrics Documentation', status: 'TODO', dependencies: ['TASK_3.1.2'] },
     { id: 'TASK_3.2.1', title: 'Implementar Benchmarks de Performance', status: 'TODO', dependencies: ['STORY_3.1'] },
     { id: 'TASK_3.2.3', title: 'Validar Funcionalidade Multilingual', status: 'TODO', dependencies: ['TASK_3.2.1'] }
   ],

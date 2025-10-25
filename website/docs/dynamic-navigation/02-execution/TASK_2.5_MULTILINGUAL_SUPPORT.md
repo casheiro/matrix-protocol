@@ -399,7 +399,7 @@ const isRelevantMatch = similarity > 0.5
 1. **Right-to-Left Support**: Arabic/Hebrew locale preparation
 2. **Regional Variants**: pt-PT, en-GB locale support
 3. **User Preferences**: Persistent locale selection per content type
-4. **A/B Testing**: Locale-specific feature flag integration
+4. **Quality Assurance**: Locale-specific testing automation
 
 ### Advanced Features (Future Versions)
 1. **Auto-Translation**: Integration with translation services for missing content
