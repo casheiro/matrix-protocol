@@ -10,6 +10,11 @@ lang: en
 last_updated: 2025-10-23T00:00:00.000Z
 order: 2
 framework: general
+tags:
+  - manual
+  - templates
+  - implementation
+  - phases
 keywords:
   - Matrix Protocol
   - implementation phases

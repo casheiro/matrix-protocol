@@ -9,6 +9,11 @@ keywords:
   - organizational
   - structures
 framework: general
+tags:
+  - examples
+  - knowledge
+  - comparison
+  - mef
 icon: i-heroicons-rectangle-stack
 layout: docs
 sidebar: true

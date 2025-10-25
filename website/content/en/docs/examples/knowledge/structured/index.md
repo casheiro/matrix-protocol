@@ -10,6 +10,11 @@ keywords:
   - organizational
   - structures
 framework: general
+tags:
+  - examples
+  - knowledge
+  - structured
+  - mef
 icon: i-heroicons-squares-2x2
 layout: docs
 sidebar: true

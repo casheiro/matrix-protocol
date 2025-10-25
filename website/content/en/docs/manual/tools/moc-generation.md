@@ -13,6 +13,12 @@ keywords:
   - governance checking
   - migration tools
 framework: general
+tags:
+  - manual
+  - tools
+  - moc
+  - generation
+  - automation
 icon: i-heroicons-wrench-screwdriver
 layout: docs
 sidebar: true

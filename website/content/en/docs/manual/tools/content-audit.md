@@ -13,6 +13,12 @@ keywords:
   - automated discovery
   - transformation planning
 framework: general
+tags:
+  - manual
+  - tools
+  - audit
+  - quality
+  - assessment
 icon: i-heroicons-magnifying-glass
 layout: docs
 sidebar: true

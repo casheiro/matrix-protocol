@@ -48,7 +48,8 @@ structure:
   frontmatter:
     - [ ] `title` present and descriptive
     - [ ] `description` clear (≤150 characters)
-    - [ ] `tags` conform to validated glossary
+    - [ ] `keywords` (6-12 items, content-specific)
+    - [ ] `tags` conform to taxonomy (3-8 items, when required)
     - [ ] `framework` specified when applicable
     - [ ] `maturity` defined (draft/beta/production)
     - [ ] `icon` appropriate for category
@@ -60,6 +61,12 @@ structure:
     - [ ] Logical heading hierarchy (H1→H2→H3)
     - [ ] English-only naming (kebab-case/snake_case)
     - [ ] Consistent folder structure
+    
+  metadata_quality:
+    - [ ] Keywords reflect actual file content (not generic)
+    - [ ] Tags follow established taxonomy hierarchy
+    - [ ] "Matrix Protocol" mentioned in keywords
+    - [ ] No duplicate or redundant keywords/tags
 ```
 
 ### 🔗 2. Content and Navigation
@@ -188,6 +195,9 @@ jobs:
       - name: Execute DoD Validation
         run: bash scripts/dod-validator.sh
         
+      - name: Validate Tags and Keywords
+        run: node scripts/validate-tags-keywords.js
+        
       - name: Generate DoD Report
         run: node scripts/dod-report-generator.js
 ```
@@ -203,6 +213,12 @@ dod_metrics:
     formula: "(dod_compliant_pages / total_pages) * 100"
     target: "≥95%"
     current: "{{ dynamic_value }}"
+    
+  metadata_quality:
+    description: "% files with compliant tags/keywords"
+    formula: "(compliant_metadata_files / total_files) * 100"
+    target: "≥95%"
+    validation_script: "scripts/validate-tags-keywords.js"
     
   content_quality:
     description: "Content quality score"
@@ -360,6 +376,11 @@ graph TD
 - [Feedback Loop and Metrics](./feedback-loop) - Continuous monitoring system
 - [Explainability](./explainability) - Justification and transparency templates
 - [Validation and Checklists](./validation-checklists) - Other quality systems
+
+### Implementation Tools
+- [`validate-tags-keywords.js`](/website/scripts/) - Automated tags/keywords validation
+- [Tags vs Keywords Strategy](/website/docs/tags-keywords-strategy.md) - Complete taxonomy guide
+- [DoD Automation Scripts](/website/scripts/) - Complete validation toolkit
 
 ### Validation Tools
 - [Content Audit](./content-audit) - Automated audit scripts

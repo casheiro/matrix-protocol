@@ -10,6 +10,11 @@ keywords:
   - YAML
   - ontology catalog
 framework: general
+tags:
+  - examples
+  - moc
+  - organizational
+  - yaml
 icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true

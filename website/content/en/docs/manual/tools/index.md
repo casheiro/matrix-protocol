@@ -10,6 +10,11 @@ lang: en
 last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 framework: general
+tags:
+  - manual
+  - tools
+  - validation
+  - quality
 keywords:
   - Matrix Protocol
   - validation checklists

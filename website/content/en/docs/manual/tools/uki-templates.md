@@ -13,6 +13,11 @@ keywords:
   - procedures templates
   - template customization
 framework: general
+tags:
+  - manual
+  - tools
+  - uki
+  - templates
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true

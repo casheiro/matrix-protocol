@@ -10,6 +10,11 @@ keywords:
   - business rules
   - structures
 framework: general
+tags:
+  - examples
+  - knowledge
+  - structured
+  - business-rules
 icon: i-heroicons-building-office
 layout: docs
 sidebar: true
