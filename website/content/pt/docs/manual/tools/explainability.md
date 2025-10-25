@@ -1,12 +1,30 @@
 ---
-title: "Explicabilidade e Templates XAI/NLG"
-description: "Templates para comunicação clara de decisões Matrix Protocol via XAI e geração de linguagem natural."
-tags: [manual, tools, explainability, xai, nlg, templates, decisions]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "pt"
-last_updated: "2025-10-23"
+title: Explicabilidade e Templates XAI/NLG
+description: Templates para comunicação clara de decisões Matrix Protocol via XAI e geração de linguagem natural.
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: pt
+last_updated: '2025-10-23'
 order: 3
+tags:
+  - manual
+  - tools
+  - explainability
+  - xai
+  - nlg
+  - templates
+  - decisions
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - explicabilidade
+  - XAI templates
+  - geração de linguagem natural
+  - transparência de decisões
+  - autoridade derivada
 ---
 
 # Explicabilidade e Templates XAI/NLG

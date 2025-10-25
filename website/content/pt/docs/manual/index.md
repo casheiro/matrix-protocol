@@ -1,15 +1,22 @@
 ---
 title: Manual de Implementação
-description: Manual técnico completo para implementação do Matrix Protocol,
-  incluindo guias práticos, templates e exemplos organizacionais
+description: Manual técnico completo para implementação do Matrix Protocol, incluindo guias práticos, templates e exemplos organizacionais
 icon: i-heroicons-document-text
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - manual de implementação
+  - guia técnico
+  - frameworks semânticos
+  - configuração organizacional
+  - MEF ZOF MAL OIF
 ---
 # Guia de Implementação do Matrix Protocol v0.0.1-beta
 **Manual Técnico de Implementação**

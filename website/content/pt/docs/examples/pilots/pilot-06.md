@@ -6,9 +6,17 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
-order: 6
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
+order: 6
+framework: general
+keywords:
+  - Matrix Protocol
+  - layout
+  - enforcment
+  - docs layout
+  - estrutura
+  - validação
 ---
 # Pilot 06 — Layout Enforcement
 

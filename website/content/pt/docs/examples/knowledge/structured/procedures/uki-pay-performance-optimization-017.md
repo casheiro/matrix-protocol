@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Performance Optimization 017
 description: Página wrapper para o asset YAML uki-pay-performance-optimization-017.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - performance optimization
+  - load testing
+  - JMeter scenarios
+  - database tuning
+  - Redis caching
+  - JVM tuning G1GC
+  - capacity planning
+  - connection pool
+  - baseline SLA
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-performance-optimization-017.yaml`
 

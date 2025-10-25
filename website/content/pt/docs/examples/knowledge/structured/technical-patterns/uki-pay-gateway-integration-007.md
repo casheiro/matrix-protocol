@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Gateway Integration 007
 description: Página wrapper para o asset YAML uki-pay-gateway-integration-007.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - MEF
+  - UKI
+  - integração de gateways
+  - circuit breaker
+  - failover strategy
+  - timeout configuration
+  - monitoramento
+  - observabilidade
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-gateway-integration-007.yaml`
 

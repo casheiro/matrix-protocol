@@ -1,17 +1,32 @@
 ---
-title: "Feedback Loop e Métricas Editoriais"
-description: "Sistema de métricas Matrix Protocol para monitoramento contínuo e melhoria da qualidade editorial."
-tags: [manual, tools, feedback-loop, metrics, kpi, zof, continuous-improvement]
-framework: "Matrix Protocol"
-maturity: "beta"
+title: Feedback Loop e Métricas Editoriais
+description: Sistema de métricas Matrix Protocol para monitoramento contínuo e melhoria da qualidade editorial.
 icon: i-heroicons-arrow-path
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 4
+tags:
+  - manual
+  - tools
+  - feedback-loop
+  - metrics
+  - kpi
+  - zof
+  - continuous-improvement
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - feedback loop métricas
+  - KPIs editoriais
+  - triggers ZOF automáticos
+  - completude epistemológica
+  - consistência conceitual
+  - integridade navegação
 ---
 
 # Feedback Loop e Métricas Editoriais

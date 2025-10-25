@@ -1,14 +1,19 @@
 ---
 title: Ontologia de Suporte MEF
-description: Vocabulários controlados de referência para estrutura de UKIs e
-  implementação do Matrix Embedding Framework
+description: Vocabulários controlados de referência para estrutura de UKIs e implementação do Matrix Embedding Framework
+keywords:
+  - MEF
+  - Matrix Protocol
+  - knowledge
+  - ontology
+framework: MEF
 icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # Ontologia de Suporte MEF — MEF Support Ontology

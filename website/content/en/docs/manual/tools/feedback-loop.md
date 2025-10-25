@@ -1,17 +1,36 @@
 ---
-title: "Feedback Loop and Editorial Metrics"
-description: "Matrix Protocol metrics system for continuous monitoring and editorial quality improvement."
-tags: [manual, tools, feedback-loop, metrics, kpi, zof, continuous-improvement]
-framework: "Matrix Protocol"
-maturity: "beta"
+title: Feedback Loop and Editorial Metrics
+description: Matrix Protocol metrics system for continuous monitoring and editorial quality improvement.
 icon: i-heroicons-arrow-path
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 4
+tags:
+  - manual
+  - tools
+  - feedback-loop
+  - metrics
+  - kpi
+  - zof
+  - continuous-improvement
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - feedback loop system
+  - editorial KPIs
+  - epistemological metrics
+  - ZOF triggers
+  - continuous improvement
+  - quality measurement
+  - EvaluateForEnrich
+  - monitoring dashboard
+  - automated alerts
+  - metrics collection
 ---
 
 # Feedback Loop and Editorial Metrics

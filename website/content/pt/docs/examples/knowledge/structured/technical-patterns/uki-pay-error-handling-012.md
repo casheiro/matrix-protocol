@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Error Handling 012
 description: Página wrapper para o asset YAML uki-pay-error-handling-012.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - error handling
+  - data masking
+  - PCI compliance
+  - structured logging
+  - correlation ID
+  - exception hierarchy
+  - stack trace management
+  - security logging
+  - sensitive data protection
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-error-handling-012.yaml`
 

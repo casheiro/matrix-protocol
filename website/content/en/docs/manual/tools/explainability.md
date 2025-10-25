@@ -1,12 +1,35 @@
 ---
-title: "Explainability and XAI/NLG Templates"
-description: "Templates for clear communication of Matrix Protocol decisions via XAI and natural language generation."
-tags: [manual, tools, explainability, xai, nlg, templates, decisions]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "en"
-last_updated: "2025-10-23"
+title: Explainability and XAI/NLG Templates
+description: Templates for clear communication of Matrix Protocol decisions via XAI and natural language generation.
+keywords:
+  - Matrix Protocol
+  - explainable AI
+  - XAI templates
+  - natural language generation
+  - decision transparency
+  - MAL arbitration explanation
+  - ZOF enrichment justification
+  - MEF validation explanation
+  - epistemic transparency
+  - derived authority
+  - audit trails
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: en
+last_updated: '2025-10-23'
 order: 3
+tags:
+  - manual
+  - tools
+  - explainability
+  - xai
+  - nlg
+  - templates
+  - decisions
+maturity: beta
+framework: general
 ---
 
 # Explainability and XAI/NLG Templates

@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Discount Logic 001
 description: Página wrapper para o asset YAML uki-pay-discount-logic-001.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - MEF
+  - UKI
+  - descontos por volume
+  - cupons de desconto
+  - precedência de aplicação
+  - regras de negócio
+  - lógica promocional
+  - validações de cupom
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/business-rules/uki-pay-discount-logic-001.yaml`
 

@@ -1,0 +1,296 @@
+{
+  "title": "Matrix Protocol Content Metadata Schema",
+  "description": "Standard frontmatter schema for Matrix Protocol documentation and content",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Document title - displayed in navigation and SEO",
+      "minLength": 3,
+      "maxLength": 100,
+      "examples": ["Matrix Embedding Framework", "Getting Started Guide"]
+    },
+    "description": {
+      "type": "string", 
+      "description": "Brief document description for SEO and previews",
+      "minLength": 10,
+      "maxLength": 300,
+      "examples": ["Learn how to implement MEF knowledge structures in your organization"]
+    },
+    "keywords": {
+      "type": "array",
+      "description": "SEO keywords and search terms",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      },
+      "minItems": 1,
+      "maxItems": 10,
+      "examples": [["MEF", "knowledge management", "AI collaboration"]]
+    },
+    "framework": {
+      "type": "string",
+      "description": "Associated Matrix Protocol framework",
+      "enum": ["MEF", "ZOF", "OIF", "MOC", "MAL", "MEP", "general"],
+      "examples": ["MEF", "ZOF"]
+    },
+    "category": {
+      "type": "string",
+      "description": "Content category for organization",
+      "enum": [
+        "quickstart",
+        "manual", 
+        "reference",
+        "examples",
+        "templates",
+        "frameworks",
+        "protocol",
+        "tools",
+        "concepts"
+      ],
+      "examples": ["quickstart", "reference"]
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "Content difficulty level",
+      "enum": ["beginner", "intermediate", "advanced", "expert"],
+      "default": "beginner",
+      "examples": ["beginner", "advanced"]
+    },
+    "navigation": {
+      "oneOf": [
+        {
+          "type": "boolean",
+          "description": "Enable/disable navigation"
+        },
+        {
+          "type": "object",
+          "description": "Navigation-specific metadata",
+      "properties": {
+        "order": {
+          "type": "number",
+          "description": "Display order within parent directory",
+          "minimum": 0,
+          "maximum": 9999,
+          "examples": [10, 100]
+        },
+        "parent": {
+          "type": "string",
+          "description": "Parent page path for breadcrumb navigation",
+          "pattern": "^[a-z0-9-/]+$",
+          "examples": ["/docs/frameworks", "/quickstart"]
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon identifier for navigation menus",
+          "examples": ["heroicons:book-open", "lucide:zap"]
+        },
+        "badge": {
+          "type": "object",
+          "description": "Optional badge display in navigation",
+          "properties": {
+            "text": {
+              "type": "string",
+              "maxLength": 10,
+              "examples": ["NEW", "BETA", "v1.0"]
+            },
+            "color": {
+              "type": "string",
+              "enum": ["blue", "green", "yellow", "red", "purple", "gray"],
+              "default": "blue"
+            }
+          },
+          "required": ["text"],
+          "additionalProperties": false
+        },
+        "hidden": {
+          "type": "boolean",
+          "description": "Hide from navigation menus",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+        }
+      ]
+    },
+    "seo": {
+      "type": "object",
+      "description": "SEO-specific metadata",
+      "properties": {
+        "og_title": {
+          "type": "string",
+          "description": "Open Graph title (fallback to title if not provided)",
+          "maxLength": 60
+        },
+        "og_description": {
+          "type": "string", 
+          "description": "Open Graph description (fallback to description if not provided)",
+          "maxLength": 155
+        },
+        "og_image": {
+          "type": "string",
+          "description": "Open Graph image path",
+          "format": "uri-reference",
+          "examples": ["/images/og/mef-overview.png"]
+        },
+        "canonical": {
+          "type": "string",
+          "description": "Canonical URL for duplicate content",
+          "format": "uri"
+        },
+        "robots": {
+          "type": "string",
+          "description": "Robots directive",
+          "enum": ["index,follow", "noindex,follow", "index,nofollow", "noindex,nofollow"],
+          "default": "index,follow"
+        }
+      },
+      "additionalProperties": false
+    },
+    "content": {
+      "type": "object",
+      "description": "Content-specific metadata",
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "Content language",
+          "enum": ["pt", "en"],
+          "examples": ["pt", "en"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Content version for tracking changes",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "examples": ["1.0.0", "1.2.3"]
+        },
+        "last_updated": {
+          "type": "string",
+          "description": "ISO date of last content update",
+          "format": "date",
+          "examples": ["2025-01-15"]
+        },
+        "review_date": {
+          "type": "string",
+          "description": "ISO date for next content review",
+          "format": "date"
+        },
+        "contributors": {
+          "type": "array",
+          "description": "List of content contributors",
+          "items": {
+            "type": "string"
+          },
+          "examples": [["alex", "bruno", "marina"]]
+        },
+        "related_pages": {
+          "type": "array",
+          "description": "Related page paths for cross-references",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-/]+$"
+          },
+          "maxItems": 5,
+          "examples": [["/docs/mef/introduction", "/examples/mef/basic"]]
+        }
+      },
+      "additionalProperties": false
+    },
+    "layout": {
+      "type": "string",
+      "description": "Nuxt layout to use for this page",
+      "enum": ["default", "docs", "framework", "example", "reference"],
+      "default": "default",
+      "examples": ["docs", "framework"]
+    },
+    "head": {
+      "type": "object",
+      "description": "Additional head metadata for Nuxt",
+      "properties": {
+        "script": {
+          "type": "array",
+          "description": "Additional scripts to load"
+        },
+        "link": {
+          "type": "array", 
+          "description": "Additional links (stylesheets, etc.)"
+        },
+        "meta": {
+          "type": "array",
+          "description": "Additional meta tags"
+        }
+      },
+      "additionalProperties": true
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon identifier for the page"
+    },
+    "sidebar": {
+      "type": "boolean",
+      "description": "Show sidebar navigation"
+    },
+    "toc": {
+      "type": "boolean", 
+      "description": "Show table of contents"
+    },
+    "lang": {
+      "type": "string",
+      "description": "Language code",
+      "enum": ["pt", "en"]
+    },
+    "last_updated": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Last update date as string"
+        },
+        {
+          "type": "object",
+          "description": "Last update date as Date object"
+        }
+      ]
+    },
+    "order": {
+      "type": "number",
+      "description": "Sort order"
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ],
+  "additionalProperties": true,
+  "examples": [
+    {
+      "title": "Matrix Embedding Framework Introduction",
+      "description": "Learn the core concepts of MEF knowledge structuring for AI collaboration",
+      "keywords": ["MEF", "Matrix Protocol", "knowledge management", "AI"],
+      "framework": "MEF",
+      "category": "frameworks",
+      "difficulty": "beginner",
+      "navigation": {
+        "order": 10,
+        "parent": "/docs/frameworks",
+        "icon": "heroicons:cube-transparent",
+        "badge": {
+          "text": "CORE",
+          "color": "green"
+        }
+      },
+      "seo": {
+        "og_image": "/images/og/mef-intro.png"
+      },
+      "content": {
+        "language": "pt",
+        "version": "1.0.0",
+        "last_updated": "2025-01-15",
+        "related_pages": [
+          "/docs/mef/quickstart",
+          "/examples/mef/basic"
+        ]
+      },
+      "layout": "framework"
+    }
+  ]
+}

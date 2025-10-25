@@ -1,14 +1,27 @@
 ---
 title: Quick Start Guide
 description: Implement Matrix Protocol in your organization in 3 simple steps in 2-4 hours
+keywords:
+  - Matrix Protocol
+  - quick start guide
+  - 3-step implementation
+  - MOC template
+  - organizational taxonomy
+  - UKI creation
+  - rapid deployment
+  - 2-4 hours setup
+  - startup template
+  - enterprise template
+  - Oracle-first mindset
 icon: i-heroicons-rocket-launch
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
 ---
 # Quick Start Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  

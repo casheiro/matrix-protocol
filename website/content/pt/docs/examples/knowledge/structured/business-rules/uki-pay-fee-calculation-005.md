@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Fee Calculation 005
 description: Página wrapper para o asset YAML uki-pay-fee-calculation-005.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - MEF
+  - UKI
+  - cálculo de taxas
+  - MDR gateway
+  - taxas por modalidade
+  - parcelamento
+  - PIX
+  - custos de chargeback
+  - squad payments
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/business-rules/uki-pay-fee-calculation-005.yaml`
 

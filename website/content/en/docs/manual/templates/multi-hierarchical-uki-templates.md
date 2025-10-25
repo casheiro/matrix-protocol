@@ -1,20 +1,27 @@
 ---
 title: Multi-Hierarchical UKI Templates
-description: UKI templates demonstrating cross-cutting organizational
-  relationships and multi-hierarchical knowledge patterns
+description: UKI templates demonstrating cross-cutting organizational relationships and multi-hierarchical knowledge patterns
+keywords:
+  - Matrix Protocol
+  - templates
+  - implementation
+  - manual
+  - guide
+  - organizational
+  - patterns
+framework: general
 icon: i-heroicons-squares-plus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 # Multi-Hierarchical UKI Templates
 **UKI Templates Demonstrating Cross-Cutting Organizational Relationships**

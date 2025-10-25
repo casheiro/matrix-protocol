@@ -1,12 +1,35 @@
 ---
-title: "Inferência & Raciocínio no Matrix Protocol"
-description: "Tecnologias fundamentais: DL/Datalog, KGE, GNN aplicadas aos frameworks epistemológicos Matrix."
-tags: [frameworks, inference, reasoning, deep-learning, datalog, kge, gnn, matrix-protocol]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "pt"
-last_updated: "2025-10-23"
+title: Inferência & Raciocínio no Matrix Protocol
+description: 'Tecnologias fundamentais: DL/Datalog, KGE, GNN aplicadas aos frameworks epistemológicos Matrix.'
+layout: framework
+navigation: true
+lang: pt
+last_updated: '2025-10-23'
 order: 6
+tags:
+  - frameworks
+  - inference
+  - reasoning
+  - deep-learning
+  - datalog
+  - kge
+  - gnn
+  - matrix-protocol
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - inferência epistemológica
+  - raciocínio neural-simbólico
+  - Deep Learning
+  - Datalog
+  - Knowledge Graph Embeddings
+  - Graph Neural Networks
+  - sistemas de raciocínio distribuído
+  - validação automática de UKIs
+  - inferência de relacionamentos
+  - arbitragem inteligente
+  - representação semântica
 ---
 
 # Inferência & Raciocínio no Matrix Protocol

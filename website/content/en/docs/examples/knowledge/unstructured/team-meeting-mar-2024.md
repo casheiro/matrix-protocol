@@ -1,13 +1,21 @@
 ---
 title: squad meeting - march
-description: "[CHAOTIC EXAMPLE] Informal meeting notes with scattered discussions"
+description: '[CHAOTIC EXAMPLE] Informal meeting notes with scattered discussions'
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
+  - knowledge
+  - structured
+  - unstructured
+framework: general
 icon: i-heroicons-document
 layout: docs
 sidebar: true
 toc: false
 navigation: false
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # squad meeting - march

@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Incident Response 014
 description: Página wrapper para o asset YAML uki-pay-incident-response-014.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - incident response
+  - classificação severidade
+  - P0 P1 P2 P3
+  - PagerDuty
+  - war room
+  - post-mortem
+  - runbook integration
+  - SLA resposta
+  - escalation matrix
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml`
 

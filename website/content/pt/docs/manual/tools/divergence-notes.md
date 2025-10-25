@@ -1,17 +1,31 @@
 ---
-title: "Notas de Divergência PT↔EN"
-description: "Documentação de diferenças justificadas entre versões portuguesas e inglesas da documentação Matrix Protocol."
-tags: [manual, tools, divergence, bilingual, harmonization, transparency]
-framework: "Matrix Protocol"
-maturity: "production"
+title: Notas de Divergência PT↔EN
+description: Documentação de diferenças justificadas entre versões portuguesas e inglesas da documentação Matrix Protocol.
 icon: i-heroicons-language
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: "pt"
-last_updated: "2025-10-23"
+lang: pt
+last_updated: '2025-10-23'
 order: 6
+tags:
+  - manual
+  - tools
+  - divergence
+  - bilingual
+  - harmonization
+  - transparency
+maturity: production
+framework: general
+keywords:
+  - Matrix Protocol
+  - divergências PT↔EN
+  - harmonização bilíngue
+  - terminologia cultural
+  - conceitos regulatórios
+  - transparência editorial
+  - gestão diferenças
 ---
 
 # Notas de Divergência PT↔EN

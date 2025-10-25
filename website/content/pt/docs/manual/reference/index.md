@@ -1,15 +1,28 @@
 ---
 title: Referência
-description: Estudos de caso detalhados, material de suporte avançado e
-  documentação de referência para implementações complexas do Matrix Protocol
+description: Estudos de caso detalhados, material de suporte avançado e documentação de referência para implementações complexas do Matrix Protocol
 icon: i-heroicons-bookmark
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - material de referência avançado
+  - estudos de caso detalhados
+  - documentação de suporte
+  - implementações complexas
+  - análises aprofundadas
+  - documentação técnica avançada
+  - casos de uso especializados
+  - pesquisa e desenvolvimento
+  - métricas e benchmarks
+  - casos de sucesso
+  - metodologia de pesquisa
 ---
 # Material de Referência
 

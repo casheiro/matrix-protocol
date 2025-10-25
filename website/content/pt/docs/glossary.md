@@ -1,15 +1,22 @@
 ---
 title: Glossário
-description: Definições unificadas de terminologia do Protocolo Matrix,
-  garantindo consistência semântica em toda a documentação.
+description: Definições unificadas de terminologia do Protocolo Matrix, garantindo consistência semântica em toda a documentação.
 icon: i-heroicons-book-open
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - glossário unificado
+  - terminologia Matrix
+  - definições canônicas
+  - frameworks conceituais
+  - vocabulário técnico
 ---
 # Protocolo Matrix — Glossário Unificado
 **Acrônimo:** Glossário Unificado  

@@ -1,15 +1,22 @@
 ---
 title: Pilot Pages — Validation Suite
-description: Conjunto de páginas piloto para validar frontmatter, checklist
-  editorial e política de nomes (English-only)
+description: Conjunto de páginas piloto para validar frontmatter, checklist editorial e política de nomes (English-only)
 icon: i-heroicons-rectangle-stack
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-order: 0
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - páginas piloto
+  - validação de padrões
+  - checklist editorial
+  - frontmatter schema
+  - política de nomenclatura
 ---
 # Pilot Pages — Validation Suite
 

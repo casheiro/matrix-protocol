@@ -1,20 +1,31 @@
 ---
 title: Templates Enterprise
-description: Templates Enterprise para organizações com requisitos avançados de
-  governança e compliance
+description: Templates Enterprise para organizações com requisitos avançados de governança e compliance
+keywords:
+  - Matrix Protocol
+  - templates enterprise
+  - organizações enterprise
+  - compliance rigoroso
+  - segurança avançada
+  - controle granular
+  - auditoria completa
+  - 200-1000 funcionários
+  - governança multi-nível
+  - sistemas corporativos
+  - normas regulatórias
+framework: general
 icon: i-heroicons-building-office
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Templates Enterprise
 

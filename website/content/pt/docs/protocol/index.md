@@ -1,14 +1,27 @@
 ---
 title: Matrix Protocol
-description: Protocolo completo de colaboração humano-IA através de estruturas
-  de conhecimento e workflows orquestrados
+description: Protocolo completo de colaboração humano-IA através de estruturas de conhecimento e workflows orquestrados
+keywords:
+  - Matrix Protocol
+  - protocolo de colaboração humano-IA
+  - ecossistema integrado
+  - camada Oracle
+  - camada Zion
+  - camada Operador
+  - estruturas de conhecimento
+  - workflows orquestrados
+  - flexibilidade local
+  - coerência global
+  - estados canônicos
+  - fundamentos epistemológicos
+framework: general
 icon: i-heroicons-squares-2x2
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Matrix Protocol — Protocolo de Colaboração Humano-IA

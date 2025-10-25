@@ -1,13 +1,25 @@
 ---
 title: Moc Squad Payments
 description: Página wrapper para o asset YAML moc-squad-payments.yaml
+keywords:
+  - Matrix Protocol
+  - MOC
+  - Matrix Ontology Catalog
+  - ontologia organizacional
+  - squad payments
+  - hierarquias MOC
+  - governança conhecimento
+  - taxonomia empresarial
+  - YAML MOC
+  - exemplo organizacional
+framework: general
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 > Source YAML: `pt/docs/examples/knowledge/moc-squad-payments.yaml`

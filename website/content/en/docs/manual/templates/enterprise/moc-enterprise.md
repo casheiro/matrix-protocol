@@ -1,19 +1,26 @@
 ---
 title: Moc Enterprise
 description: Wrapper page for YAML asset moc-enterprise.yaml
+keywords:
+  - Matrix Protocol
+  - MOC enterprise template
+  - 200-1000 employees
+  - formal governance
+  - compliance standards
+  - risk management
+framework: general
+icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-document-duplicate
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 > Source YAML: `en/docs/manual/templates/enterprise/moc-enterprise.yaml`
 

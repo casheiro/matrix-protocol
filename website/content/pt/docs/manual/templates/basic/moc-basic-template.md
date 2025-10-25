@@ -1,19 +1,31 @@
 ---
 title: Moc Basic Template
 description: Página wrapper para o asset YAML moc-basic-template.yaml
+keywords:
+  - Matrix Protocol
+  - MOC básico
+  - template universal
+  - implementação rápida
+  - estrutura simplificada
+  - 3 níveis hierárquicos
+  - qualquer tamanho organização
+  - configuração essencial
+  - quick start
+  - pronto para uso
+  - customizável
+framework: general
+icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-document-duplicate
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 > Source YAML: `pt/docs/manual/templates/basic/moc-basic-template.yaml`
 

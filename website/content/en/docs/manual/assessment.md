@@ -7,8 +7,21 @@ sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 1
+framework: general
+keywords:
+  - Matrix Protocol
+  - organizational assessment
+  - readiness evaluation
+  - knowledge maturity
+  - governance capacity
+  - technical capacity
+  - change culture
+  - process gaps
+  - training needs
+  - organizational barriers
+  - maturity indicators
 ---
 
 # Organizational Assessment

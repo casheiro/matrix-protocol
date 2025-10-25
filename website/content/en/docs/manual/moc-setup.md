@@ -1,13 +1,25 @@
 ---
 title: MOC Setup
 description: Setting up the Matrix Ontology Catalog for your organization
+keywords:
+  - Matrix Protocol
+  - MOC setup
+  - Matrix Ontology Catalog
+  - taxonomy design
+  - hierarchy configuration
+  - governance rules
+  - authority validation
+  - organizational structure
+  - scope hierarchies
+  - domain classifications
+framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 3
 ---
 

@@ -1,17 +1,36 @@
 ---
-title: "Definition of Done (DoD) - Matrix Protocol"
-description: "Comprehensive quality checklist to ensure excellence before publishing Matrix Protocol documentation changes."
-tags: [manual, tools, dod, quality, checklist, validation, automation]
-framework: "Matrix Protocol"
-maturity: "production"
+title: Definition of Done (DoD) - Matrix Protocol
+description: Comprehensive quality checklist to ensure excellence before publishing Matrix Protocol documentation changes.
 icon: i-heroicons-check-circle
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: "en"
-last_updated: "2025-10-23"
+lang: en
+last_updated: '2025-10-23'
 order: 5
+tags:
+  - manual
+  - tools
+  - dod
+  - quality
+  - checklist
+  - validation
+  - automation
+maturity: production
+framework: general
+keywords:
+  - Matrix Protocol
+  - Definition of Done
+  - DoD checklist
+  - automated validation
+  - bilingual harmonization
+  - technical validation
+  - quality KPIs
+  - compliance metrics
+  - documentation standards
+  - publication criteria
+  - systematic excellence
 ---
 
 # Definition of Done (DoD) - Matrix Protocol

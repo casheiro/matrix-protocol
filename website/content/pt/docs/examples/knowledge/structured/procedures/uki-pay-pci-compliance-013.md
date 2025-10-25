@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Pci Compliance 013
 description: Página wrapper para o asset YAML uki-pay-pci-compliance-013.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - PCI DSS compliance
+  - SAQ-A-EP
+  - criptografia AES-256
+  - controle acesso MFA
+  - logging auditoria
+  - vendor management
+  - security incident
+  - quarterly reviews
+  - assessment anual
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-pci-compliance-013.yaml`
 

@@ -1,20 +1,30 @@
 ---
 title: Templates e Estruturas MOC
-description: Templates organizados por porte empresarial e casos de uso
-  específicos do Matrix Protocol
+description: Templates organizados por porte empresarial e casos de uso específicos do Matrix Protocol
+keywords:
+  - Matrix Protocol
+  - templates MOC
+  - estruturas organizacionais
+  - implementação
+  - porte empresarial
+  - fases implementação
+  - templates UKI
+  - guia prático
+  - customização organizacional
+  - manual implementação
+framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Templates e Estruturas MOC
 

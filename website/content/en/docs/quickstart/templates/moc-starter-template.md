@@ -1,13 +1,21 @@
 ---
 title: Moc Starter Template
 description: Wrapper page for YAML asset moc-starter-template.yaml
+keywords:
+  - Matrix Protocol
+  - MOC starter template
+  - ready-to-use
+  - initial setup
+  - quickstart template
+  - organizational baseline
+framework: general
+icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-document-duplicate
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 > Source YAML: `en/docs/quickstart/templates/moc-starter-template.yaml`

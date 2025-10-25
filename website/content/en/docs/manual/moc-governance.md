@@ -1,12 +1,35 @@
 ---
-title: "MOC Governance and Policy Matrix"
-description: "Comprehensive governance framework for Matrix Ontology Catalog with scope-based precedences and organizational policy supervision."
-tags: [manual, governance, moc, policies, precedences, organizational, matrix-protocol]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "en"
-last_updated: "2025-10-23"
+title: MOC Governance and Policy Matrix
+description: Comprehensive governance framework for Matrix Ontology Catalog with scope-based precedences and organizational policy supervision.
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: en
+last_updated: '2025-10-23'
 order: 4
+tags:
+  - manual
+  - governance
+  - moc
+  - policies
+  - precedences
+  - organizational
+  - matrix-protocol
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - MOC governance
+  - Matrix Ontology Catalog
+  - scope-based precedences
+  - organizational policies
+  - authority management
+  - conflict resolution
+  - precedence hierarchy
+  - epistemological compliance
+  - decision consistency
+  - policy matrix
 ---
 
 # MOC Governance and Policy Matrix

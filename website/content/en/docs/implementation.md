@@ -1,15 +1,27 @@
 ---
 title: Implementation Guide
-description: Complete technical manual for Matrix Protocol organizational
-  implementation with roadmaps, phases and success criteria
+description: Complete technical manual for Matrix Protocol organizational implementation with roadmaps, phases and success criteria
+keywords:
+  - Matrix Protocol
+  - implementation guide
+  - technical manual
+  - organizational deployment
+  - roadmap phases
+  - MOC foundation
+  - MEF pilot
+  - ZOF workflows
+  - success criteria
+  - change management
+  - TechCorp case study
 icon: i-heroicons-cog-6-tooth
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
 ---
 # Implementation Guide - Matrix Protocol
 **Version:** v0.0.1 Beta  

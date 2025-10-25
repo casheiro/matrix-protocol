@@ -1,14 +1,22 @@
 ---
 title: Unstructured Knowledge
-description: 12 chaotic documents demonstrating typical problems of dispersed
-  knowledge before applying MEF
+description: 12 chaotic documents demonstrating typical problems of dispersed knowledge before applying MEF
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
+  - knowledge
+  - structured
+  - unstructured
+  - structures
+framework: general
 icon: i-heroicons-document-minus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Unstructured Knowledge

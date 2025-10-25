@@ -1,15 +1,26 @@
 ---
 title: Glossary
-description: Unified terminology definitions for the Matrix Protocol, ensuring
-  semantic consistency across all documentation.
+description: Unified terminology definitions for the Matrix Protocol, ensuring semantic consistency across all documentation.
+keywords:
+  - Matrix Protocol
+  - unified glossary
+  - canonical definitions
+  - cross-framework terms
+  - semantic consistency
+  - authority validation
+  - UKI terminology
+  - MOC integration
+  - arbitration concepts
+  - epistemological terms
 icon: i-heroicons-book-open
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
 ---
 # Matrix Protocol — Unified Glossary
 **Acronym:** Unified Glossary  

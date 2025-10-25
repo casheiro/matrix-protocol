@@ -1,20 +1,31 @@
 ---
 title: Templates MOC por Porte
-description: Templates de Catálogo de Ontologia Matrix adaptados para
-  organizações de diferentes portes, desde startups até grandes empresas
+description: Templates de Catálogo de Ontologia Matrix adaptados para organizações de diferentes portes, desde startups até grandes empresas
+keywords:
+  - Matrix Protocol
+  - templates MOC
+  - porte organizacional
+  - startup
+  - scale-up
+  - enterprise
+  - corporação
+  - hierarquias organizacionais
+  - governança empresarial
+  - customização MOC
+  - implementação gradual
+framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 # Templates MOC por Porte Organizacional
 **Templates de Catálogo de Ontologia Matrix para Diferentes Tipos de Organização**

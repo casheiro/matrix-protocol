@@ -1,19 +1,28 @@
 ---
 title: MOC Templates by Size
 description: Matrix Ontology Catalog templates adapted for organizations of different sizes, from startups to large enterprises
+keywords:
+  - Matrix Protocol
+  - MOC templates
+  - organizational size
+  - startup template
+  - scaleup template
+  - enterprise template
+  - corporation template
+  - implementation phases
+framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
-framework: MEF
+last_updated: 2025-10-23T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 
 # MOC Templates by Organizational Size

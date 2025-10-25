@@ -1,14 +1,26 @@
 ---
 title: Padroes Tecnicos MEF
-description: 6 UKIs estruturados definindo padroes tecnicos fundamentais para
-  implementacao robusta do sistema de pagamentos
+description: 6 UKIs estruturados definindo padroes tecnicos fundamentais para implementacao robusta do sistema de pagamentos
+keywords:
+  - Matrix Protocol
+  - MEF
+  - UKI
+  - padrões técnicos
+  - integração gateways
+  - retry strategy
+  - circuit breaker
+  - webhooks
+  - idempotência
+  - tratamento de erros
+  - squad payments
+framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Padroes Tecnicos MEF

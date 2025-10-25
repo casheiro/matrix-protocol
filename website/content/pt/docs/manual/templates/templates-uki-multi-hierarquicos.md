@@ -1,20 +1,28 @@
 ---
 title: Templates UKI Multi-hierárquicos
-description: Templates de UKI demonstrando relacionamentos cross-cutting
-  organizacionais e padrões de conhecimento multi-hierárquicos
+description: Templates de UKI demonstrando relacionamentos cross-cutting organizacionais e padrões de conhecimento multi-hierárquicos
+keywords:
+  - Matrix Protocol
+  - templates UKI multi-hierárquicos
+  - relacionamentos cross-cutting organizacionais
+  - padrões conhecimento multi-domínio
+  - governança dados empresarial
+  - framework zero trust
+  - processo resposta incidentes
+  - hierarquias complexas
+framework: general
 icon: i-heroicons-squares-plus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 # Templates UKI Multi-Hierárquicos
 **Templates de UKI Demonstrando Relacionamentos Cross-Cutting Organizacionais**

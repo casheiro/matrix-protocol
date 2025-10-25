@@ -1,20 +1,27 @@
 ---
 title: Corporation Templates
-description: Specific templates for large established corporations with multiple
-  divisions and departments
+description: Specific templates for large established corporations with multiple divisions and departments
+keywords:
+  - Matrix Protocol
+  - corporation templates
+  - multi-divisional structures
+  - enterprise governance
+  - complex hierarchies
+  - audit compliance
+  - cross-divisional integration
+framework: general
 icon: i-heroicons-building-office-2
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Corporation Templates
 

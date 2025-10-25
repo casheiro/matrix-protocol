@@ -1,19 +1,27 @@
 ---
 title: Startup Templates
 description: Agile templates for startups with lean structures and simplified processes
+keywords:
+  - Matrix Protocol
+  - startup templates
+  - agile structures
+  - lean processes
+  - MVP implementation
+  - rapid iteration
+  - minimum viable MOC
+framework: general
 icon: i-heroicons-rocket-launch
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Startup Templates
 

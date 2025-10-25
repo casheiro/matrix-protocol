@@ -1,13 +1,25 @@
 ---
 title: Ata de Reunião da Squad Pagamentos - Janeiro 2024
-description: "[EXEMPLO CAÓTICO] Ata de reunião formal com decisões contraditórias"
+description: '[EXEMPLO CAÓTICO] Ata de reunião formal com decisões contraditórias'
+keywords:
+  - Matrix Protocol
+  - ata reunião caótica
+  - decisões contraditórias
+  - squad pagamentos
+  - gateway Stripe
+  - política refund
+  - detecção fraude
+  - documentação problemática
+  - exemplo negativo
+  - janeiro 2024
+framework: general
 icon: i-heroicons-document
 layout: docs
 sidebar: true
 toc: false
 navigation: false
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # Ata de Reunião da Squad Pagamentos - Janeiro 2024

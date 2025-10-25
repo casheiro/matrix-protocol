@@ -1,14 +1,23 @@
 ---
 title: Uki Pay Incident Response 014
 description: Wrapper page for YAML asset uki-pay-incident-response-014.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - UKI
+  - incident response
+  - payment system
+  - emergency procedures
+  - P0 P1 P2 P3 severity
+  - war room protocols
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/procedures/uki-pay-incident-response-014.yaml`
 

@@ -7,8 +7,22 @@ sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - templates de início rápido
+  - templates prontos
+  - implementação imediata
+  - cenários de uso
+  - porte organizacional
+  - startup templates
+  - scaleup templates
+  - enterprise templates
+  - templates especializados
+  - configuração rápida
+  - escolha de template
 ---
 # Templates de Início Rápido
 

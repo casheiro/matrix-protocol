@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Monitoring Alerts 016
 description: Página wrapper para o asset YAML uki-pay-monitoring-alerts-016.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - monitoring alerts
+  - SLA thresholds
+  - payment success rate
+  - revenue per hour
+  - gateway availability
+  - response time P95
+  - PagerDuty Slack
+  - alert routing
+  - false positive reduction
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-monitoring-alerts-016.yaml`
 

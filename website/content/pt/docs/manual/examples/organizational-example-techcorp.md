@@ -7,8 +7,22 @@ sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 1
+framework: general
+keywords:
+  - Matrix Protocol
+  - exemplo organizacional TechCorp
+  - estudo de caso completo
+  - empresa de tecnologia
+  - implementação passo a passo
+  - 150+ funcionários
+  - 3 tribos 12 squads
+  - conhecimento fragmentado
+  - governança de decisões
+  - auditoria de mudanças
+  - colaboração humano-IA
+  - resultados organizacionais
 ---
 
 # Exemplo Organizacional TechCorp

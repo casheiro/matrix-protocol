@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Deployment Process 015
 description: Página wrapper para o asset YAML uki-pay-deployment-process-015.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - deployment process
+  - blue-green deployment
+  - canary release
+  - rollback procedures
+  - quality gates
+  - change windows
+  - PCI validation
+  - emergency deployment
+  - production SLA
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/procedures/uki-pay-deployment-process-015.yaml`
 

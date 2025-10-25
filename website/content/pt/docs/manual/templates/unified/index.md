@@ -1,19 +1,27 @@
 ---
 title: Templates Unificados
 description: Templates unificados combinando múltiplas abordagens para máxima flexibilidade
+keywords:
+  - Matrix Protocol
+  - templates unificados
+  - organizações híbridas
+  - múltiplas abordagens
+  - flexibilidade máxima
+  - customização total
+  - implementação modular
+framework: general
 icon: i-heroicons-squares-plus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Templates Unificados
 

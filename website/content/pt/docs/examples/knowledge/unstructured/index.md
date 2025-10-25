@@ -1,14 +1,25 @@
 ---
 title: Conhecimento Nao Estruturado
-description: 12 documentos caoticos demonstrando os problemas tipicos de
-  conhecimento disperso antes da aplicacao do MEF
+description: 12 documentos caoticos demonstrando os problemas tipicos de conhecimento disperso antes da aplicacao do MEF
+keywords:
+  - Matrix Protocol
+  - conhecimento caótico
+  - documentação dispersa
+  - problemas organizacionais
+  - contradições
+  - conhecimento desatualizado
+  - informações fragmentadas
+  - falta de governança
+  - antes MEF
+  - anti-patterns
+framework: general
 icon: i-heroicons-document-minus
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Conhecimento Nao Estruturado

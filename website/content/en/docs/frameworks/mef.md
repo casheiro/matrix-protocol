@@ -1,14 +1,22 @@
 ---
 title: MEF — Matrix Embedding Framework
-description: Framework for versioned knowledge structuring through UKIs (Units
-  of Knowledge Interlinked) in Matrix Protocol
+description: Framework for versioned knowledge structuring through UKIs (Units of Knowledge Interlinked) in Matrix Protocol
+keywords:
+  - MEF
+  - Matrix Protocol
+  - knowledge structuring
+  - UKI
+  - versioning
+  - embedding
+  - Units of Knowledge Interlinked
+framework: MEF
 icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # MEF — Matrix Embedding Framework

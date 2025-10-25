@@ -1,19 +1,27 @@
 ---
 title: Moc Unified Structure
 description: Página wrapper para o asset YAML moc-unified-structure.yaml
+keywords:
+  - Matrix Protocol
+  - MOC unified structure
+  - ontologia organizacional
+  - hierarquias obrigatórias
+  - governance framework
+  - MEP principles compliance
+  - autoridade derivada
+framework: general
+icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-document-duplicate
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
 maturity: stable
 tags:
   - manual
   - templates
-order: 10
 ---
 > Source YAML: `pt/docs/manual/templates/unified/moc-unified-structure.yaml`
 

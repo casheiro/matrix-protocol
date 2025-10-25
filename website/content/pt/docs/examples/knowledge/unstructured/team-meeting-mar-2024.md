@@ -1,14 +1,26 @@
 ---
 title: reunião squad - março
-description: "[EXEMPLO CAÓTICO] Notas informais de reunião com discussões dispersas"
+description: '[EXEMPLO CAÓTICO] Notas informais de reunião com discussões dispersas'
 icon: i-heroicons-document
 layout: docs
 sidebar: true
 toc: false
 navigation: false
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - reunião informal
+  - notas dispersas
+  - contradições PayPal
+  - mudança gateway
+  - refund 14 dias
+  - ajuste threshold fraude
+  - documentação inconsistente
+  - março 2024
+  - decisões informais
 ---
 # reunião squad - março
 

@@ -1,13 +1,25 @@
 ---
 title: MOC Generation Tools
 description: Tools for generating and managing Matrix Ontology Catalogs
+keywords:
+  - Matrix Protocol
+  - MOC generation
+  - Matrix Ontology Catalog
+  - template generator
+  - validation scripts
+  - catalog management
+  - organizational templates
+  - schema validation
+  - governance checking
+  - migration tools
+framework: general
 icon: i-heroicons-wrench-screwdriver
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 2
 ---
 

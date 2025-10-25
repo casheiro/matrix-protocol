@@ -1,19 +1,27 @@
 ---
 title: Scaleup Templates
 description: Templates optimized for rapidly growing companies with scalable needs
+keywords:
+  - Matrix Protocol
+  - scaleup templates
+  - rapid growth
+  - scalable governance
+  - organizational evolution
+  - flexible hierarchies
+  - growth optimization
+framework: general
 icon: i-heroicons-chart-bar-square
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Scaleup Templates
 

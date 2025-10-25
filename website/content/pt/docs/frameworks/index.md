@@ -7,8 +7,22 @@ sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - frameworks interdependentes
+  - MEF Matrix Embedding Framework
+  - ZOF Zion Orchestration Framework
+  - OIF Operator Intelligence Framework
+  - MOC Matrix Ontology Catalog
+  - MAL Matrix Arbiter Layer
+  - arquitetura de camadas
+  - colaboração humano-IA
+  - visão geral dos frameworks
+  - integração de sistemas
+  - epistemologia aplicada
 ---
 # Frameworks Matrix Protocol
 

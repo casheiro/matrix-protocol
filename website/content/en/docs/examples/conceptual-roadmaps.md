@@ -1,12 +1,32 @@
 ---
-title: "UKI Conceptual Roadmaps"
-description: "Matrix Protocol epistemological flows: from theory to practice through MEP→MEF→ZOF→OIF."
-tags: [examples, uki, mep, mef, zof, oif, conceptual, flowcharts]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "en"
-last_updated: "2025-10-23"
+title: UKI Conceptual Roadmaps
+description: 'Matrix Protocol epistemological flows: from theory to practice through MEP→MEF→ZOF→OIF.'
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: en
+last_updated: '2025-10-23'
 order: 1
+tags:
+  - examples
+  - uki
+  - mep
+  - mef
+  - zof
+  - oif
+  - conceptual
+  - flowcharts
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - conceptual roadmaps
+  - epistemological flows
+  - MEP MEF ZOF OIF integration
+  - knowledge transformation
+  - workflow orchestration
+  - arbitration processes
 ---
 
 # UKI Conceptual Roadmaps

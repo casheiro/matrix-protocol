@@ -1,13 +1,25 @@
 ---
 title: UKI Templates
 description: Templates and tools for creating MEF-compliant Knowledge Units
+keywords:
+  - Matrix Protocol
+  - UKI templates
+  - Universal Knowledge Identifier
+  - MEF compliance
+  - knowledge units
+  - standardized formats
+  - business rules templates
+  - technical patterns
+  - procedures templates
+  - template customization
+framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 3
 ---
 

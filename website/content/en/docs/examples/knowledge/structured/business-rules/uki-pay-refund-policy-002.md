@@ -1,14 +1,23 @@
 ---
 title: Uki Pay Refund Policy 002
 description: Wrapper page for YAML asset uki-pay-refund-policy-002.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
+  - knowledge
+  - structured
+  - business rules
+  - UKI
 ---
 > Source YAML: `en/docs/examples/knowledge/structured/business-rules/uki-pay-refund-policy-002.yaml`
 

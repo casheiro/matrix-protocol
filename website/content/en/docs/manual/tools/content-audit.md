@@ -1,13 +1,25 @@
 ---
 title: Content Audit Tools
 description: Tools and techniques for auditing existing organizational knowledge
+keywords:
+  - Matrix Protocol
+  - content audit
+  - knowledge inventory
+  - quality assessment
+  - gap analysis
+  - document discovery
+  - consistency checking
+  - relationship mapping
+  - automated discovery
+  - transformation planning
+framework: general
 icon: i-heroicons-magnifying-glass
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 1
 ---
 

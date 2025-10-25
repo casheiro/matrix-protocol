@@ -6,13 +6,18 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
-order: 0
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - examples
   - pilots
+framework: general
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
 ---
 # Pilots
 

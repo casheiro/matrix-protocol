@@ -1,12 +1,29 @@
 ---
-title: "Roteiros Conceituais da UKI"
-description: "Fluxos epistemológicos do Matrix Protocol: da teoria à prática através de MEP→MEF→ZOF→OIF."
-tags: [examples, uki, mep, mef, zof, oif, conceptual, flowcharts]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "pt"
-last_updated: "2025-10-23"
+title: Roteiros Conceituais da UKI
+description: 'Fluxos epistemológicos do Matrix Protocol: da teoria à prática através de MEP→MEF→ZOF→OIF.'
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: pt
+last_updated: '2025-10-23'
 order: 1
+tags:
+  - examples
+  - uki
+  - mep
+  - mef
+  - zof
+  - oif
+  - conceptual
+  - flowcharts
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
+  - epistemology
 ---
 
 # Roteiros Conceituais da UKI

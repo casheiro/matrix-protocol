@@ -6,9 +6,17 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
-order: 4
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
+order: 4
+framework: general
+keywords:
+  - Matrix Protocol
+  - recursos relacionados
+  - links relativos
+  - navegação
+  - referências
+  - caminhos
 ---
 # Pilot 04 — Related Resources
 

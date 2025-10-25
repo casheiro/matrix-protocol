@@ -1,14 +1,25 @@
 ---
 title: Conhecimento Estruturado MEF
-description: 17 UKIs (Unidades de Conhecimento Integravel) organizados seguindo
-  a especificacao MEF v0.0.1-beta para demonstrar a eficiencia da estruturacao
+description: 17 UKIs (Unidades de Conhecimento Integravel) organizados seguindo a especificacao MEF v0.0.1-beta para demonstrar a eficiencia da estruturacao
+keywords:
+  - Matrix Protocol
+  - MEF
+  - UKI estruturados
+  - conhecimento organizado
+  - regras de negócio
+  - padrões técnicos
+  - procedimentos
+  - versionamento
+  - relacionamentos semânticos
+  - governança MOC
+framework: general
 icon: i-heroicons-squares-2x2
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Conhecimento Estruturado MEF

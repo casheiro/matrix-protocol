@@ -1,15 +1,20 @@
 ---
 title: TechCorp Case Study
-description: Detailed case study of TechCorp's 18-month Matrix Protocol
-  implementation, including quantitative results and lessons learned
+description: Detailed case study of TechCorp's 18-month Matrix Protocol implementation, including quantitative results and lessons learned
 icon: i-heroicons-building-office
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - manual
+  - guide
+  - implementation
 ---
 # TechCorp Case Study - Complete Matrix Protocol Implementation
 **Hypothetical Case Study: Organizational implementation, 18 months**

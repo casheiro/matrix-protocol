@@ -1,19 +1,26 @@
 ---
 title: Templates and MOC Structures
 description: Templates organized by company size and specific Matrix Protocol use cases
+keywords:
+  - Matrix Protocol
+  - templates
+  - MOC structures
+  - organizational
+  - company size
+  - implementation guides
+framework: general
 icon: i-heroicons-document-duplicate
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Templates and MOC Structures
 

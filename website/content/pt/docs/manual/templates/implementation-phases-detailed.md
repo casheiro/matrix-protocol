@@ -7,8 +7,20 @@ sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-23
+last_updated: 2025-10-23T00:00:00.000Z
 order: 2
+framework: general
+keywords:
+  - Matrix Protocol
+  - fases implementação
+  - descoberta organizacional
+  - design MOC
+  - implementação piloto
+  - expansão gradual
+  - operação Matrix
+  - cronograma implementação
+  - critérios sucesso
+  - guia detalhado
 ---
 
 # Fases de Implementação Detalhadas

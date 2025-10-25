@@ -1,14 +1,22 @@
 ---
 title: MEP — Matrix Epistemic Principle
-description: Epistemological manifesto that establishes the philosophical
-  foundations of knowledge treatment in Matrix Protocol
+description: Epistemological manifesto that establishes the philosophical foundations of knowledge treatment in Matrix Protocol
+keywords:
+  - MEP
+  - Matrix Protocol
+  - epistemology
+  - philosophical foundations
+  - knowledge treatment
+  - epistemic principles
+  - manifesto
+framework: general
 icon: i-heroicons-light-bulb
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # MEP — Matrix Epistemic Principle

@@ -1,14 +1,26 @@
 ---
 title: Uki Pay Idempotency Keys 011
 description: Página wrapper para o asset YAML uki-pay-idempotency-keys-011.yaml
+icon: i-heroicons-code-bracket
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-icon: i-heroicons-code-bracket
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - idempotency keys
+  - UUID v4
+  - Redis storage
+  - double billing prevention
+  - retry safety
+  - request hash validation
+  - SHA-256
+  - conflict detection
+  - payment reliability
 ---
 > Source YAML: `pt/docs/examples/knowledge/structured/technical-patterns/uki-pay-idempotency-keys-011.yaml`
 

@@ -1,13 +1,22 @@
 ---
 title: Technical Patterns MEF
 description: UKIs structured defining technical implementation and architecture patterns
+keywords:
+  - Matrix Protocol
+  - examples
+  - use cases
+  - knowledge
+  - structured
+  - technical patterns
+  - architecture
+framework: general
 icon: i-heroicons-cog-6-tooth
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
 ---
 # Technical Patterns MEF

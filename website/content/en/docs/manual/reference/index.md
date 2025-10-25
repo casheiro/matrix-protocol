@@ -1,15 +1,20 @@
 ---
 title: Reference
-description: Detailed case studies, advanced support material and reference
-  documentation for complex Matrix Protocol implementations
+description: Detailed case studies, advanced support material and reference documentation for complex Matrix Protocol implementations
 icon: i-heroicons-bookmark
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - manual
+  - guide
+  - implementation
 ---
 # Reference Material
 

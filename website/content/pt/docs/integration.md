@@ -1,14 +1,27 @@
 ---
 title: Guia de Integração
-description: Padrões e exemplos de integração entre os frameworks do Protocolo
-  Matrix, demonstrando como MEF, ZOF, OIF e MAL trabalham em conjunto.
+description: Padrões e exemplos de integração entre os frameworks do Protocolo Matrix, demonstrando como MEF, ZOF, OIF e MAL trabalham em conjunto.
+keywords:
+  - Matrix Protocol
+  - integração de frameworks
+  - diagrama de integração
+  - padrões de integração
+  - workflow orientado por conhecimento
+  - operações cientes de autoridade
+  - ciclo de avaliação
+  - validação multi-escopo
+  - loop de feedback epistemológico
+  - fluxos end-to-end
+  - matriz de pontos de integração
+  - orquestração de sistemas
+framework: general
 icon: i-heroicons-puzzle-piece
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # Protocolo Matrix — Diagrama de Integração

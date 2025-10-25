@@ -6,9 +6,17 @@ layout: docs
 sidebar: true
 toc: true
 navigation: true
-order: 2
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
+order: 2
+framework: general
+keywords:
+  - Matrix Protocol
+  - política de nomes
+  - naming policy
+  - kebab-case
+  - snake_case
+  - convenções
 ---
 # Pilot 02 — Naming Policy
 

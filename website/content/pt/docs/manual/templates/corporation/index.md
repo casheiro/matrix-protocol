@@ -1,20 +1,31 @@
 ---
 title: Templates Corporativos
-description: Templates específicos para grandes corporações com estruturas
-  complexas e múltiplas divisões
+description: Templates específicos para grandes corporações com estruturas complexas e múltiplas divisões
+keywords:
+  - Matrix Protocol
+  - templates corporativos
+  - grandes corporações
+  - estruturas complexas
+  - múltiplas divisões
+  - hierarquias federadas
+  - governança robusta
+  - 1000+ funcionários
+  - auditoria completa
+  - processos formalizados
+  - governança federada
+framework: general
 icon: i-heroicons-building-office-2
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
-framework: MEF
+last_updated: 2025-10-21T00:00:00.000Z
+order: 0
 maturity: stable
 tags:
   - manual
   - templates
-order: 0
 ---
 # Templates Corporativos
 

@@ -1,14 +1,21 @@
 ---
 title: MEF Support Ontology
-description: Reference controlled vocabularies for UKI structure and Matrix
-  Embedding Framework implementation
+description: Reference controlled vocabularies for UKI structure and Matrix Embedding Framework implementation
+keywords:
+  - Matrix Protocol
+  - MEF Support Ontology
+  - controlled vocabularies
+  - UKI structure
+  - reference taxonomies
+  - Matrix Embedding Framework
+framework: MEF
 icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # MEF Support Ontology — Ontologia de Suporte MEF

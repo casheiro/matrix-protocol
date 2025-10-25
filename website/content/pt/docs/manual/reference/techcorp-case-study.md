@@ -1,15 +1,26 @@
 ---
 title: Estudo de Caso TechCorp
-description: Estudo de caso detalhado da implementação de 18 meses do Matrix
-  Protocol na TechCorp, incluindo resultados quantitativos e lições aprendidas
+description: Estudo de caso detalhado da implementação de 18 meses do Matrix Protocol na TechCorp, incluindo resultados quantitativos e lições aprendidas
 icon: i-heroicons-building-office
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - estudo de caso
+  - TechCorp
+  - implementação organizacional
+  - 18 meses
+  - ROI 340%
+  - métricas quantitativas
+  - redução de tempo
+  - gestão de mudança
+  - lições aprendidas
 ---
 # TechCorp Estudo de Caso - Implementação Completa Matrix Protocol
 **Estudo de Caso Hipotético: Implementação organizacional, 18 meses**

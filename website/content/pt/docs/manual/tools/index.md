@@ -1,15 +1,23 @@
 ---
 title: Ferramentas
-description: Listas de verificação práticas, ferramentas de validação e recursos
-  para monitorar a implementação do Matrix Protocol
+description: Listas de verificação práticas, ferramentas de validação e recursos para monitorar a implementação do Matrix Protocol
 icon: i-heroicons-wrench-screwdriver
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - ferramentas validação
+  - checklists implementação
+  - validação estrutural
+  - validação processo
+  - validação governança
+  - métricas sucesso
 ---
 # Ferramentas e Checklists
 

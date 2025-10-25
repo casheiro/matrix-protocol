@@ -1,15 +1,28 @@
 ---
 title: Validation Checklists
-description: Practical checklists and actionable validation criteria for each
-  Matrix Protocol implementation phase
+description: Practical checklists and actionable validation criteria for each Matrix Protocol implementation phase
 icon: i-heroicons-check-circle
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: en
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
+framework: general
+keywords:
+  - Matrix Protocol
+  - validation checklists
+  - MOC foundation
+  - MEF expansion
+  - ZOF workflows
+  - implementation phases
+  - stakeholder interviews
+  - pilot implementation
+  - legacy migration
+  - quality gates
+  - success criteria
+  - failure patterns
 ---
 # Validation Checklists - Matrix Protocol Implementation
 **Practical checklists based on TechCorp experience and 12 organizations**

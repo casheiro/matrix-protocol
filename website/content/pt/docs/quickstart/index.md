@@ -1,15 +1,28 @@
 ---
 title: Guia de Início Rápido
-description: Implemente o Matrix Protocol na sua organização em 3 passos simples
-  em 2-4 horas
+description: Implemente o Matrix Protocol na sua organização em 3 passos simples em 2-4 horas
 icon: i-heroicons-rocket-launch
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 0
+framework: general
+keywords:
+  - Matrix Protocol
+  - guia de início rápido
+  - implementação rápida
+  - 3 passos simples
+  - template MOC
+  - taxonomia organizacional
+  - primeiro UKI
+  - configuração inicial
+  - critérios de sucesso
+  - templates por porte
+  - startup, scaleup, enterprise
+  - onboarding rápido
 ---
 # Guia de Início Rápido - Matrix Protocol
 **Versão:** v0.0.1 Beta  

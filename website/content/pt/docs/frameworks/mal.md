@@ -1,14 +1,27 @@
 ---
 title: MAL — Matrix Arbiter Layer
-description: Camada de arbitragem determinística para resolução de conflitos de
-  conhecimento no Matrix Protocol
+description: Camada de arbitragem determinística para resolução de conflitos de conhecimento no Matrix Protocol
+keywords:
+  - Matrix Protocol
+  - MAL
+  - Matrix Arbiter Layer
+  - arbitragem determinística
+  - resolução de conflitos
+  - conflitos horizontais
+  - enriquecimento concorrente
+  - contenção de promoção
+  - regras de precedência
+  - Decision Records
+  - governança epistemológica
+  - auditabilidade
+framework: MAL
 icon: i-heroicons-scale
 layout: docs
 sidebar: true
 toc: true
 navigation: true
 lang: pt
-last_updated: 2025-10-21
+last_updated: 2025-10-21T00:00:00.000Z
 order: 10
 ---
 # MAL — Matrix Arbiter Layer

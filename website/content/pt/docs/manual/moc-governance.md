@@ -1,12 +1,30 @@
 ---
-title: "Governança MOC e Matriz de Políticas"
-description: "Sistema completo de governança organizacional via Matrix Ontology Catalog com precedências, políticas e supervisão."
-tags: [manual, moc, governance, policies, precedences, organizational]
-framework: "Matrix Protocol"
-maturity: "beta"
-lang: "pt"
-last_updated: "2025-10-23"
+title: Governança MOC e Matriz de Políticas
+description: Sistema completo de governança organizacional via Matrix Ontology Catalog com precedências, políticas e supervisão.
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: pt
+last_updated: '2025-10-23'
 order: 2
+tags:
+  - manual
+  - moc
+  - governance
+  - policies
+  - precedences
+  - organizational
+maturity: beta
+framework: general
+keywords:
+  - Matrix Protocol
+  - governança MOC
+  - matriz políticas organizacionais
+  - precedências determinísticas
+  - autoridade derivada organizacional
+  - sistema arbitragem
+  - conformidade regulatory
 ---
 
 # Governança MOC e Matriz de Políticas

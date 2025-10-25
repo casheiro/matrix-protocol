@@ -1,17 +1,35 @@
 ---
-title: "Divergence Notes PT↔EN"
-description: "Documentation of justified differences between Portuguese and English versions of Matrix Protocol documentation."
-tags: [manual, tools, divergence, bilingual, harmonization, transparency]
-framework: "Matrix Protocol"
-maturity: "production"
+title: Divergence Notes PT↔EN
+description: Documentation of justified differences between Portuguese and English versions of Matrix Protocol documentation.
 icon: i-heroicons-language
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: "en"
-last_updated: "2025-10-23"
+lang: en
+last_updated: '2025-10-23'
 order: 6
+tags:
+  - manual
+  - tools
+  - divergence
+  - bilingual
+  - harmonization
+  - transparency
+maturity: production
+framework: general
+keywords:
+  - Matrix Protocol
+  - bilingual divergence
+  - PT-EN harmonization
+  - cultural differences
+  - regulatory variations
+  - linguistic divergence
+  - translation justification
+  - organizational terminology
+  - compliance frameworks
+  - audience adaptation
+  - transparency system
 ---
 
 # Divergence Notes PT↔EN
