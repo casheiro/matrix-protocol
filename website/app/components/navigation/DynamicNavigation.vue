@@ -13,8 +13,11 @@
 
 <template>
   <nav 
-    class="dynamic-navigation"
-    :class="{ 'is-mobile': isMobile, 'is-loading': isLoading }"
+    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
+    :class="{ 
+      'border-0 rounded-none': isMobile, 
+      'opacity-75': isLoading 
+    }"
     :aria-label="$t('navigation.dynamicNavLabel')"
   >
     <!-- Navigation Header -->
@@ -46,7 +49,7 @@
       leave-from-class="opacity-100 max-h-96"
       leave-to-class="opacity-0 max-h-0"
     >
-      <div v-show="!isCollapsed || !collapsible" class="nav-content overflow-hidden">
+      <div v-show="!isCollapsed || !collapsible" class="transition-all duration-200 overflow-hidden">
         <!-- Loading State -->
         <div v-if="isLoading" class="p-4">
           <div class="space-y-3">
@@ -98,7 +101,7 @@
     </Transition>
 
     <!-- Performance Info (Debug Mode) -->
-    <div v-if="showDebugInfo && navigationStats" class="nav-debug border-t border-gray-200 dark:border-gray-700 p-2">
+    <div v-if="showDebugInfo && navigationStats" class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-2">
       <details class="group">
         <summary class="text-xs text-gray-500 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">
           {{ $t('navigation.debugInfo') }} ({{ navigationStats.responseTime }}ms)
@@ -259,25 +262,7 @@ defineExpose({
 </script>
 
 <style scoped>
-.dynamic-navigation {
-  @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden;
-}
-
-.dynamic-navigation.is-mobile {
-  @apply border-0 rounded-none;
-}
-
-.dynamic-navigation.is-loading {
-  @apply opacity-75;
-}
-
-.nav-content {
-  @apply transition-all duration-200;
-}
-
-.nav-debug {
-  @apply bg-gray-50 dark:bg-gray-800;
-}
+/* Todas as classes Tailwind foram movidas para o template */
 
 /* Transition utilities for better performance */
 .max-h-0 {

@@ -13,8 +13,11 @@
 
 <template>
   <nav 
-    class="breadcrumbs"
-    :class="{ 'is-compact': compact, 'is-loading': isLoading }"
+    class="py-2"
+    :class="{ 
+      'py-1': compact, 
+      'opacity-75': isLoading 
+    }"
     :aria-label="$t('navigation.breadcrumbsLabel')"
   >
     <!-- Loading State -->
@@ -32,21 +35,20 @@
     </div>
 
     <!-- Breadcrumb Trail -->
-    <ol v-else-if="breadcrumbItems.length" class="breadcrumb-list flex items-center flex-wrap gap-1">
+    <ol v-else-if="breadcrumbItems.length" class="text-sm flex items-center flex-wrap gap-1">
       <li
         v-for="(item, index) in visibleBreadcrumbs"
         :key="`${item?.path || 'breadcrumb'}-${index}`"
-        class="breadcrumb-item flex items-center"
+        class="transition-all duration-200 flex items-center"
         :class="{
-          'is-current': index === breadcrumbItems.length - 1,
-          'is-truncated': index === 0 && shouldTruncate
+          'relative': index === 0 && shouldTruncate
         }"
       >
         <!-- Truncation Indicator -->
         <button
           v-if="index === 0 && shouldTruncate"
           @click="showAllBreadcrumbs"
-          class="truncation-button text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 px-2 py-1 rounded text-xs transition-colors"
+          class="flex items-center justify-center min-w-[2rem] h-6 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-2 py-1 rounded text-xs transition-colors"
           :aria-label="$t('navigation.showAllBreadcrumbs')"
         >
           <UIcon name="i-heroicons-ellipsis-horizontal" class="w-4 h-4" />
@@ -59,22 +61,29 @@
             :is="index === breadcrumbItems.length - 1 ? 'span' : 'a'"
             :href="index === breadcrumbItems.length - 1 ? undefined : item?.path"
             @click="index === breadcrumbItems.length - 1 ? undefined : handleBreadcrumbClick(item?.path || '', $event)"
-            class="breadcrumb-link"
-            :class="{
-              'current-page': index === breadcrumbItems.length - 1,
-              'clickable': index !== breadcrumbItems.length - 1
-            }"
+            class="flex items-center transition-colors duration-200"
+            :class="[
+              compact ? 'gap-1' : 'gap-2',
+              {
+                'text-gray-900 dark:text-white font-medium cursor-default': index === breadcrumbItems.length - 1,
+                'text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline cursor-pointer': index !== breadcrumbItems.length - 1
+              }
+            ]"
             :aria-current="index === breadcrumbItems.length - 1 ? 'page' : undefined"
           >
             <!-- Icon -->
             <UIcon
               v-if="showIcons && item?.icon"
               :name="item.icon"
-              class="breadcrumb-icon w-4 h-4 flex-shrink-0"
+              class="text-gray-500 dark:text-gray-400 flex-shrink-0"
+              :class="compact ? 'w-3 h-3' : 'w-4 h-4'"
             />
 
             <!-- Title -->
-            <span class="breadcrumb-title">{{ item?.title }}</span>
+            <span 
+              class="truncate lg:max-w-none"
+              :class="compact ? 'max-w-[100px]' : 'max-w-[150px] sm:max-w-[200px]'"
+            >{{ item?.title }}</span>
 
             <!-- Type Badge -->
             <span
@@ -89,7 +98,7 @@
           <UIcon
             v-if="index < breadcrumbItems.length - 1"
             :name="separatorIcon"
-            class="breadcrumb-separator w-4 h-4 mx-2 text-gray-400 flex-shrink-0"
+            class="text-gray-400 dark:text-gray-500 w-4 h-4 mx-2 flex-shrink-0"
           />
         </template>
       </li>
@@ -246,74 +255,6 @@ defineExpose({
 </script>
 
 <style scoped>
-.breadcrumbs {
-  @apply py-2;
-}
-
-.breadcrumbs.is-compact {
-  @apply py-1;
-}
-
-.breadcrumbs.is-loading {
-  @apply opacity-75;
-}
-
-.breadcrumb-list {
-  @apply text-sm;
-}
-
-.breadcrumb-item {
-  @apply transition-all duration-200;
-}
-
-.breadcrumb-item.is-truncated {
-  @apply relative;
-}
-
-.breadcrumb-link {
-  @apply flex items-center gap-2 transition-colors duration-200;
-}
-
-.breadcrumb-link.clickable {
-  @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline cursor-pointer;
-}
-
-.breadcrumb-link.current-page {
-  @apply text-gray-900 dark:text-white font-medium cursor-default;
-}
-
-.breadcrumb-icon {
-  @apply text-gray-500 dark:text-gray-400;
-}
-
-.breadcrumb-title {
-  @apply truncate max-w-[150px] sm:max-w-[200px] lg:max-w-none;
-}
-
-.breadcrumb-separator {
-  @apply text-gray-400 dark:text-gray-500;
-}
-
-.truncation-button {
-  @apply flex items-center justify-center min-w-[2rem] h-6;
-}
-
-.truncation-button:hover {
-  @apply bg-gray-100 dark:bg-gray-800;
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .breadcrumb-title {
-    @apply max-w-[100px];
-  }
-  
-  .breadcrumbs.is-compact .breadcrumb-link {
-    @apply gap-1;
-  }
-  
-  .breadcrumbs.is-compact .breadcrumb-icon {
-    @apply w-3 h-3;
-  }
-}
+/* Todas as classes Tailwind foram movidas para o template */
+/* Mantendo apenas estrutura mínima de styles se necessário */
 </style>

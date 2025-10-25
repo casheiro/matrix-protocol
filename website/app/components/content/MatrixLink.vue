@@ -205,8 +205,9 @@ if (process.dev && !isValidLink.value && linkKey.value) {
 </script>
 
 <style scoped>
-/* Estilos específicos do componente se necessário */
+/* CSS puro para classe específica */
 .matrix-link-invalid {
-  @apply text-red-500 cursor-not-allowed;
+  color: rgb(239 68 68); /* text-red-500 */
+  cursor: not-allowed;
 }
 </style>

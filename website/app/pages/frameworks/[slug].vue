@@ -215,7 +215,6 @@ if (!frameworkData) {
 // Reactive state
 const currentSection = ref('overview')
 const activeHeading = ref('')
-const showTOC = ref(true)
 
 // Computed properties
 const frameworkIconBg = computed(() => {
@@ -277,12 +276,12 @@ const handleHeadingClick = (headingId) => {
 }
 
 // Load framework content using Nuxt Content 3 queryCollection
-const { data: frameworkContent, error: contentError } = await useAsyncData(
+const { data: frameworkContent } = await useAsyncData(
   `framework-${route.params.slug}-${$i18n.locale.value}`,
   async () => {
     try {
       const locale = $i18n.locale.value
-      const frameworkPath = `frameworks/${route.params.slug}`
+      const frameworkPath = `docs/frameworks/${route.params.slug}`
       
       console.log('🔍 Querying collection:', locale, 'path:', frameworkPath)
       
@@ -290,7 +289,7 @@ const { data: frameworkContent, error: contentError } = await useAsyncData(
       const allContent = await queryCollection(locale).all()
       console.log('📋 All content in collection:', allContent?.length || 0, 'items')
       if (allContent?.length > 0) {
-        console.log('📄 Sample paths:', allContent.slice(0, 3).map(c => c._path || c.path))
+        console.log('📄 Sample paths:', allContent.slice(0, 3).map(c => c.path))
       }
       
       // Try without leading slash since collection has prefix configured
@@ -305,7 +304,7 @@ const { data: frameworkContent, error: contentError } = await useAsyncData(
       // If still not found, try with full path including locale
       if (!content) {
         console.log('🔄 Trying with full path...')
-        content = await queryCollection(locale).path(`/${locale}/frameworks/${route.params.slug}`).first()
+        content = await queryCollection(locale).path(`/${locale}/docs/frameworks/${route.params.slug}`).first()
       }
       
       console.log('📄 Content found:', content ? 'YES' : 'NO', content?.title || 'undefined')
@@ -333,7 +332,7 @@ const generateFallbackTOC = () => {
 
 // Extract headings from rendered content for TOC
 const extractHeadings = () => {
-  if (process.client) {
+  if (import.meta.client) {
     const headings = []
     // Corrigido seletor para corresponder ao container real
     const headingElements = document.querySelectorAll('.framework-markdown-content h1, .framework-markdown-content h2, .framework-markdown-content h3, .framework-markdown-content h4, .framework-markdown-content h5, .framework-markdown-content h6')
@@ -406,7 +405,7 @@ watch(() => frameworkContent.value, () => {
 
 // Initialize TOC on mount
 onMounted(() => {
-  if (process.client) {
+  if (import.meta.client) {
     // Set initial TOC
     if (frameworkContent.value) {
       setTimeout(() => {
