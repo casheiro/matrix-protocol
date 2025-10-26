@@ -43,7 +43,7 @@
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <UButton 
-          :to="`/${$i18n.locale}/quickstart`"
+          :to="`/${$i18n.locale}/docs/quickstart`"
           size="xl"
           class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
         >
@@ -548,7 +548,7 @@
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center" role="group">
               <UButton
-                :to="`/${$i18n.locale}/protocol`"
+                :to="`/${$i18n.locale}/docs/protocol`"
                 size="lg"
                 class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white"
               >
@@ -581,7 +581,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <UButton 
-            :to="`/${$i18n.locale}/quickstart`"
+            :to="`/${$i18n.locale}/docs/quickstart`"
             size="xl"
             class="px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-500 hover:to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
