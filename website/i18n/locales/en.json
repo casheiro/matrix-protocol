@@ -106,58 +106,110 @@
   },
   "resources": {
     "title": "Resource Center",
-    "subtitle": "Everything you need to implement the Matrix Protocol",
-    "description": "Templates, guides, case studies and tools for complete Matrix Protocol implementation in your organization.",
-    "quickStart": {
-      "title": "Quick Start Templates",
-      "basicTemplate": "Basic MOC Template",
-      "basicDescription": "Universal simplified template, suitable for any organization size (5-1000+ people).",
-      "originalTemplate": "Original MOC Template",
-      "originalDescription": "Initial template with examples for different organizational sizes in a single file."
+    "subtitle": "Your portal to implement Matrix Protocol",
+    "description": "Quickly find everything you need: templates, documentation, examples and personalized learning paths for your Matrix Protocol journey.",
+    "startHere": {
+      "title": "Where to start?",
+      "newcomer": {
+        "title": "New to Matrix Protocol",
+        "description": "First contact? Start by understanding the conceptual and philosophical foundation of the protocol.",
+        "readProtocol": "Read Protocol",
+        "quickStart": "Quick Start"
+      },
+      "implementer": {
+        "title": "Ready to Implement",
+        "description": "Already know the protocol and want to implement it in your organization? Access practical guides.",
+        "implementationGuide": "Implementation Manual",
+        "templates": "View Templates"
+      },
+      "advanced": {
+        "title": "Advanced User",
+        "description": "Looking for practical examples, use cases or advanced tools to optimize implementation?",
+        "examples": "Practical Examples",
+        "tools": "Tools"
+      }
     },
-    "templates": {
-      "title": "Templates by Organization Size",
-      "startup": "Focused on agility, experimentation and rapid growth",
-      "scaleup": "Tribe/squad structure with balanced governance",
-      "enterprise": "Formal governance, compliance and risk management",
-      "corporation": "Global structure with regulations and executive oversight"
+    "quickAccess": {
+      "title": "Quick Access",
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Explore the 5 integrated frameworks of Matrix Protocol"
+      },
+      "templates": {
+        "title": "Templates",
+        "description": "Organizational MOCs for different company sizes"
+      },
+      "examples": {
+        "title": "Examples",
+        "description": "Practical cases and real implementations"
+      },
+      "tools": {
+        "title": "Tools",
+        "description": "Checklists, validations and auditing"
+      }
     },
-    "guides": {
-      "title": "Implementation Guides",
-      "complete": "Complete Implementation Manual",
-      "completeDescription": "Complete technical guide with 4,600+ lines covering all implementation aspects.",
-      "readme": "Navigation Guide",
-      "readmeDescription": "Manual overview with quick navigation and initial guidance."
+    "downloadCenter": {
+      "title": "Essential Downloads",
+      "quickStart": {
+        "title": "Starter Template",
+        "badge": "Starter",
+        "description": "Basic MOC template for any organization to start quickly."
+      },
+      "unified": {
+        "title": "Unified Structure",
+        "badge": "Normative",
+        "description": "Base MOC that ensures consistency across all organizational templates.",
+        "download": "Download Unified MOC"
+      },
+      "guide": {
+        "title": "Implementation Guide",
+        "badge": "4600+ lines",
+        "description": "Complete technical manual with all implementation aspects."
+      },
+      "allTemplates": {
+        "title": "Need more templates?",
+        "description": "Access our complete collection organized by organizational size (Startup, Scale-up, Enterprise, Corporation).",
+        "viewAll": "View All Templates"
+      }
     },
-    "cases": {
-      "title": "Case Studies",
-      "knowledgeComparison": "Knowledge Comparison",
-      "knowledgeComparisonDescription": "Complete example showing transformation of unstructured knowledge into Matrix Protocol UKIs"
-    },
-    "tools": {
-      "title": "Tools and Resources",
-      "documentation": "Complete Documentation",
-      "documentationDescription": "Access all detailed technical documentation for frameworks and implementation guides."
+    "learnMore": {
+      "title": "Learning Paths",
+      "beginner": {
+        "title": "Beginner Track",
+        "step1": {
+          "title": "Understand the Protocol",
+          "description": "Overview and philosophy"
+        },
+        "step2": {
+          "title": "Know the Frameworks",
+          "description": "MEF, ZOF, OIF, MOC, MAL"
+        },
+        "step3": {
+          "title": "Do the Quickstart",
+          "description": "First practical steps"
+        }
+      },
+      "advanced": {
+        "title": "Advanced Track",
+        "step1": {
+          "title": "Study Real Cases",
+          "description": "Structured knowledge examples"
+        },
+        "step2": {
+          "title": "Implement with Manual",
+          "description": "Detailed technical guide"
+        },
+        "step3": {
+          "title": "Use Tools",
+          "description": "Validation and auditing"
+        }
+      }
     },
     "cta": {
-      "title": "Ready to get started?",
-      "description": "Choose the right template for your organization and start implementing the Matrix Protocol today.",
-      "quickstart": "Quick Start Guide",
-      "implementation": "Implementation Guide"
-    },
-    "unifiedStructure": {
-      "title": "MOC Unified Structure v0.0.1-beta",
-      "normative": "Normative",
-      "description": "Base framework that ensures consistency and scalability across all organizational templates while preserving size-specific characteristics.",
-      "hierarchies": {
-        "scope": "Visibility and access",
-        "domain": "Knowledge categories", 
-        "maturity": "Quality and validation",
-        "evaluation": "Enrichment criteria"
-      },
-      "progression": "Organizational Evolution Path",
-      "conformity": "Unified v0.0.1-beta",
-      "download": "Download Unified Structure"
+      "title": "Ready to start your journey?",
+      "description": "Choose your path and start implementing Matrix Protocol in your organization today.",
+      "quickstart": "Quick Start",
+      "documentation": "Complete Documentation"
     }
   },
   "frameworks": {

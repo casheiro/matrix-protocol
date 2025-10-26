@@ -565,6 +565,114 @@
     "implementationGuide": "Manual de Implementação",
     "mocTemplate": "Template MOC"
   },
+  "resources": {
+    "title": "Central de Recursos",
+    "subtitle": "Seu portal para implementar o Matrix Protocol",
+    "description": "Encontre rapidamente tudo que precisa: templates, documentação, exemplos e caminhos de aprendizado personalizados para sua jornada com Matrix Protocol.",
+    "startHere": {
+      "title": "Por onde começar?",
+      "newcomer": {
+        "title": "Novo no Matrix Protocol",
+        "description": "Primeiro contato? Comece entendendo a base conceitual e filosófica do protocolo.",
+        "readProtocol": "Ler Protocolo",
+        "quickStart": "Inicialização Rápida"
+      },
+      "implementer": {
+        "title": "Pronto para Implementar",
+        "description": "Já conhece o protocolo e quer implementar na sua organização? Acesse os guias práticos.",
+        "implementationGuide": "Manual de Implementação",
+        "templates": "Ver Templates"
+      },
+      "advanced": {
+        "title": "Usuário Avançado",
+        "description": "Busca exemplos práticos, casos de uso ou ferramentas avançadas para otimizar implementação?",
+        "examples": "Exemplos Práticos",
+        "tools": "Ferramentas"
+      }
+    },
+    "quickAccess": {
+      "title": "Acesso Rápido",
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Explore os 5 frameworks integrados do Matrix Protocol"
+      },
+      "templates": {
+        "title": "Templates",
+        "description": "MOCs organizacionais para diferentes portes de empresa"
+      },
+      "examples": {
+        "title": "Exemplos",
+        "description": "Casos práticos e implementações reais"
+      },
+      "tools": {
+        "title": "Ferramentas",
+        "description": "Checklists, validações e auditoria"
+      }
+    },
+    "downloadCenter": {
+      "title": "Downloads Essenciais",
+      "quickStart": {
+        "title": "Template de Início",
+        "badge": "Starter",
+        "description": "Template MOC básico para qualquer organização começar rapidamente."
+      },
+      "unified": {
+        "title": "Estrutura Unificada",
+        "badge": "Normativo",
+        "description": "MOC base que garante consistência entre todos os templates organizacionais.",
+        "download": "Baixar MOC Unificado"
+      },
+      "guide": {
+        "title": "Guia de Implementação",
+        "badge": "4600+ linhas",
+        "description": "Manual técnico completo com todos os aspectos de implementação."
+      },
+      "allTemplates": {
+        "title": "Precisa de mais templates?",
+        "description": "Acesse nossa coleção completa organizada por porte organizacional (Startup, Scale-up, Enterprise, Corporation).",
+        "viewAll": "Ver Todos os Templates"
+      }
+    },
+    "learnMore": {
+      "title": "Caminhos de Aprendizado",
+      "beginner": {
+        "title": "Trilha Iniciante",
+        "step1": {
+          "title": "Entenda o Protocolo",
+          "description": "Visão geral e filosofia"
+        },
+        "step2": {
+          "title": "Conheça os Frameworks",
+          "description": "MEF, ZOF, OIF, MOC, MAL"
+        },
+        "step3": {
+          "title": "Faça o Quickstart",
+          "description": "Primeiros passos práticos"
+        }
+      },
+      "advanced": {
+        "title": "Trilha Avançada",
+        "step1": {
+          "title": "Estude Casos Reais",
+          "description": "Exemplos de conhecimento estruturado"
+        },
+        "step2": {
+          "title": "Implemente com Manual",
+          "description": "Guia técnico detalhado"
+        },
+        "step3": {
+          "title": "Use Ferramentas",
+          "description": "Validação e auditoria"
+        }
+      }
+    },
+    "cta": {
+      "title": "Pronto para começar sua jornada?",
+      "description": "Escolha seu caminho e comece a implementar o Matrix Protocol na sua organização hoje mesmo.",
+      "quickstart": "Inicialização Rápida",
+      "documentation": "Documentação Completa"
+    }
+  },
   "glossary": {
     "filter": {
       "title": "Filtrar por Letra"

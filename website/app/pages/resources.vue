@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
-            <UIcon name="i-heroicons-folder-arrow-down" class="w-8 h-8 text-purple-600 dark:text-purple-400" />
+            <UIcon name="i-heroicons-squares-plus" class="w-8 h-8 text-purple-600 dark:text-purple-400" />
             <h1 class="ml-3 text-xl font-semibold text-gray-900 dark:text-white">
               {{ $t('resources.title') }}
             </h1>
@@ -46,449 +46,428 @@
       <!-- Resources Grid -->
       <div class="space-y-12">
         
-        <!-- Quick Start Templates -->
-        <section id="quickstart">
+        <!-- Start Here - User Profile Based Direction -->
+        <section id="start-here">
           <div class="flex items-center mb-6">
             <UIcon name="i-heroicons-rocket-launch" class="w-6 h-6 text-green-600 dark:text-green-400 mr-3" />
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              {{ $t('resources.quickStart.title') }}
+              {{ $t('resources.startHere.title') }}
             </h3>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- New to Matrix Protocol -->
+            <UCard class="border-green-200 dark:border-green-800 flex flex-col h-full">
               <template #header>
                 <div class="flex items-center">
-                  <UIcon name="i-heroicons-document" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.quickStart.basicTemplate') }}</h4>
+                  <UIcon name="i-heroicons-sparkles" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                  <h4 class="font-semibold text-green-800 dark:text-green-200">{{ $t('resources.startHere.newcomer.title') }}</h4>
                 </div>
               </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.quickStart.basicDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadMatrixFile('moc-starter-template')"
-                  color="success"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.currentLanguage') }}
-                </UButton>
-              </div>
-            </UCard>
-
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-academic-cap" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.quickStart.originalTemplate') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.quickStart.originalDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadMatrixFile('moc-starter-template')"
-                  color="info"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.currentLanguage') }}
-                </UButton>
-              </div>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- MOC Unified Structure -->
-        <section id="unified-structure">
-          <div class="mb-8">
-            <UCard class="border-2 border-purple-500 bg-purple-50/5 dark:bg-purple-900/10">
-              <template #header>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center">
-                    <UIcon name="i-heroicons-cube-transparent" class="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3" />
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                      {{ $t('resources.unifiedStructure.title') }}
-                    </h3>
-                  </div>
-                  <UBadge color="primary" variant="soft">
-                    {{ $t('resources.unifiedStructure.normative') }}
-                  </UBadge>
-                </div>
-              </template>
-              
-              <div class="space-y-6">
-                <p class="text-lg text-gray-600 dark:text-gray-300">
-                  {{ $t('resources.unifiedStructure.description') }}
+              <div class="flex flex-col h-full">
+                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                  {{ $t('resources.startHere.newcomer.description') }}
                 </p>
-                
-                <!-- 4 Hierarquias Obrigatórias -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div class="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border">
-                    <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <UIcon name="i-heroicons-eye" class="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">Scope</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.unifiedStructure.hierarchies.scope') }}</div>
-                  </div>
-                  <div class="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border">
-                    <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <UIcon name="i-heroicons-squares-2x2" class="w-4 h-4 text-green-600 dark:text-green-400" />
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">Domain</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.unifiedStructure.hierarchies.domain') }}</div>
-                  </div>
-                  <div class="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border">
-                    <div class="w-8 h-8 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <UIcon name="i-heroicons-star" class="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">Maturity</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.unifiedStructure.hierarchies.maturity') }}</div>
-                  </div>
-                  <div class="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border">
-                    <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <UIcon name="i-heroicons-clipboard-document-check" class="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">Evaluation</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.unifiedStructure.hierarchies.evaluation') }}</div>
-                  </div>
-                </div>
-                
-                <!-- Download button -->
-                <div class="flex justify-center">
+                <div class="space-y-2 mt-auto">
                   <UButton
-                    @click="downloadMatrixFile('moc-unified-structure')"
-                    color="primary"
-                    size="lg"
-                    icon="i-heroicons-arrow-down-tray"
+                    :to="localePath('/protocol')"
+                    color="success"
+                    icon="i-heroicons-book-open"
+                    size="sm"
+                    block
                     class="cursor-pointer"
                   >
-                    {{ $t('resources.unifiedStructure.download') }}
+                    {{ $t('resources.startHere.newcomer.readProtocol') }}
+                  </UButton>
+                  <UButton
+                    :to="localePath('/docs/quickstart')"
+                    variant="outline"
+                    color="success"
+                    icon="i-heroicons-bolt"
+                    size="sm"
+                    block
+                    class="cursor-pointer"
+                  >
+                    {{ $t('resources.startHere.newcomer.quickStart') }}
+                  </UButton>
+                </div>
+              </div>
+            </UCard>
+
+            <!-- Ready to Implement -->
+            <UCard class="border-blue-200 dark:border-blue-800 flex flex-col h-full">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-cog-6-tooth" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+                  <h4 class="font-semibold text-blue-800 dark:text-blue-200">{{ $t('resources.startHere.implementer.title') }}</h4>
+                </div>
+              </template>
+              <div class="flex flex-col h-full">
+                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                  {{ $t('resources.startHere.implementer.description') }}
+                </p>
+                <div class="space-y-2 mt-auto">
+                  <UButton
+                    :to="localePath('/docs/manual')"
+                    color="info"
+                    icon="i-heroicons-document-text"
+                    size="sm"
+                    block
+                    class="cursor-pointer"
+                  >
+                    {{ $t('resources.startHere.implementer.implementationGuide') }}
+                  </UButton>
+                  <UButton
+                    :to="localePath('/docs/manual/templates')"
+                    variant="outline"
+                    color="info"
+                    icon="i-heroicons-clipboard-document-list"
+                    size="sm"
+                    block
+                    class="cursor-pointer"
+                  >
+                    {{ $t('resources.startHere.implementer.templates') }}
+                  </UButton>
+                </div>
+              </div>
+            </UCard>
+
+            <!-- Advanced User -->
+            <UCard class="border-purple-200 dark:border-purple-800 flex flex-col h-full">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-cpu-chip" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
+                  <h4 class="font-semibold text-purple-800 dark:text-purple-200">{{ $t('resources.startHere.advanced.title') }}</h4>
+                </div>
+              </template>
+              <div class="flex flex-col h-full">
+                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                  {{ $t('resources.startHere.advanced.description') }}
+                </p>
+                <div class="space-y-2 mt-auto">
+                  <UButton
+                    :to="localePath('/docs/examples')"
+                    color="primary"
+                    icon="i-heroicons-beaker"
+                    size="sm"
+                    block
+                    class="cursor-pointer"
+                  >
+                    {{ $t('resources.startHere.advanced.examples') }}
+                  </UButton>
+                  <UButton
+                    :to="localePath('/docs/manual/tools')"
+                    variant="outline"
+                    color="primary"
+                    icon="i-heroicons-wrench-screwdriver"
+                    size="sm"
+                    block
+                    class="cursor-pointer"
+                  >
+                    {{ $t('resources.startHere.advanced.tools') }}
                   </UButton>
                 </div>
               </div>
             </UCard>
           </div>
+        </section>
+
+        <!-- Quick Access - Direct Links to Most Needed Documentation -->
+        <section id="quick-access">
+          <div class="flex items-center mb-6">
+            <UIcon name="i-heroicons-bolt" class="w-6 h-6 text-orange-600 dark:text-orange-400 mr-3" />
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+              {{ $t('resources.quickAccess.title') }}
+            </h3>
+          </div>
           
-          <!-- Visual de Progressão -->
-          <div class="mb-8">
-            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
-              {{ $t('resources.unifiedStructure.progression') }}
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Frameworks -->
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/frameworks'))">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-squares-2x2" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.quickAccess.frameworks.title') }}</h4>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {{ $t('resources.quickAccess.frameworks.description') }}
+              </p>
+              <div class="flex flex-wrap items-center gap-2 mt-2">
+                <UBadge size="sm" color="success" variant="soft">MEF</UBadge>
+                <UBadge size="sm" color="warning" variant="soft">ZOF</UBadge>
+                <UBadge size="sm" color="info" variant="soft">OIF</UBadge>
+                <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                <UBadge size="sm" color="error" variant="soft">MAL</UBadge>
+              </div>
+            </UCard>
+
+            <!-- Templates -->
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/manual/templates'))">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-document-duplicate" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.quickAccess.templates.title') }}</h4>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {{ $t('resources.quickAccess.templates.description') }}
+              </p>
+              <div class="flex flex-wrap items-center gap-2 mt-2">
+                <UBadge size="sm" color="success" variant="soft">Startup</UBadge>
+                <UBadge size="sm" color="info" variant="soft">Scale-up</UBadge>
+                <UBadge size="sm" color="primary" variant="soft">Enterprise</UBadge>
+                <UBadge size="sm" color="error" variant="soft">Corporation</UBadge>
+              </div>
+            </UCard>
+
+            <!-- Examples -->
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/examples'))">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-beaker" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.quickAccess.examples.title') }}</h4>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {{ $t('resources.quickAccess.examples.description') }}
+              </p>
+              <div class="flex flex-wrap items-center gap-2 mt-2">
+                <UBadge size="sm" color="warning" variant="soft">UKIs</UBadge>
+                <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                <UBadge size="sm" color="info" variant="soft">Workflows</UBadge>
+              </div>
+            </UCard>
+
+            <!-- Tools -->
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/manual/tools'))">
+              <template #header>
+                <div class="flex items-center">
+                  <UIcon name="i-heroicons-wrench-screwdriver" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
+                  <h4 class="font-semibold">{{ $t('resources.quickAccess.tools.title') }}</h4>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {{ $t('resources.quickAccess.tools.description') }}
+              </p>
+              <div class="flex flex-wrap items-center gap-2 mt-2">
+                <UBadge size="sm" color="neutral" variant="soft">Validation</UBadge>
+                <UBadge size="sm" color="info" variant="soft">Checklists</UBadge>
+                <UBadge size="sm" color="success" variant="soft">Audit</UBadge>
+              </div>
+            </UCard>
+          </div>
+        </section>
+
+        <!-- Download Center - Essential Downloads Only -->
+        <section id="download-center">
+          <div class="flex items-center mb-6">
+            <UIcon name="i-heroicons-arrow-down-tray" class="w-6 h-6 text-green-600 dark:text-green-400 mr-3" />
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+              {{ $t('resources.downloadCenter.title') }}
+            </h3>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Quick Start Template -->
+            <UCard class="border-green-200 dark:border-green-800">
+              <template #header>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <UIcon name="i-heroicons-rocket-launch" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                    <h4 class="font-semibold text-green-800 dark:text-green-200">{{ $t('resources.downloadCenter.quickStart.title') }}</h4>
+                  </div>
+                  <UBadge color="success" size="sm" variant="soft">{{ $t('resources.downloadCenter.quickStart.badge') }}</UBadge>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                {{ $t('resources.downloadCenter.quickStart.description') }}
+              </p>
+              <UButton
+                @click="downloadMatrixFile('moc-starter-template')"
+                color="success"
+                icon="i-heroicons-arrow-down-tray"
+                size="sm"
+                block
+                class="cursor-pointer"
+              >
+                {{ $t('common.currentLanguage') }}
+              </UButton>
+            </UCard>
+
+            <!-- Unified Structure (Normative) -->
+            <UCard class="border-purple-200 dark:border-purple-800">
+              <template #header>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <UIcon name="i-heroicons-cube-transparent" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
+                    <h4 class="font-semibold text-purple-800 dark:text-purple-200">{{ $t('resources.downloadCenter.unified.title') }}</h4>
+                  </div>
+                  <UBadge color="primary" size="sm" variant="soft">{{ $t('resources.downloadCenter.unified.badge') }}</UBadge>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                {{ $t('resources.downloadCenter.unified.description') }}
+              </p>
+              <UButton
+                @click="downloadMatrixFile('moc-unified-structure')"
+                color="primary"
+                icon="i-heroicons-arrow-down-tray"
+                size="sm"
+                block
+                class="cursor-pointer"
+              >
+                {{ $t('resources.downloadCenter.unified.download') }}
+              </UButton>
+            </UCard>
+
+            <!-- Implementation Guide -->
+            <UCard class="border-blue-200 dark:border-blue-800">
+              <template #header>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <UIcon name="i-heroicons-document-text" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+                    <h4 class="font-semibold text-blue-800 dark:text-blue-200">{{ $t('resources.downloadCenter.guide.title') }}</h4>
+                  </div>
+                  <UBadge color="info" size="sm" variant="soft">{{ $t('resources.downloadCenter.guide.badge') }}</UBadge>
+                </div>
+              </template>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                {{ $t('resources.downloadCenter.guide.description') }}
+              </p>
+              <UButton
+                @click="downloadMatrixFile('implementation-guide')"
+                color="info"
+                icon="i-heroicons-arrow-down-tray"
+                size="sm"
+                block
+                class="cursor-pointer"
+              >
+                {{ $t('common.currentLanguage') }}
+              </UButton>
+            </UCard>
+          </div>
+          
+          <!-- Link to All Templates in Documentation -->
+          <div class="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg text-center">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              {{ $t('resources.downloadCenter.allTemplates.title') }}
             </h4>
-            <div class="flex items-center justify-between p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <div class="text-center flex-1">
-                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <UIcon name="i-heroicons-rocket-launch" class="w-6 h-6 text-white" />
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              {{ $t('resources.downloadCenter.allTemplates.description') }}
+            </p>
+            <UButton
+              :to="localePath('/docs/manual/templates')"
+              variant="outline"
+              icon="i-heroicons-folder-open"
+              class="cursor-pointer"
+            >
+              {{ $t('resources.downloadCenter.allTemplates.viewAll') }}
+            </UButton>
+          </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Learn More - Structured Learning Paths -->
+        <section id="learn-more">
+          <div class="flex items-center mb-6">
+            <UIcon name="i-heroicons-academic-cap" class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+              {{ $t('resources.learnMore.title') }}
+            </h3>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Learning Path for Beginners -->
+            <div class="space-y-4">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+                <UIcon name="i-heroicons-academic-cap" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
+                {{ $t('resources.learnMore.beginner.title') }}
+              </h4>
+              <div class="space-y-3">
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 dark:text-green-400 font-bold text-sm">1</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.beginner.step1.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.beginner.step1.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/protocol')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
                 </div>
-                <div class="text-green-600 dark:text-green-400 font-bold">Startup</div>
-                <div class="text-sm text-gray-600 dark:text-gray-400">3 níveis</div>
+                
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 dark:text-blue-400 font-bold text-sm">2</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.beginner.step2.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.beginner.step2.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/frameworks')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
+                </div>
+                
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 dark:text-purple-400 font-bold text-sm">3</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.beginner.step3.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.beginner.step3.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/docs/quickstart')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
+                </div>
               </div>
-              <UIcon name="i-heroicons-arrow-right" class="text-gray-400 mx-2" />
-              <div class="text-center flex-1">
-                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <UIcon name="i-heroicons-chart-bar-square" class="w-6 h-6 text-white" />
+            </div>
+
+            <!-- Learning Path for Advanced Users -->
+            <div class="space-y-4">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+                <UIcon name="i-heroicons-cpu-chip" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+                {{ $t('resources.learnMore.advanced.title') }}
+              </h4>
+              <div class="space-y-3">
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-orange-600 dark:text-orange-400 font-bold text-sm">1</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.advanced.step1.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.advanced.step1.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/docs/examples/knowledge')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
                 </div>
-                <div class="text-blue-600 dark:text-blue-400 font-bold">Scale-up</div>
-                <div class="text-sm text-gray-600 dark:text-gray-400">4 níveis</div>
-              </div>
-              <UIcon name="i-heroicons-arrow-right" class="text-gray-400 mx-2" />
-              <div class="text-center flex-1">
-                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <UIcon name="i-heroicons-building-office-2" class="w-6 h-6 text-white" />
+                
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 dark:text-purple-400 font-bold text-sm">2</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.advanced.step2.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.advanced.step2.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/docs/manual')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
                 </div>
-                <div class="text-purple-600 dark:text-purple-400 font-bold">Enterprise</div>
-                <div class="text-sm text-gray-600 dark:text-gray-400">5 níveis</div>
-              </div>
-              <UIcon name="i-heroicons-arrow-right" class="text-gray-400 mx-2" />
-              <div class="text-center flex-1">
-                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <UIcon name="i-heroicons-globe-alt" class="w-6 h-6 text-white" />
+                
+                <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
+                  <div class="w-8 h-8 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-red-600 dark:text-red-400 font-bold text-sm">3</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.advanced.step3.title') }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.advanced.step3.description') }}</div>
+                  </div>
+                  <UButton :to="localePath('/docs/manual/tools')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
                 </div>
-                <div class="text-red-600 dark:text-red-400 font-bold">Corporation</div>
-                <div class="text-sm text-gray-600 dark:text-gray-400">6 níveis</div>
               </div>
             </div>
           </div>
         </section>
-
-        <!-- Templates by Organization Size -->
-        <section id="templates">
-          <div class="flex items-center mb-6">
-            <UIcon name="i-heroicons-building-office" class="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3" />
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              {{ $t('resources.templates.title') }}
-            </h3>
-          </div>
-          
-          <!-- Templates separados por tamanho organizacional -->
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-            <!-- Startup Template -->
-            <UCard class="border-green-200 dark:border-green-800">
-              <template #header>
-                <div class="text-center">
-                  <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <UIcon name="i-heroicons-rocket-launch" class="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <h4 class="font-semibold text-green-800 dark:text-green-200">Startup</h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">5-50 funcionários</p>
-                  <UBadge color="success" size="xs" class="mt-2">
-                    <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    Simples e Ágil
-                  </UBadge>
-                </div>
-              </template>
-              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                Hierarquia flat, processos leves, foco em velocidade.
-              </p>
-              <UButton
-                @click="downloadMatrixFile('moc-startup')"
-                color="success"
-                variant="outline"
-                size="sm"
-                block
-                icon="i-heroicons-arrow-down-tray"
-                class="cursor-pointer"
-              >
-                Download
-              </UButton>
-            </UCard>
-
-            <!-- Scale-up Template -->
-            <UCard class="border-blue-200 dark:border-blue-800">
-              <template #header>
-                <div class="text-center">
-                  <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <UIcon name="i-heroicons-chart-bar-square" class="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <h4 class="font-semibold text-blue-800 dark:text-blue-200">Scale-up</h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">50-200 funcionários</p>
-                  <UBadge color="info" size="xs" class="mt-2">
-                    <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    Tribes & Squads
-                  </UBadge>
-                </div>
-              </template>
-              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                Estrutura ágil escalada, coordenação entre times.
-              </p>
-              <UButton
-                @click="downloadMatrixFile('moc-scaleup')"
-                color="info"
-                variant="outline"
-                size="sm"
-                block
-                icon="i-heroicons-arrow-down-tray"
-                class="cursor-pointer"
-              >
-                Download
-              </UButton>
-            </UCard>
-
-            <!-- Enterprise Template -->
-            <UCard class="border-purple-200 dark:border-purple-800">
-              <template #header>
-                <div class="text-center">
-                  <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <UIcon name="i-heroicons-building-office-2" class="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <h4 class="font-semibold text-purple-800 dark:text-purple-200">Enterprise</h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">200-1000 funcionários</p>
-                  <UBadge color="primary" size="xs" class="mt-2">
-                    <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    Governança Formal
-                  </UBadge>
-                </div>
-              </template>
-              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                Compliance, processos formais, múltiplas divisões.
-              </p>
-              <UButton
-                @click="downloadMatrixFile('moc-enterprise')"
-                color="primary"
-                variant="outline"
-                size="sm"
-                block
-                icon="i-heroicons-arrow-down-tray"
-                class="cursor-pointer"
-              >
-                Download
-              </UButton>
-            </UCard>
-
-            <!-- Corporation Template -->
-            <UCard class="border-red-200 dark:border-red-800">
-              <template #header>
-                <div class="text-center">
-                  <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <UIcon name="i-heroicons-globe-alt" class="w-6 h-6 text-red-600 dark:text-red-400" />
-                  </div>
-                  <h4 class="font-semibold text-red-800 dark:text-red-200">Corporation</h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">1000+ funcionários</p>
-                  <UBadge color="error" size="xs" class="mt-2">
-                    <UIcon name="i-heroicons-check-circle" class="w-3 h-3 mr-1" />
-                    Global & Regulado
-                  </UBadge>
-                </div>
-              </template>
-              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-center">
-                Multi-regional, board governance, compliance total.
-              </p>
-              <UButton
-                @click="downloadMatrixFile('moc-corporation')"
-                color="error"
-                variant="outline"
-                size="sm"
-                block
-                icon="i-heroicons-arrow-down-tray"
-                class="cursor-pointer"
-              >
-                Download
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- Implementation Guides -->
-        <section id="guides">
-          <div class="flex items-center mb-6">
-            <UIcon name="i-heroicons-book-open" class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              {{ $t('resources.guides.title') }}
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-document-text" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.guides.complete') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.guides.completeDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadMatrixFile('implementation-guide')"
-                  color="info"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.currentLanguage') }}
-                </UButton>
-              </div>
-            </UCard>
-
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-clipboard-document-list" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.guides.readme') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.guides.readmeDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  @click="downloadReadmeFile()"
-                  color="success"
-                  icon="i-heroicons-arrow-down-tray"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.currentLanguage') }}
-                </UButton>
-              </div>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- Case Studies -->
-        <section id="cases">
-          <div class="flex items-center mb-6">
-            <UIcon name="i-heroicons-chart-pie" class="w-6 h-6 text-orange-600 dark:text-orange-400 mr-3" />
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              {{ $t('resources.cases.title') }}
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-academic-cap" class="w-5 h-5 text-orange-600 dark:text-orange-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.cases.knowledgeComparison') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.cases.knowledgeComparisonDescription') }}
-              </p>
-              <UButton
-                :to="localePath('/docs/examples/knowledge')"
-                color="warning"
-                icon="i-heroicons-eye"
-                size="sm"
-                class="cursor-pointer"
-              >
-                {{ $t('common.viewOnline') }}
-              </UButton>
-            </UCard>
-          </div>
-        </section>
-
-        <!-- Tools & Checklists -->
-        <section id="tools">
-          <div class="flex items-center mb-6">
-            <UIcon name="i-heroicons-wrench-screwdriver" class="w-6 h-6 text-gray-600 dark:text-gray-400 mr-3" />
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              {{ $t('resources.tools.title') }}
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 gap-6">
-            <UCard>
-              <template #header>
-                <div class="flex items-center">
-                  <UIcon name="i-heroicons-book-open" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
-                  <h4 class="font-semibold">{{ $t('resources.tools.documentation') }}</h4>
-                </div>
-              </template>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ $t('resources.tools.documentationDescription') }}
-              </p>
-              <div class="flex space-x-3">
-                <UButton
-                  :to="localePath('/docs')"
-                  color="primary"
-                  icon="i-heroicons-eye"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.viewDocumentation') }}
-                </UButton>
-                <UButton
-                  :to="localePath('/frameworks')"
-                  color="primary"
-                  variant="outline"
-                  icon="i-heroicons-squares-2x2"
-                  size="sm"
-                  class="cursor-pointer"
-                >
-                  {{ $t('common.exploreFrameworks') }}
-                </UButton>
-              </div>
-            </UCard>
-          </div>
-        </section>
-
-
-
-
-
 
       </div>
 
@@ -511,14 +490,14 @@
             {{ $t('resources.cta.quickstart') }}
           </UButton>
           <UButton
-            :to="localePath('/docs/implementation')"
+            :to="localePath('/docs/manual')"
             variant="outline"
             color="primary"
             size="lg"
-            icon="i-heroicons-cog-6-tooth"
+            icon="i-heroicons-book-open"
             class="cursor-pointer"
           >
-            {{ $t('resources.cta.implementation') }}
+            {{ $t('resources.cta.documentation') }}
           </UButton>
         </div>
       </div>
@@ -527,7 +506,7 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const { resolveDownload } = useMatrixLinks()
@@ -542,13 +521,7 @@ const downloadMatrixFile = async (key: string) => {
   }
 }
 
-// Função específica para download do arquivo README
-const downloadReadmeFile = async () => {
-  const currentLocale = locale.value
-  const filename = currentLocale === 'pt' ? 'index.md' : 'README_EN.md'
-  const path = `/downloads/${currentLocale}/${filename}`
-  await downloadFile(path, filename)
-}
+// Função simplificada - removida função específica para README
 
 // Função para fazer download de arquivos
 const downloadFile = async (filePath: string, fileName: string) => {
@@ -576,7 +549,7 @@ const downloadFile = async (filePath: string, fileName: string) => {
 
 // Handle scroll to hash on mount and hash changes
 const scrollToHash = () => {
-  if (process.client && route.hash) {
+  if (import.meta.client && route.hash) {
     nextTick(() => {
       const element = document.getElementById(route.hash.substring(1))
       if (element) {
