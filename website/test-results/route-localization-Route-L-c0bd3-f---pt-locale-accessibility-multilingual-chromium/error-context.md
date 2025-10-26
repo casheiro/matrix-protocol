@@ -1,0 +1,553 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+          - /url: /pt
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentação" [ref=e14] [cursor=pointer]:
+            - /url: /pt/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /pt/manual
+          - link "Recursos" [ref=e16] [cursor=pointer]:
+            - /url: /pt/resources
+        - generic [ref=e17]:
+          - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Selecionar idioma" [ref=e20]:
+            - generic [ref=e22]: PT
+  - main [ref=e24]:
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e31]:
+          - generic [ref=e35]:
+            - generic [ref=e37]: Z
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - heading "ZOF" [level=1] [ref=e40]
+                - generic [ref=e41]: v0.0.1
+              - heading "Zion Orchestration Framework" [level=2] [ref=e42]
+              - paragraph
+          - generic [ref=e43]:
+            - link "Baixar Templates" [ref=e44] [cursor=pointer]:
+              - /url: /pt/resources#basic-zof
+              - generic [ref=e45]: Baixar Templates
+            - link "Implementar Agora" [ref=e47] [cursor=pointer]:
+              - /url: /pt/implementation
+              - generic [ref=e48]: Implementar Agora
+          - generic [ref=e51]:
+            - heading "ZOF — Zion Orchestration Framework" [level=1] [ref=e52]
+            - paragraph [ref=e53]:
+              - strong [ref=e54]: "Acrônimo:"
+              - text: ZOF
+              - strong [ref=e55]: "Versão:"
+              - text: 0.0.1-beta
+              - strong [ref=e56]: "Última Atualização:"
+              - text: 2025-10-05
+            - blockquote [ref=e57]:
+              - paragraph [ref=e58]:
+                - text: ⚠️
+                - strong [ref=e59]: IMPORTANTE
+                - text: ": Este documento é uma tradução informativa."
+            - blockquote [ref=e60]:
+              - paragraph [ref=e61]:
+                - text: 🚨
+                - strong [ref=e62]: AVISO IMPORTANTE
+                - text: ": Este documento contém EXEMPLOS ILUSTRATIVOS (como"
+                - code [ref=e63]: strategy
+                - text: ","
+                - code [ref=e64]: operations
+                - text: ", etc.) que NÃO são taxonomias obrigatórias. O"
+                - strong [ref=e65]: MOC (Matrix Ontology Catalog)
+                - text: é a única fonte definitiva para taxonomias organizacionais.
+            - separator [ref=e66]
+            - heading "1. Introdução" [level=2] [ref=e67]
+            - paragraph [ref=e68]:
+              - text: O
+              - strong [ref=e69]: Zion Orchestration Framework (ZOF)
+              - text: especifica de forma conceitual e padronizada o framework de fluxos de trabalho para equipes orientadas a IA, definindo como descrever, executar e governar workflows como máquinas de estado independentes de tecnologia.
+            - paragraph [ref=e70]:
+              - text: O ZOF define um
+              - strong [ref=e71]: modelo conceitual para fluxos de trabalho orientados a IA
+              - text: "que permite que equipes multidisciplinares descrevam workflows como máquinas de estado independentes de tecnologia seguindo o padrão:"
+              - strong [ref=e72]: Evento → Consulta Oráculo → Decisão → Ação → Avaliação → Enriquecimento Condicional do Oráculo
+              - text: .
+            - paragraph [ref=e73]:
+              - text: O ZOF não prescreve ferramentas, motores de orquestração ou implementações técnicas - apenas direciona
+              - strong [ref=e74]: como pensar e registrar o caminho
+              - text: de forma conceitual, rastreável e governada.
+            - separator [ref=e75]
+            - heading "2. Termos e Definições" [level=2] [ref=e76]
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - strong [ref=e79]: Estados Canônicos
+                - text: ": Sequência universal de estados em workflows (Intake → Understand → Decide → Act → EvaluateForEnrich → Review → Enrich)"
+              - listitem [ref=e80]:
+                - strong [ref=e81]: EvaluateForEnrich
+                - text: ": Checkpoint obrigatório para avaliação de enriquecimento"
+              - listitem [ref=e82]:
+                - strong [ref=e83]: Eventos Canônicos
+                - text: ": Gatilhos padrão para workflows (knowledge.added, work.proposed, etc.)"
+              - listitem [ref=e84]:
+                - strong [ref=e85]: Sinais de Explicabilidade
+                - text: ": Contexto, decisão e resultado registrados em cada estado"
+              - listitem [ref=e86]:
+                - strong [ref=e87]: can_enrich?()
+                - text: ": Função de filtro cognitivo para decisão de enriquecimento"
+            - paragraph [ref=e88]:
+              - text: Referências adicionais no
+              - strong [ref=e89]: MOC (Matrix Ontology Catalog)
+              - text: para taxonomias organizacionais específicas.
+            - separator [ref=e90]
+            - heading "3. Conceitos Centrais" [level=2] [ref=e91]
+            - heading "Essência do ZOF em 3 Conceitos" [level=3] [ref=e92]
+            - paragraph [ref=e93]:
+              - strong [ref=e94]: 1. Fluxo Pensado como Estado
+            - list [ref=e95]:
+              - listitem [ref=e96]: "Todo trabalho é uma jornada: Recebo → Entendo → Decido → Faço → Avalio → (Possivelmente) Ensino"
+              - listitem [ref=e97]: "Cada transição é consciente: sei por que mudei de estado"
+              - listitem [ref=e98]: "Explicabilidade é natural: registro contexto, decisão e resultado"
+            - paragraph [ref=e99]:
+              - strong [ref=e100]: 2. Oracle como Conselheiro Inteligente
+            - list [ref=e101]:
+              - listitem [ref=e102]: "Antes de decidir qualquer coisa, consulto o Oracle: \"O que já sabemos sobre isso?\""
+              - listitem [ref=e103]: Oracle me retorna apenas conhecimento que tenho autoridade para ver (via MOC)
+              - listitem [ref=e104]: No final, posso ensinar o Oracle se aprendi algo verdadeiramente novo
+            - paragraph [ref=e105]:
+              - strong [ref=e106]: 3. Governança via MOC (Matrix Ontology Catalog)
+            - list [ref=e107]:
+              - listitem [ref=e108]: MOC define quem pode criar conhecimento em qual escopo/domínio
+              - listitem [ref=e109]: MOC estabelece critérios organizacionais para validar se vale a pena ensinar o Oracle
+              - listitem [ref=e110]: Diferentes organizações configuram diferentes regras - não há imposições globais
+            - heading "O Padrão Universal" [level=3] [ref=e111]
+            - generic [ref=e112]:
+              - code [ref=e114]:
+                - code [ref=e115]: EVENTO → CONSULTA ORACLE → DECISÃO → AÇÃO → AVALIO SE VALE ENSINAR → (ENSINO)
+              - button "Copiar código" [ref=e116]:
+                - img [ref=e117]
+            - heading "Estados Canônicos Obrigatórios" [level=3] [ref=e119]
+            - paragraph [ref=e120]: "Todo fluxo ZOF segue esta sequência conceitual:"
+            - list [ref=e121]:
+              - listitem [ref=e122]:
+                - strong [ref=e123]: Intake
+                - text: ": Captura de contexto e requisitos"
+              - listitem [ref=e124]:
+                - strong [ref=e125]: Understand
+                - text: ": Consulta obrigatória ao Oráculo (UKIs)"
+              - listitem [ref=e126]:
+                - strong [ref=e127]: Decide
+                - text: ": Decisão baseada em conhecimento existente"
+              - listitem [ref=e128]:
+                - strong [ref=e129]: Act
+                - text: ": Execução da ação planejada"
+              - listitem [ref=e130]:
+                - strong [ref=e131]: EvaluateForEnrich
+                - text: ": Checkpoint obrigatório de avaliação"
+              - listitem [ref=e132]:
+                - strong [ref=e133]: Review
+                - text: ": Validação opcional do resultado"
+              - listitem [ref=e134]:
+                - strong [ref=e135]: Enrich
+                - text: ": Enriquecimento condicional do Oráculo"
+            - separator [ref=e136]
+            - heading "4. Regras Normativas" [level=2] [ref=e137]
+            - blockquote [ref=e138]:
+              - paragraph [ref=e139]:
+                - text: ⚠️ Esta seção é
+                - strong [ref=e140]: normativa
+                - text: .
+            - heading "Estados Canônicos Obrigatórios" [level=3] [ref=e141]
+            - paragraph [ref=e142]: Todos os workflows ZOF DEVEM seguir a sequência de estados canônicos sem exceção.
+            - heading "Checkpoint EvaluateForEnrich Obrigatório" [level=3] [ref=e143]
+            - list [ref=e144]:
+              - listitem [ref=e145]: DEVE ser aplicado em todos os workflows
+              - listitem [ref=e146]: DEVE consultar critérios definidos no MOC organizacional
+              - listitem [ref=e147]: DEVE gerar justificativa epistemológica para decisões
+              - listitem [ref=e148]: DEVE respeitar autoridades e escopos do MOC
+              - listitem [ref=e149]: DEVE detectar tipos de conflito H1/H2/H3 e invocar MAL se resolução local falhar
+              - listitem [ref=e150]: DEVE aplicar decisões MAL quando arbitragem for necessária
+              - listitem [ref=e151]: DEVE aplicar validação scope_mode para cenários de enriquecimento multi-escopo
+            - heading "Sinais de Explicabilidade Obrigatórios" [level=3] [ref=e152]
+            - paragraph [ref=e153]: "Cada transição de estado DEVE registrar:"
+            - list [ref=e154]:
+              - listitem [ref=e155]:
+                - strong [ref=e156]: context
+                - text: ": O que entrou no estado"
+              - listitem [ref=e157]:
+                - strong [ref=e158]: decision
+                - text: ": Por que transicionou"
+              - listitem [ref=e159]:
+                - strong [ref=e160]: result
+                - text: ": O que saiu do estado"
+            - heading "Consulta Oracle Obrigatória" [level=3] [ref=e161]
+            - paragraph [ref=e162]:
+              - text: O estado
+              - strong [ref=e163]: Understand
+              - text: DEVE sempre consultar o Oracle (UKIs) antes de qualquer decisão.
+            - heading "Função can_enrich?() Requisitos" [level=3] [ref=e164]
+            - list [ref=e165]:
+              - listitem [ref=e166]: DEVE implementar avaliação de novidade semântica
+              - listitem [ref=e167]: DEVE implementar avaliação de valor prático
+              - listitem [ref=e168]: DEVE implementar validação de autoridade via MOC
+              - listitem [ref=e169]: PODE implementar critérios organizacionais adicionais
+            - heading "Regras de Transição de Estado" [level=3] [ref=e170]
+            - list [ref=e171]:
+              - listitem [ref=e172]: Transições de estado DEVEM ser sequenciais e não podem pular estados
+              - listitem [ref=e173]: Cada estado DEVE completar antes de transicionar para o próximo estado
+              - listitem [ref=e174]: Estado Understand DEVE receber resultados de consulta Oracle antes de prosseguir
+              - listitem [ref=e175]: EvaluateForEnrich DEVE completar avaliação antes de permitir estado Enrich
+              - listitem [ref=e176]: Avaliações falhadas PODEM terminar o fluxo ou requerer remediação
+              - listitem [ref=e177]: Arbitragem MAL DEVE ser invocada na detecção de conflito durante EvaluateForEnrich
+              - listitem [ref=e178]: Decision Records MAL DEVEM ser aplicados através de ações apropriadas (gate_enrich, deprecate, partition_scope, etc.)
+            - heading "Implementação de Modo de Escopo" [level=3] [ref=e179]
+            - list [ref=e180]:
+              - listitem [ref=e181]:
+                - strong [ref=e182]: Modo Restrito
+                - text: ": Conhecimento permanece dentro do nível de escopo de origem"
+              - listitem [ref=e183]:
+                - strong [ref=e184]: Modo Propagado
+                - text: ": Conhecimento pode cascatear para níveis de escopo superiores via promoção"
+              - listitem [ref=e185]: Modo de escopo DEVE ser declarado durante criação de UKI
+              - listitem [ref=e186]: Promoção entre escopos DEVE seguir regras de governança MOC
+            - heading "🌐 Enriquecimento Multi-scope Cross-domain (Normativo)" [level=3] [ref=e187]
+            - paragraph [ref=e188]: ZOF DEVE implementar regras específicas para operações de enriquecimento que cruzam múltiplas fronteiras de escopo ou domínio.
+            - heading "Detecção de Enriquecimento Cross-boundary" [level=4] [ref=e189]
+            - generic [ref=e190]:
+              - generic [ref=e191]: yaml
+              - code [ref=e193]:
+                - code [ref=e194]:
+                  - generic [ref=e195]: "# --- Configuração Normativa ---"
+                  - generic [ref=e196]: "cross_boundary_detection:"
+                  - generic [ref=e197]: "scope_crossing:"
+                  - generic [ref=e198]: "source_scope: \"team\" # UKI origina do escopo team"
+                  - generic [ref=e199]: "enrichment_target_scope: \"tribe\" # Enriquecimento visa escopo tribe"
+                  - generic [ref=e200]: "classification: \"scope_crossing\""
+                  - generic [ref=e202]: "domain_crossing:"
+                  - generic [ref=e203]: "source_domain: \"technical\" # UKI origina do domínio technical"
+                  - generic [ref=e204]: "enrichment_target_domain: \"business\" # Enriquecimento visa domínio business"
+                  - generic [ref=e205]: "classification: \"domain_crossing\""
+                  - generic [ref=e207]: "multi_boundary_crossing:"
+                  - generic [ref=e208]: "source: {scope: \"team\", domain: \"technical\"}"
+                  - generic [ref=e209]: "target: {scope: \"tribe\", domain: \"business\"}"
+                  - generic [ref=e210]: "classification: \"multi_boundary_crossing\""
+              - button "Copiar código" [ref=e211]:
+                - img [ref=e212]
+            - heading "Validação de Autoridade para Enriquecimento Cross-boundary" [level=4] [ref=e214]
+            - list [ref=e215]:
+              - listitem [ref=e216]:
+                - strong [ref=e217]: Verificação de Autoridade Hierárquica
+                - text: ": Usuário DEVE ter autoridade em AMBAS as hierarquias origem e destino"
+              - listitem [ref=e218]:
+                - strong [ref=e219]: Validação Cross-domain
+                - text: ": Para cruzamento de domínio, usuário DEVE ter domain_access para ambos os domínios no MOC"
+              - listitem [ref=e220]:
+                - strong [ref=e221]: Caminho de Escalação
+                - text: ": Se usuário carecer de autoridade cross-boundary, DEVE rotear para caminho de escalação via MOC"
+              - listitem [ref=e222]:
+                - strong [ref=e223]: Aprovação Conjunta
+                - text: ": Cruzamento multi-boundary PODE requerer aprovação de autoridades em múltiplas hierarquias"
+            - heading "Regras de Enriquecimento Cross-boundary" [level=4] [ref=e224]
+            - generic [ref=e225]:
+              - generic [ref=e226]: yaml
+              - code [ref=e228]:
+                - code [ref=e229]:
+                  - generic [ref=e230]: "# --- Regras Normativas ---"
+                  - generic [ref=e231]: "cross_boundary_enrichment_rules:"
+                  - generic [ref=e232]: "scope_crossing_rules:"
+                  - generic [ref=e233]: "upward_promotion: # team → tribe, tribe → org"
+                  - generic [ref=e234]: "authority_requirement: \"source_scope_authority + promotion_rights\""
+                  - generic [ref=e235]: "approval_process: \"hierarchical_escalation\""
+                  - generic [ref=e236]: "rationale_requirement: \"mandatory_promotion_rationale\""
+                  - generic [ref=e238]: "lateral_crossing: # team-a → team-b"
+                  - generic [ref=e239]: "authority_requirement: \"both_scope_authority OR superior_authority\""
+                  - generic [ref=e240]: "approval_process: \"peer_approval OR escalation\""
+                  - generic [ref=e241]: "conflict_resolution: \"invoke_MAL_if_contested\""
+                  - generic [ref=e243]: "domain_crossing_rules:"
+                  - generic [ref=e244]: "technical_to_business:"
+                  - generic [ref=e245]: "authority_requirement: \"multi_domain_access\""
+                  - generic [ref=e246]: "validation_criteria: \"business_value_assessment + technical_accuracy\""
+                  - generic [ref=e247]: "review_process: \"cross_domain_review_committee\""
+                  - generic [ref=e249]: "cross_domain_conflict_resolution:"
+                  - generic [ref=e250]: "detection: \"semantic_conflicts_across_domains\""
+                  - generic [ref=e251]: "resolution: \"invoke_MAL_with_cross_domain_context\""
+                  - generic [ref=e252]: "outcome_application: \"domain_specific_actions\""
+              - button "Copiar código" [ref=e253]:
+                - img [ref=e254]
+            - heading "EvaluateForEnrich para Operações Cross-boundary" [level=4] [ref=e256]
+            - list [ref=e257]:
+              - listitem [ref=e258]:
+                - strong [ref=e259]: Critérios Estendidos
+                - text: ": Enriquecimento cross-boundary DEVE aplicar critérios de avaliação adicionais do MOC"
+              - listitem [ref=e260]:
+                - strong [ref=e261]: Análise de Impacto
+                - text: ": DEVE avaliar impacto em ambas as hierarquias origem e destino"
+              - listitem [ref=e262]:
+                - strong [ref=e263]: Detecção de Conflito
+                - text: ": DEVE detectar potenciais conflitos semânticos através de fronteiras"
+              - listitem [ref=e264]:
+                - strong [ref=e265]: Validação de Autoridade
+                - text: ": DEVE validar autoridade para todos os níveis hierárquicos afetados"
+              - listitem [ref=e266]:
+                - strong [ref=e267]: Modo de Validação de Escopo
+                - text: ": DEVE aplicar configuração scope_mode para cenários multi-escopo"
+              - listitem [ref=e268]:
+                - strong [ref=e269]: Invocação MAL
+                - text: ": DEVE invocar MAL para conflitos cross-boundary que não podem ser resolvidos localmente"
+            - heading "🎯 Configuração de Modo de Escopo (Normativo)" [level=4] [ref=e270]
+            - paragraph [ref=e271]: O ZOF DEVE implementar validação scope_mode para operações de enriquecimento que afetam múltiplos escopos.
+            - heading "Tipos de Modo de Escopo" [level=5] [ref=e272]
+            - generic [ref=e273]:
+              - generic [ref=e274]: yaml
+              - code [ref=e276]:
+                - code [ref=e277]:
+                  - generic [ref=e278]: "# --- Configuração Normativa ---"
+                  - generic [ref=e279]: "scope_mode_validation:"
+                  - generic [ref=e280]: "validation_types:"
+                  - generic [ref=e281]: "any: # Satisfazer um escopo é suficiente"
+                  - generic [ref=e282]: "description: \"Enriquecimento aprovado se QUALQUER escopo afetado validar com sucesso\""
+                  - generic [ref=e283]: "use_case: \"Compartilhamento amplo de conhecimento, colaboração inter-equipes\""
+                  - generic [ref=e284]: "authority_requirement: \"minimum_scope_authority\""
+                  - generic [ref=e285]: "validation_logic: \"Operação OR em todos os escopos afetados\""
+                  - generic [ref=e287]: "all: # Todos os escopos devem validar"
+                  - generic [ref=e288]: "description: \"Enriquecimento aprovado apenas se TODOS os escopos afetados validarem com sucesso\""
+                  - generic [ref=e289]: "use_case: \"Governança rigorosa, conhecimento crítico de conformidade\""
+                  - generic [ref=e290]: "authority_requirement: \"maximum_scope_authority\""
+                  - generic [ref=e291]: "validation_logic: \"Operação AND em todos os escopos afetados\""
+                  - generic [ref=e292]: "configuration_source: \"política organizacional MOC\""
+                  - generic [ref=e293]: "default_behavior: \"all\" # Padrão conservador para segurança"
+                  - generic [ref=e295]: "scope_mode_determination:"
+                  - generic [ref=e296]: "explicit_configuration: # Organização define scope_mode no MOC"
+                  - generic [ref=e297]: "source: \"configuração evaluation_criteria do MOC\""
+                  - generic [ref=e298]: "precedence: \"highest\""
+                  - generic [ref=e300]: "knowledge_type_based: # Baseado no tipo de UKI (policy vs guideline)"
+                  - generic [ref=e301]: "policy_knowledge: \"all\" # Políticas requerem validação de todos os escopos"
+                  - generic [ref=e302]: "guideline_knowledge: \"any\" # Guidelines podem usar validação de qualquer escopo"
+                  - generic [ref=e303]: "precedence: \"medium\""
+                  - generic [ref=e305]: "fallback_default: \"all\" # Fallback conservador"
+                  - generic [ref=e306]: "precedence: \"lowest\""
+              - button "Copiar código" [ref=e307]:
+                - img [ref=e308]
+            - heading "Exemplos de Aplicação do Modo de Escopo" [level=5] [ref=e310]
+            - generic [ref=e311]:
+              - generic [ref=e312]: yaml
+              - code [ref=e314]:
+                - code [ref=e315]:
+                  - generic [ref=e316]: "# --- Exemplos Ilustrativos ---"
+                  - generic [ref=e317]: "scope_mode_scenarios:"
+                  - generic [ref=e318]: "scenario_1_cross_team_guideline:"
+                  - generic [ref=e319]: "context: \"Guideline de desenvolvimento da team-a enriquecendo escopo team-b\""
+                  - generic [ref=e320]: "affected_scopes: [\"team-a\", \"team-b\"]"
+                  - generic [ref=e321]: "knowledge_type: \"guideline\""
+                  - generic [ref=e322]: "scope_mode: \"any\" # Validação de qualquer equipe suficiente"
+                  - generic [ref=e323]: "validation_result: \"APROVADO se team-a OU team-b validar\""
+                  - generic [ref=e325]: "scenario_2_organizational_policy:"
+                  - generic [ref=e326]: "context: \"Política de segurança afetando múltiplos níveis organizacionais\""
+                  - generic [ref=e327]: "affected_scopes: [\"squad\", \"tribe\", \"organization\"]"
+                  - generic [ref=e328]: "knowledge_type: \"policy\""
+                  - generic [ref=e329]: "scope_mode: \"all\" # Todos os níveis devem validar"
+                  - generic [ref=e330]: "validation_result: \"APROVADO apenas se squad E tribe E organization validarem\""
+                  - generic [ref=e332]: "scenario_3_domain_crossing:"
+                  - generic [ref=e333]: "context: \"Conhecimento técnico enriquecendo domínio business\""
+                  - generic [ref=e334]: "affected_scopes: [\"technical\", \"business\"]"
+                  - generic [ref=e335]: "knowledge_type: \"pattern\""
+                  - generic [ref=e336]: "scope_mode: \"any\" # Compartilhamento cross-domain encorajado"
+                  - generic [ref=e337]: "validation_result: \"APROVADO se technical OU business validar\""
+              - button "Copiar código" [ref=e338]:
+                - img [ref=e339]
+            - heading "Integração com Autoridade MOC" [level=5] [ref=e341]
+            - list [ref=e342]:
+              - listitem [ref=e343]:
+                - strong [ref=e344]: Mapeamento de Autoridade
+                - text: ": scope_mode DEVE respeitar hierarquias de autoridade MOC para cada escopo afetado"
+              - listitem [ref=e345]:
+                - strong [ref=e346]: Caminhos de Escalação
+                - text: ": Falha de validação no modo \"all\" DEVE fornecer caminhos de escalação do MOC"
+              - listitem [ref=e347]:
+                - strong [ref=e348]: Trilha de Auditoria
+                - text: ": Todas as decisões de validação de escopo DEVEM ser registradas com justificativa scope_mode"
+            - separator [ref=e349]
+            - heading "5. Interoperabilidade" [level=2] [ref=e350]
+            - list [ref=e351]:
+              - listitem [ref=e352]:
+                - strong [ref=e353]: MEF (Matrix Embedding Framework)
+                - text: ": Fornece estrutura UKI consumida e produzida pelos workflows; persiste Decision Records MAL"
+              - listitem [ref=e354]:
+                - strong [ref=e355]: MOC (Matrix Ontology Catalog)
+                - text: ": Define taxonomias e critérios para checkpoint EvaluateForEnrich; configura políticas de arbitragem MAL"
+              - listitem [ref=e356]:
+                - strong [ref=e357]: OIF (Operator Intelligence Framework)
+                - text: ": Implementa arquétipos que executam workflows ZOF; explica resultados de arbitragem MAL aos usuários"
+              - listitem [ref=e358]:
+                - strong [ref=e359]: MEP (Matrix Epistemic Principle)
+                - text: ": Estabelece fundamentos epistemológicos para enriquecimento; fornece base para justificativas epistêmicas MAL"
+              - listitem [ref=e360]:
+                - strong [ref=e361]: MAL (Matrix Arbiter Layer)
+                - text: ": Invocada pelo ZOF quando EvaluateForEnrich detecta conflitos não resolúveis (H1/H2/H3); fornece decisões de arbitragem determinística; retorna ações para execução ZOF (gate_enrich, deprecate, partition_scope)"
+            - separator [ref=e362]
+            - heading "6. Convenções e Exemplos" [level=2] [ref=e363]
+            - paragraph [ref=e364]:
+              - text: Todos os exemplos neste documento são
+              - strong [ref=e365]: meramente ilustrativos
+              - text: e não definem comportamento normativo.
+              - text: A semântica normativa (escopos, governança, arquétipos, critérios de enriquecimento) é sempre derivada do
+              - strong [ref=e366]: MOC (Matrix Ontology Catalog)
+              - text: de cada organização.
+              - text: Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos contextos locais, mas NÃO DEVEM ser tratados como obrigações no nível do protocolo.
+            - separator [ref=e367]
+            - heading "7. Exemplos Ilustrativos (Apêndice)" [level=2] [ref=e368]
+            - blockquote [ref=e369]:
+              - paragraph [ref=e370]:
+                - strong [ref=e371]: Exemplo (Informativo, Dependente do MOC)
+            - heading "Estados Canônicos com Sinais" [level=3] [ref=e372]:
+              - strong [ref=e373]: Estados Canônicos com Sinais
+            - generic [ref=e374]:
+              - generic [ref=e375]: yaml
+              - code [ref=e377]:
+                - code [ref=e378]:
+                  - generic [ref=e379]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e380]: "flow_execution:"
+                  - generic [ref=e381]: "- state: \"intake\""
+                  - generic [ref=e382]: "signals:"
+                  - generic [ref=e383]: "context: \"História de usuário para autenticação JWT recebida\""
+                  - generic [ref=e384]: "decision: \"História clara e completa, prosseguir para entendimento\""
+                  - generic [ref=e385]: "result: \"Requisitos organizados e contexto capturado\""
+                  - generic [ref=e387]: "- state: \"understand\""
+                  - generic [ref=e388]: "signals:"
+                  - generic [ref=e389]: "context: \"Consultar Oracle sobre padrões de autenticação existentes\""
+                  - generic [ref=e390]: "decision: \"UKI uki:technical:pattern:jwt-authentication encontrada\""
+                  - generic [ref=e391]: "result: \"Conhecimento existente identificado e compreendido\""
+                  - generic [ref=e393]: "- state: \"decide\""
+                  - generic [ref=e394]: "signals:"
+                  - generic [ref=e395]: "context: \"Baseado em UKI existente, decidir abordagem de implementação\""
+                  - generic [ref=e396]: "decision: \"Usar biblioteca recomendada conforme padrão organizacional\""
+                  - generic [ref=e397]: "result: \"Estratégia de implementação definida\""
+              - button "Copiar código" [ref=e398]:
+                - img [ref=e399]
+            - heading "Checkpoint EvaluateForEnrich" [level=3] [ref=e401]:
+              - strong [ref=e402]: Checkpoint EvaluateForEnrich
+            - generic [ref=e403]:
+              - generic [ref=e404]: yaml
+              - code [ref=e406]:
+                - code [ref=e407]:
+                  - generic [ref=e408]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e409]: "evaluate_for_enrich:"
+                  - generic [ref=e410]: "checkpoint_execution:"
+                  - generic [ref=e411]: "- state: \"evaluate_for_enrich\""
+                  - generic [ref=e412]: "signals:"
+                  - generic [ref=e413]: "context: \"Implementação JWT concluída com adaptações para contexto\""
+                  - generic [ref=e414]: "decision: \"can_enrich?(resultado, contexto, critérios_MOC) = APROVADO\""
+                  - generic [ref=e415]: "result: \"Conhecimento qualifica para enriquecimento escopo 'team'\""
+                  - generic [ref=e417]: "moc_criteria_applied:"
+                  - generic [ref=e418]: "- criterion: \"relevance\""
+                  - generic [ref=e419]: "threshold: \"medium\""
+                  - generic [ref=e420]: "evaluation: \"PASS - outros desenvolvedores enfrentarão mesmo problema\""
+                  - generic [ref=e421]: "- criterion: \"reusability\""
+                  - generic [ref=e422]: "threshold: \"high\""
+                  - generic [ref=e423]: "evaluation: \"PASS - solução pode ser reutilizada em outros projetos\""
+              - button "Copiar código" [ref=e424]:
+                - img [ref=e425]
+            - heading "Perfil Mínimo can_enrich?() - Adoção Inicial" [level=3] [ref=e427]:
+              - strong [ref=e428]: Perfil Mínimo can_enrich?() - Adoção Inicial
+            - generic [ref=e429]:
+              - generic [ref=e430]: yaml
+              - code [ref=e432]:
+                - code [ref=e433]:
+                  - generic [ref=e434]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e435]: "# Para organizações iniciando com ZOF, função simplificada com 3 perguntas básicas"
+                  - generic [ref=e436]: "minimum_can_enrich_profile:"
+                  - generic [ref=e438]: "# 1. NOVIDADE: Há algo novo aqui?"
+                  - generic [ref=e439]: "semantic_novelty:"
+                  - generic [ref=e440]: "question: \"Aprendi algo que não existia antes na nossa base de conhecimento?\""
+                  - generic [ref=e441]: "examples_yes:"
+                  - generic [ref=e442]: "- \"Descobri uma nova forma de resolver X\""
+                  - generic [ref=e443]: "- \"Identifiquei um padrão que não estava documentado\""
+                  - generic [ref=e444]: "examples_no:"
+                  - generic [ref=e445]: "- \"Apenas executei um processo já conhecido\""
+                  - generic [ref=e446]: "- \"Deploy/build rotineiro sem descobertas\""
+                  - generic [ref=e448]: "# 2. UTILIDADE: Vale a pena para outros?"
+                  - generic [ref=e449]: "practical_value:"
+                  - generic [ref=e450]: "question: \"Outros na minha equipe se beneficiariam desse conhecimento?\""
+                  - generic [ref=e451]: "examples_yes:"
+                  - generic [ref=e452]: "- \"Outros desenvolvedores enfrentarão este problema\""
+                  - generic [ref=e453]: "- \"Esta abordagem economiza tempo significativo\""
+                  - generic [ref=e454]: "examples_no:"
+                  - generic [ref=e455]: "- \"É específico da minha situação particular\""
+                  - generic [ref=e456]: "- \"Informação que todos já sabem\""
+                  - generic [ref=e458]: "# 3. AUTORIDADE: Posso criar conhecimento neste escopo?"
+                  - generic [ref=e459]: "basic_authority:"
+                  - generic [ref=e460]: "question: \"Tenho autoridade para criar conhecimento neste domínio?\""
+                  - generic [ref=e461]: "simple_check: |"
+                  - generic [ref=e462]: if (uki_proposal.scope_ref == "team" &&
+                  - generic [ref=e463]: "user_context.domains.includes(uki_proposal.domain_ref)):"
+                  - generic [ref=e464]: return AUTHORIZED
+                  - generic [ref=e465]: "else:"
+                  - generic [ref=e466]: return REQUIRES_APPROVAL
+              - button "Copiar código" [ref=e467]:
+                - img [ref=e468]
+            - heading "Eventos Canônicos" [level=3] [ref=e470]:
+              - strong [ref=e471]: Eventos Canônicos
+            - generic [ref=e472]:
+              - generic [ref=e473]: yaml
+              - code [ref=e475]:
+                - code [ref=e476]:
+                  - generic [ref=e477]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e478]: "canonical_events:"
+                  - generic [ref=e479]: "knowledge.added: \"Novo conteúdo disponível\""
+                  - generic [ref=e480]: "work.proposed: \"Nova proposta de trabalho\""
+                  - generic [ref=e481]: "work.refine.requested: \"Solicitação de refinamento\""
+                  - generic [ref=e482]: "assistance.requested: \"Pedido de ajuda/colaboração\""
+                  - generic [ref=e483]: "test.authored: \"Cenários de teste criados\""
+                  - generic [ref=e484]: "feedback.submitted: \"Correção/aprendizado\""
+                  - generic [ref=e485]: "workflow_patterns:"
+                  - generic [ref=e486]: "request_flow: \"Implementação de nova funcionalidade\""
+                  - generic [ref=e487]: "refinement_flow: \"Otimização de processo existente\""
+                  - generic [ref=e488]: "ingestion_flow: \"Processamento de documentação externa\""
+                  - generic [ref=e489]: "assistance_flow: \"Suporte técnico estruturado\""
+                  - generic [ref=e490]: "testing_flow: \"Criação de cenários de teste\""
+                  - generic [ref=e491]: "feedback_flow: \"Processamento de correções\""
+              - button "Copiar código" [ref=e492]:
+                - img [ref=e493]
+            - heading "Implementação Livre" [level=3] [ref=e495]:
+              - strong [ref=e496]: Implementação Livre
+            - generic [ref=e497]:
+              - generic [ref=e498]: yaml
+              - code [ref=e500]:
+                - code [ref=e501]:
+                  - generic [ref=e502]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e503]: "zof_prescribes:"
+                  - generic [ref=e504]: "how_to_think: \"Como estruturar o pensamento do fluxo\""
+                  - generic [ref=e505]: "when_to_consult: \"Quando consultar o Oracle\""
+                  - generic [ref=e506]: "how_to_evaluate: \"Como avaliar se vale ensinar algo novo\""
+                  - generic [ref=e507]: "how_to_record: \"Como registrar explicabilidade das decisões\""
+                  - generic [ref=e508]: "zof_does_not_prescribe:"
+                  - generic [ref=e509]: "which_tools: \"Qual ferramenta usar (Jira, GitHub, Slack, etc.)\""
+                  - generic [ref=e510]: "how_to_implement: \"Como implementar tecnicamente\""
+                  - generic [ref=e511]: "which_metrics: \"Quais métricas coletar\""
+                  - generic [ref=e512]: "how_to_deploy: \"Como fazer deploy\""
+                  - generic [ref=e513]: "benefits:"
+                  - generic [ref=e514]: "consistency: \"Mesma forma de pensar, diferentes ferramentas\""
+                  - generic [ref=e515]: "traceability: \"Sei sempre por que tomei cada decisão\""
+                  - generic [ref=e516]: "evolution: \"Conhecimento organizacional cresce de forma governada\""
+                  - generic [ref=e517]: "flexibility: \"Cada equipe implementa com suas tecnologias\""
+                  - generic [ref=e518]: "authority: \"Respeitamos hierarquias organizacionais via MOC\""
+              - button "Copiar código" [ref=e519]:
+                - img [ref=e520]
+        - complementary [ref=e522]:
+          - generic [ref=e524]:
+            - heading "Sumário" [level=3] [ref=e526]
+            - navigation "Table of Contents":
+              - list
+            - generic [ref=e530]: 0% lido
+  - contentinfo [ref=e532]:
+    - generic [ref=e534]:
+      - paragraph [ref=e535]:
+        - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+        - link "Casheiro" [ref=e536] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e537]: © 2025 Casheiro. Todos os direitos reservados.
+```

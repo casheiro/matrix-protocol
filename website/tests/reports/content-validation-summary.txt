@@ -1,0 +1,19 @@
+CONTENT VALIDATION SUMMARY
+==========================
+Generated: 10/25/2025, 7:06:33 PM
+
+OVERALL STATUS: FAIL
+
+Summary:
+- Total Files: 167
+- Valid Files: 167
+- Warnings: 184
+- Errors: 202
+
+Validation Results:
+- Structure Issues: 0
+- Frontmatter Issues: 167
+- Link Issues: 202
+- Multilingual Issues: 17
+
+❌ Content validation found errors. Check detailed report.

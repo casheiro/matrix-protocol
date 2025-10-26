@@ -1,0 +1,229 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Primary navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+            - /url: /pt
+            - generic [ref=e9]: Matrix Protocol
+          - generic [ref=e11]:
+            - button "Frameworks menu" [ref=e12]: Frameworks
+            - link "Documentação" [ref=e14] [cursor=pointer]:
+              - /url: /pt/protocol
+            - link "Manual" [ref=e15] [cursor=pointer]:
+              - /url: /pt/manual
+            - link "Recursos" [ref=e16] [cursor=pointer]:
+              - /url: /pt/resources
+          - generic [ref=e17]:
+            - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+              - /url: https://github.com/casheiro/matrix-protocol
+            - button "Selecionar idioma" [ref=e20]:
+              - generic [ref=e22]: PT
+    - main [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e30]:
+          - generic [ref=e33]: Versão Beta
+          - heading "Matrix Protocol" [level=1] [ref=e34]
+          - heading "Framework epistemológico para colaboração humano-IA" [level=2] [ref=e35]
+          - paragraph [ref=e36]: "Um protocolo semântico que conecta humanos e IA através de três camadas interdependentes: Oracle, Zion e Operator. Proporcionando governança, rastreabilidade e adaptabilidade organizacional."
+          - generic [ref=e37]:
+            - link "Começar Agora" [ref=e38] [cursor=pointer]:
+              - /url: /pt/quickstart
+              - text: Começar Agora
+            - link "Explorar Frameworks" [ref=e40] [cursor=pointer]:
+              - /url: /pt/frameworks
+              - text: Explorar Frameworks
+          - generic [ref=e44]: Explore mais
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - heading "Cinco Frameworks Integrados" [level=2] [ref=e49]
+            - paragraph [ref=e50]: Cada framework atende um aspecto específico da colaboração humano-IA, desde estruturação de conhecimento até arbitragem de conflitos.
+          - generic [ref=e51]:
+            - article [ref=e52]:
+              - generic [ref=e54]:
+                - generic [ref=e55]:
+                  - img "MEF" [ref=e57]
+                  - generic [ref=e58]:
+                    - heading "MEF" [level=3] [ref=e59]
+                    - paragraph [ref=e60]: Matrix Embedding Framework
+                - paragraph [ref=e61]: Estruturação de conhecimento versionado
+                - link "Saiba Mais" [ref=e63] [cursor=pointer]:
+                  - /url: /pt/frameworks/mef
+                  - text: Saiba Mais
+            - article [ref=e65]:
+              - generic [ref=e67]:
+                - generic [ref=e68]:
+                  - img "ZOF" [ref=e70]
+                  - generic [ref=e71]:
+                    - heading "ZOF" [level=3] [ref=e72]
+                    - paragraph [ref=e73]: Zion Orchestration Framework
+                - paragraph [ref=e74]: Workflows conceituais para equipes IA
+                - link "Saiba Mais" [ref=e76] [cursor=pointer]:
+                  - /url: /pt/frameworks/zof
+                  - text: Saiba Mais
+            - article [ref=e78]:
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - img "OIF" [ref=e83]
+                  - generic [ref=e84]:
+                    - heading "OIF" [level=3] [ref=e85]
+                    - paragraph [ref=e86]: Operator Intelligence Framework
+                - paragraph [ref=e87]: Arquétipos de inteligência artificial
+                - link "Saiba Mais" [ref=e89] [cursor=pointer]:
+                  - /url: /pt/frameworks/oif
+                  - text: Saiba Mais
+            - article [ref=e91]:
+              - generic [ref=e93]:
+                - generic [ref=e94]:
+                  - img "MOC" [ref=e96]
+                  - generic [ref=e97]:
+                    - heading "MOC" [level=3] [ref=e98]
+                    - paragraph [ref=e99]: Matrix Ontology Catalog
+                - paragraph [ref=e100]: Catálogo de hierarquias organizacionais
+                - link "Saiba Mais" [ref=e102] [cursor=pointer]:
+                  - /url: /pt/frameworks/moc
+                  - text: Saiba Mais
+            - article [ref=e104]:
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - img "MAL" [ref=e109]
+                  - generic [ref=e110]:
+                    - heading "MAL" [level=3] [ref=e111]
+                    - paragraph [ref=e112]: Matrix Arbiter Layer
+                - paragraph [ref=e113]: Arbitragem de conflitos e concorrência
+                - link "Saiba Mais" [ref=e115] [cursor=pointer]:
+                  - /url: /pt/frameworks/mal
+                  - text: Saiba Mais
+          - generic [ref=e117]:
+            - link "Ver Arquitetura Completa" [ref=e118] [cursor=pointer]:
+              - /url: /pt/frameworks
+              - text: Ver Arquitetura Completa
+            - paragraph [ref=e120]: Explore como os cinco frameworks trabalham juntos
+        - region "Por que Matrix Protocol?" [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - heading "Por que Matrix Protocol?" [level=2] [ref=e124]
+              - paragraph [ref=e125]: Quatro pilares fundamentais que tornam o Matrix Protocol a base ideal para colaboração humano-IA estruturada e governável.
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - generic [ref=e128]:
+                  - heading "Fundação Epistemológica" [level=3] [ref=e133]
+                  - paragraph [ref=e134]: Base filosófica sólida com princípios claros para tratamento, avaliação e promoção de conhecimento em colaborações humano-IA.
+              - listitem [ref=e135]:
+                - generic [ref=e136]:
+                  - heading "Estrutura Semântica" [level=3] [ref=e141]
+                  - paragraph [ref=e142]: Organização estruturada do conhecimento via UKIs (Units of Knowledge Interlinked) com versionamento e rastreabilidade completa.
+              - listitem [ref=e143]:
+                - generic [ref=e144]:
+                  - heading "Colaboração IA" [level=3] [ref=e149]
+                  - paragraph [ref=e150]: Arquétipos de inteligência artificial especializados e workflows conceituais otimizados para equipes híbridas humano-IA.
+              - listitem [ref=e151]:
+                - generic [ref=e152]:
+                  - heading "Governança Integrada" [level=3] [ref=e157]
+                  - paragraph [ref=e158]: Sistema de arbitragem e resolução de conflitos que garante compliance, auditoria e adaptabilidade organizacional.
+            - region "Matrix Epistemic Principle" [ref=e159]:
+              - generic [ref=e160]:
+                - heading "Matrix Epistemic Principle" [level=3] [ref=e161]
+                - paragraph [ref=e162]: Cinco princípios fundamentais que orientam o tratamento do conhecimento no protocolo.
+              - list [ref=e163]:
+                - listitem [ref=e164]:
+                  - generic [ref=e166]: P1
+                  - heading "Elasticidade Semântica" [level=4] [ref=e167]
+                  - paragraph [ref=e168]: Capacidade do conhecimento de se adaptar a diferentes contextos organizacionais.
+                - listitem [ref=e169]:
+                  - generic [ref=e171]: P2
+                  - heading "Epistemologia Estratificada" [level=4] [ref=e172]
+                  - paragraph [ref=e173]: Sistema de níveis de maturidade epistêmica (draft → validated → approved).
+                - listitem [ref=e174]:
+                  - generic [ref=e176]: P3
+                  - heading "Promoção Responsável" [level=4] [ref=e177]
+                  - paragraph [ref=e178]: Evolução de conhecimento acompanhada de justificativa epistemológica.
+                - listitem [ref=e179]:
+                  - generic [ref=e181]: P4
+                  - heading "Autoridade Derivada" [level=4] [ref=e182]
+                  - paragraph [ref=e183]: Autoridade relativa baseada em contexto organizacional, não absoluta.
+                - listitem [ref=e184]:
+                  - generic [ref=e186]: P5
+                  - heading "Explicabilidade Necessária" [level=4] [ref=e187]
+                  - paragraph [ref=e188]: Requisito mandatório de narrativa epistemológica auditable.
+              - link "Ler Manifesto Completo" [ref=e190] [cursor=pointer]:
+                - /url: /pt/mep
+                - text: Ler Manifesto Completo
+        - region "Como Começar" [ref=e192]:
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - heading "Como Começar" [level=2] [ref=e195]
+              - paragraph [ref=e196]: Três passos essenciais para implementar o Matrix Protocol na sua organização e começar a colaboração humano-IA estruturada.
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - generic [ref=e200]: "1"
+                - generic [ref=e205]:
+                  - heading "Escolher Template" [level=3] [ref=e206]
+                  - paragraph [ref=e207]: Selecione um template MOC adequado ao porte da sua organização. Disponíveis para pequenas, médias e grandes empresas.
+                  - link "Ver Templates" [ref=e208] [cursor=pointer]:
+                    - /url: /pt/resources
+                    - text: Ver Templates
+              - listitem [ref=e212]:
+                - generic [ref=e214]: "2"
+                - generic [ref=e219]:
+                  - heading "Configurar Ontologia" [level=3] [ref=e220]
+                  - paragraph [ref=e221]: Customize o MOC (Matrix Ontology Catalog) com as hierarquias, taxonomias e regras de governança da sua organização.
+                  - link "Aprender MOC" [ref=e222] [cursor=pointer]:
+                    - /url: /pt/frameworks/moc
+                    - text: Aprender MOC
+              - listitem [ref=e226]:
+                - generic [ref=e228]: "3"
+                - generic [ref=e232]:
+                  - heading "Criar UKIs" [level=3] [ref=e233]
+                  - paragraph [ref=e234]: Estruture seu conhecimento em UKIs (Units of Knowledge Interlinked) usando o MEF para começar a colaboração.
+                  - link "Entender UKIs" [ref=e235] [cursor=pointer]:
+                    - /url: /pt/frameworks/mef
+                    - text: Entender UKIs
+            - region [ref=e239]:
+              - generic [ref=e240]:
+                - heading "Pronto para Colaborar?" [level=3] [ref=e241]
+                - paragraph [ref=e242]: Com esses três passos, você terá a base necessária para começar a usar o Matrix Protocol na sua organização.
+                - group [ref=e243]:
+                  - link "Ver Documentação Completa" [ref=e244] [cursor=pointer]:
+                    - /url: /pt/protocol
+                    - text: Ver Documentação Completa
+                  - link "Explorar Exemplos" [ref=e246] [cursor=pointer]:
+                    - /url: /pt/resources
+                    - text: Explorar Exemplos
+        - generic [ref=e249]:
+          - heading "Começar Agora" [level=2] [ref=e250]
+          - paragraph [ref=e251]: "Um protocolo semântico que conecta humanos e IA através de três camadas interdependentes: Oracle, Zion e Operator. Proporcionando governança, rastreabilidade e adaptabilidade organizacional."
+          - generic [ref=e252]:
+            - link "Começar Agora" [ref=e253] [cursor=pointer]:
+              - /url: /pt/quickstart
+              - text: Começar Agora
+            - link "Comunidade" [ref=e255] [cursor=pointer]:
+              - /url: https://discord.gg/Gd7BxsRhB4
+              - text: Comunidade
+    - contentinfo [ref=e257]:
+      - generic [ref=e259]:
+        - paragraph [ref=e260]:
+          - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+          - link "Casheiro" [ref=e261] [cursor=pointer]:
+            - /url: https://casheiro.com.br
+        - paragraph [ref=e262]: © 2025 Casheiro. Todos os direitos reservados.
+  - generic:
+    - img
+  - generic:
+    - generic:
+      - generic:
+        - button "Go to parent" [disabled]
+        - button "Open in editor"
+        - button "Close"
+  - generic [ref=e263]:
+    - button "Toggle Nuxt DevTools" [ref=e264] [cursor=pointer]:
+      - img [ref=e265]
+    - generic "App load time" [ref=e268]:
+      - generic [ref=e269]: "3.6"
+      - generic [ref=e270]: s
+    - button "Toggle Component Inspector" [ref=e272] [cursor=pointer]:
+      - img [ref=e273]
+```

@@ -1,0 +1,263 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+          - /url: /pt
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentação" [ref=e14] [cursor=pointer]:
+            - /url: /pt/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /pt/manual
+          - link "Recursos" [ref=e16] [cursor=pointer]:
+            - /url: /pt/resources
+        - generic [ref=e17]:
+          - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Selecionar idioma" [ref=e20]:
+            - generic [ref=e22]: PT
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e28]:
+        - heading "Documentação" [level=1] [ref=e31]
+        - navigation "Breadcrumb" [ref=e32]:
+          - link "Home" [ref=e33] [cursor=pointer]:
+            - /url: /pt
+            - text: Home
+          - link "Documentação" [ref=e36] [cursor=pointer]:
+            - /url: /pt/docs
+            - text: Documentação
+      - generic [ref=e39]:
+        - complementary [ref=e40]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - heading "Navegação" [level=3] [ref=e45]
+                - generic [ref=e46]:
+                  - button "Expandir todos" [ref=e47]
+                  - button "Recolher todos" [ref=e49]
+              - navigation [ref=e52]:
+                - link "Guia de Início Rápido" [ref=e55] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                  - text: Guia de Início Rápido
+                - link "Guia de Implementação" [ref=e59] [cursor=pointer]:
+                  - /url: /pt/docs/implementation
+                  - text: Guia de Implementação
+                - link "Integração" [ref=e63] [cursor=pointer]:
+                  - /url: /pt/docs/integration
+                  - text: Integração
+                - link "Glossário" [ref=e67] [cursor=pointer]:
+                  - /url: /pt/docs/glossary
+                  - text: Glossário
+                - link "Especificação do Protocolo" [ref=e71] [cursor=pointer]:
+                  - /url: /pt/docs/protocol
+                  - text: Especificação do Protocolo
+                - generic [ref=e75]:
+                  - button [ref=e76]
+                  - link "Frameworks" [ref=e78] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks
+                    - text: Frameworks
+                - link "Princípio Epistemológico Matrix" [ref=e82] [cursor=pointer]:
+                  - /url: /pt/docs/mep
+                  - text: Princípio Epistemológico Matrix
+                - generic [ref=e86]:
+                  - button [ref=e87]
+                  - link "Manual Completo" [ref=e89] [cursor=pointer]:
+                    - /url: /pt/docs/manual
+                    - text: Manual Completo
+                - generic [ref=e93]:
+                  - button [ref=e94]
+                  - link "Exemplos e Casos de Estudo" [ref=e96] [cursor=pointer]:
+                    - /url: /pt/docs/examples
+                    - text: Exemplos e Casos de Estudo
+            - generic [ref=e98]:
+              - heading "Links Rápidos" [level=3] [ref=e100]
+              - navigation [ref=e102]:
+                - link "Início Rápido" [ref=e103] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                  - text: Início Rápido
+                - link "Implementação" [ref=e105] [cursor=pointer]:
+                  - /url: /pt/docs/implementation
+                  - text: Implementação
+                - link "Frameworks" [ref=e107] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks
+                  - text: Frameworks
+                - link "Downloads" [ref=e109] [cursor=pointer]:
+                  - /url: /pt/resources
+                  - text: Downloads
+        - main [ref=e111]:
+          - generic [ref=e113]:
+            - heading "Documentação Matrix Protocol" [level=1] [ref=e114]
+            - paragraph [ref=e115]: Bem-vindo ao centro de documentação completo do Matrix Protocol. Aqui você encontra tudo o que precisa para entender, implementar e usar o protocolo.
+            - heading "🚀 Início Rápido" [level=2] [ref=e116]
+            - list [ref=e117]:
+              - listitem [ref=e118]:
+                - strong [ref=e119]:
+                  - link "Guia de Início Rápido" [ref=e120] [cursor=pointer]:
+                    - /url: /pt/docs/quickstart
+                - text: "- Comece agora em 15 minutos"
+              - listitem [ref=e121]:
+                - strong [ref=e122]:
+                  - link "Guia de Implementação" [ref=e123] [cursor=pointer]:
+                    - /url: /pt/docs/implementation
+                - text: "- Implementação completa passo a passo"
+              - listitem [ref=e124]:
+                - strong [ref=e125]:
+                  - link "Guia de Integração" [ref=e126] [cursor=pointer]:
+                    - /url: /pt/docs/integration
+                - text: "- Integre com sistemas existentes"
+            - heading "📖 Documentação Principal" [level=2] [ref=e127]
+            - heading "Protocolo e Conceitos" [level=3] [ref=e128]
+            - list [ref=e129]:
+              - listitem [ref=e130]:
+                - strong [ref=e131]:
+                  - link "Protocolo Matrix" [ref=e132] [cursor=pointer]:
+                    - /url: /pt/docs/protocol
+                - text: "- Especificação completa do protocolo"
+              - listitem [ref=e133]:
+                - strong [ref=e134]:
+                  - link "MEP - Princípio Epistemológico" [ref=e135] [cursor=pointer]:
+                    - /url: /pt/docs/mep
+                - text: "- Fundamentos filosóficos"
+              - listitem [ref=e136]:
+                - strong [ref=e137]:
+                  - link "Glossário" [ref=e138] [cursor=pointer]:
+                    - /url: /pt/docs/glossary
+                - text: "- Termos e definições"
+            - heading "Frameworks" [level=3] [ref=e139]
+            - list [ref=e140]:
+              - listitem [ref=e141]:
+                - strong [ref=e142]:
+                  - link "Visão Geral dos Frameworks" [ref=e143] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks
+                - text: "- Todos os 5 frameworks"
+              - listitem [ref=e144]:
+                - strong [ref=e145]:
+                  - link "MEF - Matrix Embedding Framework" [ref=e146] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks/mef
+                - text: "- Estruturação de conhecimento"
+              - listitem [ref=e147]:
+                - strong [ref=e148]:
+                  - link "ZOF - Zion Orchestration Framework" [ref=e149] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks/zof
+                - text: "- Orquestração de workflows"
+              - listitem [ref=e150]:
+                - strong [ref=e151]:
+                  - link "OIF - Operator Intelligence Framework" [ref=e152] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks/oif
+                - text: "- Arquétipos de IA"
+              - listitem [ref=e153]:
+                - strong [ref=e154]:
+                  - link "MOC - Matrix Ontology Catalog" [ref=e155] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks/moc
+                - text: "- Catálogo ontológico"
+              - listitem [ref=e156]:
+                - strong [ref=e157]:
+                  - link "MAL - Matrix Arbiter Layer" [ref=e158] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks/mal
+                - text: "- Camada de arbitragem"
+            - heading "📚 Recursos Práticos" [level=2] [ref=e159]
+            - heading "Manual Completo" [level=3] [ref=e160]
+            - list [ref=e161]:
+              - listitem [ref=e162]:
+                - strong [ref=e163]:
+                  - link "Templates" [ref=e164] [cursor=pointer]:
+                    - /url: /pt/docs/manual/templates
+                - text: "- Templates prontos para uso"
+              - listitem [ref=e165]:
+                - strong [ref=e166]:
+                  - link "Ferramentas" [ref=e167] [cursor=pointer]:
+                    - /url: /pt/docs/manual/tools
+                - text: "- Checklists e validações"
+              - listitem [ref=e168]:
+                - strong [ref=e169]:
+                  - link "Exemplos" [ref=e170] [cursor=pointer]:
+                    - /url: /pt/docs/manual/examples
+                - text: "- Casos de uso reais"
+              - listitem [ref=e171]:
+                - strong [ref=e172]:
+                  - link "Material de Referência" [ref=e173] [cursor=pointer]:
+                    - /url: /pt/docs/manual/reference
+                - text: "- Estudos de caso detalhados"
+            - heading "Exemplos e Casos" [level=3] [ref=e174]
+            - list [ref=e175]:
+              - listitem [ref=e176]:
+                - strong [ref=e177]:
+                  - link "Comparação de Conhecimento" [ref=e178] [cursor=pointer]:
+                    - /url: /pt/docs/examples
+                - text: "- Antes e depois do Matrix Protocol"
+              - listitem [ref=e179]:
+                - strong [ref=e180]:
+                  - link "Casos Organizacionais" [ref=e181] [cursor=pointer]:
+                    - /url: /pt/docs/examples
+                - text: "- Implementações reais"
+            - heading "🎯 Por Onde Começar?" [level=2] [ref=e182]
+            - heading "Sou novo no Matrix Protocol" [level=3] [ref=e183]
+            - list [ref=e184]:
+              - listitem [ref=e185]:
+                - text: Leia a
+                - strong [ref=e186]:
+                  - link "Visão Geral do Protocolo" [ref=e187] [cursor=pointer]:
+                    - /url: /pt/docs/protocol
+              - listitem [ref=e188]:
+                - text: Faça o
+                - strong [ref=e189]:
+                  - link "Guia de Início Rápido" [ref=e190] [cursor=pointer]:
+                    - /url: /pt/docs/quickstart
+              - listitem [ref=e191]:
+                - text: Explore os
+                - strong [ref=e192]:
+                  - link "Frameworks" [ref=e193] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks
+            - heading "Quero implementar" [level=3] [ref=e194]
+            - list [ref=e195]:
+              - listitem [ref=e196]:
+                - text: Estude o
+                - strong [ref=e197]:
+                  - link "Guia de Implementação" [ref=e198] [cursor=pointer]:
+                    - /url: /pt/docs/implementation
+              - listitem [ref=e199]:
+                - text: Use os
+                - strong [ref=e200]:
+                  - link "Templates" [ref=e201] [cursor=pointer]:
+                    - /url: /pt/docs/manual/templates
+              - listitem [ref=e202]:
+                - text: Valide com os
+                - strong [ref=e203]:
+                  - link "Checklists" [ref=e204] [cursor=pointer]:
+                    - /url: /pt/docs/manual/tools
+            - heading "Quero integrar sistemas" [level=3] [ref=e205]
+            - list [ref=e206]:
+              - listitem [ref=e207]:
+                - text: Leia o
+                - strong [ref=e208]:
+                  - link "Guia de Integração" [ref=e209] [cursor=pointer]:
+                    - /url: /pt/docs/integration
+              - listitem [ref=e210]:
+                - text: Veja os
+                - strong [ref=e211]:
+                  - link "Exemplos" [ref=e212] [cursor=pointer]:
+                    - /url: /pt/docs/examples
+              - listitem [ref=e213]:
+                - text: Use o
+                - strong [ref=e214]:
+                  - link "Material de Referência" [ref=e215] [cursor=pointer]:
+                    - /url: /pt/docs/manual/reference
+            - separator [ref=e216]
+            - blockquote [ref=e217]:
+              - paragraph [ref=e218]:
+                - strong [ref=e219]: 💡 Dica
+                - text: ": Use a navegação lateral para explorar todo o conteúdo disponível. Cada seção tem exemplos práticos e recursos para download."
+  - contentinfo [ref=e220]:
+    - generic [ref=e222]:
+      - paragraph [ref=e223]:
+        - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+        - link "Casheiro" [ref=e224] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e225]: © 2025 Casheiro. Todos os direitos reservados.
+```

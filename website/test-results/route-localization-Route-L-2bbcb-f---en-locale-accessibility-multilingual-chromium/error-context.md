@@ -1,0 +1,690 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Go to homepage" [ref=e8] [cursor=pointer]:
+          - /url: /en
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentation" [ref=e14] [cursor=pointer]:
+            - /url: /en/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /en/manual
+          - link "Resources" [ref=e16] [cursor=pointer]:
+            - /url: /en/resources
+        - generic [ref=e17]:
+          - link "Visit GitHub repository" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Select language" [ref=e20]:
+            - generic [ref=e22]: EN
+  - main [ref=e24]:
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e31]:
+          - generic [ref=e35]:
+            - generic [ref=e37]: Z
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - heading "ZOF" [level=1] [ref=e40]
+                - generic [ref=e41]: v0.0.1
+              - heading "Zion Orchestration Framework" [level=2] [ref=e42]
+              - paragraph
+          - generic [ref=e43]:
+            - link "Download Templates" [ref=e44] [cursor=pointer]:
+              - /url: /en/resources#basic-zof
+              - generic [ref=e45]: Download Templates
+            - link "Implement Now" [ref=e47] [cursor=pointer]:
+              - /url: /en/implementation
+              - generic [ref=e48]: Implement Now
+          - generic [ref=e51]:
+            - heading "ZOF — Zion Orchestration Framework" [level=1] [ref=e52]
+            - paragraph [ref=e53]:
+              - strong [ref=e54]: "Acronym:"
+              - text: ZOF
+              - strong [ref=e55]: "Version:"
+              - text: 0.0.1-beta
+              - strong [ref=e56]: "Last Update:"
+              - text: 2025-10-05
+            - blockquote [ref=e57]:
+              - paragraph [ref=e58]:
+                - text: ⚠️
+                - strong [ref=e59]: IMPORTANT
+                - text: ": This document is an informative translation."
+            - blockquote [ref=e60]:
+              - paragraph [ref=e61]:
+                - text: 🚨
+                - strong [ref=e62]: IMPORTANT WARNING
+                - text: ": This document contains ILLUSTRATIVE EXAMPLES (like"
+                - code [ref=e63]: strategy
+                - text: ","
+                - code [ref=e64]: operations
+                - text: ", etc.) that are NOT mandatory taxonomies. The"
+                - strong [ref=e65]: MOC (Matrix Ontology Catalog)
+                - text: is the only definitive source for organizational taxonomies.
+            - separator [ref=e66]
+            - heading "1. Introduction" [level=2] [ref=e67]
+            - paragraph [ref=e68]:
+              - text: The
+              - strong [ref=e69]: Zion Orchestration Framework (ZOF)
+              - text: conceptually and standardized specifies the workflow framework for AI-oriented teams, defining how to describe, execute and govern workflows as technology-independent state machines.
+            - paragraph [ref=e70]:
+              - text: ZOF defines a
+              - strong [ref=e71]: conceptual model for AI-oriented workflows
+              - text: "that allows multidisciplinary teams to describe workflows as technology-independent state machines following the pattern:"
+              - strong [ref=e72]: Event → Oracle Consultation → Decision → Action → Evaluation → Conditional Oracle Enrichment
+              - text: .
+            - paragraph [ref=e73]:
+              - text: ZOF does not prescribe tools, orchestration engines or technical implementations - it only guides
+              - strong [ref=e74]: how to think and record the path
+              - text: conceptually, traceably and governed.
+            - separator [ref=e75]
+            - heading "2. Terms and Definitions" [level=2] [ref=e76]
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - strong [ref=e79]: Canonical States
+                - text: ": Universal sequence of states in workflows (Intake → Understand → Decide → Act → EvaluateForEnrich → Review → Enrich)"
+              - listitem [ref=e80]:
+                - strong [ref=e81]: EvaluateForEnrich
+                - text: ": Mandatory checkpoint for enrichment evaluation"
+              - listitem [ref=e82]:
+                - strong [ref=e83]: Canonical Events
+                - text: ": Standard triggers for workflows (knowledge.added, work.proposed, etc.)"
+              - listitem [ref=e84]:
+                - strong [ref=e85]: Explainability Signals
+                - text: ": Context, decision and result recorded in each state"
+              - listitem [ref=e86]:
+                - strong [ref=e87]: can_enrich?()
+                - text: ": Cognitive filter function for enrichment decision"
+            - paragraph [ref=e88]:
+              - text: Additional references in
+              - strong [ref=e89]: MOC (Matrix Ontology Catalog)
+              - text: for specific organizational taxonomies.
+            - separator [ref=e90]
+            - heading "3. Core Architecture" [level=2] [ref=e91]
+            - heading "3.1 Canonical States (Mandatory)" [level=3] [ref=e92]
+            - paragraph [ref=e93]: "Every ZOF workflow MUST follow this exact sequence:"
+            - heading "1. Intake" [level=4] [ref=e94]:
+              - strong [ref=e95]: 1. Intake
+            - list [ref=e96]:
+              - listitem [ref=e97]:
+                - strong [ref=e98]: Purpose
+                - text: ": Context and requirements capture"
+              - listitem [ref=e99]:
+                - strong [ref=e100]: Inputs
+                - text: ": External events, user requests, system triggers"
+              - listitem [ref=e101]:
+                - strong [ref=e102]: Oracle Consultation
+                - text: ": Optional (for context validation)"
+              - listitem [ref=e103]:
+                - strong [ref=e104]: Outputs
+                - text: ": Structured requirements and context"
+            - heading "2. Understand" [level=4] [ref=e105]:
+              - strong [ref=e106]: 2. Understand
+            - list [ref=e107]:
+              - listitem [ref=e108]:
+                - strong [ref=e109]: Purpose
+                - text: ": Mandatory Oracle consultation (query existing UKIs)"
+              - listitem [ref=e110]:
+                - strong [ref=e111]: Inputs
+                - text: ": Requirements from Intake"
+              - listitem [ref=e112]:
+                - strong [ref=e113]: Oracle Consultation
+                - text: ":"
+                - strong [ref=e114]: MANDATORY
+                - text: "- always query existing knowledge"
+              - listitem [ref=e115]:
+                - strong [ref=e116]: Outputs
+                - text: ": Informed context with existing knowledge"
+            - heading "3. Decide" [level=4] [ref=e117]:
+              - strong [ref=e118]: 3. Decide
+            - list [ref=e119]:
+              - listitem [ref=e120]:
+                - strong [ref=e121]: Purpose
+                - text: ": Decision based on existing knowledge + new context"
+              - listitem [ref=e122]:
+                - strong [ref=e123]: Inputs
+                - text: ": Understanding from previous state + external context"
+              - listitem [ref=e124]:
+                - strong [ref=e125]: Oracle Consultation
+                - text: ": Optional (for decision validation)"
+              - listitem [ref=e126]:
+                - strong [ref=e127]: Outputs
+                - text: ": Concrete decision with rationale"
+            - heading "4. Act" [level=4] [ref=e128]:
+              - strong [ref=e129]: 4. Act
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - strong [ref=e132]: Purpose
+                - text: ": Execute planned action"
+              - listitem [ref=e133]:
+                - strong [ref=e134]: Inputs
+                - text: ": Decision from previous state"
+              - listitem [ref=e135]:
+                - strong [ref=e136]: Oracle Consultation
+                - text: ": Optional (for execution guidance)"
+              - listitem [ref=e137]:
+                - strong [ref=e138]: Outputs
+                - text: ": Action result and outcomes"
+            - heading "5. EvaluateForEnrich" [level=4] [ref=e139]:
+              - strong [ref=e140]: 5. EvaluateForEnrich
+            - list [ref=e141]:
+              - listitem [ref=e142]:
+                - strong [ref=e143]: Purpose
+                - text: ":"
+                - strong [ref=e144]: Mandatory
+                - text: checkpoint using MOC criteria
+              - listitem [ref=e145]:
+                - strong [ref=e146]: Inputs
+                - text: ": Complete workflow context and results"
+              - listitem [ref=e147]:
+                - strong [ref=e148]: Oracle Consultation
+                - text: ":"
+                - strong [ref=e149]: MANDATORY
+                - text: "- evaluate against existing knowledge"
+              - listitem [ref=e150]:
+                - strong [ref=e151]: Function
+                - text: ":"
+                - code [ref=e152]: can_enrich?()
+                - text: using MOC-defined criteria
+              - listitem [ref=e153]:
+                - strong [ref=e154]: Outputs
+                - text: ": Enrichment decision (yes/no) with rationale"
+            - heading "6. Review (Optional)" [level=4] [ref=e155]:
+              - strong [ref=e156]: 6. Review
+              - text: (Optional)
+            - list [ref=e157]:
+              - listitem [ref=e158]:
+                - strong [ref=e159]: Purpose
+                - text: ": Result validation"
+              - listitem [ref=e160]:
+                - strong [ref=e161]: Inputs
+                - text: ": Action outcomes"
+              - listitem [ref=e162]:
+                - strong [ref=e163]: Oracle Consultation
+                - text: ": Optional (for validation)"
+              - listitem [ref=e164]:
+                - strong [ref=e165]: Outputs
+                - text: ": Validation results"
+            - heading "7. Enrich (Conditional)" [level=4] [ref=e166]:
+              - strong [ref=e167]: 7. Enrich
+              - text: (Conditional)
+            - list [ref=e168]:
+              - listitem [ref=e169]:
+                - strong [ref=e170]: Purpose
+                - text: ": Conditional Oracle enrichment (create new UKIs)"
+              - listitem [ref=e171]:
+                - strong [ref=e172]: Triggered by
+                - text: ": EvaluateForEnrich = true"
+              - listitem [ref=e173]:
+                - strong [ref=e174]: Oracle Consultation
+                - text: ":"
+                - strong [ref=e175]: MANDATORY
+                - text: "- create/update knowledge"
+              - listitem [ref=e176]:
+                - strong [ref=e177]: Outputs
+                - text: ": New UKIs or updated knowledge"
+            - heading "3.2 Explainability Signals (Mandatory)" [level=3] [ref=e178]
+            - paragraph [ref=e179]: "Each state transition MUST record:"
+            - generic [ref=e180]:
+              - generic [ref=e181]: yaml
+              - code [ref=e183]:
+                - code [ref=e184]:
+                  - generic [ref=e185]: "signals:"
+                  - generic [ref=e186]: "context: \"[What entered this state]\""
+                  - generic [ref=e187]: "decision: \"[Why it transitioned to next state]\""
+                  - generic [ref=e188]: "result: \"[What exited this state]\""
+              - button "Copiar código" [ref=e189]:
+                - img [ref=e190]
+            - heading "3.3 Oracle Integration" [level=3] [ref=e192]
+            - paragraph [ref=e193]:
+              - text: ZOF is
+              - strong [ref=e194]: Oracle-centric
+              - text: ":"
+            - list [ref=e195]:
+              - listitem [ref=e196]:
+                - strong [ref=e197]: Always consult
+                - text: existing knowledge before deciding
+              - listitem [ref=e198]:
+                - strong [ref=e199]: Evaluate for enrichment
+                - text: using MOC criteria
+              - listitem [ref=e200]:
+                - strong [ref=e201]: Preserve institutional memory
+                - text: through UKI creation
+              - listitem [ref=e202]:
+                - strong [ref=e203]: Maintain decision traceability
+                - text: through explicit consultation
+            - separator [ref=e204]
+            - heading "4. EvaluateForEnrich Checkpoint" [level=2] [ref=e205]
+            - heading "4.1 Purpose and Function" [level=3] [ref=e206]
+            - paragraph [ref=e207]:
+              - text: The
+              - strong [ref=e208]: EvaluateForEnrich
+              - text: checkpoint is the critical decision point that determines whether workflow outcomes should become institutional knowledge (UKIs).
+            - heading "4.2 can_enrich?() Function" [level=3] [ref=e209]
+            - generic [ref=e210]:
+              - generic [ref=e211]: yaml
+              - code [ref=e213]:
+                - code [ref=e214]:
+                  - generic [ref=e215]: "# Conceptual implementation"
+                  - generic [ref=e216]: "function can_enrich(workflow_context, action_results, moc_criteria):"
+                  - generic [ref=e218]: "# MOC-defined evaluation criteria"
+                  - generic [ref=e219]: "for criterion in moc_criteria:"
+                  - generic [ref=e220]: score = evaluate_criterion(criterion, workflow_context, action_results)
+                  - generic [ref=e222]: "# Weighted decision based on MOC configuration"
+                  - generic [ref=e223]: "if weighted_score >= moc_threshold:"
+                  - generic [ref=e224]: "return {"
+                  - generic [ref=e225]: "decision: true,"
+                  - generic [ref=e226]: "rationale: \"Meets organizational enrichment criteria\","
+                  - generic [ref=e227]: "proposed_ukis: generate_uki_proposals(workflow_context)"
+                  - generic [ref=e228]: "}"
+                  - generic [ref=e229]: "else:"
+                  - generic [ref=e230]: "return {"
+                  - generic [ref=e231]: "decision: false,"
+                  - generic [ref=e232]: "rationale: \"Does not meet minimum enrichment threshold\""
+                  - generic [ref=e233]: "}"
+              - button "Copiar código" [ref=e234]:
+                - img [ref=e235]
+            - heading "4.3 MOC Integration" [level=3] [ref=e237]
+            - paragraph [ref=e238]: "EvaluateForEnrich uses MOC-defined criteria:"
+            - generic [ref=e239]:
+              - generic [ref=e240]: yaml
+              - code [ref=e242]:
+                - code [ref=e243]:
+                  - generic [ref=e244]: "# Example MOC evaluation criteria"
+                  - generic [ref=e245]: "evaluation_criteria:"
+                  - generic [ref=e246]: "- id: \"business_impact\""
+                  - generic [ref=e247]: "weight: 0.4"
+                  - generic [ref=e248]: "threshold: \"medium\""
+                  - generic [ref=e249]: "evaluators: [\"product_managers\"]"
+                  - generic [ref=e251]: "- id: \"reusability\""
+                  - generic [ref=e252]: "weight: 0.3"
+                  - generic [ref=e253]: "threshold: \"high\""
+                  - generic [ref=e254]: "evaluators: [\"tech_leads\"]"
+                  - generic [ref=e256]: "- id: \"regulatory_compliance\""
+                  - generic [ref=e257]: "weight: 0.3"
+                  - generic [ref=e258]: "threshold: \"any\""
+                  - generic [ref=e259]: "evaluators: [\"compliance_team\"]"
+              - button "Copiar código" [ref=e260]:
+                - img [ref=e261]
+            - heading "4.4 Conflict Resolution" [level=3] [ref=e263]
+            - paragraph [ref=e264]: "When EvaluateForEnrich identifies conflicts with existing knowledge:"
+            - list [ref=e265]:
+              - listitem [ref=e266]:
+                - strong [ref=e267]: Trigger MAL arbitration
+                - text: for unresolvable conflicts
+              - listitem [ref=e268]:
+                - strong [ref=e269]: Document conflict rationale
+                - text: in Decision Records
+              - listitem [ref=e270]:
+                - strong [ref=e271]: Preserve audit trail
+                - text: of arbitration decisions
+              - listitem [ref=e272]:
+                - strong [ref=e273]: Update Oracle
+                - text: with arbitration outcomes
+            - separator [ref=e274]
+            - heading "5. Canonical Events" [level=2] [ref=e275]
+            - heading "5.1 Standard Event Types" [level=3] [ref=e276]
+            - paragraph [ref=e277]: "ZOF defines standard events that trigger workflows:"
+            - heading "knowledge.added" [level=4] [ref=e278]:
+              - strong [ref=e279]: knowledge.added
+            - generic [ref=e280]:
+              - generic [ref=e281]: yaml
+              - code [ref=e283]:
+                - code [ref=e284]:
+                  - generic [ref=e285]: "event_type: \"knowledge.added\""
+                  - generic [ref=e286]: "payload:"
+                  - generic [ref=e287]: "uki_id: \"uki:team:decision:auth-strategy\""
+                  - generic [ref=e288]: "scope_impact: [\"team\", \"department\"]"
+                  - generic [ref=e289]: "affected_workflows: [\"deployment\", \"security-review\"]"
+              - button "Copiar código" [ref=e290]:
+                - img [ref=e291]
+            - heading "work.proposed" [level=4] [ref=e293]:
+              - strong [ref=e294]: work.proposed
+            - generic [ref=e295]:
+              - generic [ref=e296]: yaml
+              - code [ref=e298]:
+                - code [ref=e299]:
+                  - generic [ref=e300]: "event_type: \"work.proposed\""
+                  - generic [ref=e301]: "payload:"
+                  - generic [ref=e302]: "work_description: \"Implement new payment gateway\""
+                  - generic [ref=e303]: "estimated_complexity: \"high\""
+                  - generic [ref=e304]: "affected_domains: [\"technical\", \"business\"]"
+              - button "Copiar código" [ref=e305]:
+                - img [ref=e306]
+            - heading "decision.required" [level=4] [ref=e308]:
+              - strong [ref=e309]: decision.required
+            - generic [ref=e310]:
+              - generic [ref=e311]: yaml
+              - code [ref=e313]:
+                - code [ref=e314]:
+                  - generic [ref=e315]: "event_type: \"decision.required\""
+                  - generic [ref=e316]: "payload:"
+                  - generic [ref=e317]: "decision_context: \"Choose between technical alternatives\""
+                  - generic [ref=e318]: "stakeholders: [\"backend-team\", \"security-team\"]"
+                  - generic [ref=e319]: "deadline: \"2024-12-15\""
+              - button "Copiar código" [ref=e320]:
+                - img [ref=e321]
+            - heading "conflict.detected" [level=4] [ref=e323]:
+              - strong [ref=e324]: conflict.detected
+            - generic [ref=e325]:
+              - generic [ref=e326]: yaml
+              - code [ref=e328]:
+                - code [ref=e329]:
+                  - generic [ref=e330]: "event_type: \"conflict.detected\""
+                  - generic [ref=e331]: "payload:"
+                  - generic [ref=e332]: "conflicting_ukis: [\"uki:a\", \"uki:b\"]"
+                  - generic [ref=e333]: "conflict_type: \"H1\" # MAL conflict classification"
+                  - generic [ref=e334]: "severity: \"high\""
+              - button "Copiar código" [ref=e335]:
+                - img [ref=e336]
+            - heading "5.2 Event Routing" [level=3] [ref=e338]
+            - paragraph [ref=e339]: "Events are routed based on MOC scope and domain:"
+            - generic [ref=e340]:
+              - generic [ref=e341]: yaml
+              - code [ref=e343]:
+                - code [ref=e344]:
+                  - generic [ref=e345]: "# Event routing configuration"
+                  - generic [ref=e346]: "event_routing:"
+                  - generic [ref=e347]: "knowledge.added:"
+                  - generic [ref=e348]: "scope_ref: \"team-backend\""
+                  - generic [ref=e349]: "workflow: \"knowledge-integration\""
+                  - generic [ref=e351]: "work.proposed:"
+                  - generic [ref=e352]: "domain_ref: \"technical\""
+                  - generic [ref=e353]: "workflow: \"technical-evaluation\""
+              - button "Copiar código" [ref=e354]:
+                - img [ref=e355]
+            - separator [ref=e357]
+            - heading "6. Technology Independence" [level=2] [ref=e358]
+            - heading "6.1 Conceptual Framework" [level=3] [ref=e359]
+            - paragraph [ref=e360]:
+              - text: ZOF is
+              - strong [ref=e361]: technology-agnostic
+              - text: ":"
+            - list [ref=e362]:
+              - listitem [ref=e363]:
+                - strong [ref=e364]: Describes "how to think"
+                - text: not "how to implement"
+              - listitem [ref=e365]:
+                - strong [ref=e366]: Provides conceptual patterns
+                - text: for any implementation
+              - listitem [ref=e367]:
+                - strong [ref=e368]: Maintains consistency
+                - text: across different technical stacks
+            - heading "6.2 Implementation Examples" [level=3] [ref=e369]
+            - paragraph [ref=e370]:
+              - strong [ref=e371]: Simple Implementation
+              - text: "(Manual process):"
+            - generic [ref=e372]:
+              - generic [ref=e373]: yaml
+              - code [ref=e375]:
+                - code [ref=e376]:
+                  - generic [ref=e377]: "workflow_implementation: \"manual\""
+                  - generic [ref=e378]: "tools:"
+                  - generic [ref=e379]: "- \"Confluence for documentation\""
+                  - generic [ref=e380]: "- \"Slack for collaboration\""
+                  - generic [ref=e381]: "- \"Git for version control\""
+                  - generic [ref=e382]: "state_tracking: \"Manual spreadsheet\""
+              - button "Copiar código" [ref=e383]:
+                - img [ref=e384]
+            - paragraph [ref=e386]:
+              - strong [ref=e387]: Advanced Implementation
+              - text: "(Automated orchestration):"
+            - generic [ref=e388]:
+              - generic [ref=e389]: yaml
+              - code [ref=e391]:
+                - code [ref=e392]:
+                  - generic [ref=e393]: "workflow_implementation: \"automated\""
+                  - generic [ref=e394]: "tools:"
+                  - generic [ref=e395]: "- \"GitHub Actions for orchestration\""
+                  - generic [ref=e396]: "- \"Notion API for knowledge management\""
+                  - generic [ref=e397]: "- \"Slack bots for notifications\""
+                  - generic [ref=e398]: "state_tracking: \"Database with API\""
+              - button "Copiar código" [ref=e399]:
+                - img [ref=e400]
+            - heading "6.3 Integration Patterns" [level=3] [ref=e402]
+            - paragraph [ref=e403]: "ZOF integrates with existing organizational tools:"
+            - generic [ref=e404]:
+              - generic [ref=e405]: yaml
+              - code [ref=e407]:
+                - code [ref=e408]:
+                  - generic [ref=e409]: "# Integration with existing systems"
+                  - generic [ref=e410]: "integrations:"
+                  - generic [ref=e411]: "project_management: \"Jira, Linear, Asana\""
+                  - generic [ref=e412]: "documentation: \"Confluence, Notion, GitBook\""
+                  - generic [ref=e413]: "communication: \"Slack, Teams, Discord\""
+                  - generic [ref=e414]: "version_control: \"Git-based systems\""
+                  - generic [ref=e415]: "ci_cd: \"Any pipeline system\""
+              - button "Copiar código" [ref=e416]:
+                - img [ref=e417]
+            - separator [ref=e419]
+            - heading "7. Governance and Compliance" [level=2] [ref=e420]
+            - heading "7.1 Workflow Governance" [level=3] [ref=e421]
+            - paragraph [ref=e422]: "ZOF workflows must comply with MOC governance:"
+            - generic [ref=e423]:
+              - generic [ref=e424]: yaml
+              - code [ref=e426]:
+                - code [ref=e427]:
+                  - generic [ref=e428]: "# Workflow governance rules"
+                  - generic [ref=e429]: "workflow_governance:"
+                  - generic [ref=e430]: "authority_validation:"
+                  - generic [ref=e431]: "- Check user permissions via MOC"
+                  - generic [ref=e432]: "- Validate scope access rights"
+                  - generic [ref=e433]: "- Confirm domain expertise"
+                  - generic [ref=e435]: "audit_requirements:"
+                  - generic [ref=e436]: "- Record all state transitions"
+                  - generic [ref=e437]: "- Log Oracle consultations"
+                  - generic [ref=e438]: "- Document decision rationales"
+                  - generic [ref=e439]: "- Preserve explainability signals"
+              - button "Copiar código" [ref=e440]:
+                - img [ref=e441]
+            - heading "7.2 Compliance Tracking" [level=3] [ref=e443]
+            - generic [ref=e444]:
+              - generic [ref=e445]: yaml
+              - code [ref=e447]:
+                - code [ref=e448]:
+                  - generic [ref=e449]: "# Compliance tracking requirements"
+                  - generic [ref=e450]: "compliance_tracking:"
+                  - generic [ref=e451]: "state_transitions: \"All transitions logged with timestamps\""
+                  - generic [ref=e452]: "decision_rationale: \"Every decision must include rationale\""
+                  - generic [ref=e453]: "oracle_consultation: \"All consultations must be recorded\""
+                  - generic [ref=e454]: "authority_validation: \"All actions must validate authority\""
+              - button "Copiar código" [ref=e455]:
+                - img [ref=e456]
+            - heading "7.3 Audit Trail" [level=3] [ref=e458]
+            - paragraph [ref=e459]: "ZOF maintains complete audit trails:"
+            - list [ref=e460]:
+              - listitem [ref=e461]:
+                - strong [ref=e462]: Workflow execution history
+              - listitem [ref=e463]:
+                - strong [ref=e464]: Oracle consultation logs
+              - listitem [ref=e465]:
+                - strong [ref=e466]: Decision rationales
+              - listitem [ref=e467]:
+                - strong [ref=e468]: Authority validations
+              - listitem [ref=e469]:
+                - strong [ref=e470]: Conflict resolution records
+            - separator [ref=e471]
+            - heading "8. Advanced Features" [level=2] [ref=e472]
+            - heading "8.1 Parallel Workflows" [level=3] [ref=e473]
+            - paragraph [ref=e474]: "ZOF supports parallel workflow execution:"
+            - generic [ref=e475]:
+              - generic [ref=e476]: yaml
+              - code [ref=e478]:
+                - code [ref=e479]:
+                  - generic [ref=e480]: "# Parallel workflow configuration"
+                  - generic [ref=e481]: "parallel_workflows:"
+                  - generic [ref=e482]: "- workflow_id: \"technical-review\""
+                  - generic [ref=e483]: "depends_on: []"
+                  - generic [ref=e485]: "- workflow_id: \"business-review\""
+                  - generic [ref=e486]: "depends_on: []"
+                  - generic [ref=e488]: "- workflow_id: \"final-decision\""
+                  - generic [ref=e489]: "depends_on: [\"technical-review\", \"business-review\"]"
+              - button "Copiar código" [ref=e490]:
+                - img [ref=e491]
+            - heading "8.2 Conditional Branching" [level=3] [ref=e493]
+            - generic [ref=e494]:
+              - generic [ref=e495]: yaml
+              - code [ref=e497]:
+                - code [ref=e498]:
+                  - generic [ref=e499]: "# Conditional workflow branching"
+                  - generic [ref=e500]: "conditional_branches:"
+                  - generic [ref=e501]: "- condition: \"business_impact == 'high'\""
+                  - generic [ref=e502]: "next_workflow: \"executive-approval\""
+                  - generic [ref=e504]: "- condition: \"technical_complexity == 'low'\""
+                  - generic [ref=e505]: "next_workflow: \"fast-track-implementation\""
+                  - generic [ref=e507]: "- default: \"standard-workflow\""
+              - button "Copiar código" [ref=e508]:
+                - img [ref=e509]
+            - heading "8.3 Escalation Patterns" [level=3] [ref=e511]
+            - generic [ref=e512]:
+              - generic [ref=e513]: yaml
+              - code [ref=e515]:
+                - code [ref=e516]:
+                  - generic [ref=e517]: "# Escalation configuration"
+                  - generic [ref=e518]: "escalation_patterns:"
+                  - generic [ref=e519]: "decision_timeout:"
+                  - generic [ref=e520]: "trigger: \"decision_pending > 48_hours\""
+                  - generic [ref=e521]: "action: \"escalate_to_manager\""
+                  - generic [ref=e523]: "conflict_unresolved:"
+                  - generic [ref=e524]: "trigger: \"mal_arbitration_required\""
+                  - generic [ref=e525]: "action: \"escalate_to_arbitration_committee\""
+              - button "Copiar código" [ref=e526]:
+                - img [ref=e527]
+            - separator [ref=e529]
+            - heading "9. Integration with Other Frameworks" [level=2] [ref=e530]
+            - heading "9.1 MEF Integration" [level=3] [ref=e531]
+            - paragraph [ref=e532]: "ZOF creates and consults MEF UKIs:"
+            - generic [ref=e533]:
+              - generic [ref=e534]: yaml
+              - code [ref=e536]:
+                - code [ref=e537]:
+                  - generic [ref=e538]: "# ZOF → MEF integration"
+                  - generic [ref=e539]: "mef_integration:"
+                  - generic [ref=e540]: "oracle_consultation:"
+                  - generic [ref=e541]: "query_types: [\"related_decisions\", \"similar_contexts\", \"precedent_cases\"]"
+                  - generic [ref=e543]: "uki_creation:"
+                  - generic [ref=e544]: "triggered_by: \"EvaluateForEnrich == true\""
+                  - generic [ref=e545]: "uki_types: [\"decision\", \"process\", \"knowledge\"]"
+              - button "Copiar código" [ref=e546]:
+                - img [ref=e547]
+            - heading "9.2 MOC Integration" [level=3] [ref=e549]
+            - paragraph [ref=e550]: "ZOF respects MOC governance:"
+            - generic [ref=e551]:
+              - generic [ref=e552]: yaml
+              - code [ref=e554]:
+                - code [ref=e555]:
+                  - generic [ref=e556]: "# ZOF → MOC integration"
+                  - generic [ref=e557]: "moc_integration:"
+                  - generic [ref=e558]: "authority_validation: \"Check MOC permissions before actions\""
+                  - generic [ref=e559]: "scope_compliance: \"Respect MOC scope boundaries\""
+                  - generic [ref=e560]: "evaluation_criteria: \"Use MOC-defined enrichment criteria\""
+              - button "Copiar código" [ref=e561]:
+                - img [ref=e562]
+            - heading "9.3 MAL Integration" [level=3] [ref=e564]
+            - paragraph [ref=e565]: "ZOF triggers MAL arbitration:"
+            - generic [ref=e566]:
+              - generic [ref=e567]: yaml
+              - code [ref=e569]:
+                - code [ref=e570]:
+                  - generic [ref=e571]: "# ZOF → MAL integration"
+                  - generic [ref=e572]: "mal_integration:"
+                  - generic [ref=e573]: "conflict_detection: \"Identify conflicting knowledge during consultation\""
+                  - generic [ref=e574]: "arbitration_trigger: \"Create MAL events for unresolvable conflicts\""
+                  - generic [ref=e575]: "decision_integration: \"Apply MAL decisions to workflow outcomes\""
+              - button "Copiar código" [ref=e576]:
+                - img [ref=e577]
+            - heading "9.4 OIF Integration" [level=3] [ref=e579]
+            - paragraph [ref=e580]: "ZOF configures OIF agents:"
+            - generic [ref=e581]:
+              - generic [ref=e582]: yaml
+              - code [ref=e584]:
+                - code [ref=e585]:
+                  - generic [ref=e586]: "# ZOF → OIF integration"
+                  - generic [ref=e587]: "oif_integration:"
+                  - generic [ref=e588]: "agent_configuration: \"Configure agents based on workflow context\""
+                  - generic [ref=e589]: "explanation_generation: \"Use OIF templates for user communication\""
+                  - generic [ref=e590]: "authority_delegation: \"Delegate decisions to appropriate AI archetypes\""
+              - button "Copiar código" [ref=e591]:
+                - img [ref=e592]
+            - separator [ref=e594]
+            - heading "10. Implementation Guidelines" [level=2] [ref=e595]
+            - heading "10.1 Getting Started" [level=3] [ref=e596]
+            - paragraph [ref=e597]:
+              - strong [ref=e598]: Phase 1
+              - text: ": Manual ZOF (Weeks 1-2)"
+            - list [ref=e599]:
+              - listitem [ref=e600]: Implement canonical states as process documentation
+              - listitem [ref=e601]: Train team on Oracle-first thinking
+              - listitem [ref=e602]: Establish EvaluateForEnrich as team practice
+            - paragraph [ref=e603]:
+              - strong [ref=e604]: Phase 2
+              - text: ": Semi-automated ZOF (Weeks 3-6)"
+            - list [ref=e605]:
+              - listitem [ref=e606]: Integrate with existing project management tools
+              - listitem [ref=e607]: Automate state tracking
+              - listitem [ref=e608]: Implement basic Oracle consultation
+            - paragraph [ref=e609]:
+              - strong [ref=e610]: Phase 3
+              - text: ": Fully-integrated ZOF (Months 2-3)"
+            - list [ref=e611]:
+              - listitem [ref=e612]: Full integration with organizational systems
+              - listitem [ref=e613]: Automated workflow triggering
+              - listitem [ref=e614]: Real-time Oracle consultation
+            - heading "10.2 Best Practices" [level=3] [ref=e615]
+            - list [ref=e616]:
+              - listitem [ref=e617]:
+                - strong [ref=e618]: Start Simple
+                - text: ": Begin with manual process following canonical states"
+              - listitem [ref=e619]:
+                - strong [ref=e620]: Oracle-First
+                - text: ": Always consult existing knowledge before deciding"
+              - listitem [ref=e621]:
+                - strong [ref=e622]: Document Everything
+                - text: ": Record context, decisions, and results"
+              - listitem [ref=e623]:
+                - strong [ref=e624]: Evaluate Ruthlessly
+                - text: ": Use EvaluateForEnrich to filter what becomes knowledge"
+              - listitem [ref=e625]:
+                - strong [ref=e626]: Iterate Quickly
+                - text: ": Improve workflows based on real usage"
+            - heading "10.3 Common Pitfalls" [level=3] [ref=e627]
+            - paragraph [ref=e628]:
+              - text: ❌
+              - strong [ref=e629]: Skip Oracle Consultation
+              - text: ": Leads to knowledge fragmentation ❌"
+              - strong [ref=e630]: Ignore EvaluateForEnrich
+              - text: ": Creates knowledge pollution ❌"
+              - strong [ref=e631]: Over-automate Early
+              - text: ": Start manual, automate gradually ❌"
+              - strong [ref=e632]: Forget Explainability
+              - text: ": Always record context and rationale"
+            - separator [ref=e633]
+            - heading "11. Conclusion" [level=2] [ref=e634]
+            - paragraph [ref=e635]: ZOF provides the conceptual framework for AI-oriented workflow orchestration that maintains institutional memory while enabling rapid decision-making. Its canonical states ensure consistency while its technology independence allows flexible implementation.
+            - paragraph [ref=e636]:
+              - text: The key insight of ZOF is that
+              - strong [ref=e637]: structured thinking patterns
+              - text: are more important than specific tools - by following canonical states and maintaining Oracle integration, teams can achieve better outcomes regardless of their technical implementation.
+            - separator [ref=e638]
+            - blockquote [ref=e639]:
+              - paragraph [ref=e640]:
+                - strong [ref=e641]: 💡 Implementation Tip
+                - text: ": Focus on the thinking patterns first, tools second. ZOF's value comes from establishing Oracle-first workflows that systematically capture and reuse institutional knowledge."
+        - complementary [ref=e642]:
+          - generic [ref=e644]:
+            - heading "Table of Contents" [level=3] [ref=e646]
+            - navigation "Table of Contents":
+              - list
+            - generic [ref=e650]: 0% lido
+  - contentinfo [ref=e652]:
+    - generic [ref=e654]:
+      - paragraph [ref=e655]:
+        - text: Matrix Protocol - Protocol conceived, created and maintained by
+        - link "Casheiro" [ref=e656] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e657]: © 2025 Casheiro. All rights reserved.
+```

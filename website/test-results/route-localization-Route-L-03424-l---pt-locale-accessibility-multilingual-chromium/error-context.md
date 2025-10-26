@@ -1,0 +1,406 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+          - /url: /pt
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentação" [ref=e14] [cursor=pointer]:
+            - /url: /pt/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /pt/manual
+          - link "Recursos" [ref=e16] [cursor=pointer]:
+            - /url: /pt/resources
+        - generic [ref=e17]:
+          - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Selecionar idioma" [ref=e20]:
+            - generic [ref=e22]: PT
+  - main [ref=e24]:
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e31]:
+          - generic [ref=e35]:
+            - generic [ref=e37]: M
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - heading "MAL" [level=1] [ref=e40]
+                - generic [ref=e41]: v0.0.1
+              - heading "Matrix Arbiter Layer" [level=2] [ref=e42]
+              - paragraph
+          - generic [ref=e43]:
+            - link "Baixar Templates" [ref=e44] [cursor=pointer]:
+              - /url: /pt/resources#basic-mal
+              - generic [ref=e45]: Baixar Templates
+            - link "Implementar Agora" [ref=e47] [cursor=pointer]:
+              - /url: /pt/implementation
+              - generic [ref=e48]: Implementar Agora
+          - generic [ref=e51]:
+            - heading "MAL — Matrix Arbiter Layer" [level=1] [ref=e52]
+            - paragraph [ref=e53]:
+              - strong [ref=e54]: "Acrônimo:"
+              - text: MAL
+              - strong [ref=e55]: "Versão:"
+              - text: 0.0.1-beta
+              - strong [ref=e56]: "Última Atualização:"
+              - text: 2025-10-05
+            - blockquote [ref=e57]:
+              - paragraph [ref=e58]:
+                - text: ⚠️
+                - strong [ref=e59]: IMPORTANTE
+                - text: ": Este documento é uma tradução informativa. A versão autoritativa é MAL_MATRIX_ARBITER_LAYER.md."
+            - blockquote [ref=e60]:
+              - paragraph [ref=e61]: "\"Na ausência de conflito, a sabedoria permanece não testada.\" — Provérbio Antigo"
+            - separator [ref=e62]
+            - heading "1. Introdução" [level=2] [ref=e63]
+            - paragraph [ref=e64]:
+              - text: A
+              - strong [ref=e65]: Matrix Arbiter Layer (MAL)
+              - text: é a camada de arbitragem de conflitos e concorrência do protocolo que opera como autoridade final de tomada de decisão quando regras de governança locais não conseguem resolver conflitos complexos.
+            - paragraph [ref=e66]:
+              - text: A MAL é invocada
+              - strong [ref=e67]: apenas
+              - text: "quando regras locais (filtragem de escopo, validação de autoridade, EvaluateForEnrich) não conseguem resolver três tipos específicos de conflito: conflitos horizontais entre UKIs equivalentes, tentativas de enriquecimento concorrente e contenções de promoção."
+            - paragraph [ref=e68]: A MAL não substitui MOC, ZOF, OIF ou MEF; ela fornece tomada de decisão determinística, então delega explicação ao OIF e persistência ao MEF enquanto respeita políticas configuradas no MOC.
+            - separator [ref=e69]
+            - heading "2. Termos e Definições" [level=2] [ref=e70]
+            - list [ref=e71]:
+              - listitem [ref=e72]:
+                - strong [ref=e73]: Evento de Arbitragem
+                - text: ": Entrada normalizada descrevendo uma condição de conflito ou concorrência que requer decisão MAL"
+              - listitem [ref=e74]:
+                - strong [ref=e75]: Registro de Decisão
+                - text: ": Resultado assinado e imutável com designação de vencedor/perdedor, justificativa e referências"
+              - listitem [ref=e76]:
+                - strong [ref=e77]: Política de Precedência
+                - text: ": Regras de desempate ordenadas configuradas no MOC com padrões fornecidos pela MAL"
+              - listitem [ref=e78]:
+                - strong [ref=e79]: Conflito Horizontal (H1)
+                - text: ": Dois ou mais UKIs de nível de escopo equivalente que entram em conflito semanticamente"
+              - listitem [ref=e80]:
+                - strong [ref=e81]: Enriquecimento Concorrente (H2)
+                - text: ": Dois ou mais fluxos tentando enriquecer semânticas sobrepostas simultaneamente"
+              - listitem [ref=e82]:
+                - strong [ref=e83]: Contenção de Promoção (H3)
+                - text: ": Propostas concorrentes para promover UKIs distintos a nível de governança superior"
+            - paragraph [ref=e84]:
+              - text: Referências adicionais no
+              - strong [ref=e85]: MOC (Matrix Ontology Catalog)
+              - text: para políticas de arbitragem organizacionais específicas.
+            - separator [ref=e86]
+            - heading "3. Conceitos Centrais" [level=2] [ref=e87]
+            - heading "Princípio No-Op" [level=3] [ref=e88]
+            - paragraph [ref=e89]: A MAL opera como uma camada de arbitragem de último recurso. Se regras de escopo/autoridade podem resolver conflitos localmente através de validação padrão MOC, a MAL NÃO DEVE ser invocada.
+            - heading "Tomada de Decisão Determinística" [level=3] [ref=e90]
+            - paragraph [ref=e91]: Dados entradas idênticas e configuração de política, a MAL DEVE produzir decisões consistentes e reproduzíveis em todas as invocações para garantir previsibilidade do sistema.
+            - heading "Integração de Justificativa Epistêmica" [level=3] [ref=e92]
+            - paragraph [ref=e93]: Toda decisão MAL DEVE incluir justificação epistemológica alinhada com princípios MEP, referenciando nós específicos do MOC e fornecendo raciocínio rastreável.
+            - heading "Auditabilidade e Transparência" [level=3] [ref=e94]
+            - paragraph [ref=e95]: Todas as decisões de arbitragem DEVEM ser persistidas como Registros de Decisão imutáveis com rastreabilidade completa aos UKIs de entrada, políticas MOC e cadeias de raciocínio.
+            - heading "Experiência de Usuário Não-Bloqueante" [level=3] [ref=e96]
+            - paragraph [ref=e97]: "Se a MAL não puder decidir dentro do arbitration_timeout configurado, o ZOF DEVE aplicar o resultado padrão seguro:"
+            - list [ref=e98]:
+              - listitem [ref=e99]: Outcome = no enrich
+              - listitem [ref=e100]: Status = pending arbitration
+            - paragraph [ref=e101]: O OIF DEVE notificar o usuário que a arbitragem está pendente, incluindo instruções de escalação do MOC se disponíveis.
+            - separator [ref=e102]
+            - heading "4. Regras Normativas" [level=2] [ref=e103]
+            - blockquote [ref=e104]:
+              - paragraph [ref=e105]:
+                - text: ⚠️ Esta seção é
+                - strong [ref=e106]: normativa
+                - text: .
+            - heading "Condições de Invocação Obrigatórias" [level=3] [ref=e107]
+            - paragraph [ref=e108]: O ZOF DEVE invocar a MAL quando detectar tipos de conflito H1, H2 ou H3 após completar o checkpoint EvaluateForEnrich e tentativas de resolução local falharam.
+            - heading "Fronteiras de Autoridade de Arbitragem" [level=3] [ref=e109]
+            - list [ref=e110]:
+              - listitem [ref=e111]: A MAL DEVE tomar decisões finais sobre conflitos dentro de seu escopo
+              - listitem [ref=e112]: A MAL NÃO DEVE comunicar resultados diretamente aos usuários
+              - listitem [ref=e113]: O OIF NÃO DEVE tentar arbitragem; DEVE apenas explicar resultados da MAL
+              - listitem [ref=e114]:
+                - text: "O OIF DEVE renderizar todos os resultados MAL usando um Template de Explicação de Arbitragem que inclua pelo menos:"
+                - list [ref=e115]:
+                  - listitem [ref=e116]: decision_id
+                  - listitem [ref=e117]: outcome
+                  - listitem [ref=e118]: winner/losers (se aplicável)
+                  - listitem [ref=e119]: precedence_applied
+                  - listitem [ref=e120]: epistemic_rationale com moc_nodes citados
+              - listitem [ref=e121]: O MEF DEVE persistir todas as decisões MAL como Registros de Decisão imutáveis
+              - listitem [ref=e122]: O MOC DEVE fornecer configuração de política mas NÃO DEVE sobrescrever decisões MAL
+            - heading "Requisitos de Entrada Normalizada" [level=3] [ref=e123]
+            - paragraph [ref=e124]: "Todo Evento de Arbitragem DEVE conter:"
+            - list [ref=e125]:
+              - listitem [ref=e126]:
+                - strong [ref=e127]: event_id
+                - text: ": Identificador único para a solicitação de arbitragem"
+              - listitem [ref=e128]:
+                - strong [ref=e129]: event_type
+                - text: ": Um de {H1, H2, H3} indicando classificação do conflito"
+              - listitem [ref=e130]:
+                - strong [ref=e131]: candidates
+                - text: ": Array de referências UKI conflitantes com metadados completos"
+              - listitem [ref=e132]:
+                - strong [ref=e133]: user_moc_context
+                - text: ": Claims hierárquicos e níveis de autoridade do usuário"
+              - listitem [ref=e134]:
+                - strong [ref=e135]: operation
+                - text: ": Tipo de operação solicitada (read/enrich/promote)"
+              - listitem [ref=e136]:
+                - strong [ref=e137]: policy_ref
+                - text: ": Referência opcional a política de arbitragem MOC específica"
+            - heading "Hierarquia de Política de Precedência" [level=3] [ref=e138]
+            - paragraph [ref=e139]: A MAL DEVE aplicar regras de precedência conforme configurado no MOC.
+            - paragraph [ref=e140]: Se policy_ref for fornecido no Evento de Arbitragem, a MAL DEVE resolver usando a política referenciada do MOC.
+            - paragraph [ref=e141]: Se ausente, a MAL PODE usar sua precedência padrão canônica (P1–P6).
+            - paragraph [ref=e142]: Organizações DEVEM sempre configurar políticas de arbitragem no MOC para sobrescrever padrões.
+            - paragraph [ref=e143]: "Ordem de precedência padrão canônica:"
+            - list [ref=e144]:
+              - listitem [ref=e145]:
+                - strong [ref=e146]: P1 Peso de Autoridade
+                - text: ": Nó de autoridade superior na hierarquia MOC vence"
+              - listitem [ref=e147]:
+                - strong [ref=e148]: P2 Especificidade de Escopo
+                - text: ": Escopo mais específico vence para instruções locais; escopo mais amplo vence para regras globais obrigatórias"
+              - listitem [ref=e149]:
+                - strong [ref=e150]: P3 Nível de Maturidade
+                - text: ": validated > endorsed > draft/experimental"
+              - listitem [ref=e151]:
+                - strong [ref=e152]: P4 Recência Temporal
+                - text: ": Versão mais recente vence se não violar regras de ciclo de vida"
+              - listitem [ref=e153]:
+                - strong [ref=e154]: P5 Densidade de Evidência
+                - text: ": UKI com mais links de evidência MEF e referências"
+              - listitem [ref=e155]:
+                - strong [ref=e156]: P6 Fallback Determinístico
+                - text: ": Comparação lexicográfica de identificador UKI"
+            - heading "Resultados de Decisão" [level=3] [ref=e157]
+            - paragraph [ref=e158]: "A MAL DEVE produzir um de quatro resultados:"
+            - list [ref=e159]:
+              - listitem [ref=e160]:
+                - strong [ref=e161]: winner
+                - text: ": UKI único escolhido como autoritativo"
+              - listitem [ref=e162]:
+                - strong [ref=e163]: coexist
+                - text: ": Múltiplos UKIs válidos através de particionamento de escopo"
+              - listitem [ref=e164]:
+                - strong [ref=e165]: reject_all
+                - text: ": Nenhum satisfaz requisitos de política"
+              - listitem [ref=e166]:
+                - strong [ref=e167]: defer
+                - text: ": Requer sobrescrita humana ou escalação"
+            - heading "Requisitos de Persistência e Comunicação" [level=3] [ref=e168]
+            - paragraph [ref=e169]: A MAL NÃO DEVE introduzir termos ontológicos fora do MOC.
+            - paragraph [ref=e170]: "Todos os resultados devem referenciar campos de ontologia existentes:"
+            - list [ref=e171]:
+              - listitem [ref=e172]: scope_ref (particionamento)
+              - listitem [ref=e173]: authority_ref (hierarquia de autoridade)
+              - listitem [ref=e174]: lifecycle_ref (regras de promoção/depreciação)
+            - paragraph [ref=e175]: Relacionamentos (conflicts_with, supersedes) DEVEM ser persistidos no MEF, sempre citando referências MOC.
+            - list [ref=e176]:
+              - listitem [ref=e177]: O MEF DEVE armazenar Registros de Decisão com relacionamentos de conflito usando termos ontológicos MOC
+              - listitem [ref=e178]: O OIF DEVE receber mensagens estruturadas para explicar decisões usando Templates de Explicação de Arbitragem
+              - listitem [ref=e179]: "Templates de Explicação de Arbitragem DEVEM incluir campos mínimos obrigatórios: decision_id, outcome, winner/losers, precedence_applied, epistemic_rationale com moc_nodes citados"
+              - listitem [ref=e180]: Todas as decisões DEVEM incluir justificativa epistêmica referenciando nós MOC e evidência MEF
+            - heading "Restrições de Tempo e Consistência" [level=3] [ref=e181]
+            - list [ref=e182]:
+              - listitem [ref=e183]: A MAL DEVE completar arbitragem dentro de arbitration_timeout configurado no MOC
+              - listitem [ref=e184]:
+                - text: "Se a MAL não puder decidir dentro do arbitration_timeout configurado, o ZOF DEVE aplicar o resultado padrão seguro:"
+                - list [ref=e185]:
+                  - listitem [ref=e186]: Outcome = no enrich
+                  - listitem [ref=e187]: Status = pending arbitration
+              - listitem [ref=e188]: O OIF DEVE notificar o usuário que a arbitragem está pendente, incluindo instruções de escalação do MOC se disponíveis
+              - listitem [ref=e189]: Registros de Decisão DEVEM ser imutáveis uma vez persistidos
+            - separator [ref=e190]
+            - heading "5. Interoperabilidade" [level=2] [ref=e191]
+            - list [ref=e192]:
+              - listitem [ref=e193]:
+                - strong [ref=e194]: MEF (Matrix Embedding Framework)
+                - text: ": Persiste Registros de Decisão como trilha de auditoria imutável"
+              - listitem [ref=e195]:
+                - strong [ref=e196]: ZOF (Zion Orchestration Framework)
+                - text: ": Detecta condições H1/H2/H3 e invoca MAL com Eventos de Arbitragem"
+              - listitem [ref=e197]:
+                - strong [ref=e198]: OIF (Operator Intelligence Framework)
+                - text: ": Renderiza decisões MAL aos usuários via templates de Explicação de Arbitragem"
+              - listitem [ref=e199]:
+                - strong [ref=e200]: MOC (Matrix Ontology Catalog)
+                - text: ": Fornece políticas de arbitragem e configuração de regras de precedência"
+              - listitem [ref=e201]:
+                - strong [ref=e202]: MEP (Matrix Epistemic Principle)
+                - text: ": Orienta geração de justificativa epistêmica e garante princípios de autoridade derivada"
+            - separator [ref=e203]
+            - heading "6. Convenções e Exemplos" [level=2] [ref=e204]
+            - paragraph [ref=e205]:
+              - text: Todos os exemplos neste documento são
+              - strong [ref=e206]: meramente ilustrativos
+              - text: e não definem comportamento normativo.
+              - text: A semântica normativa (escopos, governança, arquétipos, critérios de enriquecimento) é sempre derivada do
+              - strong [ref=e207]: MOC (Matrix Ontology Catalog)
+              - text: de cada organização.
+              - text: Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos contextos locais, mas NÃO DEVEM ser tratados como obrigações no nível do protocolo.
+            - separator [ref=e208]
+            - heading "7. Exemplos Ilustrativos (Apêndice)" [level=2] [ref=e209]
+            - blockquote [ref=e210]:
+              - paragraph [ref=e211]:
+                - strong [ref=e212]: Exemplo (Informativo, Dependente do MOC)
+            - heading "Arbitragem de Conflito Horizontal (H1)" [level=3] [ref=e213]:
+              - strong [ref=e214]: Arbitragem de Conflito Horizontal (H1)
+            - generic [ref=e215]:
+              - generic [ref=e216]: yaml
+              - code [ref=e218]:
+                - code [ref=e219]:
+                  - generic [ref=e220]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e221]: "arbitration_event:"
+                  - generic [ref=e222]: "event_id: \"mal-evt-20250826-001\""
+                  - generic [ref=e223]: "event_type: \"H1\""
+                  - generic [ref=e224]: "conflict_description: \"Duas regras de segurança de escopo equivalente em conflito\""
+                  - generic [ref=e226]: "candidates:"
+                  - generic [ref=e227]: "- uki_ref: \"uki:squad-x:rule:retencao-dados-30d\""
+                  - generic [ref=e228]: "scope_ref: \"squad-x\""
+                  - generic [ref=e229]: "domain_ref: \"security\""
+                  - generic [ref=e230]: "type_ref: \"rule\""
+                  - generic [ref=e231]: "maturity_level: \"validated\""
+                  - generic [ref=e232]: "version: \"1.2.0\""
+                  - generic [ref=e233]: "evidence_refs: [\"uki:org:policy:lgpd-compliance\", \"doc:logs-auditoria-2024\"]"
+                  - generic [ref=e235]: "- uki_ref: \"uki:squad-x:rule:retencao-dados-7d\""
+                  - generic [ref=e236]: "scope_ref: \"squad-x\""
+                  - generic [ref=e237]: "domain_ref: \"security\""
+                  - generic [ref=e238]: "type_ref: \"rule\""
+                  - generic [ref=e239]: "maturity_level: \"endorsed\""
+                  - generic [ref=e240]: "version: \"2.0.0\""
+                  - generic [ref=e241]: "evidence_refs: [\"uki:org:policy:minimizacao-dados\"]"
+                  - generic [ref=e243]: "user_moc_context:"
+                  - generic [ref=e244]: "scopes: [\"squad-x\", \"tribe-alpha\", \"organization\"]"
+                  - generic [ref=e245]: "authority_level: \"squad_lead\""
+                  - generic [ref=e247]: "operation: \"enrich\""
+                  - generic [ref=e248]: "decision_record:"
+                  - generic [ref=e249]: "decision_id: \"mal-dec-20250826-h1-001\""
+                  - generic [ref=e250]: "outcome: \"winner\""
+                  - generic [ref=e252]: "winner: \"uki:squad-x:rule:retencao-dados-30d\""
+                  - generic [ref=e253]: "losers: [\"uki:squad-x:rule:retencao-dados-7d\"]"
+                  - generic [ref=e255]: "precedence_applied:"
+                  - generic [ref=e256]: "- \"P3_maturity\": \"validated > endorsed\""
+                  - generic [ref=e257]: "- \"P5_evidence\": \"Conformidade LGPD supera minimização de dados em contexto de segurança\""
+                  - generic [ref=e259]: "epistemic_rationale:"
+                  - generic [ref=e260]: "summary: \"Maturidade validada e evidência regulatória mais forte\""
+                  - generic [ref=e261]: "reasoning: |"
+                  - generic [ref=e262]: Enquanto ambos UKIs operam em escopo equivalente de squad, a regra de
+                  - generic [ref=e263]: retenção de 30 dias demonstra maior maturidade epistemológica e evidência
+                  - generic [ref=e264]: regulatória mais forte ligada aos requisitos de conformidade LGPD.
+              - button "Copiar código" [ref=e265]:
+                - img [ref=e266]
+            - heading "Arbitragem de Enriquecimento Concorrente (H2)" [level=3] [ref=e268]:
+              - strong [ref=e269]: Arbitragem de Enriquecimento Concorrente (H2)
+            - generic [ref=e270]:
+              - generic [ref=e271]: yaml
+              - code [ref=e273]:
+                - code [ref=e274]:
+                  - generic [ref=e275]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e276]: "arbitration_event:"
+                  - generic [ref=e277]: "event_id: \"mal-evt-20250826-002\""
+                  - generic [ref=e278]: "event_type: \"H2\""
+                  - generic [ref=e279]: "conflict_description: \"Tentativas simultâneas de enriquecimento em padrões de autenticação\""
+                  - generic [ref=e280]: "decision_record:"
+                  - generic [ref=e281]: "decision_id: \"mal-dec-20250826-h2-001\""
+                  - generic [ref=e282]: "outcome: \"winner\""
+                  - generic [ref=e284]: "precedence_applied:"
+                  - generic [ref=e285]: "- \"P1_authority\": \"tech_lead > developer\""
+                  - generic [ref=e287]: "actions:"
+                  - generic [ref=e288]: "- \"allow_enrich:zof-auth-jwt-implementation-002\""
+                  - generic [ref=e289]: "- \"defer_enrich:zof-auth-jwt-implementation-001\""
+                  - generic [ref=e291]: "epistemic_rationale:"
+                  - generic [ref=e292]: "summary: \"Precedência de autoridade superior em cenário concorrente\""
+              - button "Copiar código" [ref=e293]:
+                - img [ref=e294]
+            - heading "Arbitragem de Contenção de Promoção (H3)" [level=3] [ref=e296]:
+              - strong [ref=e297]: Arbitragem de Contenção de Promoção (H3)
+            - generic [ref=e298]:
+              - generic [ref=e299]: yaml
+              - code [ref=e301]:
+                - code [ref=e302]:
+                  - generic [ref=e303]: "# --- Exemplo Ilustrativo ---"
+                  - generic [ref=e304]: "arbitration_event:"
+                  - generic [ref=e305]: "event_id: \"mal-evt-20250826-003\""
+                  - generic [ref=e306]: "event_type: \"H3\""
+                  - generic [ref=e307]: "conflict_description: \"Propostas de promoção concorrentes ao nível organizacional\""
+                  - generic [ref=e308]: "decision_record:"
+                  - generic [ref=e309]: "decision_id: \"mal-dec-20250826-h3-001\""
+                  - generic [ref=e310]: "outcome: \"winner\""
+                  - generic [ref=e312]: "winner: \"uki:tribe-alpha:guideline:padrao-code-review\""
+                  - generic [ref=e314]: "precedence_applied:"
+                  - generic [ref=e315]: "- \"P1_authority\": \"tribe_lead > squad_lead para promoções org-level\""
+                  - generic [ref=e316]: "- \"P2_scope\": \"nível tribe mais próximo ao org-level que squad-level\""
+                  - generic [ref=e317]: "- \"P5_evidence\": \"Auditoria de conformidade externa tem peso maior\""
+                  - generic [ref=e319]: "epistemic_rationale:"
+                  - generic [ref=e320]: "summary: \"Convergência de autoridade, proximidade de escopo e evidência de conformidade\""
+              - button "Copiar código" [ref=e321]:
+                - img [ref=e322]
+            - separator [ref=e324]
+            - heading "8. Interfaces Mínimas MAL (Normativo)" [level=2] [ref=e325]
+            - heading "Schema de Entrada de Evento de Arbitragem" [level=3] [ref=e326]
+            - generic [ref=e327]:
+              - generic [ref=e328]: yaml
+              - code [ref=e330]:
+                - code [ref=e331]:
+                  - generic [ref=e332]: "# --- Interface Normativa ---"
+                  - generic [ref=e333]: "arbitration_event:"
+                  - generic [ref=e334]: "event_id: string # Obrigatório: Identificador único de arbitragem"
+                  - generic [ref=e335]: "event_type: enum[H1, H2, H3] # Obrigatório: Classificação do conflito"
+                  - generic [ref=e336]: "timestamp: ISO8601 # Obrigatório: Timestamp de criação do evento"
+                  - generic [ref=e338]: "candidates: array # Obrigatório: Entidades conflitantes"
+                  - generic [ref=e339]: "- uki_ref: string # Identificador UKI"
+                  - generic [ref=e340]: "scope_ref: string # Referência de escopo MOC"
+                  - generic [ref=e341]: "domain_ref: string # Referência de domínio MOC"
+                  - generic [ref=e342]: "maturity_level: string # Classificação de maturidade"
+                  - generic [ref=e343]: "evidence_refs: array[string] # Referências de evidência suporte"
+                  - generic [ref=e345]: "user_moc_context: # Obrigatório: Contexto do usuário"
+                  - generic [ref=e346]: "scopes: array[string] # Hierarquia de escopo do usuário"
+                  - generic [ref=e347]: "authority_level: string # Designação de autoridade do usuário"
+                  - generic [ref=e349]: "operation: enum[read, enrich, promote] # Obrigatório: Operação solicitada"
+                  - generic [ref=e350]: "policy_ref: string # Opcional: Política de arbitragem específica"
+              - button "Copiar código" [ref=e351]:
+                - img [ref=e352]
+            - heading "Schema de Saída de Registro de Decisão" [level=3] [ref=e354]
+            - generic [ref=e355]:
+              - generic [ref=e356]: yaml
+              - code [ref=e358]:
+                - code [ref=e359]:
+                  - generic [ref=e360]: "# --- Interface Normativa ---"
+                  - generic [ref=e361]: "decision_record:"
+                  - generic [ref=e362]: "decision_id: string # Obrigatório: Identificador único da decisão"
+                  - generic [ref=e363]: "event_ref: string # Obrigatório: Referência ao evento de arbitragem"
+                  - generic [ref=e364]: "outcome: enum[winner, coexist, reject_all, defer] # Obrigatório: Resultado da decisão"
+                  - generic [ref=e366]: "winner: string # Condicional: UKI escolhido (se outcome=winner)"
+                  - generic [ref=e367]: "precedence_applied: array # Obrigatório: Regras de precedência aplicadas"
+                  - generic [ref=e369]: "epistemic_rationale: # Obrigatório: Explicação alinhada ao MEP"
+                  - generic [ref=e370]: "summary: string # Justificativa breve da decisão"
+                  - generic [ref=e371]: "reasoning: string # Explicação detalhada"
+                  - generic [ref=e372]: "references:"
+                  - generic [ref=e373]: "moc_nodes: array[string] # Nós MOC referenciados"
+                  - generic [ref=e374]: "mef_evidence: array[string] # Evidência MEF referenciada"
+                  - generic [ref=e376]: "audit: # Obrigatório: Informações de auditoria"
+                  - generic [ref=e377]: "decided_at: ISO8601 # Timestamp da decisão"
+                  - generic [ref=e378]: "decided_by: string # Identificador da versão MAL"
+                  - generic [ref=e379]: "timeout_used_ms: integer # Tempo de processamento usado"
+              - button "Copiar código" [ref=e380]:
+                - img [ref=e381]
+        - complementary [ref=e383]:
+          - generic [ref=e385]:
+            - heading "Sumário" [level=3] [ref=e387]
+            - navigation "Table of Contents":
+              - list
+            - generic [ref=e391]: 0% lido
+  - contentinfo [ref=e393]:
+    - generic [ref=e395]:
+      - paragraph [ref=e396]:
+        - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+        - link "Casheiro" [ref=e397] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e398]: © 2025 Casheiro. Todos os direitos reservados.
+```

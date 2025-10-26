@@ -1,0 +1,108 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Go to homepage" [ref=e8] [cursor=pointer]:
+          - /url: /en
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentation" [ref=e14] [cursor=pointer]:
+            - /url: /en/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /en/manual
+          - link "Resources" [ref=e16] [cursor=pointer]:
+            - /url: /en/resources
+        - generic [ref=e17]:
+          - link "Visit GitHub repository" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Select language" [ref=e20]:
+            - generic [ref=e22]: EN
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e28]:
+        - heading "Getting Started" [level=1] [ref=e31]
+        - navigation "Breadcrumb" [ref=e32]:
+          - link "Home" [ref=e33] [cursor=pointer]:
+            - /url: /en
+            - text: Home
+          - link "Documentação" [ref=e36] [cursor=pointer]:
+            - /url: /en/docs
+            - text: Documentação
+          - generic [ref=e39]: Getting Started
+      - generic [ref=e41]:
+        - complementary [ref=e42]:
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - heading "Navigation" [level=3] [ref=e47]
+                - generic [ref=e48]:
+                  - button "Expand all" [ref=e49]
+                  - button "Collapse all" [ref=e51]
+              - navigation [ref=e54]:
+                - link "Quick Start Guide" [ref=e57] [cursor=pointer]:
+                  - /url: /en/docs/quickstart
+                  - text: Quick Start Guide
+                - link "Implementation Guide" [ref=e61] [cursor=pointer]:
+                  - /url: /en/docs/implementation
+                  - text: Implementation Guide
+                - link "Integration" [ref=e65] [cursor=pointer]:
+                  - /url: /en/docs/integration
+                  - text: Integration
+                - link "Glossary" [ref=e69] [cursor=pointer]:
+                  - /url: /en/docs/glossary
+                  - text: Glossary
+                - link "Protocol Specification" [ref=e73] [cursor=pointer]:
+                  - /url: /en/docs/protocol
+                  - text: Protocol Specification
+                - generic [ref=e77]:
+                  - button [ref=e78]
+                  - link "Frameworks" [ref=e80] [cursor=pointer]:
+                    - /url: /en/docs/frameworks
+                    - text: Frameworks
+                - link "Matrix Epistemic Principle" [ref=e84] [cursor=pointer]:
+                  - /url: /en/docs/mep
+                  - text: Matrix Epistemic Principle
+                - generic [ref=e88]:
+                  - button [ref=e89]
+                  - link "Complete Manual" [ref=e91] [cursor=pointer]:
+                    - /url: /en/docs/manual
+                    - text: Complete Manual
+                - generic [ref=e95]:
+                  - button [ref=e96]
+                  - link "Examples and Case Studies" [ref=e98] [cursor=pointer]:
+                    - /url: /en/docs/examples
+                    - text: Examples and Case Studies
+            - generic [ref=e100]:
+              - heading "Quick Links" [level=3] [ref=e102]
+              - navigation [ref=e104]:
+                - link "Quick Start" [ref=e105] [cursor=pointer]:
+                  - /url: /en/docs/quickstart
+                  - text: Quick Start
+                - link "Implementation" [ref=e107] [cursor=pointer]:
+                  - /url: /en/docs/implementation
+                  - text: Implementation
+                - link "Frameworks" [ref=e109] [cursor=pointer]:
+                  - /url: /en/docs/frameworks
+                  - text: Frameworks
+                - link "Downloads" [ref=e111] [cursor=pointer]:
+                  - /url: /en/resources
+                  - text: Downloads
+        - main [ref=e113]:
+          - generic [ref=e116]:
+            - heading "Content not found" [level=2] [ref=e118]
+            - paragraph [ref=e119]: The requested content was not found in the documentation.
+            - link "Back to Documentation" [ref=e120] [cursor=pointer]:
+              - /url: /en/docs
+              - text: Back to Documentation
+  - contentinfo [ref=e122]:
+    - generic [ref=e124]:
+      - paragraph [ref=e125]:
+        - text: Matrix Protocol - Protocol conceived, created and maintained by
+        - link "Casheiro" [ref=e126] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e127]: © 2025 Casheiro. All rights reserved.
+```

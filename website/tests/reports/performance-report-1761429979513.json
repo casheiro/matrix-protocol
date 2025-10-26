@@ -1,0 +1,231 @@
+{
+  "timestamp": "2025-10-25T22:06:10.235Z",
+  "baseUrl": "http://localhost:3000",
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "tests": [
+    {
+      "url": "/",
+      "fullUrl": "http://localhost:3000/",
+      "timestamp": "2025-10-25T22:06:11.291Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 96,
+        "bestPractices": 95,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 923,
+        "largestContentfulPaint": 1449,
+        "speedIndex": 1484,
+        "totalBlockingTime": 0,
+        "cumulativeLayoutShift": 0.028541358612908064
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/",
+      "fullUrl": "http://localhost:3000/pt/",
+      "timestamp": "2025-10-25T22:06:12.293Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 97,
+        "bestPractices": 96,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 1101,
+        "largestContentfulPaint": 1469,
+        "speedIndex": 1231,
+        "totalBlockingTime": 6,
+        "cumulativeLayoutShift": 0.04696931847646612
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/",
+      "fullUrl": "http://localhost:3000/en/",
+      "timestamp": "2025-10-25T22:06:13.295Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 97,
+        "bestPractices": 98,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 927,
+        "largestContentfulPaint": 1336,
+        "speedIndex": 1147,
+        "totalBlockingTime": 41,
+        "cumulativeLayoutShift": 0.016839874223596007
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs",
+      "fullUrl": "http://localhost:3000/pt/docs",
+      "timestamp": "2025-10-25T22:06:14.297Z",
+      "scores": {
+        "performance": 93,
+        "accessibility": 99,
+        "bestPractices": 93,
+        "seo": 98
+      },
+      "metrics": {
+        "firstContentfulPaint": 924,
+        "largestContentfulPaint": 1732,
+        "speedIndex": 1122,
+        "totalBlockingTime": 76,
+        "cumulativeLayoutShift": 0.07780072973336183
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs",
+      "fullUrl": "http://localhost:3000/en/docs",
+      "timestamp": "2025-10-25T22:06:15.298Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 96,
+        "bestPractices": 93,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 948,
+        "largestContentfulPaint": 1560,
+        "speedIndex": 1212,
+        "totalBlockingTime": 73,
+        "cumulativeLayoutShift": 0.030534429759088356
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs/frameworks/mef",
+      "fullUrl": "http://localhost:3000/pt/docs/frameworks/mef",
+      "timestamp": "2025-10-25T22:06:16.300Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 99,
+        "bestPractices": 94,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 878,
+        "largestContentfulPaint": 1770,
+        "speedIndex": 1011,
+        "totalBlockingTime": 36,
+        "cumulativeLayoutShift": 0.06163782802168462
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs/frameworks/mef",
+      "fullUrl": "http://localhost:3000/en/docs/frameworks/mef",
+      "timestamp": "2025-10-25T22:06:17.301Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 96,
+        "bestPractices": 96,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 1056,
+        "largestContentfulPaint": 1620,
+        "speedIndex": 1466,
+        "totalBlockingTime": 88,
+        "cumulativeLayoutShift": 0.05122477479838172
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs/examples",
+      "fullUrl": "http://localhost:3000/pt/docs/examples",
+      "timestamp": "2025-10-25T22:06:18.303Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 98,
+        "bestPractices": 93,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 1193,
+        "largestContentfulPaint": 1220,
+        "speedIndex": 1400,
+        "totalBlockingTime": 27,
+        "cumulativeLayoutShift": 0.0243085349892069
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs/examples",
+      "fullUrl": "http://localhost:3000/en/docs/examples",
+      "timestamp": "2025-10-25T22:06:19.304Z",
+      "scores": {
+        "performance": 94,
+        "accessibility": 99,
+        "bestPractices": 97,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 1141,
+        "largestContentfulPaint": 1779,
+        "speedIndex": 1094,
+        "totalBlockingTime": 66,
+        "cumulativeLayoutShift": 0.04191191128457649
+      },
+      "passed": true,
+      "issues": []
+    }
+  ],
+  "bundleAnalysis": {
+    "totalSizeKB": 16384,
+    "threshold": 500,
+    "passed": false,
+    "files": [
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/BpKfv3IO.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/765gH0lE.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/8tGnnVDC.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/oTG82Wo1.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/DHGhJlvc.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/B1uSc7YH.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/CXtECtnM.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/Cq-S5nSR.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/DFQXde-d.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/CTWiQX6C.js"
+    ]
+  },
+  "loadingTimes": [
+    {
+      "url": "/",
+      "loadTimeMs": 79,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    },
+    {
+      "url": "/pt/",
+      "loadTimeMs": 75,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    },
+    {
+      "url": "/en/",
+      "loadTimeMs": 39,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    }
+  ]
+}

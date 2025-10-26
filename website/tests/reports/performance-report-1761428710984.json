@@ -1,0 +1,231 @@
+{
+  "timestamp": "2025-10-25T21:45:01.586Z",
+  "baseUrl": "http://localhost:3000",
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "tests": [
+    {
+      "url": "/",
+      "fullUrl": "http://localhost:3000/",
+      "timestamp": "2025-10-25T21:45:02.633Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 97,
+        "bestPractices": 92,
+        "seo": 98
+      },
+      "metrics": {
+        "firstContentfulPaint": 1155,
+        "largestContentfulPaint": 1212,
+        "speedIndex": 1121,
+        "totalBlockingTime": 34,
+        "cumulativeLayoutShift": 0.007567291967887191
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/",
+      "fullUrl": "http://localhost:3000/pt/",
+      "timestamp": "2025-10-25T21:45:03.635Z",
+      "scores": {
+        "performance": 93,
+        "accessibility": 98,
+        "bestPractices": 95,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 1121,
+        "largestContentfulPaint": 1378,
+        "speedIndex": 1482,
+        "totalBlockingTime": 63,
+        "cumulativeLayoutShift": 0.052300784765002044
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/",
+      "fullUrl": "http://localhost:3000/en/",
+      "timestamp": "2025-10-25T21:45:04.636Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 99,
+        "bestPractices": 93,
+        "seo": 98
+      },
+      "metrics": {
+        "firstContentfulPaint": 832,
+        "largestContentfulPaint": 1733,
+        "speedIndex": 1237,
+        "totalBlockingTime": 38,
+        "cumulativeLayoutShift": 0.04781640025713279
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs",
+      "fullUrl": "http://localhost:3000/pt/docs",
+      "timestamp": "2025-10-25T21:45:05.638Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 99,
+        "bestPractices": 91,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 1043,
+        "largestContentfulPaint": 1622,
+        "speedIndex": 1079,
+        "totalBlockingTime": 40,
+        "cumulativeLayoutShift": 0.09137593092204896
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs",
+      "fullUrl": "http://localhost:3000/en/docs",
+      "timestamp": "2025-10-25T21:45:06.639Z",
+      "scores": {
+        "performance": 92,
+        "accessibility": 96,
+        "bestPractices": 95,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 1119,
+        "largestContentfulPaint": 1776,
+        "speedIndex": 1213,
+        "totalBlockingTime": 88,
+        "cumulativeLayoutShift": 0.08561262288383054
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs/frameworks/mef",
+      "fullUrl": "http://localhost:3000/pt/docs/frameworks/mef",
+      "timestamp": "2025-10-25T21:45:07.640Z",
+      "scores": {
+        "performance": 94,
+        "accessibility": 96,
+        "bestPractices": 95,
+        "seo": 98
+      },
+      "metrics": {
+        "firstContentfulPaint": 1017,
+        "largestContentfulPaint": 1644,
+        "speedIndex": 1093,
+        "totalBlockingTime": 39,
+        "cumulativeLayoutShift": 0.0599487402679187
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs/frameworks/mef",
+      "fullUrl": "http://localhost:3000/en/docs/frameworks/mef",
+      "timestamp": "2025-10-25T21:45:08.642Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 97,
+        "bestPractices": 94,
+        "seo": 97
+      },
+      "metrics": {
+        "firstContentfulPaint": 982,
+        "largestContentfulPaint": 1689,
+        "speedIndex": 1347,
+        "totalBlockingTime": 43,
+        "cumulativeLayoutShift": 0.005826649851531307
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/pt/docs/examples",
+      "fullUrl": "http://localhost:3000/pt/docs/examples",
+      "timestamp": "2025-10-25T21:45:09.643Z",
+      "scores": {
+        "performance": 93,
+        "accessibility": 98,
+        "bestPractices": 94,
+        "seo": 99
+      },
+      "metrics": {
+        "firstContentfulPaint": 857,
+        "largestContentfulPaint": 1557,
+        "speedIndex": 1380,
+        "totalBlockingTime": 54,
+        "cumulativeLayoutShift": 0.051985380614560775
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "url": "/en/docs/examples",
+      "fullUrl": "http://localhost:3000/en/docs/examples",
+      "timestamp": "2025-10-25T21:45:10.644Z",
+      "scores": {
+        "performance": 92,
+        "accessibility": 97,
+        "bestPractices": 97,
+        "seo": 98
+      },
+      "metrics": {
+        "firstContentfulPaint": 977,
+        "largestContentfulPaint": 1309,
+        "speedIndex": 1162,
+        "totalBlockingTime": 28,
+        "cumulativeLayoutShift": 0.02382244047514681
+      },
+      "passed": true,
+      "issues": []
+    }
+  ],
+  "bundleAnalysis": {
+    "totalSizeKB": 16384,
+    "threshold": 500,
+    "passed": false,
+    "files": [
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/BpKfv3IO.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/765gH0lE.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/8tGnnVDC.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/oTG82Wo1.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/DHGhJlvc.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/B1uSc7YH.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/CXtECtnM.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/Cq-S5nSR.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/DFQXde-d.js",
+      "/home/neto/projects/matrix-protocol/website/.output/public/_nuxt/CTWiQX6C.js"
+    ]
+  },
+  "loadingTimes": [
+    {
+      "url": "/",
+      "loadTimeMs": 217,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    },
+    {
+      "url": "/pt/",
+      "loadTimeMs": 63,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    },
+    {
+      "url": "/en/",
+      "loadTimeMs": 42,
+      "threshold": 2000,
+      "passed": true,
+      "status": 200
+    }
+  ]
+}

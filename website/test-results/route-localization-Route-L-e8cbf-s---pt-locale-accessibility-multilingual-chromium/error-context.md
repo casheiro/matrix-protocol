@@ -1,0 +1,243 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+          - /url: /pt
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentação" [ref=e14] [cursor=pointer]:
+            - /url: /pt/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /pt/manual
+          - link "Recursos" [ref=e16] [cursor=pointer]:
+            - /url: /pt/resources
+        - generic [ref=e17]:
+          - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Selecionar idioma" [ref=e20]:
+            - generic [ref=e22]: PT
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Frameworks Matrix Protocol" [level=1] [ref=e28]
+        - paragraph [ref=e29]: Explore os cinco frameworks operacionais que compõem o protocolo
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - heading "Oracle Layer" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Governança estratégica e gestão de base de conhecimento
+          - generic [ref=e35]:
+            - heading "Zion Layer" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Workflow conceitual e orquestração de equipes híbridas
+          - generic [ref=e38]:
+            - heading "Operator Layer" [level=3] [ref=e39]
+            - paragraph [ref=e40]: Execução prática e implementação por equipes de desenvolvimento
+        - generic [ref=e41]:
+          - link "Começar Implementação" [ref=e42] [cursor=pointer]:
+            - /url: /pt/quickstart
+            - text: Começar Implementação
+          - link "Ver Recursos" [ref=e44] [cursor=pointer]:
+            - /url: /pt/resources
+            - text: Ver Recursos
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - heading "Princípio Epistemológico" [level=2] [ref=e49]
+          - paragraph [ref=e50]: O manifesto que define como o conhecimento é tratado no protocolo
+        - generic [ref=e54]:
+          - generic [ref=e56]: 📜
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "Matrix Epistemic Principle (MEP)" [level=3] [ref=e59]
+              - generic [ref=e60]: Manifesto
+            - paragraph [ref=e61]: O MEP estabelece os fundamentos filosóficos de como o conhecimento é estruturado, avaliado e promovido no Matrix Protocol. Diferentemente dos outros frameworks, é puramente conceitual.
+            - blockquote [ref=e62]: "\"O conhecimento é maleável; a autoridade é derivada; a explicabilidade é mandatória.\""
+            - generic [ref=e63]:
+              - link "Ler Manifesto Completo" [ref=e64] [cursor=pointer]:
+                - /url: /pt/mep
+                - text: Ler Manifesto Completo
+              - button "Ver Princípios" [ref=e66]: Ver Princípios
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: Oracle Layer
+          - heading "Camada Oracle" [level=2] [ref=e73]
+          - paragraph [ref=e74]: Governança estratégica e base de conhecimento que fundamenta todo o protocolo
+        - generic [ref=e75]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - img "MEF Logo" [ref=e81]
+              - generic [ref=e82]:
+                - heading "Matrix Embedding Framework" [level=3] [ref=e83]
+                - paragraph [ref=e84]: Estruturação de conhecimento versionado
+            - paragraph [ref=e85]: Framework para estruturação de conhecimento em UKIs versionadas, permitindo rastreabilidade e governança de conhecimento organizacional.
+            - generic [ref=e86]:
+              - heading "Características Principais" [level=4] [ref=e87]
+              - list [ref=e88]:
+                - listitem [ref=e89]:
+                  - generic [ref=e91]: Estruturas UKI (Units of Knowledge Interlinked)
+                - listitem [ref=e92]:
+                  - generic [ref=e94]: Versionamento semântico de conhecimento
+                - listitem [ref=e95]:
+                  - generic [ref=e97]: Elasticidade semântica entre contextos
+            - generic [ref=e98]:
+              - link "Ver Documentação" [ref=e99] [cursor=pointer]:
+                - /url: /pt/frameworks/mef
+              - link "Ver Exemplos" [ref=e100] [cursor=pointer]:
+                - /url: /pt/resources?framework=mef
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - img "MAL Logo" [ref=e106]
+              - generic [ref=e107]:
+                - heading "Matrix Arbiter Layer" [level=3] [ref=e108]
+                - paragraph [ref=e109]: Arbitragem de conflitos e concorrência
+            - paragraph [ref=e110]: Sistema de arbitragem que resolve conflitos entre conhecimentos e garante governança organizacional através de decisões auditáveis.
+            - generic [ref=e111]:
+              - heading "Características Principais" [level=4] [ref=e112]
+              - list [ref=e113]:
+                - listitem [ref=e114]:
+                  - generic [ref=e116]: Arbitragem inteligente de conflitos
+                - listitem [ref=e117]:
+                  - generic [ref=e119]: Resolução de concorrência de conhecimento
+                - listitem [ref=e120]:
+                  - generic [ref=e122]: Governança organizacional auditável
+            - generic [ref=e123]:
+              - link "Ver Documentação" [ref=e124] [cursor=pointer]:
+                - /url: /pt/frameworks/mal
+              - link "Ver Exemplos" [ref=e125] [cursor=pointer]:
+                - /url: /pt/resources?framework=mal
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: Zion Layer
+          - heading "Camada Zion" [level=2] [ref=e131]
+          - paragraph [ref=e132]: Orquestração de workflows conceituais para equipes híbridas humano-IA
+        - generic [ref=e133]:
+          - generic [ref=e136]:
+            - generic [ref=e137]:
+              - img "ZOF Logo" [ref=e139]
+              - generic [ref=e140]:
+                - heading "Zion Orchestration Framework" [level=3] [ref=e141]
+                - paragraph [ref=e142]: Workflows conceituais para equipes IA
+            - paragraph [ref=e143]: Orquestra workflows conceituais e coordena equipes híbridas humano-IA através de padrões de colaboração estruturados.
+            - generic [ref=e144]:
+              - heading "Características Principais" [level=4] [ref=e145]
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - generic [ref=e149]: Workflows conceituais estruturados
+                - listitem [ref=e150]:
+                  - generic [ref=e152]: Orquestração de equipes híbridas
+                - listitem [ref=e153]:
+                  - generic [ref=e155]: Padrões de colaboração humano-IA
+            - generic [ref=e156]:
+              - link "Ver Documentação" [ref=e157] [cursor=pointer]:
+                - /url: /pt/frameworks/zof
+              - link "Ver Exemplos" [ref=e158] [cursor=pointer]:
+                - /url: /pt/resources?framework=zof
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - img "MOC Logo" [ref=e164]
+              - generic [ref=e165]:
+                - heading "Matrix Ontology Catalog" [level=3] [ref=e166]
+                - paragraph [ref=e167]: Catálogo de hierarquias organizacionais
+            - paragraph [ref=e168]: Catálogo de hierarquias organizacionais que define taxonomias, ontologias e estruturas de governança adaptadas ao contexto.
+            - generic [ref=e169]:
+              - heading "Características Principais" [level=4] [ref=e170]
+              - list [ref=e171]:
+                - listitem [ref=e172]:
+                  - generic [ref=e174]: Hierarquias organizacionais flexíveis
+                - listitem [ref=e175]:
+                  - generic [ref=e177]: Ontologias de domínio específico
+                - listitem [ref=e178]:
+                  - generic [ref=e180]: Catálogo de padrões organizacionais
+            - generic [ref=e181]:
+              - link "Ver Documentação" [ref=e182] [cursor=pointer]:
+                - /url: /pt/frameworks/moc
+              - link "Ver Exemplos" [ref=e183] [cursor=pointer]:
+                - /url: /pt/resources?framework=moc
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - generic [ref=e187]: Operator Layer
+          - heading "Camada Operator" [level=2] [ref=e189]
+          - paragraph [ref=e190]: Execução prática e implementação por equipes de desenvolvimento
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - img "OIF Logo" [ref=e197]
+            - generic [ref=e198]:
+              - heading "Operator Intelligence Framework" [level=3] [ref=e199]
+              - paragraph [ref=e200]: Arquétipos de inteligência artificial
+          - paragraph [ref=e201]: Define arquétipos de inteligência artificial e padrões de interação para execução prática em equipes de desenvolvimento.
+          - generic [ref=e202]:
+            - heading "Características Principais" [level=4] [ref=e203]
+            - list [ref=e204]:
+              - listitem [ref=e205]:
+                - generic [ref=e207]: Arquétipos de IA especializados
+              - listitem [ref=e208]:
+                - generic [ref=e210]: Padrões de inteligência distribuída
+              - listitem [ref=e211]:
+                - generic [ref=e213]: Padrões de implementação prática
+          - generic [ref=e214]:
+            - link "Ver Documentação" [ref=e215] [cursor=pointer]:
+              - /url: /pt/frameworks/oif
+            - link "Ver Exemplos" [ref=e216] [cursor=pointer]:
+              - /url: /pt/resources?framework=oif
+      - generic [ref=e218]:
+        - generic [ref=e219]:
+          - heading "Como os Frameworks se Relacionam" [level=2] [ref=e220]
+          - paragraph [ref=e221]: Visualize as conexões e dependências entre os cinco frameworks operacionais organizados nas três camadas do protocolo.
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - heading "Fluxo de Interação" [level=3] [ref=e224]
+            - generic [ref=e225]:
+              - generic [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: "1"
+                - generic [ref=e228]:
+                  - heading "MEF → ZOF" [level=4] [ref=e229]
+                  - paragraph [ref=e230]: Conhecimento estruturado alimenta workflows
+              - generic [ref=e232] [cursor=pointer]:
+                - generic [ref=e233]: "2"
+                - generic [ref=e234]:
+                  - heading "ZOF → OIF" [level=4] [ref=e235]
+                  - paragraph [ref=e236]: Workflows coordenam arquétipos de IA
+              - generic [ref=e238] [cursor=pointer]:
+                - generic [ref=e239]: "3"
+                - generic [ref=e240]:
+                  - heading "MOC → Todos" [level=4] [ref=e241]
+                  - paragraph [ref=e242]: Ontologias governam estruturas organizacionais
+              - generic [ref=e244] [cursor=pointer]:
+                - generic [ref=e245]: "4"
+                - generic [ref=e246]:
+                  - heading "MAL arbitra" [level=4] [ref=e247]
+                  - paragraph [ref=e248]: Resolve conflitos entre todos os frameworks
+          - generic [ref=e251]:
+            - heading "Integração Completa" [level=4] [ref=e252]
+            - generic [ref=e253]:
+              - generic [ref=e254]:
+                - generic [ref=e255]: MEF
+                - generic [ref=e256]: MAL
+              - generic [ref=e257]: Oracle Layer
+              - generic [ref=e258]:
+                - generic [ref=e259]: ZOF
+                - generic [ref=e260]: MOC
+              - generic [ref=e261]: Zion Layer
+              - generic [ref=e263]: OIF
+              - generic [ref=e264]: Operator Layer
+      - generic [ref=e266]:
+        - heading "Comece a Usar o Matrix Protocol" [level=2] [ref=e267]
+        - paragraph [ref=e268]: Implemente colaboração humano-IA estruturada em sua organização
+        - generic [ref=e269]:
+          - link "Explorar Manifesto MEP" [ref=e270] [cursor=pointer]:
+            - /url: /pt/mep
+            - text: Explorar Manifesto MEP
+          - link "Ler Protocolo Completo" [ref=e272] [cursor=pointer]:
+            - /url: /pt/protocol
+            - text: Ler Protocolo Completo
+  - contentinfo [ref=e274]:
+    - generic [ref=e276]:
+      - paragraph [ref=e277]:
+        - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+        - link "Casheiro" [ref=e278] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e279]: © 2025 Casheiro. Todos os direitos reservados.
+```

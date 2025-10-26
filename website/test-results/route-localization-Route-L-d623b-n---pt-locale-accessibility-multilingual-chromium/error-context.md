@@ -1,0 +1,636 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Primary navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+          - /url: /pt
+          - generic [ref=e9]: Matrix Protocol
+        - generic [ref=e11]:
+          - button "Frameworks menu" [ref=e12]: Frameworks
+          - link "Documentação" [ref=e14] [cursor=pointer]:
+            - /url: /pt/protocol
+          - link "Manual" [ref=e15] [cursor=pointer]:
+            - /url: /pt/manual
+          - link "Recursos" [ref=e16] [cursor=pointer]:
+            - /url: /pt/resources
+        - generic [ref=e17]:
+          - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+            - /url: https://github.com/casheiro/matrix-protocol
+          - button "Selecionar idioma" [ref=e20]:
+            - generic [ref=e22]: PT
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e28]:
+        - heading "Guia de Implementação" [level=1] [ref=e31]
+        - navigation "Breadcrumb" [ref=e32]:
+          - link "Home" [ref=e33] [cursor=pointer]:
+            - /url: /pt
+            - text: Home
+          - link "Documentação" [ref=e36] [cursor=pointer]:
+            - /url: /pt/docs
+            - text: Documentação
+          - generic [ref=e39]: Implementation
+      - generic [ref=e41]:
+        - complementary [ref=e42]:
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - heading "Navegação" [level=3] [ref=e47]
+                - generic [ref=e48]:
+                  - button "Expandir todos" [ref=e49]
+                  - button "Recolher todos" [ref=e51]
+              - navigation [ref=e54]:
+                - link "Guia de Início Rápido" [ref=e57] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                  - text: Guia de Início Rápido
+                - link "Guia de Implementação" [ref=e61] [cursor=pointer]:
+                  - /url: /pt/docs/implementation
+                  - text: Guia de Implementação
+                - link "Integração" [ref=e65] [cursor=pointer]:
+                  - /url: /pt/docs/integration
+                  - text: Integração
+                - link "Glossário" [ref=e69] [cursor=pointer]:
+                  - /url: /pt/docs/glossary
+                  - text: Glossário
+                - link "Especificação do Protocolo" [ref=e73] [cursor=pointer]:
+                  - /url: /pt/docs/protocol
+                  - text: Especificação do Protocolo
+                - generic [ref=e77]:
+                  - button [ref=e78]
+                  - link "Frameworks" [ref=e80] [cursor=pointer]:
+                    - /url: /pt/docs/frameworks
+                    - text: Frameworks
+                - link "Princípio Epistemológico Matrix" [ref=e84] [cursor=pointer]:
+                  - /url: /pt/docs/mep
+                  - text: Princípio Epistemológico Matrix
+                - generic [ref=e88]:
+                  - button [ref=e89]
+                  - link "Manual Completo" [ref=e91] [cursor=pointer]:
+                    - /url: /pt/docs/manual
+                    - text: Manual Completo
+                - generic [ref=e95]:
+                  - button [ref=e96]
+                  - link "Exemplos e Casos de Estudo" [ref=e98] [cursor=pointer]:
+                    - /url: /pt/docs/examples
+                    - text: Exemplos e Casos de Estudo
+            - generic [ref=e100]:
+              - heading "Links Rápidos" [level=3] [ref=e102]
+              - navigation [ref=e104]:
+                - link "Início Rápido" [ref=e105] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                  - text: Início Rápido
+                - link "Implementação" [ref=e107] [cursor=pointer]:
+                  - /url: /pt/docs/implementation
+                  - text: Implementação
+                - link "Frameworks" [ref=e109] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks
+                  - text: Frameworks
+                - link "Downloads" [ref=e111] [cursor=pointer]:
+                  - /url: /pt/resources
+                  - text: Downloads
+        - main [ref=e113]:
+          - generic [ref=e115]:
+            - heading "Guia de Implementação - Matrix Protocol" [level=1] [ref=e116]
+            - paragraph [ref=e117]:
+              - strong [ref=e118]: "Versão:"
+              - text: v0.0.1 Beta
+              - strong [ref=e119]: Manual Técnico de Implementação Organizacional
+            - paragraph [ref=e120]:
+              - strong [ref=e121]: "Data:"
+              - text: Janeiro 2025
+              - strong [ref=e122]: "Protocolo:"
+              - text: Matrix Protocol (protocolo semântico para colaboração humano-IA)
+            - blockquote [ref=e123]:
+              - paragraph [ref=e124]:
+                - text: ⚠️
+                - strong [ref=e125]: IMPORTANTE
+                - text: ": Este é um resumo executivo do Manual Técnico de Implementação. Para detalhes completos, consulte o"
+                - link "Manual Completo" [ref=e126] [cursor=pointer]:
+                  - /url: /pt/docs/manual
+                - text: (4.600+ linhas, 15 capítulos).
+            - blockquote [ref=e127]:
+              - paragraph [ref=e128]:
+                - text: 🎯
+                - strong [ref=e129]: Objetivo
+                - text: ": Fornecer especificações técnicas, exemplos de configuração e guias de implementação para os frameworks semânticos que compõem o Matrix Protocol (MEF, ZOF, MAL, OIF)."
+            - blockquote [ref=e130]:
+              - paragraph [ref=e131]:
+                - text: 🚀
+                - strong [ref=e132]: Para Implementação Rápida
+                - text: ": Se você quer começar hoje, use o"
+                - link "Guia de Início Rápido" [ref=e133] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                - text: .
+            - separator [ref=e134]
+            - heading "📋 Visão Geral da Implementação" [level=2] [ref=e135]
+            - heading "O que Implementar" [level=3] [ref=e136]:
+              - strong [ref=e137]: O que Implementar
+            - paragraph [ref=e138]:
+              - text: O Matrix Protocol é implementado através de
+              - strong [ref=e139]: 5 frameworks integrados
+              - text: ":"
+            - list [ref=e140]:
+              - listitem [ref=e141]:
+                - strong [ref=e142]: MEF
+                - text: "- Matrix Embedding Framework (Estruturação de conhecimento)"
+              - listitem [ref=e143]:
+                - strong [ref=e144]: ZOF
+                - text: "- Zion Orchestration Framework (Fluxos de trabalho conceituais)"
+              - listitem [ref=e145]:
+                - strong [ref=e146]: OIF
+                - text: "- Operator Intelligence Framework (Arquétipos de IA)"
+              - listitem [ref=e147]:
+                - strong [ref=e148]: MOC
+                - text: "- Matrix Ontology Catalog (Hierarquias organizacionais)"
+              - listitem [ref=e149]:
+                - strong [ref=e150]: MAL
+                - text: "- Matrix Arbiter Layer (Arbitragem de conflitos)"
+            - heading "Abordagem Estruturada" [level=3] [ref=e151]:
+              - strong [ref=e152]: Abordagem Estruturada
+            - list [ref=e153]:
+              - listitem [ref=e154]:
+                - text: ✅
+                - strong [ref=e155]: Exemplo TechCorp
+                - text: ": Implementação de 18 meses (cenário ilustrativo)"
+              - listitem [ref=e156]:
+                - text: ✅
+                - strong [ref=e157]: Templates Versáteis
+                - text: ": MOCs adaptáveis a diferentes tamanhos organizacionais"
+              - listitem [ref=e158]:
+                - text: ✅
+                - strong [ref=e159]: Metas Propostas
+                - text: ": Melhoria significativa no tempo para encontrar informações"
+              - listitem [ref=e160]:
+                - text: ✅
+                - strong [ref=e161]: Melhores Práticas
+                - text: ": Padrões recomendados e armadilhas a evitar"
+            - separator [ref=e162]
+            - heading "🗺️ Roadmap de Implementação" [level=2] [ref=e163]
+            - 'heading "FASE 1: Fundação MOC (0-3 meses)" [level=3] [ref=e164]':
+              - strong [ref=e165]: "FASE 1: Fundação MOC (0-3 meses)"
+            - paragraph [ref=e166]:
+              - strong [ref=e167]: Objetivo
+              - text: ": Estabelecer taxonomia organizacional"
+            - paragraph [ref=e168]:
+              - strong [ref=e169]: Escopo
+              - text: ": Piloto com 20-50 pessoas"
+              - strong [ref=e170]: Sucesso
+              - text: ": 80%+ dos usuários criam pelo menos 1 UKI"
+            - heading "Principais Entregáveis:" [level=4] [ref=e171]
+            - list [ref=e172]:
+              - listitem [ref=e173]: 📋 MOC configurado com hierarquias organizacionais
+              - listitem [ref=e174]: 🏗️ Taxonomias de escopo, domínio, tipo estabelecidas
+              - listitem [ref=e175]: 👥 Rede de champions treinada
+              - listitem [ref=e176]: 📊 Primeiros UKIs estruturados
+            - heading "Atividades-Chave:" [level=4] [ref=e177]
+            - list [ref=e178]:
+              - listitem [ref=e179]:
+                - strong [ref=e180]: Avaliação Organizacional
+                - text: (Manual Capítulo 1)
+                - list [ref=e181]:
+                  - listitem [ref=e182]: Entrevistas estruturadas com stakeholders
+                  - listitem [ref=e183]: Mapeamento de sistemas existentes
+                  - listitem [ref=e184]: Análise de fluxos de decisão
+              - listitem [ref=e185]:
+                - strong [ref=e186]: Design do MOC
+                - text: (Manual Capítulos 4-6)
+                - list [ref=e187]:
+                  - listitem [ref=e188]: Seleção de template por tamanho organizacional
+                  - listitem [ref=e189]: Configuração de hierarquias e governança
+                  - listitem [ref=e190]: Definição de políticas de arbitragem
+            - heading "Recursos Essenciais:" [level=4] [ref=e191]
+            - list [ref=e192]:
+              - listitem [ref=e193]: Template MOC Básico (universal)
+              - listitem [ref=e194]: Templates Especializados por tamanho organizacional
+              - listitem [ref=e195]:
+                - link "Checklist de Validação" [ref=e196] [cursor=pointer]:
+                  - /url: /pt/docs/manual/tools/validation-checklists
+            - separator [ref=e197]
+            - 'heading "FASE 2: Piloto MEF (3-6 meses)" [level=3] [ref=e198]':
+              - strong [ref=e199]: "FASE 2: Piloto MEF (3-6 meses)"
+            - paragraph [ref=e200]:
+              - strong [ref=e201]: Objetivo
+              - text: ": Estruturar conhecimento legado crítico"
+            - paragraph [ref=e202]:
+              - strong [ref=e203]: Escopo
+              - text: ": 150-200 pessoas, 3-4 equipes"
+              - strong [ref=e204]: Sucesso
+              - text: ": 50%+ de redução em \"onde está essa informação?\""
+            - heading "Principais Entregáveis:" [level=4] [ref=e205]
+            - list [ref=e206]:
+              - listitem [ref=e207]: 📚 50+ UKIs criados com conhecimento crítico
+              - listitem [ref=e208]: 🔄 Sistema de versionamento semântico ativo
+              - listitem [ref=e209]: 🔗 Relacionamentos semânticos estabelecidos
+              - listitem [ref=e210]: 📈 Métricas de adoção e qualidade
+            - heading "Atividades-Chave:" [level=4] [ref=e211]
+            - list [ref=e212]:
+              - listitem [ref=e213]:
+                - strong [ref=e214]: Piloto MEF
+                - text: (Manual Capítulo 7)
+                - list [ref=e215]:
+                  - listitem [ref=e216]: Primeiros UKIs estruturados
+                  - listitem [ref=e217]: Treinamento de criação de UKI
+                  - listitem [ref=e218]: Validação com usuários reais
+              - listitem [ref=e219]:
+                - strong [ref=e220]: Migração de Conhecimento
+                - text: (Manual Capítulo 8)
+                - list [ref=e221]:
+                  - listitem [ref=e222]: Estruturação de conhecimento legado
+                  - listitem [ref=e223]: Identificação de lacunas críticas
+                  - listitem [ref=e224]: Promoção draft → validado → aprovado
+              - listitem [ref=e225]:
+                - strong [ref=e226]: Validação e Promoção
+                - text: (Manual Capítulo 9)
+                - list [ref=e227]:
+                  - listitem [ref=e228]: Critérios de qualidade estabelecidos
+                  - listitem [ref=e229]: Processo de revisão implementado
+                  - listitem [ref=e230]: Loop de feedback ativo
+            - separator [ref=e231]
+            - 'heading "FASE 3: Fluxos ZOF (6-9 meses)" [level=3] [ref=e232]':
+              - strong [ref=e233]: "FASE 3: Fluxos ZOF (6-9 meses)"
+            - paragraph [ref=e234]:
+              - strong [ref=e235]: Objetivo
+              - text: ": Implementar fluxos Oracle-first"
+            - paragraph [ref=e236]:
+              - strong [ref=e237]: Escopo
+              - text: ": Fluxos organizacionais críticos"
+              - strong [ref=e238]: Sucesso
+              - text: ": 70%+ das decisões consultam o Oracle"
+            - heading "Principais Entregáveis:" [level=4] [ref=e239]
+            - list [ref=e240]:
+              - listitem [ref=e241]: 🔄 Estados canônicos implementados (Intake → Understand → Decide → Act)
+              - listitem [ref=e242]: 🔍 EvaluateForEnrich funcionando
+              - listitem [ref=e243]: 📊 54% de taxa de aprovação para enriquecimento
+              - listitem [ref=e244]: 🤝 Colaboração entre equipes aumentada em 300%
+            - heading "Atividades-Chave:" [level=4] [ref=e245]
+            - list [ref=e246]:
+              - listitem [ref=e247]:
+                - strong [ref=e248]: Estados Canônicos
+                - text: (Manual Capítulo 10)
+                - list [ref=e249]:
+                  - listitem [ref=e250]: Implementação de checkpoints ZOF
+                  - listitem [ref=e251]: Consulta obrigatória ao Oracle
+                  - listitem [ref=e252]: Fluxos adaptativos ao contexto
+              - listitem [ref=e253]:
+                - strong [ref=e254]: Integração de Sistemas
+                - text: (Manual Capítulo 11)
+                - list [ref=e255]:
+                  - listitem [ref=e256]: APIs para sistemas existentes
+                  - listitem [ref=e257]: Webhooks para enriquecimento automático
+                  - listitem [ref=e258]: Dashboards de monitoramento
+              - listitem [ref=e259]:
+                - strong [ref=e260]: Orquestração Avançada
+                - text: (Manual Capítulo 12)
+                - list [ref=e261]:
+                  - listitem [ref=e262]: EvaluateForEnrich otimizado
+                  - listitem [ref=e263]: Critérios de relevância ajustados
+                  - listitem [ref=e264]: Loop de feedback para melhoria contínua
+            - separator [ref=e265]
+            - 'heading "FASES 4-6: Expansão e Maturidade (9-18 meses)" [level=3] [ref=e266]':
+              - strong [ref=e267]: "FASES 4-6: Expansão e Maturidade (9-18 meses)"
+            - paragraph [ref=e268]:
+              - strong [ref=e269]: Objetivo
+              - text: ": OIF, MAL e maturidade organizacional"
+            - paragraph [ref=e270]:
+              - strong [ref=e271]: Escopo
+              - text: ": Organização completa"
+              - strong [ref=e272]: Sucesso
+              - text: ": Cultura Oracle-first estabelecida"
+            - heading "Principais Marcos:" [level=4] [ref=e273]
+            - list [ref=e274]:
+              - listitem [ref=e275]: 🤖 Arquétipos OIF implementados (Knowledge Agent, Workflow Agent)
+              - listitem [ref=e276]: ⚖️ Sistema de arbitragem MAL ativo
+              - listitem [ref=e277]: 🏆 Manutenção orgânica de conhecimento
+              - listitem [ref=e278]: 📊 ROI mensurável da implementação
+            - separator [ref=e279]
+            - heading "🎯 Por Tamanho Organizacional" [level=2] [ref=e280]
+            - heading "Startup (5-50 funcionários)" [level=3] [ref=e281]:
+              - strong [ref=e282]: Startup (5-50 funcionários)
+            - paragraph [ref=e283]:
+              - strong [ref=e284]: Foco
+              - text: ": Simplicidade e velocidade"
+            - list [ref=e285]:
+              - listitem [ref=e286]:
+                - text: ⏱️
+                - strong [ref=e287]: Cronograma
+                - text: ": 6-9 meses para implementação completa"
+              - listitem [ref=e288]:
+                - text: 🎯
+                - strong [ref=e289]: Prioridades
+                - text: ": MEF + MOC básico"
+              - listitem [ref=e290]:
+                - text: 📊
+                - strong [ref=e291]: Template
+                - text: ": Hierarquias simples, máximo 3 níveis"
+              - listitem [ref=e292]:
+                - text: 👥
+                - strong [ref=e293]: Champions
+                - text: ": 1-2 pessoas dedicadas"
+            - heading "Scaleup (50-200 funcionários)" [level=3] [ref=e294]:
+              - strong [ref=e295]: Scaleup (50-200 funcionários)
+            - paragraph [ref=e296]:
+              - strong [ref=e297]: Foco
+              - text: ": Estrutura e crescimento"
+            - list [ref=e298]:
+              - listitem [ref=e299]:
+                - text: ⏱️
+                - strong [ref=e300]: Cronograma
+                - text: ": 9-12 meses para implementação completa"
+              - listitem [ref=e301]:
+                - text: 🎯
+                - strong [ref=e302]: Prioridades
+                - text: ": MEF + ZOF + MOC avançado"
+              - listitem [ref=e303]:
+                - text: 📊
+                - strong [ref=e304]: Template
+                - text: ": Múltiplas tribos, governança distribuída"
+              - listitem [ref=e305]:
+                - text: 👥
+                - strong [ref=e306]: Champions
+                - text: ": 3-5 pessoas por área"
+            - heading "Enterprise (200+ funcionários)" [level=3] [ref=e307]:
+              - strong [ref=e308]: Enterprise (200+ funcionários)
+            - paragraph [ref=e309]:
+              - strong [ref=e310]: Foco
+              - text: ": Governança e compliance"
+            - list [ref=e311]:
+              - listitem [ref=e312]:
+                - text: ⏱️
+                - strong [ref=e313]: Cronograma
+                - text: ": 12-18 meses para implementação completa"
+              - listitem [ref=e314]:
+                - text: 🎯
+                - strong [ref=e315]: Prioridades
+                - text: ": Todos os frameworks + integração complexa"
+              - listitem [ref=e316]:
+                - text: 📊
+                - strong [ref=e317]: Template
+                - text: ": Múltiplas hierarquias, compliance rigoroso"
+              - listitem [ref=e318]:
+                - text: 👥
+                - strong [ref=e319]: Champions
+                - text: ": Centro de excelência dedicado"
+            - separator [ref=e320]
+            - heading "⚠️ Armadilhas Comuns e Soluções" [level=2] [ref=e321]
+            - 'heading "❌ Erro Crítico #1: Subestimar Gestão de Mudança" [level=3] [ref=e322]':
+              - strong [ref=e323]: "❌ Erro Crítico #1: Subestimar Gestão de Mudança"
+            - paragraph [ref=e324]:
+              - strong [ref=e325]: Impacto
+              - text: ": +60% no esforço planejado (experiência TechCorp)"
+            - paragraph [ref=e326]:
+              - strong [ref=e327]: Solução
+              - text: ":"
+            - list [ref=e328]:
+              - listitem [ref=e329]: Alocar 40% do orçamento para pessoas/processo
+              - listitem [ref=e330]: Rede de champions ativa desde o dia 1
+              - listitem [ref=e331]: Vitórias rápidas visíveis em 90 dias
+            - 'heading "❌ Erro Crítico #2: Over-engineering do MOC" [level=3] [ref=e332]':
+              - strong [ref=e333]: "❌ Erro Crítico #2: Over-engineering do MOC"
+            - paragraph [ref=e334]:
+              - strong [ref=e335]: Impacto
+              - text: ": Paralisa equipes com complexidade"
+            - paragraph [ref=e336]:
+              - strong [ref=e337]: Solução
+              - text: ":"
+            - list [ref=e338]:
+              - listitem [ref=e339]: Começar com template simples
+              - listitem [ref=e340]: Evoluir baseado no uso real
+              - listitem [ref=e341]: Máximo 3-4 níveis hierárquicos inicialmente
+            - 'heading "❌ Erro Crítico #3: Ignorar Sistemas Legados" [level=3] [ref=e342]':
+              - strong [ref=e343]: "❌ Erro Crítico #3: Ignorar Sistemas Legados"
+            - paragraph [ref=e344]:
+              - strong [ref=e345]: Impacto
+              - text: ": Integrações complexas atrasam tudo"
+            - paragraph [ref=e346]:
+              - strong [ref=e347]: Solução
+              - text: ":"
+            - list [ref=e348]:
+              - listitem [ref=e349]: Mapear integrações desde a avaliação
+              - listitem [ref=e350]: APIs simples para sistemas existentes
+              - listitem [ref=e351]: Migração gradual, não big bang
+            - 'heading "❌ Erro Crítico #4: Foco Apenas em Tecnologia" [level=3] [ref=e352]':
+              - strong [ref=e353]: "❌ Erro Crítico #4: Foco Apenas em Tecnologia"
+            - paragraph [ref=e354]:
+              - strong [ref=e355]: Impacto
+              - text: ": Alta resistência, baixa adoção (70% do esforço é cultural)"
+            - paragraph [ref=e356]:
+              - strong [ref=e357]: Solução
+              - text: ":"
+            - list [ref=e358]:
+              - listitem [ref=e359]: Patrocínio executivo ativo
+              - listitem [ref=e360]: Treinamento contínuo
+              - listitem [ref=e361]: Celebrar sucessos, aprender com falhas
+            - separator [ref=e362]
+            - heading "📊 Critérios de Sucesso por Fase" [level=2] [ref=e363]
+            - 'heading "Fase 1 (Meses 1-3): Fundação MOC" [level=3] [ref=e364]':
+              - strong [ref=e365]: "Fase 1 (Meses 1-3): Fundação MOC"
+            - list [ref=e366]:
+              - listitem [ref=e367]:
+                - text: 📈
+                - strong [ref=e368]: Adoção
+                - text: ": 80%+ criam pelo menos 1 UKI"
+              - listitem [ref=e369]:
+                - text: 🏆
+                - strong [ref=e370]: Qualidade
+                - text: ": Avaliação média >4.0/5.0"
+              - listitem [ref=e371]:
+                - text: ⚡
+                - strong [ref=e372]: Impacto
+                - text: ": 50%+ de redução em perguntas \"onde está...\""
+            - 'heading "Fase 2 (Meses 4-6): Piloto MEF" [level=3] [ref=e373]':
+              - strong [ref=e374]: "Fase 2 (Meses 4-6): Piloto MEF"
+            - list [ref=e375]:
+              - listitem [ref=e376]:
+                - text: 📈
+                - strong [ref=e377]: Escala
+                - text: ": 200+ UKIs criados, 90%+ usuários ativos"
+              - listitem [ref=e378]:
+                - text: 🏆
+                - strong [ref=e379]: Migração
+                - text: ": 78%+ conhecimento legado estruturado"
+              - listitem [ref=e380]:
+                - text: ⚡
+                - strong [ref=e381]: Eficiência
+                - text: ": Onboarding 50%+ mais rápido"
+            - 'heading "Fase 3 (Meses 7-9): Fluxos ZOF" [level=3] [ref=e382]':
+              - strong [ref=e383]: "Fase 3 (Meses 7-9): Fluxos ZOF"
+            - list [ref=e384]:
+              - listitem [ref=e385]:
+                - text: 📈
+                - strong [ref=e386]: Fluxos
+                - text: ": 70%+ das decisões consultam Oracle"
+              - listitem [ref=e387]:
+                - text: 🏆
+                - strong [ref=e388]: Enriquecimento
+                - text: ": 54% taxa de aprovação EvaluateForEnrich"
+              - listitem [ref=e389]:
+                - text: ⚡
+                - strong [ref=e390]: Colaboração
+                - text: ": Score colaboração entre equipes +300%"
+            - 'heading "Fases 4-6 (Meses 10-18): Maturidade" [level=3] [ref=e391]':
+              - strong [ref=e392]: "Fases 4-6 (Meses 10-18): Maturidade"
+            - list [ref=e393]:
+              - listitem [ref=e394]:
+                - text: 📈
+                - strong [ref=e395]: Cultura
+                - text: ": Mentalidade Oracle-first estabelecida"
+              - listitem [ref=e396]:
+                - text: 🏆
+                - strong [ref=e397]: Sustentabilidade
+                - text: ": Manutenção orgânica de conhecimento"
+              - listitem [ref=e398]:
+                - text: ⚡
+                - strong [ref=e399]: ROI
+                - text: ": Valor mensurável da implementação"
+            - separator [ref=e400]
+            - heading "🛠️ Recursos e Downloads" [level=2] [ref=e401]
+            - heading "Manual Completo (4.600+ linhas)" [level=3] [ref=e402]:
+              - strong [ref=e403]: Manual Completo (4.600+ linhas)
+            - paragraph [ref=e404]:
+              - text: 📖
+              - link "Download Manual Completo" [ref=e405] [cursor=pointer]:
+                - /url: /pt/docs/manual
+            - paragraph [ref=e406]:
+              - strong [ref=e407]: "Conteúdo Detalhado:"
+            - list [ref=e408]:
+              - listitem [ref=e409]:
+                - strong [ref=e410]: Parte I
+                - text: ": Preparação e Avaliação (Capítulos 1-3)"
+              - listitem [ref=e411]:
+                - strong [ref=e412]: Parte II
+                - text: ": Design do MOC (Capítulos 4-6)"
+              - listitem [ref=e413]:
+                - strong [ref=e414]: Parte III
+                - text: ": Implementação MEF (Capítulos 7-9)"
+              - listitem [ref=e415]:
+                - strong [ref=e416]: Parte IV
+                - text: ": Fluxos ZOF (Capítulos 10-12)"
+              - listitem [ref=e417]:
+                - strong [ref=e418]: Parte V
+                - text: ": Integração e Compliance (Capítulos 13-15)"
+            - heading "Templates Prontos" [level=3] [ref=e419]:
+              - strong [ref=e420]: Templates Prontos
+            - list [ref=e421]:
+              - listitem [ref=e422]: 📋 Template MOC Básico (universal)
+              - listitem [ref=e423]: "🎯 Templates Especializados: Startup, Scale-up, Enterprise, Corporation"
+              - listitem [ref=e424]:
+                - text: 🔧
+                - link "Templates UKI Multi-hierárquicos" [ref=e425] [cursor=pointer]:
+                  - /url: /pt/docs/manual/templates
+              - listitem [ref=e426]:
+                - text: 📋
+                - link "Fases de Implementação Detalhadas" [ref=e427] [cursor=pointer]:
+                  - /url: /pt/docs/manual/templates
+            - heading "Estudo de Caso Completo" [level=3] [ref=e428]:
+              - strong [ref=e429]: Estudo de Caso Completo
+            - paragraph [ref=e430]:
+              - text: 📊
+              - link "Caso TechCorp" [ref=e431] [cursor=pointer]:
+                - /url: /pt/docs/manual/reference
+            - list [ref=e432]:
+              - listitem [ref=e433]: Implementação de 18 meses
+              - listitem [ref=e434]: 3 Divisões → 6 Tribos → 18 Squads
+              - listitem [ref=e435]: Dados quantitativos reais
+              - listitem [ref=e436]: Lições aprendidas e armadilhas evitadas
+            - heading "Ferramentas de Validação" [level=3] [ref=e437]:
+              - strong [ref=e438]: Ferramentas de Validação
+            - list [ref=e439]:
+              - listitem [ref=e440]:
+                - text: ✅
+                - link "Checklists de Validação" [ref=e441] [cursor=pointer]:
+                  - /url: /pt/docs/manual/tools
+              - listitem [ref=e442]: 📊 Scripts de Validação -> Em construção
+              - listitem [ref=e443]: 🔧 Ferramentas de Migração -> Em construção
+            - separator [ref=e444]
+            - heading "🤝 Próximos Passos" [level=2] [ref=e445]
+            - heading "Se Você Quer Começar Hoje" [level=3] [ref=e446]:
+              - strong [ref=e447]: Se Você Quer Começar Hoje
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - text: 🚀
+                - link "Guia de Início Rápido" [ref=e450] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                - text: "- 2-4 horas"
+              - listitem [ref=e451]: 📋 Template MOC Básico - Universal para qualquer tamanho
+              - listitem [ref=e452]: "🎯 Templates Especializados: Escolha baseado no tamanho da sua organização"
+              - listitem [ref=e453]:
+                - text: ✅
+                - link "Primeiro UKI" [ref=e454] [cursor=pointer]:
+                  - /url: /pt/docs/quickstart
+                - text: "- 30-60 minutos"
+            - heading "Para Estudo Detalhado" [level=3] [ref=e455]:
+              - strong [ref=e456]: Para Estudo Detalhado
+            - list [ref=e457]:
+              - listitem [ref=e458]:
+                - text: 📖
+                - link "Manual Completo" [ref=e459] [cursor=pointer]:
+                  - /url: /pt/docs/manual
+                - text: "- 4.600+ linhas"
+              - listitem [ref=e460]:
+                - text: 📊
+                - link "Caso TechCorp" [ref=e461] [cursor=pointer]:
+                  - /url: /pt/docs/manual/reference
+                - text: "- Implementação real"
+              - listitem [ref=e462]:
+                - text: 🏗️
+                - link "Especificação do Protocolo" [ref=e463] [cursor=pointer]:
+                  - /url: /pt/docs/protocol
+                - text: "- Fundamentos"
+            - heading "Para Suporte Técnico" [level=3] [ref=e464]:
+              - strong [ref=e465]: Para Suporte Técnico
+            - list [ref=e466]:
+              - listitem [ref=e467]:
+                - text: 💬
+                - strong [ref=e468]: GitHub Discussions
+                - text: ": Perguntas específicas"
+              - listitem [ref=e469]:
+                - text: 📚
+                - strong [ref=e470]: Documentação
+                - text: ":"
+                - link "Portal completo" [ref=e471] [cursor=pointer]:
+                  - /url: /pt/docs/protocol
+              - listitem [ref=e472]:
+                - text: 🧩
+                - strong [ref=e473]: Frameworks
+                - text: ":"
+                - link "MEF" [ref=e474] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks/mef
+                - text: ","
+                - link "ZOF" [ref=e475] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks/zof
+                - text: ","
+                - link "OIF" [ref=e476] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks/oif
+                - text: ","
+                - link "MOC" [ref=e477] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks/moc
+                - text: ","
+                - link "MAL" [ref=e478] [cursor=pointer]:
+                  - /url: /pt/docs/frameworks/mal
+            - separator [ref=e479]
+            - paragraph [ref=e480]:
+              - strong [ref=e481]: Tempo total de implementação
+              - text: ": 6-18 meses dependendo do tamanho"
+              - strong [ref=e482]: ROI típico
+              - text: ": Visível em 90 dias, consolidado em 6 meses"
+              - strong [ref=e483]: Taxa de sucesso
+              - text: ": 85%+ em organizações seguindo o manual"
+            - separator [ref=e484]
+            - blockquote [ref=e485]:
+              - paragraph [ref=e486]:
+                - text: ℹ️
+                - strong [ref=e487]: Nota
+                - text: ": O Matrix Protocol é um framework conceitual para colaboração humano-IA. Os exemplos apresentados, incluindo a TechCorp, são ilustrativos para demonstrar a aplicação dos conceitos do protocolo."
+            - paragraph [ref=e488]:
+              - emphasis [ref=e489]: Este guia foi desenvolvido para fornecer uma abordagem estruturada de implementação, incluindo o cenário detalhado da TechCorp como exemplo prático de aplicação.
+  - contentinfo [ref=e490]:
+    - generic [ref=e492]:
+      - paragraph [ref=e493]:
+        - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+        - link "Casheiro" [ref=e494] [cursor=pointer]:
+          - /url: https://casheiro.com.br
+      - paragraph [ref=e495]: © 2025 Casheiro. Todos os direitos reservados.
+```

@@ -1,0 +1,395 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Primary navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Ir para página inicial" [ref=e8] [cursor=pointer]:
+            - /url: /pt
+            - generic [ref=e9]: Matrix Protocol
+          - generic [ref=e11]:
+            - button "Frameworks menu" [ref=e12]: Frameworks
+            - link "Documentação" [ref=e14] [cursor=pointer]:
+              - /url: /pt/protocol
+            - link "Manual" [ref=e15] [cursor=pointer]:
+              - /url: /pt/manual
+            - link "Recursos" [ref=e16] [cursor=pointer]:
+              - /url: /pt/resources
+          - generic [ref=e17]:
+            - link "Visitar repositório no GitHub" [ref=e18] [cursor=pointer]:
+              - /url: https://github.com/casheiro/matrix-protocol
+            - button "Selecionar idioma" [ref=e20]:
+              - generic [ref=e22]: PT
+    - main [ref=e24]:
+      - main [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e31]:
+            - generic [ref=e35]:
+              - generic [ref=e37]: M
+              - generic [ref=e38]:
+                - generic [ref=e39]:
+                  - heading "MEF" [level=1] [ref=e40]
+                  - generic [ref=e41]: v0.0.1
+                - heading "Matrix Embedding Framework" [level=2] [ref=e42]
+                - paragraph
+            - generic [ref=e43]:
+              - link "Baixar Templates" [ref=e44] [cursor=pointer]:
+                - /url: /pt/resources#basic-mef
+                - generic [ref=e45]: Baixar Templates
+              - link "Implementar Agora" [ref=e47] [cursor=pointer]:
+                - /url: /pt/implementation
+                - generic [ref=e48]: Implementar Agora
+            - generic [ref=e51]:
+              - heading "MEF — Matrix Embedding Framework" [level=1] [ref=e52]
+              - paragraph [ref=e53]:
+                - strong [ref=e54]: "Acrônimo:"
+                - text: MEF
+                - strong [ref=e55]: "Versão:"
+                - text: 0.0.1-beta
+                - strong [ref=e56]: "Última Atualização:"
+                - text: 2025-10-05
+              - blockquote [ref=e57]:
+                - paragraph [ref=e58]:
+                  - text: ⚠️
+                  - strong [ref=e59]: IMPORTANTE
+                  - text: ": Este documento é uma tradução informativa."
+              - separator [ref=e60]
+              - heading "1. Introdução" [level=2] [ref=e61]
+              - paragraph [ref=e62]:
+                - text: O
+                - strong [ref=e63]: Matrix Embedding Framework (MEF)
+                - text: especifica de forma integral, padronizada e internacionalizada a estrutura mínima e completa de conhecimento embebido versionado a ser utilizada por pessoas e agentes inteligentes no contexto do Protocolo Matrix.
+              - paragraph [ref=e64]:
+                - text: O MEF define um
+                - strong [ref=e65]: modelo padronizado de estruturação do conhecimento versionado
+                - text: que permite que qualquer membro de um time multidisciplinar possa criar, registrar, interligar e utilizar unidades mínimas de conhecimento — chamadas de
+                - strong [ref=e66]: UKIs (Units of Knowledge Interlinked)
+                - text: .
+              - separator [ref=e67]
+              - heading "2. Termos e Definições" [level=2] [ref=e68]
+              - list [ref=e69]:
+                - listitem [ref=e70]:
+                  - strong [ref=e71]: UKI
+                  - text: ": Units of Knowledge Interlinked - unidades básicas do conhecimento estruturado"
+                - listitem [ref=e72]:
+                  - strong [ref=e73]: Versionamento Semântico
+                  - text: ": Controle de versão seguindo padrão MAJOR.MINOR.PATCH"
+                - listitem [ref=e74]:
+                  - strong [ref=e75]: Relacionamentos Ontológicos
+                  - text: ": Conexões tipadas entre UKIs (depends_on, overrides, etc.)"
+                - listitem [ref=e76]:
+                  - strong [ref=e77]: Promoção de Conhecimento
+                  - text: ": Processo formal de elevação de escopo ou maturidade"
+                - listitem [ref=e78]:
+                  - text: "*"
+                  - emphasis [ref=e79]:
+                    - text: Campos
+                    - emphasis [ref=e80]: _ref
+                  - text: ": Campos que referenciam nós definidos no MOC organizacional"
+              - separator [ref=e81]
+              - heading "3. Conceitos Centrais" [level=2] [ref=e82]
+              - heading "Estrutura UKI" [level=3] [ref=e83]
+              - paragraph [ref=e84]: "Cada UKI é um arquivo YAML estruturado contendo:"
+              - list [ref=e85]:
+                - listitem [ref=e86]:
+                  - strong [ref=e87]: Metadados obrigatórios
+                  - text: ": id, título, versão, datas"
+                - listitem [ref=e88]:
+                  - strong [ref=e89]: Referências MOC
+                  - text: ": scope_ref, domain_ref, type_ref, maturity_ref"
+                - listitem [ref=e90]:
+                  - strong [ref=e91]: Conteúdo
+                  - text: ": Conhecimento estruturado específico"
+                - listitem [ref=e92]:
+                  - strong [ref=e93]: Relacionamentos
+                  - text: ": Conexões tipadas com outras UKIs"
+                - listitem [ref=e94]:
+                  - strong [ref=e95]: Controle de vida
+                  - text: ": Status e gestão de ciclo de vida"
+              - heading "Integração MOC" [level=3] [ref=e96]
+              - list [ref=e97]:
+                - listitem [ref=e98]:
+                  - text: "*"
+                  - emphasis [ref=e99]:
+                    - text: Campos
+                    - emphasis [ref=e100]: _ref
+                  - text: ": Fazem referência a nós definidos no MOC organizacional"
+                - listitem [ref=e101]:
+                  - strong [ref=e102]: Flexibilidade Local
+                  - text: ": Organizações configuram hierarquias mantendo estrutura universal"
+                - listitem [ref=e103]:
+                  - strong [ref=e104]: Governança Integrada
+                  - text: ": MOC define regras de autoridade e visibilidade"
+              - heading "Orientação MEP" [level=3] [ref=e105]
+              - list [ref=e106]:
+                - listitem [ref=e107]:
+                  - strong [ref=e108]: Estratificação
+                  - text: ": Campo maturity_ref reflete níveis epistemológicos"
+                - listitem [ref=e109]:
+                  - strong [ref=e110]: Promoção Responsável
+                  - text: ": Campo promotion_rationale documenta justificativas"
+                - listitem [ref=e111]:
+                  - strong [ref=e112]: Autoridade Derivada
+                  - text: ": Campos scope_ref e governance_ref implementam autoridade contextual"
+              - separator [ref=e113]
+              - heading "4. Regras Normativas" [level=2] [ref=e114]
+              - blockquote [ref=e115]:
+                - paragraph [ref=e116]:
+                  - text: ⚠️ Esta seção é
+                  - strong [ref=e117]: normativa
+                  - text: .
+              - heading "Estrutura UKI Obrigatória" [level=3] [ref=e118]
+              - paragraph [ref=e119]: "Toda UKI DEVE conter:"
+              - list [ref=e120]:
+                - listitem [ref=e121]:
+                  - strong [ref=e122]: id
+                  - text: ": Identificador único no formato uki:scope_ref:type_ref:slug"
+                - listitem [ref=e123]:
+                  - strong [ref=e124]: title
+                  - text: ": Título descritivo e objetivo"
+                - listitem [ref=e125]:
+                  - strong [ref=e126]: version
+                  - text: ": Versionamento semântico MAJOR.MINOR.PATCH"
+                - listitem [ref=e127]:
+                  - strong [ref=e128]: scope_ref, domain_ref, type_ref
+                  - text: ": Referências válidas ao MOC organizacional"
+                - listitem [ref=e129]:
+                  - strong [ref=e130]: created_date, last_modified
+                  - text: ": Datas de criação e modificação"
+                - listitem [ref=e131]:
+                  - strong [ref=e132]: status
+                  - text: ": Estado do ciclo de vida (active, deprecated, archived)"
+              - heading "Versionamento Obrigatório" [level=3] [ref=e133]
+              - list [ref=e134]:
+                - listitem [ref=e135]: DEVE seguir padrão semântico MAJOR.MINOR.PATCH
+                - listitem [ref=e136]: DEVE incluir change_summary para versões posteriores à inicial
+                - listitem [ref=e137]: DEVE referenciar previous_version quando aplicável
+                - listitem [ref=e138]: DEVE classificar change_impact (major, minor, patch)
+              - heading "Relacionamentos Obrigatórios" [level=3] [ref=e139]
+              - list [ref=e140]:
+                - listitem [ref=e141]: "DEVE usar tipos padronizados: depends_on, overrides, conflicts_with, complements, amends, precedes, equivalent_to"
+                - listitem [ref=e142]: DEVE incluir description específica para cada relacionamento
+                - listitem [ref=e143]: DEVE referenciar UKIs válidas no formato correto
+              - heading "Persistência de Decision Record (Integração MAL)" [level=3] [ref=e144]
+              - list [ref=e145]:
+                - listitem [ref=e146]: Implementações MEF DEVEM persistir Decision Records MAL como trilha de auditoria imutável
+                - listitem [ref=e147]: Decision Records DEVEM ser armazenados com metadados completos de arbitragem
+                - listitem [ref=e148]: UKIs resultantes de arbitragem MAL DEVEM referenciar o Decision Record correspondente
+                - listitem [ref=e149]: Relacionamentos de Decision Record (conflicts_with, supersedes, partitioned_by_scope) DEVEM ser mantidos
+                - listitem [ref=e150]: Decision Records NÃO DEVEM ser modificáveis após criação
+              - separator [ref=e151]
+              - heading "5. Ciclo de Vida UKI (Normativo)" [level=2] [ref=e152]
+              - heading "5.1 Estados Canônicos" [level=3] [ref=e153]
+              - paragraph [ref=e154]: "UKIs progridem através de estados de ciclo de vida definidos:"
+              - list [ref=e155]:
+                - listitem [ref=e156]:
+                  - strong [ref=e157]: Rascunho
+                  - text: "(versão 0.x.x): Criação inicial, sem validação necessária"
+                - listitem [ref=e158]:
+                  - strong [ref=e159]: EmRevisão
+                  - text: "(versão 0.x.x): Sob revisão de especialistas"
+                - listitem [ref=e160]:
+                  - strong [ref=e161]: Validado
+                  - text: "(versão 0.x.x): Aprovado por especialistas, ainda não publicado"
+                - listitem [ref=e162]:
+                  - strong [ref=e163]: Publicado
+                  - text: "(versão 1.x.x+): Oficialmente sancionado, imutável"
+                - listitem [ref=e164]:
+                  - strong [ref=e165]: Deprecado
+                  - text: ": Substituído por UKI mais recente, substituição obrigatória"
+                - listitem [ref=e166]:
+                  - strong [ref=e167]: Arquivado
+                  - text: ": Registro histórico, somente leitura"
+              - heading "5.2 Transições de Estado" [level=3] [ref=e168]
+              - heading "Rascunho → Em Revisão" [level=4] [ref=e169]
+              - list [ref=e170]:
+                - listitem [ref=e171]:
+                  - strong [ref=e172]: Gatilho
+                  - text: ": Submissão para revisão pelo autor"
+                - listitem [ref=e173]:
+                  - strong [ref=e174]: Validações
+                  - text: ": Conformidade com esquema, validade das referências MOC"
+                - listitem [ref=e175]:
+                  - strong [ref=e176]: Autoridade
+                  - text: ": Qualquer membro da equipe (baseado no scope_ref do MOC)"
+              - heading "Em Revisão → Validado" [level=4] [ref=e177]
+              - list [ref=e178]:
+                - listitem [ref=e179]:
+                  - strong [ref=e180]: Gatilho
+                  - text: ": Aprovação pelos revisores designados"
+                - listitem [ref=e181]:
+                  - strong [ref=e182]: Validações
+                  - text: ": Conteúdo tecnicamente correto, alinhamento estratégico"
+                - listitem [ref=e183]:
+                  - strong [ref=e184]: Autoridade
+                  - text: ": Definido pelo MOC organizacional (scope_ref)"
+              - heading "Validado → Publicado" [level=4] [ref=e185]
+              - list [ref=e186]:
+                - listitem [ref=e187]:
+                  - strong [ref=e188]: Gatilho
+                  - text: ": Promoção pelo responsável do domínio"
+                - listitem [ref=e189]:
+                  - strong [ref=e190]: Validações
+                  - text: ": Impacto organizacional avaliado, dependências resolvidas"
+                - listitem [ref=e191]:
+                  - strong [ref=e192]: Autoridade
+                  - text: ": domain_ref + maturity_ref no MOC"
+              - heading "Publicado → Deprecado" [level=4] [ref=e193]
+              - list [ref=e194]:
+                - listitem [ref=e195]:
+                  - strong [ref=e196]: Gatilho
+                  - text: ": Conhecimento obsoleto ou substituído"
+                - listitem [ref=e197]:
+                  - strong [ref=e198]: Validações
+                  - text: ": Plano de migração, UKIs dependentes notificados"
+                - listitem [ref=e199]:
+                  - strong [ref=e200]: Autoridade
+                  - text: ": Mesma do estado Publicado"
+              - heading "5.3 Regras de Versionamento por Estado" [level=3] [ref=e201]
+              - list [ref=e202]:
+                - listitem [ref=e203]:
+                  - strong [ref=e204]: Rascunho
+                  - text: ": 0.x.x (incremento livre)"
+                - listitem [ref=e205]:
+                  - strong [ref=e206]: Em Revisão
+                  - text: ": 0.x.x (congelado durante revisão)"
+                - listitem [ref=e207]:
+                  - strong [ref=e208]: Validado
+                  - text: ": Beta (primeira versão estável)"
+                - listitem [ref=e209]:
+                  - strong [ref=e210]: Publicado
+                  - text: ": 1.x.x, 2.x.x... (versionamento semântico)"
+                - listitem [ref=e211]:
+                  - strong [ref=e212]: Deprecado
+                  - text: ": Versão congelada"
+                - listitem [ref=e213]:
+                  - strong [ref=e214]: Arquivado
+                  - text: ": Versão final preservada"
+              - separator [ref=e215]
+              - heading "6. Interoperabilidade" [level=2] [ref=e216]
+              - list [ref=e217]:
+                - listitem [ref=e218]:
+                  - strong [ref=e219]: MOC (Matrix Ontology Catalog)
+                  - text: ": Define taxonomias organizacionais referenciadas pelos campos *_ref"
+                - listitem [ref=e220]:
+                  - strong [ref=e221]: MEP (Matrix Epistemic Principle)
+                  - text: ": Fornece fundamentos epistemológicos para versionamento e promoção"
+                - listitem [ref=e222]:
+                  - strong [ref=e223]: ZOF (Zion Orchestration Framework)
+                  - text: ": Consome UKIs durante workflows e checkpoint EvaluateForEnrich"
+                - listitem [ref=e224]:
+                  - strong [ref=e225]: OIF (Operator Intelligence Framework)
+                  - text: ": Utiliza UKIs para alimentar arquétipos de inteligência"
+              - separator [ref=e226]
+              - heading "7. Convenções e Exemplos" [level=2] [ref=e227]
+              - paragraph [ref=e228]:
+                - text: Todos os exemplos neste documento são
+                - strong [ref=e229]: meramente ilustrativos
+                - text: e não definem comportamento normativo.
+                - text: A semântica normativa (escopos, governança, arquétipos, critérios de enriquecimento) é sempre derivada do
+                - strong [ref=e230]: MOC (Matrix Ontology Catalog)
+                - text: de cada organização.
+                - text: Os exemplos são fornecidos para fins de clareza e PODEM ser adaptados aos contextos locais, mas NÃO DEVEM ser tratados como obrigações no nível do protocolo.
+              - separator [ref=e231]
+              - heading "8. Exemplos Ilustrativos (Apêndice)" [level=2] [ref=e232]
+              - blockquote [ref=e233]:
+                - paragraph [ref=e234]:
+                  - strong [ref=e235]: Exemplo (Informativo, Dependente do MOC)
+              - heading "Estrutura Padrão UKI" [level=3] [ref=e236]:
+                - strong [ref=e237]: Estrutura Padrão UKI
+              - generic [ref=e238]:
+                - generic [ref=e239]: yaml
+                - code [ref=e241]:
+                  - code [ref=e242]:
+                    - generic [ref=e243]: "# --- Exemplo Ilustrativo ---"
+                    - generic [ref=e244]: "schema: \"1.0\""
+                    - generic [ref=e245]: "ontology_reference: \"Ontology_MEF_Support v1.0\""
+                    - generic [ref=e246]: "version: \"0.0.1-beta\""
+                    - generic [ref=e247]: "id: uki:technical:pattern:jwt-authentication # EXEMPLO"
+                    - generic [ref=e248]: "title: \"Padrão de Autenticação JWT\""
+                    - generic [ref=e249]: "scope_ref: \"team\" # Referência ao MOC"
+                    - generic [ref=e250]: "domain_ref: \"technical\" # Referência ao MOC"
+                    - generic [ref=e251]: "type_ref: \"pattern\" # Referência ao MOC"
+                    - generic [ref=e252]: "maturity_ref: \"validated\" # Referência ao MOC"
+                    - generic [ref=e253]: "created_date: 2025-01-25"
+                    - generic [ref=e254]: "last_modified: 2025-01-25"
+                    - generic [ref=e255]: "status: active"
+                    - generic [ref=e256]: "content: |"
+                    - generic [ref=e257]: Implementação padronizada de autenticação JWT
+                    - generic [ref=e258]: seguindo boas práticas de segurança...
+                    - generic [ref=e259]: "relationships:"
+                    - generic [ref=e260]: "- type: depends_on"
+                    - generic [ref=e261]: "target: uki:technical:constraint:security-requirements"
+                    - generic [ref=e262]: "description: \"Implementa requisitos de segurança definidos\""
+                - button "Copiar código" [ref=e263]:
+                  - img [ref=e264]
+              - heading "Promoção de Conhecimento" [level=3] [ref=e266]:
+                - strong [ref=e267]: Promoção de Conhecimento
+              - generic [ref=e268]:
+                - generic [ref=e269]: yaml
+                - code [ref=e271]:
+                  - code [ref=e272]:
+                    - generic [ref=e273]: "# --- Exemplo Ilustrativo ---"
+                    - generic [ref=e274]: "promotion:"
+                    - generic [ref=e275]: "is_promoted_from: uki:technical:example:local-auth-impl"
+                    - generic [ref=e276]: "promotion_rationale: |"
+                    - generic [ref=e277]: Solução demonstrou valor em múltiplos projetos
+                    - generic [ref=e278]: e foi validada por arquitetos de segurança.
+                    - generic [ref=e279]: Promovida para padrão organizacional.
+                    - generic [ref=e280]: "impact_analysis:"
+                    - generic [ref=e281]: "severity: medium"
+                    - generic [ref=e282]: "affected_domains: [\"technical\", \"security\"]"
+                    - generic [ref=e283]: "propagation_estimate: 15"
+                - button "Copiar código" [ref=e284]:
+                  - img [ref=e285]
+              - heading "Relacionamentos Ontológicos" [level=3] [ref=e287]:
+                - strong [ref=e288]: Relacionamentos Ontológicos
+              - generic [ref=e289]:
+                - generic [ref=e290]: yaml
+                - code [ref=e292]:
+                  - code [ref=e293]:
+                    - generic [ref=e294]: "# --- Exemplo Ilustrativo ---"
+                    - generic [ref=e295]: "relationships:"
+                    - generic [ref=e296]: "- type: depends_on"
+                    - generic [ref=e297]: "target: uki:business:rule:authentication-policy"
+                    - generic [ref=e298]: "description: \"Implementa política de autenticação organizacional\""
+                    - generic [ref=e300]: "- type: overrides"
+                    - generic [ref=e301]: "target: uki:technical:pattern:basic-auth-deprecated"
+                    - generic [ref=e302]: "description: \"Substitui padrão de autenticação básica obsoleto\""
+                    - generic [ref=e304]: "- type: complements"
+                    - generic [ref=e305]: "target: uki:technical:pattern:authorization-rbac"
+                    - generic [ref=e306]: "description: \"Trabalha em conjunto com autorização baseada em papéis\""
+                - button "Copiar código" [ref=e307]:
+                  - img [ref=e308]
+          - complementary [ref=e310]:
+            - generic [ref=e312]:
+              - heading "Sumário" [level=3] [ref=e314]
+              - navigation "Table of Contents":
+                - list
+              - generic [ref=e318]: 0% lido
+    - contentinfo [ref=e320]:
+      - generic [ref=e322]:
+        - paragraph [ref=e323]:
+          - text: Matrix Protocol - Protocolo idealizado, criado e mantido pela
+          - link "Casheiro" [ref=e324] [cursor=pointer]:
+            - /url: https://casheiro.com.br
+        - paragraph [ref=e325]: © 2025 Casheiro. Todos os direitos reservados.
+  - generic:
+    - img
+  - generic:
+    - generic:
+      - generic:
+        - button "Go to parent" [disabled]
+        - button "Open in editor"
+        - button "Close"
+  - generic [ref=e326]:
+    - button "Toggle Nuxt DevTools" [ref=e327] [cursor=pointer]:
+      - img [ref=e328]
+    - generic "App load time" [ref=e331]:
+      - generic [ref=e332]: "3"
+      - generic [ref=e333]: s
+    - button "Toggle Component Inspector" [ref=e335] [cursor=pointer]:
+      - img [ref=e336]
+```

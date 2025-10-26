@@ -1,0 +1,104 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - alert [ref=e3]: Protocol Specification | Matrix Protocol
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - navigation "Primary navigation" [ref=e6]:
+          - generic [ref=e7]:
+            - link "Go to homepage" [ref=e9] [cursor=pointer]:
+              - /url: /en
+              - generic [ref=e10]: Matrix Protocol
+            - generic [ref=e12]:
+              - button "Frameworks menu" [ref=e13]: Frameworks
+              - link "Documentation" [ref=e15] [cursor=pointer]:
+                - /url: /en/protocol
+              - link "Manual" [ref=e16] [cursor=pointer]:
+                - /url: /en/manual
+              - link "Resources" [ref=e17] [cursor=pointer]:
+                - /url: /en/resources
+            - generic [ref=e18]:
+              - link "Visit GitHub repository" [ref=e19] [cursor=pointer]:
+                - /url: https://github.com/casheiro/matrix-protocol
+              - button "Select language" [ref=e21]:
+                - generic [ref=e23]: EN
+      - main [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e29]:
+            - heading "Protocol Specification" [level=1] [ref=e32]
+            - generic [ref=e33]:
+              - link "Home" [ref=e34] [cursor=pointer]:
+                - /url: /en
+                - text: Home
+              - generic [ref=e37]: Protocol Specification
+          - generic [ref=e39]:
+            - complementary [ref=e40]:
+              - generic [ref=e41]:
+                - generic [ref=e42]:
+                  - heading "Documentation" [level=3] [ref=e44]
+                  - navigation [ref=e46]:
+                    - link "Protocol Specification" [ref=e47] [cursor=pointer]:
+                      - /url: /en/protocol
+                      - text: Protocol Specification
+                    - link "Quick Start Guide" [ref=e49] [cursor=pointer]:
+                      - /url: /en/quickstart
+                      - text: Quick Start Guide
+                    - link "Implementation Guide" [ref=e51] [cursor=pointer]:
+                      - /url: /en/implementation
+                      - text: Implementation Guide
+                    - link "Integration" [ref=e53] [cursor=pointer]:
+                      - /url: /en/integration
+                      - text: Integration
+                    - link "Glossary" [ref=e55] [cursor=pointer]:
+                      - /url: /en/glossary
+                      - text: Glossary
+                - generic [ref=e57]:
+                  - heading "Frameworks" [level=3] [ref=e59]
+                  - navigation [ref=e61]:
+                    - link "MEF" [ref=e62] [cursor=pointer]:
+                      - /url: /en/frameworks/mef
+                      - text: MEF
+                    - link "ZOF" [ref=e64] [cursor=pointer]:
+                      - /url: /en/frameworks/zof
+                      - text: ZOF
+                    - link "OIF" [ref=e66] [cursor=pointer]:
+                      - /url: /en/frameworks/oif
+                      - text: OIF
+                    - link "MOC" [ref=e68] [cursor=pointer]:
+                      - /url: /en/frameworks/moc
+                      - text: MOC
+                    - link "MAL" [ref=e70] [cursor=pointer]:
+                      - /url: /en/frameworks/mal
+                      - text: MAL
+                    - link "MEP" [ref=e72] [cursor=pointer]:
+                      - /url: /en/mep
+                      - text: MEP
+            - main [ref=e74]
+      - contentinfo [ref=e75]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]:
+            - text: Matrix Protocol - Protocol conceived, created and maintained by
+            - link "Casheiro" [ref=e79] [cursor=pointer]:
+              - /url: https://casheiro.com.br
+          - paragraph [ref=e80]: © 2025 Casheiro. All rights reserved.
+  - generic:
+    - img
+  - generic:
+    - generic:
+      - generic:
+        - button "Go to parent" [disabled]
+        - button "Open in editor"
+        - button "Close"
+  - generic [ref=e81]:
+    - button "Toggle Nuxt DevTools" [ref=e82] [cursor=pointer]:
+      - img [ref=e83]
+    - generic "Page load time" [ref=e86]:
+      - generic [ref=e87]: "237"
+      - generic [ref=e88]: ms
+    - button "Toggle Component Inspector" [ref=e90] [cursor=pointer]:
+      - img [ref=e91]
+  - region "Notifications (F8)":
+    - list
+```
