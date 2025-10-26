@@ -156,7 +156,7 @@
                     icon="i-heroicons-beaker"
                     size="sm"
                     block
-                    class="cursor-pointer mb-2 bg-purple-600 text-white"
+                    class="cursor-pointer mb-2 bg-purple-600 text-white hover:bg-purple-700 hover:text-white"
                   >
                     {{ $t('resources.startHere.advanced.examples') }}
                   </UButton>
@@ -165,7 +165,7 @@
                     icon="i-heroicons-wrench-screwdriver"
                     size="sm"
                     block
-                    class="cursor-pointer border-1 border-purple-500 text-purple-400 bg-transparent"
+                    class="cursor-pointer border-1 border-purple-500 text-purple-400 bg-transparent hover:bg-purple-500/10"
                   >
                     {{ $t('resources.startHere.advanced.tools') }}
                   </UButton>
@@ -203,7 +203,7 @@
                   <UBadge size="sm" color="success" variant="soft">MEF</UBadge>
                   <UBadge size="sm" color="warning" variant="soft">ZOF</UBadge>
                   <UBadge size="sm" color="info" variant="soft">OIF</UBadge>
-                  <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                  <UBadge size="sm" class="bg-purple-400/10 text-purple-400" variant="soft">MOC</UBadge>
                   <UBadge size="sm" color="error" variant="soft">MAL</UBadge>
                 </div>
               </div>
@@ -224,10 +224,10 @@
                   </p>
                 </div>
                 <div class="quick-access-badges">
-                  <UBadge size="sm" color="success" variant="soft">Startup</UBadge>
-                  <UBadge size="sm" color="info" variant="soft">Scale-up</UBadge>
-                  <UBadge size="sm" color="primary" variant="soft">Enterprise</UBadge>
-                  <UBadge size="sm" color="error" variant="soft">Corporation</UBadge>
+                  <UBadge size="sm" color="success" variant="soft">StartUp</UBadge>
+                  <UBadge size="sm" color="info" variant="soft">Scale-Up</UBadge>
+                  <UBadge size="sm" color="warning" variant="soft">Enterprise</UBadge>
+                  <UBadge size="sm" color="error" variant="soft">Corp</UBadge>
                 </div>
               </div>
             </UCard>
@@ -248,7 +248,7 @@
                 </div>
                 <div class="quick-access-badges">
                   <UBadge size="sm" color="warning" variant="soft">UKIs</UBadge>
-                  <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                  <UBadge size="sm" color="success" variant="soft">MOC</UBadge>
                   <UBadge size="sm" color="info" variant="soft">Workflows</UBadge>
                 </div>
               </div>
@@ -269,7 +269,7 @@
                   </p>
                 </div>
                 <div class="quick-access-badges">
-                  <UBadge size="sm" color="neutral" variant="soft">Validation</UBadge>
+                  <UBadge size="sm" color="warning" variant="soft">Validation</UBadge>
                   <UBadge size="sm" color="info" variant="soft">Checklists</UBadge>
                   <UBadge size="sm" color="success" variant="soft">Audit</UBadge>
                 </div>
@@ -322,7 +322,7 @@
                     <UIcon name="i-heroicons-cube-transparent" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
                     <h4 class="font-semibold text-purple-800 dark:text-purple-200">{{ $t('resources.downloadCenter.unified.title') }}</h4>
                   </div>
-                  <UBadge color="primary" size="sm" variant="soft">{{ $t('resources.downloadCenter.unified.badge') }}</UBadge>
+                  <UBadge class="bg-purple-400/10 text-purple-400" size="sm" variant="soft">{{ $t('resources.downloadCenter.unified.badge') }}</UBadge>
                 </div>
               </template>
               <p class="text-gray-600 dark:text-gray-300 mb-4">
@@ -330,11 +330,10 @@
               </p>
               <UButton
                 @click="downloadMatrixFile('moc-unified-structure')"
-                color="primary"
                 icon="i-heroicons-arrow-down-tray"
                 size="sm"
                 block
-                class="cursor-pointer"
+                class="cursor-pointer bg-purple-600 text-white hover:bg-purple-700 hover:text-white"
               >
                 {{ $t('resources.downloadCenter.unified.download') }}
               </UButton>
@@ -653,7 +652,7 @@ useSEO({
 /* ===== QUICK ACCESS CARDS ALIGNMENT ===== */
 /* ALTURA FIXA SEM AFETAR HEADER */
 :deep(.quick-access-card) {
-  height: 180px !important;
+  height: 200px !important;
   overflow: hidden !important;
 }
 
@@ -666,13 +665,14 @@ useSEO({
 /* CONTEÚDO OCUPA ESPAÇO RESTANTE */
 .quick-access-content {
   position: relative !important;
-  height: calc(130px - 30px) !important; /* Altura total menos header */
+  height: calc(150px - 40px) !important; /* Altura total menos header */
   padding: 0.5rem !important;
   padding-bottom: 10px !important;
 }
 
 .quick-access-text-area {
-  height: calc(100% - 70px) !important;
+  height: calc(100% - 80px) !important;
+  padding-bottom: 10px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
