@@ -364,7 +364,7 @@
     "card": {
       "keyFeatures": "Características Principais",
       "actions": {
-        "documentation": "Ver Documentação",
+        "page": "Ver Framework",
         "examples": "Ver Exemplos"
       }
     },

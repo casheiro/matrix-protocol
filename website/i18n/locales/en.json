@@ -319,7 +319,7 @@
     "card": {
       "keyFeatures": "Key Features",
       "actions": {
-        "documentation": "View Documentation",
+        "page": "View Framework",
         "examples": "View Examples"
       }
     },

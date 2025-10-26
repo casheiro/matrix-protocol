@@ -185,7 +185,7 @@
                   size="sm"
                   class="border-2 border-emerald-400/50 shadow-lg hover:shadow-xl hover:border-emerald-400/70 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  {{ $t('frameworks.card.actions.documentation') }}
+                  {{ $t('frameworks.card.actions.page') }}
                 </UButton>
                 <UButton 
                   :to="localePath('/docs/examples/knowledge')"
@@ -248,7 +248,7 @@
                   size="sm"
                   class="border-2 border-red-400/50 shadow-lg hover:shadow-xl hover:border-red-400/70 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  {{ $t('frameworks.card.actions.documentation') }}
+                  {{ $t('frameworks.card.actions.page') }}
                 </UButton>
                 <UButton 
                   :to="localePath('/docs/examples/knowledge')"
@@ -331,7 +331,7 @@
                   size="sm"
                   class="border-2 border-orange-400/50 shadow-lg hover:shadow-xl hover:border-orange-400/70 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  {{ $t('frameworks.card.actions.documentation') }}
+                  {{ $t('frameworks.card.actions.page') }}
                 </UButton>
                 <UButton 
                   :to="localePath('/docs/examples/knowledge')"
@@ -394,7 +394,7 @@
                   size="sm"
                   class="border-2 border-purple-400/50 shadow-lg hover:shadow-xl hover:border-purple-400/70 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  {{ $t('frameworks.card.actions.documentation') }}
+                  {{ $t('frameworks.card.actions.page') }}
                 </UButton>
                 <UButton 
                   :to="localePath('/docs/examples/knowledge')"
@@ -477,7 +477,7 @@
                   size="sm"
                   class="border-2 border-blue-400/50 shadow-lg hover:shadow-xl hover:border-blue-400/70 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  {{ $t('frameworks.card.actions.documentation') }}
+                  {{ $t('frameworks.card.actions.page') }}
                 </UButton>
                 <UButton 
                   :to="localePath('/docs/examples/knowledge')"
