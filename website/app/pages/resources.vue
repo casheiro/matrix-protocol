@@ -55,27 +55,29 @@
             </h3>
           </div>
           
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6" style="grid-template-rows: 1fr;">
             <!-- New to Matrix Protocol -->
-            <UCard class="border-green-200 dark:border-green-800 flex flex-col h-full">
+            <UCard class="border-green-200 dark:border-green-800 start-here-card">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-sparkles" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
                   <h4 class="font-semibold text-green-800 dark:text-green-200">{{ $t('resources.startHere.newcomer.title') }}</h4>
                 </div>
               </template>
-              <div class="flex flex-col h-full">
-                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                  {{ $t('resources.startHere.newcomer.description') }}
-                </p>
-                <div class="space-y-2 mt-auto">
+              <div class="start-here-card-content">
+                <div class="start-here-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 start-here-text">
+                    {{ $t('resources.startHere.newcomer.description') }}
+                  </p>
+                </div>
+                <div class="start-here-buttons">
                   <UButton
                     :to="localePath('/protocol')"
                     color="success"
                     icon="i-heroicons-book-open"
                     size="sm"
                     block
-                    class="cursor-pointer"
+                    class="cursor-pointer mb-2"
                   >
                     {{ $t('resources.startHere.newcomer.readProtocol') }}
                   </UButton>
@@ -95,25 +97,27 @@
             </UCard>
 
             <!-- Ready to Implement -->
-            <UCard class="border-blue-200 dark:border-blue-800 flex flex-col h-full">
+            <UCard class="border-blue-200 dark:border-blue-800 start-here-card">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-cog-6-tooth" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
                   <h4 class="font-semibold text-blue-800 dark:text-blue-200">{{ $t('resources.startHere.implementer.title') }}</h4>
                 </div>
               </template>
-              <div class="flex flex-col h-full">
-                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                  {{ $t('resources.startHere.implementer.description') }}
-                </p>
-                <div class="space-y-2 mt-auto">
+              <div class="start-here-card-content">
+                <div class="start-here-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 start-here-text">
+                    {{ $t('resources.startHere.implementer.description') }}
+                  </p>
+                </div>
+                <div class="start-here-buttons">
                   <UButton
                     :to="localePath('/docs/manual')"
                     color="info"
                     icon="i-heroicons-document-text"
                     size="sm"
                     block
-                    class="cursor-pointer"
+                    class="cursor-pointer mb-2"
                   >
                     {{ $t('resources.startHere.implementer.implementationGuide') }}
                   </UButton>
@@ -133,36 +137,35 @@
             </UCard>
 
             <!-- Advanced User -->
-            <UCard class="border-purple-200 dark:border-purple-800 flex flex-col h-full">
+            <UCard class="border-purple-200 dark:border-purple-800 start-here-card">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-cpu-chip" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
                   <h4 class="font-semibold text-purple-800 dark:text-purple-200">{{ $t('resources.startHere.advanced.title') }}</h4>
                 </div>
               </template>
-              <div class="flex flex-col h-full">
-                <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                  {{ $t('resources.startHere.advanced.description') }}
-                </p>
-                <div class="space-y-2 mt-auto">
+              <div class="start-here-card-content">
+                <div class="start-here-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 start-here-text">
+                    {{ $t('resources.startHere.advanced.description') }}
+                  </p>
+                </div>
+                <div class="start-here-buttons">
                   <UButton
                     :to="localePath('/docs/examples')"
-                    color="primary"
                     icon="i-heroicons-beaker"
                     size="sm"
                     block
-                    class="cursor-pointer"
+                    class="cursor-pointer mb-2 bg-purple-600 text-white"
                   >
                     {{ $t('resources.startHere.advanced.examples') }}
                   </UButton>
                   <UButton
                     :to="localePath('/docs/manual/tools')"
-                    variant="outline"
-                    color="primary"
                     icon="i-heroicons-wrench-screwdriver"
                     size="sm"
                     block
-                    class="cursor-pointer"
+                    class="cursor-pointer border-1 border-purple-500 text-purple-400 bg-transparent"
                   >
                     {{ $t('resources.startHere.advanced.tools') }}
                   </UButton>
@@ -585,3 +588,49 @@ useSEO({
   ogType: 'website'
 })
 </script>
+
+<style scoped>
+/* ALTURA FIXA SEM AFETAR HEADER */
+:deep(.start-here-card) {
+  height: 280px !important;
+  overflow: hidden !important;
+}
+
+/* HEADER MANTÉM TAMANHO NORMAL */
+:deep(.start-here-card [data-headlessui-state]) {
+  padding: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* CONTEÚDO OCUPA ESPAÇO RESTANTE */
+.start-here-card-content {
+  position: relative !important;
+  height: calc(250px - 60px) !important; /* Altura total menos header */
+  padding: 1rem !important;
+  padding-bottom: 120px !important;
+}
+
+.start-here-text-area {
+  height: calc(100% - 120px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.start-here-text {
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+
+.start-here-buttons {
+  position: absolute !important;
+  bottom: 1rem !important;
+  left: 1rem !important;
+  right: 1rem !important;
+}
+
+/* FORÇA GRID UNIFORME */
+:deep(.grid.grid-cols-1.md\\:grid-cols-3) {
+  align-items: stretch !important;
+}
+</style>
