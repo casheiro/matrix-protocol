@@ -186,7 +186,7 @@
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Frameworks -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/frameworks'))">
+            <UCard class="hover:shadow-xl hover:-translate-y-1 transition-all duration-200 cursor-pointer quick-access-card" @click="$router.push(localePath('/frameworks'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-squares-2x2" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
@@ -210,7 +210,7 @@
             </UCard>
 
             <!-- Templates -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/templates'))">
+            <UCard class="hover:shadow-xl hover:-translate-y-1 transition-all duration-200 cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/templates'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-document-duplicate" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
@@ -233,7 +233,7 @@
             </UCard>
 
             <!-- Examples -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/examples'))">
+            <UCard class="hover:shadow-xl hover:-translate-y-1 transition-all duration-200 cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/examples'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-beaker" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
@@ -255,7 +255,7 @@
             </UCard>
 
             <!-- Tools -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/tools'))">
+            <UCard class="hover:shadow-xl hover:-translate-y-1 transition-all duration-200 cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/tools'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-wrench-screwdriver" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
@@ -697,5 +697,22 @@ useSEO({
 /* FORÇA GRID UNIFORME PARA QUICK ACCESS */
 :deep(.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4) {
   align-items: stretch !important;
+}
+
+/* ===== HOVER ELEVATION EFFECTS ===== */
+/* Efeito de elevação mais refinado para Quick Access cards */
+:deep(.quick-access-card) {
+  transition: all 0.2s ease-out !important;
+}
+
+:deep(.quick-access-card:hover) {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Suaviza a transição de volta */
+:deep(.quick-access-card:not(:hover)) {
+  transform: translateY(0) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
 }
 </style>
