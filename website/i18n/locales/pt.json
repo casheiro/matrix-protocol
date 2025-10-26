@@ -108,6 +108,109 @@
     "title": "Central de Recursos",
     "subtitle": "Tudo que você precisa para implementar o Matrix Protocol",
     "description": "Templates, guias, casos de estudo e ferramentas para implementação completa do Matrix Protocol na sua organização.",
+    "startHere": {
+      "title": "Por onde começar?",
+      "newcomer": {
+        "title": "Novo no Matrix Protocol",
+        "description": "Primeiro contato? Comece entendendo a base conceitual e filosófica do protocolo.",
+        "readProtocol": "Ler Protocolo",
+        "quickStart": "Início Rápido"
+      },
+      "implementer": {
+        "title": "Pronto para Implementar",
+        "description": "Já conhece o protocolo e quer implementar na sua organização? Acesse guias práticos.",
+        "implementationGuide": "Manual de Implementação",
+        "templates": "Ver Templates"
+      },
+      "advanced": {
+        "title": "Usuário Avançado",
+        "description": "Procura exemplos práticos, casos de uso ou ferramentas avançadas para otimizar a implementação?",
+        "examples": "Exemplos Práticos",
+        "tools": "Ferramentas"
+      }
+    },
+    "quickAccess": {
+      "title": "Acesso Rápido",
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Explore os 5 frameworks integrados do Matrix Protocol"
+      },
+      "templates": {
+        "title": "Templates",
+        "description": "MOCs organizacionais para diferentes portes de empresa"
+      },
+      "examples": {
+        "title": "Exemplos",
+        "description": "Casos práticos e implementações reais"
+      },
+      "tools": {
+        "title": "Ferramentas",
+        "description": "Validação e auditoria de implementações"
+      }
+    },
+    "downloadCenter": {
+      "title": "Downloads Essenciais",
+      "quickStart": {
+        "title": "Template Inicial",
+        "badge": "Iniciante",
+        "description": "Template MOC básico para qualquer organização começar rapidamente."
+      },
+      "unified": {
+        "title": "Estrutura Unificada",
+        "badge": "Normativo",
+        "description": "MOC base que garante consistência entre todos os templates organizacionais.",
+        "download": "Baixar MOC Unificado"
+      },
+      "guide": {
+        "title": "Guia de Implementação",
+        "badge": "4600+ linhas",
+        "description": "Manual técnico completo com todos os aspectos de implementação."
+      },
+      "allTemplates": {
+        "title": "Precisa de mais templates?",
+        "description": "Acesse nossa coleção completa organizada por porte organizacional (Startup, Scale-up, Enterprise, Corporation).",
+        "viewAll": "Ver Todos os Templates"
+      }
+    },
+    "learnMore": {
+      "title": "Trilhas de Aprendizado",
+      "beginner": {
+        "title": "Trilha Iniciante",
+        "step1": {
+          "title": "Entender o Protocolo",
+          "description": "Visão geral e filosofia"
+        },
+        "step2": {
+          "title": "Conhecer os Frameworks",
+          "description": "MEF, ZOF, OIF, MOC, MAL"
+        },
+        "step3": {
+          "title": "Fazer o Quickstart",
+          "description": "Primeiros passos práticos"
+        }
+      },
+      "advanced": {
+        "title": "Trilha Avançada",
+        "step1": {
+          "title": "Estudar Casos Reais",
+          "description": "Exemplos de conhecimento estruturado"
+        },
+        "step2": {
+          "title": "Implementar com Manual",
+          "description": "Guia técnico detalhado"
+        },
+        "step3": {
+          "title": "Usar Ferramentas",
+          "description": "Validação e auditoria"
+        }
+      }
+    },
+    "cta": {
+      "title": "Pronto para começar?",
+      "description": "Escolha o template adequado para sua organização e comece a implementar o Matrix Protocol hoje mesmo.",
+      "quickstart": "Guia de Início Rápido",
+      "documentation": "Ver Documentação"
+    },
     "quickStart": {
       "title": "Templates de Início Rápido",
       "basicTemplate": "Template MOC Básico",
@@ -138,12 +241,6 @@
       "title": "Ferramentas e Recursos",
       "documentation": "Documentação Completa",
       "documentationDescription": "Acesse toda a documentação técnica detalhada dos frameworks e guias de implementação."
-    },
-    "cta": {
-      "title": "Pronto para começar?",
-      "description": "Escolha o template adequado para sua organização e comece a implementar o Matrix Protocol hoje mesmo.",
-      "quickstart": "Guia de Início Rápido",
-      "implementation": "Guia de Implementação"
     },
     "unifiedStructure": {
       "title": "Estrutura Unificada MOC v0.0.1-beta",
