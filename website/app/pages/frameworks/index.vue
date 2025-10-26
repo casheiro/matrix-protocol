@@ -188,7 +188,7 @@
                   {{ $t('frameworks.card.actions.documentation') }}
                 </UButton>
                 <UButton 
-                  :to="localePath('/resources?framework=mef')"
+                  :to="localePath('/docs/examples/knowledge')"
                   variant="outline"
                   color="emerald"
                   size="sm"
@@ -251,7 +251,7 @@
                   {{ $t('frameworks.card.actions.documentation') }}
                 </UButton>
                 <UButton 
-                  :to="localePath('/resources?framework=mal')"
+                  :to="localePath('/docs/examples/knowledge')"
                   variant="outline"
                   color="red"
                   size="sm"
@@ -334,7 +334,7 @@
                   {{ $t('frameworks.card.actions.documentation') }}
                 </UButton>
                 <UButton 
-                  :to="localePath('/resources?framework=zof')"
+                  :to="localePath('/docs/examples/knowledge')"
                   variant="outline"
                   color="orange"
                   size="sm"
@@ -397,7 +397,7 @@
                   {{ $t('frameworks.card.actions.documentation') }}
                 </UButton>
                 <UButton 
-                  :to="localePath('/resources?framework=moc')"
+                  :to="localePath('/docs/examples/knowledge')"
                   variant="outline"
                   color="purple"
                   size="sm"
@@ -480,7 +480,7 @@
                   {{ $t('frameworks.card.actions.documentation') }}
                 </UButton>
                 <UButton 
-                  :to="localePath('/resources?framework=oif')"
+                  :to="localePath('/docs/examples/knowledge')"
                   variant="outline"
                   color="blue"
                   size="sm"
