@@ -72,7 +72,7 @@
                 </div>
                 <div class="start-here-buttons">
                   <UButton
-                    :to="localePath('/protocol')"
+                    :to="localePath('/docs/protocol')"
                     color="success"
                     icon="i-heroicons-book-open"
                     size="sm"
@@ -416,7 +416,7 @@
                     <div class="font-medium text-gray-900 dark:text-white">{{ $t('resources.learnMore.beginner.step1.title') }}</div>
                     <div class="text-sm text-gray-600 dark:text-gray-400">{{ $t('resources.learnMore.beginner.step1.description') }}</div>
                   </div>
-                  <UButton :to="localePath('/protocol')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
+                  <UButton :to="localePath('/mep')" variant="ghost" size="xs" icon="i-heroicons-arrow-right" class="cursor-pointer" />
                 </div>
                 
                 <div class="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
@@ -508,7 +508,7 @@
             {{ $t('resources.cta.quickstart') }}
           </UButton>
           <UButton
-            :to="localePath('/docs/manual')"
+            :to="localePath('/docs')"
             variant="outline"
             color="primary"
             size="lg"

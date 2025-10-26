@@ -607,7 +607,7 @@
             variant="outline"
             color="white"
             icon="i-heroicons-document-text"
-            :to="localePath('/protocol')"
+            :to="localePath('/docs')"
             class="border-2 border-white/50 shadow-lg hover:shadow-xl hover:border-white/70 hover:-translate-y-0.5 transition-all duration-300 bg-transparent backdrop-blur-sm"
           >
             {{ $t('frameworks.cta.readProtocol') }}

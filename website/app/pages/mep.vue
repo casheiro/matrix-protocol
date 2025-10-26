@@ -364,7 +364,7 @@
             {{ $t('mep.cta.exploreFrameworks') }}
           </UButton>
           <UButton 
-            :to="localePath('/protocol')"
+            :to="localePath('/docs/protocol')"
             size="lg"
             variant="outline"
             color="white"
