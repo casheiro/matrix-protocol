@@ -1,28 +1,36 @@
 export const useDocsNavigation = () => {
   const { t } = useI18n()
 
-  // Helper function to build hierarchical navigation tree
-  const buildDynamicChildren = async (locale: string, basePath: string) => {
-    try {
-      console.log(`🔍 Building hierarchical children for ${basePath} (locale: ${locale})`)
+  // Cache for dynamic navigation to avoid repeated queries
+  const navigationCache = new Map<string, { data: any[], timestamp: number }>()
+  const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
 
-      // Query all content under the base path for this locale
+  // Optimized helper function to build hierarchical navigation tree
+  const buildDynamicChildren = async (locale: string, basePath: string) => {
+    const cacheKey = `${locale}-${basePath}`
+    
+    // Check cache first
+    if (navigationCache.has(cacheKey)) {
+      const cached = navigationCache.get(cacheKey)!
+      if (Date.now() - cached.timestamp < CACHE_TTL) {
+        return cached.data
+      }
+    }
+    
+    try {
+      // Query all content under the base path for this locale - OPTIMIZED
       const fullPath = `/${locale}${basePath}`
-      console.log(`🔍 Searching for content with path: ${fullPath}/%`)
       
       const allContent = await queryCollection(locale as 'pt' | 'en')
         .where('path', 'LIKE', `${fullPath}/%`)
         .all()
 
-      console.log(`📋 Found ${allContent?.length || 0} items under ${basePath}`)
-
       if (!allContent || allContent.length === 0) {
-        console.log(`⚠️ No content found under ${basePath}`)
         return []
       }
 
       // Sort by path to ensure proper hierarchy
-      allContent.sort((a, b) => a.path.localeCompare(b.path))
+      allContent.sort((a: any, b: any) => a.path.localeCompare(b.path))
 
       // Build hierarchical structure
       const buildHierarchy = (items: any[], currentPath: string): any[] => {
@@ -104,8 +112,11 @@ export const useDocsNavigation = () => {
 
       const result = buildHierarchy(allContent, basePath)
       
-      console.log(`✅ Built hierarchical navigation with ${result.length} top-level items`)
-      console.log('📁 Hierarchy preview:', JSON.stringify(result, null, 2))
+      // Cache the result
+      navigationCache.set(cacheKey, {
+        data: result,
+        timestamp: Date.now()
+      })
       
       return result
     } catch (error) {
@@ -209,22 +220,30 @@ export const useDocsNavigation = () => {
       }
     ]
 
-    // Build dynamic examples section
-    console.log('🔍 Starting dynamic examples navigation build...')
+    // Build dynamic examples section - OPTIMIZED
     const examplesChildren = await buildDynamicChildren(locale, '/docs/examples')
-    console.log(`📁 Examples children count: ${examplesChildren.length}`)
     
-    const examplesSection = {
-      title: t('docs.sections.examples'),
-      path: `/docs/examples`,
-      icon: 'i-heroicons-rectangle-stack',
-      children: examplesChildren
+    if (examplesChildren.length > 0) {
+      const examplesSection = {
+        title: t('docs.sections.examples'),
+        path: `/docs/examples`,
+        icon: 'i-heroicons-rectangle-stack',
+        children: examplesChildren
+      }
+      navigation.push(examplesSection)
     }
     
-    navigation.push(examplesSection)
-    
-    console.log(`🎯 Final navigation items: ${navigation.length}`)
-    console.log('📋 Examples section:', JSON.stringify(examplesSection, null, 2))
+    // Build dynamic manual section - EXPANDED DYNAMISM
+    const manualChildren = await buildDynamicChildren(locale, '/docs/manual')
+    if (manualChildren.length > 0) {
+      const manualSection = {
+        title: t('docs.sections.manual'),
+        path: `/docs/manual`,
+        icon: 'i-heroicons-book-open',
+        children: manualChildren
+      }
+      navigation.push(manualSection)
+    }
 
     return navigation
   }
