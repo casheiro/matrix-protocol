@@ -186,77 +186,93 @@
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Frameworks -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/frameworks'))">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/frameworks'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-squares-2x2" class="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
                   <h4 class="font-semibold">{{ $t('resources.quickAccess.frameworks.title') }}</h4>
                 </div>
               </template>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {{ $t('resources.quickAccess.frameworks.description') }}
-              </p>
-              <div class="flex flex-wrap items-center gap-2 mt-2">
-                <UBadge size="sm" color="success" variant="soft">MEF</UBadge>
-                <UBadge size="sm" color="warning" variant="soft">ZOF</UBadge>
-                <UBadge size="sm" color="info" variant="soft">OIF</UBadge>
-                <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
-                <UBadge size="sm" color="error" variant="soft">MAL</UBadge>
+              <div class="quick-access-content">
+                <div class="quick-access-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 text-sm quick-access-text">
+                    {{ $t('resources.quickAccess.frameworks.description') }}
+                  </p>
+                </div>
+                <div class="quick-access-badges">
+                  <UBadge size="sm" color="success" variant="soft">MEF</UBadge>
+                  <UBadge size="sm" color="warning" variant="soft">ZOF</UBadge>
+                  <UBadge size="sm" color="info" variant="soft">OIF</UBadge>
+                  <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                  <UBadge size="sm" color="error" variant="soft">MAL</UBadge>
+                </div>
               </div>
             </UCard>
 
             <!-- Templates -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/manual/templates'))">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/templates'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-document-duplicate" class="w-5 h-5 text-green-600 dark:text-green-400 mr-2" />
                   <h4 class="font-semibold">{{ $t('resources.quickAccess.templates.title') }}</h4>
                 </div>
               </template>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {{ $t('resources.quickAccess.templates.description') }}
-              </p>
-              <div class="flex flex-wrap items-center gap-2 mt-2">
-                <UBadge size="sm" color="success" variant="soft">Startup</UBadge>
-                <UBadge size="sm" color="info" variant="soft">Scale-up</UBadge>
-                <UBadge size="sm" color="primary" variant="soft">Enterprise</UBadge>
-                <UBadge size="sm" color="error" variant="soft">Corporation</UBadge>
+              <div class="quick-access-content">
+                <div class="quick-access-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 text-sm quick-access-text">
+                    {{ $t('resources.quickAccess.templates.description') }}
+                  </p>
+                </div>
+                <div class="quick-access-badges">
+                  <UBadge size="sm" color="success" variant="soft">Startup</UBadge>
+                  <UBadge size="sm" color="info" variant="soft">Scale-up</UBadge>
+                  <UBadge size="sm" color="primary" variant="soft">Enterprise</UBadge>
+                  <UBadge size="sm" color="error" variant="soft">Corporation</UBadge>
+                </div>
               </div>
             </UCard>
 
             <!-- Examples -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/examples'))">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/examples'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-beaker" class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" />
                   <h4 class="font-semibold">{{ $t('resources.quickAccess.examples.title') }}</h4>
                 </div>
               </template>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {{ $t('resources.quickAccess.examples.description') }}
-              </p>
-              <div class="flex flex-wrap items-center gap-2 mt-2">
-                <UBadge size="sm" color="warning" variant="soft">UKIs</UBadge>
-                <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
-                <UBadge size="sm" color="info" variant="soft">Workflows</UBadge>
+              <div class="quick-access-content">
+                <div class="quick-access-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 text-sm quick-access-text">
+                    {{ $t('resources.quickAccess.examples.description') }}
+                  </p>
+                </div>
+                <div class="quick-access-badges">
+                  <UBadge size="sm" color="warning" variant="soft">UKIs</UBadge>
+                  <UBadge size="sm" color="primary" variant="soft">MOC</UBadge>
+                  <UBadge size="sm" color="info" variant="soft">Workflows</UBadge>
+                </div>
               </div>
             </UCard>
 
             <!-- Tools -->
-            <UCard class="hover:shadow-lg transition-shadow cursor-pointer" @click="$router.push(localePath('/docs/manual/tools'))">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer quick-access-card" @click="$router.push(localePath('/docs/manual/tools'))">
               <template #header>
                 <div class="flex items-center">
                   <UIcon name="i-heroicons-wrench-screwdriver" class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
                   <h4 class="font-semibold">{{ $t('resources.quickAccess.tools.title') }}</h4>
                 </div>
               </template>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {{ $t('resources.quickAccess.tools.description') }}
-              </p>
-              <div class="flex flex-wrap items-center gap-2 mt-2">
-                <UBadge size="sm" color="neutral" variant="soft">Validation</UBadge>
-                <UBadge size="sm" color="info" variant="soft">Checklists</UBadge>
-                <UBadge size="sm" color="success" variant="soft">Audit</UBadge>
+              <div class="quick-access-content">
+                <div class="quick-access-text-area">
+                  <p class="text-gray-600 dark:text-gray-300 text-sm quick-access-text">
+                    {{ $t('resources.quickAccess.tools.description') }}
+                  </p>
+                </div>
+                <div class="quick-access-badges">
+                  <UBadge size="sm" color="neutral" variant="soft">Validation</UBadge>
+                  <UBadge size="sm" color="info" variant="soft">Checklists</UBadge>
+                  <UBadge size="sm" color="success" variant="soft">Audit</UBadge>
+                </div>
               </div>
             </UCard>
           </div>
@@ -631,6 +647,55 @@ useSEO({
 
 /* FORÇA GRID UNIFORME */
 :deep(.grid.grid-cols-1.md\\:grid-cols-3) {
+  align-items: stretch !important;
+}
+
+/* ===== QUICK ACCESS CARDS ALIGNMENT ===== */
+/* ALTURA FIXA SEM AFETAR HEADER */
+:deep(.quick-access-card) {
+  height: 180px !important;
+  overflow: hidden !important;
+}
+
+/* HEADER MANTÉM TAMANHO NORMAL */
+:deep(.quick-access-card [data-headlessui-state]) {
+  padding: 0.5rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* CONTEÚDO OCUPA ESPAÇO RESTANTE */
+.quick-access-content {
+  position: relative !important;
+  height: calc(130px - 30px) !important; /* Altura total menos header */
+  padding: 0.5rem !important;
+  padding-bottom: 10px !important;
+}
+
+.quick-access-text-area {
+  height: calc(100% - 70px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.quick-access-text {
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+
+.quick-access-badges {
+  position: absolute !important;
+  bottom: 1rem !important;
+  left: 1rem !important;
+  right: 1rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  justify-content: center !important;
+}
+
+/* FORÇA GRID UNIFORME PARA QUICK ACCESS */
+:deep(.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4) {
   align-items: stretch !important;
 }
 </style>
