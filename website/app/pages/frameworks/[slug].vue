@@ -33,7 +33,8 @@
           <!-- Version Badge -->
           <div class="flex justify-center mb-12">
             <UBadge
-              :color="getFrameworkColor(route.params.slug)"
+              :color="frameworkBadgeColor"
+              :class="frameworkBadgeClass"
               variant="soft"
               size="lg"
               class="px-6 py-2 text-lg font-semibold"
@@ -56,9 +57,8 @@
             
             <UButton
               :to="localePath('/resources#download-center')"
-              variant="outline"
               size="xl"
-              class="font-semibold px-8 py-4 text-lg border-2 transition-all duration-300 transform hover:scale-105"
+              class="font-semibold px-8 py-4 text-lg border-2 bg-transparent transition-all duration-300 transform hover:scale-105"
               :class="frameworkOutlineButton"
             >
               <UIcon name="i-heroicons-arrow-down-tray" class="w-6 h-6 mr-3" />
@@ -99,11 +99,11 @@
                 </div>
                 
                 <h3 class="text-xl font-bold text-white mb-4 font-rajdhani">
-                  {{ feature.title }}
+                  {{ rt(feature.title) }}
                 </h3>
                 
                 <p class="text-gray-300 leading-relaxed">
-                  {{ feature.description }}
+                  {{ rt(feature.description) }}
                 </p>
               </div>
             </UCard>
@@ -154,9 +154,11 @@
                 class="w-80 h-80 rounded-3xl shadow-2xl flex items-center justify-center"
                 :class="frameworkGradient"
               >
-                <span class="text-8xl font-bold text-white font-rajdhani opacity-20">
-                  {{ frameworkData.acronym }}
-                </span>
+                <img 
+                  :src="frameworkLogoPath" 
+                  :alt="`${frameworkData.acronym} Logo`"
+                  class="w-64 h-64  object-contain brightness-0 invert"
+                />
               </div>
             </div>
           </div>
@@ -230,9 +232,8 @@
           
           <UButton
             :to="localePath('/docs/examples')"
-            variant="outline"
             size="xl"
-            class="font-semibold px-10 py-5 text-lg border-2 transition-all duration-300 transform hover:scale-105"
+            class="font-semibold px-10 py-5 text-lg border-2 bg-transparent transition-all duration-300 transform hover:scale-105"
             :class="frameworkOutlineButton"
           >
             <UIcon name="i-heroicons-beaker" class="w-6 h-6 mr-3" />
@@ -294,7 +295,6 @@ const frameworkIcons = {
   ],
   oif: [
     'i-heroicons-user-group',
-    'i-heroicons-hierarchy',
     'i-heroicons-chat-bubble-left-right'
   ],
   moc: [
@@ -309,13 +309,20 @@ const frameworkIcons = {
   ]
 }
 
-// Framework features with i18n data
+// Framework logo path from public/logos directory
+const frameworkLogoPath = computed(() => {
+  const slug = String(route.params.slug)
+  return `/logos/${slug}/${slug}-logo-icon.svg`
+})
+
+// Framework features with i18n data using tm()
 const frameworkFeatures = computed(() => {
-  const features = t(`frameworks.${route.params.slug}.features`)
-  const icons = frameworkIcons[route.params.slug] || []
+  const slug = String(route.params.slug)
+  const features = tm(`frameworks.${slug}.features`)
+  const icons = frameworkIcons[slug] || []
   
   if (typeof features === 'object' && features !== null) {
-    return Object.entries(features).map(([key, value], index) => ({
+    return Object.entries(features).map(([, value], index) => ({
       icon: icons[index] || 'i-heroicons-star',
       title: value,
       description: value
@@ -400,16 +407,25 @@ const frameworkOutlineButton = computed(() => {
   return colorMap[route.params.slug] || 'border-gray-500 text-gray-400 hover:bg-gray-500/10 hover:border-gray-400'
 })
 
-const getFrameworkColor = (key) => {
+// Framework color for badges using Nuxt UI standard colors
+const frameworkBadgeColor = computed(() => {
   const colorMap = {
-    mef: 'emerald',
-    zof: 'orange', 
-    oif: 'blue',
+    mef: 'success',
+    zof: 'warning', 
+    oif: 'info',
     moc: 'purple',
-    mal: 'red'
+    mal: 'error'
   }
-  return colorMap[key] || 'gray'
-}
+  return colorMap[route.params.slug] || 'gray'
+})
+
+// Framework badge classes for MOC (purple) since it's not a standard color
+const frameworkBadgeClass = computed(() => {
+  if (route.params.slug === 'moc') {
+    return 'bg-purple-400/10 text-purple-400'
+  }
+  return ''
+})
 
 // Page validation
 definePageMeta({
