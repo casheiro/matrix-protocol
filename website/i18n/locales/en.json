@@ -399,10 +399,196 @@
     "tableOfContents": "Table of Contents",
     "lastUpdated": "Last updated",
     "version": "Version",
-      "features": "Features",
-      "benefits": "Benefits",
-      "useCases": "Use Cases",
-      "integrations": "Integrations"
+    "features": "Features",
+    "benefits": "Benefits",
+    "useCases": "Use Cases",
+    "integrations": "Integrations",
+    "promotional": {
+      "sections": {
+        "featuresTitle": "Key Features",
+        "featuresSubtitle": "Discover what makes {framework} unique in the Matrix Protocol ecosystem",
+        "benefitsTitle": "Why use {framework}?",
+        "implementationTitle": "How to Implement",
+        "implementationSubtitle": "Simplified process to start using {framework} in your organization",
+        "ctaTitle": "Ready to Implement?",
+        "ctaSubtitle": "Start transforming your organization with {framework} today",
+        "version": "Version {version}",
+        "documentation": "View Documentation",
+        "downloadTemplates": "Download Templates",
+        "getStarted": "Get Started",
+        "viewExamples": "View Examples"
+      },
+      "mef": {
+        "benefits": [
+          {
+            "title": "Governed Knowledge",
+            "description": "Eliminate duplications and inconsistencies with rigorous organizational knowledge governance."
+          },
+          {
+            "title": "Complete Audit",
+            "description": "Track all knowledge evolution with immutable audit trails."
+          },
+          {
+            "title": "Scalability",
+            "description": "Grow from hundreds to thousands of knowledge items without losing control."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Map",
+            "description": "Identify existing critical knowledge in the organization"
+          },
+          {
+            "title": "Structure",
+            "description": "Convert to UKIs following MEF standards"
+          },
+          {
+            "title": "Relate",
+            "description": "Connect knowledge with semantic relationships"
+          },
+          {
+            "title": "Govern",
+            "description": "Implement controlled evolution processes"
+          }
+        ]
+      },
+      "zof": {
+        "benefits": [
+          {
+            "title": "Standardized Workflows",
+            "description": "Eliminate unnecessary variability with mandatory canonical states."
+          },
+          {
+            "title": "Auditable Decisions",
+            "description": "Every decision is recorded with complete context for auditing."
+          },
+          {
+            "title": "Collaborative AI",
+            "description": "AI agents natively integrated into organizational decision flow."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Model",
+            "description": "Define canonical states for your critical workflows"
+          },
+          {
+            "title": "Implement",
+            "description": "Configure checkpoints and explainability signals"
+          },
+          {
+            "title": "Connect",
+            "description": "Integrate with MEF for knowledge consultation"
+          },
+          {
+            "title": "Monitor",
+            "description": "Track execution and continuously improve"
+          }
+        ]
+      },
+      "oif": {
+        "benefits": [
+          {
+            "title": "Organizational AI",
+            "description": "AI agents that understand and respect organizational structure."
+          },
+          {
+            "title": "Automatic Compliance",
+            "description": "Responses always conform to organizational policies and authority."
+          },
+          {
+            "title": "Human Scalability",
+            "description": "Multiply human capacity without losing control or context."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Define",
+            "description": "Configure canonical archetypes for your organization"
+          },
+          {
+            "title": "Customize",
+            "description": "Adapt behaviors for specific contexts"
+          },
+          {
+            "title": "Integrate",
+            "description": "Connect with MOC for authority validation"
+          },
+          {
+            "title": "Evolve",
+            "description": "Refine archetypes based on feedback and usage"
+          }
+        ]
+      },
+      "moc": {
+        "benefits": [
+          {
+            "title": "Local Flexibility",
+            "description": "Adapt the protocol to your organization's unique structure."
+          },
+          {
+            "title": "Clear Governance",
+            "description": "Explicit rules for authority and decision making."
+          },
+          {
+            "title": "Controlled Evolution",
+            "description": "Taxonomies that evolve based on real feedback and usage."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Map",
+            "description": "Identify existing organizational structures"
+          },
+          {
+            "title": "Configure",
+            "description": "Define hierarchies and authority rules"
+          },
+          {
+            "title": "Validate",
+            "description": "Test configurations with real scenarios"
+          },
+          {
+            "title": "Refine",
+            "description": "Adjust based on feedback and organizational evolution"
+          }
+        ]
+      },
+      "mal": {
+        "benefits": [
+          {
+            "title": "Guaranteed Consistency",
+            "description": "Same conflicts always resolved in the same deterministic way."
+          },
+          {
+            "title": "Automatic Scalability",
+            "description": "System resolves conflicts regardless of volume or complexity."
+          },
+          {
+            "title": "Complete Audit",
+            "description": "Every decision documented with complete epistemological rationale."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Configure",
+            "description": "Define precedence rules in organizational MOC"
+          },
+          {
+            "title": "Monitor",
+            "description": "Track most frequent conflict types"
+          },
+          {
+            "title": "Adjust",
+            "description": "Refine rules based on identified patterns"
+          },
+          {
+            "title": "Scale",
+            "description": "Allow system to resolve automatically"
+          }
+        ]
+      }
+    }
   },
   "accessibility": {
     "skipToContent": "Skip to main content",

@@ -347,10 +347,196 @@
     "tableOfContents": "Sumário",
     "lastUpdated": "Última atualização",
     "version": "Versão",
-      "features": "Características",
-      "benefits": "Benefícios",
-      "useCases": "Casos de Uso",
-      "integrations": "Integrações"
+    "features": "Características",
+    "benefits": "Benefícios",
+    "useCases": "Casos de Uso",
+    "integrations": "Integrações",
+    "promotional": {
+      "sections": {
+        "featuresTitle": "Principais Características",
+        "featuresSubtitle": "Descubra o que torna o {framework} único no ecossistema Matrix Protocol",
+        "benefitsTitle": "Por que usar o {framework}?",
+        "implementationTitle": "Como Implementar",
+        "implementationSubtitle": "Processo simplificado para começar a usar o {framework} em sua organização",
+        "ctaTitle": "Pronto para Implementar?",
+        "ctaSubtitle": "Comece hoje mesmo a transformar sua organização com o {framework}",
+        "version": "Versão {version}",
+        "documentation": "Ver Documentação",
+        "downloadTemplates": "Baixar Templates",
+        "getStarted": "Começar Agora",
+        "viewExamples": "Ver Exemplos"
+      },
+      "mef": {
+        "benefits": [
+          {
+            "title": "Conhecimento Governado",
+            "description": "Elimine duplicações e inconsistências com governança rigorosa de conhecimento organizacional."
+          },
+          {
+            "title": "Auditoria Completa",
+            "description": "Rastree toda evolução do conhecimento com trilhas de auditoria imutáveis."
+          },
+          {
+            "title": "Escalabilidade",
+            "description": "Cresça de centenas para milhares de itens de conhecimento sem perder controle."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Mapeie",
+            "description": "Identifique conhecimento crítico existente na organização"
+          },
+          {
+            "title": "Estruture",
+            "description": "Converta em UKIs seguindo padrões MEF"
+          },
+          {
+            "title": "Relacione",
+            "description": "Conecte conhecimentos com relacionamentos semânticos"
+          },
+          {
+            "title": "Governe",
+            "description": "Implemente processos de evolução controlada"
+          }
+        ]
+      },
+      "zof": {
+        "benefits": [
+          {
+            "title": "Workflows Padronizados",
+            "description": "Elimine variabilidade desnecessária com estados canônicos obrigatórios."
+          },
+          {
+            "title": "Decisões Auditáveis",
+            "description": "Toda decisão fica registrada com contexto completo para auditoria."
+          },
+          {
+            "title": "IA Colaborativa",
+            "description": "Agentes de IA integrados nativamente ao fluxo de decisão organizacional."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Modele",
+            "description": "Defina estados canônicos para seus workflows críticos"
+          },
+          {
+            "title": "Implemente",
+            "description": "Configure checkpoints e sinais de explicabilidade"
+          },
+          {
+            "title": "Conecte",
+            "description": "Integre com MEF para consulta de conhecimento"
+          },
+          {
+            "title": "Monitore",
+            "description": "Acompanhe execução e melhore continuamente"
+          }
+        ]
+      },
+      "oif": {
+        "benefits": [
+          {
+            "title": "IA Organizacional",
+            "description": "Agentes de IA que entendem e respeitam estrutura organizacional."
+          },
+          {
+            "title": "Conformidade Automática",
+            "description": "Respostas sempre conformes com políticas e autoridade organizacional."
+          },
+          {
+            "title": "Escalabilidade Humana",
+            "description": "Multiplique capacidade humana sem perder controle ou contexto."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Defina",
+            "description": "Configure arquétipos canônicos para sua organização"
+          },
+          {
+            "title": "Customize",
+            "description": "Adapte comportamentos para contextos específicos"
+          },
+          {
+            "title": "Integre",
+            "description": "Conecte com MOC para validação de autoridade"
+          },
+          {
+            "title": "Evolua",
+            "description": "Refine arquétipos baseado em feedback e uso"
+          }
+        ]
+      },
+      "moc": {
+        "benefits": [
+          {
+            "title": "Flexibilidade Local",
+            "description": "Adapte o protocolo à estrutura única de sua organização."
+          },
+          {
+            "title": "Governança Clara",
+            "description": "Regras explícitas para autoridade e tomada de decisão."
+          },
+          {
+            "title": "Evolução Controlada",
+            "description": "Taxonomias que evoluem baseadas em feedback e uso real."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Mapeie",
+            "description": "Identifique estruturas organizacionais existentes"
+          },
+          {
+            "title": "Configure",
+            "description": "Defina hierarquias e regras de autoridade"
+          },
+          {
+            "title": "Valide",
+            "description": "Teste configurações com cenários reais"
+          },
+          {
+            "title": "Refine",
+            "description": "Ajuste baseado em feedback e evolução organizacional"
+          }
+        ]
+      },
+      "mal": {
+        "benefits": [
+          {
+            "title": "Consistência Garantida",
+            "description": "Mesmos conflitos sempre resolvidos da mesma forma determinística."
+          },
+          {
+            "title": "Escalabilidade Automática",
+            "description": "Sistema resolve conflitos independente do volume ou complexidade."
+          },
+          {
+            "title": "Auditoria Completa",
+            "description": "Toda decisão documentada com rationale epistemológico completo."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Configure",
+            "description": "Defina regras de precedência no MOC organizacional"
+          },
+          {
+            "title": "Monitore",
+            "description": "Acompanhe tipos de conflitos mais frequentes"
+          },
+          {
+            "title": "Ajuste",
+            "description": "Refine regras baseado em padrões identificados"
+          },
+          {
+            "title": "Escale",
+            "description": "Permita que sistema resolva automaticamente"
+          }
+        ]
+      }
+    }
   },
   "accessibility": {
     "skipToContent": "Pular para o conteúdo principal",
@@ -564,114 +750,6 @@
     "title": "Downloads",
     "implementationGuide": "Manual de Implementação",
     "mocTemplate": "Template MOC"
-  },
-  "resources": {
-    "title": "Central de Recursos",
-    "subtitle": "Seu portal para implementar o Matrix Protocol",
-    "description": "Encontre rapidamente tudo que precisa: templates, documentação, exemplos e caminhos de aprendizado personalizados para sua jornada com Matrix Protocol.",
-    "startHere": {
-      "title": "Por onde começar?",
-      "newcomer": {
-        "title": "Novo no Matrix Protocol",
-        "description": "Primeiro contato? Comece entendendo a base conceitual e filosófica do protocolo.",
-        "readProtocol": "Ler Protocolo",
-        "quickStart": "Inicialização Rápida"
-      },
-      "implementer": {
-        "title": "Pronto para Implementar",
-        "description": "Já conhece o protocolo e quer implementar na sua organização? Acesse os guias práticos.",
-        "implementationGuide": "Manual de Implementação",
-        "templates": "Ver Templates"
-      },
-      "advanced": {
-        "title": "Usuário Avançado",
-        "description": "Busca exemplos práticos, casos de uso ou ferramentas avançadas para otimizar implementação?",
-        "examples": "Exemplos Práticos",
-        "tools": "Ferramentas"
-      }
-    },
-    "quickAccess": {
-      "title": "Acesso Rápido",
-      "frameworks": {
-        "title": "Frameworks",
-        "description": "Explore os 5 frameworks integrados do Matrix Protocol"
-      },
-      "templates": {
-        "title": "Templates",
-        "description": "MOCs organizacionais para diferentes portes de empresa"
-      },
-      "examples": {
-        "title": "Exemplos",
-        "description": "Casos práticos e implementações reais"
-      },
-      "tools": {
-        "title": "Ferramentas",
-        "description": "Checklists, validações e auditoria"
-      }
-    },
-    "downloadCenter": {
-      "title": "Downloads Essenciais",
-      "quickStart": {
-        "title": "Template de Início",
-        "badge": "Starter",
-        "description": "Template MOC básico para qualquer organização começar rapidamente."
-      },
-      "unified": {
-        "title": "Estrutura Unificada",
-        "badge": "Normativo",
-        "description": "MOC base que garante consistência entre todos os templates organizacionais.",
-        "download": "Baixar MOC Unificado"
-      },
-      "guide": {
-        "title": "Guia de Implementação",
-        "badge": "4600+ linhas",
-        "description": "Manual técnico completo com todos os aspectos de implementação."
-      },
-      "allTemplates": {
-        "title": "Precisa de mais templates?",
-        "description": "Acesse nossa coleção completa organizada por porte organizacional (Startup, Scale-up, Enterprise, Corporation).",
-        "viewAll": "Ver Todos os Templates"
-      }
-    },
-    "learnMore": {
-      "title": "Caminhos de Aprendizado",
-      "beginner": {
-        "title": "Trilha Iniciante",
-        "step1": {
-          "title": "Entenda o Protocolo",
-          "description": "Visão geral e filosofia"
-        },
-        "step2": {
-          "title": "Conheça os Frameworks",
-          "description": "MEF, ZOF, OIF, MOC, MAL"
-        },
-        "step3": {
-          "title": "Faça o Quickstart",
-          "description": "Primeiros passos práticos"
-        }
-      },
-      "advanced": {
-        "title": "Trilha Avançada",
-        "step1": {
-          "title": "Estude Casos Reais",
-          "description": "Exemplos de conhecimento estruturado"
-        },
-        "step2": {
-          "title": "Implemente com Manual",
-          "description": "Guia técnico detalhado"
-        },
-        "step3": {
-          "title": "Use Ferramentas",
-          "description": "Validação e auditoria"
-        }
-      }
-    },
-    "cta": {
-      "title": "Pronto para começar sua jornada?",
-      "description": "Escolha seu caminho e comece a implementar o Matrix Protocol na sua organização hoje mesmo.",
-      "quickstart": "Inicialização Rápida",
-      "documentation": "Documentação Completa"
-    }
   },
   "glossary": {
     "filter": {

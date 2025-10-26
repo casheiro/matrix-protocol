@@ -1,222 +1,361 @@
 <template>
-  <div class="framework-page min-h-screen bg-slate-matrix-800">
-    <div class="flex">
-      <!-- Sidebar -->
-      <aside 
-        v-if="false"
-        class="hidden lg:block w-80 bg-slate-matrix-700 border-r border-slate-matrix-600 h-screen sticky top-0 overflow-y-auto"
-      >
-        <FrameworkSidebar
-          :framework="frameworkData"
-          :current-section="currentSection"
-          @section-change="handleSectionChange"
-        />
-      </aside>
+  <div class="framework-promotional-page min-h-screen bg-gradient-to-b from-slate-matrix-800 to-slate-matrix-900">
+    <!-- Hero Section Premium -->
+    <section class="hero-section relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" :class="frameworkGradient"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div class="text-center">
+          <!-- Framework Icon -->
+          <div class="flex justify-center mb-8">
+            <div 
+              class="w-24 h-24 rounded-2xl flex items-center justify-center shadow-2xl"
+              :class="frameworkIconBg"
+            >
+              <span class="text-4xl font-bold text-white font-rajdhani">
+                {{ frameworkData.acronym }}
+              </span>
+            </div>
+          </div>
+          
+          <!-- Framework Title -->
+          <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 font-rajdhani">
+            {{ $t(`frameworks.${frameworkData.key}.name`) }}
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            {{ $t(`frameworks.${frameworkData.key}.description`) }}
+          </p>
+          
+          <!-- Version Badge -->
+          <div class="flex justify-center mb-12">
+            <UBadge
+              :color="getFrameworkColor(route.params.slug)"
+              variant="soft"
+              size="lg"
+              class="px-6 py-2 text-lg font-semibold"
+            >
+              {{ versionBadge }}
+            </UBadge>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <UButton
+              :to="localePath('/docs/frameworks/' + route.params.slug)"
+              size="xl"
+              class="font-bold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+              :class="frameworkPrimaryButton"
+            >
+              <UIcon name="i-heroicons-book-open" class="w-6 h-6 mr-3" />
+              {{ $t('frameworks.promotional.sections.documentation') }}
+            </UButton>
+            
+            <UButton
+              :to="localePath('/resources#download-center')"
+              variant="outline"
+              size="xl"
+              class="font-semibold px-8 py-4 text-lg border-2 transition-all duration-300 transform hover:scale-105"
+              :class="frameworkOutlineButton"
+            >
+              <UIcon name="i-heroicons-arrow-down-tray" class="w-6 h-6 mr-3" />
+              {{ $t('frameworks.promotional.sections.downloadTemplates') }}
+            </UButton>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- Main Content -->
-      <main class="flex-1 min-w-0">
-        <div class="flex">
-          <!-- Content Area -->
-          <div class="flex-1 min-w-0">
-            <div class="max-w-4xl mx-auto px-4 py-8">
-              <!-- Framework Content -->
-              <div class="framework-content">
-                <!-- Framework Overview Card -->
-                <div class="mb-8">
-                  <UCard class="framework-overview-card">
-                    <div class="flex items-start gap-6">
-                      <!-- Framework Icon -->
-                      <div 
-                        class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
-                        :class="frameworkIconBg"
-                      >
-                        <span class="text-2xl font-bold text-white">
-                          {{ frameworkData?.acronym?.charAt(0) }}
-                        </span>
-                      </div>
-                      
-                      <!-- Framework Info -->
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center gap-3 mb-2">
-                          <h1 class="text-3xl font-bold text-gray-900 dark:text-white font-rajdhani">
-                            {{ frameworkData?.acronym }}
-                          </h1>
-                          <UBadge
-                            :color="getFrameworkColor(route.params.slug)"
-                            variant="soft"
-                            size="sm"
-                          >
-                            v{{ frameworkData?.version || '0.0.1' }}
-                          </UBadge>
-                        </div>
-                        
-                        <h2 class="text-xl text-gray-700 dark:text-gray-300 mb-4">
-                          {{ frameworkData?.name }}
-                        </h2>
-                        
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                          {{ frameworkData?.description }}
-                        </p>
-                      </div>
-                    </div>
-                  </UCard>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                  <UButton
-                    :to="`/${$i18n.locale.value}/resources#basic-${route.params.slug}`"
-                    variant="ghost"
-                    size="lg"
-                    block
-                    class="border-2 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 group"
-                    :class="getFrameworkButtonClasses(route.params.slug, 'outline')"
+    <!-- Features Section -->
+    <section class="features-section py-20 bg-slate-matrix-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 font-rajdhani">
+            {{ $t('frameworks.promotional.sections.featuresTitle') }}
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            {{ featuresSubtitle }}
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            v-for="(feature, index) in frameworkFeatures" 
+            :key="index"
+            class="feature-card group"
+          >
+            <UCard class="h-full hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 bg-slate-matrix-600 border-slate-matrix-500">
+              <div class="text-center p-6">
+                <div class="mb-6">
+                  <div 
+                    class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto shadow-lg"
+                    :class="frameworkIconBg"
                   >
-                    <span class="flex items-center justify-center">
-                      <UIcon name="i-heroicons-arrow-down-tray" class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:translate-y-0.5" />
-                      {{ $t('frameworks.actions.downloadTemplates') }}
-                    </span>
-                  </UButton>
-                  
-                  <UButton
-                    :to="`/${$i18n.locale.value}/implementation`"
-                    variant="ghost"
-                    size="lg"
-                    block
-                    class="font-bold transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transform group"
-                    :class="getFrameworkButtonClasses(route.params.slug, 'solid')"
-                  >
-                    <span class="flex items-center justify-center">
-                      <UIcon name="i-heroicons-rocket-launch" class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:translate-x-0.5" />
-                      {{ $t('frameworks.actions.implementNow') }}
-                    </span>
-                  </UButton>
-                </div>
-
-                <!-- Framework Documentation Content -->
-                <div class="prose prose-lg dark:prose-invert max-w-none">
-                  <!-- Dynamic content from Nuxt Content will be rendered here -->
-                  <ContentRenderer
-                    v-if="frameworkContent"
-                    :value="frameworkContent"
-                    class="framework-markdown-content"
-                  />
-                  
-                  <!-- Fallback content if no markdown found -->
-                  <div v-else class="fallback-content">
-                    <section id="overview" class="mb-12" role="region" aria-labelledby="overview-title">
-                      <h2 id="overview-title" class="text-2xl font-bold mb-4">{{ $t('frameworks.sections.overview') }}</h2>
-                      <p class="mb-4">
-                        <strong>{{ frameworkData?.name }} ({{ frameworkData?.acronym }})</strong> 
-                        {{ $t('frameworks.fallback.intro') }}
-                      </p>
-                      <p class="mb-6">
-                        {{ frameworkData?.description }}
-                      </p>
-                    </section>
-
-                    <section id="getting-started" class="mb-12" role="region" aria-labelledby="getting-started-title">
-                      <h2 id="getting-started-title" class="text-2xl font-bold mb-4">{{ $t('frameworks.sections.gettingStarted') }}</h2>
-                      <p class="mb-4">
-                        {{ $t('frameworks.fallback.getStartedIntro', { framework: frameworkData?.acronym }) }}
-                      </p>
-                      <ol class="list-decimal list-inside space-y-2 mb-6">
-                        <li>{{ $t('frameworks.fallback.steps.download') }}</li>
-                        <li>{{ $t('frameworks.fallback.steps.study') }}</li>
-                        <li>{{ $t('frameworks.fallback.steps.implement') }}</li>
-                        <li>{{ $t('frameworks.fallback.steps.test') }}</li>
-                      </ol>
-                    </section>
-
-                    <section id="examples" class="mb-12" role="region" aria-labelledby="examples-title">
-                      <h2 id="examples-title" class="text-2xl font-bold mb-4">{{ $t('frameworks.sections.examples') }}</h2>
-                      <p class="mb-6">
-                        {{ $t('frameworks.fallback.examplesIntro', { framework: frameworkData?.acronym }) }}
-                      </p>
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <UCard>
-                          <h3 class="font-semibold mb-2">{{ $t('frameworks.sections.examples') }} - {{ $t('common.basic') }}</h3>
-                          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                            {{ $t('frameworks.fallback.basicExample') }}
-                          </p>
-                          <UButton 
-                            :to="`/${$i18n.locale.value}/resources#basic-${route.params.slug}`"
-                            variant="ghost"
-                            size="sm"
-                            class="transition-all duration-300 hover:shadow-md transform hover:scale-105"
-                            :class="getFrameworkButtonClasses(route.params.slug, 'outline')"
-                          >
-                            {{ $t('frameworks.actions.viewExamples') }}
-                          </UButton>
-                        </UCard>
-                        
-                        <UCard>
-                          <h3 class="font-semibold mb-2">{{ $t('frameworks.sections.examples') }} - {{ $t('common.advanced') }}</h3>
-                          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                            {{ $t('frameworks.fallback.advancedExample') }}
-                          </p>
-                          <UButton 
-                            :to="`/${$i18n.locale.value}/resources#advanced-${route.params.slug}`"
-                            variant="ghost"
-                            size="sm"
-                            class="transition-all duration-300 hover:shadow-md transform hover:scale-105"
-                            :class="getFrameworkButtonClasses(route.params.slug, 'outline')"
-                          >
-                            {{ $t('frameworks.actions.viewExamples') }}
-                          </UButton>
-                        </UCard>
-                      </div>
-                    </section>
+                    <UIcon :name="feature.icon" class="w-8 h-8 text-white" />
                   </div>
+                </div>
+                
+                <h3 class="text-xl font-bold text-white mb-4 font-rajdhani">
+                  {{ feature.title }}
+                </h3>
+                
+                <p class="text-gray-300 leading-relaxed">
+                  {{ feature.description }}
+                </p>
+              </div>
+            </UCard>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section py-20 bg-gradient-to-r from-slate-matrix-800 to-slate-matrix-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Text Content -->
+          <div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8 font-rajdhani">
+              {{ benefitsTitle }}
+            </h2>
+            
+            <div class="space-y-6">
+              <div 
+                v-for="(benefit, index) in frameworkBenefits" 
+                v-if="Array.isArray(frameworkBenefits) && frameworkBenefits.length > 0"
+                :key="index"
+                class="flex items-start space-x-4"
+              >
+                <div 
+                  class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                  :class="frameworkIconBg"
+                >
+                  <UIcon name="i-heroicons-check" class="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-2">
+                    {{ rt(benefit.title) }}
+                  </h3>
+                  <p class="text-gray-300 leading-relaxed">
+                    {{ rt(benefit.description) }}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Table of Contents (Desktop) -->
-          <aside 
-            class="hidden xl:block w-64 bg-slate-matrix-700 border-l border-slate-matrix-600"
-          >
-            <div class="sticky top-4 p-4">
-              <TableOfContents
-                :headings="tocHeadings"
-                :active-heading="activeHeading"
-                @heading-click="handleHeadingClick"
-              />
+          
+          <!-- Visual Element -->
+          <div class="flex justify-center">
+            <div class="relative">
+              <div 
+                class="w-80 h-80 rounded-3xl shadow-2xl flex items-center justify-center"
+                :class="frameworkGradient"
+              >
+                <span class="text-8xl font-bold text-white font-rajdhani opacity-20">
+                  {{ frameworkData.acronym }}
+                </span>
+              </div>
             </div>
-          </aside>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
+
+    <!-- Implementation Process -->
+    <section class="process-section py-20 bg-slate-matrix-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 font-rajdhani">
+            {{ $t('frameworks.promotional.sections.implementationTitle') }}
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            {{ implementationSubtitle }}
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div 
+            v-for="(step, index) in implementationSteps" 
+            v-if="Array.isArray(implementationSteps) && implementationSteps.length > 0"
+            :key="index"
+            class="text-center group"
+          >
+            <div class="mb-6">
+              <div 
+                class="w-16 h-16 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300"
+                :class="frameworkIconBg"
+              >
+                <span class="text-2xl font-bold text-white">
+                  {{ index + 1 }}
+                </span>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-4 font-rajdhani">
+              {{ rt(step.title) }}
+            </h3>
+            
+            <p class="text-gray-300 leading-relaxed">
+              {{ rt(step.description) }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-20 bg-gradient-to-r from-slate-matrix-900 to-black">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 font-rajdhani">
+          {{ $t('frameworks.promotional.sections.ctaTitle') }}
+        </h2>
+        
+        <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+          {{ ctaSubtitle }}
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <UButton
+            :to="localePath('/docs/quickstart')"
+            size="xl"
+            class="font-bold px-10 py-5 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+            :class="frameworkPrimaryButton"
+          >
+            <UIcon name="i-heroicons-rocket-launch" class="w-6 h-6 mr-3" />
+            {{ $t('frameworks.promotional.sections.getStarted') }}
+          </UButton>
+          
+          <UButton
+            :to="localePath('/docs/examples')"
+            variant="outline"
+            size="xl"
+            class="font-semibold px-10 py-5 text-lg border-2 transition-all duration-300 transform hover:scale-105"
+            :class="frameworkOutlineButton"
+          >
+            <UIcon name="i-heroicons-beaker" class="w-6 h-6 mr-3" />
+            {{ $t('frameworks.promotional.sections.viewExamples') }}
+          </UButton>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-// Explicit component imports
-import FrameworkSidebar from '~/components/frameworks/FrameworkSidebar.vue'
-import TableOfContents from '~/components/frameworks/TableOfContents.vue'
-
 // Nuxt composables
 const route = useRoute()
-const { $i18n } = useNuxtApp()
-const { getFramework } = useMatrixAssets()
+const localePath = useLocalePath()
+const { t, tm, rt } = useI18n()
+// Framework data using i18n directly in template
 
-// Framework data
-const frameworkData = getFramework(route.params.slug)
+// Framework basic data 
+const frameworkData = computed(() => {
+  const key = String(route.params.slug)
+  
+  // Get acronym based on framework key
+  const acronymMap = {
+    mef: 'MEF',
+    zof: 'ZOF', 
+    oif: 'OIF',
+    moc: 'MOC',
+    mal: 'MAL'
+  }
+  
+  return {
+    key,
+    acronym: acronymMap[key] || key.toUpperCase(),
+    version: 'Beta'
+  }
+})
 
 // Redirect se framework não existir
-if (!frameworkData) {
+const validFrameworks = ['mef', 'zof', 'oif', 'moc', 'mal']
+if (!validFrameworks.includes(route.params.slug)) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Framework not found'
   })
 }
 
-// Reactive state
-const currentSection = ref('overview')
-const activeHeading = ref('')
+// Ícones para features (não traduzíveis)
+const frameworkIcons = {
+  mef: [
+    'i-heroicons-document-text',
+    'i-heroicons-link',
+    'i-heroicons-shield-check'
+  ],
+  zof: [
+    'i-heroicons-arrow-path',
+    'i-heroicons-eye',
+    'i-heroicons-cpu-chip'
+  ],
+  oif: [
+    'i-heroicons-user-group',
+    'i-heroicons-hierarchy',
+    'i-heroicons-chat-bubble-left-right'
+  ],
+  moc: [
+    'i-heroicons-building-office',
+    'i-heroicons-key',
+    'i-heroicons-adjustments-vertical'
+  ],
+  mal: [
+    'i-heroicons-scale',
+    'i-heroicons-document-check',
+    'i-heroicons-bolt'
+  ]
+}
 
-// Computed properties
+// Framework features with i18n data
+const frameworkFeatures = computed(() => {
+  const features = t(`frameworks.${route.params.slug}.features`)
+  const icons = frameworkIcons[route.params.slug] || []
+  
+  if (typeof features === 'object' && features !== null) {
+    return Object.entries(features).map(([key, value], index) => ({
+      icon: icons[index] || 'i-heroicons-star',
+      title: value,
+      description: value
+    }))
+  }
+  return []
+})
+
+const frameworkBenefits = computed(() => {
+  const slug = String(route.params.slug)
+  return tm(`frameworks.promotional.${slug}.benefits`)
+})
+
+const implementationSteps = computed(() => {
+  const slug = String(route.params.slug)
+  return tm(`frameworks.promotional.${slug}.implementationSteps`)
+})
+
+// Text computed properties with interpolation
+const featuresSubtitle = computed(() => 
+  t('frameworks.promotional.sections.featuresSubtitle', { framework: frameworkData.value.acronym })
+)
+
+const benefitsTitle = computed(() => 
+  t('frameworks.promotional.sections.benefitsTitle', { framework: frameworkData.value.acronym })
+)
+
+const implementationSubtitle = computed(() => 
+  t('frameworks.promotional.sections.implementationSubtitle', { framework: frameworkData.value.acronym })
+)
+
+const ctaSubtitle = computed(() => 
+  t('frameworks.promotional.sections.ctaSubtitle', { framework: frameworkData.value.acronym })
+)
+
+const versionBadge = computed(() => 
+  t('frameworks.promotional.sections.version', { version: frameworkData.value.version })
+)
+
+// Computed properties for styling
 const frameworkIconBg = computed(() => {
   const colorMap = {
     mef: 'bg-gradient-to-br from-emerald-500 to-emerald-600',
@@ -226,6 +365,39 @@ const frameworkIconBg = computed(() => {
     mal: 'bg-gradient-to-br from-red-500 to-red-600'
   }
   return colorMap[route.params.slug] || 'bg-gradient-to-br from-gray-500 to-gray-600'
+})
+
+const frameworkGradient = computed(() => {
+  const colorMap = {
+    mef: 'bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600',
+    zof: 'bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600', 
+    oif: 'bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600',
+    moc: 'bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600',
+    mal: 'bg-gradient-to-br from-red-400 via-red-500 to-red-600'
+  }
+  return colorMap[route.params.slug] || 'bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600'
+})
+
+const frameworkPrimaryButton = computed(() => {
+  const colorMap = {
+    mef: 'bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white',
+    zof: 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white',
+    oif: 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white',
+    moc: 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-400 hover:to-purple-500 text-white',
+    mal: 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 text-white'
+  }
+  return colorMap[route.params.slug] || 'bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-400 hover:to-gray-500 text-white'
+})
+
+const frameworkOutlineButton = computed(() => {
+  const colorMap = {
+    mef: 'border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400',
+    zof: 'border-orange-500 text-orange-400 hover:bg-orange-500/10 hover:border-orange-400',
+    oif: 'border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400',
+    moc: 'border-purple-500 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400',
+    mal: 'border-red-500 text-red-400 hover:bg-red-500/10 hover:border-red-400'
+  }
+  return colorMap[route.params.slug] || 'border-gray-500 text-gray-400 hover:bg-gray-500/10 hover:border-gray-400'
 })
 
 const getFrameworkColor = (key) => {
@@ -239,124 +411,6 @@ const getFrameworkColor = (key) => {
   return colorMap[key] || 'gray'
 }
 
-const getFrameworkButtonClasses = (framework, variant) => {
-  const classes = {
-    mef: {
-      outline: 'border-emerald-500 hover:bg-emerald-500/10 hover:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:text-emerald-500',
-      solid: 'bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white'
-    },
-    zof: {
-      outline: 'border-orange-500 hover:bg-orange-500/10 hover:border-orange-400 text-orange-600 dark:text-orange-400 hover:text-orange-500',
-      solid: 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white'
-    },
-    oif: {
-      outline: 'border-blue-500 hover:bg-blue-500/10 hover:border-blue-400 text-blue-600 dark:text-blue-400 hover:text-blue-500',
-      solid: 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white'
-    },
-    moc: {
-      outline: 'border-purple-500 hover:bg-purple-500/10 hover:border-purple-400 text-purple-600 dark:text-purple-400 hover:text-purple-500',
-      solid: 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-400 hover:to-purple-500 text-white'
-    },
-    mal: {
-      outline: 'border-red-500 hover:bg-red-500/10 hover:border-red-400 text-red-600 dark:text-red-400 hover:text-red-500',
-      solid: 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 text-white'
-    }
-  }
-  
-  return classes[framework]?.[variant] || ''
-}
-
-// Methods
-const handleSectionChange = (section) => {
-  currentSection.value = section
-}
-
-const handleHeadingClick = (headingId) => {
-  activeHeading.value = headingId
-}
-
-// Load framework content using Nuxt Content 3 queryCollection
-const { data: frameworkContent } = await useAsyncData(
-  `framework-${route.params.slug}-${$i18n.locale.value}`,
-  async () => {
-    try {
-      const locale = $i18n.locale.value
-      const frameworkPath = `docs/frameworks/${route.params.slug}`
-      
-      console.log('🔍 Querying collection:', locale, 'path:', frameworkPath)
-      
-      // First, try to get all content from collection to debug
-      const allContent = await queryCollection(locale).all()
-      console.log('📋 All content in collection:', allContent?.length || 0, 'items')
-      if (allContent?.length > 0) {
-        console.log('📄 Sample paths:', allContent.slice(0, 3).map(c => c.path))
-      }
-      
-      // Try without leading slash since collection has prefix configured
-      let content = await queryCollection(locale).path(frameworkPath).first()
-      
-      // If not found, try with leading slash
-      if (!content) {
-        console.log('🔄 Trying with leading slash...')
-        content = await queryCollection(locale).path(`/${frameworkPath}`).first()
-      }
-      
-      // If still not found, try with full path including locale
-      if (!content) {
-        console.log('🔄 Trying with full path...')
-        content = await queryCollection(locale).path(`/${locale}/docs/frameworks/${route.params.slug}`).first()
-      }
-      
-      console.log('📄 Content found:', content ? 'YES' : 'NO', content?.title || 'undefined')
-      
-      return content
-    } catch (error) {
-      console.error('❌ Error querying content:', error)
-      console.warn(`No content found for framework ${route.params.slug} in locale ${$i18n.locale.value}`)
-      return null
-    }
-  }
-)
-
-// TOC headings - using ref instead of computed to allow modification
-const tocHeadings = ref([])
-
-// Generate fallback TOC when no content is found
-const generateFallbackTOC = () => {
-  return [
-    { id: 'overview', level: 2, text: $t('frameworks.sections.overview') },
-    { id: 'getting-started', level: 2, text: $t('frameworks.sections.gettingStarted') },
-    { id: 'examples', level: 2, text: $t('frameworks.sections.examples') }
-  ]
-}
-
-// Extract headings from rendered content for TOC
-const extractHeadings = () => {
-  if (import.meta.client) {
-    const headings = []
-    // Corrigido seletor para corresponder ao container real
-    const headingElements = document.querySelectorAll('.framework-markdown-content h1, .framework-markdown-content h2, .framework-markdown-content h3, .framework-markdown-content h4, .framework-markdown-content h5, .framework-markdown-content h6')
-    
-    headingElements.forEach((heading) => {
-      if (heading.id) {
-        headings.push({
-          id: heading.id,
-          level: parseInt(heading.tagName.substring(1)),
-          text: heading.textContent || ''
-        })
-      }
-    })
-    
-    // Agora podemos modificar pois é ref, não computed
-    tocHeadings.value = headings
-    
-    // Se não encontrou headings no markdown, usar fallback
-    if (headings.length === 0 && !frameworkContent.value) {
-      tocHeadings.value = generateFallbackTOC()
-    }
-  }
-}
-
 // Page validation
 definePageMeta({
   validate: ({ params }) => {
@@ -365,55 +419,39 @@ definePageMeta({
   }
 })
 
-// SEO usando composable padrão
+// SEO with i18n
 const seoTitle = computed(() => {
-  return `${frameworkData?.acronym} - ${frameworkData?.name} | Matrix Protocol`
+  const name = t(`frameworks.${frameworkData.value.key}.name`)
+  return `${frameworkData.value.acronym} - ${name} | Matrix Protocol`
 })
 
 const seoDescription = computed(() => {
-  return frameworkData?.description || `Documentação completa do framework ${frameworkData?.acronym} do Matrix Protocol`
+  const description = t(`frameworks.${frameworkData.value.key}.description`)
+  return description || `Descubra o framework ${frameworkData.value.acronym} do Matrix Protocol`
 })
 
 useSEO({
   title: seoTitle,
   description: seoDescription,
-  ogType: 'article'
-})
-
-// Watch for locale changes to reload content
-watch(() => $i18n.locale.value, () => {
-  // Content will automatically reload due to useAsyncData reactivity
-  nextTick(() => {
-    if (frameworkContent.value) {
-      extractHeadings()
-    }
-  })
-})
-
-// Extract headings when content loads - with improved timing
-watch(() => frameworkContent.value, () => {
-  if (frameworkContent.value && process.client) {
-    // Use timeout to ensure content is fully rendered
-    setTimeout(() => {
-      extractHeadings()
-    }, 100)
-  } else {
-    // Use fallback TOC when no content
-    tocHeadings.value = generateFallbackTOC()
-  }
-})
-
-// Initialize TOC on mount
-onMounted(() => {
-  if (import.meta.client) {
-    // Set initial TOC
-    if (frameworkContent.value) {
-      setTimeout(() => {
-        extractHeadings()
-      }, 200)
-    } else {
-      tocHeadings.value = generateFallbackTOC()
-    }
-  }
+  ogType: 'website'
 })
 </script>
+
+<style scoped>
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+</style>
