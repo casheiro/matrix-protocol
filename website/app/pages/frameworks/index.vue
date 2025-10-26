@@ -34,7 +34,7 @@
             size="lg" 
             color="white"
             icon="i-heroicons-rocket-launch"
-            :to="localePath('/quickstart')"
+            :to="localePath('/docs/quickstart')"
             class="border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-white/50 hover:-translate-y-0.5 transition-all duration-300"
           >
             {{ $t('frameworks.page.actions.startImplementation') }}
@@ -107,8 +107,8 @@
                     variant="outline"
                     color="purple"
                     icon="i-heroicons-light-bulb"
-                    @click="scrollToSection('principles')"
-                    class="border-2 border-purple-400/60 shadow-lg hover:shadow-xl hover:border-purple-400/80 hover:-translate-y-0.5 transition-all duration-300 bg-transparent backdrop-blur-sm"
+                    :to="localePath('/mep#principles')"
+                    class="cursor-pointer border-2 border-purple-400/60 shadow-lg hover:shadow-xl hover:border-purple-400/80 hover:-translate-y-0.5 transition-all duration-300 bg-transparent backdrop-blur-sm"
                   >
                     {{ $t('frameworks.mep.actions.seePrinciples') }}
                   </UButton>
