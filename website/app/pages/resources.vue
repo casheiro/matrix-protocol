@@ -429,7 +429,7 @@
                 {{ $t('resources.cases.knowledgeComparisonDescription') }}
               </p>
               <UButton
-                :to="localePath('/docs/examples/knowledge-comparison')"
+                :to="localePath('/docs/examples/knowledge')"
                 color="warning"
                 icon="i-heroicons-eye"
                 size="sm"
