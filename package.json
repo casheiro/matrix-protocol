@@ -11,6 +11,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
+    "start": "node .output/server/index.mjs",
     "clean": "rm -rf .nuxt .output dist"
   },
   "dependencies": {
