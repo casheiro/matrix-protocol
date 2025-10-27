@@ -3,9 +3,9 @@ name: Content Validation
 on:
   pull_request:
     paths:
-      - 'website/content/**'
-      - 'website/scripts/**'
-      - 'website/docs/**'
+      - '../../content/**'
+      - '../../scripts/**'
+      - '../../docs/**'
 
 jobs:
   validate:
