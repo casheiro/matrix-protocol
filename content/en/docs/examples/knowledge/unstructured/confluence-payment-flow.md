@@ -64,8 +64,6 @@ Mercado Pago:
 6. Webhook confirmation
 7. Order update
 
-![Flow Diagram](images/payment-flow-2022.png) *(image not found)*
-
 ## Discount Rules
 
 ### Volume Discount

@@ -40,7 +40,6 @@ Mercado Pago:
 6. Webhook confirmação
 7. Atualização pedido
 
-![Diagrama Fluxo](./images/payment-flow-2022.png) *(imagem não encontrada)*
 
 ## Regras de Desconto
 
