@@ -85,7 +85,7 @@ Matrix Protocol is implemented through **5 integrated frameworks**:
 #### Essential Resources:
 - Basic MOC Template (universal)
 - Specialized Templates by organizational size
-- [Validation Checklist](/manual/tools/validation-checklists)
+- [Validation Checklist](manual/tools/validation-checklists)
 
 ---
 

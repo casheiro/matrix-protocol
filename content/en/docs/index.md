@@ -27,19 +27,19 @@ Welcome to the complete documentation center for Matrix Protocol. Here you'll fi
 
 ## 🚀 Quick Start
 
-- **[Quick Start Guide](quickstart)** - Get started in 15 minutes
+- **[Quick Start Guide](./quickstart)** - Get started in 15 minutes
 - **[Implementation Guide](./implementation)** - Complete step-by-step implementation
 - **[Integration Guide](./integration)** - Integrate with existing systems
 
 ## 📖 Main Documentation
 
 ### Protocol and Concepts
-- **[Matrix Protocol](protocol)** - Complete protocol specification
-- **[MEP - Epistemic Principle](mep)** - Philosophical foundations
+- **[Matrix Protocol](./protocol)** - Complete protocol specification
+- **[MEP - Epistemic Principle](./mep)** - Philosophical foundations
 - **[Glossary](./glossary)** - Terms and definitions
 
 ### Frameworks
-- **[Frameworks Overview](frameworks)** - All 5 frameworks
+- **[Frameworks Overview](./frameworks)** - All 5 frameworks
 - **[MEF - Matrix Embedding Framework](./frameworks/mef)** - Knowledge structuring
 - **[ZOF - Zion Orchestration Framework](./frameworks/zof)** - Workflow orchestration
 - **[OIF - Operator Intelligence Framework](./frameworks/oif)** - AI archetypes
@@ -49,31 +49,31 @@ Welcome to the complete documentation center for Matrix Protocol. Here you'll fi
 ## 📚 Practical Resources
 
 ### Complete Manual
-- **[Templates](manual/templates)** - Ready-to-use templates
-- **[Tools](manual/tools)** - Checklists and validations
-- **[Examples](manual/examples)** - Real use cases
-- **[Reference Material](manual/reference)** - Detailed case studies
+- **[Templates](./manual/templates)** - Ready-to-use templates
+- **[Tools](./manual/tools)** - Checklists and validations
+- **[Examples](./manual/examples)** - Real use cases
+- **[Reference Material](./manual/reference)** - Detailed case studies
 
 ### Examples and Cases
-- **[Knowledge Comparison](examples)** - Before and after Matrix Protocol
-- **[Organizational Cases](examples)** - Real implementations
+- **[Knowledge Comparison](./examples/knowledge/)** - Before and after Matrix Protocol
+- **[Organizational Cases](./examples/knowledge/structured/business-rules)** - Real implementations
 
 ## 🎯 Where to Start?
 
 ### I'm new to Matrix Protocol
-1. Read the **[Protocol Overview](protocol)**
-2. Follow the **[Quick Start Guide](quickstart)**
-3. Explore the **[Frameworks](frameworks)**
+1. Read the **[Protocol Overview](./protocol)**
+2. Follow the **[Quick Start Guide](./quickstart)**
+3. Explore the **[Frameworks](./frameworks)**
 
 ### I want to implement
 1. Study the **[Implementation Guide](./implementation)**
-2. Use the **[Templates](manual/templates)**
-3. Validate with **[Checklists](manual/tools)**
+2. Use the **[Templates](./manual/templates)**
+3. Validate with **[Checklists](./manual/tools)**
 
 ### I want to integrate systems
 1. Read the **[Integration Guide](./integration)**
-2. See the **[Examples](examples)**
-3. Use the **[Reference Material](manual/reference)**
+2. See the **[Examples](./manual/examples)**
+3. Use the **[Reference Material](./manual/reference)**
 
 ---
 

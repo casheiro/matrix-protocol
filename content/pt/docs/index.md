@@ -30,19 +30,19 @@ Bem-vindo ao centro de documentação completo do Matrix Protocol. Aqui você en
 
 ## 🚀 Início Rápido
 
-- **[Guia de Início Rápido](quickstart)** - Comece agora em 15 minutos
+- **[Guia de Início Rápido](./quickstart)** - Comece agora em 15 minutos
 - **[Guia de Implementação](./implementation)** - Implementação completa passo a passo
 - **[Guia de Integração](./integration)** - Integre com sistemas existentes
 
 ## 📖 Documentação Principal
 
 ### Protocolo e Conceitos
-- **[Protocolo Matrix](protocol)** - Especificação completa do protocolo
+- **[Protocolo Matrix](./protocol)** - Especificação completa do protocolo
 - **[MEP - Princípio Epistemológico](mep)** - Fundamentos filosóficos
 - **[Glossário](./glossary)** - Termos e definições
 
 ### Frameworks
-- **[Visão Geral dos Frameworks](frameworks)** - Todos os 5 frameworks
+- **[Visão Geral dos Frameworks](./frameworks)** - Todos os 5 frameworks
 - **[MEF - Matrix Embedding Framework](./frameworks/mef)** - Estruturação de conhecimento
 - **[ZOF - Zion Orchestration Framework](./frameworks/zof)** - Orquestração de workflows
 - **[OIF - Operator Intelligence Framework](./frameworks/oif)** - Arquétipos de IA
@@ -52,31 +52,31 @@ Bem-vindo ao centro de documentação completo do Matrix Protocol. Aqui você en
 ## 📚 Recursos Práticos
 
 ### Manual Completo
-- **[Templates](manual/templates)** - Templates prontos para uso
-- **[Ferramentas](manual/tools)** - Checklists e validações
-- **[Exemplos](manual/examples)** - Casos de uso reais
-- **[Material de Referência](manual/reference)** - Estudos de caso detalhados
+- **[Templates](./manual/templates)** - Templates prontos para uso
+- **[Ferramentas](./manual/tools)** - Checklists e validações
+- **[Exemplos](./manual/examples)** - Casos de uso reais
+- **[Material de Referência](./manual/reference)** - Estudos de caso detalhados
 
 ### Exemplos e Casos
-- **[Comparação de Conhecimento](examples)** - Antes e depois do Matrix Protocol
-- **[Casos Organizacionais](examples)** - Implementações reais
+- **[Comparação de Conhecimento](./examples)** - Antes e depois do Matrix Protocol
+- **[Casos Organizacionais](./examples)** - Implementações reais
 
 ## 🎯 Por Onde Começar?
 
 ### Sou novo no Matrix Protocol
-1. Leia a **[Visão Geral do Protocolo](protocol)**
-2. Faça o **[Guia de Início Rápido](quickstart)**
-3. Explore os **[Frameworks](frameworks)**
+1. Leia a **[Visão Geral do Protocolo](./protocol)**
+2. Faça o **[Guia de Início Rápido](./quickstart)**
+3. Explore os **[Frameworks](./frameworks)**
 
 ### Quero implementar
 1. Estude o **[Guia de Implementação](./implementation)**
-2. Use os **[Templates](manual/templates)**
-3. Valide com os **[Checklists](manual/tools)**
+2. Use os **[Templates](./manual/templates)**
+3. Valide com os **[Checklists](./manual/tools)**
 
 ### Quero integrar sistemas
 1. Leia o **[Guia de Integração](./integration)**
-2. Veja os **[Exemplos](examples)**
-3. Use o **[Material de Referência](manual/reference)**
+2. Veja os **[Exemplos](./examples)**
+3. Use o **[Material de Referência](./manual/reference)**
 
 ---
 
