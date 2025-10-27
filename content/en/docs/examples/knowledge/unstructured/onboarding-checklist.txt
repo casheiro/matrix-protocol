@@ -1,0 +1,163 @@
+ONBOARDING CHECKLIST - PAYMENTS SQUAD
+Last updated: April 2022
+Responsible: Pedro Silva (former employee)
+
+=== FIRST WEEK ===
+
+DAY 1:
+□ Create system user (ask IT)
+□ Basic access:
+  - Jira: PAYMENTS project
+  - Confluence: Payments Squad space
+  - GitHub: payments-api repository
+  - Slack: channels #squad-payments #alerts-payments
+□ Development environment setup
+  - Java 8 (OUTDATED - we now use Java 17)  
+  - Maven 3.6
+  - IntelliJ IDEA
+  - Docker Desktop
+  - Postman
+□ Clone repository: git clone https://github.com/company/payments-api.git
+
+DAY 2:
+□ Local database setup:
+  - PostgreSQL 12 (password: admin123)  
+  - Run migrations: mvn flyway:migrate
+  - Seed data: mvn exec:java -Dexec.mainClass="SeedData"
+□ Configure IDE:
+  - Import code style: /docs/intellij-codestyle.xml (file no longer exists)
+  - Configure live templates
+  - SonarLint plugin
+
+DAY 3-5:
+□ Documentation reading:
+  - Project README.md
+  - Wiki: "Payment System Architecture" (dead link)
+  - Complete checkout flow
+  - Refund and chargeback policies
+□ Learn main APIs:
+  - POST /payments (create charge)
+  - GET /payments/{id} (check status)  
+  - POST /refunds (process refund)
+  - GET /health (health check)
+
+=== SECOND WEEK ===
+
+□ Configure environments:
+  - QA: https://payments-qa.company.com (server down)
+  - Staging: https://payments-staging.company.com  
+  - Production: https://payments.company.com
+□ Gateway access:
+  - Stripe Dashboard (ask John for credentials)
+  - PayPal panel (DISCONTINUED)
+  - Square (backup) 
+□ Learn monitoring:
+  - Grafana: http://grafana.internal/payments (server migrated)
+  - New Relic (account cancelled in 2023)
+  - PagerDuty (rotating on-call)
+
+=== THIRD WEEK ===
+
+□ First simple task:
+  - Fix bug PAYMENTS-XXX (there's always one)
+  - Code review with Pedro
+  - Deploy to QA
+  - Automated tests
+□ Learn process:
+  - Daily at 9:30am
+  - Sprint planning bi-weekly
+  - Retrospective monthly
+  - Friday deployments (FORBIDDEN!)
+
+=== FOURTH WEEK ===
+
+□ Medium complexity task:
+  - Implement new validation
+  - Unit + integration tests
+  - Deploy staging
+  - QA validation
+□ Team presentation:
+  - Meet everyone on the team
+  - Understand next 3 months roadmap
+  - Identify improvement points
+
+=== EXTERNAL SYSTEMS ACCESS ===
+
+□ AWS Console: 
+  - User: {name}.{lastname}@company.com
+  - Policies: PaymentsDeveloper
+  - MFA mandatory
+□ Production database:
+  - Host: payments-prod.cluster-xyz.us-east-1.rds.amazonaws.com
+  - User: readonly_user (password in 1Password)
+  - CAREFUL: only SELECT allowed!
+□ Redis:  
+  - Staging: redis-staging.elasticache.amazonaws.com
+  - Prod: redis-prod.elasticache.amazonaws.com
+  - No password (inside VPC)
+
+=== IMPORTANT CONTACTS ===
+
+Payments Team:
+- John Silva (Tech Lead) - john.silva@company.com
+- Pedro Santos (Senior Dev) - pedro.santos@company.com (LEFT)
+- Maria Oliveira (PO) - maria.oliveira@company.com  
+- Ana Costa (QA) - ana.costa@company.com
+- Carlos Lima (DevOps) - carlos.lima@company.com
+
+Other teams:
+- Backend Core: backend-core@company.com
+- Frontend: frontend-team@company.com
+- Mobile: mobile-team@company.com
+- QA Automation: qa-automation@company.com
+
+Vendors:
+- Stripe Support: support@stripe.com
+- PayPal: support@paypal.com (DISCONTINUED)
+
+=== COMMON TROUBLESHOOTING ===
+
+Application won't start:
+- Check if PostgreSQL is running
+- Clean target: mvn clean
+- Check port 8080 is free
+
+Tests failing:  
+- Run: mvn clean test
+- Check if TestContainers is working
+- Test database sometimes hangs (restart Docker)
+
+Deploy fails:
+- Check if branch is updated
+- Pipeline sometimes fails due to AWS instability
+- Retry usually works
+
+Gateway timeout:
+- Stripe sometimes unstable
+- Check status: https://status.stripe.com
+- Use PayPal as temporary backup
+
+=== IMPORTANT NOTES ===
+
+- NEVER commit API keys! (use .env)
+- Production deploy only with John or Pedro approval  
+- Webhook URL can't be localhost (use ngrok)
+- Production database: READ ONLY for devs
+- PCI Compliance: NEVER log card data
+- Local environment: use Stripe test cards
+
+=== USEFUL LINKS ===
+
+- Runbook: https://wiki.company.com/payments/runbook (404)
+- Postman collection: /docs/postman/payments.json
+- Database schema: /docs/database/schema.sql
+- Deploy guide: /docs/deploy/README.md (outdated)
+- PCI Guidelines: https://company.sharepoint.com/pci (access denied)
+
+---
+
+FINAL TIP: Ask plenty of questions! Team is receptive and prefers to explain 10x than debug errors for hours.
+
+If this checklist is outdated, please update it!
+
+Any questions: slack @pedro.silva or @john.silva

@@ -1,0 +1,61 @@
+From: compliance@company.com
+To: squad-payments@company.com
+Subject: [URGENT] PCI DSS Compliance - 30 day deadline
+Date: 03/12/2024 2:35 PM
+
+Payments Squad Team,
+
+PCI DSS audit is scheduled for 04/15/2024. I've identified some points that need to be fixed URGENTLY:
+
+CRITICAL (deadline: 03/20):
+1. Card data access logs are not being generated
+2. Data encryption in transit not on all APIs (some still HTTP)
+3. Default passwords in production environment (seriously, people?)
+4. Administrative access without two-factor authentication
+
+IMPORTANT (deadline: 03/30):
+1. Process documentation outdated (wiki is from 2022)
+2. Team training - nobody took the mandatory PCI course
+3. Penetration tests not executed this year
+4. Log backup not working for 2 months
+
+TECHNICAL OBSERVATIONS:
+- Test gateway SSL Certificate expired (not critical but ugly)
+- Password hash algorithm is SHA-1 (vulnerable, change to SHA-256)
+- Session tokens don't expire (configure 30min maximum)
+- Database connection strings with hardcoded password in code (SERIOUS!)
+
+PERFORMANCE NOTED:
+Speaking of which, the payment gateway is slow. Transactions that used to take 2-3 seconds are now taking 8-10 seconds. This could affect user experience and isn't directly PCI, but you should investigate.
+
+Also noticed that Stripe webhooks sometimes arrive duplicated. Don't know if it's their problem or ours, but could cause double-billing.
+
+NECESSARY ACTIONS:
+1. John (Tech Lead) - coordinate technical fixes
+2. Maria (PO) - approve overtime if necessary  
+3. Pedro (Senior Dev) - review all code that touches sensitive data
+4. Ana (QA) - validate fixes and document tests
+5. Carlos (DevOps) - infrastructure and monitoring
+6. EVERYONE - take PCI training by 03/25
+
+NON-COMPLIANCE CONSEQUENCES:
+- Card processing suspension
+- Fines up to $500,000
+- Certification loss (impact on new customers)
+- More rigorous audit next year
+
+Training link: https://compliance.company.com/pci-training (each person do with their login)
+
+Certificate must be sent to compliance@company.com after completion.
+
+If you have questions, I'm available on Teams or extension 4455.
+
+Best,
+Roberto Santos
+Compliance Officer
+
+---
+
+P.S.: DevOps folks, the backup server has been alerting for 3 days. Not PCI but please fix it soon.
+
+P.P.S.: Maria, that manual approval process for refunds above $1000 you implemented is helping a lot with compliance. Keep it up!

@@ -1,0 +1,112 @@
+HANDOVER NOTES - Pedro Silva (Senior Dev)
+Departure: 03/29/2024
+Handover to: Lucas (taking over projects) and João (technical context)
+
+=== CRITICAL KNOWLEDGE NOT DOCUMENTED ===
+
+STRIPE WEBHOOK:
+- That hack in the webhook handler (line 247 of PaymentController.java) NEEDS to be reviewed
+- Sometimes Stripe sends the same webhook 3x in a row, I implemented manual debounce with Redis
+- Redis key: "webhook_dedupe_{transaction_id}" with 300s TTL
+- WITHOUT THIS BILLING GETS DUPLICATED!!! Very important
+
+GATEWAY FAILOVER:
+- I implemented manual failover Stripe -> PayPal when Stripe returns 503
+- Not documented because it was "temporary" (8 months ago...)
+- Logic in PaymentService.java processPayment() method
+- Works 90% of the time, but PayPal sometimes rejects transactions that Stripe would accept
+
+CURRENCY CONVERSION:
+- Known bug in EUR -> BRL conversion
+- External API (exchangerate-api.io) sometimes returns yesterday's rate
+- Workaround: 1 hour cache + fallback to fixed rate 6.2
+- European client complains but "it works"
+- TODO: switch to more reliable API
+
+PERFORMANCE HACKS:
+- Sales report database query takes 30s
+- I implemented Redis cache with 10min TTL  
+- Key: "sales_report_{date}_{gateway}"
+- DON'T DELETE THIS CACHE! Without it dashboard freezes
+
+IDEMPOTENCY:
+- I implemented idempotency in APIs but only for POST /payments
+- Header: "Idempotency-Key" (UUID)
+- Store in database for 24h in payment_idempotency table
+- Other endpoints don't have it (PUT, PATCH, DELETE)
+
+MONITORING:
+- Health check endpoint (/health) doesn't validate gateway connections
+- Only checks database and Redis
+- Gateway can be down and health returns 200 OK
+- I talked to Carlos but it was never prioritized
+
+SECRETS & CONFIG:
+- Stripe API keys are in application.properties (YES, HARDCODED!)
+- Compliance complains but it's been "temporary" for 6 months
+- PayPal client_id is in environment variable (PAYPAL_CLIENT)
+- PostgreSQL database password also hardcoded (shame!)
+
+=== KNOWN BUGS (NOT CRITICAL) ===
+
+- Partial refund doesn't update stock correctly
+- Audit log doesn't record admin user IP
+- CVV validation accepts "000" (Ana already knows)
+- PayPal timeout sometimes 45s, should be 30s
+- Webhook retry not implemented (if it fails, it's lost)
+
+=== TECHNICAL DEBT ===
+
+- Spring Boot 2.4 (old version, should be 3.x)
+- JUnit tests only cover 40% of PaymentService
+- Apache Commons 3.12 dependency has known CVE
+- Dockerfile multi-stage build not implemented
+- Circuit breaker not configured (when gateway fails, application freezes)
+
+=== IMPORTANT CONTACTS ===
+
+Stripe:
+- Support: developers@stripe.com
+- Account Manager: sarah.johnson@stripe.com (speaks Portuguese)
+- Internal Slack: #integration-stripe
+
+PayPal:
+- Technical Support: developer-support@paypal.com  
+- Manager: michael.torres@paypal.com
+- Dev Portal: https://developer.paypal.com (login: company.dev@ourcompany.com)
+
+Exchange Rate API:
+- Support: support@exchangerate-api.io
+- Plan: Professional (500 requests/month) 
+- API Key is in code (yes, terrible practice)
+
+=== EMERGENCIES ===
+
+If main gateway fails:
+1. Check status at https://status.stripe.com
+2. Activate manual failover in admin panel
+3. Alert in Slack #incidents
+4. Monitor double billing 
+
+If webhook stops coming:
+1. Check endpoint https://ourapi.com/webhooks/stripe
+2. Revalidate URL in Stripe dashboard
+3. Check if Redis is working (dedupe)
+
+If currency conversion freezes:
+1. Force cache refresh: DELETE key "currency_*" in Redis
+2. Check if exchangerate-api.io is up
+3. Manual fallback: EUR = 6.2 BRL (approximation OK)
+
+=== ACCESS DATA ===
+
+- Stripe Dashboard: login company.stripe@ourcompany.com (password shared in 1Password)
+- PayPal Developer: login company.paypal@ourcompany.com  
+- Redis prod: redis-prod.internal:6379 (no password, inside VPC)
+- PostgreSQL: payments-db.internal:5432/payments_prod
+
+João, if you need anything call me on WhatsApp (11) 99999-9999 or pedro.silva.dev@gmail.com
+
+Good luck! The code works but needs a lot of love.
+
+Pedro

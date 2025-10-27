@@ -1,0 +1,951 @@
+{
+  "navigation": {
+    "home": "Home",
+    "frameworks": "Frameworks",
+    "frameworksOverview": "Frameworks Overview",
+    "frameworksOverviewDescription": "Complete frameworks architecture",
+    "overviewBadge": "Overview", 
+    "protocol": "Documentation",
+    "manual": "Manual",
+    "resources": "Resources",
+    "community": "Community",
+    "homeLink": "Go to homepage",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "mobileMenu": "Mobile navigation menu",
+    "toggleFrameworkSidebar": "Toggle framework navigation",
+    "backToHome": "Back to home",
+    "closeSidebar": "Close sidebar navigation",
+    "close": "Close",
+    
+    "dynamicNavLabel": "Dynamic navigation",
+    "dynamicTitle": "Navigation",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "errorTitle": "Navigation error",
+    "retry": "Try again",
+    "noContent": "No content found",
+    "debugInfo": "Debug info",
+    "totalPages": "Total pages",
+    "cacheHit": "Cache hit",
+    "locale": "Locale",
+    "fetchError": "Error fetching navigation data",
+    
+    "treeLabel": "Navigation tree",
+    "loadMore": "Load more ({count})",
+    "indexBadge": "Index",
+    "goToPage": "Go to {title}",
+    
+    "breadcrumbsLabel": "Breadcrumb trail",
+    "breadcrumbsError": "Error loading breadcrumbs",
+    "showAllBreadcrumbs": "Show all items",
+    "noBreadcrumbs": "No breadcrumb trail available",
+    
+    "relatedPagesLabel": "Related pages",
+    "relatedPages": "Related Pages",
+    "refreshRelated": "Refresh related pages",
+    "parentPage": "Parent Page",
+    "siblingPages": "Sibling Pages",
+    "childPages": "Child Pages",
+    "showMoreSiblings": "Show {count} more sibling pages",
+    "showMoreChildren": "Show {count} more child pages",
+    "noRelatedPages": "No related pages found",
+    
+    "switchingLanguage": "Switching language...",
+    "languageSwitchError": "Language switch error",
+    "languageSwitchGenericError": "Could not switch language. Please try again.",
+    "pageNotAvailable": "Page not available",
+    "pageRedirectedMessage": "The page was redirected because it does not exist in {locale}."
+  },
+  "docs": {
+    "navigation": {
+      "title": "Navigation",
+      "expandAll": "Expand all",
+      "collapseAll": "Collapse all"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "quickstart": "Quick Start",
+      "implementation": "Implementation",
+      "frameworks": "Frameworks",
+      "downloads": "Downloads"
+    },
+    "sections": {
+      "title": "Documentation",
+      "quickstart": "Quick Start Guide",
+      "implementation": "Implementation Guide",
+      "integration": "Integration",
+      "glossary": "Glossary",
+      "protocol": "Protocol Specification",
+      "frameworks": "Frameworks",
+      "mep": "Matrix Epistemic Principle",
+      "manual": "Complete Manual",
+      "examples": "Examples and Case Studies"
+    },
+    "frameworks": {
+      "mef": "MEF - Matrix Embedding Framework",
+      "zof": "ZOF - Zion Orchestration Framework", 
+      "oif": "OIF - Operator Intelligence Framework",
+      "moc": "MOC - Matrix Ontology Catalog",
+      "mal": "MAL - Matrix Arbiter Layer"
+    },
+    "manual": {
+      "templates": "Organizational Templates",
+      "tools": "Tools and Checklists",
+      "examples": "Practical Examples",
+      "reference": "Reference Material"
+    },
+    "protocol": {
+      "description": "Complete Matrix Protocol specification with architecture, normative rules and practical examples"
+    },
+    "notFound": {
+      "title": "Content not found",
+      "description": "The requested content was not found in the documentation.",
+      "backToDocs": "Back to Documentation"
+    }
+  },
+  "resources": {
+    "title": "Resource Center",
+    "subtitle": "Your portal to implement Matrix Protocol",
+    "description": "Quickly find everything you need: templates, documentation, examples and personalized learning paths for your Matrix Protocol journey.",
+    "startHere": {
+      "title": "Where to start?",
+      "newcomer": {
+        "title": "New to Matrix Protocol",
+        "description": "First contact? Start by understanding the conceptual and philosophical foundation of the protocol.",
+        "readProtocol": "Read Protocol",
+        "quickStart": "Quick Start"
+      },
+      "implementer": {
+        "title": "Ready to Implement",
+        "description": "Already know the protocol and want to implement it in your organization? Access practical guides.",
+        "implementationGuide": "Implementation Manual",
+        "templates": "View Templates"
+      },
+      "advanced": {
+        "title": "Advanced User",
+        "description": "Looking for practical examples, use cases or advanced tools to optimize implementation?",
+        "examples": "Practical Examples",
+        "tools": "Tools"
+      }
+    },
+    "quickAccess": {
+      "title": "Quick Access",
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Explore the 5 integrated frameworks of Matrix Protocol"
+      },
+      "templates": {
+        "title": "Templates",
+        "description": "Organizational MOCs for different company sizes"
+      },
+      "examples": {
+        "title": "Examples",
+        "description": "Practical cases and real implementations"
+      },
+      "tools": {
+        "title": "Tools",
+        "description": "Checklists, validations and auditing"
+      }
+    },
+    "downloadCenter": {
+      "title": "Essential Downloads",
+      "quickStart": {
+        "title": "Starter Template",
+        "badge": "Starter",
+        "description": "Basic MOC template for any organization to start quickly."
+      },
+      "unified": {
+        "title": "Unified Structure",
+        "badge": "Normative",
+        "description": "Base MOC that ensures consistency across all organizational templates.",
+        "download": "Download Unified MOC"
+      },
+      "guide": {
+        "title": "Implementation Guide",
+        "badge": "4600+ lines",
+        "description": "Complete technical manual with all implementation aspects."
+      },
+      "allTemplates": {
+        "title": "Need more templates?",
+        "description": "Access our complete collection organized by organizational size (Startup, Scale-up, Enterprise, Corporation).",
+        "viewAll": "View All Templates"
+      }
+    },
+    "learnMore": {
+      "title": "Learning Paths",
+      "beginner": {
+        "title": "Beginner Track",
+        "step1": {
+          "title": "Understand the Protocol",
+          "description": "Overview and philosophy"
+        },
+        "step2": {
+          "title": "Know the Frameworks",
+          "description": "MEF, ZOF, OIF, MOC, MAL"
+        },
+        "step3": {
+          "title": "Do the Quickstart",
+          "description": "First practical steps"
+        }
+      },
+      "advanced": {
+        "title": "Advanced Track",
+        "step1": {
+          "title": "Study Real Cases",
+          "description": "Structured knowledge examples"
+        },
+        "step2": {
+          "title": "Implement with Manual",
+          "description": "Detailed technical guide"
+        },
+        "step3": {
+          "title": "Use Tools",
+          "description": "Validation and auditing"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to start your journey?",
+      "description": "Choose your path and start implementing Matrix Protocol in your organization today.",
+      "quickstart": "Quick Start",
+      "documentation": "Complete Documentation"
+    }
+  },
+  "frameworks": {
+    "title": "Frameworks",
+    "mef": {
+      "name": "Matrix Embedding Framework",
+      "description": "Versioned knowledge structuring",
+      "longDescription": "Framework for structuring knowledge into versioned UKIs, enabling traceability and governance of organizational knowledge.",
+      "features": {
+        "uki": "UKI structures (Units of Knowledge Interlinked)",
+        "versioning": "Semantic knowledge versioning",
+        "semantic": "Semantic elasticity across contexts"
+      }
+    },
+    "zof": {
+      "name": "Zion Orchestration Framework",
+      "description": "Conceptual workflows for AI teams",
+      "longDescription": "Orchestrates conceptual workflows and coordinates hybrid human-AI teams through structured collaboration patterns.",
+      "features": {
+        "workflows": "Structured conceptual workflows",
+        "orchestration": "Hybrid team orchestration",
+        "collaboration": "Human-AI collaboration patterns"
+      }
+    },
+    "oif": {
+      "name": "Operator Intelligence Framework", 
+      "description": "Artificial intelligence archetypes",
+      "longDescription": "Defines artificial intelligence archetypes and interaction patterns for practical execution in development teams.",
+      "features": {
+        "archetypes": "Specialized AI archetypes",
+        "intelligence": "Distributed intelligence patterns",
+        "patterns": "Practical implementation patterns"
+      }
+    },
+    "moc": {
+      "name": "Matrix Ontology Catalog",
+      "description": "Catalog of organizational hierarchies",
+      "longDescription": "Catalog of organizational hierarchies that defines taxonomies, ontologies, and governance structures adapted to context.",
+      "features": {
+        "hierarchies": "Flexible organizational hierarchies",
+        "ontologies": "Domain-specific ontologies",
+        "catalog": "Organizational pattern catalog"
+      }
+    },
+    "mal": {
+      "name": "Matrix Arbiter Layer",
+      "description": "Conflict and concurrency arbitration",
+      "longDescription": "Arbitration system that resolves knowledge conflicts and ensures organizational governance through auditable decisions.",
+      "features": {
+        "arbitration": "Intelligent conflict arbitration",
+        "conflicts": "Knowledge concurrency resolution",
+        "governance": "Auditable organizational governance"
+      }
+    },
+    "page": {
+      "title": "Matrix Protocol Frameworks",
+      "subtitle": "Explore the five operational frameworks that compose the protocol",
+      "description": "Each framework addresses a specific aspect of human-AI collaboration, organized in three interdependent layers: Oracle, Zion, and Operator.",
+      "cta": {
+        "explore": "Explore Documentation",
+        "download": "Download Resources"
+      },
+      "actions": {
+        "startImplementation": "Start Implementation",
+        "viewResources": "View Resources"
+      }
+    },
+    "layers": {
+      "title": "Three-Layer Architecture",
+      "description": "The Matrix Protocol is organized in three interdependent layers that cover from strategic governance to practical execution.",
+      "oracle": "Oracle Layer",
+      "oracleDesc": "Strategic governance and knowledge base management",
+      "zion": "Zion Layer",
+      "zionDesc": "Conceptual workflow and hybrid team orchestration",
+      "operator": "Operator Layer",
+      "operatorDesc": "Practical execution and implementation by development teams"
+    },
+    "mepSpecial": {
+      "title": "Matrix Epistemic Principle",
+      "subtitle": "The epistemological manifest of the protocol",
+      "description": "Unlike operational frameworks, MEP is purely conceptual - it defines the philosophical foundations for knowledge treatment.",
+      "badge": "Manifest",
+      "cta": "Read Full Manifest"
+    },
+    "mep": {
+      "title": "Epistemological Principle",
+      "description": "The manifest that defines how knowledge is treated in the protocol",
+      "badge": "Manifest",
+      "longDescription": "MEP establishes the philosophical foundations of how knowledge is structured, evaluated, and promoted in the Matrix Protocol. Unlike other frameworks, it is purely conceptual.",
+      "actions": {
+        "readManifesto": "Read Full Manifest",
+        "seePrinciples": "See Principles"
+      }
+    },
+    "oracle": {
+      "title": "Oracle Layer",
+      "description": "Strategic governance and knowledge base that underpins the entire protocol"
+    },
+    "zion": {
+      "title": "Zion Layer", 
+      "description": "Orchestration of conceptual workflows for hybrid human-AI teams"
+    },
+    "operator": {
+      "title": "Operator Layer",
+      "description": "Practical execution and implementation by development teams"
+    },
+    "card": {
+      "keyFeatures": "Key Features",
+      "actions": {
+        "page": "View Framework",
+        "examples": "View Examples"
+      }
+    },
+    "relationships": {
+      "title": "How Frameworks Relate",
+      "description": "Visualize the connections and dependencies between the five operational frameworks organized in the three protocol layers.",
+      "flowTitle": "Interaction Flow",
+      "step1": {
+        "title": "MEF → ZOF",
+        "description": "Structured knowledge feeds workflows"
+      },
+      "step2": {
+        "title": "ZOF → OIF",
+        "description": "Workflows coordinate AI archetypes"
+      },
+      "step3": {
+        "title": "MOC → All",
+        "description": "Ontologies govern organizational structures"
+      },
+      "step4": {
+        "title": "MAL arbitrates",
+        "description": "Resolves conflicts between all frameworks"
+      },
+      "integration": "Complete Integration",
+      "mefToZof": "MEF feeds ZOF with structured knowledge",
+      "zofToOif": "ZOF coordinates OIF in hybrid workflows",
+      "mocToAll": "MOC governs hierarchies of all frameworks",
+      "malArbitrates": "MAL arbitrates conflicts between all frameworks",
+      "understanding": "Understanding Relationships",
+      "understandingDesc": "Understanding these relationships is fundamental to effectively implement Matrix Protocol in your organization."
+    },
+    "cta": {
+      "title": "Start Using Matrix Protocol",
+      "description": "Implement structured human-AI collaboration in your organization",
+      "exploreMEP": "Explore MEP Manifesto",
+      "readProtocol": "Read Full Protocol"
+    },
+    "sections": {
+      "overview": "Overview",
+      "introduction": "Introduction",
+      "architecture": "Architecture",
+      "principles": "Principles",
+      "implementation": "Implementation",
+      "gettingStarted": "Getting Started",
+      "examples": "Examples",
+      "bestPractices": "Best Practices",
+      "advanced": "Advanced Topics",
+      "yamlStructure": "YAML Structure",
+      "decisionTrees": "Decision Trees",
+      "apiReference": "API Reference",
+      "api": "API Reference",
+      "resources": "Resources",
+      "downloads": "Downloads"
+    },
+    "fallback": {
+      "intro": "is one of the five main frameworks of Matrix Protocol Beta.",
+      "getStartedIntro": "To start using {framework}, follow the steps below:",
+      "steps": {
+        "download": "Download available templates",
+        "study": "Study the complete documentation",
+        "implement": "Implement following best practices",
+        "test": "Test in controlled environment"
+      },
+      "examplesIntro": "Explore practical implementation examples of {framework}.",
+      "basicExample": "Simple implementation to get started",
+      "advancedExample": "Complete implementation with all features"
+    },
+    "actions": {
+      "viewExamples": "View Examples",
+      "downloadTemplates": "Download Templates",
+      "getStarted": "Get Started",
+      "implementNow": "Implement Now",
+      "readMore": "Read More",
+      "explore": "Explore",
+      "implement": "Implement"
+    },
+    "tableOfContents": "Table of Contents",
+    "lastUpdated": "Last updated",
+    "version": "Version",
+    "features": "Features",
+    "benefits": "Benefits",
+    "useCases": "Use Cases",
+    "integrations": "Integrations",
+    "promotional": {
+      "sections": {
+        "featuresTitle": "Key Features",
+        "featuresSubtitle": "Discover what makes {framework} unique in the Matrix Protocol ecosystem",
+        "benefitsTitle": "Why use {framework}?",
+        "implementationTitle": "How to Implement",
+        "implementationSubtitle": "Simplified process to start using {framework} in your organization",
+        "ctaTitle": "Ready to Implement?",
+        "ctaSubtitle": "Start transforming your organization with {framework} today",
+        "version": "Version {version}",
+        "documentation": "View Documentation",
+        "downloadTemplates": "Download Templates",
+        "getStarted": "Get Started",
+        "viewExamples": "View Examples"
+      },
+      "mef": {
+        "benefits": [
+          {
+            "title": "Governed Knowledge",
+            "description": "Eliminate duplications and inconsistencies with rigorous organizational knowledge governance."
+          },
+          {
+            "title": "Complete Audit",
+            "description": "Track all knowledge evolution with immutable audit trails."
+          },
+          {
+            "title": "Scalability",
+            "description": "Grow from hundreds to thousands of knowledge items without losing control."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Map",
+            "description": "Identify existing critical knowledge in the organization"
+          },
+          {
+            "title": "Structure",
+            "description": "Convert to UKIs following MEF standards"
+          },
+          {
+            "title": "Relate",
+            "description": "Connect knowledge with semantic relationships"
+          },
+          {
+            "title": "Govern",
+            "description": "Implement controlled evolution processes"
+          }
+        ]
+      },
+      "zof": {
+        "benefits": [
+          {
+            "title": "Standardized Workflows",
+            "description": "Eliminate unnecessary variability with mandatory canonical states."
+          },
+          {
+            "title": "Auditable Decisions",
+            "description": "Every decision is recorded with complete context for auditing."
+          },
+          {
+            "title": "Collaborative AI",
+            "description": "AI agents natively integrated into organizational decision flow."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Model",
+            "description": "Define canonical states for your critical workflows"
+          },
+          {
+            "title": "Implement",
+            "description": "Configure checkpoints and explainability signals"
+          },
+          {
+            "title": "Connect",
+            "description": "Integrate with MEF for knowledge consultation"
+          },
+          {
+            "title": "Monitor",
+            "description": "Track execution and continuously improve"
+          }
+        ]
+      },
+      "oif": {
+        "benefits": [
+          {
+            "title": "Organizational AI",
+            "description": "AI agents that understand and respect organizational structure."
+          },
+          {
+            "title": "Automatic Compliance",
+            "description": "Responses always conform to organizational policies and authority."
+          },
+          {
+            "title": "Human Scalability",
+            "description": "Multiply human capacity without losing control or context."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Define",
+            "description": "Configure canonical archetypes for your organization"
+          },
+          {
+            "title": "Customize",
+            "description": "Adapt behaviors for specific contexts"
+          },
+          {
+            "title": "Integrate",
+            "description": "Connect with MOC for authority validation"
+          },
+          {
+            "title": "Evolve",
+            "description": "Refine archetypes based on feedback and usage"
+          }
+        ]
+      },
+      "moc": {
+        "benefits": [
+          {
+            "title": "Local Flexibility",
+            "description": "Adapt the protocol to your organization's unique structure."
+          },
+          {
+            "title": "Clear Governance",
+            "description": "Explicit rules for authority and decision making."
+          },
+          {
+            "title": "Controlled Evolution",
+            "description": "Taxonomies that evolve based on real feedback and usage."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Map",
+            "description": "Identify existing organizational structures"
+          },
+          {
+            "title": "Configure",
+            "description": "Define hierarchies and authority rules"
+          },
+          {
+            "title": "Validate",
+            "description": "Test configurations with real scenarios"
+          },
+          {
+            "title": "Refine",
+            "description": "Adjust based on feedback and organizational evolution"
+          }
+        ]
+      },
+      "mal": {
+        "benefits": [
+          {
+            "title": "Guaranteed Consistency",
+            "description": "Same conflicts always resolved in the same deterministic way."
+          },
+          {
+            "title": "Automatic Scalability",
+            "description": "System resolves conflicts regardless of volume or complexity."
+          },
+          {
+            "title": "Complete Audit",
+            "description": "Every decision documented with complete epistemological rationale."
+          }
+        ],
+        "implementationSteps": [
+          {
+            "title": "Configure",
+            "description": "Define precedence rules in organizational MOC"
+          },
+          {
+            "title": "Monitor",
+            "description": "Track most frequent conflict types"
+          },
+          {
+            "title": "Adjust",
+            "description": "Refine rules based on identified patterns"
+          },
+          {
+            "title": "Scale",
+            "description": "Allow system to resolve automatically"
+          }
+        ]
+      }
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "skipToNavigation": "Skip to navigation"
+  },
+  "mep": {
+    "subtitle": "The epistemological manifest of Matrix Protocol",
+    "quote": "Knowledge is malleable; authority is derived; explainability is mandatory.",
+    "manifestBadge": "Manifesto",
+    "principleDescription": "Matrix Epistemic Principle",
+    "actions": {
+      "explorePrinciples": "Explore Principles",
+      "downloadManifest": "Manifest Download"
+    },
+    "whatIs": {
+      "title": "What is MEP?",
+      "description1": "The Matrix Epistemic Principle (MEP) is the epistemological manifest that establishes the philosophical foundations of how knowledge is treated, evaluated and promoted in the Matrix Protocol.",
+      "description2": "Unlike operational frameworks (MEF, ZOF, OIF, MAL), MEP is purely conceptual — it defines the 'why' and 'when' to apply epistemological principles.",
+      "description3": "MEP functions as the 'epistemological constitution' that guides MAL (Matrix Arbiter Layer) in arbitration, conflict, and knowledge governance decisions."
+    },
+    "principles": {
+      "title": "The 5 Fundamental Principles",
+      "subtitle": "Epistemological pillars that guide the entire Matrix Protocol",
+      "semantic": {
+        "title": "Semantic Elasticity",
+        "description": "Knowledge must be able to adapt to different organizational contexts while maintaining its essence.",
+        "impact": "Enables intelligent reuse of knowledge across teams and projects."
+      },
+      "stratified": {
+        "title": "Stratified Epistemology",
+        "description": "System of epistemic maturity levels: draft → validated → approved.",
+        "impact": "Ensures controlled and auditable evolution of organizational knowledge."
+      },
+      "promotion": {
+        "title": "Responsible Promotion",
+        "description": "All knowledge evolution must be accompanied by clear epistemological justification.",
+        "impact": "Ensures transparency and accountability in knowledge decisions."
+      },
+      "authority": {
+        "title": "Derived Authority",
+        "description": "Authority is established relative to organizational context, not in absolute terms.",
+        "impact": "Creates flexible governance adapted to each organization's reality."
+      },
+      "explainability": {
+        "title": "Necessary Explainability",
+        "description": "All knowledge must have an auditable and understandable epistemological narrative.",
+        "impact": "Makes organizational knowledge transparent and questionable."
+      }
+    },
+    "frameworks": {
+      "title": "Relationship with Frameworks",
+      "description": "MEP philosophically guides all operational frameworks of Matrix Protocol",
+      "mef": "Applies semantic elasticity principles in UKI structuring",
+      "zof": "Uses stratified epistemology for workflow evolution",
+      "oif": "Implements derived authority in AI archetypes",
+      "moc": "Ensures explainability in organizational hierarchies",
+      "mal": "Executes responsible promotion in arbitration decisions",
+      "protocol": {
+        "title": "Protocol Core",
+        "description": "MEP is the philosophical foundation of all components"
+      }
+    },
+    "applications": {
+      "title": "Practical Applications",
+      "description": "How MEP manifests in organizational practice",
+      "governance": {
+        "title": "Knowledge Governance",
+        "item1": "Definition of semantic versioning policies",
+        "item2": "Establishment of knowledge promotion criteria",
+        "item3": "Creation of epistemological audit processes"
+      },
+      "implementation": {
+        "title": "Technical Implementation",
+        "item1": "Automatic validation of knowledge structures",
+        "item2": "Decision traceability systems",
+        "item3": "Explainable interfaces for end users"
+      }
+    },
+    "cta": {
+      "title": "Implement MEP Principles",
+      "description": "Transform your organization with a solid and auditable epistemological foundation",
+      "exploreFrameworks": "Explore Frameworks",
+      "readProtocol": "Read Complete Protocol"
+    }
+  },
+  "common": {
+    "home": "Home",
+    "relatedLinks": "Related Links",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "readMore": "Read More",
+    "documentation": "View Documentation",
+    "exploreFrameworks": "Explore Frameworks", 
+    "github": "GitHub",
+    "discord": "Discord",
+    "version": "Version",
+    "currentLanguage": "English",
+    "viewOnline": "View Online",
+    "viewDocumentation": "View Documentation",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "githubLink": "Visit GitHub repository",
+    "selectLanguage": "Select language",
+    "switchToLanguage": "Switch to {language}",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "discordLink": "Join our community on Discord",
+    "basic": "Basic",
+    "advanced": "Advanced"
+  },
+  "home": {
+    "hero": {
+      "title": "Matrix Protocol",
+      "subtitle": "Epistemological framework for human-AI collaboration",
+      "description": "A semantic protocol that connects humans and AI through three interdependent layers: Oracle, Zion, and Operator. Providing governance, traceability, and organizational adaptability.",
+      "scrollDown": "Explore more"
+    },
+    "frameworks": {
+      "title": "Five Integrated Frameworks",
+      "subtitle": "Each framework addresses a specific aspect of human-AI collaboration, from knowledge structuring to conflict arbitration.",
+      "viewAll": "View Complete Architecture",
+      "viewAllDescription": "Explore how the five frameworks work together",
+      "cta": {
+        "description": "Understand how the frameworks work together to create a complete ecosystem.",
+        "protocol": "View Full Protocol",
+        "explore": "Explore Frameworks"
+      }
+    },
+    "features": {
+      "title": "Why Matrix Protocol?",
+      "subtitle": "Four fundamental pillars that make Matrix Protocol the ideal foundation for structured and governable human-AI collaboration.",
+      "pillars": {
+        "epistemological": {
+          "title": "Epistemological Foundation",
+          "description": "Solid philosophical base with clear principles for treatment, evaluation, and promotion of knowledge in human-AI collaborations."
+        },
+        "semantic": {
+          "title": "Semantic Structure",
+          "description": "Structured knowledge organization via UKIs (Units of Knowledge Interlinked) with versioning and complete traceability."
+        },
+        "collaboration": {
+          "title": "AI Collaboration",
+          "description": "Specialized artificial intelligence archetypes and conceptual workflows optimized for hybrid human-AI teams."
+        },
+        "governance": {
+          "title": "Integrated Governance",
+          "description": "Arbitration and conflict resolution system that ensures compliance, audit, and organizational adaptability."
+        }
+      },
+      "mep": {
+        "title": "Matrix Epistemic Principle",
+        "subtitle": "Five fundamental principles that guide knowledge treatment in the protocol.",
+        "principles": {
+          "p1": {
+            "title": "Semantic Elasticity",
+            "description": "Knowledge ability to adapt to different organizational contexts."
+          },
+          "p2": {
+            "title": "Stratified Epistemology",
+            "description": "System of epistemic maturity levels (draft → validated → approved)."
+          },
+          "p3": {
+            "title": "Responsible Promotion",
+            "description": "Knowledge evolution accompanied by epistemological justification."
+          },
+          "p4": {
+            "title": "Derived Authority",
+            "description": "Relative authority based on organizational context, not absolute."
+          },
+          "p5": {
+            "title": "Necessary Explainability",
+            "description": "Mandatory requirement for auditable epistemological narrative."
+          }
+        },
+        "cta": "Read Full Manifest"
+      }
+    },
+    "quickStart": {
+      "title": "Getting Started",
+      "subtitle": "Three essential steps to implement Matrix Protocol in your organization and begin structured human-AI collaboration.",
+      "steps": {
+        "step1": {
+          "title": "Choose Template",
+          "description": "Select a MOC template suitable for your organization size. Available for small, medium, and large companies.",
+          "cta": "View Templates"
+        },
+        "step2": {
+          "title": "Configure Ontology",
+          "description": "Customize the MOC (Matrix Ontology Catalog) with your organization's hierarchies, taxonomies, and governance rules.",
+          "cta": "Learn MOC"
+        },
+        "step3": {
+          "title": "Create UKIs",
+          "description": "Structure your knowledge into UKIs (Units of Knowledge Interlinked) using MEF to begin collaboration.",
+          "cta": "Understand UKIs"
+        }
+      },
+      "final": {
+        "title": "Ready to Collaborate?",
+        "description": "With these three steps, you'll have the foundation needed to start using Matrix Protocol in your organization.",
+        "cta": {
+          "docs": "View Complete Documentation",
+          "examples": "Explore Examples"
+        }
+      }
+    }
+  },
+  "downloads": {
+    "title": "Downloads",
+    "implementationGuide": "Implementation Manual",
+    "mocTemplate": "MOC Template"
+  },
+  "glossary": {
+    "filter": {
+      "title": "Filter by Letter"
+    }
+  },
+  "examples": {
+    "title": "Examples"
+  },
+  "seo": {
+    "keywords": {
+      "default": "Matrix Protocol, Framework, AI, Artificial Intelligence, Collaboration, Human-AI, MEF, ZOF, OIF, MOC, MAL, Knowledge, Structured, Ontology, Workflows",
+      "frameworks": "MEF, ZOF, OIF, MOC, MAL, Matrix Embedding Framework, Zion Orchestration Framework, Operator Intelligence Framework, Matrix Ontology Catalog, Matrix Arbiter Layer"
+    },
+    "author": "Casheiro"
+  },
+  "manual": {
+    "title": "Matrix Protocol Manual",
+    "description": "Complete documentation and resources for implementing Matrix Protocol in your organization",
+    "sections": {
+      "implementation": {
+        "title": "Implementation Guide",
+        "description": "Complete technical manual with over 4,600 lines covering all implementation aspects"
+      },
+      "templates": {
+        "title": "Templates and Structures",
+        "description": "MOC and UKI templates organized by enterprise size and specific use cases"
+      },
+      "tools": {
+        "title": "Tools and Checklists",
+        "description": "Practical verification lists and tools for implementation validation"
+      },
+      "examples": {
+        "title": "Examples and Case Studies",
+        "description": "Real implementations, organizational cases and practical usage examples"
+      },
+      "reference": {
+        "title": "Reference Material",
+        "description": "Detailed case studies and support material for implementation"
+      },
+      "quickstart": {
+        "title": "Quick Start",
+        "description": "Implement Matrix Protocol in 3 simple steps in 2-4 hours"
+      }
+    },
+    "download": {
+      "title": "Downloads",
+      "description": "Access complete guides and templates for download",
+      "complete": "Download Complete Manual",
+      "resources": "View All Resources"
+    },
+    "notFound": {
+      "title": "Content not found",
+      "description": "The requested page was not found or is still under development.",
+      "backToManual": "Back to Manual"
+    }
+  },
+  "viewer": {
+    "buttons": {
+      "formatted": "Formatted",
+      "raw": "Raw",
+      "download": "Download",
+      "copy": "Copy",
+      "copyLink": "Copy link",
+      "search": "Search"
+    },
+    "sections": {
+      "content": "Content",
+      "examples": "Examples",
+      "relationships": "Relationships",
+      "metadata": "Metadata",
+      "technicalInfo": "Technical Information",
+      "lifecycle": "Lifecycle",
+      "jumpTo": "Jump to…"
+    },
+    "fields": {
+      "schema": "Schema",
+      "ontologyReference": "Ontology Reference",
+      "id": "Identifier",
+      "scopeRef": "Scope",
+      "scopeMode": "Scope Mode",
+      "domainRef": "Domain",
+      "domainOfInfluence": "Domain of Influence",
+      "createdDate": "Created Date",
+      "lastModified": "Last Modified",
+      "changeSummary": "Change Summary",
+      "changeImpact": "Change Impact",
+      "status": "Status"
+    },
+    "scopeModes": {
+      "restricted": "restricted",
+      "propagated": "propagated"
+    },
+    "changeImpacts": {
+      "major": "major",
+      "minor": "minor",
+      "patch": "patch"
+    },
+    "documentStatus": {
+      "active": "active",
+      "deprecated": "deprecated",
+      "archived": "archived",
+      "draft": "draft"
+    },
+    "status": {
+      "validated": "validated",
+      "endorsed": "endorsed",
+      "draft": "draft",
+      "active": "active",
+      "deprecated": "deprecated",
+      "archived": "archived"
+    },
+    "types": {
+      "business_rule": "Business Rule",
+      "technical_pattern": "Technical Pattern",
+      "procedure": "Procedure",
+      "pattern": "Pattern"
+    },
+    "messages": {
+      "noContent": "No content field found in this document.",
+      "unsupportedFile": "This file type is not supported for viewing.",
+      "downloadFile": "Download File"
+    },
+    "document": {
+      "yamlDocument": "YAML Document",
+      "textDocument": "Text Document",
+      "lines": "lines",
+      "characters": "characters", 
+      "words": "words"
+    },
+    "search": {
+      "placeholder": "Search in document",
+      "previous": "Previous",
+      "next": "Next",
+      "clear": "Clear"
+    }
+  },
+  "footer": {
+    "description": "Comprehensive framework for human-AI collaboration",
+    "links": "Useful Links", 
+    "frameworks": "Frameworks",
+    "community": "Community",
+    "copyright": "© 2025 Casheiro. All rights reserved.",
+    "createdBy": "Matrix Protocol - Protocol conceived, created and maintained by",
+    "casheiroLink": "https://casheiro.com.br"
+  }
+}

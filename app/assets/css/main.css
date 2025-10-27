@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  /* Fonts */
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+  
+  /* Matrix Protocol Colors */
+  --color-matrix-green-50: #f0fdf9;
+  --color-matrix-green-100: #dcfce7;
+  --color-matrix-green-200: #bbf7d0;
+  --color-matrix-green-300: #86efac;
+  --color-matrix-green-400: #4ade80;
+  --color-matrix-green-500: #00d4aa;
+  --color-matrix-green-600: #00c49a;
+  --color-matrix-green-700: #00a085;
+  --color-matrix-green-800: #007a6b;
+  --color-matrix-green-900: #005951;
+  --color-matrix-green-950: #003d37;
+}
+
+:root {
+  /* Fonts */
+  --font-rajdhani: 'Rajdhani', sans-serif;
+  --font-source-code-pro: 'Source Code Pro', monospace;
+  
+  /* Gray Scale */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #030712;
+  
+  /* Blue Scale */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+  
+  /* Matrix Protocol Colors */
+  --matrix-green: #00d4aa;
+  --matrix-dark: #0d1117;
+  --matrix-light: #f6f8fa;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-rajdhani);
+    scroll-behavior: smooth;
+  }
+}
+
+/* Skip links - visible when focused */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3b82f6;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  font-weight: bold;
+  transition: top 0.3s;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 6px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Mermaid Diagram Styles */
+.mermaid-container {
+  @apply w-full my-8;
+}
+
+.mermaid-diagram {
+  @apply flex justify-center items-center p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-x-auto;
+  min-height: 200px;
+}
+
+/* Ensure Mermaid SVG is responsive */
+.mermaid-diagram svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Matrix Protocol themed Mermaid elements */
+.mermaid-diagram .node rect,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node polygon {
+  transition: all 0.2s ease !important;
+}
+
+.mermaid-diagram .node:hover rect,
+.mermaid-diagram .node:hover circle,
+.mermaid-diagram .node:hover ellipse,
+.mermaid-diagram .node:hover polygon {
+  filter: brightness(1.1) !important;
+}
+
+/* Improve Mermaid text readability */
+.mermaid-diagram text {
+  font-family: 'Source Code Pro', monospace !important;
+  font-size: 14px !important;
+}
+
+/* Framework-specific colors for Mermaid */
+.mermaid-diagram .mef-node {
+  fill: #2ECC71 !important;
+}
+
+.mermaid-diagram .zof-node {
+  fill: #E67E22 !important;
+}
+
+.mermaid-diagram .oif-node {
+  fill: #2980B9 !important;
+}
+
+.mermaid-diagram .moc-node {
+  fill: #9B59B6 !important;
+}
+
+.mermaid-diagram .mal-node {
+  fill: #C0392B !important;
+}
+
+/* Shiki Syntax Highlighting Styles */
+.shiki {
+  background-color: #1f2937 !important; /* gray-800 */
+  color: #f9fafb !important; /* gray-50 */
+}
+
+.shiki .line {
+  line-height: 1.5;
+}
+
+/* Ensure proper text colors in highlighted code */
+.shiki code {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Override any conflicting styles for syntax highlighted elements */
+.shiki .token.comment,
+.shiki .token.prolog,
+.shiki .token.doctype,
+.shiki .token.cdata {
+  color: #6b7280 !important; /* gray-500 */
+}
+
+.shiki .token.punctuation {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.shiki .token.property,
+.shiki .token.tag,
+.shiki .token.boolean,
+.shiki .token.number,
+.shiki .token.constant,
+.shiki .token.symbol,
+.shiki .token.deleted {
+  color: #f87171 !important; /* red-400 */
+}
+
+.shiki .token.selector,
+.shiki .token.attr-name,
+.shiki .token.string,
+.shiki .token.char,
+.shiki .token.builtin,
+.shiki .token.inserted {
+  color: #34d399 !important; /* emerald-400 */
+}
+
+.shiki .token.operator,
+.shiki .token.entity,
+.shiki .token.url,
+.shiki .language-css .token.string,
+.shiki .style .token.string {
+  color: #fbbf24 !important; /* amber-400 */
+}
+
+.shiki .token.atrule,
+.shiki .token.attr-value,
+.shiki .token.keyword {
+  color: #60a5fa !important; /* blue-400 */
+}
+
+.shiki .token.function,
+.shiki .token.class-name {
+  color: #a78bfa !important; /* violet-400 */
+}
+
+.shiki .token.regex,
+.shiki .token.important,
+.shiki .token.variable {
+  color: #fb7185 !important; /* rose-400 */
+}

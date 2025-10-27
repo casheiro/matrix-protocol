@@ -1,0 +1,179 @@
+---
+title: Uki Pay Retry Strategy 008
+description: Wrapper page for YAML asset uki-pay-retry-strategy-008.yaml
+icon: i-heroicons-code-bracket
+layout: docs
+sidebar: true
+toc: true
+navigation: true
+lang: en
+last_updated: 2025-10-21T00:00:00.000Z
+order: 10
+framework: general
+tags:
+  - examples
+  - structured
+  - technical-patterns
+keywords:
+  - Matrix Protocol
+  - UKI
+  - retry strategy
+  - payment operations
+  - exponential backoff
+  - error handling
+---
+> Source YAML: `en/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml`
+
+**Open in Viewer:** [Uki Pay Retry Strategy 008](/en/docs/viewer?file=/docs/examples/knowledge/structured/technical-patterns/uki-pay-retry-strategy-008.yaml)
+
+> 📄 Type: YAML • 📦 Size: 4.3 KB • 🕒 Last updated: 2025-10-12
+
+
+
+```yaml
+
+schema: "1.0"
+ontology_reference: "moc:squad-payments:v1.0"
+id: uki:squad-payments:technical_pattern:retry-strategy-008
+title: "Retry Strategy for Payment Operations"
+version: 1.3.0
+created_date: 2024-03-25
+last_modified: 2024-03-25
+change_summary: "Refinement based on error type analysis and customer impact"
+change_impact: minor
+previous_version: 1.2.0
+
+scope_ref: squad-payments
+domain_ref: technical
+type_ref: pattern
+maturity_ref: validated
+status: active
+
+content: |
+  ## Operation Classification
+  
+  **Idempotent operations:**
+  - Payment authorization (with idempotency key)
+  - Payment status inquiry
+  - Refund processing
+  - Webhook validation
+  
+  **Non-idempotent operations:**  
+  - Payment capture (only 1 attempt)
+  - Customer registration
+  - Webhook processing (depends on implementation)
+  
+  ## Retry Policy by Error Type
+  
+  ### Network/Infrastructure Errors
+  **Errors:** IOException, SocketTimeoutException, ConnectException
+  **Policy:** Exponential backoff with jitter
+  - Attempts: 3
+  - Base delay: 1000ms
+  - Multiplier: 2.0  
+  - Max delay: 30000ms
+  - Jitter: ±25%
+  
+  ### HTTP 5xx Server Errors
+  **Errors:** 500, 502, 503, 504
+  **Policy:** Linear backoff with longer delays
+  - Attempts: 3
+  - Delays: [2000ms, 5000ms, 10000ms]
+  - Condition: Only for GET operations
+  
+  ### Rate Limiting (429)
+  **Policy:** Respect Retry-After header
+  - Attempts: 5
+  - Delay: Parse Retry-After header or default 30s
+  - Max wait: 300s (5 minutes)
+  - Exponential backoff if no header
+  
+  ### Client Errors (4xx) - NO RETRY
+  **Errors:** 400, 401, 403, 404, 422
+  **Policy:** Immediate failure
+  **Rationale:** Client errors unlikely to resolve with retry
+  
+  ## Implementation Pattern
+  
+  ```java
+  @Retryable(
+    value = {IOException.class, HttpServerErrorException.class},
+    maxAttempts = 3,
+    backoff = @Backoff(delay = 1000, multiplier = 2.0)
+  )
+  public PaymentResponse processPayment(PaymentRequest request) {
+    // Implementation with idempotency key
+  }
+  
+  @Recover
+  public PaymentResponse recover(Exception ex, PaymentRequest request) {
+    // Fallback: try secondary gateway or manual queue
+  }
+  ```
+
+  
+  ## Circuit Breaker Integration
+  
+  **Precedence:** Circuit breaker check before retry
+  **Open circuit:** Skip retry, fail fast
+  **Half-open:** Allow retry for test requests
+  **Closed:** Normal retry behavior
+  
+  ## Idempotency Key Strategy
+  
+  **Generation:** UUID v4 per operation attempt
+  **Persistence:** 24 hours in Redis
+  **Key format:** "idempotency:{gateway}:{operation}:{uuid}"
+  **Validation:** Server-side validation by gateway
+  
+  ## Monitoring and Alerting
+  
+  **Metrics per operation:**
+  - Retry attempt distribution (1st, 2nd, 3rd attempt success)
+  - Total retry rate per operation type
+  - Average retry delay
+  - Operations requiring fallback to manual queue
+  
+  **Alerts:**
+  - Retry rate > 20% sustained → Investigation needed
+  - Operations in manual queue > 50 → Process bottleneck
+  - Idempotency key conflicts > 1% → Potential bug
+  
+  ## Fallback Strategies
+  
+  **Payment authorization failure:**
+  1. Retry with secondary gateway (if available)
+  2. Queue for manual processing
+  3. Notify customer of delay
+  
+  **Refund failure:**
+  1. Retry with exponential backoff
+  2. Manual finance team intervention
+  3. Customer service notification
+  
+  **Webhook delivery failure:**
+  1. Retry with increasing delays up to 24h
+  2. Dead letter queue after max attempts
+  3. Manual reconciliation process
+
+examples:
+  - input: "Payment auth IOException, 1st attempt fails"
+    output: "Retry after 1000ms jitter, same idempotency key, log attempt #2"
+  - input: "Stripe returns 429, Retry-After: 60"
+    output: "Wait 60 seconds, retry with same parameters, max 5 attempts"
+  - input: "PayPal 422 validation error on payment"
+    output: "No retry, immediate failure, log client error for debugging"
+
+related_to:
+  - target: uki:squad-payments:technical_pattern:gateway-integration-007
+    type: complements
+    description: "Retry strategy integrates with circuit breaker from gateway pattern"
+  - target: uki:squad-payments:technical_pattern:idempotency-keys-011
+    type: depends_on
+    description: "Safe retry depends on correct idempotency implementation"
+  - target: uki:squad-payments:procedure:monitoring-alerts-016
+    type: relates_to
+    description: "Retry metrics integrated with general monitoring"
+
+domain_of_influence: "engineering_teams"
+```
