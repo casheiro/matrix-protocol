@@ -156,8 +156,8 @@ const resolveRelativePath = (href) => {
   }
   
   // Se é relativo simples (ex: "mef", "frameworks/moc")
-  // Adiciona ao diretório atual
-  const currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'))
+  // Adiciona ao diretório atual (mantém o path completo)
+  const currentDir = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
   return `${currentDir}/${href}`
 }
 
