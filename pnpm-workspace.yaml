@@ -1,12 +1,2 @@
 packages:
   - "." 
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
-  - better-sqlite3
-  - esbuild
-  - sharp
-  - sqlite3
-  - vue-demi
-  - '@oxc-parser/binding-linux-x64-gnu'
