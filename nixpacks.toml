@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs_22", "pnpm", "python3", "gcc", "gnumake", "pkg-config", "glibc"]
+nixPkgs = ["nodejs_22", "pnpm"]
 
 [phases.install]
-cmds = ["pnpm install --unsafe-perm", "pnpm rebuild"]
+cmds = ["pnpm install --unsafe-perm --no-optional"]
 
 [phases.build]
 cmds = ["pnpm build"]
