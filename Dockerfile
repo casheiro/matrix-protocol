@@ -26,7 +26,7 @@ ENV NODE_OPTIONS=--max-old-space-size=4096
 COPY --from=deps /app/node_modules ./node_modules
 
 # Copy source code
-COPY website .
+COPY . .
 
 # Build the application
 RUN pnpm build
