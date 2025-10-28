@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     }
   },
   typescript: {
-    typeCheck: false
+    typeCheck: false,
+    includeWorkspace: true
   },
   i18n: {
     locales: [
@@ -91,7 +92,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       'shared/types/**',
-      'shared/utils/**'
+      'shared/utils/**',
+      'types/**'
     ]
   }
 })
