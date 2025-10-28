@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs_22", "pnpm"]
 
 [phases.install]
-cmds = ["pnpm install --shamefully-hoist --ignore-scripts"]
+cmds = ["chmod +x build.sh && bash build.sh"]
 
 [phases.build]
 cmds = ["pnpm build"]
