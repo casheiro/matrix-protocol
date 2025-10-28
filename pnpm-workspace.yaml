@@ -9,3 +9,4 @@ onlyBuiltDependencies:
   - sharp
   - sqlite3
   - vue-demi
+  - '@oxc-parser/binding-linux-x64-gnu'
