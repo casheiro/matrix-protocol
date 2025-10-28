@@ -1,11 +1,12 @@
 [phases.setup]
 nixPkgs = [
-  "nodejs_22",
-  "pnpm",
-  "python3",
-  "gcc",
-  "gnumake",
-  "build-essential"
+  "nodejs_22"
+  "pnpm"
+  "python3"
+  "gcc"
+  "gnumake"
+  "pkg-config"
+  "glibc"
 ]
 
 [phases.install]
@@ -18,5 +19,5 @@ cmds = [
 cmds = ["pnpm build"]
 
 [phases.start]
-cmds = ["pnpm start"]
 dependsOn = ["build"]
+cmds = ["pnpm start"]
