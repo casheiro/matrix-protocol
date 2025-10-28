@@ -9,8 +9,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "echo 'Skipping nuxt prepare during build'",
-    "rebuild": "pnpm rebuild --recursive",
+    "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
     "start": "node .output/server/index.mjs",
     "clean": "rm -rf .nuxt .output dist"
