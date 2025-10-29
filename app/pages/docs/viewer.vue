@@ -186,7 +186,9 @@ const breadcrumbs = computed(() => {
   
   if (!filePath.value) return crumbs
   
-  const segments = filePath.value.split('/').filter(Boolean)
+  // Remove /docs prefix to avoid duplication since we start with /docs as base
+  const cleanPath = filePath.value.replace(/^\/docs\//, '')
+  const segments = cleanPath.split('/').filter(Boolean)
   let currentPath = '/docs'
   
   segments.forEach((segment, index) => {
