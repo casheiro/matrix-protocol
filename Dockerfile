@@ -53,6 +53,9 @@ RUN pnpm install --prod --frozen-lockfile
 # Copy built application from build stage
 COPY --from=build --chown=nuxtjs:nodejs /app/.output ./.output
 
+# Copy content directory for file-content API
+COPY --from=build --chown=nuxtjs:nodejs /app/content ./content
+
 # Switch to non-root user
 USER nuxtjs
 

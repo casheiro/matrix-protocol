@@ -9,7 +9,7 @@ export default defineContentConfig({
       source: {
         // Todo conteúdo PT sincronizado em /content/pt/
         cwd: resolve(__dirname, './content'),
-        include: 'pt/**/*.md',
+        include: 'pt/**/*.{md,yaml,yml}',
         prefix: '/pt'
       }
     }),
@@ -20,7 +20,7 @@ export default defineContentConfig({
       source: {
         // Todo conteúdo EN sincronizado em /content/en/
         cwd: resolve(__dirname, './content'),
-        include: 'en/**/*.md',
+        include: 'en/**/*.{md,yaml,yml}',
         prefix: '/en'
       }
     })
