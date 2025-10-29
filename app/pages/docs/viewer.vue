@@ -53,7 +53,7 @@
       />
       
       <TextViewer
-        v-else-if="isTextFile"
+        v-else-if="isTextFile || isJsonFile"
         :content="fileContent"
         :filename="filename"
         :title="fileTitle"
@@ -80,6 +80,15 @@
 <script setup lang="ts">
 import { parse as parseYaml } from 'yaml'
 
+// Type definitions
+interface FileContentResponse {
+  content: string
+  title: string | null
+  path: string
+  size: number
+  type: string
+}
+
 // Get file parameter from query
 const route = useRoute()
 const localePath = useLocalePath()
@@ -90,12 +99,17 @@ const filePath = computed(() => {
 })
 
 // Fetch file content
-const { data: fileData, pending, error } = await useFetch(`/api/file-content`, {
+const { data: fileData, pending, error } = await useFetch<FileContentResponse>(`/api/file-content`, {
   query: {
     path: filePath,
     locale: $i18n.locale.value
   },
-  server: false // Only run on client side for now
+  // Allow SSR for better performance and SEO
+  server: true,
+  // Add proper error handling
+  onResponseError({ response }) {
+    console.error('[viewer] API Error:', response.status, response.statusText)
+  }
 })
 
 // Computed properties

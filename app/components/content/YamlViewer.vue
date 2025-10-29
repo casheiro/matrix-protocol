@@ -97,7 +97,7 @@
       <div v-if="isRawView" class="relative">
         <UButton
           variant="ghost"
-          size="xs"
+          size="sm"
           icon="i-heroicons-clipboard"
           class="absolute top-2 right-2 z-10"
           @click="copyToClipboard"
@@ -164,7 +164,7 @@
             <div v-if="data?.scope_mode">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.scopeMode') }}:</label>
               <span class="inline-flex items-center gap-1 ml-2">
-                <UBadge :color="getScopeModeColor(data?.scope_mode)" size="xs">
+                <UBadge :color="getScopeModeColor(data?.scope_mode)" size="sm" variant="solid">
                   {{ t(`viewer.scopeModes.${data?.scope_mode}`) || data?.scope_mode }}
                 </UBadge>
               </span>
@@ -173,7 +173,11 @@
             <!-- Domain -->
             <div v-if="data?.domain_ref">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.domainRef') }}:</label>
-              <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data?.domain_ref }}</span>
+              <span class="inline-flex items-center gap-1 ml-2">
+                <UBadge :color="getDomainColor(data?.domain_ref)" size="sm" variant="solid">
+                  {{ data?.domain_ref }}
+                </UBadge>
+              </span>
             </div>
             <div v-if="data?.domain_of_influence">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.domainOfInfluence') }}:</label>
@@ -204,7 +208,7 @@
             <div v-if="data?.change_impact">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.changeImpact') }}:</label>
               <span class="inline-flex items-center gap-1 ml-2">
-                <UBadge :color="getChangeImpactColor(data?.change_impact)" size="xs">
+                <UBadge :color="getChangeImpactColor(data?.change_impact)" size="sm" variant="solid">
                   {{ t(`viewer.changeImpacts.${data?.change_impact}`) || data?.change_impact }}
                 </UBadge>
               </span>
@@ -212,7 +216,7 @@
             <div v-if="data?.status">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.status') }}:</label>
               <span class="inline-flex items-center gap-1 ml-2">
-                <UBadge :color="getDocumentStatusColor(data?.status)" size="xs">
+                <UBadge :color="getDocumentStatusColor(data?.status)" size="sm" variant="solid">
                   {{ t(`viewer.documentStatus.${data?.status}`) || data?.status }}
                 </UBadge>
               </span>
@@ -255,7 +259,7 @@
             <div class="space-y-2">
               <div v-for="(rel, index) in data?.relationships" :key="index"
                    class="flex items-center gap-2 text-sm">
-                <UBadge :variant="getRelationshipVariant(rel.type)" size="xs">
+                <UBadge :variant="getRelationshipVariant(rel.type)" size="sm">
                   {{ rel.type }}
                 </UBadge>
                 <span class="text-gray-600 dark:text-gray-400">{{ rel.target }}</span>
@@ -494,13 +498,14 @@ const getStatusClasses = (status?: string) => {
 
 const getRelationshipVariant = (type: string): "solid" | "outline" | "soft" | "subtle" => {
   const variants: Record<string, "solid" | "outline" | "soft" | "subtle"> = {
-    depends_on: 'outline',
+    depends_on: 'solid',      // Changed from outline for better contrast
     implements: 'solid',
-    overrides: 'soft',
+    overrides: 'solid',       // Changed from soft for better contrast
     conflicts_with: 'solid',
-    complements: 'subtle'
+    complements: 'solid',     // Changed from subtle for better contrast
+    relates_to: 'solid'       // Added missing relationship type
   }
-  return variants[type] || 'outline'
+  return variants[type] || 'solid'  // Default to solid for better contrast
 }
 
 const formatDate = (dateString?: string) => {
@@ -520,29 +525,51 @@ const formatDate = (dateString?: string) => {
 
 const getScopeModeColor = (mode?: string): "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error" => {
   const colors: Record<string, "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error"> = {
-    restricted: 'warning',
-    propagated: 'success'
+    restricted: 'error',   // Bright red for restricted 
+    restrito: 'error',     // Portuguese version
+    propagated: 'success', // Green for propagated
+    shared: 'info',        // Blue for shared
+    public: 'primary'      // Primary blue for public
   }
-  return colors[mode || ''] || 'neutral'
+  return colors[mode || ''] || 'warning'  // Default to orange for visibility
 }
 
 const getChangeImpactColor = (impact?: string): "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error" => {
   const colors: Record<string, "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error"> = {
-    major: 'error',
-    minor: 'warning',
-    patch: 'success'
+    major: 'error',       // Bright red for major changes
+    maior: 'error',       // Portuguese version
+    minor: 'warning',     // Orange for minor changes 
+    menor: 'warning',     // Portuguese version
+    patch: 'success',     // Green for patch changes
+    pequena: 'success'    // Portuguese version
   }
-  return colors[impact || ''] || 'neutral'
+  return colors[impact || ''] || 'info'  // Default to bright blue
+}
+
+const getDomainColor = (domain?: string): "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error" => {
+  const colors: Record<string, "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error"> = {
+    technical: 'info',        // Bright blue for technical
+    business: 'success',      // Green for business
+    security: 'error',        // Red for security  
+    infrastructure: 'warning', // Orange for infrastructure
+    operations: 'secondary',   // Purple for operations
+    compliance: 'primary'     // Default blue for compliance
+  }
+  return colors[domain || ''] || 'info'  // Default to bright blue
 }
 
 const getDocumentStatusColor = (status?: string): "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error" => {
   const colors: Record<string, "neutral" | "primary" | "secondary" | "success" | "info" | "warning" | "error"> = {
-    active: 'success',
-    deprecated: 'error',
-    archived: 'neutral',
-    draft: 'warning'
+    active: 'success',      // Green for active
+    ativo: 'success',       // Portuguese version  
+    deprecated: 'error',    // Red for deprecated
+    obsoleto: 'error',      // Portuguese version
+    archived: 'secondary',  // Purple for archived
+    arquivado: 'secondary', // Portuguese version
+    draft: 'warning',       // Orange for draft
+    rascunho: 'warning'     // Portuguese version
   }
-  return colors[status || ''] || 'primary'
+  return colors[status || ''] || 'info'  // Default to bright blue
 }
 </script>
 
@@ -566,5 +593,50 @@ mark.yaml-highlight {
   color: #1f2937; /* gray-800 */
   padding: 0 2px;
   border-radius: 2px;
+}
+
+/* Enhanced badge visibility with higher contrast */
+.yaml-viewer :deep(.badge) {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+/* Force high contrast colors for all badge variants */
+.yaml-viewer :deep(.badge-error) {
+  background-color: rgb(220 38 38) !important; /* red-600 */
+  color: white !important;
+  border: 1px solid rgb(185 28 28) !important; /* red-700 */
+}
+
+.yaml-viewer :deep(.badge-success) {
+  background-color: rgb(22 163 74) !important; /* green-600 */
+  color: white !important;
+  border: 1px solid rgb(21 128 61) !important; /* green-700 */
+}
+
+.yaml-viewer :deep(.badge-warning) {
+  background-color: rgb(234 88 12) !important; /* orange-600 */
+  color: white !important;
+  border: 1px solid rgb(194 65 12) !important; /* orange-700 */
+}
+
+.yaml-viewer :deep(.badge-info) {
+  background-color: rgb(37 99 235) !important; /* blue-600 */
+  color: white !important;
+  border: 1px solid rgb(29 78 216) !important; /* blue-700 */
+}
+
+.yaml-viewer :deep(.badge-primary) {
+  background-color: rgb(99 102 241) !important; /* indigo-500 */
+  color: white !important;
+  border: 1px solid rgb(79 70 229) !important; /* indigo-600 */
+}
+
+.yaml-viewer :deep(.badge-secondary) {
+  background-color: rgb(147 51 234) !important; /* purple-600 */
+  color: white !important;
+  border: 1px solid rgb(126 34 206) !important; /* purple-700 */
 }
 </style>
