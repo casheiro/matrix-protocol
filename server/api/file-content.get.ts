@@ -23,43 +23,10 @@ export default defineEventHandler(async (event) => {
     
     // Get file extension to determine handling method
     const fileExtension = filePath.split('.').pop()?.toLowerCase() || ''
-    const isParseableFile = ['md', 'yaml', 'yml'].includes(fileExtension)
     
-    
-    // For parseable files, try Nuxt Content first
-    if (isParseableFile) {
-      const contentPath = `/${locale}${filePath}`
-      
-      try {
-        // Try to get content using Nuxt Content API
-        const content = await $fetch(`/api/_content/query`, {
-          method: 'GET',
-          query: {
-            _path: contentPath,
-            _draft: false,
-            _partial: true
-          }
-        }) as any[]
-        
-        if (content && Array.isArray(content) && content.length > 0) {
-          const fileContent = content[0]
-          const contentText = fileContent.body || fileContent._content || ''
-          return {
-            content: contentText,
-            title: fileContent.title || null,
-            path: filePath,
-            size: contentText.length
-          }
-        }
-      } catch (contentError: any) {
-        // If Nuxt Content fails, fallback to filesystem (normal in production)
-      }
-    }
-    
-    // Fallback: read directly from filesystem (for development and Docker)
-    const { readFileSync, existsSync, readdirSync } = await import('fs')
+    // Read directly from filesystem
+    const { readFileSync, existsSync } = await import('fs')
     const { join } = await import('path')
-    
     
     const possiblePaths = [
       // Production path (Docker container - copied by Dockerfile)
