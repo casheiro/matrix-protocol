@@ -154,11 +154,25 @@ const fallbackBackButton = computed(() => {
   }
 })
 
+// Helper function to translate breadcrumb segments
+const translateSegment = (segment) => {
+  // Try to get specific translation for the segment
+  const specificTranslation = t(`navigation.breadcrumbSegments.${segment}`)
+  
+  // If translation exists and is different from the key, use it
+  if (specificTranslation && specificTranslation !== `navigation.breadcrumbSegments.${segment}`) {
+    return specificTranslation
+  }
+  
+  // Fallback to automatic transformation
+  return segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+}
+
 // Breadcrumbs
 const breadcrumbs = computed(() => {
   const crumbs = [
-    { label: 'Home', to: localePath('/') },
-    { label: 'Documentação', to: localePath('/docs') }
+    { label: t('navigation.home') || 'Home', to: localePath('/') },
+    { label: t('navigation.protocol') || 'Documentation', to: localePath('/docs') }
   ]
   
   const slug = Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug].filter(Boolean)
@@ -171,7 +185,7 @@ const breadcrumbs = computed(() => {
       const isLast = index === slug.length - 1
       
       crumbs.push({
-        label: segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        label: translateSegment(segment),
         to: isLast ? null : localePath(currentPath)
       })
     })

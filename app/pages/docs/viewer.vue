@@ -1,77 +1,66 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
-    <div v-if="pending" class="flex items-center justify-center py-12">
-      <div class="text-center">
-        <UIcon name="i-heroicons-arrow-path" class="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
-        <p class="text-gray-600 dark:text-gray-400">Loading document...</p>
+  <div class="docs-page min-h-screen bg-slate-matrix-800 dark:bg-slate-matrix-800">
+    <!-- Header with consistent DocHeader -->
+    <DocHeader 
+      :title="pageTitle"
+      :description="pageDescription"
+      :icon="pageIcon"
+      :breadcrumbs="breadcrumbs"
+    />
+
+    <div class="container mx-auto px-4 py-8">
+      <div v-if="pending" class="flex items-center justify-center py-12">
+        <div class="text-center">
+          <UIcon name="i-heroicons-arrow-path" class="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
+          <p class="text-gray-600 dark:text-gray-400">{{ $t('common.loading') || 'Loading document...' }}</p>
+        </div>
       </div>
-    </div>
 
-    <div v-else-if="error" class="text-center py-12">
-      <UIcon name="i-heroicons-exclamation-triangle" class="w-12 h-12 mx-auto mb-4 text-red-600" />
-      <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Document Not Found</h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-4">
-        The requested document could not be loaded.
-      </p>
-      <UButton
-        :to="localePath('/docs')"
-        icon="i-heroicons-arrow-left"
-      >
-        Back to Documentation
-      </UButton>
-    </div>
-
-    <div v-else-if="fileData" class="max-w-6xl mx-auto">
-      <!-- Breadcrumb -->
-      <nav class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-        <NuxtLink :to="localePath('/docs')" class="hover:text-gray-900 dark:hover:text-white">
-          Docs
-        </NuxtLink>
-        <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
-        <template v-for="(segment, index) in pathSegments" :key="index">
-          <NuxtLink 
-            v-if="index < pathSegments.length - 1"
-            :to="localePath(segment.path)" 
-            class="hover:text-gray-900 dark:hover:text-white"
-          >
-            {{ segment.name }}
-          </NuxtLink>
-          <span v-else class="text-gray-900 dark:text-white font-medium">
-            {{ segment.name }}
-          </span>
-          <UIcon v-if="index < pathSegments.length - 1" name="i-heroicons-chevron-right" class="w-4 h-4" />
-        </template>
-      </nav>
-
-      <!-- File Viewer -->
-      <YamlViewer 
-        v-if="isYamlFile"
-        :content="fileContent"
-        :filename="filename"
-        :title="fileTitle"
-        :data="yamlData"
-      />
-      
-      <TextViewer
-        v-else-if="isTextFile || isJsonFile"
-        :content="fileContent"
-        :filename="filename"
-        :title="fileTitle"
-      />
-
-      <div v-else class="text-center py-12">
-        <UIcon name="i-heroicons-document" class="w-12 h-12 mx-auto mb-4 text-gray-400" />
-        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ $t('viewer.messages.unsupportedFile') }}</h2>
+      <div v-else-if="error" class="text-center py-12">
+        <UIcon name="i-heroicons-exclamation-triangle" class="w-12 h-12 mx-auto mb-4 text-red-600" />
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ $t('viewer.messages.notFound') || 'Document Not Found' }}</h2>
         <p class="text-gray-600 dark:text-gray-400 mb-4">
-          {{ $t('viewer.messages.unsupportedFile') }}
+          {{ $t('viewer.messages.notFoundDescription') || 'The requested document could not be loaded.' }}
         </p>
         <UButton
-          @click="downloadFile"
-          icon="i-heroicons-arrow-down-tray"
-          variant="outline"
+          :to="localePath('/docs')"
+          icon="i-heroicons-arrow-left"
         >
-          {{ $t('viewer.messages.downloadFile') }}
+          {{ $t('navigation.backToDocs') || 'Back to Documentation' }}
         </UButton>
+      </div>
+
+      <div v-else-if="fileData" class="max-w-6xl mx-auto">
+        <!-- File Viewer -->
+        <YamlViewer 
+          v-if="isYamlFile"
+          :content="fileContent"
+          :filename="filename"
+          :title="fileTitle"
+          :data="yamlData"
+        />
+        
+        <TextViewer
+          v-else-if="isTextFile || isJsonFile"
+          :content="fileContent"
+          :filename="filename"
+          :title="fileTitle"
+        />
+
+        <div v-else class="text-center py-12">
+          <UIcon name="i-heroicons-document" class="w-12 h-12 mx-auto mb-4 text-gray-400" />
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ $t('viewer.messages.unsupportedFile') }}</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            {{ $t('viewer.messages.unsupportedFile') }}
+          </p>
+          <UButton
+            @click="downloadFile"
+            icon="i-heroicons-arrow-down-tray"
+            variant="outline"
+          >
+            {{ $t('viewer.messages.downloadFile') }}
+          </UButton>
+        </div>
       </div>
     </div>
   </div>
@@ -79,6 +68,7 @@
 
 <script setup lang="ts">
 import { parse as parseYaml } from 'yaml'
+import DocHeader from '~/components/docs/DocHeader.vue'
 
 // Type definitions
 interface FileContentResponse {
@@ -93,6 +83,7 @@ interface FileContentResponse {
 const route = useRoute()
 const localePath = useLocalePath()
 const { $i18n } = useNuxtApp()
+const { t } = useI18n()
 
 const filePath = computed(() => {
   return route.query.file as string
@@ -153,36 +144,71 @@ const yamlData = computed(() => {
   }
 })
 
-interface PathSegment {
-  name: string
-  path: string
+// DocHeader properties
+const pageTitle = computed(() => {
+  if (fileData.value?.title) {
+    return fileData.value.title
+  }
+  return fileTitle.value || t('viewer.documentTitle') || 'Document'
+})
+
+const pageDescription = computed(() => {
+  return t('viewer.documentDescription') || `View ${pageTitle.value} document`
+})
+
+const pageIcon = computed(() => {
+  if (isYamlFile.value) return 'i-heroicons-document-text'
+  if (isJsonFile.value) return 'i-heroicons-code-bracket'
+  if (isTextFile.value) return 'i-heroicons-document'
+  return 'i-heroicons-document'
+})
+
+// Helper function to translate breadcrumb segments
+const translateSegment = (segment) => {
+  // Try to get specific translation for the segment
+  const specificTranslation = t(`navigation.breadcrumbSegments.${segment}`)
+  
+  // If translation exists and is different from the key, use it
+  if (specificTranslation && specificTranslation !== `navigation.breadcrumbSegments.${segment}`) {
+    return specificTranslation
+  }
+  
+  // Fallback to automatic transformation
+  return segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 }
 
-const pathSegments = computed(() => {
-  if (!filePath.value) return []
+// Breadcrumbs for viewer
+const breadcrumbs = computed(() => {
+  const crumbs = [
+    { label: t('navigation.home') || 'Home', to: localePath('/') },
+    { label: t('navigation.protocol') || 'Documentation', to: localePath('/docs') }
+  ]
+  
+  if (!filePath.value) return crumbs
   
   const segments = filePath.value.split('/').filter(Boolean)
-  const result: PathSegment[] = []
-  let currentPath = ''
+  let currentPath = '/docs'
   
   segments.forEach((segment, index) => {
-    currentPath += '/' + segment
+    const isLast = index === segments.length - 1
     
-    // Don't include the file itself in breadcrumb links
-    if (index < segments.length - 1) {
-      result.push({
-        name: segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-        path: currentPath
+    if (!isLast) {
+      currentPath += `/${segment}`
+      crumbs.push({
+        label: translateSegment(segment),
+        to: localePath(currentPath)
       })
     } else {
-      result.push({
-        name: segment.replace(/\.(yaml|yml|txt|json)$/i, '').replace(/-/g, ' '),
-        path: currentPath
+      // For the file itself, don't add a link
+      const fileName = segment.replace(/\.(yaml|yml|txt|json)$/i, '').replace(/-/g, ' ')
+      crumbs.push({
+        label: fileName,
+        to: null // Last item shouldn't be clickable
       })
     }
   })
   
-  return result
+  return crumbs
 })
 
 // Methods

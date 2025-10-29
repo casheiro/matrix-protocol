@@ -17,6 +17,7 @@
     "backToHome": "Back to home",
     "closeSidebar": "Close sidebar navigation",
     "close": "Close",
+    "backToDocs": "Back to Documentation",
     
     "dynamicNavLabel": "Dynamic navigation",
     "dynamicTitle": "Navigation",
@@ -40,6 +41,26 @@
     "breadcrumbsError": "Error loading breadcrumbs",
     "showAllBreadcrumbs": "Show all items",
     "noBreadcrumbs": "No breadcrumb trail available",
+    
+    "breadcrumbSegments": {
+      "docs": "Documentation",
+      "examples": "Examples",
+      "knowledge": "Knowledge",
+      "structured": "Structured",
+      "procedures": "Procedures",
+      "technical": "Technical",
+      "patterns": "Patterns", 
+      "technical-patterns": "Technical Patterns",
+      "compliance": "Compliance",
+      "organizational": "Organizational",
+      "manual": "Manual",
+      "tools": "Tools",
+      "implementation": "Implementation",
+      "integration": "Integration",
+      "glossary": "Glossary",
+      "quickstart": "Quick Start",
+      "protocol": "Protocol"
+    },
     
     "relatedPagesLabel": "Related pages",
     "relatedPages": "Related Pages",
@@ -675,6 +696,7 @@
     }
   },
   "common": {
+    "loading": "Loading...",
     "home": "Home",
     "relatedLinks": "Related Links",
     "learnMore": "Learn More",
@@ -860,6 +882,15 @@
     }
   },
   "viewer": {
+    "documentTitle": "Document",
+    "documentDescription": "View document",
+    "messages": {
+      "notFound": "Document Not Found",
+      "notFoundDescription": "The requested document could not be loaded.",
+      "noContent": "No content field found in this document.",
+      "unsupportedFile": "This file type is not supported for viewing.",
+      "downloadFile": "Download File"
+    },
     "buttons": {
       "formatted": "Formatted",
       "raw": "Raw",
@@ -919,11 +950,6 @@
       "technical_pattern": "Technical Pattern",
       "procedure": "Procedure",
       "pattern": "Pattern"
-    },
-    "messages": {
-      "noContent": "No content field found in this document.",
-      "unsupportedFile": "This file type is not supported for viewing.",
-      "downloadFile": "Download File"
     },
     "document": {
       "yamlDocument": "YAML Document",
