@@ -17,6 +17,7 @@
     "backToHome": "Voltar ao início",
     "closeSidebar": "Fechar navegação lateral",
     "close": "Fechar",
+    "backToDocs": "Voltar à Documentação",
     
     "dynamicNavLabel": "Navegação dinâmica",
     "dynamicTitle": "Navegação",
@@ -40,6 +41,26 @@
     "breadcrumbsError": "Erro ao carregar trilha de navegação",
     "showAllBreadcrumbs": "Mostrar todos os itens",
     "noBreadcrumbs": "Nenhuma trilha de navegação disponível",
+    
+    "breadcrumbSegments": {
+      "docs": "Documentação",
+      "examples": "Exemplos",
+      "knowledge": "Conhecimento",
+      "structured": "Estruturado",
+      "procedures": "Procedimentos",
+      "technical": "Técnico",
+      "patterns": "Padrões",
+      "technical-patterns": "Padrões Técnicos",
+      "compliance": "Conformidade",
+      "organizational": "Organizacional",
+      "manual": "Manual",
+      "tools": "Ferramentas",
+      "implementation": "Implementação",
+      "integration": "Integração",
+      "glossary": "Glossário",
+      "quickstart": "Início Rápido",
+      "protocol": "Protocolo"
+    },
     
     "relatedPagesLabel": "Páginas relacionadas",
     "relatedPages": "Páginas Relacionadas",
@@ -720,6 +741,7 @@
     }
   },
   "common": {
+    "loading": "Carregando...",
     "home": "Início",
     "relatedLinks": "Links Relacionados",
     "learnMore": "Saiba Mais",
@@ -905,6 +927,15 @@
     }
   },
   "viewer": {
+    "documentTitle": "Documento",
+    "documentDescription": "Visualizar documento",
+    "messages": {
+      "notFound": "Documento Não Encontrado",
+      "notFoundDescription": "O documento solicitado não pôde ser carregado.",
+      "noContent": "Nenhum campo de conteúdo encontrado neste documento.",
+      "unsupportedFile": "Este tipo de arquivo não é suportado para visualização.",
+      "downloadFile": "Baixar Arquivo"
+    },
     "buttons": {
       "formatted": "Formatado",
       "raw": "Código",
@@ -964,11 +995,6 @@
       "technical_pattern": "Padrão Técnico",
       "procedure": "Procedimento",
       "pattern": "Padrão"
-    },
-    "messages": {
-      "noContent": "Nenhum campo de conteúdo encontrado neste documento.",
-      "unsupportedFile": "Este tipo de arquivo não é suportado para visualização.",
-      "downloadFile": "Baixar Arquivo"
     },
     "document": {
       "yamlDocument": "Documento YAML",
