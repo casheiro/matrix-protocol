@@ -3,7 +3,7 @@
     <!-- Item without children -->
     <div v-if="!item.children || item.children.length === 0">
       <UButton
-        :to="localePath(item.path)"
+        :to="item.path"
         variant="ghost"
         size="sm"
         :icon="item.icon || 'i-heroicons-document-text'"
@@ -32,7 +32,7 @@
           :style="{ marginLeft: `${level * 1.5}rem` }"
         />
         <UButton
-          :to="localePath(item.path)"
+          :to="item.path"
           variant="ghost"
           size="sm"
           :icon="item.icon || 'i-heroicons-folder'"
