@@ -1,7 +1,7 @@
 ---
 title: Inference & Reasoning in Matrix Protocol
 description: 'Fundamental technologies: DL/Datalog, KGE, GNN applied to Matrix epistemological frameworks.'
-layout: framework
+layout: docs
 navigation: true
 lang: en
 last_updated: '2025-10-23'
@@ -55,12 +55,13 @@ graph TD
     F --> F2[EvaluateForEnrich]
     F --> F3[Decision Support]
     
-    style A fill:#ff6b6b
-    style B fill:#3498db
-    style C fill:#2ecc71
-    style D fill:#9b59b6
-    style E fill:#f39c12
-    style F fill:#e74c3c
+    %% Neural-Datalog Integration - Framework progression
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style B fill:#2471A3,stroke:#2980B9,color:#fff
+    style C fill:#1E8449,stroke:#27AE60,color:#fff
+    style D fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style E fill:#D35400,stroke:#E67E22,color:#fff
+    style F fill:#A93226,stroke:#C0392B,color:#fff
 ```
 
 ### Conceptual Example 1: Automatic UKI Validation
@@ -168,11 +169,12 @@ graph LR
     G --> G2[Link Prediction]
     G --> G3[Knowledge Completion]
     
-    style A fill:#9b59b6
-    style B fill:#3498db
-    style E fill:#e74c3c
-    style F fill:#f39c12
-    style G fill:#2ecc71
+    %% Knowledge Graph Embeddings - MOC hierarchy representation
+    style A fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style B fill:#2471A3,stroke:#2980B9,color:#fff
+    style E fill:#A93226,stroke:#C0392B,color:#fff
+    style F fill:#D35400,stroke:#E67E22,color:#fff
+    style G fill:#1E8449,stroke:#27AE60,color:#fff
 ```
 
 ### Conceptual Example 4: MOC Hierarchy Embedding
@@ -330,12 +332,13 @@ graph TD
     F --> F3[Knowledge Gap Analysis]
     F --> F4[Organizational Learning]
     
-    style A fill:#3498db
-    style B fill:#e74c3c
-    style C fill:#f39c12
-    style D fill:#2ecc71
-    style E fill:#9b59b6
-    style F fill:#34495e
+    %% GNN Maturity Classification - UKI lifecycle
+    style A fill:#2471A3,stroke:#2980B9,color:#fff
+    style B fill:#A93226,stroke:#C0392B,color:#fff
+    style C fill:#D35400,stroke:#E67E22,color:#fff
+    style D fill:#1E8449,stroke:#27AE60,color:#fff
+    style E fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style F fill:#34495E,stroke:#2C3E50,color:#fff
 ```
 
 ### Conceptual Example 7: UKI Maturity Classification
@@ -573,13 +576,14 @@ graph TB
     MAL2 --> OIF2
     MAL3 --> OIF3
     
-    style MEP1 fill:#9b59b6
-    style NS2 fill:#e74c3c
-    style MEF2 fill:#3498db
-    style MOC2 fill:#f39c12
-    style ZOF2 fill:#2ecc71
-    style MAL2 fill:#e67e22
-    style OIF2 fill:#34495e
+    %% Matrix Protocol Complete System - Framework integration
+    style MEP1 fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style NS2 fill:#A93226,stroke:#C0392B,color:#fff
+    style MEF2 fill:#1E8449,stroke:#27AE60,color:#fff
+    style MOC2 fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style ZOF2 fill:#D35400,stroke:#E67E22,color:#fff
+    style MAL2 fill:#A93226,stroke:#C0392B,color:#fff
+    style OIF2 fill:#2471A3,stroke:#2980B9,color:#fff
 ```
 
 ### Conceptual Example 10: Complete Decision System

@@ -61,10 +61,11 @@ graph TD
     G --> P[Domain Expertise]
     H --> Q[Local Autonomy]
     
-    style B fill:#9B59B6,stroke:#fff,color:#fff
-    style C fill:#2ECC71,stroke:#fff,color:#fff
-    style D fill:#E67E22,stroke:#fff,color:#fff
-    style E fill:#2980B9,stroke:#fff,color:#fff
+    %% MOC Governance - Clear hierarchy styling
+    style B fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style C fill:#1E8449,stroke:#27AE60,color:#fff
+    style D fill:#D35400,stroke:#E67E22,color:#fff
+    style E fill:#2471A3,stroke:#2980B9,color:#fff
 ```
 
 ## Scope-Based Precedence System
@@ -183,8 +184,9 @@ graph TD
     K --> L[Action: Update Squad Policy]
     L --> M[Audit Trail: Decision Record]
     
-    style D fill:#C0392B,stroke:#fff,color:#fff
-    style K fill:#2ECC71,stroke:#fff,color:#fff
+    %% Governance resolution - Functional colors
+    style D fill:#A93226,stroke:#C0392B,color:#fff
+    style K fill:#1E8449,stroke:#27AE60,color:#fff
 ```
 
 **Governance Resolution**:
@@ -443,9 +445,10 @@ graph TD
     I --> N[Continuous Monitoring]
     M --> N
     
-    style A fill:#9B59B6,stroke:#fff,color:#fff
-    style J fill:#E67E22,stroke:#fff,color:#fff
-    style N fill:#2ECC71,stroke:#fff,color:#fff
+    %% Continuous improvement - Temporal progression
+    style A fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style J fill:#D35400,stroke:#E67E22,color:#fff
+    style N fill:#1E8449,stroke:#27AE60,color:#fff
 ```
 
 #### Continuous Improvement Framework
