@@ -46,19 +46,19 @@ graph TD
     B[📊 Datalog] --> C
     
     C --> D[🔮 MEP Integration]
-    D --> D1[Semantic Elasticity]
-    D --> D2[Stratified Epistemology]
-    D --> D3[Derived Authority]
+    D --> D1[Elasticidade Semântica]
+    D --> D2[Epistemologia Estratificada]
+    D --> D3[Autoridade Derivada]
     
-    C --> E[📋 MEF Applications]
-    E --> E1[UKI Validation]
-    E --> E2[Relationship Inference]
-    E --> E3[Maturity Assessment]
+    C --> E[📋 Aplicações MEF]
+    E --> E1[Validação UKI]
+    E --> E2[Inferência de Relacionamentos]
+    E --> E3[Avaliação de Maturidade]
     
-    C --> F[⚡ ZOF Integration]
-    F --> F1[Oracle Consultation]
-    F --> F2[EvaluateForEnrich]
-    F --> F3[Decision Support]
+    C --> F[⚡ Integração ZOF]
+    F --> F1[Consulta ao Oráculo]
+    F --> F2[AvaliarParaEnriquecer]
+    F --> F3[Suporte à Decisão]
     
     %% Neural-Datalog Integration - Framework progression
     style A fill:#A93226,stroke:#C0392B,color:#fff

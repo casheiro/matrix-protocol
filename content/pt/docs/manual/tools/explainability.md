@@ -37,21 +37,21 @@ O Matrix Protocol fundamenta-se no princípio de **Explicabilidade Necessária**
 
 ```mermaid
 graph TD
-    A[🤖 Decisão Matrix Protocol] --> B[🔍 XAI Analysis Engine]
-    B --> C[📝 NLG Template Selection]
-    C --> D[🎯 Context-Aware Generation]
+    A[🤖 Decisão Matrix Protocol] --> B[🔍 Motor de Análise XAI]
+    B --> C[📝 Seleção de Template NLG]
+    C --> D[🎯 Geração Consciente de Contexto]
     
-    B --> B1[Authority Context]
-    B --> B2[Organizational Scope]
-    B --> B3[Decision Complexity]
+    B --> B1[Contexto de Autoridade]
+    B --> B2[Escopo Organizacional]
+    B --> B3[Complexidade da Decisão]
     
-    D --> E[📖 Human-Readable Explanation]
-    D --> F[🔗 Audit Trail References]
-    D --> G[📊 Visual Justifications]
+    D --> E[📖 Explicação Legível Humana]
+    D --> F[🔗 Referências de Trilha de Auditoria]
+    D --> G[📊 Justificativas Visuais]
     
-    E --> H[👤 User Understanding]
-    F --> I[🔒 Compliance & Governance]
-    G --> J[🧠 Cognitive Enhancement]
+    E --> H[👤 Compreensão do Usuário]
+    F --> I[🔒 Compliance e Governança]
+    G --> J[🧠 Aprimoramento Cognitivo]
     
     %% Arquitetura de explicabilidade - Fluxo funcional
     style A fill:#A93226,stroke:#C0392B,color:#fff
