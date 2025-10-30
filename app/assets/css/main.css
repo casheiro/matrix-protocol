@@ -123,6 +123,40 @@
   font-size: 14px !important;
 }
 
+/* Fix text wrapping in Mermaid nodes */
+.mermaid-diagram .node foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid-diagram .node foreignObject div {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  max-width: 200px !important;
+  min-width: 120px !important;
+  padding: 8px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+}
+
+/* Ensure rect nodes have adequate minimum width */
+.mermaid-diagram .node rect {
+  min-width: 120px !important;
+  rx: 4px !important;
+  ry: 4px !important;
+}
+
+/* Fix text positioning in nodes */
+.mermaid-diagram .nodeLabel {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  max-width: 180px !important;
+  display: inline-block !important;
+  text-align: center !important;
+  line-height: 1.3 !important;
+}
+
 /* Framework-specific colors for Mermaid */
 .mermaid-diagram .mef-node {
   fill: #2ECC71 !important;
