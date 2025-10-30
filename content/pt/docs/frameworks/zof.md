@@ -442,3 +442,14 @@ benefits:
   flexibility: "Cada equipe implementa com suas tecnologias"
   authority: "Respeitamos hierarquias organizacionais via MOC"
 ```
+
+---
+
+## 📖 Recursos Relacionados
+
+### Matrix Protocol Frameworks
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Como os princípios MEP se manifestam no ZOF e outros frameworks
+- **[MEF - Matrix Embedding Framework](./mef)** - Oracle de conhecimento usado nos workflows ZOF
+- **[OIF - Operator Intelligence Framework](./oif)** - Archetypes que orquestram workflows ZOF
+- **[MOC - Matrix Ontology Catalog](./moc)** - Configuração organizacional para workflows
+- **[MAL - Matrix Arbiter Layer](./mal)** - Arbitragem invocada durante EvaluateForEnrich

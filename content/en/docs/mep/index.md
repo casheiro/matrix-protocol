@@ -152,6 +152,8 @@ MEP guides philosophy; frameworks execute implementation:
 - **OIF (Operator Intelligence Framework)**: Provides mandatory explainability interface
 - **MOC (Matrix Ontology Catalog)**: Defines organizational context for derived authority
 
+**📋 [Detailed MEP-Framework Relationships Analysis](../frameworks/mep-framework-relationships)** - Complete mapping of how each of the 5 MEP principles manifests in all frameworks, including practical implementation examples and cross-framework interaction patterns.
+
 ---
 
 ## 6. Conventions and Examples

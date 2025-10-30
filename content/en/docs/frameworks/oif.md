@@ -346,6 +346,8 @@ arbitration_explanation_template:
 - **MEP (Matrix Epistemic Principle)**: Epistemological foundations for explainability and derived authority; guides arbitration explanation justifications
 - **MAL (Matrix Arbiter Layer)**: Provides Decision Records that OIF MUST explain to users via Arbitration Explanation Templates; OIF maintains epistemic humility not overriding MAL determinations; ensures arbitration transparency
 
+**📋 [MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how OIF implements the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) with practical examples and cross-framework integration patterns.
+
 ---
 
 ## 6. Conventions and Examples

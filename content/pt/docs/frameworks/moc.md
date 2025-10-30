@@ -587,3 +587,14 @@ governance:
 - *Evolução*: Mudanças organizacionais não quebram o protocolo
 - *Interoperabilidade*: Diferentes organizações podem compartilhar conhecimento
 - *Contexto IA*: Inteligências entendem hierarquias organizacionais específicas
+
+---
+
+## 📖 Recursos Relacionados
+
+### Matrix Protocol Frameworks
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Como os princípios MEP (especialmente Elasticidade Semântica e Autoridade Derivada) se manifestam no MOC
+- **[MEF - Matrix Embedding Framework](./mef)** - UKIs que referenciam configurações MOC via campos *_ref
+- **[ZOF - Zion Orchestration Framework](./zof)** - Workflows que validam autoridade via MOC
+- **[OIF - Operator Intelligence Framework](./oif)** - Archetypes que contextualizam respostas usando MOC
+- **[MAL - Matrix Arbiter Layer](./mal)** - Arbitragem baseada em políticas MOC

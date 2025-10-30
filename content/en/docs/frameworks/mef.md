@@ -147,12 +147,14 @@ UKIs progridem através de estados de ciclo de vida definidos:
 
 ---
 
-## 6. Interoperabilidade
+## 6. Interoperability
 
-- **MOC (Matrix Ontology Catalog)**: Define taxonomias organizacionais referenciadas pelos campos *_ref
-- **MEP (Matrix Epistemic Principle)**: Fornece fundamentos epistemológicos para versionamento e promoção
-- **ZOF (Zion Orchestration Framework)**: Consome UKIs durante workflows e checkpoint EvaluateForEnrich
-- **OIF (Operator Intelligence Framework)**: Utiliza UKIs para alimentar arquétipos de inteligência
+- **MOC (Matrix Ontology Catalog)**: Defines organizational taxonomies referenced by *_ref fields
+- **MEP (Matrix Epistemic Principle)**: Provides epistemological foundations for versioning and promotion
+- **ZOF (Zion Orchestration Framework)**: Consumes UKIs during workflows and EvaluateForEnrich checkpoint
+- **OIF (Operator Intelligence Framework)**: Uses UKIs to feed intelligence archetypes
+
+**📋 [MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how MEF implements the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) with practical examples and cross-framework integration patterns.
 
 ---
 

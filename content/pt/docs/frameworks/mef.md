@@ -66,6 +66,8 @@ Cada UKI é um arquivo YAML estruturado contendo:
 - **Promoção Responsável**: Campo promotion_rationale documenta justificativas
 - **Autoridade Derivada**: Campos scope_ref e governance_ref implementam autoridade contextual
 
+> 📖 **Relacionamentos MEP Detalhados**: Veja [MEP-Frameworks: Relacionamentos](./mep-framework-relationships) para análise completa de como todos os 5 princípios MEP se manifestam no MEF e outros frameworks.
+
 ---
 
 ## 4. Regras Normativas

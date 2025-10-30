@@ -221,6 +221,8 @@ When MOC evolves, it provides:
 
 ## 6. Integration with Other Frameworks
 
+**📋 [MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how MOC implements the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) with practical examples and cross-framework integration patterns.
+
 ### 6.1 MEF Integration
 
 All UKI `*_ref` fields must reference valid MOC nodes:

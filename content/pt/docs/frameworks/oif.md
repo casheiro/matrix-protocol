@@ -568,3 +568,14 @@ derived_authority_implementation:
       A escolha depende dos requisitos específicos do seu projeto e 
       das políticas organizacionais definidas em hierarchies.domain.technical.governance."
 ``` 
+
+---
+
+## 📖 Recursos Relacionados
+
+### Matrix Protocol Frameworks
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Como os princípios MEP (especialmente Autoridade Derivada e Explicabilidade) se manifestam no OIF
+- **[ZOF - Zion Orchestration Framework](./zof)** - Workflows orquestrados pelos archetypes OIF
+- **[MEF - Matrix Embedding Framework](./mef)** - Oracle de conhecimento consultado pelo Knowledge Agent
+- **[MOC - Matrix Ontology Catalog](./moc)** - Configuração organizacional usada para contextualizar respostas
+- **[MAL - Matrix Arbiter Layer](./mal)** - Arbitragem comunicada via explicações OIF
