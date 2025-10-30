@@ -178,14 +178,14 @@ graph TB
     MEP_AUTH -.-> ZOF_EVL
     MEP_AUTH -.-> MAL_ARB
     
-    %% Estilização
-    classDef user fill:#e1f5fe
-    classDef oif fill:#f3e5f5
-    classDef zof fill:#e8f5e8
-    classDef mef fill:#fff3e0
-    classDef moc fill:#fce4ec
-    classDef mep fill:#f1f8e9
-    classDef mal fill:#ffebee
+    %% Estilização Matrix Protocol - Cores com alto contraste
+    classDef user fill:#34495E,stroke:#2C3E50,color:#fff,stroke-width:2px
+    classDef oif fill:#2471A3,stroke:#2980B9,color:#fff,stroke-width:2px
+    classDef zof fill:#D35400,stroke:#E67E22,color:#fff,stroke-width:2px
+    classDef mef fill:#1E8449,stroke:#27AE60,color:#fff,stroke-width:2px
+    classDef moc fill:#8E44AD,stroke:#9B59B6,color:#fff,stroke-width:2px
+    classDef mep fill:#1E8449,stroke:#27AE60,color:#fff,stroke-width:2px
+    classDef mal fill:#A93226,stroke:#C0392B,color:#fff,stroke-width:2px
     
     class User user
     class OIF_KA,OIF_WA,OIF_EXP oif

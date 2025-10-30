@@ -53,11 +53,12 @@ graph TD
     F --> I[🔒 Compliance & Governance]
     G --> J[🧠 Cognitive Enhancement]
     
-    style A fill:#e74c3c
-    style B fill:#f39c12
-    style C fill:#3498db
-    style D fill:#2ecc71
-    style H fill:#9b59b6
+    %% Arquitetura de explicabilidade - Fluxo funcional
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style B fill:#D35400,stroke:#E67E22,color:#fff
+    style C fill:#2471A3,stroke:#2980B9,color:#fff
+    style D fill:#1E8449,stroke:#27AE60,color:#fff
+    style H fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### Princípios de Explicabilidade Matrix

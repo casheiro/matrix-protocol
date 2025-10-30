@@ -76,10 +76,11 @@ graph TB
     M --> N[🔒 Audit Trail]
     N --> O[📊 Compliance Report]
     
-    style A fill:#9b59b6
-    style C fill:#e74c3c
-    style M fill:#2ecc71
-    style N fill:#3498db
+    %% Estilização MOC Governance - Hierarquia clara
+    style A fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style C fill:#A93226,stroke:#C0392B,color:#fff
+    style M fill:#1E8449,stroke:#27AE60,color:#fff
+    style N fill:#2471A3,stroke:#2980B9,color:#fff
 ```
 
 ### Princípios da Governança MOC
@@ -127,10 +128,11 @@ graph TD
     D -.-> N
     B -.-> O
     
-    style A fill:#e74c3c
-    style E fill:#f39c12
-    style I fill:#2ecc71
-    style M fill:#9b59b6
+    %% Hierarquia organizacional - Cores por nível
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style E fill:#D35400,stroke:#E67E22,color:#fff
+    style I fill:#1E8449,stroke:#27AE60,color:#fff
+    style M fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### Precedências por Domínio de Conhecimento
@@ -460,10 +462,11 @@ graph TB
     G --> K
     H --> L
     
-    style A fill:#3498db
-    style I fill:#e74c3c
-    style J fill:#f39c12
-    style K fill:#9b59b6
+    %% Fluxo decisório - Cores funcionais
+    style A fill:#2471A3,stroke:#2980B9,color:#fff
+    style I fill:#A93226,stroke:#C0392B,color:#fff
+    style J fill:#D35400,stroke:#E67E22,color:#fff
+    style K fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ## Casos de Decisão Organizacional
@@ -696,10 +699,11 @@ graph LR
     I --> J[✅ Policy Updates]
     J --> K[🔄 Implementation Cycle]
     
-    style A fill:#3498db
-    style E fill:#e74c3c
-    style I fill:#f39c12
-    style J fill:#2ecc71
+    %% Ciclo evolutivo - Progressão temporal
+    style A fill:#2471A3,stroke:#2980B9,color:#fff
+    style E fill:#A93226,stroke:#C0392B,color:#fff
+    style I fill:#D35400,stroke:#E67E22,color:#fff
+    style J fill:#1E8449,stroke:#27AE60,color:#fff
 ```
 
 ### Evolução Contínua da Governança

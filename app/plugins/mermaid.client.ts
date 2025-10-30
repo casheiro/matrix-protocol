@@ -28,7 +28,11 @@ export default defineNuxtPlugin(() => {
       flowchart: {
         useMaxWidth: true,
         htmlLabels: true,
-        curve: 'basis'
+        curve: 'basis',
+        wrap: true,
+        nodeSpacing: 50,
+        rankSpacing: 50,
+        diagramPadding: 8
       },
       sequence: {
         useMaxWidth: true,
@@ -81,7 +85,11 @@ export default defineNuxtPlugin(() => {
         flowchart: {
           useMaxWidth: true,
           htmlLabels: true,
-          curve: 'basis' as 'basis' | 'bumpX' | 'bumpY' | 'cardinal' | 'catmullRom' | 'linear' | 'monotoneX' | 'monotoneY' | 'natural' | 'step' | 'stepAfter' | 'stepBefore'
+          curve: 'basis' as 'basis' | 'bumpX' | 'bumpY' | 'cardinal' | 'catmullRom' | 'linear' | 'monotoneX' | 'monotoneY' | 'natural' | 'step' | 'stepAfter' | 'stepBefore',
+          wrap: true,
+          nodeSpacing: 50,
+          rankSpacing: 50,
+          diagramPadding: 8
         }
       }
       

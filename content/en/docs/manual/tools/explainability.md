@@ -58,11 +58,12 @@ graph TD
     F --> I[🔒 Compliance & Governance]
     G --> J[🧠 Cognitive Enhancement]
     
-    style A fill:#e74c3c
-    style B fill:#f39c12
-    style C fill:#3498db
-    style D fill:#2ecc71
-    style H fill:#9b59b6
+    %% Explainability architecture - Functional flow
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style B fill:#D35400,stroke:#E67E22,color:#fff
+    style C fill:#2471A3,stroke:#2980B9,color:#fff
+    style D fill:#1E8449,stroke:#27AE60,color:#fff
+    style H fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### Matrix Explainability Principles
@@ -524,11 +525,12 @@ graph TD
     X --> Y[🔒 Auditable Trail]
     Y --> Z[📢 User Explanation]
     
-    style A fill:#e74c3c
-    style F fill:#f39c12
-    style X fill:#2ecc71
-    style Y fill:#3498db
-    style Z fill:#9b59b6
+    %% Authority derivation flow
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style F fill:#D35400,stroke:#E67E22,color:#fff
+    style X fill:#27AE60,stroke:#2ECC71,color:#fff
+    style Y fill:#2471A3,stroke:#2980B9,color:#fff
+    style Z fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### 2. Derived Authority: Organizational Context
@@ -564,11 +566,12 @@ graph LR
     B -.-> MOC2
     B -.-> MOC3
     
-    style A fill:#3498db
-    style B fill:#f39c12
-    style D fill:#2ecc71
-    style E fill:#e74c3c
-    style L fill:#9b59b6
+    %% Hierarchical explanation - Access levels
+    style A fill:#2471A3,stroke:#2980B9,color:#fff
+    style B fill:#D35400,stroke:#E67E22,color:#fff
+    style D fill:#1E8449,stroke:#27AE60,color:#fff
+    style E fill:#A93226,stroke:#C0392B,color:#fff
+    style L fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### 3. OIF Hierarchical Explanation: Access Levels
@@ -612,11 +615,12 @@ graph TD
     A -.-> P2
     A -.-> P3
     
-    style A fill:#e74c3c
-    style B fill:#f39c12
-    style G fill:#2ecc71
-    style H fill:#3498db
-    style I fill:#9b59b6
+    %% Validation explanation system
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style B fill:#D35400,stroke:#E67E22,color:#fff
+    style G fill:#1E8449,stroke:#27AE60,color:#fff
+    style H fill:#2471A3,stroke:#2980B9,color:#fff
+    style I fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ## 📖 Related Resources

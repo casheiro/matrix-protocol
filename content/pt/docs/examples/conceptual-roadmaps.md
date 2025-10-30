@@ -74,14 +74,15 @@ graph TD
     H --> H2[Autoridade Derivada]
     H --> H3[Evolução Controlada]
     
-    style A fill:#ff6b6b
-    style B fill:#4ecdc4
-    style C fill:#45b7d1
-    style D fill:#9b59b6
-    style E fill:#f39c12
-    style F fill:#e74c3c
-    style G fill:#3498db
-    style H fill:#2ecc71
+    %% Roadmap conceitual - Progressão evolutiva
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style B fill:#2471A3,stroke:#2980B9,color:#fff
+    style C fill:#2471A3,stroke:#2980B9,color:#fff
+    style D fill:#8E44AD,stroke:#9B59B6,color:#fff
+    style E fill:#D35400,stroke:#E67E22,color:#fff
+    style F fill:#A93226,stroke:#C0392B,color:#fff
+    style G fill:#2471A3,stroke:#2980B9,color:#fff
+    style H fill:#1E8449,stroke:#27AE60,color:#fff
 ```
 
 ### Exemplo Prático: Squad Payments
@@ -137,11 +138,12 @@ graph TD
     L --> M[📢 OIF Explanation]
     M --> N[🎯 Conhecimento Atualizado]
     
-    style A fill:#e74c3c
-    style F fill:#f39c12
-    style I fill:#2ecc71
-    style K fill:#3498db
-    style L fill:#9b59b6
+    %% Ciclo de vida do conhecimento
+    style A fill:#A93226,stroke:#C0392B,color:#fff
+    style F fill:#D35400,stroke:#E67E22,color:#fff
+    style I fill:#1E8449,stroke:#27AE60,color:#fff
+    style K fill:#2471A3,stroke:#2980B9,color:#fff
+    style L fill:#8E44AD,stroke:#9B59B6,color:#fff
 ```
 
 ### Exemplo Real: Conflito de Retenção de Dados
@@ -201,12 +203,13 @@ graph LR
     C -.-> S2
     H -.-> S3
     
-    style B fill:#3498db
-    style E fill:#f39c12
-    style G fill:#2ecc71
-    style B1 fill:#e8f4fd
-    style E2 fill:#fff3cd
-    style G1 fill:#d1ecf1
+    %% Fluxo prático - Gateway de pagamento
+    style B fill:#2471A3,stroke:#2980B9,color:#fff
+    style E fill:#D35400,stroke:#E67E22,color:#fff
+    style G fill:#1E8449,stroke:#27AE60,color:#fff
+    style B1 fill:#A9CCE3,stroke:#2471A3,color:#000
+    style E2 fill:#F8C471,stroke:#D35400,color:#000
+    style G1 fill:#A9DFBF,stroke:#27AE60,color:#000
 ```
 
 ### Exemplo Prático: Seleção de Gateway de Pagamento
