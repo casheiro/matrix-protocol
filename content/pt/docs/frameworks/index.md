@@ -30,6 +30,9 @@ O Matrix Protocol é composto por **5 frameworks interdependentes** que trabalha
 
 ## 🏛️ Arquitetura dos Frameworks
 
+### Fundamento Epistemológico
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Mapeamento completo de como os princípios MEP se manifestam em cada framework
+
 ### Camada Oracle (Estratégica)
 - **[MEF - Matrix Embedding Framework](./mef)** - Estruturação de conhecimento versionado
 - **[MEF Ontology](./mef-ontology)** - Ontologia específica do MEF
@@ -93,6 +96,9 @@ graph TB
 ### MEF - Matrix Embedding Framework
 - **[MEF - Matrix Embedding Framework](./mef)** - Estruturação de UKIs
 - **[MEF Ontology](./mef-ontology)** - Fundamentos teóricos
+
+### MEP - Matrix Epistemic Principle
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Como MEP se manifesta em cada framework
 
 ### ZOF - Zion Orchestration Framework  
 - **[ZOF - Zion Orchestration Framework](./zof)** - Estados canônicos e workflows

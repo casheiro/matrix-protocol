@@ -157,6 +157,8 @@ O MEP orienta a filosofia; frameworks executam a implementação:
 - **OIF (Operator Intelligence Framework)**: Fornece interface de explicabilidade mandatória
 - **MOC (Matrix Ontology Catalog)**: Define contexto organizacional para autoridade derivada
 
+> 📖 **Análise Detalhada**: Para compreender **como cada princípio MEP se manifesta concretamente** em cada framework, consulte [MEP-Frameworks: Relacionamentos](../frameworks/mep-framework-relationships) - um mapeamento completo com exemplos práticos, casos cross-framework e validação de conformidade.
+
 ---
 
 ## 6. Convenções e Exemplos

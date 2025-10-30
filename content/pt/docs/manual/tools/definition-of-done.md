@@ -222,13 +222,13 @@ dod_metrics:
 
 ```mermaid
 graph LR
-    A[Alteração] --> B{DoD Check}
-    B -->|✅ Pass| C[Aprovada]
-    B -->|❌ Fail| D[Blocked]
+    A[Alteração] --> B{Verificação DoD}
+    B -->|✅ Aprovada| C[Aprovada]
+    B -->|❌ Falhou| D[Bloqueada]
     D --> E[Correção]
     E --> B
-    C --> F[Merged]
-    F --> G[Métricas Updated]
+    C --> F[Mesclada]
+    F --> G[Métricas Atualizadas]
 ```
 
 ## 🚨 Processo de Escalação

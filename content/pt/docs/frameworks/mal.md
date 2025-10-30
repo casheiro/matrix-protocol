@@ -343,3 +343,14 @@ decision_record:
     decided_by: string                # Identificador da versão MAL
     timeout_used_ms: integer          # Tempo de processamento usado
 ```
+
+---
+
+## 📖 Recursos Relacionados
+
+### Matrix Protocol Frameworks
+- **[MEP-Frameworks: Relacionamentos](./mep-framework-relationships)** - Como todos os 5 princípios MEP se manifestam no MAL, especialmente na arbitragem epistemológica
+- **[ZOF - Zion Orchestration Framework](./zof)** - Workflows que invocam MAL durante EvaluateForEnrich
+- **[MEF - Matrix Embedding Framework](./mef)** - UKIs que são arbitradas pelo MAL em conflitos
+- **[MOC - Matrix Ontology Catalog](./moc)** - Políticas organizacionais usadas nas regras de precedência
+- **[OIF - Operator Intelligence Framework](./oif)** - Comunicação de resultados de arbitragem aos usuários

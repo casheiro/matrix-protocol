@@ -88,6 +88,12 @@ graph TB
     style MAL fill:#C0392B,stroke:#A93226,color:#fff
 ```
 
+## 🧠 Epistemological Foundation
+
+Understanding how the **[MEP (Matrix Epistemic Principle)](../mep/)** manifests in each framework is crucial for proper implementation. Each framework embodies specific epistemological principles that guide knowledge treatment and decision-making.
+
+**📋 [Complete MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) are implemented across all frameworks with practical examples and cross-framework interaction patterns.
+
 ## 📖 Detailed Documentation
 
 ### MEF - Matrix Embedding Framework

@@ -164,6 +164,8 @@ Relationships (conflicts_with, supersedes) MUST be persisted in MEF, always citi
 - **MOC (Matrix Ontology Catalog)**: Provides arbitration policies and precedence rule configuration
 - **MEP (Matrix Epistemic Principle)**: Guides epistemic justification generation and ensures derived authority principles
 
+**📋 [MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how MAL implements the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) with practical examples and cross-framework integration patterns.
+
 ---
 
 ## 6. Conventions and Examples

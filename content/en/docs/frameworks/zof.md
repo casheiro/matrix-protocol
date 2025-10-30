@@ -402,6 +402,8 @@ escalation_patterns:
 
 ## 9. Integration with Other Frameworks
 
+**📋 [MEP-Framework Relationships Analysis](./mep-framework-relationships)** - Detailed mapping of how ZOF implements the 5 MEP principles (Semantic Elasticity, Stratified Epistemology, Responsible Promotion, Derived Authority, Necessary Explainability) with practical examples and cross-framework integration patterns.
+
 ### 9.1 MEF Integration
 
 ZOF creates and consults MEF UKIs:

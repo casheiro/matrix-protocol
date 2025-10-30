@@ -37,25 +37,25 @@ O Matrix Ontology Catalog (MOC) funciona como a espinha dorsal da governança or
 
 ```mermaid
 graph TB
-    subgraph "🏛️ MOC Governance Layer"
-        A[Authority Validation Service]
-        B[Precedence Management]
-        C[Policy Matrix Engine]
-        D[Audit & Compliance]
+    subgraph "🏛️ Camada de Governança MOC"
+        A[Serviço de Validação de Autoridade]
+        B[Gestão de Precedências]
+        C[Motor de Matriz de Políticas]
+        D[Auditoria e Compliance]
     end
     
-    subgraph "📊 Organizational Context"
-        E[Scope Hierarchies]
-        F[Authority Models]
-        G[Policy Definitions]
-        H[Compliance Rules]
+    subgraph "📊 Contexto Organizacional"
+        E[Hierarquias de Escopo]
+        F[Modelos de Autoridade]
+        G[Definições de Políticas]
+        H[Regras de Compliance]
     end
     
-    subgraph "⚖️ Decision Systems"
-        I[MAL Arbitration]
-        J[ZOF Enrichment]
-        K[MEF Validation]
-        L[OIF Explanation]
+    subgraph "⚖️ Sistemas de Decisão"
+        I[Arbitragem MAL]
+        J[Enriquecimento ZOF]
+        K[Validação MEF]
+        L[Explicação OIF]
     end
     
     A --> E
@@ -68,13 +68,13 @@ graph TB
     G --> K
     H --> L
     
-    I --> M[📝 Governance Decision]
+    I --> M[📝 Decisão de Governança]
     J --> M
     K --> M
     L --> M
     
-    M --> N[🔒 Audit Trail]
-    N --> O[📊 Compliance Report]
+    M --> N[🔒 Trilha de Auditoria]
+    N --> O[📊 Relatório de Compliance]
     
     %% Estilização MOC Governance - Hierarquia clara
     style A fill:#8E44AD,stroke:#9B59B6,color:#fff

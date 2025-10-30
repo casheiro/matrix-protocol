@@ -97,8 +97,8 @@ graph TB
     User["👤 Solicitação do Usuário<br/>Implementação de Autenticação"]
     
     %% Camada OIF - Arquétipos de Inteligência
-    OIF_KA["🤖 Knowledge Agent<br/>OIF"]
-    OIF_WA["🔄 Workflow Agent<br/>OIF"]
+    OIF_KA["🤖 Agente de Conhecimento<br/>OIF"]
+    OIF_WA["🔄 Agente de Workflow<br/>OIF"]
     OIF_EXP["💡 Interface de Explicabilidade<br/>OIF"]
     
     %% Camada ZOF - Orquestração de Workflow  
@@ -106,7 +106,7 @@ graph TB
     ZOF_UND["🔍 Estado Understand<br/>ZOF"]
     ZOF_DEC["⚖️ Estado Decide<br/>ZOF"]
     ZOF_ACT["⚡ Estado Act<br/>ZOF"]
-    ZOF_EVL["🎯 EvaluateForEnrich<br/>ZOF"]
+    ZOF_EVL["🎯 AvaliarParaEnriquecer<br/>ZOF"]
     ZOF_ENR["📚 Estado Enrich<br/>ZOF"]
     
     %% Camada MEF - Estrutura de Conhecimento
@@ -203,16 +203,16 @@ graph TB
 
 | **Do Framework** | **Para Framework**        | **Ponto de Integração**               | **Propósito**                                                          |
 |------------------|---------------------------|---------------------------------------|------------------------------------------------------------------------|
-| **OIF → ZOF**    | Workflow Agent            | Orquestração de Estados Canônicos     | Executar fluxos ZOF via arquétipos de inteligência                     |
-| **ZOF → OIF**    | Consulta ao Oráculo       | Query do Knowledge Agent              | Consultar conhecimento existente durante estado Understand             |
+| **OIF → ZOF**    | Agente de Workflow            | Orquestração de Estados Canônicos     | Executar fluxos ZOF via arquétipos de inteligência                     |
+| **ZOF → OIF**    | Consulta ao Oráculo       | Consulta do Agente de Conhecimento              | Consultar conhecimento existente durante estado Understand             |
 | **ZOF → MEF**    | Enriquecimento            | Criação de UKI                        | Criar conhecimento estruturado durante estado Enrich                   |
-| **ZOF → MOC**    | EvaluateForEnrich         | Consulta de Critérios                 | Aplicar critérios de avaliação organizacionais                         |
+| **ZOF → MOC**    | AvaliarParaEnriquecer         | Consulta de Critérios                 | Aplicar critérios de avaliação organizacionais                         |
 | **OIF → MOC**    | Verificação de Autoridade | Validação Hierárquica                 | Validar autoridade do usuário para operações                           |
 | **MEF → MOC**    | Validação de Campo        | Referências *_ref                     | Validar todas as referências de campo hierárquicas                     |
 | **OIF → MEP**    | Explicabilidade           | Autoridade Derivada                   | Garantir respostas contextuais, não absolutas                          |
 | **ZOF → MEP**    | Decisão de Enriquecimento | Justificativa Epistemológica          | Aplicar princípios MEP na avaliação de enriquecimento                  |
 | **MEF → MEP**    | Promoção de Conhecimento  | Promoção Responsável                  | Documentar justificativa epistemológica para evolução de UKI           |
-| **ZOF → MAL**    | Detecção de Conflito      | Invocação de Arbitragem               | Invocar MAL quando EvaluateForEnrich detecta conflitos H1/H2/H3        |
+| **ZOF → MAL**    | Detecção de Conflito      | Invocação de Arbitragem               | Invocar MAL quando AvaliarParaEnriquecer detecta conflitos H1/H2/H3        |
 | **MAL → MEF**    | Persistência de Decisão   | Armazenamento de Registro de Decisão  | Persistir decisões de arbitragem como registros de auditoria imutáveis |
 | **MAL → OIF**    | Comunicação de Resultado  | Explicação de Arbitragem              | Explicar resultados de arbitragem usando templates estruturados        |
 | **MOC → MAL**    | Configuração de Política  | Fornecimento de Regras de Precedência | Fornecer políticas de arbitragem e hierarquias de autoridade           |
@@ -323,7 +323,7 @@ oif_explanation:
 # Conflito de Implementação JWT Concorrente
 user_story: "Dois times implementando autenticação JWT simultaneamente"
 
-# 1. Detecção de Conflito ZOF durante EvaluateForEnrich
+# 1. Detecção de Conflito ZOF durante AvaliarParaEnriquecer
 zof_conflict_detection:
   conflict_type: "H2_concurrent_enrichment"
   candidates:
@@ -423,5 +423,5 @@ zof_workflow_modification:
     understand: "Consultar requisitos de autoridade MOC"
     decide: "Rotear para caminho de escalação conforme configuração MOC"
     act: "Gerar solicitação de escalação com contexto"
-    # EvaluateForEnrich pulado - sem enriquecimento para roteamento de escalação
+    # AvaliarParaEnriquecer pulado - sem enriquecimento para roteamento de escalação
 ```
