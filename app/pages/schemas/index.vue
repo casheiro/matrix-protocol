@@ -74,23 +74,44 @@
         
         <!-- Active filters -->
         <div v-if="activeFilters.length > 0" class="mt-4 flex flex-wrap gap-2">
-          <UBadge
+          <div
             v-for="filter in activeFilters"
             :key="filter.key"
-            :color="filter.color"
-            variant="soft"
-            size="sm"
             class="flex items-center gap-1"
           >
-            {{ filter.label }}
-            <UButton
-              variant="ghost"
-              size="xs"
-              icon="i-heroicons-x-mark"
-              @click="removeFilter(filter.key)"
-              class="ml-1 -mr-1"
-            />
-          </UBadge>
+            <MatrixBadge
+              v-if="filter.key === 'framework'"
+              :framework="selectedFramework"
+              variant="soft"
+              size="sm"
+              class="flex items-center gap-1"
+            >
+              {{ filter.label }}
+              <UButton
+                variant="ghost"
+                size="xs"
+                icon="i-heroicons-x-mark"
+                @click="removeFilter(filter.key)"
+                class="ml-1 -mr-1"
+              />
+            </MatrixBadge>
+            <UBadge
+              v-else
+              color="primary"
+              variant="soft"
+              size="sm"
+              class="flex items-center gap-1"
+            >
+              {{ filter.label }}
+              <UButton
+                variant="ghost"
+                size="xs"
+                icon="i-heroicons-x-mark"
+                @click="removeFilter(filter.key)"
+                class="ml-1 -mr-1"
+              />
+            </UBadge>
+          </div>
         </div>
       </div>
 
@@ -102,19 +123,19 @@
           class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-shadow duration-200"
         >
           <!-- Schema Header -->
-          <div class="flex items-start justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <div class="p-2 rounded-lg" :class="getFrameworkClasses(schema.framework)">
-                <UIcon :name="getFrameworkIcon(schema.framework)" class="w-5 h-5" />
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-stretch gap-3">
+              <div class="flex items-center border justify-center p-3 rounded-lg self-stretch aspect-square" :class="getFrameworkClasses(schema.framework)">
+                <UIcon :name="getFrameworkIcon(schema.framework)" class="w-7 h-7" />
               </div>
               <div>
                 <h3 class="font-semibold text-gray-900 dark:text-white">
                   {{ schema.title }}
                 </h3>
-                <div class="flex items-center gap-2 mt-1">
-                  <UBadge :color="getFrameworkColor(schema.framework)" size="sm" variant="soft">
+                <div class="flex items-baseline gap-2 mt-1">
+                  <MatrixBadge :framework="schema.framework" size="sm" variant="soft">
                     {{ schema.framework.toUpperCase() }}
-                  </UBadge>
+                  </MatrixBadge>
                   <UBadge color="primary" size="sm" variant="outline">
                     v{{ schema.version }}
                   </UBadge>
@@ -216,6 +237,7 @@
 
 <script setup lang="ts">
 import type { SchemaMetadata } from '~/composables/useMatrixSchemas'
+import MatrixBadge from '~/components/ui/MatrixBadge.vue'
 
 const { t } = useI18n()
 const { getAllSchemas, getAvailableFrameworks } = useMatrixSchemas()
@@ -285,7 +307,7 @@ const activeFilters = computed(() => {
     filters.push({
       key: 'framework',
       label: `${t('schemas.filter.framework')}: ${selectedFramework.value.toUpperCase()}`,
-      color: getFrameworkColor(selectedFramework.value)
+      color: 'blue' // Cor fixa para filtros
     })
   }
 
@@ -306,23 +328,14 @@ const removeFilter = (key: string) => {
   }
 }
 
-const getFrameworkColor = (framework: string): "primary" | "secondary" | "success" | "warning" | "error" => {
-  const colors: Record<string, "primary" | "secondary" | "success" | "warning" | "error"> = {
-    mef: 'success',   // Verde
-    zof: 'warning',   // Laranja  
-    oif: 'primary',   // Azul
-    moc: 'secondary', // Roxo
-    mal: 'error'      // Vermelho
-  }
-  return colors[framework] || 'primary'
-}
+// Função removida - agora usando MatrixBadge com cores customizadas
 
 const getFrameworkIcon = (framework: string): string => {
   const icons: Record<string, string> = {
     mef: 'i-heroicons-cube',
     zof: 'i-heroicons-arrow-path',
     oif: 'i-heroicons-user-group',
-    moc: 'i-heroicons-building-office',
+    moc: 'i-heroicons-rectangle-stack', // Mais simétrico que building-office
     mal: 'i-heroicons-scale'
   }
   return icons[framework] || 'i-heroicons-document'
@@ -341,7 +354,11 @@ const getFrameworkClasses = (framework: string): string => {
 
 const getSchemaViewerUrl = (schema: SchemaMetadata): string => {
   const { locale } = useI18n()
-  return `/${locale.value}/docs/viewer?file=${encodeURIComponent(schema.localPath.replace('{locale}', locale.value))}`
+  // Remove o prefixo /content/{locale}/ para compatibilidade com a API
+  const cleanPath = schema.localPath
+    .replace('{locale}', locale.value)
+    .replace(`/content/${locale.value}/`, '/')
+  return `/${locale.value}/docs/viewer?file=${encodeURIComponent(cleanPath)}`
 }
 
 const copyUrl = async (url: string) => {

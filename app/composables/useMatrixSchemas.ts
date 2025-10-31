@@ -246,9 +246,9 @@ export const useMatrixSchemas = () => {
       }
       
       return {
-        framework: pathParts[1],
-        type: pathParts[2], 
-        version: pathParts[3]
+        framework: pathParts[1] || '',
+        type: pathParts[2] || '',
+        version: pathParts[3] || ''
       }
     } catch {
       return null
