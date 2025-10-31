@@ -278,6 +278,43 @@
       "download": "Download Estrutura Unificada"
     }
   },
+  "schemas": {
+    "title": "Índice de Schemas",
+    "description": "Catálogo completo de schemas YAML do Matrix Protocol organizados por framework",
+    "seo": {
+      "title": "Schemas - Matrix Protocol",
+      "description": "Catálogo de schemas YAML para todos os frameworks do Matrix Protocol"
+    },
+    "stats": {
+      "totalSchemas": "Schemas",
+      "frameworks": "Frameworks"
+    },
+    "search": {
+      "placeholder": "Buscar schemas por nome, descrição ou tipo..."
+    },
+    "filter": {
+      "framework": "Framework",
+      "allFrameworks": "Todos os Frameworks",
+      "search": "Busca",
+      "clear": "Limpar"
+    },
+    "details": {
+      "type": "Tipo",
+      "filename": "Arquivo",
+      "canonicalUrl": "URL Canônica"
+    },
+    "actions": {
+      "view": "Visualizar",
+      "copyUrl": "Copiar URL",
+      "openUrl": "Abrir URL",
+      "download": "Baixar"
+    },
+    "empty": {
+      "title": "Nenhum schema encontrado",
+      "description": "Não há schemas que correspondam aos filtros aplicados.",
+      "clearFilters": "Limpar Filtros"
+    }
+  },
   "frameworks": {
     "title": "Frameworks",
     "mef": {
@@ -942,7 +979,10 @@
       "download": "Baixar",
       "copy": "Copiar",
       "copyLink": "Copiar link",
-      "search": "Buscar"
+      "search": "Buscar",
+      "openSchema": "URL do Schema",
+      "openInNewTab": "Abrir em nova aba",
+      "copySchemaId": "Copiar ID do Schema"
     },
     "sections": {
       "content": "Conteúdo",
@@ -955,12 +995,13 @@
     },
     "fields": {
       "schema": "Esquema",
+      "schemaId": "ID do Schema",
       "ontologyReference": "Referência da Ontologia",
       "id": "Identificador",
       "scopeRef": "Escopo",
       "scopeMode": "Modo do Escopo",
       "domainRef": "Domínio",
-      "domainOfInfluence": "Domínio de Influência",
+      "domainOfInfluência": "Domínio de Influência",
       "createdDate": "Data de Criação",
       "lastModified": "Última Modificação",
       "changeSummary": "Resumo das Mudanças",

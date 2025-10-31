@@ -2,12 +2,11 @@
 # Matrix Embedding Framework - Decision Records para integração MAL
 # Especificação canônica normativa para persistência de decisões de arbitragem
 
-$schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://matrix-protocol.org/schemas/mef/decision-record/1.0.0"
-version: "1.0.0"
-title: "MEF Decision Record Schema"
-description: "Schema canônico para persistência de Decision Records MAL no MEF"
-
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: http://localhost:3000/schemas/mef/decision-record/1.0.0
+version: 1.0.0
+title: MEF Decision Record Schema
+description: Schema canônico para persistência de Decision Records MAL no MEF
 type: object
 required:
   - schema
@@ -18,234 +17,260 @@ required:
   - epistemic_rationale
   - audit
   - mef_metadata
-
 properties:
-  # === METADADOS OBRIGATÓRIOS ===
   schema:
     type: string
-    description: "Versão do schema MEF Decision Record utilizado"
-    pattern: "^[0-9]+\\.[0-9]+$"
-    examples: ["1.0", "1.1"]
-
-  # === IDENTIFICAÇÃO DA DECISÃO ===
+    description: Versão do schema MEF Decision Record utilizado
+    pattern: ^[0-9]+\.[0-9]+$
+    examples:
+      - "1.0"
+      - "1.1"
   decision_id:
     type: string
-    description: "Identificador único da decisão MAL"
-    pattern: "^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$"
-    examples: 
-      - "mal-dec-20250826-h1-001"
-      - "mal-dec-20250827-h2-042"
-
+    description: Identificador único da decisão MAL
+    pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
+    examples:
+      - mal-dec-20250826-h1-001
+      - mal-dec-20250827-h2-042
   event_ref:
     type: string
-    description: "Referência ao evento de arbitragem originário"
-    pattern: "^mal-evt-[0-9]{8}-[0-9]+$"
-    examples: 
-      - "mal-evt-20250826-001"
-      - "mal-evt-20250827-042"
-
-  # === RESULTADO DA DECISÃO ===
+    description: Referência ao evento de arbitragem originário
+    pattern: ^mal-evt-[0-9]{8}-[0-9]+$
+    examples:
+      - mal-evt-20250826-001
+      - mal-evt-20250827-042
   outcome:
     type: string
-    description: "Resultado da arbitragem MAL"
-    enum: ["winner", "coexist", "reject_all", "defer"]
-    examples: ["winner", "coexist"]
-
+    description: Resultado da arbitragem MAL
+    enum:
+      - winner
+      - coexist
+      - reject_all
+      - defer
+    examples:
+      - winner
+      - coexist
   winner:
     type: string
-    description: "UKI escolhido como autoritativo (obrigatório se outcome=winner)"
-    pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: ["uki:squad-x:rule:retencao-dados-30d"]
-
+    description: UKI escolhido como autoritativo (obrigatório se outcome=winner)
+    pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - uki:squad-x:rule:retencao-dados-30d
   losers:
     type: array
-    description: "UKIs derrotados na arbitragem"
+    description: UKIs derrotados na arbitragem
     items:
       type: string
-      pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: [["uki:squad-x:rule:retencao-dados-7d"]]
-
-  # === REGRAS DE PRECEDÊNCIA ===
+      pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - - uki:squad-x:rule:retencao-dados-7d
   precedence_applied:
     type: array
-    description: "Regras de precedência aplicadas na decisão"
+    description: Regras de precedência aplicadas na decisão
     minItems: 1
     items:
       type: object
-      required: ["rule", "description", "impact"]
+      required:
+        - rule
+        - description
+        - impact
       properties:
         rule:
           type: string
-          description: "Identificador da regra de precedência"
-          pattern: "^P[0-9]+_[a-z_]+$"
-          examples: ["P1_authority_weight", "P3_maturity_level"]
+          description: Identificador da regra de precedência
+          pattern: ^P[0-9]+_[a-z_]+$
+          examples:
+            - P1_authority_weight
+            - P3_maturity_level
         description:
           type: string
-          description: "Explicação legível da regra"
+          description: Explicação legível da regra
           minLength: 20
-          examples: ["validated > endorsed", "Maior peso de autoridade"]
+          examples:
+            - validated > endorsed
+            - Maior peso de autoridade
         impact:
           type: string
-          description: "Como esta regra afetou a decisão"
+          description: Como esta regra afetou a decisão
           minLength: 20
-          examples: ["Determinou vencedor pela maturidade superior"]
+          examples:
+            - Determinou vencedor pela maturidade superior
         weight:
           type: number
-          description: "Peso numérico da regra (opcional)"
+          description: Peso numérico da regra (opcional)
           minimum: 0
           maximum: 1
       additionalProperties: false
-
-  # === JUSTIFICATIVA EPISTÊMICA ===
   epistemic_rationale:
     type: object
-    description: "Explicação epistêmica alinhada aos princípios MEP"
-    required: ["summary", "reasoning", "references"]
+    description: Explicação epistêmica alinhada aos princípios MEP
+    required:
+      - summary
+      - reasoning
+      - references
     properties:
       summary:
         type: string
-        description: "Justificativa breve da decisão"
+        description: Justificativa breve da decisão
         minLength: 50
         maxLength: 500
-        examples: 
-          - "Maturidade validada e evidência regulatória mais forte determinaram a escolha"
-
+        examples:
+          - Maturidade validada e evidência regulatória mais forte determinaram a escolha
       reasoning:
         type: string
-        description: "Explicação detalhada do raciocínio epistêmico"
+        description: Explicação detalhada do raciocínio epistêmico
         minLength: 100
         examples:
-          - "Enquanto ambos UKIs operam em escopo equivalente, a regra de retenção de 30 dias..."
-
+          - Enquanto ambos UKIs operam em escopo equivalente, a regra de retenção de 30 dias...
       references:
         type: object
-        description: "Referências utilizadas na decisão"
-        required: ["moc_nodes", "mef_evidence"]
+        description: Referências utilizadas na decisão
+        required:
+          - moc_nodes
+          - mef_evidence
         properties:
           moc_nodes:
             type: array
-            description: "Nós MOC referenciados"
+            description: Nós MOC referenciados
             items:
               type: string
-              pattern: "^[a-z0-9.-]+$"
-            examples: [["hierarchies.scope.squad-x", "hierarchies.domain.security"]]
-          
+              pattern: ^[a-z0-9.-]+$
+            examples:
+              - - hierarchies.scope.squad-x
+                - hierarchies.domain.security
           mef_evidence:
             type: array
-            description: "Evidências MEF referenciadas"
+            description: Evidências MEF referenciadas
             items:
               type: string
-              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-            examples: [["uki:org:policy:lgpd-compliance"]]
-          
+              pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+            examples:
+              - - uki:org:policy:lgpd-compliance
           external_references:
             type: array
-            description: "Referências externas (documentos, regulamentações)"
+            description: Referências externas (documentos, regulamentações)
             items:
               type: string
-            examples: [["doc:logs-auditoria-2024", "reg:lgpd-art-6"]]
+            examples:
+              - - doc:logs-auditoria-2024
+                - reg:lgpd-art-6
         additionalProperties: false
     additionalProperties: false
-
-  # === INFORMAÇÕES DE AUDITORIA ===
   audit:
     type: object
-    description: "Informações de auditoria obrigatórias"
-    required: ["decided_at", "decided_by", "timeout_used_ms"]
+    description: Informações de auditoria obrigatórias
+    required:
+      - decided_at
+      - decided_by
+      - timeout_used_ms
     properties:
       decided_at:
         type: string
         format: date-time
-        description: "Timestamp preciso da decisão"
-        examples: ["2025-08-26T14:30:25.123Z"]
-
+        description: Timestamp preciso da decisão
+        examples:
+          - 2025-08-26T14:30:25.123Z
       decided_by:
         type: string
-        description: "Identificador da versão MAL que tomou a decisão"
-        pattern: "^mal-v[0-9]+\\.[0-9]+\\.[0-9]+$"
-        examples: ["mal-v1.0.0", "mal-v1.2.3"]
-
+        description: Identificador da versão MAL que tomou a decisão
+        pattern: ^mal-v[0-9]+\.[0-9]+\.[0-9]+$
+        examples:
+          - mal-v1.0.0
+          - mal-v1.2.3
       timeout_used_ms:
         type: integer
-        description: "Tempo de processamento usado em milissegundos"
+        description: Tempo de processamento usado em milissegundos
         minimum: 0
         maximum: 600000
-        examples: [1250, 5000]
-
+        examples:
+          - 1250
+          - 5000
       arbitration_timeout_ms:
         type: integer
-        description: "Timeout configurado para arbitragem"
+        description: Timeout configurado para arbitragem
         minimum: 1000
         maximum: 600000
-        examples: [2000, 10000]
+        examples:
+          - 2000
+          - 10000
     additionalProperties: false
-
-  # === METADADOS MEF ===
   mef_metadata:
     type: object
-    description: "Metadados específicos para persistência MEF"
-    required: ["persistence_id", "persistence_date", "immutable"]
+    description: Metadados específicos para persistência MEF
+    required:
+      - persistence_id
+      - persistence_date
+      - immutable
     properties:
       persistence_id:
         type: string
-        description: "Identificador único de persistência no MEF"
-        pattern: "^mef-dr-[0-9]{8}-[a-z0-9]{8}$"
-        examples: ["mef-dr-20250826-a1b2c3d4"]
-
+        description: Identificador único de persistência no MEF
+        pattern: ^mef-dr-[0-9]{8}-[a-z0-9]{8}$
+        examples:
+          - mef-dr-20250826-a1b2c3d4
       persistence_date:
         type: string
         format: date-time
-        description: "Timestamp de persistência no MEF"
-        examples: ["2025-08-26T14:30:26.789Z"]
-
+        description: Timestamp de persistência no MEF
+        examples:
+          - 2025-08-26T14:30:26.789Z
       immutable:
         type: boolean
-        description: "Flag indicando imutabilidade do registro"
+        description: Flag indicando imutabilidade do registro
         const: true
-
       checksum:
         type: string
-        description: "Checksum para verificação de integridade"
-        pattern: "^[a-f0-9]{64}$"
-        examples: ["a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456"]
-
+        description: Checksum para verificação de integridade
+        pattern: ^[a-f0-9]{64}$
+        examples:
+          - a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
       retention_policy:
         type: string
-        description: "Política de retenção do registro"
-        enum: ["permanent", "regulatory", "operational"]
-        default: "permanent"
+        description: Política de retenção do registro
+        enum:
+          - permanent
+          - regulatory
+          - operational
+        default: permanent
     additionalProperties: false
-
-  # === DETALHES DO CONFLITO ===
   conflict_details:
     type: object
-    description: "Detalhes específicos do conflito arbitrado"
-    required: ["event_type", "candidates"]
+    description: Detalhes específicos do conflito arbitrado
+    required:
+      - event_type
+      - candidates
     properties:
       event_type:
         type: string
-        description: "Tipo de conflito arbitrado"
-        enum: ["H1", "H2", "H3"]
-        examples: ["H1", "H2"]
-
+        description: Tipo de conflito arbitrado
+        enum:
+          - H1
+          - H2
+          - H3
+        examples:
+          - H1
+          - H2
       conflict_description:
         type: string
-        description: "Descrição textual do conflito"
+        description: Descrição textual do conflito
         minLength: 50
-        examples: 
-          - "Duas regras de segurança de escopo equivalente em conflito"
-
+        examples:
+          - Duas regras de segurança de escopo equivalente em conflito
       candidates:
         type: array
-        description: "UKIs candidatas que foram arbitradas"
+        description: UKIs candidatas que foram arbitradas
         minItems: 2
         items:
           type: object
-          required: ["uki_ref", "scope_ref", "domain_ref", "maturity_level"]
+          required:
+            - uki_ref
+            - scope_ref
+            - domain_ref
+            - maturity_level
           properties:
             uki_ref:
               type: string
-              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+              pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
             scope_ref:
               type: string
             domain_ref:
@@ -254,81 +279,81 @@ properties:
               type: string
             version:
               type: string
-              pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+              pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
             evidence_refs:
               type: array
               items:
                 type: string
           additionalProperties: false
     additionalProperties: false
-
-  # === AÇÕES DE FOLLOW-UP ===
   actions:
     type: array
-    description: "Ações a serem executadas baseadas na decisão"
+    description: Ações a serem executadas baseadas na decisão
     items:
       type: string
       pattern: "^(allow_enrich|defer_enrich|gate_enrich|deprecate|partition_scope):"
-      examples: 
-        - "allow_enrich:zof-auth-jwt-implementation-002"
-        - "deprecate:uki:squad-x:rule:retencao-dados-7d"
-
-  # === CONTEXTO ORGANIZACIONAL ===
+      examples:
+        - allow_enrich:zof-auth-jwt-implementation-002
+        - deprecate:uki:squad-x:rule:retencao-dados-7d
   organizational_context:
     type: object
-    description: "Contexto organizacional da decisão"
+    description: Contexto organizacional da decisão
     properties:
       user_authority:
         type: string
-        description: "Nível de autoridade do usuário que solicitou"
-        examples: ["squad_lead", "tech_lead"]
-
+        description: Nível de autoridade do usuário que solicitou
+        examples:
+          - squad_lead
+          - tech_lead
       user_scopes:
         type: array
-        description: "Escopos acessíveis ao usuário"
+        description: Escopos acessíveis ao usuário
         items:
           type: string
-        examples: [["squad-x", "tribe-alpha"]]
-
+        examples:
+          - - squad-x
+            - tribe-alpha
       operation:
         type: string
-        description: "Operação que desencadeou a arbitragem"
-        enum: ["read", "enrich", "promote"]
-        examples: ["enrich"]
-
+        description: Operação que desencadeou a arbitragem
+        enum:
+          - read
+          - enrich
+          - promote
+        examples:
+          - enrich
       policy_ref:
         type: string
-        description: "Política de arbitragem MOC utilizada"
-        pattern: "^moc:arbitration:[a-z0-9-_]+$"
-        examples: ["moc:arbitration:security_priority"]
+        description: Política de arbitragem MOC utilizada
+        pattern: ^moc:arbitration:[a-z0-9-_]+$
+        examples:
+          - moc:arbitration:security_priority
     additionalProperties: false
-
 additionalProperties: false
-
-# === REGRAS DE VALIDAÇÃO CONDICIONAIS ===
 allOf:
   - if:
       properties:
         outcome:
-          const: "winner"
+          const: winner
     then:
-      required: ["winner"]
-      
+      required:
+        - winner
   - if:
       properties:
         outcome:
-          enum: ["coexist", "reject_all"]
+          enum:
+            - coexist
+            - reject_all
     then:
       properties:
         actions:
           minItems: 1
-
   - if:
       properties:
         conflict_details:
           properties:
             event_type:
-              const: "H1"
+              const: H1
     then:
       properties:
         conflict_details:
@@ -336,4 +361,7 @@ allOf:
             candidates:
               minItems: 2
               items:
-                required: ["uki_ref", "scope_ref", "domain_ref"]
+                required:
+                  - uki_ref
+                  - scope_ref
+                  - domain_ref

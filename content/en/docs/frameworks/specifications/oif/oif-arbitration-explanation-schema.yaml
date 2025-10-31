@@ -2,12 +2,11 @@
 # Operator Intelligence Framework - Templates de Explicação de Arbitragem
 # Especificação canônica normativa para explicação de decisões MAL
 
-$schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://matrix-protocol.org/schemas/oif/arbitration-explanation/1.0.0"
-version: "1.0.0"
-title: "OIF Arbitration Explanation Schema"
-description: "Schema canônico para templates de explicação de arbitragem MAL no OIF"
-
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: http://localhost:3000/schemas/oif/arbitration-explanation/1.0.0
+version: 1.0.0
+title: OIF Arbitration Explanation Schema
+description: Schema canônico para templates de explicação de arbitragem MAL no OIF
 type: object
 required:
   - schema
@@ -21,460 +20,489 @@ required:
   - moc_references
   - next_steps
   - metadata
-
 properties:
-  # === METADADOS OBRIGATÓRIOS ===
   schema:
     type: string
-    description: "Versão do schema OIF Arbitration Explanation utilizado"
-    pattern: "^[0-9]+\\.[0-9]+$"
-    examples: ["1.0", "1.1"]
-
+    description: Versão do schema OIF Arbitration Explanation utilizado
+    pattern: ^[0-9]+\.[0-9]+$
+    examples:
+      - "1.0"
+      - "1.1"
   explanation_id:
     type: string
-    description: "Identificador único da explicação"
-    pattern: "^oif-exp-[0-9]{8}-[a-z0-9]+-[0-9]+$"
-    examples: ["oif-exp-20250826-h1-001", "oif-exp-20250827-h2-042"]
-
-  # === REFERÊNCIA À DECISÃO MAL ===
+    description: Identificador único da explicação
+    pattern: ^oif-exp-[0-9]{8}-[a-z0-9]+-[0-9]+$
+    examples:
+      - oif-exp-20250826-h1-001
+      - oif-exp-20250827-h2-042
   decision_id:
     type: string
-    description: "Identificador da decisão MAL sendo explicada"
-    pattern: "^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$"
-    examples: ["mal-dec-20250826-h1-001"]
-
+    description: Identificador da decisão MAL sendo explicada
+    pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
+    examples:
+      - mal-dec-20250826-h1-001
   event_type:
     type: string
-    description: "Tipo de conflito arbitrado"
-    enum: ["H1", "H2", "H3"]
-    examples: ["H1", "H2"]
-
+    description: Tipo de conflito arbitrado
+    enum:
+      - H1
+      - H2
+      - H3
+    examples:
+      - H1
+      - H2
   outcome:
     type: string
-    description: "Resultado da arbitragem MAL"
-    enum: ["winner", "coexist", "reject_all", "defer"]
-    examples: ["winner", "coexist"]
-
-  # === EXPLICAÇÃO PRINCIPAL ===
+    description: Resultado da arbitragem MAL
+    enum:
+      - winner
+      - coexist
+      - reject_all
+      - defer
+    examples:
+      - winner
+      - coexist
   summary:
     type: string
-    description: "Explicação amigável ao usuário do resultado"
+    description: Explicação amigável ao usuário do resultado
     minLength: 50
     maxLength: 500
-    examples: 
-      - "A regra de retenção de dados de 30 dias foi escolhida como vencedora devido à maior maturidade epistemológica e evidência regulatória mais forte"
-
+    examples:
+      - A regra de retenção de dados de 30 dias foi escolhida como vencedora devido à maior maturidade epistemológica e
+        evidência regulatória mais forte
   reason_code:
     type: string
-    description: "Identificador de razão estruturado"
-    pattern: "^[A-Z0-9_]+$"
-    examples: 
-      - "MATURITY_AND_EVIDENCE_PRECEDENCE"
-      - "AUTHORITY_HIERARCHY_DECISIVE"
-      - "TEMPORAL_PRECEDENCE_APPLIED"
-
-  # === DETALHES CONDICIONAIS ===
+    description: Identificador de razão estruturado
+    pattern: ^[A-Z0-9_]+$
+    examples:
+      - MATURITY_AND_EVIDENCE_PRECEDENCE
+      - AUTHORITY_HIERARCHY_DECISIVE
+      - TEMPORAL_PRECEDENCE_APPLIED
   winner:
     type: string
-    description: "UKI escolhida como autoritativa (obrigatório se outcome=winner)"
-    pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: ["uki:squad-x:rule:retencao-dados-30d"]
-
+    description: UKI escolhida como autoritativa (obrigatório se outcome=winner)
+    pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - uki:squad-x:rule:retencao-dados-30d
   losers:
     type: array
-    description: "UKIs derrotadas na arbitragem (obrigatório se outcome=winner)"
+    description: UKIs derrotadas na arbitragem (obrigatório se outcome=winner)
     items:
       type: string
-      pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: [["uki:squad-x:rule:retencao-dados-7d"]]
-
+      pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - - uki:squad-x:rule:retencao-dados-7d
   coexistence_details:
     type: object
-    description: "Detalhes de coexistência (obrigatório se outcome=coexist)"
+    description: Detalhes de coexistência (obrigatório se outcome=coexist)
     properties:
       partition_strategy:
         type: string
-        description: "Estratégia de particionamento aplicada"
-        enum: ["scope_partition", "domain_partition", "temporal_partition"]
-        examples: ["scope_partition"]
-
+        description: Estratégia de particionamento aplicada
+        enum:
+          - scope_partition
+          - domain_partition
+          - temporal_partition
+        examples:
+          - scope_partition
       partition_assignments:
         type: object
-        description: "Atribuições de partição"
+        description: Atribuições de partição
         patternProperties:
-          "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$":
+          ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$:
             type: object
-            required: ["assigned_scope", "reason"]
+            required:
+              - assigned_scope
+              - reason
             properties:
               assigned_scope:
                 type: string
-                description: "Escopo atribuído à UKI"
+                description: Escopo atribuído à UKI
               reason:
                 type: string
-                description: "Razão da atribuição"
+                description: Razão da atribuição
             additionalProperties: false
         additionalProperties: false
-
       coexistence_rationale:
         type: string
-        description: "Justificativa para coexistência"
+        description: Justificativa para coexistência
         minLength: 50
     additionalProperties: false
-
   rejection_details:
     type: object
-    description: "Detalhes de rejeição (obrigatório se outcome=reject_all)"
+    description: Detalhes de rejeição (obrigatório se outcome=reject_all)
     properties:
       rejection_reason:
         type: string
-        description: "Razão para rejeição de todas as UKIs"
-        examples: ["Nenhuma UKI atende aos critérios mínimos de qualidade"]
-
+        description: Razão para rejeição de todas as UKIs
+        examples:
+          - Nenhuma UKI atende aos critérios mínimos de qualidade
       alternative_actions:
         type: array
-        description: "Ações alternativas recomendadas"
+        description: Ações alternativas recomendadas
         items:
           type: string
-        examples: [["Criar nova UKI com evidências adequadas", "Buscar aprovação de autoridade superior"]]
+        examples:
+          - - Criar nova UKI com evidências adequadas
+            - Buscar aprovação de autoridade superior
     additionalProperties: false
-
   deferral_details:
     type: object
-    description: "Detalhes de adiamento (obrigatório se outcome=defer)"
+    description: Detalhes de adiamento (obrigatório se outcome=defer)
     properties:
       deferral_reason:
         type: string
-        description: "Razão para adiamento da decisão"
-        examples: ["Requer sobrescrita humana devido à complexidade do conflito"]
-
+        description: Razão para adiamento da decisão
+        examples:
+          - Requer sobrescrita humana devido à complexidade do conflito
       required_intervention:
         type: string
-        description: "Tipo de intervenção necessária"
-        enum: ["human_oversight", "additional_evidence", "policy_clarification", "authority_escalation"]
-
+        description: Tipo de intervenção necessária
+        enum:
+          - human_oversight
+          - additional_evidence
+          - policy_clarification
+          - authority_escalation
       intervention_contacts:
         type: array
-        description: "Contatos para intervenção"
+        description: Contatos para intervenção
         items:
           type: string
-        examples: [["governance-board", "technical-lead", "compliance-officer"]]
+        examples:
+          - - governance-board
+            - technical-lead
+            - compliance-officer
     additionalProperties: false
-
-  # === EXPLICAÇÃO DE PRECEDÊNCIA ===
   precedence_explanation:
     type: array
-    description: "Regras de precedência aplicadas na decisão"
+    description: Regras de precedência aplicadas na decisão
     minItems: 1
     items:
       type: object
-      required: ["rule", "description", "impact"]
+      required:
+        - rule
+        - description
+        - impact
       properties:
         rule:
           type: string
-          description: "Identificador da regra de precedência"
-          pattern: "^P[0-9]+_[a-z_]+$"
-          examples: ["P1_authority_weight", "P3_maturity_level"]
-
+          description: Identificador da regra de precedência
+          pattern: ^P[0-9]+_[a-z_]+$
+          examples:
+            - P1_authority_weight
+            - P3_maturity_level
         description:
           type: string
-          description: "Explicação legível da regra"
+          description: Explicação legível da regra
           minLength: 20
-          examples: 
-            - "Maior peso de autoridade hierárquica vence"
-            - "Conhecimento validado tem precedência sobre experimental"
-
+          examples:
+            - Maior peso de autoridade hierárquica vence
+            - Conhecimento validado tem precedência sobre experimental
         impact:
           type: string
-          description: "Como esta regra afetou a decisão específica"
+          description: Como esta regra afetou a decisão específica
           minLength: 30
-          examples: 
-            - "Determinou que squad-lead tem maior autoridade que developer neste contexto"
-
+          examples:
+            - Determinou que squad-lead tem maior autoridade que developer neste contexto
         weight_applied:
           type: number
-          description: "Peso numérico aplicado à regra (0.0 a 1.0)"
+          description: Peso numérico aplicado à regra (0.0 a 1.0)
           minimum: 0
           maximum: 1
-          examples: [0.8, 0.6]
-
+          examples:
+            - 0.8
+            - 0.6
         decisive_factor:
           type: boolean
-          description: "Esta regra foi o fator decisivo"
-          examples: [true, false]
+          description: Esta regra foi o fator decisivo
+          examples:
+            - true
+            - false
       additionalProperties: false
-
-  # === REFERÊNCIAS MOC ===
   moc_references:
     type: array
-    description: "Nós de autoridade MOC referenciados na decisão"
+    description: Nós de autoridade MOC referenciados na decisão
     minItems: 1
     items:
       type: object
-      required: ["node_id", "node_type", "relevance"]
+      required:
+        - node_id
+        - node_type
+        - relevance
       properties:
         node_id:
           type: string
-          description: "Identificador do nó MOC"
-          pattern: "^[a-z0-9.-]+$"
-          examples: 
-            - "hierarchies.scope.squad-x"
-            - "hierarchies.domain.security"
-            - "hierarchies.authority.tech_lead"
-
+          description: Identificador do nó MOC
+          pattern: ^[a-z0-9.-]+$
+          examples:
+            - hierarchies.scope.squad-x
+            - hierarchies.domain.security
+            - hierarchies.authority.tech_lead
         node_type:
           type: string
-          description: "Tipo do nó MOC"
-          enum: ["scope", "domain", "authority", "policy", "criteria"]
-          examples: ["scope", "authority"]
-
+          description: Tipo do nó MOC
+          enum:
+            - scope
+            - domain
+            - authority
+            - policy
+            - criteria
+          examples:
+            - scope
+            - authority
         relevance:
           type: string
-          description: "Por que este nó foi relevante para a decisão"
+          description: Por que este nó foi relevante para a decisão
           minLength: 30
-          examples: 
-            - "Define o escopo onde ambas as UKIs operam"
-            - "Estabelece a hierarquia de autoridade aplicável"
-
+          examples:
+            - Define o escopo onde ambas as UKIs operam
+            - Estabelece a hierarquia de autoridade aplicável
         node_value:
           type: string
-          description: "Valor específico do nó usado na decisão"
-          examples: ["squad-x", "tech_lead", "validated"]
-
+          description: Valor específico do nó usado na decisão
+          examples:
+            - squad-x
+            - tech_lead
+            - validated
         decision_influence:
           type: string
-          description: "Como este nó influenciou a decisão"
-          enum: ["supportive", "decisive", "contextual", "restrictive"]
-          examples: ["decisive", "supportive"]
+          description: Como este nó influenciou a decisão
+          enum:
+            - supportive
+            - decisive
+            - contextual
+            - restrictive
+          examples:
+            - decisive
+            - supportive
       additionalProperties: false
-
-  # === AÇÕES RECOMENDADAS ===
   next_steps:
     type: string
-    description: "Ações recomendadas ao usuário após a decisão"
+    description: Ações recomendadas ao usuário após a decisão
     minLength: 50
-    examples: 
-      - "Utilize a regra de retenção de 30 dias aprovada. Para futuras políticas de dados, consulte a UKI vencedora como referência."
-
+    examples:
+      - Utilize a regra de retenção de 30 dias aprovada. Para futuras políticas de dados, consulte a UKI vencedora como
+        referência.
   escalation_path:
     type: string
-    description: "Opções de escalonamento disponíveis (opcional)"
-    examples: 
-      - "Para questionar esta decisão, contacte o tech-lead responsável pelo domínio de segurança"
-
-  # === CONTEXTO EPISTÊMICO ===
+    description: Opções de escalonamento disponíveis (opcional)
+    examples:
+      - Para questionar esta decisão, contacte o tech-lead responsável pelo domínio de segurança
   epistemic_context:
     type: object
-    description: "Contexto epistêmico da explicação alinhado ao MEP"
-    required: ["humility_demonstration", "authority_acknowledgment", "contextual_awareness"]
+    description: Contexto epistêmico da explicação alinhado ao MEP
+    required:
+      - humility_demonstration
+      - authority_acknowledgment
+      - contextual_awareness
     properties:
       humility_demonstration:
         type: string
-        description: "Como a explicação demonstra humildade epistêmica"
-        examples: 
-          - "A decisão é baseada em critérios organizacionais específicos e pode variar em outros contextos"
-
+        description: Como a explicação demonstra humildade epistêmica
+        examples:
+          - A decisão é baseada em critérios organizacionais específicos e pode variar em outros contextos
       authority_acknowledgment:
         type: string
-        description: "Como reconhece a autoridade derivada"
-        examples: 
-          - "A autoridade para esta decisão deriva da configuração organizacional MOC"
-
+        description: Como reconhece a autoridade derivada
+        examples:
+          - A autoridade para esta decisão deriva da configuração organizacional MOC
       contextual_awareness:
         type: string
-        description: "Como demonstra consciência do contexto"
-        examples: 
-          - "Esta decisão se aplica especificamente ao escopo squad-x no domínio de segurança"
-
+        description: Como demonstra consciência do contexto
+        examples:
+          - Esta decisão se aplica especificamente ao escopo squad-x no domínio de segurança
       uncertainty_acknowledgment:
         type: string
-        description: "Reconhecimento de incertezas (se aplicável)"
-        examples: 
-          - "Algumas evidências foram inconclusivas, mas o peso geral favoreceu esta escolha"
-
+        description: Reconhecimento de incertezas (se aplicável)
+        examples:
+          - Algumas evidências foram inconclusivas, mas o peso geral favoreceu esta escolha
       learning_opportunity:
         type: string
-        description: "Oportunidades de aprendizado identificadas"
-        examples: 
-          - "Este conflito sugere necessidade de maior alinhamento nas políticas de retenção"
+        description: Oportunidades de aprendizado identificadas
+        examples:
+          - Este conflito sugere necessidade de maior alinhamento nas políticas de retenção
     additionalProperties: false
-
-  # === CONFIGURAÇÃO DE APRESENTAÇÃO ===
   presentation_config:
     type: object
-    description: "Configuração de apresentação da explicação"
+    description: Configuração de apresentação da explicação
     properties:
       target_audience:
         type: string
-        description: "Audiência alvo da explicação"
-        enum: ["developer", "tech_lead", "business_user", "compliance_officer", "general"]
-        default: "general"
-
+        description: Audiência alvo da explicação
+        enum:
+          - developer
+          - tech_lead
+          - business_user
+          - compliance_officer
+          - general
+        default: general
       detail_level:
         type: string
-        description: "Nível de detalhe da explicação"
-        enum: ["minimal", "standard", "detailed", "comprehensive"]
-        default: "standard"
-
+        description: Nível de detalhe da explicação
+        enum:
+          - minimal
+          - standard
+          - detailed
+          - comprehensive
+        default: standard
       technical_depth:
         type: string
-        description: "Profundidade técnica apropriada"
-        enum: ["low", "medium", "high"]
-        default: "medium"
-
+        description: Profundidade técnica apropriada
+        enum:
+          - low
+          - medium
+          - high
+        default: medium
       include_examples:
         type: boolean
-        description: "Incluir exemplos práticos"
+        description: Incluir exemplos práticos
         default: true
-
       highlight_key_points:
         type: boolean
-        description: "Destacar pontos chave"
+        description: Destacar pontos chave
         default: true
-
       format_preference:
         type: string
-        description: "Formato preferido de apresentação"
-        enum: ["narrative", "structured", "bullet_points", "conversational"]
-        default: "structured"
+        description: Formato preferido de apresentação
+        enum:
+          - narrative
+          - structured
+          - bullet_points
+          - conversational
+        default: structured
     additionalProperties: false
-
-  # === FEEDBACK E APRENDIZADO ===
   feedback_collection:
     type: object
-    description: "Configuração de coleta de feedback"
+    description: Configuração de coleta de feedback
     properties:
       feedback_enabled:
         type: boolean
-        description: "Coleta de feedback habilitada"
+        description: Coleta de feedback habilitada
         default: true
-
       feedback_categories:
         type: array
-        description: "Categorias de feedback disponíveis"
+        description: Categorias de feedback disponíveis
         items:
           type: string
-          enum: ["clarity", "completeness", "usefulness", "accuracy", "actionability"]
-        default: ["clarity", "usefulness"]
-
+          enum:
+            - clarity
+            - completeness
+            - usefulness
+            - accuracy
+            - actionability
+        default:
+          - clarity
+          - usefulness
       improvement_tracking:
         type: boolean
-        description: "Rastreamento de melhorias baseado em feedback"
+        description: Rastreamento de melhorias baseado em feedback
         default: true
     additionalProperties: false
-
-  # === METADADOS ===
   metadata:
     type: object
-    description: "Metadados da explicação"
-    required: ["generated_at", "generator", "template_version"]
+    description: Metadados da explicação
+    required:
+      - generated_at
+      - generator
+      - template_version
     properties:
       generated_at:
         type: string
         format: date-time
-        description: "Timestamp de geração da explicação"
-
+        description: Timestamp de geração da explicação
       generator:
         type: string
-        description: "Arquétipo que gerou a explicação"
-        examples: ["knowledge-agent", "workflow-agent", "specialized-agent"]
-
+        description: Arquétipo que gerou a explicação
+        examples:
+          - knowledge-agent
+          - workflow-agent
+          - specialized-agent
       template_version:
         type: string
-        description: "Versão do template usado"
-        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
-        examples: ["1.0.0", "1.2.1"]
-
+        description: Versão do template usado
+        pattern: ^[0-9]+\.[0-9]+\.[0-9]+$
+        examples:
+          - 1.0.0
+          - 1.2.1
       generation_duration_ms:
         type: integer
-        description: "Tempo de geração da explicação"
+        description: Tempo de geração da explicação
         minimum: 0
-
       user_context:
         type: object
-        description: "Contexto do usuário que recebe a explicação"
+        description: Contexto do usuário que recebe a explicação
         properties:
           user_id:
             type: string
-            description: "ID do usuário"
-
+            description: ID do usuário
           authority_level:
             type: string
-            description: "Nível de autoridade do usuário"
-
+            description: Nível de autoridade do usuário
           domains_accessible:
             type: array
-            description: "Domínios acessíveis ao usuário"
+            description: Domínios acessíveis ao usuário
             items:
               type: string
-
           preferred_language:
             type: string
-            description: "Idioma preferido"
-            enum: ["pt", "en"]
-            default: "pt"
+            description: Idioma preferido
+            enum:
+              - pt
+              - en
+            default: pt
         additionalProperties: true
-
       quality_metrics:
         type: object
-        description: "Métricas de qualidade da explicação"
+        description: Métricas de qualidade da explicação
         properties:
           clarity_score:
             type: number
-            description: "Pontuação de clareza (0.0 a 1.0)"
+            description: Pontuação de clareza (0.0 a 1.0)
             minimum: 0
             maximum: 1
-
           completeness_score:
             type: number
-            description: "Pontuação de completude (0.0 a 1.0)"
+            description: Pontuação de completude (0.0 a 1.0)
             minimum: 0
             maximum: 1
-
           moc_citation_completeness:
             type: number
-            description: "Completude das citações MOC (0.0 a 1.0)"
+            description: Completude das citações MOC (0.0 a 1.0)
             minimum: 0
             maximum: 1
         additionalProperties: false
     additionalProperties: false
-
 additionalProperties: false
-
-# === REGRAS DE VALIDAÇÃO ===
 allOf:
-  # Se outcome=winner, deve ter winner e losers
   - if:
       properties:
         outcome:
-          const: "winner"
+          const: winner
     then:
-      required: ["winner", "losers"]
-
-  # Se outcome=coexist, deve ter coexistence_details
+      required:
+        - winner
+        - losers
   - if:
       properties:
         outcome:
-          const: "coexist"
+          const: coexist
     then:
-      required: ["coexistence_details"]
-
-  # Se outcome=reject_all, deve ter rejection_details
+      required:
+        - coexistence_details
   - if:
       properties:
         outcome:
-          const: "reject_all"
+          const: reject_all
     then:
-      required: ["rejection_details"]
-
-  # Se outcome=defer, deve ter deferral_details
+      required:
+        - rejection_details
   - if:
       properties:
         outcome:
-          const: "defer"
+          const: defer
     then:
-      required: ["deferral_details"]
-
-  # Deve ter pelo menos uma regra de precedência com decisive_factor=true
+      required:
+        - deferral_details
   - properties:
       precedence_explanation:
         contains:

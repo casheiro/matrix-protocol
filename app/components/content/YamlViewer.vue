@@ -65,6 +65,19 @@
           <span class="hidden lg:inline">{{ isRawView ? t('viewer.buttons.formatted') : t('viewer.buttons.raw') }}</span>
         </UButton>
         
+        <!-- Schema URL link (if available) -->
+        <UButton
+          v-if="schemaInfo"
+          variant="outline"
+          size="sm"
+          icon="i-heroicons-globe-alt"
+          @click="openSchemaUrl"
+          :title="t('viewer.buttons.openSchema') || 'Open Schema URL'"
+          :aria-label="t('viewer.buttons.openSchema') || 'Open Schema URL'"
+        >
+          <span class="hidden lg:inline">{{ t('viewer.buttons.openSchema') || 'Schema URL' }}</span>
+        </UButton>
+        
         <!-- Copy viewer link -->
         <UButton
           variant="outline"
@@ -146,6 +159,29 @@
             <div v-if="data?.schema">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.schema') }}:</label>
               <span class="text-gray-600 dark:text-gray-400 ml-2">{{ data?.schema }}</span>
+            </div>
+            
+            <!-- Schema ID with direct link -->
+            <div v-if="data?.$id" class="md:col-span-2">
+              <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.schemaId') || 'Schema ID' }}:</label>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-gray-600 dark:text-gray-400 font-mono text-xs flex-1">{{ data?.$id }}</span>
+                <UButton
+                  v-if="schemaInfo"
+                  variant="ghost"
+                  size="xs"
+                  icon="i-heroicons-arrow-top-right-on-square"
+                  @click="openSchemaUrl"
+                  :title="t('viewer.buttons.openInNewTab') || 'Open in new tab'"
+                />
+                <UButton
+                  variant="ghost"
+                  size="xs"
+                  icon="i-heroicons-clipboard"
+                  @click="copySchemaId"
+                  :title="t('viewer.buttons.copySchemaId') || 'Copy Schema ID'"
+                />
+              </div>
             </div>
             <div v-if="data?.ontology_reference">
               <label class="font-medium text-gray-700 dark:text-gray-300">{{ t('viewer.fields.ontologyReference') }}:</label>
@@ -291,6 +327,7 @@ interface Props {
 const props = defineProps<Props>()
 const { t } = useI18n()
 const route = useRoute()
+const { parseSchemaUrl, getSchemaCanonicalUrl, getSchemaApiUrl } = useMatrixSchemas()
 
 // Configure marked for safe HTML output
 marked.setOptions({
@@ -317,6 +354,19 @@ watch(searchQuery, (val) => {
 // Computed
 const isUKI = computed(() => {
   return props.data?.schema && props.data?.id?.startsWith('uki:')
+})
+
+const schemaInfo = computed(() => {
+  if (!props.data?.$id) return null
+  
+  const parsed = parseSchemaUrl(props.data.$id)
+  if (!parsed) return null
+  
+  return {
+    ...parsed,
+    canonicalUrl: props.data.$id,
+    apiUrl: getSchemaApiUrl(parsed.framework, parsed.type, parsed.version)
+  }
 })
 
 function escapeHtml(str: string) {
@@ -459,6 +509,23 @@ const copyToClipboard = async () => {
     // TODO: Show toast notification
   } catch (error) {
     console.error('Failed to copy to clipboard:', error)
+  }
+}
+
+const copySchemaId = async () => {
+  try {
+    if (props.data?.$id) {
+      await navigator.clipboard.writeText(props.data.$id)
+      // TODO: Show toast notification
+    }
+  } catch (error) {
+    console.error('Failed to copy schema ID:', error)
+  }
+}
+
+const openSchemaUrl = () => {
+  if (schemaInfo.value?.canonicalUrl) {
+    window.open(schemaInfo.value.canonicalUrl, '_blank')
   }
 }
 

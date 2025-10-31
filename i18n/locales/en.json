@@ -233,6 +233,43 @@
       "documentation": "Complete Documentation"
     }
   },
+  "schemas": {
+    "title": "Schema Index",
+    "description": "Complete catalog of Matrix Protocol YAML schemas organized by framework",
+    "seo": {
+      "title": "Schemas - Matrix Protocol",
+      "description": "YAML schema catalog for all Matrix Protocol frameworks"
+    },
+    "stats": {
+      "totalSchemas": "Schemas",
+      "frameworks": "Frameworks"
+    },
+    "search": {
+      "placeholder": "Search schemas by name, description or type..."
+    },
+    "filter": {
+      "framework": "Framework",
+      "allFrameworks": "All Frameworks",
+      "search": "Search",
+      "clear": "Clear"
+    },
+    "details": {
+      "type": "Type",
+      "filename": "File",
+      "canonicalUrl": "Canonical URL"
+    },
+    "actions": {
+      "view": "View",
+      "copyUrl": "Copy URL",
+      "openUrl": "Open URL",
+      "download": "Download"
+    },
+    "empty": {
+      "title": "No schemas found",
+      "description": "There are no schemas that match the applied filters.",
+      "clearFilters": "Clear Filters"
+    }
+  },
   "frameworks": {
     "title": "Frameworks",
     "mef": {
@@ -897,7 +934,10 @@
       "download": "Download",
       "copy": "Copy",
       "copyLink": "Copy link",
-      "search": "Search"
+      "search": "Search",
+      "openSchema": "Schema URL",
+      "openInNewTab": "Open in new tab",
+      "copySchemaId": "Copy Schema ID"
     },
     "sections": {
       "content": "Content",
@@ -910,6 +950,7 @@
     },
     "fields": {
       "schema": "Schema",
+      "schemaId": "Schema ID",
       "ontologyReference": "Ontology Reference",
       "id": "Identifier",
       "scopeRef": "Scope",
