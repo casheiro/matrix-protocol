@@ -1,0 +1,544 @@
+# ZOF State Transition Schema v1.0.0
+# Zion Orchestration Framework - Transições de Estado
+# Especificação canônica normativa para transições entre estados canônicos
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/zof/state-transition/1.0.0"
+version: "1.0.0"
+title: "ZOF State Transition Schema"
+description: "Schema canônico para transições de estado ZOF no Matrix Protocol"
+
+type: object
+required:
+  - schema
+  - transition_id
+  - workflow_ref
+  - from_state
+  - to_state
+  - condition
+  - signals
+  - metadata
+
+properties:
+  # === METADADOS OBRIGATÓRIOS ===
+  schema:
+    type: string
+    description: "Versão do schema ZOF State Transition utilizado"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1"]
+
+  transition_id:
+    type: string
+    description: "Identificador único da transição"
+    pattern: "^zof-tr-[a-z0-9-]+-[0-9]+$"
+    examples: ["zof-tr-auth-flow-001", "zof-tr-request-workflow-005"]
+
+  workflow_ref:
+    type: string
+    description: "Referência ao workflow ZOF"
+    pattern: "^zof-[a-z0-9-]+$"
+    examples: ["zof-request-flow", "zof-auth-jwt-implementation"]
+
+  # === ESTADOS DE TRANSIÇÃO ===
+  from_state:
+    type: string
+    description: "Estado de origem da transição"
+    enum: [
+      "intake",
+      "understand", 
+      "decide",
+      "act",
+      "evaluate_for_enrich",
+      "review",
+      "enrich",
+      "complete",
+      "failed"
+    ]
+    examples: ["intake", "understand"]
+
+  to_state:
+    type: string
+    description: "Estado de destino da transição"
+    enum: [
+      "intake",
+      "understand",
+      "decide", 
+      "act",
+      "evaluate_for_enrich",
+      "review",
+      "enrich",
+      "complete",
+      "failed"
+    ]
+    examples: ["understand", "decide"]
+
+  # === CONDIÇÕES DE TRANSIÇÃO ===
+  condition:
+    type: object
+    description: "Condições para execução da transição"
+    required: ["type", "expression", "description"]
+    properties:
+      type:
+        type: string
+        description: "Tipo de condição de transição"
+        enum: [
+          "completion_criteria",
+          "oracle_consultation",
+          "decision_made",
+          "action_executed",
+          "evaluation_completed",
+          "review_approved",
+          "enrichment_completed",
+          "timeout",
+          "error",
+          "manual_trigger"
+        ]
+        examples: ["completion_criteria", "oracle_consultation"]
+
+      expression:
+        type: string
+        description: "Expressão lógica da condição"
+        minLength: 10
+        examples: 
+          - "all_completion_criteria_met && context_captured"
+          - "oracle_consulted && knowledge_retrieved"
+
+      description:
+        type: string
+        description: "Descrição legível da condição"
+        minLength: 20
+        examples: 
+          - "Todos os critérios de completude foram atendidos e contexto capturado"
+
+      parameters:
+        type: object
+        description: "Parâmetros específicos da condição"
+        properties:
+          timeout_ms:
+            type: integer
+            description: "Timeout para condição (se aplicável)"
+            minimum: 1000
+            maximum: 600000
+
+          retry_count:
+            type: integer
+            description: "Número de tentativas (se aplicável)"
+            minimum: 0
+            maximum: 10
+
+          threshold_value:
+            type: number
+            description: "Valor limiar para aprovação"
+            minimum: 0
+            maximum: 1
+
+          required_approvals:
+            type: integer
+            description: "Número de aprovações necessárias"
+            minimum: 1
+        additionalProperties: true
+    additionalProperties: false
+
+  # === SINAIS OBRIGATÓRIOS ===
+  signals:
+    type: object
+    description: "Sinais obrigatórios de explicabilidade da transição"
+    required: ["context", "decision", "result"]
+    properties:
+      context:
+        type: string
+        description: "Contexto que entrou na transição"
+        minLength: 30
+        examples: 
+          - "Estado intake completado com requisitos documentados e contexto compreendido"
+
+      decision:
+        type: string
+        description: "Decisão que causou a transição"
+        minLength: 30
+        examples: 
+          - "Critérios de completude atendidos, prosseguindo para consulta Oracle obrigatória"
+
+      result:
+        type: string
+        description: "Resultado da transição"
+        minLength: 30
+        examples: 
+          - "Transição para estado understand confirmada, Oracle será consultado"
+
+      additional_context:
+        type: object
+        description: "Contexto adicional específico da transição"
+        properties:
+          user_input:
+            type: string
+            description: "Entrada do usuário relacionada"
+
+          system_state:
+            type: string
+            description: "Estado do sistema no momento da transição"
+
+          external_factors:
+            type: array
+            description: "Fatores externos que influenciaram"
+            items:
+              type: string
+
+          data_artifacts:
+            type: array
+            description: "Artefatos de dados gerados/consumidos"
+            items:
+              type: string
+        additionalProperties: true
+    additionalProperties: false
+
+  # === VALIDAÇÕES E VERIFICAÇÕES ===
+  validations:
+    type: array
+    description: "Validações executadas durante a transição"
+    items:
+      type: object
+      required: ["validation_type", "description", "status"]
+      properties:
+        validation_type:
+          type: string
+          description: "Tipo de validação"
+          enum: [
+            "state_completeness",
+            "oracle_consultation_required",
+            "authority_validation",
+            "moc_criteria_check",
+            "conflict_detection",
+            "data_integrity",
+            "business_rules",
+            "security_check"
+          ]
+          examples: ["state_completeness", "authority_validation"]
+
+        description:
+          type: string
+          description: "Descrição da validação"
+          minLength: 20
+          examples: ["Validação de completude do estado intake"]
+
+        status:
+          type: string
+          description: "Status da validação"
+          enum: ["passed", "failed", "warning", "skipped"]
+          examples: ["passed", "failed"]
+
+        details:
+          type: string
+          description: "Detalhes do resultado da validação"
+          examples: ["Todos os campos obrigatórios preenchidos"]
+
+        error_message:
+          type: string
+          description: "Mensagem de erro (se status=failed)"
+
+        remediation_action:
+          type: string
+          description: "Ação recomendada para correção"
+      additionalProperties: false
+
+  # === AÇÕES DE TRANSIÇÃO ===
+  actions:
+    type: array
+    description: "Ações executadas durante a transição"
+    items:
+      type: object
+      required: ["action_type", "description", "execution_order"]
+      properties:
+        action_type:
+          type: string
+          description: "Tipo de ação executada"
+          enum: [
+            "oracle_consultation",
+            "moc_criteria_evaluation",
+            "authority_validation",
+            "conflict_detection",
+            "state_cleanup",
+            "data_persistence",
+            "notification",
+            "logging",
+            "metrics_collection",
+            "mal_invocation"
+          ]
+          examples: ["oracle_consultation", "moc_criteria_evaluation"]
+
+        description:
+          type: string
+          description: "Descrição da ação"
+          minLength: 20
+          examples: ["Consultar Oracle para conhecimento existente relevante"]
+
+        execution_order:
+          type: integer
+          description: "Ordem de execução da ação"
+          minimum: 1
+          examples: [1, 2, 3]
+
+        parameters:
+          type: object
+          description: "Parâmetros específicos da ação"
+          additionalProperties: true
+
+        result:
+          type: object
+          description: "Resultado da execução da ação"
+          properties:
+            status:
+              type: string
+              enum: ["success", "failure", "partial", "skipped"]
+            
+            output:
+              type: string
+              description: "Saída produzida pela ação"
+            
+            duration_ms:
+              type: integer
+              description: "Duração da execução em milissegundos"
+              minimum: 0
+            
+            error_details:
+              type: string
+              description: "Detalhes de erro (se status=failure)"
+          additionalProperties: true
+      additionalProperties: false
+
+  # === CONFIGURAÇÕES ESPECÍFICAS ===
+  transition_config:
+    type: object
+    description: "Configurações específicas da transição"
+    properties:
+      auto_execute:
+        type: boolean
+        description: "Executar transição automaticamente quando condições atendidas"
+        default: true
+
+      require_manual_approval:
+        type: boolean
+        description: "Requer aprovação manual para execução"
+        default: false
+
+      timeout_ms:
+        type: integer
+        description: "Timeout para execução da transição"
+        minimum: 1000
+        maximum: 600000
+        default: 30000
+
+      retry_policy:
+        type: object
+        description: "Política de retry em caso de falha"
+        properties:
+          max_retries:
+            type: integer
+            minimum: 0
+            maximum: 10
+            default: 3
+
+          backoff_strategy:
+            type: string
+            enum: ["linear", "exponential", "fixed"]
+            default: "exponential"
+
+          backoff_interval_ms:
+            type: integer
+            minimum: 100
+            maximum: 60000
+            default: 1000
+        additionalProperties: false
+
+      notification_config:
+        type: object
+        description: "Configuração de notificações"
+        properties:
+          notify_on_success:
+            type: boolean
+            default: false
+
+          notify_on_failure:
+            type: boolean
+            default: true
+
+          notification_channels:
+            type: array
+            items:
+              type: string
+            examples: [["email", "slack", "webhook"]]
+        additionalProperties: false
+    additionalProperties: false
+
+  # === INTEGRAÇÃO MAL ===
+  mal_integration:
+    type: object
+    description: "Configuração de integração com MAL (quando aplicável)"
+    properties:
+      conflict_detection_enabled:
+        type: boolean
+        description: "Habilitar detecção de conflitos H1/H2/H3"
+        default: true
+
+      auto_invoke_mal:
+        type: boolean
+        description: "Invocar MAL automaticamente em conflitos"
+        default: true
+
+      arbitration_timeout_ms:
+        type: integer
+        description: "Timeout para arbitragem MAL"
+        minimum: 1000
+        maximum: 600000
+        default: 2000
+
+      fallback_action:
+        type: string
+        description: "Ação em caso de falha na arbitragem"
+        enum: ["block", "defer", "escalate", "default_safe"]
+        default: "default_safe"
+
+      decision_record_ref:
+        type: string
+        description: "Referência ao Decision Record MAL (se aplicável)"
+        pattern: "^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$"
+    additionalProperties: false
+
+  # === METADADOS ===
+  metadata:
+    type: object
+    description: "Metadados da transição"
+    required: ["created_date", "execution_timestamp"]
+    properties:
+      created_date:
+        type: string
+        format: date
+        description: "Data de criação da definição de transição"
+
+      execution_timestamp:
+        type: string
+        format: date-time
+        description: "Timestamp de execução da transição"
+        examples: ["2025-10-31T14:30:25.123Z"]
+
+      executor:
+        type: string
+        description: "Entidade que executou a transição"
+        examples: ["workflow-agent", "user:developer", "system:automated"]
+
+      execution_context:
+        type: object
+        description: "Contexto de execução"
+        properties:
+          user_id:
+            type: string
+            description: "ID do usuário que iniciou o workflow"
+
+          session_id:
+            type: string
+            description: "ID da sessão de execução"
+
+          environment:
+            type: string
+            description: "Ambiente de execução"
+            enum: ["development", "staging", "production"]
+
+          version:
+            type: string
+            description: "Versão do sistema ZOF"
+        additionalProperties: true
+
+      duration_ms:
+        type: integer
+        description: "Duração total da transição em milissegundos"
+        minimum: 0
+
+      performance_metrics:
+        type: object
+        description: "Métricas de performance da transição"
+        properties:
+          cpu_usage:
+            type: number
+            description: "Uso de CPU durante execução"
+
+          memory_usage:
+            type: number
+            description: "Uso de memória durante execução"
+
+          network_calls:
+            type: integer
+            description: "Número de chamadas de rede"
+
+          database_queries:
+            type: integer
+            description: "Número de consultas ao banco"
+        additionalProperties: true
+    additionalProperties: false
+
+additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO ===
+allOf:
+  # Validar sequência canônica de estados
+  - if:
+      properties:
+        from_state:
+          const: "intake"
+    then:
+      properties:
+        to_state:
+          enum: ["understand", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "understand"
+    then:
+      properties:
+        to_state:
+          enum: ["decide", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "decide"
+    then:
+      properties:
+        to_state:
+          enum: ["act", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "act"
+    then:
+      properties:
+        to_state:
+          enum: ["evaluate_for_enrich", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "evaluate_for_enrich"
+    then:
+      properties:
+        to_state:
+          enum: ["review", "enrich", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "review"
+    then:
+      properties:
+        to_state:
+          enum: ["enrich", "complete", "failed"]
+
+  - if:
+      properties:
+        from_state:
+          const: "enrich"
+    then:
+      properties:
+        to_state:
+          enum: ["complete", "failed"]

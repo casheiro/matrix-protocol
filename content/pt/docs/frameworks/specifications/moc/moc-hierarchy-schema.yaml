@@ -1,0 +1,431 @@
+# MOC Hierarchy Schema v1.0.0
+# Matrix Ontology Catalog - Hierarquias Organizacionais
+# Especificação canônica normativa para definição de hierarquias configuráveis
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/moc/hierarchy/1.0.0"
+version: "1.0.0"
+title: "MOC Hierarchy Schema"
+description: "Schema canônico para hierarquias organizacionais configuráveis no MOC"
+
+type: object
+required:
+  - schema
+  - organization_id
+  - version
+  - hierarchies
+  - metadata
+
+properties:
+  # === METADADOS OBRIGATÓRIOS ===
+  schema:
+    type: string
+    description: "Versão do schema MOC Hierarchy utilizado"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1"]
+
+  organization_id:
+    type: string
+    description: "Identificador único da organização"
+    pattern: "^[a-z0-9-]+$"
+    examples: ["techcorp", "startup-alpha", "enterprise-beta"]
+
+  version:
+    type: string
+    description: "Versão da configuração MOC organizacional"
+    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+    examples: ["1.0", "2.1", "3.0"]
+
+  # === HIERARQUIAS OBRIGATÓRIAS ===
+  hierarchies:
+    type: object
+    description: "Hierarquias configuráveis obrigatórias"
+    required: ["scope", "domain", "maturity", "evaluation_criteria"]
+    properties:
+      
+      # --- HIERARQUIA DE ESCOPO ---
+      scope:
+        type: object
+        description: "Hierarquia de alcance e visibilidade do conhecimento"
+        required: ["description", "nodes"]
+        properties:
+          description:
+            type: string
+            description: "Descrição da hierarquia de escopo organizacional"
+            examples: ["Estrutura organizacional de equipes e tribos"]
+          
+          nodes:
+            type: object
+            description: "Nós da hierarquia de escopo"
+            patternProperties:
+              "^[a-z0-9-]+$":
+                type: object
+                required: ["display_name", "level", "parent"]
+                properties:
+                  display_name:
+                    type: string
+                    description: "Nome exibível do nó"
+                    examples: ["Squad Payments", "Tribe Platform"]
+                  
+                  level:
+                    type: integer
+                    description: "Nível hierárquico (menor = mais específico)"
+                    minimum: 0
+                    maximum: 10
+                    examples: [0, 1, 2]
+                  
+                  parent:
+                    type: ["string", "null"]
+                    description: "Nó pai na hierarquia (null para raiz)"
+                    pattern: "^[a-z0-9-]+$|null"
+                    examples: ["tribe-platform", null]
+                  
+                  description:
+                    type: string
+                    description: "Descrição do escopo"
+                    examples: ["Equipe responsável por funcionalidades de pagamento"]
+                  
+                  authority_roles:
+                    type: array
+                    description: "Papéis com autoridade neste escopo"
+                    items:
+                      type: string
+                    examples: [["squad_lead", "tech_lead", "developer"]]
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      # --- HIERARQUIA DE DOMÍNIO ---
+      domain:
+        type: object
+        description: "Hierarquia de áreas de conhecimento e especialização"
+        required: ["description", "nodes"]
+        properties:
+          description:
+            type: string
+            description: "Descrição da hierarquia de domínios"
+            examples: ["Domínios de conhecimento técnico e negócio"]
+          
+          nodes:
+            type: object
+            description: "Nós da hierarquia de domínio"
+            patternProperties:
+              "^[a-z0-9-]+$":
+                type: object
+                required: ["display_name", "scope", "specializations"]
+                properties:
+                  display_name:
+                    type: string
+                    description: "Nome exibível do domínio"
+                    examples: ["Technical", "Business", "Security"]
+                  
+                  scope:
+                    type: string
+                    description: "Escopo de aplicação do domínio"
+                    enum: ["global", "contextual", "specialized"]
+                    examples: ["global", "contextual"]
+                  
+                  description:
+                    type: string
+                    description: "Descrição do domínio"
+                    examples: ["Conhecimento técnico de implementação"]
+                  
+                  specializations:
+                    type: array
+                    description: "Especializações dentro do domínio"
+                    items:
+                      type: string
+                    examples: [["frontend", "backend", "devops"]]
+                  
+                  access_control:
+                    type: object
+                    description: "Controles de acesso ao domínio"
+                    properties:
+                      restricted_scopes:
+                        type: array
+                        description: "Escopos com acesso restrito"
+                        items:
+                          type: string
+                      required_authority:
+                        type: string
+                        description: "Autoridade mínima para acesso"
+                        examples: ["developer", "specialist"]
+                    additionalProperties: false
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      # --- HIERARQUIA DE MATURIDADE ---
+      maturity:
+        type: object
+        description: "Hierarquia de níveis de validação e confiabilidade"
+        required: ["description", "nodes"]
+        properties:
+          description:
+            type: string
+            description: "Descrição da hierarquia de maturidade"
+            examples: ["Níveis de maturidade epistemológica do conhecimento"]
+          
+          nodes:
+            type: object
+            description: "Nós da hierarquia de maturidade"
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                required: ["display_name", "rank", "criteria", "transitions"]
+                properties:
+                  display_name:
+                    type: string
+                    description: "Nome exibível do nível de maturidade"
+                    examples: ["Draft", "Experimental", "Endorsed", "Validated"]
+                  
+                  rank:
+                    type: integer
+                    description: "Rank numérico (maior = mais maduro)"
+                    minimum: 0
+                    maximum: 100
+                    examples: [10, 30, 60, 90]
+                  
+                  description:
+                    type: string
+                    description: "Descrição do nível de maturidade"
+                    examples: ["Conhecimento em desenvolvimento inicial"]
+                  
+                  criteria:
+                    type: array
+                    description: "Critérios para atingir este nível"
+                    items:
+                      type: string
+                    examples: [["Revisão por pares", "Testes validados"]]
+                  
+                  transitions:
+                    type: object
+                    description: "Transições possíveis para outros níveis"
+                    properties:
+                      can_promote_to:
+                        type: array
+                        description: "Níveis para os quais pode ser promovido"
+                        items:
+                          type: string
+                        examples: [["endorsed", "validated"]]
+                      
+                      can_demote_to:
+                        type: array
+                        description: "Níveis para os quais pode ser rebaixado"
+                        items:
+                          type: string
+                        examples: [["draft", "deprecated"]]
+                    additionalProperties: false
+                  
+                  authority_required:
+                    type: string
+                    description: "Autoridade mínima para criar conhecimento neste nível"
+                    examples: ["developer", "tech_lead", "architect"]
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      # --- CRITÉRIOS DE AVALIAÇÃO ---
+      evaluation_criteria:
+        type: object
+        description: "Critérios para checkpoint EvaluateForEnrich do ZOF"
+        required: ["description", "nodes"]
+        properties:
+          description:
+            type: string
+            description: "Descrição dos critérios de avaliação"
+            examples: ["Critérios organizacionais para enriquecimento do Oracle"]
+          
+          nodes:
+            type: object
+            description: "Critérios de avaliação configuráveis"
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                required: ["display_name", "description", "threshold_type", "weight"]
+                properties:
+                  display_name:
+                    type: string
+                    description: "Nome exibível do critério"
+                    examples: ["Relevance", "Reusability", "Impact"]
+                  
+                  description:
+                    type: string
+                    description: "Descrição detalhada do critério"
+                    examples: ["Relevância do conhecimento para outros membros da equipe"]
+                  
+                  threshold_type:
+                    type: string
+                    description: "Tipo de limiar de aprovação"
+                    enum: ["binary", "low", "medium", "high", "numeric"]
+                    examples: ["medium", "high"]
+                  
+                  threshold_value:
+                    type: ["number", "boolean", "string"]
+                    description: "Valor específico do limiar"
+                    examples: [0.7, true, "high"]
+                  
+                  weight:
+                    type: number
+                    description: "Peso relativo do critério (0.0 a 1.0)"
+                    minimum: 0.0
+                    maximum: 1.0
+                    examples: [0.3, 0.4, 0.3]
+                  
+                  evaluation_method:
+                    type: string
+                    description: "Método de avaliação do critério"
+                    enum: ["manual", "automated", "hybrid"]
+                    examples: ["manual", "automated"]
+                  
+                  applicable_domains:
+                    type: array
+                    description: "Domínios onde este critério se aplica"
+                    items:
+                      type: string
+                    examples: [["technical", "business"]]
+                  
+                  applicable_scopes:
+                    type: array
+                    description: "Escopos onde este critério se aplica"
+                    items:
+                      type: string
+                    examples: [["squad", "tribe"]]
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+    additionalProperties: false
+
+  # === HIERARQUIAS OPCIONAIS ===
+  optional_hierarchies:
+    type: object
+    description: "Hierarquias organizacionais específicas opcionais"
+    properties:
+      authority:
+        type: object
+        description: "Hierarquia de autoridade organizacional"
+        properties:
+          description:
+            type: string
+          nodes:
+            type: object
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                properties:
+                  display_name:
+                    type: string
+                  level:
+                    type: integer
+                  permissions:
+                    type: array
+                    items:
+                      type: string
+                  reports_to:
+                    type: ["string", "null"]
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+      
+      lifecycle:
+        type: object
+        description: "Hierarquia de ciclo de vida do conhecimento"
+        properties:
+          description:
+            type: string
+          nodes:
+            type: object
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                properties:
+                  display_name:
+                    type: string
+                  duration:
+                    type: string
+                  actions:
+                    type: array
+                    items:
+                      type: string
+                  triggers:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+    additionalProperties: true
+
+  # === METADADOS ===
+  metadata:
+    type: object
+    description: "Metadados da configuração MOC"
+    required: ["created_date", "last_modified", "maintainer"]
+    properties:
+      created_date:
+        type: string
+        format: date
+        description: "Data de criação da configuração"
+        examples: ["2025-01-15"]
+      
+      last_modified:
+        type: string
+        format: date
+        description: "Data da última modificação"
+        examples: ["2025-10-31"]
+      
+      maintainer:
+        type: string
+        description: "Responsável pela manutenção do MOC"
+        examples: ["platform-team", "governance-board"]
+      
+      change_summary:
+        type: string
+        description: "Resumo das mudanças na versão atual"
+        examples: ["Adição de critério de impact para avaliação"]
+      
+      validation_status:
+        type: string
+        description: "Status de validação da configuração"
+        enum: ["valid", "pending", "invalid"]
+        examples: ["valid"]
+      
+      compliance_tags:
+        type: array
+        description: "Tags de conformidade regulatória"
+        items:
+          type: string
+        examples: [["lgpd", "iso27001", "sox"]]
+    additionalProperties: false
+
+additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO ===
+allOf:
+  # Validar consistência de hierarquia de escopo
+  - properties:
+      hierarchies:
+        properties:
+          scope:
+            properties:
+              nodes:
+                patternProperties:
+                  "^[a-z0-9-]+$":
+                    if:
+                      properties:
+                        parent:
+                          not:
+                            const: null
+                    then:
+                      # Parent deve existir nos nós
+                      false
+                    
+  # Validar consistência de pesos de critérios
+  - properties:
+      hierarchies:
+        properties:
+          evaluation_criteria:
+            properties:
+              nodes:
+                # Soma de pesos deve ser <= 1.0
+                allOf: []

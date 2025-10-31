@@ -1,0 +1,632 @@
+# ZOF Enrichment Evaluation Schema v1.0.0
+# Zion Orchestration Framework - Avaliação EvaluateForEnrich
+# Especificação canônica normativa para checkpoint EvaluateForEnrich
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/zof/enrichment-evaluation/1.0.0"
+version: "1.0.0"
+title: "ZOF Enrichment Evaluation Schema"
+description: "Schema canônico para checkpoint EvaluateForEnrich no ZOF"
+
+type: object
+required:
+  - schema
+  - evaluation_id
+  - workflow_ref
+  - act_output
+  - user_context
+  - evaluation_result
+  - metadata
+
+properties:
+  # === METADADOS OBRIGATÓRIOS ===
+  schema:
+    type: string
+    description: "Versão do schema ZOF Enrichment Evaluation utilizado"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1"]
+
+  evaluation_id:
+    type: string
+    description: "Identificador único da avaliação"
+    pattern: "^zof-eval-[a-z0-9-]+-[0-9]+$"
+    examples: ["zof-eval-auth-flow-001", "zof-eval-request-workflow-042"]
+
+  workflow_ref:
+    type: string
+    description: "Referência ao workflow ZOF"
+    pattern: "^zof-[a-z0-9-]+$"
+    examples: ["zof-request-flow", "zof-auth-jwt-implementation"]
+
+  # === ENTRADA DA AVALIAÇÃO ===
+  act_output:
+    type: object
+    description: "Output do estado Act a ser avaliado para enriquecimento"
+    required: ["result_type", "content", "metadata"]
+    properties:
+      result_type:
+        type: string
+        description: "Tipo de resultado produzido"
+        enum: [
+          "implementation",
+          "documentation",
+          "configuration",
+          "process",
+          "decision",
+          "pattern",
+          "guideline",
+          "policy"
+        ]
+        examples: ["implementation", "pattern"]
+
+      content:
+        type: string
+        description: "Conteúdo do resultado a ser avaliado"
+        minLength: 100
+        examples: 
+          - "Implementação de autenticação JWT com refresh tokens e validação de claims específicos para contexto organizacional"
+
+      metadata:
+        type: object
+        description: "Metadados do resultado"
+        required: ["created_at", "creator"]
+        properties:
+          created_at:
+            type: string
+            format: date-time
+            description: "Timestamp de criação do resultado"
+
+          creator:
+            type: string
+            description: "Criador do resultado"
+            examples: ["user:developer", "system:automated"]
+
+          complexity_score:
+            type: number
+            description: "Pontuação de complexidade (0.0 a 1.0)"
+            minimum: 0
+            maximum: 1
+
+          related_ukis:
+            type: array
+            description: "UKIs relacionadas consultadas durante Act"
+            items:
+              type: string
+              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+
+          technologies_used:
+            type: array
+            description: "Tecnologias utilizadas no resultado"
+            items:
+              type: string
+        additionalProperties: true
+    additionalProperties: false
+
+  # === CONTEXTO DO USUÁRIO ===
+  user_context:
+    type: object
+    description: "Contexto do usuário solicitando o enriquecimento"
+    required: ["user_id", "moc_context"]
+    properties:
+      user_id:
+        type: string
+        description: "Identificador único do usuário"
+        examples: ["dev001", "john.doe"]
+
+      moc_context:
+        type: object
+        description: "Contexto MOC do usuário"
+        required: ["scope_level", "domain_access", "authority_level"]
+        properties:
+          scope_level:
+            type: string
+            description: "Nível de escopo do usuário"
+            pattern: "^[a-z0-9-]+$"
+            examples: ["squad", "tribe", "organization"]
+
+          domain_access:
+            type: array
+            description: "Domínios acessíveis ao usuário"
+            items:
+              type: string
+              pattern: "^[a-z0-9-]+$"
+            examples: [["technical", "business"]]
+
+          authority_level:
+            type: string
+            description: "Nível de autoridade do usuário"
+            examples: ["developer", "tech_lead", "architect"]
+
+          escalation_paths:
+            type: array
+            description: "Caminhos de escalação disponíveis"
+            items:
+              type: string
+            examples: [["team_lead", "architect", "cto"]]
+        additionalProperties: false
+
+      session_context:
+        type: object
+        description: "Contexto da sessão atual"
+        properties:
+          session_id:
+            type: string
+            description: "ID da sessão"
+
+          workflow_history:
+            type: array
+            description: "Histórico de workflows na sessão"
+            items:
+              type: string
+
+          current_task:
+            type: string
+            description: "Tarefa atual sendo executada"
+        additionalProperties: true
+    additionalProperties: false
+
+  # === RESULTADO DA AVALIAÇÃO ===
+  evaluation_result:
+    type: object
+    description: "Resultado da avaliação EvaluateForEnrich"
+    required: ["can_enrich_decision", "moc_criteria_results", "authority_validation", "justification"]
+    properties:
+      
+      # --- DECISÃO CAN_ENRICH ---
+      can_enrich_decision:
+        type: object
+        description: "Resultado da função can_enrich?()"
+        required: ["approved", "confidence_score", "evaluation_method"]
+        properties:
+          approved:
+            type: boolean
+            description: "Aprovado para enriquecimento"
+            examples: [true, false]
+
+          confidence_score:
+            type: number
+            description: "Pontuação de confiança (0.0 a 1.0)"
+            minimum: 0
+            maximum: 1
+            examples: [0.85, 0.72]
+
+          evaluation_method:
+            type: string
+            description: "Método usado para avaliação"
+            enum: ["minimum_profile", "automated", "manual", "hybrid"]
+            examples: ["minimum_profile", "automated"]
+
+          scoring_breakdown:
+            type: object
+            description: "Detalhamento da pontuação"
+            properties:
+              semantic_novelty:
+                type: number
+                minimum: 0
+                maximum: 1
+              
+              practical_value:
+                type: number
+                minimum: 0
+                maximum: 1
+              
+              basic_authority:
+                type: number
+                minimum: 0
+                maximum: 1
+            additionalProperties: true
+        additionalProperties: false
+
+      # --- RESULTADOS CRITÉRIOS MOC ---
+      moc_criteria_results:
+        type: object
+        description: "Resultados da consulta aos critérios MOC"
+        required: ["criteria_source", "profile_used", "individual_results", "overall_result"]
+        properties:
+          criteria_source:
+            type: string
+            description: "Fonte dos critérios no MOC"
+            pattern: "^hierarchies\\.evaluation_criteria\\.nodes$"
+            examples: ["hierarchies.evaluation_criteria.nodes"]
+
+          profile_used:
+            type: string
+            description: "Perfil de avaliação utilizado"
+            examples: ["standard", "critical", "minimal"]
+
+          individual_results:
+            type: object
+            description: "Resultados individuais por critério"
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                required: ["criterion_name", "result", "score", "threshold_met"]
+                properties:
+                  criterion_name:
+                    type: string
+                    description: "Nome do critério"
+                    examples: ["relevance", "reusability", "impact"]
+
+                  result:
+                    type: string
+                    description: "Resultado da avaliação"
+                    enum: ["pass", "fail", "warning", "not_applicable"]
+                    examples: ["pass", "fail"]
+
+                  score:
+                    type: number
+                    description: "Pontuação obtida"
+                    minimum: 0
+                    maximum: 1
+
+                  threshold_met:
+                    type: boolean
+                    description: "Limiar de aprovação atingido"
+
+                  explanation:
+                    type: string
+                    description: "Explicação do resultado"
+                    examples: ["Outros desenvolvedores enfrentarão mesmo problema"]
+
+                  evidence:
+                    type: array
+                    description: "Evidências suportando o resultado"
+                    items:
+                      type: string
+                additionalProperties: false
+            additionalProperties: false
+
+          overall_result:
+            type: object
+            description: "Resultado geral da avaliação MOC"
+            required: ["passed", "score", "execution_method"]
+            properties:
+              passed:
+                type: boolean
+                description: "Passou na avaliação geral"
+
+              score:
+                type: number
+                description: "Pontuação geral ponderada"
+                minimum: 0
+                maximum: 1
+
+              execution_method:
+                type: string
+                description: "Método de execução usado"
+                enum: ["all_pass_required", "weighted_scoring", "any_pass"]
+                examples: ["weighted_scoring"]
+
+              minimum_score_met:
+                type: boolean
+                description: "Pontuação mínima atingida (se weighted_scoring)"
+
+              failed_criteria:
+                type: array
+                description: "Critérios que falharam"
+                items:
+                  type: string
+            additionalProperties: false
+        additionalProperties: false
+
+      # --- VALIDAÇÃO DE AUTORIDADE ---
+      authority_validation:
+        type: object
+        description: "Resultado da validação de autoridade"
+        required: ["authorized", "validation_method", "required_authority"]
+        properties:
+          authorized:
+            type: boolean
+            description: "Usuário autorizado para enriquecimento"
+
+          validation_method:
+            type: string
+            description: "Método de validação utilizado"
+            enum: ["moc_based", "role_based", "hybrid"]
+            examples: ["moc_based"]
+
+          required_authority:
+            type: string
+            description: "Autoridade necessária identificada"
+            examples: ["squad_lead", "tech_lead"]
+
+          user_authority:
+            type: string
+            description: "Autoridade atual do usuário"
+            examples: ["developer", "tech_lead"]
+
+          escalation_hint:
+            type: string
+            description: "Sugestão de escalação (se não autorizado)"
+            examples: ["Solicitar aprovação via team_lead"]
+
+          moc_nodes_cited:
+            type: array
+            description: "Nós MOC usados na validação"
+            items:
+              type: string
+            examples: [["hierarchies.scope.squad", "hierarchies.domain.technical"]]
+        additionalProperties: false
+
+      # --- JUSTIFICATIVA EPISTÊMICA ---
+      justification:
+        type: object
+        description: "Justificativa epistêmica da decisão"
+        required: ["summary", "reasoning", "mep_alignment"]
+        properties:
+          summary:
+            type: string
+            description: "Resumo da justificativa"
+            minLength: 50
+            examples: 
+              - "Conhecimento aprovado baseado em relevância alta e autoridade adequada"
+
+          reasoning:
+            type: string
+            description: "Raciocínio detalhado"
+            minLength: 100
+            examples: 
+              - "O resultado demonstra valor prático significativo para outros desenvolvedores enfrentando problemas similares de autenticação JWT..."
+
+          mep_alignment:
+            type: object
+            description: "Alinhamento com princípios MEP"
+            properties:
+              epistemic_humility:
+                type: string
+                description: "Como demonstra humildade epistêmica"
+
+              derived_authority:
+                type: string
+                description: "Como respeita autoridade derivada"
+
+              contextual_knowledge:
+                type: string
+                description: "Como reconhece conhecimento contextual"
+
+              responsible_promotion:
+                type: string
+                description: "Como pratica promoção responsável"
+
+              explanatory_coherence:
+                type: string
+                description: "Como mantém coerência explicativa"
+            additionalProperties: false
+        additionalProperties: false
+
+      # --- DETECÇÃO DE CONFLITOS ---
+      conflict_detection:
+        type: object
+        description: "Resultado da detecção de conflitos H1/H2/H3"
+        properties:
+          conflicts_detected:
+            type: boolean
+            description: "Conflitos foram detectados"
+            default: false
+
+          conflict_types:
+            type: array
+            description: "Tipos de conflito detectados"
+            items:
+              type: string
+              enum: ["H1", "H2", "H3"]
+
+          conflicting_ukis:
+            type: array
+            description: "UKIs em conflito identificadas"
+            items:
+              type: string
+              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+
+          mal_invocation_required:
+            type: boolean
+            description: "Invocação MAL necessária"
+            default: false
+
+          mal_event_ref:
+            type: string
+            description: "Referência ao evento MAL (se invocado)"
+            pattern: "^mal-evt-[0-9]{8}-[0-9]+$"
+        additionalProperties: false
+
+      # --- CONFIGURAÇÃO DE ESCOPO ---
+      scope_mode_validation:
+        type: object
+        description: "Validação de modo de escopo para operações multi-escopo"
+        properties:
+          scope_mode:
+            type: string
+            description: "Modo de escopo aplicado"
+            enum: ["any", "all"]
+            examples: ["any", "all"]
+
+          affected_scopes:
+            type: array
+            description: "Escopos afetados pelo enriquecimento"
+            items:
+              type: string
+            examples: [["squad-a", "squad-b"]]
+
+          validation_results:
+            type: object
+            description: "Resultados por escopo"
+            patternProperties:
+              "^[a-z0-9-]+$":
+                type: object
+                properties:
+                  scope_name:
+                    type: string
+                  validated:
+                    type: boolean
+                  reason:
+                    type: string
+                additionalProperties: false
+            additionalProperties: false
+
+          overall_validation:
+            type: boolean
+            description: "Validação geral do modo de escopo"
+        additionalProperties: false
+    additionalProperties: false
+
+  # === AÇÕES RECOMENDADAS ===
+  recommended_actions:
+    type: array
+    description: "Ações recomendadas baseadas na avaliação"
+    items:
+      type: object
+      required: ["action_type", "description", "priority"]
+      properties:
+        action_type:
+          type: string
+          description: "Tipo de ação recomendada"
+          enum: [
+            "proceed_to_enrich",
+            "proceed_to_review",
+            "request_approval",
+            "escalate_authority",
+            "invoke_mal",
+            "gather_more_evidence",
+            "refine_result",
+            "abort_workflow"
+          ]
+          examples: ["proceed_to_enrich", "request_approval"]
+
+        description:
+          type: string
+          description: "Descrição da ação"
+          minLength: 20
+          examples: ["Prosseguir para enriquecimento do Oracle com conhecimento validado"]
+
+        priority:
+          type: string
+          description: "Prioridade da ação"
+          enum: ["low", "medium", "high", "critical"]
+          examples: ["high", "medium"]
+
+        parameters:
+          type: object
+          description: "Parâmetros específicos da ação"
+          additionalProperties: true
+      additionalProperties: false
+
+  # === METADADOS ===
+  metadata:
+    type: object
+    description: "Metadados da avaliação"
+    required: ["evaluation_timestamp", "evaluator", "duration_ms"]
+    properties:
+      evaluation_timestamp:
+        type: string
+        format: date-time
+        description: "Timestamp da avaliação"
+
+      evaluator:
+        type: string
+        description: "Entidade que executou a avaliação"
+        examples: ["workflow-agent", "manual-reviewer", "automated-system"]
+
+      duration_ms:
+        type: integer
+        description: "Duração da avaliação em milissegundos"
+        minimum: 0
+
+      evaluation_version:
+        type: string
+        description: "Versão do sistema de avaliação"
+        examples: ["zof-eval-v1.0.0"]
+
+      performance_metrics:
+        type: object
+        description: "Métricas de performance da avaliação"
+        properties:
+          moc_query_time_ms:
+            type: integer
+            description: "Tempo de consulta ao MOC"
+
+          criteria_evaluation_time_ms:
+            type: integer
+            description: "Tempo de avaliação de critérios"
+
+          authority_validation_time_ms:
+            type: integer
+            description: "Tempo de validação de autoridade"
+
+          conflict_detection_time_ms:
+            type: integer
+            description: "Tempo de detecção de conflitos"
+        additionalProperties: true
+
+      environment_info:
+        type: object
+        description: "Informações do ambiente de execução"
+        properties:
+          system_version:
+            type: string
+            description: "Versão do sistema ZOF"
+
+          moc_version:
+            type: string
+            description: "Versão da configuração MOC"
+
+          evaluation_mode:
+            type: string
+            enum: ["development", "staging", "production"]
+        additionalProperties: true
+    additionalProperties: false
+
+additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO ===
+allOf:
+  # Se can_enrich_decision.approved = false, não deve prosseguir para enrich
+  - if:
+      properties:
+        evaluation_result:
+          properties:
+            can_enrich_decision:
+              properties:
+                approved:
+                  const: false
+    then:
+      properties:
+        recommended_actions:
+          not:
+            contains:
+              properties:
+                action_type:
+                  const: "proceed_to_enrich"
+
+  # Se authority_validation.authorized = false, deve ter ação de escalação
+  - if:
+      properties:
+        evaluation_result:
+          properties:
+            authority_validation:
+              properties:
+                authorized:
+                  const: false
+    then:
+      properties:
+        recommended_actions:
+          contains:
+            properties:
+              action_type:
+                enum: ["request_approval", "escalate_authority"]
+
+  # Se conflitos detectados, deve ter ação MAL
+  - if:
+      properties:
+        evaluation_result:
+          properties:
+            conflict_detection:
+              properties:
+                conflicts_detected:
+                  const: true
+    then:
+      properties:
+        recommended_actions:
+          contains:
+            properties:
+              action_type:
+                const: "invoke_mal"

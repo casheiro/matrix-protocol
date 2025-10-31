@@ -1,0 +1,374 @@
+# MOC Evaluation Criteria Schema v1.0.0
+# Matrix Ontology Catalog - Critérios de Avaliação para EvaluateForEnrich
+# Especificação canônica normativa para critérios organizacionais de enriquecimento
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/moc/evaluation-criteria/1.0.0"
+version: "1.0.0"
+title: "MOC Evaluation Criteria Schema"
+description: "Schema canônico para critérios de avaliação EvaluateForEnrich no MOC"
+
+type: object
+required:
+  - schema
+  - organization_id
+  - version
+  - evaluation_profiles
+  - default_profile
+  - metadata
+
+properties:
+  # === METADADOS OBRIGATÓRIOS ===
+  schema:
+    type: string
+    description: "Versão do schema MOC Evaluation Criteria utilizado"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1"]
+
+  organization_id:
+    type: string
+    description: "Identificador único da organização"
+    pattern: "^[a-z0-9-]+$"
+    examples: ["techcorp", "startup-alpha"]
+
+  version:
+    type: string
+    description: "Versão da configuração de critérios"
+    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+    examples: ["1.0", "2.1"]
+
+  # === PERFIS DE AVALIAÇÃO ===
+  evaluation_profiles:
+    type: object
+    description: "Perfis de critérios para diferentes contextos organizacionais"
+    minProperties: 1
+    patternProperties:
+      "^[a-z0-9_-]+$":
+        type: object
+        required: ["display_name", "description", "criteria", "applicable_contexts"]
+        properties:
+          display_name:
+            type: string
+            description: "Nome exibível do perfil de avaliação"
+            examples: ["Perfil Padrão", "Perfil Crítico", "Perfil Experimental"]
+
+          description:
+            type: string
+            description: "Descrição do perfil e quando usar"
+            minLength: 50
+            examples: 
+              - "Perfil padrão para avaliação de conhecimento em contextos regulares"
+
+          # --- CRITÉRIOS ESPECÍFICOS ---
+          criteria:
+            type: object
+            description: "Critérios de avaliação específicos do perfil"
+            minProperties: 1
+            patternProperties:
+              "^[a-z0-9_]+$":
+                type: object
+                required: ["display_name", "description", "evaluation_method", "threshold", "weight"]
+                properties:
+                  display_name:
+                    type: string
+                    description: "Nome exibível do critério"
+                    examples: ["Relevância", "Reutilização", "Impacto", "Novidade"]
+
+                  description:
+                    type: string
+                    description: "Descrição detalhada do critério"
+                    minLength: 30
+                    examples:
+                      - "Avalia se o conhecimento é relevante para outros membros da equipe"
+
+                  evaluation_method:
+                    type: string
+                    description: "Método de avaliação do critério"
+                    enum: ["manual", "automated", "hybrid", "semantic"]
+                    examples: ["manual", "semantic"]
+
+                  threshold:
+                    type: object
+                    description: "Configuração de limiar para aprovação"
+                    required: ["type", "value"]
+                    properties:
+                      type:
+                        type: string
+                        description: "Tipo de limiar"
+                        enum: ["binary", "numeric", "percentage", "categorical"]
+                        examples: ["binary", "percentage"]
+
+                      value:
+                        description: "Valor do limiar"
+                        oneOf:
+                          - type: boolean
+                          - type: number
+                            minimum: 0
+                            maximum: 1
+                          - type: string
+                            enum: ["low", "medium", "high", "critical"]
+                        examples: [true, 0.7, "medium"]
+
+                      operator:
+                        type: string
+                        description: "Operador de comparação"
+                        enum: [">=", ">", "<=", "<", "==", "!="]
+                        default: ">="
+                        examples: [">=", ">"]
+                    additionalProperties: false
+
+                  weight:
+                    type: number
+                    description: "Peso relativo do critério (0.0 a 1.0)"
+                    minimum: 0.0
+                    maximum: 1.0
+                    examples: [0.25, 0.35, 0.4]
+
+                  # --- CONFIGURAÇÕES AVANÇADAS ---
+                  scoring_algorithm:
+                    type: string
+                    description: "Algoritmo específico de pontuação"
+                    enum: ["boolean", "linear", "logarithmic", "exponential", "custom"]
+                    default: "boolean"
+                    examples: ["linear", "boolean"]
+
+                  custom_evaluator:
+                    type: string
+                    description: "Função customizada de avaliação"
+                    examples: ["semantic_similarity", "business_value_calculator"]
+
+                  failure_action:
+                    type: string
+                    description: "Ação quando critério falha"
+                    enum: ["block", "warn", "defer", "escalate"]
+                    default: "block"
+                    examples: ["block", "escalate"]
+
+                  dependencies:
+                    type: array
+                    description: "Critérios que devem passar primeiro"
+                    items:
+                      type: string
+                      pattern: "^[a-z0-9_]+$"
+                    examples: [["relevance", "authority"]]
+
+                  exemptions:
+                    type: array
+                    description: "Contextos onde critério pode ser ignorado"
+                    items:
+                      type: object
+                      required: ["condition", "reason"]
+                      properties:
+                        condition:
+                          type: string
+                          description: "Condição para isenção"
+                          examples: ["maturity_ref == 'experimental'"]
+                        reason:
+                          type: string
+                          description: "Justificativa para isenção"
+                        authority_required:
+                          type: string
+                          description: "Autoridade necessária para isenção"
+                      additionalProperties: false
+                additionalProperties: false
+            additionalProperties: false
+
+          # --- CONTEXTOS APLICÁVEIS ---
+          applicable_contexts:
+            type: object
+            description: "Contextos onde este perfil se aplica"
+            properties:
+              scopes:
+                type: array
+                description: "Escopos organizacionais aplicáveis"
+                items:
+                  type: string
+                  pattern: "^[a-z0-9-]+$"
+                examples: [["squad", "tribe", "organization"]]
+
+              domains:
+                type: array
+                description: "Domínios de conhecimento aplicáveis"
+                items:
+                  type: string
+                  pattern: "^[a-z0-9-]+$"
+                examples: [["technical", "business", "security"]]
+
+              maturity_levels:
+                type: array
+                description: "Níveis de maturidade aplicáveis"
+                items:
+                  type: string
+                  pattern: "^[a-z0-9_]+$"
+                examples: [["draft", "experimental", "validated"]]
+
+              knowledge_types:
+                type: array
+                description: "Tipos de conhecimento aplicáveis"
+                items:
+                  type: string
+                  pattern: "^[a-z0-9_]+$"
+                examples: [["pattern", "guideline", "policy"]]
+
+              user_roles:
+                type: array
+                description: "Papéis de usuário que usam este perfil"
+                items:
+                  type: string
+                examples: [["developer", "tech_lead", "architect"]]
+            additionalProperties: false
+
+          # --- CONFIGURAÇÕES DE EXECUÇÃO ---
+          execution_config:
+            type: object
+            description: "Configurações de execução da avaliação"
+            properties:
+              timeout_ms:
+                type: integer
+                description: "Timeout para execução da avaliação"
+                minimum: 100
+                maximum: 60000
+                default: 5000
+                examples: [5000, 10000]
+
+              parallel_execution:
+                type: boolean
+                description: "Permite execução paralela de critérios"
+                default: true
+
+              fail_fast:
+                type: boolean
+                description: "Para na primeira falha de critério"
+                default: false
+
+              require_all_pass:
+                type: boolean
+                description: "Requer que todos os critérios passem"
+                default: true
+
+              weighted_scoring:
+                type: boolean
+                description: "Usa pontuação ponderada ao invés de all-or-nothing"
+                default: false
+
+              minimum_score:
+                type: number
+                description: "Pontuação mínima para aprovação (se weighted_scoring=true)"
+                minimum: 0.0
+                maximum: 1.0
+                examples: [0.7, 0.8]
+            additionalProperties: false
+        additionalProperties: false
+    additionalProperties: false
+
+  # === PERFIL PADRÃO ===
+  default_profile:
+    type: string
+    description: "ID do perfil de avaliação padrão"
+    pattern: "^[a-z0-9_-]+$"
+    examples: ["standard", "default", "minimal"]
+
+  # === MAPEAMENTO DE CONTEXTO ===
+  context_mapping:
+    type: object
+    description: "Mapeamento de contextos para perfis específicos"
+    properties:
+      scope_overrides:
+        type: object
+        description: "Perfis específicos por escopo"
+        patternProperties:
+          "^[a-z0-9-]+$":
+            type: string
+            pattern: "^[a-z0-9_-]+$"
+        examples: 
+          organization: "critical"
+          squad: "standard"
+
+      domain_overrides:
+        type: object
+        description: "Perfis específicos por domínio"
+        patternProperties:
+          "^[a-z0-9-]+$":
+            type: string
+            pattern: "^[a-z0-9_-]+$"
+        examples:
+          security: "critical"
+          experimental: "minimal"
+
+      maturity_overrides:
+        type: object
+        description: "Perfis específicos por nível de maturidade"
+        patternProperties:
+          "^[a-z0-9_]+$":
+            type: string
+            pattern: "^[a-z0-9_-]+$"
+        examples:
+          validated: "critical"
+          draft: "minimal"
+    additionalProperties: false
+
+  # === METADADOS ===
+  metadata:
+    type: object
+    description: "Metadados da configuração de critérios"
+    required: ["created_date", "last_modified", "maintainer"]
+    properties:
+      created_date:
+        type: string
+        format: date
+        description: "Data de criação da configuração"
+
+      last_modified:
+        type: string
+        format: date
+        description: "Data da última modificação"
+
+      maintainer:
+        type: string
+        description: "Responsável pela manutenção dos critérios"
+        examples: ["governance-team", "platform-team"]
+
+      change_summary:
+        type: string
+        description: "Resumo das mudanças na versão atual"
+
+      validation_status:
+        type: string
+        description: "Status de validação da configuração"
+        enum: ["valid", "pending", "invalid"]
+
+      testing_results:
+        type: object
+        description: "Resultados de testes dos critérios"
+        properties:
+          last_test_date:
+            type: string
+            format: date
+          test_coverage:
+            type: number
+            minimum: 0
+            maximum: 1
+          success_rate:
+            type: number
+            minimum: 0
+            maximum: 1
+        additionalProperties: false
+    additionalProperties: false
+
+additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO ===
+allOf:
+  # Validar que default_profile existe em evaluation_profiles
+  - properties:
+      default_profile:
+        description: "Deve existir em evaluation_profiles"
+  
+  # Validar que soma de pesos por perfil não excede 1.0
+  - properties:
+      evaluation_profiles:
+        patternProperties:
+          "^[a-z0-9_-]+$":
+            properties:
+              criteria:
+                description: "Soma de pesos deve ser <= 1.0"

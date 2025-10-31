@@ -1,0 +1,334 @@
+# MEF UKI Schema v1.0.0
+# Matrix Embedding Framework - Units of Knowledge Interlinked
+# Normative canonical specification for UKI structuring
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/mef/uki/1.0.0"
+version: "1.0.0"
+title: "MEF UKI Schema"
+description: "Canonical schema for Units of Knowledge Interlinked in Matrix Protocol"
+
+type: object
+required:
+  - schema
+  - id
+  - title
+  - version
+  - scope_ref
+  - domain_ref
+  - type_ref
+  - maturity_ref
+  - created_date
+  - last_modified
+  - status
+  - content
+
+properties:
+  # === MANDATORY METADATA ===
+  schema:
+    type: string
+    description: "MEF UKI schema version used"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1", "2.0"]
+
+  id:
+    type: string
+    description: "Unique identifier in format uki:[scope_ref]:[type_ref]:[slug]"
+    pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+    examples: 
+      - "uki:squad-payments:business_rule:discount-logic-001"
+      - "uki:tribe-platform:pattern:authentication-jwt"
+
+  title:
+    type: string
+    description: "Descriptive and objective UKI title"
+    minLength: 10
+    maxLength: 200
+    examples: 
+      - "Volume and Coupon Discount Rules"
+      - "JWT Authentication Pattern for APIs"
+
+  version:
+    type: string
+    description: "Semantic versioning MAJOR.MINOR.PATCH"
+    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+    examples: ["1.0.0", "2.1.3", "0.5.0"]
+
+  # === MANDATORY MOC REFERENCES ===
+  scope_ref:
+    type: string
+    description: "Referência ao nó de escopo definido no MOC organizacional"
+    pattern: "^[a-z0-9-]+$"
+    examples: ["squad-payments", "tribe-platform", "organization"]
+
+  domain_ref:
+    type: string
+    description: "Referência ao nó de domínio definido no MOC organizacional"
+    pattern: "^[a-z0-9-]+$"
+    examples: ["business", "technical", "security", "compliance"]
+
+  type_ref:
+    type: string
+    description: "Referência ao tipo de conhecimento definido no MOC organizacional"
+    pattern: "^[a-z0-9_]+$"
+    examples: ["business_rule", "pattern", "guideline", "policy", "procedure"]
+
+  maturity_ref:
+    type: string
+    description: "Referência ao nível de maturidade definido no MOC organizacional"
+    pattern: "^[a-z0-9_]+$"
+    examples: ["draft", "experimental", "endorsed", "validated", "deprecated"]
+
+  # === CONTROLE DE VIDA OBRIGATÓRIO ===
+  created_date:
+    type: string
+    format: date
+    description: "Data de criação da UKI"
+    examples: ["2024-03-25", "2025-01-15"]
+
+  last_modified:
+    type: string
+    format: date
+    description: "Data da última modificação"
+    examples: ["2024-03-25", "2025-01-15"]
+
+  status:
+    type: string
+    description: "Estado do ciclo de vida da UKI"
+    enum: ["active", "deprecated", "archived", "sunset"]
+    examples: ["active", "deprecated"]
+
+  # === CONTEÚDO OBRIGATÓRIO ===
+  content:
+    type: string
+    description: "Conhecimento estruturado específico em formato markdown"
+    minLength: 50
+    examples: 
+      - "## Regras de Desconto\n\nAplicação automática baseada no valor total..."
+
+  # === CAMPOS OPCIONAIS ===
+  ontology_reference:
+    type: string
+    description: "Referência à versão específica do MOC organizacional"
+    pattern: "^moc:[a-z0-9-]+:v[0-9]+\\.[0-9]+$"
+    examples: ["moc:squad-payments:v1.0", "moc:organization:v2.1"]
+
+  scope_mode:
+    type: string
+    description: "Modo de propagação do conhecimento entre escopos"
+    enum: ["restricted", "propagated"]
+    default: "restricted"
+    examples: ["restricted", "propagated"]
+
+  change_summary:
+    type: string
+    description: "Resumo das mudanças (obrigatório para versões > 1.0.0)"
+    minLength: 20
+    maxLength: 500
+    examples: 
+      - "Consolidação de regras conflitantes sobre descontos e definição de precedência"
+
+  change_impact:
+    type: string
+    description: "Classificação do impacto da mudança"
+    enum: ["major", "minor", "patch"]
+    examples: ["minor", "major"]
+
+  previous_version:
+    type: string
+    description: "Versão anterior quando aplicável"
+    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+    examples: ["1.0.0", "2.0.3"]
+
+  # === EXEMPLOS E VALIDAÇÕES ===
+  examples:
+    type: array
+    description: "Exemplos práticos de uso da UKI"
+    items:
+      type: object
+      required: ["input", "output"]
+      properties:
+        input:
+          type: string
+          description: "Cenário ou entrada do exemplo"
+        output:
+          type: string
+          description: "Resultado ou saída esperada"
+        description:
+          type: string
+          description: "Explicação adicional do exemplo"
+      additionalProperties: false
+
+  validations:
+    type: array
+    description: "Regras de validação ou verificação"
+    items:
+      type: object
+      required: ["rule", "description"]
+      properties:
+        rule:
+          type: string
+          description: "Nome ou identificador da regra"
+        description:
+          type: string
+          description: "Descrição da validação"
+        severity:
+          type: string
+          enum: ["error", "warning", "info"]
+          default: "error"
+      additionalProperties: false
+
+  # === RELACIONAMENTOS OBRIGATÓRIOS ===
+  relationships:
+    type: array
+    description: "Conexões tipadas com outras UKIs"
+    items:
+      type: object
+      required: ["type", "target", "description"]
+      properties:
+        type:
+          type: string
+          description: "Tipo de relacionamento"
+          enum: [
+            "depends_on",
+            "overrides", 
+            "conflicts_with",
+            "complements",
+            "amends",
+            "precedes",
+            "equivalent_to",
+            "implements",
+            "relates_to",
+            "supersedes"
+          ]
+        target:
+          type: string
+          description: "Identificador da UKI relacionada"
+          pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+        description:
+          type: string
+          description: "Descrição específica do relacionamento"
+          minLength: 10
+        strength:
+          type: string
+          description: "Força do relacionamento"
+          enum: ["weak", "moderate", "strong"]
+          default: "moderate"
+      additionalProperties: false
+
+  # === CAMPOS ESTENDIDOS ===
+  tags:
+    type: array
+    description: "Tags para categorização e busca"
+    items:
+      type: string
+      pattern: "^[a-z0-9-]+$"
+    uniqueItems: true
+    examples: [["payment", "discount", "validation"]]
+
+  authors:
+    type: array
+    description: "Autores ou responsáveis pela UKI"
+    items:
+      type: object
+      required: ["name", "role"]
+      properties:
+        name:
+          type: string
+          description: "Nome do autor"
+        role:
+          type: string
+          description: "Papel do autor"
+        email:
+          type: string
+          format: email
+          description: "Email de contato"
+      additionalProperties: false
+
+  domain_of_influence:
+    type: string
+    description: "Domínio organizacional de influência"
+    examples: ["engineering_teams", "business_units", "compliance_department"]
+
+  # === INTEGRAÇÃO MAL ===
+  decision_record_ref:
+    type: string
+    description: "Referência ao Decision Record MAL (quando aplicável)"
+    pattern: "^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$"
+    examples: ["mal-dec-20250826-h1-001"]
+
+  arbitration_metadata:
+    type: object
+    description: "Metadados de arbitragem quando UKI resulta de decisão MAL"
+    properties:
+      conflict_type:
+        type: string
+        enum: ["H1", "H2", "H3"]
+        description: "Tipo de conflito arbitrado"
+      resolution_outcome:
+        type: string
+        enum: ["winner", "coexist", "reject_all", "defer"]
+        description: "Resultado da arbitragem"
+      arbitrated_at:
+        type: string
+        format: date-time
+        description: "Timestamp da arbitragem"
+    additionalProperties: false
+
+  # === GOVERNANÇA E AUDITORIA ===
+  governance:
+    type: object
+    description: "Informações de governança e auditoria"
+    properties:
+      approval_authority:
+        type: string
+        description: "Autoridade que aprovou a UKI"
+      approval_date:
+        type: string
+        format: date
+        description: "Data de aprovação"
+      review_cycle:
+        type: string
+        description: "Ciclo de revisão (quarterly, yearly, etc.)"
+      compliance_tags:
+        type: array
+        description: "Tags de conformidade regulatória"
+        items:
+          type: string
+    additionalProperties: false
+
+additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO CONDICIONAIS ===
+allOf:
+  - if:
+      properties:
+        version:
+          not:
+            const: "1.0.0"
+    then:
+      required: ["change_summary", "change_impact"]
+      
+  - if:
+      properties:
+        change_impact:
+          const: "major"
+    then:
+      required: ["previous_version"]
+
+  - if:
+      properties:
+        status:
+          const: "deprecated"
+    then:
+      required: ["change_summary"]
+      properties:
+        change_summary:
+          pattern: ".*deprecat.*"
+
+  - if:
+      properties:
+        arbitration_metadata:
+          type: "object"
+    then:
+      required: ["decision_record_ref"]
