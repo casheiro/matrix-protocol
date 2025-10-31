@@ -1,0 +1,592 @@
+# ZOF Workflow Schema v1.0.0
+# Zion Orchestration Framework - Definição de Workflows
+# Especificação canônica normativa para workflows conceituais orientados a IA
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://matrix-protocol.org/schemas/zof/workflow/1.0.0"
+version: "1.0.0"
+title: "ZOF Workflow Schema"
+description: "Schema canônico para definição de workflows ZOF no Matrix Protocol"
+
+type: object
+required:
+  - schema
+  - workflow_id
+  - title
+  - version
+  - canonical_states
+  - trigger_events
+  - metadata
+
+properties:
+  # === METADADOS OBRIGATÓRIOS ===
+  schema:
+    type: string
+    description: "Versão do schema ZOF Workflow utilizado"
+    pattern: "^[0-9]+\\.[0-9]+$"
+    examples: ["1.0", "1.1"]
+
+  workflow_id:
+    type: string
+    description: "Identificador único do workflow"
+    pattern: "^zof-[a-z0-9-]+$"
+    examples: ["zof-request-flow", "zof-auth-jwt-implementation"]
+
+  title:
+    type: string
+    description: "Título descritivo do workflow"
+    minLength: 10
+    maxLength: 200
+    examples: 
+      - "Workflow de Implementação de Funcionalidade"
+      - "Fluxo de Autenticação JWT"
+
+  version:
+    type: string
+    description: "Versão do workflow (versionamento semântico)"
+    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+    examples: ["1.0.0", "2.1.3"]
+
+  # === ESTADOS CANÔNICOS OBRIGATÓRIOS ===
+  canonical_states:
+    type: object
+    description: "Sequência obrigatória de estados canônicos ZOF"
+    required: ["intake", "understand", "decide", "act", "evaluate_for_enrich", "review", "enrich"]
+    properties:
+      
+      intake:
+        type: object
+        description: "Estado de captura de contexto e requisitos"
+        required: ["description", "signals", "transitions"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado intake"
+            examples: ["Captura de contexto e requisitos iniciais"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            description: "Transições possíveis do estado intake"
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          activities:
+            type: array
+            description: "Atividades executadas no estado"
+            items:
+              type: string
+            examples: [["Coleta de requisitos", "Análise de contexto"]]
+          
+          completion_criteria:
+            type: array
+            description: "Critérios para completar o estado"
+            items:
+              type: string
+            examples: [["Requisitos documentados", "Contexto compreendido"]]
+        additionalProperties: false
+
+      understand:
+        type: object
+        description: "Estado de consulta obrigatória ao Oracle (UKIs)"
+        required: ["description", "signals", "transitions", "oracle_consultation"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado understand"
+            examples: ["Consulta obrigatória ao Oracle para conhecimento existente"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          oracle_consultation:
+            type: object
+            description: "Configuração obrigatória da consulta Oracle"
+            required: ["required", "query_parameters", "filter_criteria"]
+            properties:
+              required:
+                type: boolean
+                description: "Consulta Oracle é obrigatória"
+                const: true
+              
+              query_parameters:
+                type: object
+                description: "Parâmetros de consulta ao Oracle"
+                properties:
+                  scope_filter:
+                    type: array
+                    description: "Filtros de escopo para consulta"
+                    items:
+                      type: string
+                  
+                  domain_filter:
+                    type: array
+                    description: "Filtros de domínio para consulta"
+                    items:
+                      type: string
+                  
+                  semantic_query:
+                    type: string
+                    description: "Consulta semântica ao Oracle"
+                additionalProperties: false
+              
+              filter_criteria:
+                type: object
+                description: "Critérios de filtragem baseados no MOC"
+                properties:
+                  user_context_required:
+                    type: boolean
+                    description: "Requer contexto do usuário para filtragem"
+                    default: true
+                  
+                  authority_validation:
+                    type: boolean
+                    description: "Validar autoridade para UKIs retornadas"
+                    default: true
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      decide:
+        type: object
+        description: "Estado de decisão baseada em conhecimento existente"
+        required: ["description", "signals", "transitions"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado decide"
+            examples: ["Decisão baseada em conhecimento Oracle e contexto"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          decision_criteria:
+            type: array
+            description: "Critérios para tomada de decisão"
+            items:
+              type: object
+              required: ["criterion", "weight"]
+              properties:
+                criterion:
+                  type: string
+                  description: "Critério de decisão"
+                weight:
+                  type: number
+                  minimum: 0
+                  maximum: 1
+              additionalProperties: false
+        additionalProperties: false
+
+      act:
+        type: object
+        description: "Estado de execução da ação planejada"
+        required: ["description", "signals", "transitions"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado act"
+            examples: ["Execução da ação baseada na decisão tomada"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          execution_parameters:
+            type: object
+            description: "Parâmetros de execução da ação"
+            properties:
+              timeout_ms:
+                type: integer
+                description: "Timeout para execução"
+                minimum: 1000
+              
+              retry_policy:
+                type: object
+                description: "Política de retry em caso de falha"
+                properties:
+                  max_retries:
+                    type: integer
+                    minimum: 0
+                    maximum: 10
+                  backoff_strategy:
+                    type: string
+                    enum: ["linear", "exponential", "fixed"]
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      evaluate_for_enrich:
+        type: object
+        description: "Checkpoint obrigatório de avaliação de enriquecimento"
+        required: ["description", "signals", "transitions", "checkpoint_config"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do checkpoint EvaluateForEnrich"
+            examples: ["Checkpoint obrigatório para avaliação de enriquecimento Oracle"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 2  # Pelo menos enrich e review
+          
+          checkpoint_config:
+            type: object
+            description: "Configuração obrigatória do checkpoint"
+            required: ["can_enrich_function", "moc_criteria_consultation", "authority_validation"]
+            properties:
+              can_enrich_function:
+                type: object
+                description: "Configuração da função can_enrich?()"
+                required: ["implementation", "criteria"]
+                properties:
+                  implementation:
+                    type: string
+                    description: "Tipo de implementação da função"
+                    enum: ["manual", "automated", "hybrid", "minimum_profile"]
+                    examples: ["minimum_profile", "automated"]
+                  
+                  criteria:
+                    type: array
+                    description: "Critérios avaliados pela função"
+                    items:
+                      type: string
+                    examples: [["semantic_novelty", "practical_value", "basic_authority"]]
+                additionalProperties: false
+              
+              moc_criteria_consultation:
+                type: object
+                description: "Consulta obrigatória aos critérios MOC"
+                required: ["required", "criteria_source"]
+                properties:
+                  required:
+                    type: boolean
+                    description: "Consulta MOC é obrigatória"
+                    const: true
+                  
+                  criteria_source:
+                    type: string
+                    description: "Fonte dos critérios no MOC"
+                    pattern: "^hierarchies\\.evaluation_criteria\\.nodes$"
+                    examples: ["hierarchies.evaluation_criteria.nodes"]
+                additionalProperties: false
+              
+              authority_validation:
+                type: object
+                description: "Validação obrigatória de autoridade"
+                required: ["required", "validation_method"]
+                properties:
+                  required:
+                    type: boolean
+                    description: "Validação de autoridade é obrigatória"
+                    const: true
+                  
+                  validation_method:
+                    type: string
+                    description: "Método de validação"
+                    enum: ["moc_based", "role_based", "hybrid"]
+                    examples: ["moc_based"]
+                additionalProperties: false
+              
+              conflict_detection:
+                type: object
+                description: "Detecção de conflitos H1/H2/H3"
+                properties:
+                  enabled:
+                    type: boolean
+                    description: "Habilitar detecção de conflitos"
+                    default: true
+                  
+                  mal_invocation:
+                    type: object
+                    description: "Configuração de invocação MAL"
+                    properties:
+                      auto_invoke:
+                        type: boolean
+                        description: "Invocar MAL automaticamente em conflitos"
+                        default: true
+                      
+                      timeout_ms:
+                        type: integer
+                        description: "Timeout para arbitragem MAL"
+                        minimum: 1000
+                        maximum: 600000
+                        default: 2000
+                    additionalProperties: false
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+
+      review:
+        type: object
+        description: "Estado de validação opcional do resultado"
+        required: ["description", "signals", "transitions"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado review"
+            examples: ["Validação opcional do resultado da ação"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          review_criteria:
+            type: array
+            description: "Critérios de revisão"
+            items:
+              type: string
+            examples: [["Qualidade do resultado", "Conformidade com requisitos"]]
+        additionalProperties: false
+
+      enrich:
+        type: object
+        description: "Estado de enriquecimento condicional do Oracle"
+        required: ["description", "signals", "transitions"]
+        properties:
+          description:
+            type: string
+            description: "Descrição do estado enrich"
+            examples: ["Enriquecimento condicional do Oracle com novo conhecimento"]
+          
+          signals:
+            $ref: "#/$defs/state_signals"
+          
+          transitions:
+            type: array
+            items:
+              $ref: "#/$defs/state_transition"
+            minItems: 1
+          
+          enrichment_config:
+            type: object
+            description: "Configuração do enriquecimento"
+            properties:
+              scope_mode_validation:
+                type: boolean
+                description: "Aplicar validação scope_mode"
+                default: true
+              
+              cross_boundary_handling:
+                type: object
+                description: "Tratamento de enriquecimento cross-boundary"
+                properties:
+                  detect_scope_crossing:
+                    type: boolean
+                    default: true
+                  
+                  detect_domain_crossing:
+                    type: boolean
+                    default: true
+                  
+                  escalation_policy:
+                    type: string
+                    enum: ["block", "escalate", "defer"]
+                    default: "escalate"
+                additionalProperties: false
+            additionalProperties: false
+        additionalProperties: false
+    additionalProperties: false
+
+  # === EVENTOS GATILHO ===
+  trigger_events:
+    type: array
+    description: "Eventos canônicos que podem disparar o workflow"
+    minItems: 1
+    items:
+      type: object
+      required: ["event_type", "description"]
+      properties:
+        event_type:
+          type: string
+          description: "Tipo de evento canônico"
+          enum: [
+            "knowledge.added",
+            "work.proposed", 
+            "work.refine.requested",
+            "assistance.requested",
+            "test.authored",
+            "feedback.submitted"
+          ]
+          examples: ["work.proposed", "knowledge.added"]
+        
+        description:
+          type: string
+          description: "Descrição do evento gatilho"
+          examples: ["Nova proposta de trabalho recebida"]
+        
+        parameters:
+          type: object
+          description: "Parâmetros específicos do evento"
+          additionalProperties: true
+      additionalProperties: false
+
+  # === CONFIGURAÇÕES OPCIONAIS ===
+  workflow_patterns:
+    type: string
+    description: "Padrão de workflow classificado"
+    enum: [
+      "request_flow",
+      "refinement_flow", 
+      "ingestion_flow",
+      "assistance_flow",
+      "testing_flow",
+      "feedback_flow"
+    ]
+    examples: ["request_flow", "ingestion_flow"]
+
+  explainability_config:
+    type: object
+    description: "Configuração de explicabilidade obrigatória"
+    properties:
+      signals_required:
+        type: boolean
+        description: "Sinais obrigatórios em cada transição"
+        default: true
+      
+      context_tracking:
+        type: boolean
+        description: "Rastreamento de contexto obrigatório"
+        default: true
+      
+      decision_recording:
+        type: boolean
+        description: "Registro de decisões obrigatório"
+        default: true
+    additionalProperties: false
+
+  # === METADADOS ===
+  metadata:
+    type: object
+    description: "Metadados do workflow"
+    required: ["created_date", "last_modified", "maintainer"]
+    properties:
+      created_date:
+        type: string
+        format: date
+        description: "Data de criação do workflow"
+
+      last_modified:
+        type: string
+        format: date
+        description: "Data da última modificação"
+
+      maintainer:
+        type: string
+        description: "Responsável pela manutenção do workflow"
+        examples: ["platform-team", "workflow-team"]
+
+      change_summary:
+        type: string
+        description: "Resumo das mudanças na versão atual"
+
+      validation_status:
+        type: string
+        description: "Status de validação do workflow"
+        enum: ["valid", "pending", "invalid"]
+
+      usage_contexts:
+        type: array
+        description: "Contextos onde o workflow é aplicável"
+        items:
+          type: string
+        examples: [["desenvolvimento", "produção", "teste"]]
+    additionalProperties: false
+
+additionalProperties: false
+
+# === DEFINIÇÕES REUTILIZÁVEIS ===
+$defs:
+  state_signals:
+    type: object
+    description: "Sinais obrigatórios de explicabilidade"
+    required: ["context", "decision", "result"]
+    properties:
+      context:
+        type: string
+        description: "O que entrou no estado"
+        minLength: 20
+        examples: ["História de usuário para autenticação JWT recebida"]
+      
+      decision:
+        type: string
+        description: "Por que transicionou"
+        minLength: 20
+        examples: ["História clara e completa, prosseguir para entendimento"]
+      
+      result:
+        type: string
+        description: "O que saiu do estado"
+        minLength: 20
+        examples: ["Requisitos organizados e contexto capturado"]
+    additionalProperties: false
+
+  state_transition:
+    type: object
+    description: "Transição entre estados"
+    required: ["target_state", "condition", "description"]
+    properties:
+      target_state:
+        type: string
+        description: "Estado de destino da transição"
+        enum: [
+          "intake", "understand", "decide", "act", 
+          "evaluate_for_enrich", "review", "enrich", "complete", "failed"
+        ]
+      
+      condition:
+        type: string
+        description: "Condição para a transição"
+        examples: ["completion_criteria_met", "oracle_consulted", "can_enrich_approved"]
+      
+      description:
+        type: string
+        description: "Descrição da transição"
+        minLength: 10
+        examples: ["Transição para entendimento após captura completa"]
+    additionalProperties: false
+
+# === REGRAS DE VALIDAÇÃO ===
+allOf:
+  # Estados canônicos devem seguir sequência obrigatória
+  - properties:
+      canonical_states:
+        description: "Deve conter todos os 7 estados canônicos obrigatórios"
+        
+  # EvaluateForEnrich deve ter pelo menos 2 transições
+  - properties:
+      canonical_states:
+        properties:
+          evaluate_for_enrich:
+            properties:
+              transitions:
+                minItems: 2

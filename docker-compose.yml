@@ -14,7 +14,7 @@ services:
       - NODE_ENV=${NODE_ENV:-production}
       - NITRO_HOST=${NITRO_HOST:-0.0.0.0}
       - NITRO_PORT=${NITRO_PORT:-5000}
-      - SITE_URL=${SITE_URL:-https://matrix-protocol.casheiro.com.br}
+      - SITE_URL=${SITE_URL:-https://matrix-protocol.org}
       - GITHUB_URL=${GITHUB_URL:-https://github.com/casheiro/matrix-protocol}
       - DISCORD_URL=${DISCORD_URL:-https://discord.gg/Gd7BxsRhB4}
     healthcheck:
