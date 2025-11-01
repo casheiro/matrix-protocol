@@ -351,8 +351,8 @@ properties:
         minLength: 100
         examples:
           - While both UKIs operate in equivalent squad scope, the 30-day retention rule demonstrates greater
-            epistemological maturity through its 'validated' status and more robust regulatory evidence linked to
-            LGPD compliance requirements
+            epistemological maturity through its 'validated' status and more robust regulatory evidence linked to LGPD
+            compliance requirements
       references:
         type: object
         description: References used in decision

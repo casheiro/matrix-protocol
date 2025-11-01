@@ -28,20 +28,18 @@ export default defineEventHandler(async (event) => {
     const { readFileSync, existsSync } = await import('fs')
     const { join } = await import('path')
     
+    // Path deve sempre começar com /docs/, então simplesmente remover a barra inicial
+    let normalizedPath = filePath.substring(1) // Remove primeira barra: /docs/... -> docs/...
+    
     const possiblePaths = [
-      // Production path (Docker container - copied by Dockerfile)
-      join(process.cwd(), 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      // Nuxt build output paths
-      join(process.cwd(), '.output', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      join(process.cwd(), '.output', 'server', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      join(process.cwd(), '.output', 'public', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      // Public directory paths
-      join(process.cwd(), 'public', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      // Alternative Docker paths
-      join('/app', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      join('/app', '.output', 'content', locale, filePath.replace(/^\/docs/, 'docs')),
-      // Development path (just in case)
-      join(process.cwd(), 'content', locale, filePath.replace(/^\/docs/, 'docs'))
+      // Produção - primeiro tentar o caminho de build (mesmo padrão da API schemas)
+      join(process.cwd(), '..', 'content', locale, normalizedPath),
+      // Desenvolvimento - usar o caminho normal
+      join(process.cwd(), 'content', locale, normalizedPath),
+      // Caminhos alternativos
+      join(process.cwd(), '.output', 'content', locale, normalizedPath),
+      join(process.cwd(), 'public', 'content', locale, normalizedPath),
+      join('/app', 'content', locale, normalizedPath)
     ]
     
     let fullPath: string | null = null

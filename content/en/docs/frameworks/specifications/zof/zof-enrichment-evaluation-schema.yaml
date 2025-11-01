@@ -407,8 +407,8 @@ properties:
             description: Detailed reasoning
             minLength: 100
             examples:
-              - The result demonstrates significant practical value for other developers facing similar JWT authentication
-                problems...
+              - The result demonstrates significant practical value for other developers facing similar JWT
+                authentication problems...
           mep_alignment:
             type: object
             description: Alignment with MEP principles

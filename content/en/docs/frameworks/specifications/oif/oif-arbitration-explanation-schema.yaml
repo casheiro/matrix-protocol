@@ -68,8 +68,8 @@ properties:
     minLength: 50
     maxLength: 500
     examples:
-      - The 30-day data retention rule was chosen as winner due to higher epistemological maturity and
-        stronger regulatory evidence
+      - The 30-day data retention rule was chosen as winner due to higher epistemological maturity and stronger
+        regulatory evidence
   reason_code:
     type: string
     description: Structured reason identifier
@@ -281,8 +281,7 @@ properties:
     description: Recommended actions for the user after the decision
     minLength: 50
     examples:
-      - Use the approved 30-day retention rule. For future data policies, consult the winning UKI as
-        reference.
+      - Use the approved 30-day retention rule. For future data policies, consult the winning UKI as reference.
   escalation_path:
     type: string
     description: Available escalation options (optional)

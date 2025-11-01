@@ -58,21 +58,46 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // Construir caminho para o arquivo
-    // Schemas técnicos são sempre servidos em inglês (padrão internacional)
-    const contentPath = join(
+    // Tentar diferentes caminhos para localizar o arquivo
+    let yamlContent: string | null = null
+    
+    // Em produção, primeiro tentar o caminho de build
+    const buildPath = join(
       process.cwd(),
+      '..',
       'content',
-      'en', // Sempre usar schema em inglês para consistência técnica
+      'en',
       'docs',
       'frameworks',
       'specifications',
       framework,
       fileName
     )
-
-    // Ler arquivo YAML
-    const yamlContent = await readFile(contentPath, 'utf-8')
+    
+    // Em desenvolvimento, usar o caminho normal
+    const devPath = join(
+      process.cwd(),
+      'content',
+      'en',
+      'docs',
+      'frameworks',
+      'specifications',
+      framework,
+      fileName
+    )
+    
+    try {
+      yamlContent = await readFile(buildPath, 'utf-8')
+    } catch {
+      try {
+        yamlContent = await readFile(devPath, 'utf-8')
+      } catch (error) {
+        throw createError({
+          statusCode: 404,
+          statusMessage: `Schema file not found: ${framework}/${type}/${version}`
+        })
+      }
+    }
     
     // Validar se é um schema válido verificando campos obrigatórios
     try {
