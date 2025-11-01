@@ -92,8 +92,28 @@ export default defineEventHandler(async (event) => {
     }
 
     // Configurar headers apropriados
-    setHeader(event, 'Content-Type', 'application/x-yaml')
-    setHeader(event, 'Cache-Control', 'public, max-age=3600') // Cache por 1 hora
+    // Detectar se é acesso direto do navegador vs programático
+    const userAgent = getHeader(event, 'user-agent') || ''
+    const acceptHeader = getHeader(event, 'accept') || ''
+    const isBrowserRequest = 
+      acceptHeader.includes('text/html') || 
+      acceptHeader.includes('*/*') ||
+      userAgent.includes('Mozilla')
+    
+    // Para navegadores, configurar para exibição inline
+    if (isBrowserRequest) {
+      setHeader(event, 'Content-Type', 'text/plain; charset=utf-8')
+      setHeader(event, 'Content-Disposition', 'inline')
+      // Headers anti-cache para desenvolvimento
+      setHeader(event, 'Cache-Control', 'no-cache, no-store, must-revalidate')
+      setHeader(event, 'Pragma', 'no-cache')
+      setHeader(event, 'Expires', '0')
+    } else {
+      // Para requests programáticos, manter comportamento original
+      setHeader(event, 'Content-Type', 'application/x-yaml')
+      setHeader(event, 'Cache-Control', 'public, max-age=3600') // Cache por 1 hora
+    }
+    
     setHeader(event, 'Access-Control-Allow-Origin', '*')
     setHeader(event, 'Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS')
     

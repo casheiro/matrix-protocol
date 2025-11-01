@@ -64,28 +64,36 @@ export default defineEventHandler(async (event) => {
   }
   
   try {
-    // Fazer request interno para a API
+    // Repassar headers originais para detectar se é browser ou programático
+    const originalHeaders = getHeaders(event)
+    const forwardedHeaders: Record<string, string> = {}
+    
+    // Repassar headers importantes para detecção de browser
+    if (originalHeaders['user-agent']) {
+      forwardedHeaders['User-Agent'] = originalHeaders['user-agent']
+    }
+    if (originalHeaders['accept']) {
+      forwardedHeaders['Accept'] = originalHeaders['accept']
+    }
+    
+    
+    // Fazer request interno para a API preservando headers e encoding UTF-8
     const response = await $fetch(apiUrl, {
       method: 'GET',
-      headers: {
-        'Accept': 'application/x-yaml',
-        'User-Agent': 'Matrix Protocol Schema Resolver'
-      }
+      headers: forwardedHeaders,
+      // Garantir parsing correto como texto UTF-8
+      responseType: 'text'
     })
     
-    // Configurar headers de resposta
-    setHeader(event, 'Content-Type', 'application/x-yaml')
-    setHeader(event, 'Cache-Control', 'public, max-age=3600')
+    // NÃO configurar headers fixos - deixar a API decidir baseado no tipo de request
+    // A API agora decide se é text/plain (browser) ou application/x-yaml (programático)
     setHeader(event, 'Access-Control-Allow-Origin', '*')
     setHeader(event, 'Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS')
     setHeader(event, 'X-Resolved-Via', 'schema-middleware')
     setHeader(event, 'X-Original-Path', url.pathname)
     setHeader(event, 'X-Resolved-Locale', locale)
-    setHeader(event, 'X-Schema-Framework', framework)
-    setHeader(event, 'X-Schema-Type', type)
-    setHeader(event, 'X-Schema-Version', version)
     
-    // Retornar conteúdo do schema
+    // Retornar conteúdo do schema preservando UTF-8
     return response
     
   } catch (error: any) {
