@@ -1,12 +1,12 @@
 # ZOF Workflow Schema v1.0.0
-# Zion Orchestration Framework - Definição de Workflows
-# Especificação canônica normativa para workflows conceituais orientados a IA
+# Zion Orchestration Framework - Workflow Definitions
+# Normative canonical specification for AI-oriented conceptual workflows
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/zof/workflow/1.0.0
 version: 1.0.0
 title: ZOF Workflow Schema
-description: Schema canônico para definição de workflows ZOF no Matrix Protocol
+description: Canonical schema for ZOF workflow definitions in Matrix Protocol
 type: object
 required:
   - schema
@@ -19,36 +19,36 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema ZOF Workflow utilizado
+    description: ZOF Workflow schema version used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   workflow_id:
     type: string
-    description: Identificador único do workflow
+    description: Unique workflow identifier
     pattern: ^zof-[a-z0-9-]+$
     examples:
       - zof-request-flow
       - zof-auth-jwt-implementation
   title:
     type: string
-    description: Título descritivo do workflow
+    description: Descriptive workflow title
     minLength: 10
     maxLength: 200
     examples:
-      - Workflow de Implementação de Funcionalidade
-      - Fluxo de Autenticação JWT
+      - Feature Implementation Workflow
+      - JWT Authentication Flow
   version:
     type: string
-    description: Versão do workflow (versionamento semântico)
+    description: Workflow version (semantic versioning)
     pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
     examples:
       - 1.0.0
       - 2.1.3
   canonical_states:
     type: object
-    description: Sequência obrigatória de estados canônicos ZOF
+    description: Mandatory sequence of canonical ZOF states
     required:
       - intake
       - understand
@@ -60,7 +60,7 @@ properties:
     properties:
       intake:
         type: object
-        description: Estado de captura de contexto e requisitos
+        description: Context and requirements capture state
         required:
           - description
           - signals
@@ -68,37 +68,37 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado intake
+            description: Intake state description
             examples:
-              - Captura de contexto e requisitos iniciais
+              - Context capture and initial requirements
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
             type: array
-            description: Transições possíveis do estado intake
+            description: Possible transitions from intake state
             items:
               $ref: "#/$defs/state_transition"
             minItems: 1
           activities:
             type: array
-            description: Atividades executadas no estado
+            description: Activities executed in the state
             items:
               type: string
             examples:
-              - - Coleta de requisitos
-                - Análise de contexto
+              - - Requirements collection
+                - Context analysis
           completion_criteria:
             type: array
-            description: Critérios para completar o estado
+            description: Criteria to complete the state
             items:
               type: string
             examples:
-              - - Requisitos documentados
-                - Contexto compreendido
+              - - Requirements documented
+                - Context understood
         additionalProperties: false
       understand:
         type: object
-        description: Estado de consulta obrigatória ao Oracle (UKIs)
+        description: Mandatory Oracle consultation state (UKIs)
         required:
           - description
           - signals
@@ -107,9 +107,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado understand
+            description: Understand state description
             examples:
-              - Consulta obrigatória ao Oracle para conhecimento existente
+              - Mandatory Oracle consultation for existing knowledge
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -119,7 +119,7 @@ properties:
             minItems: 1
           oracle_consultation:
             type: object
-            description: Configuração obrigatória da consulta Oracle
+            description: Mandatory Oracle consultation configuration
             required:
               - required
               - query_parameters
@@ -127,44 +127,44 @@ properties:
             properties:
               required:
                 type: boolean
-                description: Consulta Oracle é obrigatória
+                description: Oracle consultation is mandatory
                 const: true
               query_parameters:
                 type: object
-                description: Parâmetros de consulta ao Oracle
+                description: Oracle consultation parameters
                 properties:
                   scope_filter:
                     type: array
-                    description: Filtros de escopo para consulta
+                    description: Scope filters for consultation
                     items:
                       type: string
                   domain_filter:
                     type: array
-                    description: Filtros de domínio para consulta
+                    description: Domain filters for consultation
                     items:
                       type: string
                   semantic_query:
                     type: string
-                    description: Consulta semântica ao Oracle
+                    description: Semantic query to Oracle
                 additionalProperties: false
               filter_criteria:
                 type: object
-                description: Critérios de filtragem baseados no MOC
+                description: MOC-based filtering criteria
                 properties:
                   user_context_required:
                     type: boolean
-                    description: Requer contexto do usuário para filtragem
+                    description: Requires user context for filtering
                     default: true
                   authority_validation:
                     type: boolean
-                    description: Validar autoridade para UKIs retornadas
+                    description: Validate authority for returned UKIs
                     default: true
                 additionalProperties: false
             additionalProperties: false
         additionalProperties: false
       decide:
         type: object
-        description: Estado de decisão baseada em conhecimento existente
+        description: Decision state based on existing knowledge
         required:
           - description
           - signals
@@ -172,9 +172,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado decide
+            description: Decide state description
             examples:
-              - Decisão baseada em conhecimento Oracle e contexto
+              - Decision based on Oracle knowledge and context
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -184,7 +184,7 @@ properties:
             minItems: 1
           decision_criteria:
             type: array
-            description: Critérios para tomada de decisão
+            description: Decision-making criteria
             items:
               type: object
               required:
@@ -193,7 +193,7 @@ properties:
               properties:
                 criterion:
                   type: string
-                  description: Critério de decisão
+                  description: Decision criterion
                 weight:
                   type: number
                   minimum: 0
@@ -202,7 +202,7 @@ properties:
         additionalProperties: false
       act:
         type: object
-        description: Estado de execução da ação planejada
+        description: Planned action execution state
         required:
           - description
           - signals
@@ -210,9 +210,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado act
+            description: Act state description
             examples:
-              - Execução da ação baseada na decisão tomada
+              - Action execution based on decision made
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -222,15 +222,15 @@ properties:
             minItems: 1
           execution_parameters:
             type: object
-            description: Parâmetros de execução da ação
+            description: Action execution parameters
             properties:
               timeout_ms:
                 type: integer
-                description: Timeout para execução
+                description: Execution timeout
                 minimum: 1000
               retry_policy:
                 type: object
-                description: Política de retry em caso de falha
+                description: Retry policy in case of failure
                 properties:
                   max_retries:
                     type: integer
@@ -247,7 +247,7 @@ properties:
         additionalProperties: false
       evaluate_for_enrich:
         type: object
-        description: Checkpoint obrigatório de avaliação de enriquecimento
+        description: Mandatory enrichment evaluation checkpoint
         required:
           - description
           - signals
@@ -256,9 +256,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do checkpoint EvaluateForEnrich
+            description: EvaluateForEnrich checkpoint description
             examples:
-              - Checkpoint obrigatório para avaliação de enriquecimento Oracle
+              - Mandatory checkpoint for Oracle enrichment evaluation
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -268,7 +268,7 @@ properties:
             minItems: 2
           checkpoint_config:
             type: object
-            description: Configuração obrigatória do checkpoint
+            description: Mandatory checkpoint configuration
             required:
               - can_enrich_function
               - moc_criteria_consultation
@@ -276,14 +276,14 @@ properties:
             properties:
               can_enrich_function:
                 type: object
-                description: Configuração da função can_enrich?()
+                description: can_enrich?() function configuration
                 required:
                   - implementation
                   - criteria
                 properties:
                   implementation:
                     type: string
-                    description: Tipo de implementação da função
+                    description: Function implementation type
                     enum:
                       - manual
                       - automated
@@ -294,7 +294,7 @@ properties:
                       - automated
                   criteria:
                     type: array
-                    description: Critérios avaliados pela função
+                    description: Criteria evaluated by function
                     items:
                       type: string
                     examples:
@@ -304,36 +304,36 @@ properties:
                 additionalProperties: false
               moc_criteria_consultation:
                 type: object
-                description: Consulta obrigatória aos critérios MOC
+                description: Mandatory MOC criteria consultation
                 required:
                   - required
                   - criteria_source
                 properties:
                   required:
                     type: boolean
-                    description: Consulta MOC é obrigatória
+                    description: MOC consultation is mandatory
                     const: true
                   criteria_source:
                     type: string
-                    description: Fonte dos critérios no MOC
+                    description: Criteria source in MOC
                     pattern: ^hierarchies\.evaluation_criteria\.nodes$
                     examples:
                       - hierarchies.evaluation_criteria.nodes
                 additionalProperties: false
               authority_validation:
                 type: object
-                description: Validação obrigatória de autoridade
+                description: Mandatory authority validation
                 required:
                   - required
                   - validation_method
                 properties:
                   required:
                     type: boolean
-                    description: Validação de autoridade é obrigatória
+                    description: Authority validation is mandatory
                     const: true
                   validation_method:
                     type: string
-                    description: Método de validação
+                    description: Validation method
                     enum:
                       - moc_based
                       - role_based
@@ -343,23 +343,23 @@ properties:
                 additionalProperties: false
               conflict_detection:
                 type: object
-                description: Detecção de conflitos H1/H2/H3
+                description: H1/H2/H3 conflict detection
                 properties:
                   enabled:
                     type: boolean
-                    description: Habilitar detecção de conflitos
+                    description: Enable conflict detection
                     default: true
                   mal_invocation:
                     type: object
-                    description: Configuração de invocação MAL
+                    description: MAL invocation configuration
                     properties:
                       auto_invoke:
                         type: boolean
-                        description: Invocar MAL automaticamente em conflitos
+                        description: Automatically invoke MAL on conflicts
                         default: true
                       timeout_ms:
                         type: integer
-                        description: Timeout para arbitragem MAL
+                        description: Timeout for MAL arbitration
                         minimum: 1000
                         maximum: 600000
                         default: 2000
@@ -369,7 +369,7 @@ properties:
         additionalProperties: false
       review:
         type: object
-        description: Estado de validação opcional do resultado
+        description: Optional result validation state
         required:
           - description
           - signals
@@ -377,9 +377,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado review
+            description: Review state description
             examples:
-              - Validação opcional do resultado da ação
+              - Optional validation of action result
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -389,16 +389,16 @@ properties:
             minItems: 1
           review_criteria:
             type: array
-            description: Critérios de revisão
+            description: Review criteria
             items:
               type: string
             examples:
-              - - Qualidade do resultado
-                - Conformidade com requisitos
+              - - Result quality
+                - Requirements compliance
         additionalProperties: false
       enrich:
         type: object
-        description: Estado de enriquecimento condicional do Oracle
+        description: Conditional Oracle enrichment state
         required:
           - description
           - signals
@@ -406,9 +406,9 @@ properties:
         properties:
           description:
             type: string
-            description: Descrição do estado enrich
+            description: Enrich state description
             examples:
-              - Enriquecimento condicional do Oracle com novo conhecimento
+              - Conditional Oracle enrichment with new knowledge
           signals:
             $ref: "#/$defs/state_signals"
           transitions:
@@ -418,15 +418,15 @@ properties:
             minItems: 1
           enrichment_config:
             type: object
-            description: Configuração do enriquecimento
+            description: Enrichment configuration
             properties:
               scope_mode_validation:
                 type: boolean
-                description: Aplicar validação scope_mode
+                description: Apply scope_mode validation
                 default: true
               cross_boundary_handling:
                 type: object
-                description: Tratamento de enriquecimento cross-boundary
+                description: Cross-boundary enrichment handling
                 properties:
                   detect_scope_crossing:
                     type: boolean
@@ -447,7 +447,7 @@ properties:
     additionalProperties: false
   trigger_events:
     type: array
-    description: Eventos canônicos que podem disparar o workflow
+    description: Canonical events that can trigger the workflow
     minItems: 1
     items:
       type: object
@@ -457,7 +457,7 @@ properties:
       properties:
         event_type:
           type: string
-          description: Tipo de evento canônico
+          description: Canonical event type
           enum:
             - knowledge.added
             - work.proposed
@@ -470,17 +470,17 @@ properties:
             - knowledge.added
         description:
           type: string
-          description: Descrição do evento gatilho
+          description: Trigger event description
           examples:
-            - Nova proposta de trabalho recebida
+            - New work proposal received
         parameters:
           type: object
-          description: Parâmetros específicos do evento
+          description: Event-specific parameters
           additionalProperties: true
       additionalProperties: false
   workflow_patterns:
     type: string
-    description: Padrão de workflow classificado
+    description: Classified workflow pattern
     enum:
       - request_flow
       - refinement_flow
@@ -493,24 +493,24 @@ properties:
       - ingestion_flow
   explainability_config:
     type: object
-    description: Configuração de explicabilidade obrigatória
+    description: Mandatory explainability configuration
     properties:
       signals_required:
         type: boolean
-        description: Sinais obrigatórios em cada transição
+        description: Mandatory signals in each transition
         default: true
       context_tracking:
         type: boolean
-        description: Rastreamento de contexto obrigatório
+        description: Mandatory context tracking
         default: true
       decision_recording:
         type: boolean
-        description: Registro de decisões obrigatório
+        description: Mandatory decision recording
         default: true
     additionalProperties: false
   metadata:
     type: object
-    description: Metadados do workflow
+    description: Workflow metadata
     required:
       - created_date
       - last_modified
@@ -519,42 +519,42 @@ properties:
       created_date:
         type: string
         format: date
-        description: Data de criação do workflow
+        description: Workflow creation date
       last_modified:
         type: string
         format: date
-        description: Data da última modificação
+        description: Last modification date
       maintainer:
         type: string
-        description: Responsável pela manutenção do workflow
+        description: Responsible for workflow maintenance
         examples:
           - platform-team
           - workflow-team
       change_summary:
         type: string
-        description: Resumo das mudanças na versão atual
+        description: Current version changes summary
       validation_status:
         type: string
-        description: Status de validação do workflow
+        description: Workflow validation status
         enum:
           - valid
           - pending
           - invalid
       usage_contexts:
         type: array
-        description: Contextos onde o workflow é aplicável
+        description: Contexts where workflow is applicable
         items:
           type: string
         examples:
-          - - desenvolvimento
-            - produção
-            - teste
+          - - development
+            - production
+            - testing
     additionalProperties: false
 additionalProperties: false
 $defs:
   state_signals:
     type: object
-    description: Sinais obrigatórios de explicabilidade
+    description: Mandatory explainability signals
     required:
       - context
       - decision
@@ -562,26 +562,26 @@ $defs:
     properties:
       context:
         type: string
-        description: O que entrou no estado
+        description: What entered the state
         minLength: 20
         examples:
-          - História de usuário para autenticação JWT recebida
+          - User story for JWT authentication received
       decision:
         type: string
-        description: Por que transicionou
+        description: Why it transitioned
         minLength: 20
         examples:
-          - História clara e completa, prosseguir para entendimento
+          - Clear and complete story, proceed to understanding
       result:
         type: string
-        description: O que saiu do estado
+        description: What exited the state
         minLength: 20
         examples:
-          - Requisitos organizados e contexto capturado
+          - Requirements organized and context captured
     additionalProperties: false
   state_transition:
     type: object
-    description: Transição entre estados
+    description: State transition
     required:
       - target_state
       - condition
@@ -589,7 +589,7 @@ $defs:
     properties:
       target_state:
         type: string
-        description: Estado de destino da transição
+        description: Transition target state
         enum:
           - intake
           - understand
@@ -602,22 +602,22 @@ $defs:
           - failed
       condition:
         type: string
-        description: Condição para a transição
+        description: Condition for transition
         examples:
           - completion_criteria_met
           - oracle_consulted
           - can_enrich_approved
       description:
         type: string
-        description: Descrição da transição
+        description: Transition description
         minLength: 10
         examples:
-          - Transição para entendimento após captura completa
+          - Transition to understanding after complete capture
     additionalProperties: false
 allOf:
   - properties:
       canonical_states:
-        description: Deve conter todos os 7 estados canônicos obrigatórios
+        description: Must contain all 7 mandatory canonical states
   - properties:
       canonical_states:
         properties:

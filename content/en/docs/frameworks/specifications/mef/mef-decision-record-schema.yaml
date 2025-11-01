@@ -1,12 +1,12 @@
 # MEF Decision Record Schema v1.0.0
-# Matrix Embedding Framework - Decision Records para integração MAL
-# Especificação canônica normativa para persistência de decisões de arbitragem
+# Matrix Embedding Framework - Decision Records for MAL integration
+# Normative canonical specification for arbitration decision persistence
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/mef/decision-record/1.0.0
 version: 1.0.0
 title: MEF Decision Record Schema
-description: Schema canônico para persistência de Decision Records MAL no MEF
+description: Canonical schema for MAL Decision Records persistence in MEF
 type: object
 required:
   - schema
@@ -20,28 +20,28 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema MEF Decision Record utilizado
+    description: MEF Decision Record schema version used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   decision_id:
     type: string
-    description: Identificador único da decisão MAL
+    description: Unique MAL decision identifier
     pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
     examples:
       - mal-dec-20250826-h1-001
       - mal-dec-20250827-h2-042
   event_ref:
     type: string
-    description: Referência ao evento de arbitragem originário
+    description: Reference to originating arbitration event
     pattern: ^mal-evt-[0-9]{8}-[0-9]+$
     examples:
       - mal-evt-20250826-001
       - mal-evt-20250827-042
   outcome:
     type: string
-    description: Resultado da arbitragem MAL
+    description: MAL arbitration result
     enum:
       - winner
       - coexist
@@ -52,21 +52,21 @@ properties:
       - coexist
   winner:
     type: string
-    description: UKI escolhido como autoritativo (obrigatório se outcome=winner)
+    description: UKI chosen as authoritative (required if outcome=winner)
     pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
     examples:
-      - uki:squad-x:rule:retencao-dados-30d
+      - uki:squad-x:rule:data-retention-30d
   losers:
     type: array
-    description: UKIs derrotados na arbitragem
+    description: UKIs defeated in arbitration
     items:
       type: string
       pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
     examples:
-      - - uki:squad-x:rule:retencao-dados-7d
+      - - uki:squad-x:rule:data-retention-7d
   precedence_applied:
     type: array
-    description: Regras de precedência aplicadas na decisão
+    description: Precedence rules applied in decision
     minItems: 1
     items:
       type: object
@@ -77,33 +77,33 @@ properties:
       properties:
         rule:
           type: string
-          description: Identificador da regra de precedência
+          description: Precedence rule identifier
           pattern: ^P[0-9]+_[a-z_]+$
           examples:
             - P1_authority_weight
             - P3_maturity_level
         description:
           type: string
-          description: Explicação legível da regra
+          description: Human-readable rule explanation
           minLength: 20
           examples:
             - validated > endorsed
-            - Maior peso de autoridade
+            - Higher authority weight
         impact:
           type: string
-          description: Como esta regra afetou a decisão
+          description: How this rule affected the decision
           minLength: 20
           examples:
-            - Determinou vencedor pela maturidade superior
+            - Determined winner by superior maturity
         weight:
           type: number
-          description: Peso numérico da regra (opcional)
+          description: Numerical rule weight (optional)
           minimum: 0
           maximum: 1
       additionalProperties: false
   epistemic_rationale:
     type: object
-    description: Explicação epistêmica alinhada aos princípios MEP
+    description: Epistemic explanation aligned with MEP principles
     required:
       - summary
       - reasoning
@@ -111,27 +111,27 @@ properties:
     properties:
       summary:
         type: string
-        description: Justificativa breve da decisão
+        description: Brief decision justification
         minLength: 50
         maxLength: 500
         examples:
-          - Maturidade validada e evidência regulatória mais forte determinaram a escolha
+          - Validated maturity and stronger regulatory evidence determined the choice
       reasoning:
         type: string
-        description: Explicação detalhada do raciocínio epistêmico
+        description: Detailed explanation of epistemic reasoning
         minLength: 100
         examples:
-          - Enquanto ambos UKIs operam em escopo equivalente, a regra de retenção de 30 dias...
+          - While both UKIs operate in equivalent scope, the 30-day retention rule...
       references:
         type: object
-        description: Referências utilizadas na decisão
+        description: References used in decision
         required:
           - moc_nodes
           - mef_evidence
         properties:
           moc_nodes:
             type: array
-            description: Nós MOC referenciados
+            description: Referenced MOC nodes
             items:
               type: string
               pattern: ^[a-z0-9.-]+$
@@ -140,7 +140,7 @@ properties:
                 - hierarchies.domain.security
           mef_evidence:
             type: array
-            description: Evidências MEF referenciadas
+            description: Referenced MEF evidence
             items:
               type: string
               pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
@@ -148,17 +148,17 @@ properties:
               - - uki:org:policy:lgpd-compliance
           external_references:
             type: array
-            description: Referências externas (documentos, regulamentações)
+            description: External references (documents, regulations)
             items:
               type: string
             examples:
-              - - doc:logs-auditoria-2024
+              - - doc:audit-logs-2024
                 - reg:lgpd-art-6
         additionalProperties: false
     additionalProperties: false
   audit:
     type: object
-    description: Informações de auditoria obrigatórias
+    description: Mandatory audit information
     required:
       - decided_at
       - decided_by
@@ -167,19 +167,19 @@ properties:
       decided_at:
         type: string
         format: date-time
-        description: Timestamp preciso da decisão
+        description: Precise decision timestamp
         examples:
           - 2025-08-26T14:30:25.123Z
       decided_by:
         type: string
-        description: Identificador da versão MAL que tomou a decisão
+        description: MAL version identifier that made the decision
         pattern: ^mal-v[0-9]+\.[0-9]+\.[0-9]+$
         examples:
           - mal-v1.0.0
           - mal-v1.2.3
       timeout_used_ms:
         type: integer
-        description: Tempo de processamento usado em milissegundos
+        description: Processing time used in milliseconds
         minimum: 0
         maximum: 600000
         examples:
@@ -187,7 +187,7 @@ properties:
           - 5000
       arbitration_timeout_ms:
         type: integer
-        description: Timeout configurado para arbitragem
+        description: Timeout configured for arbitration
         minimum: 1000
         maximum: 600000
         examples:
@@ -196,7 +196,7 @@ properties:
     additionalProperties: false
   mef_metadata:
     type: object
-    description: Metadados específicos para persistência MEF
+    description: Specific metadata for MEF persistence
     required:
       - persistence_id
       - persistence_date
@@ -204,29 +204,29 @@ properties:
     properties:
       persistence_id:
         type: string
-        description: Identificador único de persistência no MEF
+        description: Unique persistence identifier in MEF
         pattern: ^mef-dr-[0-9]{8}-[a-z0-9]{8}$
         examples:
           - mef-dr-20250826-a1b2c3d4
       persistence_date:
         type: string
         format: date-time
-        description: Timestamp de persistência no MEF
+        description: MEF persistence timestamp
         examples:
           - 2025-08-26T14:30:26.789Z
       immutable:
         type: boolean
-        description: Flag indicando imutabilidade do registro
+        description: Flag indicating record immutability
         const: true
       checksum:
         type: string
-        description: Checksum para verificação de integridade
+        description: Checksum for integrity verification
         pattern: ^[a-f0-9]{64}$
         examples:
           - a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
       retention_policy:
         type: string
-        description: Política de retenção do registro
+        description: Record retention policy
         enum:
           - permanent
           - regulatory
@@ -235,14 +235,14 @@ properties:
     additionalProperties: false
   conflict_details:
     type: object
-    description: Detalhes específicos do conflito arbitrado
+    description: Specific details of the arbitrated conflict
     required:
       - event_type
       - candidates
     properties:
       event_type:
         type: string
-        description: Tipo de conflito arbitrado
+        description: Arbitrated conflict type
         enum:
           - H1
           - H2
@@ -252,13 +252,13 @@ properties:
           - H2
       conflict_description:
         type: string
-        description: Descrição textual do conflito
+        description: Textual description of the conflict
         minLength: 50
         examples:
-          - Duas regras de segurança de escopo equivalente em conflito
+          - Two security rules of equivalent scope in conflict
       candidates:
         type: array
-        description: UKIs candidatas que foram arbitradas
+        description: Candidate UKIs that were arbitrated
         minItems: 2
         items:
           type: object
@@ -288,26 +288,26 @@ properties:
     additionalProperties: false
   actions:
     type: array
-    description: Ações a serem executadas baseadas na decisão
+    description: Actions to be executed based on the decision
     items:
       type: string
       pattern: "^(allow_enrich|defer_enrich|gate_enrich|deprecate|partition_scope):"
       examples:
         - allow_enrich:zof-auth-jwt-implementation-002
-        - deprecate:uki:squad-x:rule:retencao-dados-7d
+        - deprecate:uki:squad-x:rule:data-retention-7d
   organizational_context:
     type: object
-    description: Contexto organizacional da decisão
+    description: Organizational context of the decision
     properties:
       user_authority:
         type: string
-        description: Nível de autoridade do usuário que solicitou
+        description: Authority level of the requesting user
         examples:
           - squad_lead
           - tech_lead
       user_scopes:
         type: array
-        description: Escopos acessíveis ao usuário
+        description: User accessible scopes
         items:
           type: string
         examples:
@@ -315,7 +315,7 @@ properties:
             - tribe-alpha
       operation:
         type: string
-        description: Operação que desencadeou a arbitragem
+        description: Operation that triggered arbitration
         enum:
           - read
           - enrich
@@ -324,7 +324,7 @@ properties:
           - enrich
       policy_ref:
         type: string
-        description: Política de arbitragem MOC utilizada
+        description: MOC arbitration policy used
         pattern: ^moc:arbitration:[a-z0-9-_]+$
         examples:
           - moc:arbitration:security_priority

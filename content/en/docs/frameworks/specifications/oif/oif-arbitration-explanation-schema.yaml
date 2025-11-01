@@ -1,12 +1,12 @@
 # OIF Arbitration Explanation Schema v1.0.0
-# Operator Intelligence Framework - Templates de Explicação de Arbitragem
-# Especificação canônica normativa para explicação de decisões MAL
+# Operator Intelligence Framework - Arbitration Explanation Templates
+# Normative canonical specification for MAL decision explanations
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/oif/arbitration-explanation/1.0.0
 version: 1.0.0
 title: OIF Arbitration Explanation Schema
-description: Schema canônico para templates de explicação de arbitragem MAL no OIF
+description: Canonical schema for MAL arbitration explanation templates in OIF
 type: object
 required:
   - schema
@@ -23,27 +23,27 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema OIF Arbitration Explanation utilizado
+    description: Schema version OIF Arbitration Explanation used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   explanation_id:
     type: string
-    description: Identificador único da explicação
+    description: Unique identifier of the explanation
     pattern: ^oif-exp-[0-9]{8}-[a-z0-9]+-[0-9]+$
     examples:
       - oif-exp-20250826-h1-001
       - oif-exp-20250827-h2-042
   decision_id:
     type: string
-    description: Identificador da decisão MAL sendo explicada
+    description: Identifier of the MAL decision being explained
     pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
     examples:
       - mal-dec-20250826-h1-001
   event_type:
     type: string
-    description: Tipo de conflito arbitrado
+    description: Arbitrated conflict type
     enum:
       - H1
       - H2
@@ -53,7 +53,7 @@ properties:
       - H2
   outcome:
     type: string
-    description: Resultado da arbitragem MAL
+    description: Arbitration result MAL
     enum:
       - winner
       - coexist
@@ -64,15 +64,15 @@ properties:
       - coexist
   summary:
     type: string
-    description: Explicação amigável ao usuário do resultado
+    description: User-friendly explanation of the result
     minLength: 50
     maxLength: 500
     examples:
-      - A regra de retenção de dados de 30 dias foi escolhida como vencedora devido à maior maturidade epistemológica e
-        evidência regulatória mais forte
+      - The 30-day data retention rule was chosen as winner due to higher epistemological maturity and
+        stronger regulatory evidence
   reason_code:
     type: string
-    description: Identificador de razão estruturado
+    description: Structured reason identifier
     pattern: ^[A-Z0-9_]+$
     examples:
       - MATURITY_AND_EVIDENCE_PRECEDENCE
@@ -80,25 +80,25 @@ properties:
       - TEMPORAL_PRECEDENCE_APPLIED
   winner:
     type: string
-    description: UKI escolhida como autoritativa (obrigatório se outcome=winner)
+    description: UKI chosen as authoritative (required if outcome=winner)
     pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
     examples:
-      - uki:squad-x:rule:retencao-dados-30d
+      - uki:squad-x:rule:data-retention-30d
   losers:
     type: array
-    description: UKIs derrotadas na arbitragem (obrigatório se outcome=winner)
+    description: UKIs defeated in arbitration (required if outcome=winner)
     items:
       type: string
       pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
     examples:
-      - - uki:squad-x:rule:retencao-dados-7d
+      - - uki:squad-x:rule:data-retention-7d
   coexistence_details:
     type: object
-    description: Detalhes de coexistência (obrigatório se outcome=coexist)
+    description: Coexistence details (required if outcome=coexist)
     properties:
       partition_strategy:
         type: string
-        description: Estratégia de particionamento aplicada
+        description: Partitioning strategy applied
         enum:
           - scope_partition
           - domain_partition
@@ -107,7 +107,7 @@ properties:
           - scope_partition
       partition_assignments:
         type: object
-        description: Atribuições de partição
+        description: Partition assignments
         patternProperties:
           ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$:
             type: object
@@ -117,47 +117,47 @@ properties:
             properties:
               assigned_scope:
                 type: string
-                description: Escopo atribuído à UKI
+                description: Scope assigned to the UKI
               reason:
                 type: string
-                description: Razão da atribuição
+                description: Reason for assignment
             additionalProperties: false
         additionalProperties: false
       coexistence_rationale:
         type: string
-        description: Justificativa para coexistência
+        description: Rationale for coexistence
         minLength: 50
     additionalProperties: false
   rejection_details:
     type: object
-    description: Detalhes de rejeição (obrigatório se outcome=reject_all)
+    description: Rejection details (required if outcome=reject_all)
     properties:
       rejection_reason:
         type: string
-        description: Razão para rejeição de todas as UKIs
+        description: Reason for rejecting all UKIs
         examples:
-          - Nenhuma UKI atende aos critérios mínimos de qualidade
+          - No UKI meets minimum quality criteria
       alternative_actions:
         type: array
-        description: Ações alternativas recomendadas
+        description: Recommended alternative actions
         items:
           type: string
         examples:
-          - - Criar nova UKI com evidências adequadas
-            - Buscar aprovação de autoridade superior
+          - - Create new UKI with adequate evidence
+            - Seek approval from higher authority
     additionalProperties: false
   deferral_details:
     type: object
-    description: Detalhes de adiamento (obrigatório se outcome=defer)
+    description: Deferral details (required if outcome=defer)
     properties:
       deferral_reason:
         type: string
-        description: Razão para adiamento da decisão
+        description: Reason for decision deferral
         examples:
-          - Requer sobrescrita humana devido à complexidade do conflito
+          - Requires human oversight due to conflict complexity
       required_intervention:
         type: string
-        description: Tipo de intervenção necessária
+        description: Type of intervention required
         enum:
           - human_oversight
           - additional_evidence
@@ -165,7 +165,7 @@ properties:
           - authority_escalation
       intervention_contacts:
         type: array
-        description: Contatos para intervenção
+        description: Contacts for intervention
         items:
           type: string
         examples:
@@ -175,7 +175,7 @@ properties:
     additionalProperties: false
   precedence_explanation:
     type: array
-    description: Regras de precedência aplicadas na decisão
+    description: Precedence rules applied in the decision
     minItems: 1
     items:
       type: object
@@ -186,27 +186,27 @@ properties:
       properties:
         rule:
           type: string
-          description: Identificador da regra de precedência
+          description: Precedence rule identifier
           pattern: ^P[0-9]+_[a-z_]+$
           examples:
             - P1_authority_weight
             - P3_maturity_level
         description:
           type: string
-          description: Explicação legível da regra
+          description: Human-readable explanation of the rule
           minLength: 20
           examples:
-            - Maior peso de autoridade hierárquica vence
-            - Conhecimento validado tem precedência sobre experimental
+            - Higher hierarchical authority weight wins
+            - Validated knowledge takes precedence over experimental
         impact:
           type: string
-          description: Como esta regra afetou a decisão específica
+          description: How this rule affected the specific decision
           minLength: 30
           examples:
-            - Determinou que squad-lead tem maior autoridade que developer neste contexto
+            - Determined that squad-lead has higher authority than developer in this context
         weight_applied:
           type: number
-          description: Peso numérico aplicado à regra (0.0 a 1.0)
+          description: Numerical weight applied to the rule (0.0 to 1.0)
           minimum: 0
           maximum: 1
           examples:
@@ -214,14 +214,14 @@ properties:
             - 0.6
         decisive_factor:
           type: boolean
-          description: Esta regra foi o fator decisivo
+          description: This rule was the decisive factor
           examples:
             - true
             - false
       additionalProperties: false
   moc_references:
     type: array
-    description: Nós de autoridade MOC referenciados na decisão
+    description: MOC authority nodes referenced in the decision
     minItems: 1
     items:
       type: object
@@ -232,7 +232,7 @@ properties:
       properties:
         node_id:
           type: string
-          description: Identificador do nó MOC
+          description: MOC node identifier
           pattern: ^[a-z0-9.-]+$
           examples:
             - hierarchies.scope.squad-x
@@ -240,7 +240,7 @@ properties:
             - hierarchies.authority.tech_lead
         node_type:
           type: string
-          description: Tipo do nó MOC
+          description: MOC node type
           enum:
             - scope
             - domain
@@ -252,21 +252,21 @@ properties:
             - authority
         relevance:
           type: string
-          description: Por que este nó foi relevante para a decisão
+          description: Why this node was relevant to the decision
           minLength: 30
           examples:
-            - Define o escopo onde ambas as UKIs operam
-            - Estabelece a hierarquia de autoridade aplicável
+            - Defines the scope where both UKIs operate
+            - Establishes the applicable authority hierarchy
         node_value:
           type: string
-          description: Valor específico do nó usado na decisão
+          description: Specific node value used in the decision
           examples:
             - squad-x
             - tech_lead
             - validated
         decision_influence:
           type: string
-          description: Como este nó influenciou a decisão
+          description: How this node influenced the decision
           enum:
             - supportive
             - decisive
@@ -278,19 +278,19 @@ properties:
       additionalProperties: false
   next_steps:
     type: string
-    description: Ações recomendadas ao usuário após a decisão
+    description: Recommended actions for the user after the decision
     minLength: 50
     examples:
-      - Utilize a regra de retenção de 30 dias aprovada. Para futuras políticas de dados, consulte a UKI vencedora como
-        referência.
+      - Use the approved 30-day retention rule. For future data policies, consult the winning UKI as
+        reference.
   escalation_path:
     type: string
-    description: Opções de escalonamento disponíveis (opcional)
+    description: Available escalation options (optional)
     examples:
-      - Para questionar esta decisão, contacte o tech-lead responsável pelo domínio de segurança
+      - To question this decision, contact the tech-lead responsible for the security domain
   epistemic_context:
     type: object
-    description: Contexto epistêmico da explicação alinhado ao MEP
+    description: Epistemic context of the explanation aligned with MEP
     required:
       - humility_demonstration
       - authority_acknowledgment
@@ -298,37 +298,37 @@ properties:
     properties:
       humility_demonstration:
         type: string
-        description: Como a explicação demonstra humildade epistêmica
+        description: How the explanation demonstrates epistemic humility
         examples:
-          - A decisão é baseada em critérios organizacionais específicos e pode variar em outros contextos
+          - The decision is based on specific organizational criteria and may vary in other contexts
       authority_acknowledgment:
         type: string
-        description: Como reconhece a autoridade derivada
+        description: How it acknowledges derived authority
         examples:
-          - A autoridade para esta decisão deriva da configuração organizacional MOC
+          - The authority for this decision derives from the MOC organizational configuration
       contextual_awareness:
         type: string
-        description: Como demonstra consciência do contexto
+        description: How it demonstrates contextual awareness
         examples:
-          - Esta decisão se aplica especificamente ao escopo squad-x no domínio de segurança
+          - This decision applies specifically to squad-x scope in the security domain
       uncertainty_acknowledgment:
         type: string
-        description: Reconhecimento de incertezas (se aplicável)
+        description: Acknowledgment of uncertainties (if applicable)
         examples:
-          - Algumas evidências foram inconclusivas, mas o peso geral favoreceu esta escolha
+          - Some evidence was inconclusive, but the overall weight favored this choice
       learning_opportunity:
         type: string
-        description: Oportunidades de aprendizado identificadas
+        description: Learning opportunities identified
         examples:
-          - Este conflito sugere necessidade de maior alinhamento nas políticas de retenção
+          - This conflict suggests need for better alignment in retention policies
     additionalProperties: false
   presentation_config:
     type: object
-    description: Configuração de apresentação da explicação
+    description: Explanation presentation configuration
     properties:
       target_audience:
         type: string
-        description: Audiência alvo da explicação
+        description: Target audience for the explanation
         enum:
           - developer
           - tech_lead
@@ -338,7 +338,7 @@ properties:
         default: general
       detail_level:
         type: string
-        description: Nível de detalhe da explicação
+        description: Detail level of the explanation
         enum:
           - minimal
           - standard
@@ -347,7 +347,7 @@ properties:
         default: standard
       technical_depth:
         type: string
-        description: Profundidade técnica apropriada
+        description: Appropriate technical depth
         enum:
           - low
           - medium
@@ -355,15 +355,15 @@ properties:
         default: medium
       include_examples:
         type: boolean
-        description: Incluir exemplos práticos
+        description: Include practical examples
         default: true
       highlight_key_points:
         type: boolean
-        description: Destacar pontos chave
+        description: Highlight key points
         default: true
       format_preference:
         type: string
-        description: Formato preferido de apresentação
+        description: Preferred presentation format
         enum:
           - narrative
           - structured
@@ -373,15 +373,15 @@ properties:
     additionalProperties: false
   feedback_collection:
     type: object
-    description: Configuração de coleta de feedback
+    description: Feedback collection configuration
     properties:
       feedback_enabled:
         type: boolean
-        description: Coleta de feedback habilitada
+        description: Feedback collection enabled
         default: true
       feedback_categories:
         type: array
-        description: Categorias de feedback disponíveis
+        description: Available feedback categories
         items:
           type: string
           enum:
@@ -395,12 +395,12 @@ properties:
           - usefulness
       improvement_tracking:
         type: boolean
-        description: Rastreamento de melhorias baseado em feedback
+        description: Improvement tracking based on feedback
         default: true
     additionalProperties: false
   metadata:
     type: object
-    description: Metadados da explicação
+    description: Explanation metadata
     required:
       - generated_at
       - generator
@@ -409,43 +409,43 @@ properties:
       generated_at:
         type: string
         format: date-time
-        description: Timestamp de geração da explicação
+        description: Explanation generation timestamp
       generator:
         type: string
-        description: Arquétipo que gerou a explicação
+        description: Archetype that generated the explanation
         examples:
           - knowledge-agent
           - workflow-agent
           - specialized-agent
       template_version:
         type: string
-        description: Versão do template usado
+        description: Template version used
         pattern: ^[0-9]+\.[0-9]+\.[0-9]+$
         examples:
           - 1.0.0
           - 1.2.1
       generation_duration_ms:
         type: integer
-        description: Tempo de geração da explicação
+        description: Explanation generation time
         minimum: 0
       user_context:
         type: object
-        description: Contexto do usuário que recebe a explicação
+        description: Context of the user receiving the explanation
         properties:
           user_id:
             type: string
-            description: ID do usuário
+            description: User ID
           authority_level:
             type: string
-            description: Nível de autoridade do usuário
+            description: User authority level
           domains_accessible:
             type: array
-            description: Domínios acessíveis ao usuário
+            description: Domains accessible to the user
             items:
               type: string
           preferred_language:
             type: string
-            description: Idioma preferido
+            description: Preferred language
             enum:
               - pt
               - en
@@ -453,21 +453,21 @@ properties:
         additionalProperties: true
       quality_metrics:
         type: object
-        description: Métricas de qualidade da explicação
+        description: Explanation quality metrics
         properties:
           clarity_score:
             type: number
-            description: Pontuação de clareza (0.0 a 1.0)
+            description: Clarity score (0.0 to 1.0)
             minimum: 0
             maximum: 1
           completeness_score:
             type: number
-            description: Pontuação de completude (0.0 a 1.0)
+            description: Completeness score (0.0 to 1.0)
             minimum: 0
             maximum: 1
           moc_citation_completeness:
             type: number
-            description: Completude das citações MOC (0.0 a 1.0)
+            description: MOC citation completeness (0.0 to 1.0)
             minimum: 0
             maximum: 1
         additionalProperties: false

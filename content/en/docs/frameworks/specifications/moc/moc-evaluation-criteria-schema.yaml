@@ -1,12 +1,12 @@
 # MOC Evaluation Criteria Schema v1.0.0
-# Matrix Ontology Catalog - Critérios de Avaliação para EvaluateForEnrich
-# Especificação canônica normativa para critérios organizacionais de enriquecimento
+# Matrix Ontology Catalog - Evaluation Criteria for EvaluateForEnrich
+# Normative canonical specification for organizational enrichment criteria
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/moc/evaluation-criteria/1.0.0
 version: 1.0.0
 title: MOC Evaluation Criteria Schema
-description: Schema canônico para critérios de avaliação EvaluateForEnrich no MOC
+description: Canonical schema for EvaluateForEnrich evaluation criteria in MOC
 type: object
 required:
   - schema
@@ -18,28 +18,28 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema MOC Evaluation Criteria utilizado
+    description: Schema version MOC Evaluation Criteria used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   organization_id:
     type: string
-    description: Identificador único da organização
+    description: Unique identifier of the organization
     pattern: ^[a-z0-9-]+$
     examples:
       - techcorp
       - startup-alpha
   version:
     type: string
-    description: Versão da configuração de critérios
+    description: Version of criteria configuration
     pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)$
     examples:
       - "1.0"
       - "2.1"
   evaluation_profiles:
     type: object
-    description: Perfis de critérios para diferentes contextos organizacionais
+    description: Criteria profiles for different organizational contexts
     minProperties: 1
     patternProperties:
       ^[a-z0-9_-]+$:
@@ -52,20 +52,20 @@ properties:
         properties:
           display_name:
             type: string
-            description: Nome exibível do perfil de avaliação
+            description: Display name of evaluation profile
             examples:
-              - Perfil Padrão
-              - Perfil Crítico
-              - Perfil Experimental
+              - Standard Profile
+              - Critical Profile
+              - Experimental Profile
           description:
             type: string
-            description: Descrição do perfil e quando usar
+            description: Description of profile and when to use
             minLength: 50
             examples:
-              - Perfil padrão para avaliação de conhecimento em contextos regulares
+              - Standard profile for knowledge evaluation in regular contexts
           criteria:
             type: object
-            description: Critérios de avaliação específicos do perfil
+            description: Profile-specific evaluation criteria
             minProperties: 1
             patternProperties:
               ^[a-z0-9_]+$:
@@ -79,21 +79,21 @@ properties:
                 properties:
                   display_name:
                     type: string
-                    description: Nome exibível do critério
+                    description: Display name of criterion
                     examples:
-                      - Relevância
-                      - Reutilização
-                      - Impacto
-                      - Novidade
+                      - Relevance
+                      - Reusability
+                      - Impact
+                      - Novelty
                   description:
                     type: string
-                    description: Descrição detalhada do critério
+                    description: Detailed description of criterion
                     minLength: 30
                     examples:
-                      - Avalia se o conhecimento é relevante para outros membros da equipe
+                      - Evaluates if knowledge is relevant to other team members
                   evaluation_method:
                     type: string
-                    description: Método de avaliação do critério
+                    description: Criterion evaluation method
                     enum:
                       - manual
                       - automated
@@ -104,14 +104,14 @@ properties:
                       - semantic
                   threshold:
                     type: object
-                    description: Configuração de limiar para aprovação
+                    description: Threshold configuration for approval
                     required:
                       - type
                       - value
                     properties:
                       type:
                         type: string
-                        description: Tipo de limiar
+                        description: Threshold type
                         enum:
                           - binary
                           - numeric
@@ -121,7 +121,7 @@ properties:
                           - binary
                           - percentage
                       value:
-                        description: Valor do limiar
+                        description: Threshold value
                         oneOf:
                           - type: boolean
                           - type: number
@@ -139,7 +139,7 @@ properties:
                           - medium
                       operator:
                         type: string
-                        description: Operador de comparação
+                        description: Comparison operator
                         enum:
                           - ">="
                           - ">"
@@ -154,7 +154,7 @@ properties:
                     additionalProperties: false
                   weight:
                     type: number
-                    description: Peso relativo do critério (0.0 a 1.0)
+                    description: Relative weight of criterion (0.0 to 1.0)
                     minimum: 0
                     maximum: 1
                     examples:
@@ -163,7 +163,7 @@ properties:
                       - 0.4
                   scoring_algorithm:
                     type: string
-                    description: Algoritmo específico de pontuação
+                    description: Specific scoring algorithm
                     enum:
                       - boolean
                       - linear
@@ -176,13 +176,13 @@ properties:
                       - boolean
                   custom_evaluator:
                     type: string
-                    description: Função customizada de avaliação
+                    description: Custom evaluation function
                     examples:
                       - semantic_similarity
                       - business_value_calculator
                   failure_action:
                     type: string
-                    description: Ação quando critério falha
+                    description: Action when criterion fails
                     enum:
                       - block
                       - warn
@@ -194,7 +194,7 @@ properties:
                       - escalate
                   dependencies:
                     type: array
-                    description: Critérios que devem passar primeiro
+                    description: Criteria that must pass first
                     items:
                       type: string
                       pattern: ^[a-z0-9_]+$
@@ -203,7 +203,7 @@ properties:
                         - authority
                   exemptions:
                     type: array
-                    description: Contextos onde critério pode ser ignorado
+                    description: Contexts where criterion can be ignored
                     items:
                       type: object
                       required:
@@ -212,25 +212,25 @@ properties:
                       properties:
                         condition:
                           type: string
-                          description: Condição para isenção
+                          description: Condition for exemption
                           examples:
                             - maturity_ref == 'experimental'
                         reason:
                           type: string
-                          description: Justificativa para isenção
+                          description: Rationale for exemption
                         authority_required:
                           type: string
-                          description: Autoridade necessária para isenção
+                          description: Authority required for exemption
                       additionalProperties: false
                 additionalProperties: false
             additionalProperties: false
           applicable_contexts:
             type: object
-            description: Contextos onde este perfil se aplica
+            description: Contexts where this profile applies
             properties:
               scopes:
                 type: array
-                description: Escopos organizacionais aplicáveis
+                description: Applicable organizational scopes
                 items:
                   type: string
                   pattern: ^[a-z0-9-]+$
@@ -240,7 +240,7 @@ properties:
                     - organization
               domains:
                 type: array
-                description: Domínios de conhecimento aplicáveis
+                description: Applicable knowledge domains
                 items:
                   type: string
                   pattern: ^[a-z0-9-]+$
@@ -250,7 +250,7 @@ properties:
                     - security
               maturity_levels:
                 type: array
-                description: Níveis de maturidade aplicáveis
+                description: Applicable maturity levels
                 items:
                   type: string
                   pattern: ^[a-z0-9_]+$
@@ -260,7 +260,7 @@ properties:
                     - validated
               knowledge_types:
                 type: array
-                description: Tipos de conhecimento aplicáveis
+                description: Applicable knowledge types
                 items:
                   type: string
                   pattern: ^[a-z0-9_]+$
@@ -270,7 +270,7 @@ properties:
                     - policy
               user_roles:
                 type: array
-                description: Papéis de usuário que usam este perfil
+                description: User roles that use this profile
                 items:
                   type: string
                 examples:
@@ -280,11 +280,11 @@ properties:
             additionalProperties: false
           execution_config:
             type: object
-            description: Configurações de execução da avaliação
+            description: Evaluation execution configurations
             properties:
               timeout_ms:
                 type: integer
-                description: Timeout para execução da avaliação
+                description: Timeout for evaluation execution
                 minimum: 100
                 maximum: 60000
                 default: 5000
@@ -293,23 +293,23 @@ properties:
                   - 10000
               parallel_execution:
                 type: boolean
-                description: Permite execução paralela de critérios
+                description: Allows parallel execution of criteria
                 default: true
               fail_fast:
                 type: boolean
-                description: Para na primeira falha de critério
+                description: Stop at first criterion failure
                 default: false
               require_all_pass:
                 type: boolean
-                description: Requer que todos os critérios passem
+                description: Requires all criteria to pass
                 default: true
               weighted_scoring:
                 type: boolean
-                description: Usa pontuação ponderada ao invés de all-or-nothing
+                description: Uses weighted scoring instead of all-or-nothing
                 default: false
               minimum_score:
                 type: number
-                description: Pontuação mínima para aprovação (se weighted_scoring=true)
+                description: Minimum score for approval (if weighted_scoring=true)
                 minimum: 0
                 maximum: 1
                 examples:
@@ -320,7 +320,7 @@ properties:
     additionalProperties: false
   default_profile:
     type: string
-    description: ID do perfil de avaliação padrão
+    description: ID of default evaluation profile
     pattern: ^[a-z0-9_-]+$
     examples:
       - standard
@@ -328,11 +328,11 @@ properties:
       - minimal
   context_mapping:
     type: object
-    description: Mapeamento de contextos para perfis específicos
+    description: Mapping of contexts to specific profiles
     properties:
       scope_overrides:
         type: object
-        description: Perfis específicos por escopo
+        description: Specific profiles by scope
         patternProperties:
           ^[a-z0-9-]+$:
             type: string
@@ -342,7 +342,7 @@ properties:
           squad: standard
       domain_overrides:
         type: object
-        description: Perfis específicos por domínio
+        description: Specific profiles by domain
         patternProperties:
           ^[a-z0-9-]+$:
             type: string
@@ -352,7 +352,7 @@ properties:
           experimental: minimal
       maturity_overrides:
         type: object
-        description: Perfis específicos por nível de maturidade
+        description: Specific profiles by maturity level
         patternProperties:
           ^[a-z0-9_]+$:
             type: string
@@ -363,7 +363,7 @@ properties:
     additionalProperties: false
   metadata:
     type: object
-    description: Metadados da configuração de critérios
+    description: Metadata of criteria configuration
     required:
       - created_date
       - last_modified
@@ -372,30 +372,30 @@ properties:
       created_date:
         type: string
         format: date
-        description: Data de criação da configuração
+        description: Creation date of configuration
       last_modified:
         type: string
         format: date
-        description: Data da última modificação
+        description: Last modification date
       maintainer:
         type: string
-        description: Responsável pela manutenção dos critérios
+        description: Responsible for criteria maintenance
         examples:
           - governance-team
           - platform-team
       change_summary:
         type: string
-        description: Resumo das mudanças na versão atual
+        description: Summary of changes in current version
       validation_status:
         type: string
-        description: Status de validação da configuração
+        description: Configuration validation status
         enum:
           - valid
           - pending
           - invalid
       testing_results:
         type: object
-        description: Resultados de testes dos critérios
+        description: Criteria testing results
         properties:
           last_test_date:
             type: string
@@ -414,11 +414,11 @@ additionalProperties: false
 allOf:
   - properties:
       default_profile:
-        description: Deve existir em evaluation_profiles
+        description: Must exist in evaluation_profiles
   - properties:
       evaluation_profiles:
         patternProperties:
           ^[a-z0-9_-]+$:
             properties:
               criteria:
-                description: Soma de pesos deve ser <= 1.0
+                description: Sum of weights must be <= 1.0

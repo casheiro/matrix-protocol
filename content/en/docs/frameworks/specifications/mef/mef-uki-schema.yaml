@@ -55,7 +55,7 @@ properties:
       - 0.5.0
   scope_ref:
     type: string
-    description: Referência ao nó de escopo definido no MOC organizacional
+    description: Reference to scope node defined in MOC organizational structure
     pattern: ^[a-z0-9-]+$
     examples:
       - squad-payments
@@ -63,7 +63,7 @@ properties:
       - organization
   domain_ref:
     type: string
-    description: Referência ao nó de domínio definido no MOC organizacional
+    description: Reference to domain node defined in MOC organizational structure
     pattern: ^[a-z0-9-]+$
     examples:
       - business
@@ -72,7 +72,7 @@ properties:
       - compliance
   type_ref:
     type: string
-    description: Referência ao tipo de conhecimento definido no MOC organizacional
+    description: Reference to knowledge type defined in MOC organizational structure
     pattern: ^[a-z0-9_]+$
     examples:
       - business_rule
@@ -82,7 +82,7 @@ properties:
       - procedure
   maturity_ref:
     type: string
-    description: Referência ao nível de maturidade definido no MOC organizacional
+    description: Reference to maturity level defined in MOC organizational structure
     pattern: ^[a-z0-9_]+$
     examples:
       - draft
@@ -93,20 +93,20 @@ properties:
   created_date:
     type: string
     format: date
-    description: Data de criação da UKI
+    description: UKI creation date
     examples:
       - 2024-03-25
       - 2025-01-15
   last_modified:
     type: string
     format: date
-    description: Data da última modificação
+    description: Last modification date
     examples:
       - 2024-03-25
       - 2025-01-15
   status:
     type: string
-    description: Estado do ciclo de vida da UKI
+    description: UKI lifecycle state
     enum:
       - active
       - deprecated
@@ -117,23 +117,23 @@ properties:
       - deprecated
   content:
     type: string
-    description: Conhecimento estruturado específico em formato markdown
+    description: Structured knowledge content in markdown format
     minLength: 50
     examples:
       - |-
-        ## Regras de Desconto
+        ## Discount Rules
 
-        Aplicação automática baseada no valor total...
+        Automatic application based on total value...
   ontology_reference:
     type: string
-    description: Referência à versão específica do MOC organizacional
+    description: Reference to specific MOC organizational version
     pattern: ^moc:[a-z0-9-]+:v[0-9]+\.[0-9]+$
     examples:
       - moc:squad-payments:v1.0
       - moc:organization:v2.1
   scope_mode:
     type: string
-    description: Modo de propagação do conhecimento entre escopos
+    description: Knowledge propagation mode between scopes
     enum:
       - restricted
       - propagated
@@ -143,14 +143,14 @@ properties:
       - propagated
   change_summary:
     type: string
-    description: Resumo das mudanças (obrigatório para versões > 1.0.0)
+    description: Summary of changes (required for versions > 1.0.0)
     minLength: 20
     maxLength: 500
     examples:
-      - Consolidação de regras conflitantes sobre descontos e definição de precedência
+      - Consolidation of conflicting discount rules and precedence definition
   change_impact:
     type: string
-    description: Classificação do impacto da mudança
+    description: Change impact classification
     enum:
       - major
       - minor
@@ -160,14 +160,14 @@ properties:
       - major
   previous_version:
     type: string
-    description: Versão anterior quando aplicável
+    description: Previous version when applicable
     pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
     examples:
       - 1.0.0
       - 2.0.3
   examples:
     type: array
-    description: Exemplos práticos de uso da UKI
+    description: Practical UKI usage examples
     items:
       type: object
       required:
@@ -176,17 +176,17 @@ properties:
       properties:
         input:
           type: string
-          description: Cenário ou entrada do exemplo
+          description: Example scenario or input
         output:
           type: string
-          description: Resultado ou saída esperada
+          description: Expected result or output
         description:
           type: string
-          description: Explicação adicional do exemplo
+          description: Additional example explanation
       additionalProperties: false
   validations:
     type: array
-    description: Regras de validação ou verificação
+    description: Validation or verification rules
     items:
       type: object
       required:
@@ -195,10 +195,10 @@ properties:
       properties:
         rule:
           type: string
-          description: Nome ou identificador da regra
+          description: Rule name or identifier
         description:
           type: string
-          description: Descrição da validação
+          description: Validation description
         severity:
           type: string
           enum:
@@ -209,7 +209,7 @@ properties:
       additionalProperties: false
   relationships:
     type: array
-    description: Conexões tipadas com outras UKIs
+    description: Typed connections with other UKIs
     items:
       type: object
       required:
@@ -233,15 +233,15 @@ properties:
             - supersedes
         target:
           type: string
-          description: Identificador da UKI relacionada
+          description: Related UKI identifier
           pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
         description:
           type: string
-          description: Descrição específica do relacionamento
+          description: Specific relationship description
           minLength: 10
         strength:
           type: string
-          description: Força do relacionamento
+          description: Relationship strength
           enum:
             - weak
             - moderate
@@ -250,7 +250,7 @@ properties:
       additionalProperties: false
   tags:
     type: array
-    description: Tags para categorização e busca
+    description: Tags for categorization and search
     items:
       type: string
       pattern: ^[a-z0-9-]+$
@@ -261,7 +261,7 @@ properties:
         - validation
   authors:
     type: array
-    description: Autores ou responsáveis pela UKI
+    description: Authors or UKI responsible parties
     items:
       type: object
       required:
@@ -270,31 +270,31 @@ properties:
       properties:
         name:
           type: string
-          description: Nome do autor
+          description: Author name
         role:
           type: string
-          description: Papel do autor
+          description: Author role
         email:
           type: string
           format: email
-          description: Email de contato
+          description: Contact email
       additionalProperties: false
   domain_of_influence:
     type: string
-    description: Domínio organizacional de influência
+    description: Organizational domain of influence
     examples:
       - engineering_teams
       - business_units
       - compliance_department
   decision_record_ref:
     type: string
-    description: Referência ao Decision Record MAL (quando aplicável)
+    description: Reference to MAL Decision Record (when applicable)
     pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
     examples:
       - mal-dec-20250826-h1-001
   arbitration_metadata:
     type: object
-    description: Metadados de arbitragem quando UKI resulta de decisão MAL
+    description: Arbitration metadata when UKI results from MAL decision
     properties:
       conflict_type:
         type: string
@@ -302,7 +302,7 @@ properties:
           - H1
           - H2
           - H3
-        description: Tipo de conflito arbitrado
+        description: Arbitrated conflict type
       resolution_outcome:
         type: string
         enum:
@@ -310,29 +310,29 @@ properties:
           - coexist
           - reject_all
           - defer
-        description: Resultado da arbitragem
+        description: Arbitration result
       arbitrated_at:
         type: string
         format: date-time
-        description: Timestamp da arbitragem
+        description: Arbitration timestamp
     additionalProperties: false
   governance:
     type: object
-    description: Informações de governança e auditoria
+    description: Governance and audit information
     properties:
       approval_authority:
         type: string
-        description: Autoridade que aprovou a UKI
+        description: Authority that approved the UKI
       approval_date:
         type: string
         format: date
-        description: Data de aprovação
+        description: Approval date
       review_cycle:
         type: string
-        description: Ciclo de revisão (quarterly, yearly, etc.)
+        description: Review cycle (quarterly, yearly, etc.)
       compliance_tags:
         type: array
-        description: Tags de conformidade regulatória
+        description: Regulatory compliance tags
         items:
           type: string
     additionalProperties: false

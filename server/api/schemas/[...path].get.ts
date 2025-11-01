@@ -59,10 +59,11 @@ export default defineEventHandler(async (event) => {
     }
 
     // Construir caminho para o arquivo
+    // Schemas técnicos são sempre servidos em inglês (padrão internacional)
     const contentPath = join(
       process.cwd(),
       'content',
-      locale,
+      'en', // Sempre usar schema em inglês para consistência técnica
       'docs',
       'frameworks',
       'specifications',
