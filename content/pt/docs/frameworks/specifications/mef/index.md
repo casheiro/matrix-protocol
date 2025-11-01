@@ -1,81 +1,81 @@
 ---
-title: Especificações MEF - Matrix Embedding Framework
-description: Schemas YAML canônicos para UKIs e Decision Records do Matrix Embedding Framework
+title: MEF Specifications - Matrix Embedding Framework
+description: Canonical YAML schemas for UKIs and Decision Records of the Matrix Embedding Framework
 keywords:
   - MEF
   - Matrix Embedding Framework
   - UKI
   - Units of Knowledge Interlinked
   - Decision Record
-  - schemas YAML
-  - especificação canônica
+  - YAML schemas
+  - canonical specification
 framework: MEF
 icon: i-heroicons-cube
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 1
 ---
 
-# Especificações MEF - Matrix Embedding Framework
+# MEF Specifications - Matrix Embedding Framework
 
-Esta seção contém as especificações canônicas normativas para o **Matrix Embedding Framework (MEF)**, definindo schemas YAML para estruturação de conhecimento embebido versionado.
+This section contains the normative canonical specifications for the **Matrix Embedding Framework (MEF)**, defining YAML schemas for versioned embedded knowledge structuring.
 
-## 📋 Schemas Disponíveis
+## 📋 Available Schemas
 
 ### 1. MEF UKI Schema
-**Arquivo:** `mef-uki-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação canônica para Units of Knowledge Interlinked (UKIs)
+**File:** `mef-uki-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Canonical specification for Units of Knowledge Interlinked (UKIs)
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/mef/mef-uki-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/mef/mef-uki-schema.yaml" />
 
-#### Campos Obrigatórios
-- **Metadados:** `schema`, `id`, `title`, `version`
-- **Referências MOC:** `scope_ref`, `domain_ref`, `type_ref`, `maturity_ref`
-- **Controle de Vida:** `created_date`, `last_modified`, `status`
-- **Conteúdo:** `content`
+#### Mandatory Fields
+- **Metadata:** `schema`, `id`, `title`, `version`
+- **MOC References:** `scope_ref`, `domain_ref`, `type_ref`, `maturity_ref`
+- **Lifecycle Control:** `created_date`, `last_modified`, `status`
+- **Content:** `content`
 
-#### Campos Opcionais
-- **Versionamento:** `change_summary`, `change_impact`, `previous_version`
-- **Relacionamentos:** `relationships` (conexões tipadas com outras UKIs)
-- **Exemplos:** `examples`, `validations`
-- **Governança:** `governance`, `arbitration_metadata`
+#### Optional Fields
+- **Versioning:** `change_summary`, `change_impact`, `previous_version`
+- **Relationships:** `relationships` (typed connections with other UKIs)
+- **Examples:** `examples`, `validations`
+- **Governance:** `governance`, `arbitration_metadata`
 
 ### 2. MEF Decision Record Schema
-**Arquivo:** `mef-decision-record-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para persistência de Decision Records MAL no MEF
+**File:** `mef-decision-record-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for persisting MAL Decision Records in MEF
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/mef/mef-decision-record-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/mef/mef-decision-record-schema.yaml" />
 
-#### Campos Obrigatórios
-- **Identificação:** `decision_id`, `event_ref`
-- **Resultado:** `outcome`, `precedence_applied`
-- **Justificativa:** `epistemic_rationale`
-- **Auditoria:** `audit`, `mef_metadata`
+#### Mandatory Fields
+- **Identification:** `decision_id`, `event_ref`
+- **Result:** `outcome`, `precedence_applied`
+- **Rationale:** `epistemic_rationale`
+- **Audit:** `audit`, `mef_metadata`
 
-#### Integração MAL
-- Persiste decisões de arbitragem como trilha imutável
-- Mantém referências completas para rastreabilidade
-- Suporta justificativas epistêmicas alinhadas ao MEP
+#### MAL Integration
+- Persists arbitration decisions as immutable trail
+- Maintains complete references for traceability
+- Supports epistemic rationales aligned with MEP
 
-## 🎯 Uso das Especificações
+## 🎯 Using the Specifications
 
-### Para Implementadores
+### For Implementers
 
-#### Estrutura Básica de UKI
+#### Basic UKI Structure
 ```yaml
-# Exemplo mínimo conforme schema
+# Minimal example conforming to schema
 schema: "1.0"
-id: uki:minha-equipe:guideline:exemplo-001
-title: "Guideline de Exemplo para Demonstração"
+id: uki:my-team:guideline:example-001
+title: "Example Guideline for Demonstration"
 version: "1.0.0"
 
-scope_ref: minha-equipe
+scope_ref: my-team
 domain_ref: technical
 type_ref: guideline
 maturity_ref: draft
@@ -85,103 +85,103 @@ last_modified: 2025-10-31
 status: active
 
 content: |
-  ## Guideline de Exemplo
+  ## Example Guideline
   
-  Esta é uma guideline de exemplo que demonstra
-  a estrutura mínima de uma UKI conforme o schema MEF.
+  This is an example guideline that demonstrates
+  the minimal structure of a UKI according to the MEF schema.
   
-  ### Aplicação
-  - Usar em contextos de demonstração
-  - Validar estrutura contra schema
+  ### Application
+  - Use in demonstration contexts
+  - Validate structure against schema
   
 relationships: []
 ```
 
-#### Validação com Schema
+#### Schema Validation
 ```python
-# Python com jsonschema
+# Python with jsonschema
 import yaml
 import jsonschema
 
-# Carregar schema e UKI
+# Load schema and UKI
 schema = yaml.safe_load(open('mef-uki-schema.yaml'))
-uki = yaml.safe_load(open('minha-uki.yaml'))
+uki = yaml.safe_load(open('my-uki.yaml'))
 
-# Validar
+# Validate
 try:
     jsonschema.validate(uki, schema)
-    print("UKI válida!")
+    print("Valid UKI!")
 except jsonschema.ValidationError as e:
-    print(f"Erro de validação: {e.message}")
+    print(f"Validation error: {e.message}")
 ```
 
-### Para Organizações
+### For Organizations
 
-#### Adaptação de Campos MOC
+#### MOC Field Adaptation
 ```yaml
-# Configure conforme seu MOC organizacional
-scope_ref: sua-equipe        # Definido no MOC
-domain_ref: seu-dominio      # Definido no MOC  
-type_ref: seu_tipo          # Definido no MOC
-maturity_ref: seu_nivel     # Definido no MOC
+# Configure according to your organizational MOC
+scope_ref: your-team        # Defined in MOC
+domain_ref: your-domain     # Defined in MOC  
+type_ref: your_type         # Defined in MOC
+maturity_ref: your_level    # Defined in MOC
 ```
 
-#### Relacionamentos Entre UKIs
+#### Relationships Between UKIs
 ```yaml
 relationships:
   - type: depends_on
-    target: uki:outra-equipe:pattern:base-001
-    description: "Depende do padrão base para funcionamento"
+    target: uki:other-team:pattern:base-001
+    description: "Depends on base pattern for functionality"
     
   - type: overrides
-    target: uki:minha-equipe:guideline:antiga-001
-    description: "Substitui guideline anterior por nova abordagem"
+    target: uki:my-team:guideline:old-001
+    description: "Replaces previous guideline with new approach"
 ```
 
 
-## ✅ Validação e Conformidade
+## ✅ Validation and Compliance
 
-### Regras de Validação
-1. **ID Format:** Deve seguir padrão `uki:[scope_ref]:[type_ref]:[slug]`
-2. **Versionamento:** Deve usar versionamento semântico
-3. **Referências MOC:** Todos os campos `*_ref` devem referenciar nós válidos
-4. **Relacionamentos:** Devem usar tipos padronizados e referenciar UKIs válidas
+### Validation Rules
+1. **ID Format:** Must follow pattern `uki:[scope_ref]:[type_ref]:[slug]`
+2. **Versioning:** Must use semantic versioning
+3. **MOC References:** All `*_ref` fields must reference valid nodes
+4. **Relationships:** Must use standardized types and reference valid UKIs
 
-### Validação Condicional
-- Versões > 1.0.0 requerem `change_summary` e `change_impact`
-- Status `deprecated` requer `change_summary` mencionando depreciação
-- UKIs com `arbitration_metadata` devem ter `decision_record_ref`
+### Conditional Validation
+- Versions > 1.0.0 require `change_summary` and `change_impact`
+- Status `deprecated` requires `change_summary` mentioning deprecation
+- UKIs with `arbitration_metadata` must have `decision_record_ref`
 
-## 🔗 Integração com Outros Frameworks
+## 🔗 Integration with Other Frameworks
 
 ### MOC (Matrix Ontology Catalog)
-- Campos `*_ref` referenciam nós definidos no MOC
-- Hierarquias organizacionais configuráveis
-- Validação de autoridade através do MOC
+- `*_ref` fields reference nodes defined in MOC
+- Configurable organizational hierarchies
+- Authority validation through MOC
 
 ### ZOF (Zion Orchestration Framework)  
-- UKIs são consultadas durante workflows ZOF
-- Checkpoint EvaluateForEnrich usa critérios MEF
-- Enriquecimento condicional do Oracle
+- UKIs are consulted during ZOF workflows
+- EvaluateForEnrich checkpoint uses MEF criteria
+- Conditional Oracle enrichment
 
 ### MAL (Matrix Arbiter Layer)
-- Decision Records persistidos no MEF
-- Relacionamentos de conflito registrados
-- Trilha de auditoria imutável
+- Decision Records persisted in MEF
+- Conflict relationships registered
+- Immutable audit trail
 
 ### OIF (Operator Intelligence Framework)
-- Knowledge Agents consomem UKIs estruturadas
-- Filtragem baseada em hierarquias MOC
-- Explicações referenciam UKIs específicas
+- Knowledge Agents consume structured UKIs
+- Filtering based on MOC hierarchies
+- Explanations reference specific UKIs
 
-## 📖 Recursos Relacionados
+## 📖 Related Resources
 
 ### Matrix Protocol Frameworks
-- **[MEF - Matrix Embedding Framework](../../mef)** - Documentação completa do framework
-- **[Especificações Canônicas](../)** - Todos os schemas do protocolo
-- **[Exemplos Práticos](/docs/examples)** - Casos de uso e templates
+- **[MEF - Matrix Embedding Framework](../../mef)** - Complete framework documentation
+- **[Canonical Specifications](../)** - All protocol schemas
+- **[Practical Examples](/docs/examples)** - Use cases and templates
 
-### Documentação Técnica
-- **[Guia de Implementação](/docs/implementation)** - Como implementar o protocolo
-- **[Glossário](/docs/glossary)** - Definições e terminologia
-- **[Manual de Ferramentas](/docs/manual)** - Ferramentas de apoio
+### Technical Documentation
+- **[Implementation Guide](/docs/implementation)** - How to implement the protocol
+- **[Glossary](/docs/glossary)** - Definitions and terminology
+- **[Tools Manual](/docs/manual)** - Support tools

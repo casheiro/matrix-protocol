@@ -1,12 +1,12 @@
 # MAL Arbitration Event Schema v1.0.0
-# Matrix Arbiter Layer - Eventos de Arbitragem
-# Especificação canônica normativa para eventos de conflito que requerem arbitragem
+# Matrix Arbiter Layer - Arbitration Events
+# Normative canonical specification for conflict events requiring arbitration
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/mal/arbitration-event/1.0.0
 version: 1.0.0
 title: MAL Arbitration Event Schema
-description: Schema canônico para eventos de arbitragem MAL no Matrix Protocol
+description: Canonical schema for MAL arbitration events in the Matrix Protocol
 type: object
 required:
   - schema
@@ -20,21 +20,21 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema MAL Arbitration Event utilizado
+    description: Schema version MAL Arbitration Event used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   event_id:
     type: string
-    description: Identificador único para a solicitação de arbitragem
+    description: Unique identifier for the arbitration request
     pattern: ^mal-evt-[0-9]{8}-[0-9]+$
     examples:
       - mal-evt-20250826-001
       - mal-evt-20250827-042
   event_type:
     type: string
-    description: Classificação do conflito
+    description: Conflict classification
     enum:
       - H1
       - H2
@@ -45,12 +45,12 @@ properties:
   timestamp:
     type: string
     format: date-time
-    description: Timestamp de criação do evento
+    description: Event creation timestamp
     examples:
       - 2025-08-26T14:30:25.123Z
   candidates:
     type: array
-    description: Array de entidades conflitantes com metadados completos
+    description: Array of conflicting entities with complete metadata
     minItems: 2
     items:
       type: object
@@ -62,14 +62,14 @@ properties:
       properties:
         uki_ref:
           type: string
-          description: Identificador da UKI candidata
+          description: Candidate UKI identifier
           pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
           examples:
-            - uki:squad-x:rule:retencao-dados-30d
-            - uki:squad-x:rule:retencao-dados-7d
+            - uki:squad-x:rule:data-retention-30d
+            - uki:squad-x:rule:data-retention-7d
         scope_ref:
           type: string
-          description: Referência de escopo MOC
+          description: MOC scope reference
           pattern: ^[a-z0-9-]+$
           examples:
             - squad-x
@@ -77,7 +77,7 @@ properties:
             - organization
         domain_ref:
           type: string
-          description: Referência de domínio MOC
+          description: MOC domain reference
           pattern: ^[a-z0-9-]+$
           examples:
             - security
@@ -85,7 +85,7 @@ properties:
             - business
         type_ref:
           type: string
-          description: Tipo de conhecimento
+          description: Knowledge type
           pattern: ^[a-z0-9_]+$
           examples:
             - rule
@@ -94,7 +94,7 @@ properties:
             - policy
         maturity_level:
           type: string
-          description: Classificação de maturidade
+          description: Maturity classification
           pattern: ^[a-z0-9_]+$
           examples:
             - draft
@@ -103,7 +103,7 @@ properties:
             - experimental
         version:
           type: string
-          description: Versão da UKI
+          description: UKI version
           pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
           examples:
             - 1.0.0
@@ -111,33 +111,33 @@ properties:
         created_date:
           type: string
           format: date
-          description: Data de criação da UKI
+          description: UKI creation date
         last_modified:
           type: string
           format: date
-          description: Data da última modificação
+          description: Last modification date
         authority_ref:
           type: string
-          description: Referência de autoridade criadora
+          description: Creating authority reference
           examples:
             - tech_lead
             - developer
             - architect
         evidence_refs:
           type: array
-          description: Referências de evidência suporte
+          description: Supporting evidence references
           items:
             type: string
           examples:
             - - uki:org:policy:lgpd-compliance
-              - doc:logs-auditoria-2024
+              - doc:audit-logs-2024
         conflict_metadata:
           type: object
-          description: Metadados específicos para este conflito
+          description: Specific metadata for this conflict
           properties:
             conflicting_aspects:
               type: array
-              description: Aspectos específicos em conflito
+              description: Specific conflicting aspects
               items:
                 type: string
               examples:
@@ -145,7 +145,7 @@ properties:
                   - enforcement_method
             semantic_similarity:
               type: number
-              description: Similaridade semântica com outras candidatas (0.0 a 1.0)
+              description: Semantic similarity with other candidates (0.0 to 1.0)
               minimum: 0
               maximum: 1
               examples:
@@ -153,18 +153,18 @@ properties:
                 - 0.72
             usage_frequency:
               type: integer
-              description: Frequência de uso ou referência
+              description: Usage or reference frequency
               minimum: 0
               examples:
                 - 15
                 - 3
             stakeholder_preference:
               type: object
-              description: Preferências de stakeholders
+              description: Stakeholder preferences
               properties:
                 primary_stakeholder:
                   type: string
-                  description: Stakeholder principal
+                  description: Primary stakeholder
                 preference_strength:
                   type: string
                   enum:
@@ -176,7 +176,7 @@ properties:
       additionalProperties: false
   user_moc_context:
     type: object
-    description: Claims hierárquicos e níveis de autoridade do usuário
+    description: User hierarchical claims and authority levels
     required:
       - user_id
       - scopes
@@ -184,13 +184,13 @@ properties:
     properties:
       user_id:
         type: string
-        description: Identificador único do usuário
+        description: User unique identifier
         examples:
           - dev001
           - john.doe
       scopes:
         type: array
-        description: Hierarquia de escopo do usuário
+        description: User scope hierarchy
         items:
           type: string
           pattern: ^[a-z0-9-]+$
@@ -201,7 +201,7 @@ properties:
             - organization
       authority_level:
         type: string
-        description: Designação de autoridade do usuário
+        description: User authority designation
         examples:
           - developer
           - squad_lead
@@ -209,7 +209,7 @@ properties:
           - architect
       domain_access:
         type: array
-        description: Domínios acessíveis ao usuário
+        description: User accessible domains
         items:
           type: string
           pattern: ^[a-z0-9-]+$
@@ -218,23 +218,23 @@ properties:
             - security
       session_context:
         type: object
-        description: Contexto da sessão atual
+        description: Current session context
         properties:
           session_id:
             type: string
-            description: ID da sessão
+            description: Session ID
           workflow_ref:
             type: string
-            description: Workflow que originou o conflito
+            description: Workflow that originated the conflict
             pattern: ^zof-[a-z0-9-]+$
           operation_context:
             type: string
-            description: Contexto da operação atual
+            description: Current operation context
         additionalProperties: true
     additionalProperties: false
   operation:
     type: string
-    description: Tipo de operação solicitada
+    description: Requested operation type
     enum:
       - read
       - enrich
@@ -244,20 +244,20 @@ properties:
       - promote
   conflict_details:
     type: object
-    description: Detalhes específicos do conflito por tipo
+    description: Type-specific conflict details
     required:
       - conflict_description
       - detection_method
     properties:
       conflict_description:
         type: string
-        description: Descrição textual do conflito
+        description: Textual description of the conflict
         minLength: 50
         examples:
-          - Duas regras de segurança de escopo equivalente em conflito sobre período de retenção
+          - Two equivalent-scope security rules in conflict over retention period
       detection_method:
         type: string
-        description: Método usado para detectar o conflito
+        description: Method used to detect the conflict
         enum:
           - semantic_analysis
           - rule_engine
@@ -269,10 +269,10 @@ properties:
       detection_timestamp:
         type: string
         format: date-time
-        description: Quando o conflito foi detectado
+        description: When the conflict was detected
       severity:
         type: string
-        description: Severidade do conflito
+        description: Conflict severity
         enum:
           - low
           - medium
@@ -284,15 +284,15 @@ properties:
           - critical
       h1_details:
         type: object
-        description: Detalhes específicos para conflitos horizontais H1
+        description: Specific details for H1 horizontal conflicts
         properties:
           scope_equivalence:
             type: boolean
-            description: UKIs operam em escopos equivalentes
+            description: UKIs operate in equivalent scopes
             default: true
           semantic_overlap:
             type: number
-            description: Percentual de sobreposição semântica
+            description: Semantic overlap percentage
             minimum: 0
             maximum: 1
             examples:
@@ -300,7 +300,7 @@ properties:
               - 0.92
           contradictory_directives:
             type: array
-            description: Diretrizes contraditórias identificadas
+            description: Identified contradictory directives
             items:
               type: string
             examples:
@@ -308,7 +308,7 @@ properties:
                 - "enforcement: automatic vs manual"
           domain_intersection:
             type: array
-            description: Domínios onde há interseção
+            description: Domains where intersection occurs
             items:
               type: string
             examples:
@@ -317,11 +317,11 @@ properties:
         additionalProperties: false
       h2_details:
         type: object
-        description: Detalhes específicos para enriquecimento concorrente H2
+        description: Specific details for H2 concurrent enrichment
         properties:
           concurrent_requests:
             type: array
-            description: Solicitações concorrentes detectadas
+            description: Detected concurrent requests
             items:
               type: object
               required:
@@ -331,13 +331,13 @@ properties:
               properties:
                 request_id:
                   type: string
-                  description: ID da solicitação concorrente
+                  description: Concurrent request ID
                 timestamp:
                   type: string
                   format: date-time
                 user_id:
                   type: string
-                  description: Usuário que fez a solicitação
+                  description: User who made the request
                 priority:
                   type: string
                   enum:
@@ -347,29 +347,29 @@ properties:
               additionalProperties: false
           temporal_window_ms:
             type: integer
-            description: Janela temporal da concorrência
+            description: Concurrency temporal window
             minimum: 0
             examples:
               - 30000
               - 60000
           resource_contention:
             type: string
-            description: Recurso em contenção
+            description: Resource under contention
             examples:
               - oracle_enrichment_lock
               - uki_modification_lock
           first_request_advantage:
             type: boolean
-            description: Primeira solicitação tem vantagem temporal
+            description: First request has temporal advantage
             default: false
         additionalProperties: false
       h3_details:
         type: object
-        description: Detalhes específicos para contenção de promoção H3
+        description: Specific details for H3 promotion contention
         properties:
           promotion_candidates:
             type: array
-            description: Candidatas para promoção
+            description: Promotion candidates
             items:
               type: object
               required:
@@ -382,10 +382,10 @@ properties:
                   pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
                 target_scope:
                   type: string
-                  description: Escopo alvo da promoção
+                  description: Promotion target scope
                 promotion_rationale:
                   type: string
-                  description: Justificativa para promoção
+                  description: Promotion rationale
                   minLength: 50
                 evidence_strength:
                   type: string
@@ -396,17 +396,17 @@ properties:
                     - compelling
                 sponsor_authority:
                   type: string
-                  description: Autoridade que patrocina a promoção
+                  description: Authority sponsoring the promotion
               additionalProperties: false
           target_level:
             type: string
-            description: Nível hierárquico alvo
+            description: Target hierarchical level
             examples:
               - tribe
               - organization
           promotion_criteria:
             type: array
-            description: Critérios de promoção aplicáveis
+            description: Applicable promotion criteria
             items:
               type: string
             examples:
@@ -415,24 +415,24 @@ properties:
                 - impact_assessment
           competing_authorities:
             type: boolean
-            description: Autoridades concorrentes identificadas
+            description: Identified competing authorities
             default: false
         additionalProperties: false
     additionalProperties: false
   policy_ref:
     type: string
-    description: Referência opcional a política de arbitragem MOC específica
+    description: Optional reference to specific MOC arbitration policy
     pattern: ^moc:arbitration:[a-z0-9_-]+$
     examples:
       - moc:arbitration:security_priority
       - moc:arbitration:default
   policy_context:
     type: object
-    description: Contexto adicional de política
+    description: Additional policy context
     properties:
       escalation_source:
         type: string
-        description: Fonte da escalação
+        description: Escalation source
         enum:
           - zof_workflow
           - manual_request
@@ -443,7 +443,7 @@ properties:
           - automated_detection
       urgency_level:
         type: string
-        description: Nível de urgência da arbitragem
+        description: Arbitration urgency level
         enum:
           - low
           - normal
@@ -452,7 +452,7 @@ properties:
         default: normal
       business_impact:
         type: string
-        description: Impacto nos negócios
+        description: Business impact
         enum:
           - minimal
           - moderate
@@ -464,10 +464,10 @@ properties:
       deadline:
         type: string
         format: date-time
-        description: Prazo para resolução (opcional)
+        description: Resolution deadline (optional)
       stakeholders:
         type: array
-        description: Stakeholders interessados na decisão
+        description: Stakeholders interested in the decision
         items:
           type: string
         examples:
@@ -477,15 +477,15 @@ properties:
     additionalProperties: false
   technical_context:
     type: object
-    description: Contexto técnico do conflito
+    description: Technical context of the conflict
     properties:
       system_state:
         type: object
-        description: Estado atual do sistema
+        description: Current system state
         properties:
           active_workflows:
             type: integer
-            description: Número de workflows ativos
+            description: Number of active workflows
             minimum: 0
           system_load:
             type: string
@@ -496,12 +496,12 @@ properties:
               - overloaded
           maintenance_window:
             type: boolean
-            description: Sistema em janela de manutenção
+            description: System in maintenance window
             default: false
         additionalProperties: true
       environment:
         type: string
-        description: Ambiente onde ocorre o conflito
+        description: Environment where the conflict occurs
         enum:
           - development
           - staging
@@ -512,7 +512,7 @@ properties:
           - staging
       related_systems:
         type: array
-        description: Sistemas relacionados ao conflito
+        description: Systems related to the conflict
         items:
           type: string
         examples:
@@ -521,7 +521,7 @@ properties:
             - compliance-dashboard
       dependencies:
         type: array
-        description: Dependências que podem ser afetadas
+        description: Dependencies that may be affected
         items:
           type: string
         examples:
@@ -530,46 +530,46 @@ properties:
     additionalProperties: false
   tracking_metadata:
     type: object
-    description: Metadados para rastreamento e auditoria
+    description: Metadata for tracking and auditing
     properties:
       correlation_id:
         type: string
-        description: ID de correlação para rastreamento
+        description: Correlation ID for tracking
         examples:
           - corr-2025-08-26-001
       parent_event_id:
         type: string
-        description: Evento pai que originou este conflito
+        description: Parent event that originated this conflict
         pattern: ^[a-z]+-[0-9-]+$
         examples:
           - zof-eval-20250826-001
       trace_id:
         type: string
-        description: ID de trace distribuído
+        description: Distributed trace ID
         examples:
           - trace-abc123def456
       request_source:
         type: string
-        description: Origem da solicitação de arbitragem
+        description: Arbitration request source
         examples:
           - zof-workflow-agent
           - manual-escalation
           - automated-detector
       processing_hints:
         type: object
-        description: Dicas para processamento
+        description: Processing hints
         properties:
           priority_boost:
             type: boolean
-            description: Prioridade elevada
+            description: Elevated priority
             default: false
           fast_track:
             type: boolean
-            description: Processamento acelerado
+            description: Accelerated processing
             default: false
           require_human_review:
             type: boolean
-            description: Requer revisão humana
+            description: Requires human review
             default: false
         additionalProperties: false
     additionalProperties: false

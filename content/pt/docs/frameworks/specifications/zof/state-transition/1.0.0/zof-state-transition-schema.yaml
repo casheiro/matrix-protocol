@@ -1,12 +1,12 @@
 # ZOF State Transition Schema v1.0.0
-# Zion Orchestration Framework - Transições de Estado
-# Especificação canônica normativa para transições entre estados canônicos
+# Zion Orchestration Framework - State Transitions
+# Normative canonical specification for transitions between canonical states
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/zof/state-transition/1.0.0
 version: 1.0.0
 title: ZOF State Transition Schema
-description: Schema canônico para transições de estado ZOF no Matrix Protocol
+description: Canonical schema for ZOF state transitions in Matrix Protocol
 type: object
 required:
   - schema
@@ -20,28 +20,28 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema ZOF State Transition utilizado
+    description: Schema version ZOF State Transition used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   transition_id:
     type: string
-    description: Identificador único da transição
+    description: Unique identifier of the transition
     pattern: ^zof-tr-[a-z0-9-]+-[0-9]+$
     examples:
       - zof-tr-auth-flow-001
       - zof-tr-request-workflow-005
   workflow_ref:
     type: string
-    description: Referência ao workflow ZOF
+    description: Reference to workflow ZOF
     pattern: ^zof-[a-z0-9-]+$
     examples:
       - zof-request-flow
       - zof-auth-jwt-implementation
   from_state:
     type: string
-    description: Estado de origem da transição
+    description: Source state of the transition
     enum:
       - intake
       - understand
@@ -57,7 +57,7 @@ properties:
       - understand
   to_state:
     type: string
-    description: Estado de destino da transição
+    description: Target state of the transition
     enum:
       - intake
       - understand
@@ -73,7 +73,7 @@ properties:
       - decide
   condition:
     type: object
-    description: Condições para execução da transição
+    description: Conditions for transition execution
     required:
       - type
       - expression
@@ -81,7 +81,7 @@ properties:
     properties:
       type:
         type: string
-        description: Tipo de condição de transição
+        description: Type of transition condition
         enum:
           - completion_criteria
           - oracle_consultation
@@ -98,45 +98,45 @@ properties:
           - oracle_consultation
       expression:
         type: string
-        description: Expressão lógica da condição
+        description: Logical expression of the condition
         minLength: 10
         examples:
           - all_completion_criteria_met && context_captured
           - oracle_consulted && knowledge_retrieved
       description:
         type: string
-        description: Descrição legível da condição
+        description: Human-readable description of the condition
         minLength: 20
         examples:
-          - Todos os critérios de completude foram atendidos e contexto capturado
+          - All completion criteria have been met and context captured
       parameters:
         type: object
-        description: Parâmetros específicos da condição
+        description: Condition-specific parameters
         properties:
           timeout_ms:
             type: integer
-            description: Timeout para condição (se aplicável)
+            description: Timeout for condition (if applicable)
             minimum: 1000
             maximum: 600000
           retry_count:
             type: integer
-            description: Número de tentativas (se aplicável)
+            description: Number of retry attempts (if applicable)
             minimum: 0
             maximum: 10
           threshold_value:
             type: number
-            description: Valor limiar para aprovação
+            description: Threshold value for approval
             minimum: 0
             maximum: 1
           required_approvals:
             type: integer
-            description: Número de aprovações necessárias
+            description: Number of required approvals
             minimum: 1
         additionalProperties: true
     additionalProperties: false
   signals:
     type: object
-    description: Sinais obrigatórios de explicabilidade da transição
+    description: Mandatory explainability signals of the transition
     required:
       - context
       - decision
@@ -144,47 +144,47 @@ properties:
     properties:
       context:
         type: string
-        description: Contexto que entrou na transição
+        description: Context that triggered the transition
         minLength: 30
         examples:
-          - Estado intake completado com requisitos documentados e contexto compreendido
+          - Intake state completed with documented requirements and understood context
       decision:
         type: string
-        description: Decisão que causou a transição
+        description: Decision that caused the transition
         minLength: 30
         examples:
-          - Critérios de completude atendidos, prosseguindo para consulta Oracle obrigatória
+          - Completion criteria met, proceeding to mandatory Oracle consultation
       result:
         type: string
-        description: Resultado da transição
+        description: Result of the transition
         minLength: 30
         examples:
-          - Transição para estado understand confirmada, Oracle será consultado
+          - Transition to understand state confirmed, Oracle will be consulted
       additional_context:
         type: object
-        description: Contexto adicional específico da transição
+        description: Transition-specific additional context
         properties:
           user_input:
             type: string
-            description: Entrada do usuário relacionada
+            description: Related user input
           system_state:
             type: string
-            description: Estado do sistema no momento da transição
+            description: System state at the time of transition
           external_factors:
             type: array
-            description: Fatores externos que influenciaram
+            description: External factors that influenced the transition
             items:
               type: string
           data_artifacts:
             type: array
-            description: Artefatos de dados gerados/consumidos
+            description: Data artifacts generated/consumed
             items:
               type: string
         additionalProperties: true
     additionalProperties: false
   validations:
     type: array
-    description: Validações executadas durante a transição
+    description: Validations executed during the transition
     items:
       type: object
       required:
@@ -194,7 +194,7 @@ properties:
       properties:
         validation_type:
           type: string
-          description: Tipo de validação
+          description: Type of validation
           enum:
             - state_completeness
             - oracle_consultation_required
@@ -209,13 +209,13 @@ properties:
             - authority_validation
         description:
           type: string
-          description: Descrição da validação
+          description: Description of the validation
           minLength: 20
           examples:
-            - Validação de completude do estado intake
+            - Intake state completeness validation
         status:
           type: string
-          description: Status da validação
+          description: Validation status
           enum:
             - passed
             - failed
@@ -226,19 +226,19 @@ properties:
             - failed
         details:
           type: string
-          description: Detalhes do resultado da validação
+          description: Details of the validation result
           examples:
-            - Todos os campos obrigatórios preenchidos
+            - All required fields filled
         error_message:
           type: string
-          description: Mensagem de erro (se status=failed)
+          description: Error message (if status=failed)
         remediation_action:
           type: string
-          description: Ação recomendada para correção
+          description: Recommended remediation action
       additionalProperties: false
   actions:
     type: array
-    description: Ações executadas durante a transição
+    description: Actions executed during the transition
     items:
       type: object
       required:
@@ -248,7 +248,7 @@ properties:
       properties:
         action_type:
           type: string
-          description: Tipo de ação executada
+          description: Type of action executed
           enum:
             - oracle_consultation
             - moc_criteria_evaluation
@@ -265,13 +265,13 @@ properties:
             - moc_criteria_evaluation
         description:
           type: string
-          description: Descrição da ação
+          description: Description of the action
           minLength: 20
           examples:
-            - Consultar Oracle para conhecimento existente relevante
+            - Consult Oracle for relevant existing knowledge
         execution_order:
           type: integer
-          description: Ordem de execução da ação
+          description: Action execution order
           minimum: 1
           examples:
             - 1
@@ -279,11 +279,11 @@ properties:
             - 3
         parameters:
           type: object
-          description: Parâmetros específicos da ação
+          description: Action-specific parameters
           additionalProperties: true
         result:
           type: object
-          description: Resultado da execução da ação
+          description: Result of action execution
           properties:
             status:
               type: string
@@ -294,37 +294,37 @@ properties:
                 - skipped
             output:
               type: string
-              description: Saída produzida pela ação
+              description: Output produced by the action
             duration_ms:
               type: integer
-              description: Duração da execução em milissegundos
+              description: Execution duration in milliseconds
               minimum: 0
             error_details:
               type: string
-              description: Detalhes de erro (se status=failure)
+              description: Error details (if status=failure)
           additionalProperties: true
       additionalProperties: false
   transition_config:
     type: object
-    description: Configurações específicas da transição
+    description: Transition-specific configurations
     properties:
       auto_execute:
         type: boolean
-        description: Executar transição automaticamente quando condições atendidas
+        description: Execute transition automatically when conditions are met
         default: true
       require_manual_approval:
         type: boolean
-        description: Requer aprovação manual para execução
+        description: Requires manual approval for execution
         default: false
       timeout_ms:
         type: integer
-        description: Timeout para execução da transição
+        description: Timeout for transition execution
         minimum: 1000
         maximum: 600000
         default: 30000
       retry_policy:
         type: object
-        description: Política de retry em caso de falha
+        description: Retry policy in case of failure
         properties:
           max_retries:
             type: integer
@@ -346,7 +346,7 @@ properties:
         additionalProperties: false
       notification_config:
         type: object
-        description: Configuração de notificações
+        description: Notification configuration
         properties:
           notify_on_success:
             type: boolean
@@ -366,25 +366,25 @@ properties:
     additionalProperties: false
   mal_integration:
     type: object
-    description: Configuração de integração com MAL (quando aplicável)
+    description: MAL integration configuration (when applicable)
     properties:
       conflict_detection_enabled:
         type: boolean
-        description: Habilitar detecção de conflitos H1/H2/H3
+        description: Enable H1/H2/H3 conflict detection
         default: true
       auto_invoke_mal:
         type: boolean
-        description: Invocar MAL automaticamente em conflitos
+        description: Automatically invoke MAL on conflicts
         default: true
       arbitration_timeout_ms:
         type: integer
-        description: Timeout para arbitragem MAL
+        description: Timeout for MAL arbitration
         minimum: 1000
         maximum: 600000
         default: 2000
       fallback_action:
         type: string
-        description: Ação em caso de falha na arbitragem
+        description: Action in case of arbitration failure
         enum:
           - block
           - defer
@@ -393,12 +393,12 @@ properties:
         default: default_safe
       decision_record_ref:
         type: string
-        description: Referência ao Decision Record MAL (se aplicável)
+        description: Reference to MAL Decision Record (if applicable)
         pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
     additionalProperties: false
   metadata:
     type: object
-    description: Metadados da transição
+    description: Transition metadata
     required:
       - created_date
       - execution_timestamp
@@ -406,61 +406,61 @@ properties:
       created_date:
         type: string
         format: date
-        description: Data de criação da definição de transição
+        description: Creation date of the transition definition
       execution_timestamp:
         type: string
         format: date-time
-        description: Timestamp de execução da transição
+        description: Transition execution timestamp
         examples:
           - 2025-10-31T14:30:25.123Z
       executor:
         type: string
-        description: Entidade que executou a transição
+        description: Entity that executed the transition
         examples:
           - workflow-agent
           - user:developer
           - system:automated
       execution_context:
         type: object
-        description: Contexto de execução
+        description: Execution context
         properties:
           user_id:
             type: string
-            description: ID do usuário que iniciou o workflow
+            description: ID of the user who initiated the workflow
           session_id:
             type: string
-            description: ID da sessão de execução
+            description: Execution session ID
           environment:
             type: string
-            description: Ambiente de execução
+            description: Execution environment
             enum:
               - development
               - staging
               - production
           version:
             type: string
-            description: Versão do sistema ZOF
+            description: ZOF system version
         additionalProperties: true
       duration_ms:
         type: integer
-        description: Duração total da transição em milissegundos
+        description: Total transition duration in milliseconds
         minimum: 0
       performance_metrics:
         type: object
-        description: Métricas de performance da transição
+        description: Transition performance metrics
         properties:
           cpu_usage:
             type: number
-            description: Uso de CPU durante execução
+            description: CPU usage during execution
           memory_usage:
             type: number
-            description: Uso de memória durante execução
+            description: Memory usage during execution
           network_calls:
             type: integer
-            description: Número de chamadas de rede
+            description: Number of network calls
           database_queries:
             type: integer
-            description: Número de consultas ao banco
+            description: Number of database queries
         additionalProperties: true
     additionalProperties: false
 additionalProperties: false

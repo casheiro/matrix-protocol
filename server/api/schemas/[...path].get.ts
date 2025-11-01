@@ -24,44 +24,59 @@ export default defineEventHandler(async (event) => {
 
     const [framework, type, version] = pathParts
     
-    // Mapeamento de tipos de schema para nomes de arquivo
-    const schemaFileMap: Record<string, Record<string, string>> = {
-      mef: {
-        'uki': 'mef-uki-schema.yaml',
-        'decision-record': 'mef-decision-record-schema.yaml'
-      },
-      moc: {
-        'hierarchy': 'moc-hierarchy-schema.yaml',
-        'evaluation-criteria': 'moc-evaluation-criteria-schema.yaml',
-        'arbitration-policies': 'moc-arbitration-policies-schema.yaml'
-      },
-      zof: {
-        'workflow': 'zof-workflow-schema.yaml',
-        'state-transition': 'zof-state-transition-schema.yaml',
-        'enrichment-evaluation': 'zof-enrichment-evaluation-schema.yaml'
-      },
-      oif: {
-        'archetype': 'oif-archetype-schema.yaml',
-        'arbitration-explanation': 'oif-arbitration-explanation-schema.yaml'
-      },
-      mal: {
-        'decision-record': 'mal-decision-record-schema.yaml',
-        'arbitration-event': 'mal-arbitration-event-schema.yaml'
-      }
+    // Carregar registry para determinar filename
+    const registryPath = join(process.cwd(), 'content', 'schema-registry.json')
+    let registry: any
+    
+    try {
+      const registryContent = await readFile(registryPath, 'utf-8')
+      registry = JSON.parse(registryContent)
+    } catch (error) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Schema registry not found'
+      })
     }
 
-    const fileName = schemaFileMap[framework]?.[type]
-    if (!fileName) {
+    const schemaInfo = registry.frameworks?.[framework]?.schemas?.[type]
+    if (!schemaInfo) {
       throw createError({
         statusCode: 404,
         statusMessage: `Schema not found: ${framework}/${type}`
       })
     }
 
-    // Tentar diferentes caminhos para localizar o arquivo
+    const fileName = schemaInfo.filename
+    
+    // Verificar se a versão existe
+    const versionInfo = schemaInfo.versions?.[version]
+    if (!versionInfo) {
+      // Se versão não especificada ou não existe, usar a latest
+      const latestVersion = Object.entries(schemaInfo.versions || {})
+        .find(([_, v]: [string, any]) => v.isLatest)?.[0]
+      
+      if (!latestVersion) {
+        throw createError({
+          statusCode: 404,
+          statusMessage: `No versions found for schema: ${framework}/${type}`
+        })
+      }
+      
+      // Usar versão latest se não especificada
+      if (!version || version === 'latest') {
+        version = latestVersion
+      } else {
+        throw createError({
+          statusCode: 404,
+          statusMessage: `Version ${version} not found for schema: ${framework}/${type}`
+        })
+      }
+    }
+
+    // Tentar diferentes caminhos para localizar o arquivo na nova estrutura
     let yamlContent: string | null = null
     
-    // Em produção, primeiro tentar o caminho de build
+    // Em produção, primeiro tentar o caminho de build  
     const buildPath = join(
       process.cwd(),
       '..',
@@ -71,6 +86,8 @@ export default defineEventHandler(async (event) => {
       'frameworks',
       'specifications',
       framework,
+      type,
+      version,
       fileName
     )
     
@@ -83,6 +100,8 @@ export default defineEventHandler(async (event) => {
       'frameworks',
       'specifications',
       framework,
+      type,
+      version,
       fileName
     )
     

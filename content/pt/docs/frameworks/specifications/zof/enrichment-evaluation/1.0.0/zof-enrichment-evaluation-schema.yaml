@@ -1,12 +1,12 @@
 # ZOF Enrichment Evaluation Schema v1.0.0
-# Zion Orchestration Framework - Avaliação EvaluateForEnrich
-# Especificação canônica normativa para checkpoint EvaluateForEnrich
+# Zion Orchestration Framework - EvaluateForEnrich Evaluation
+# Normative canonical specification for EvaluateForEnrich checkpoint
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/zof/enrichment-evaluation/1.0.0
 version: 1.0.0
 title: ZOF Enrichment Evaluation Schema
-description: Schema canônico para checkpoint EvaluateForEnrich no ZOF
+description: Canonical schema for EvaluateForEnrich checkpoint in ZOF
 type: object
 required:
   - schema
@@ -19,28 +19,28 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema ZOF Enrichment Evaluation utilizado
+    description: Schema version ZOF Enrichment Evaluation used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   evaluation_id:
     type: string
-    description: Identificador único da avaliação
+    description: Unique identifier of the evaluation
     pattern: ^zof-eval-[a-z0-9-]+-[0-9]+$
     examples:
       - zof-eval-auth-flow-001
       - zof-eval-request-workflow-042
   workflow_ref:
     type: string
-    description: Referência ao workflow ZOF
+    description: Reference to workflow ZOF
     pattern: ^zof-[a-z0-9-]+$
     examples:
       - zof-request-flow
       - zof-auth-jwt-implementation
   act_output:
     type: object
-    description: Output do estado Act a ser avaliado para enriquecimento
+    description: Output from Act state to be evaluated for enrichment
     required:
       - result_type
       - content
@@ -48,7 +48,7 @@ properties:
     properties:
       result_type:
         type: string
-        description: Tipo de resultado produzido
+        description: Type of result produced
         enum:
           - implementation
           - documentation
@@ -63,14 +63,14 @@ properties:
           - pattern
       content:
         type: string
-        description: Conteúdo do resultado a ser avaliado
+        description: Content of the result to be evaluated
         minLength: 100
         examples:
-          - Implementação de autenticação JWT com refresh tokens e validação de claims específicos para contexto
-            organizacional
+          - JWT authentication implementation with refresh tokens and specific claims validation for organizational
+            context
       metadata:
         type: object
-        description: Metadados do resultado
+        description: Result metadata
         required:
           - created_at
           - creator
@@ -78,47 +78,47 @@ properties:
           created_at:
             type: string
             format: date-time
-            description: Timestamp de criação do resultado
+            description: Result creation timestamp
           creator:
             type: string
-            description: Criador do resultado
+            description: Result creator
             examples:
               - user:developer
               - system:automated
           complexity_score:
             type: number
-            description: Pontuação de complexidade (0.0 a 1.0)
+            description: Complexity score (0.0 to 1.0)
             minimum: 0
             maximum: 1
           related_ukis:
             type: array
-            description: UKIs relacionadas consultadas durante Act
+            description: Related UKIs consulted during Act
             items:
               type: string
               pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
           technologies_used:
             type: array
-            description: Tecnologias utilizadas no resultado
+            description: Technologies used in the result
             items:
               type: string
         additionalProperties: true
     additionalProperties: false
   user_context:
     type: object
-    description: Contexto do usuário solicitando o enriquecimento
+    description: Context of the user requesting enrichment
     required:
       - user_id
       - moc_context
     properties:
       user_id:
         type: string
-        description: Identificador único do usuário
+        description: Unique identifier of the user
         examples:
           - dev001
           - john.doe
       moc_context:
         type: object
-        description: Contexto MOC do usuário
+        description: User's MOC context
         required:
           - scope_level
           - domain_access
@@ -126,7 +126,7 @@ properties:
         properties:
           scope_level:
             type: string
-            description: Nível de escopo do usuário
+            description: User's scope level
             pattern: ^[a-z0-9-]+$
             examples:
               - squad
@@ -134,7 +134,7 @@ properties:
               - organization
           domain_access:
             type: array
-            description: Domínios acessíveis ao usuário
+            description: Domains accessible to the user
             items:
               type: string
               pattern: ^[a-z0-9-]+$
@@ -143,14 +143,14 @@ properties:
                 - business
           authority_level:
             type: string
-            description: Nível de autoridade do usuário
+            description: User's authority level
             examples:
               - developer
               - tech_lead
               - architect
           escalation_paths:
             type: array
-            description: Caminhos de escalação disponíveis
+            description: Available escalation paths
             items:
               type: string
             examples:
@@ -160,24 +160,24 @@ properties:
         additionalProperties: false
       session_context:
         type: object
-        description: Contexto da sessão atual
+        description: Current session context
         properties:
           session_id:
             type: string
-            description: ID da sessão
+            description: Session ID
           workflow_history:
             type: array
-            description: Histórico de workflows na sessão
+            description: Workflow history in the session
             items:
               type: string
           current_task:
             type: string
-            description: Tarefa atual sendo executada
+            description: Current task being executed
         additionalProperties: true
     additionalProperties: false
   evaluation_result:
     type: object
-    description: Resultado da avaliação EvaluateForEnrich
+    description: EvaluateForEnrich evaluation result
     required:
       - can_enrich_decision
       - moc_criteria_results
@@ -186,7 +186,7 @@ properties:
     properties:
       can_enrich_decision:
         type: object
-        description: Resultado da função can_enrich?()
+        description: Result of the can_enrich?() function
         required:
           - approved
           - confidence_score
@@ -194,13 +194,13 @@ properties:
         properties:
           approved:
             type: boolean
-            description: Aprovado para enriquecimento
+            description: Approved for enrichment
             examples:
               - true
               - false
           confidence_score:
             type: number
-            description: Pontuação de confiança (0.0 a 1.0)
+            description: Confidence score (0.0 to 1.0)
             minimum: 0
             maximum: 1
             examples:
@@ -208,7 +208,7 @@ properties:
               - 0.72
           evaluation_method:
             type: string
-            description: Método usado para avaliação
+            description: Method used for evaluation
             enum:
               - minimum_profile
               - automated
@@ -219,7 +219,7 @@ properties:
               - automated
           scoring_breakdown:
             type: object
-            description: Detalhamento da pontuação
+            description: Score breakdown details
             properties:
               semantic_novelty:
                 type: number
@@ -237,7 +237,7 @@ properties:
         additionalProperties: false
       moc_criteria_results:
         type: object
-        description: Resultados da consulta aos critérios MOC
+        description: Results from MOC criteria query
         required:
           - criteria_source
           - profile_used
@@ -246,20 +246,20 @@ properties:
         properties:
           criteria_source:
             type: string
-            description: Fonte dos critérios no MOC
+            description: Source of criteria in MOC
             pattern: ^hierarchies\.evaluation_criteria\.nodes$
             examples:
               - hierarchies.evaluation_criteria.nodes
           profile_used:
             type: string
-            description: Perfil de avaliação utilizado
+            description: Evaluation profile used
             examples:
               - standard
               - critical
               - minimal
           individual_results:
             type: object
-            description: Resultados individuais por critério
+            description: Individual results per criterion
             patternProperties:
               ^[a-z0-9_]+$:
                 type: object
@@ -271,14 +271,14 @@ properties:
                 properties:
                   criterion_name:
                     type: string
-                    description: Nome do critério
+                    description: Criterion name
                     examples:
                       - relevance
                       - reusability
                       - impact
                   result:
                     type: string
-                    description: Resultado da avaliação
+                    description: Evaluation result
                     enum:
                       - pass
                       - fail
@@ -289,27 +289,27 @@ properties:
                       - fail
                   score:
                     type: number
-                    description: Pontuação obtida
+                    description: Score obtained
                     minimum: 0
                     maximum: 1
                   threshold_met:
                     type: boolean
-                    description: Limiar de aprovação atingido
+                    description: Approval threshold met
                   explanation:
                     type: string
-                    description: Explicação do resultado
+                    description: Result explanation
                     examples:
-                      - Outros desenvolvedores enfrentarão mesmo problema
+                      - Other developers will face the same problem
                   evidence:
                     type: array
-                    description: Evidências suportando o resultado
+                    description: Evidence supporting the result
                     items:
                       type: string
                 additionalProperties: false
             additionalProperties: false
           overall_result:
             type: object
-            description: Resultado geral da avaliação MOC
+            description: Overall MOC evaluation result
             required:
               - passed
               - score
@@ -317,15 +317,15 @@ properties:
             properties:
               passed:
                 type: boolean
-                description: Passou na avaliação geral
+                description: Passed the overall evaluation
               score:
                 type: number
-                description: Pontuação geral ponderada
+                description: Overall weighted score
                 minimum: 0
                 maximum: 1
               execution_method:
                 type: string
-                description: Método de execução usado
+                description: Execution method used
                 enum:
                   - all_pass_required
                   - weighted_scoring
@@ -334,17 +334,17 @@ properties:
                   - weighted_scoring
               minimum_score_met:
                 type: boolean
-                description: Pontuação mínima atingida (se weighted_scoring)
+                description: Minimum score met (if weighted_scoring)
               failed_criteria:
                 type: array
-                description: Critérios que falharam
+                description: Criteria that failed
                 items:
                   type: string
             additionalProperties: false
         additionalProperties: false
       authority_validation:
         type: object
-        description: Resultado da validação de autoridade
+        description: Authority validation result
         required:
           - authorized
           - validation_method
@@ -352,10 +352,10 @@ properties:
         properties:
           authorized:
             type: boolean
-            description: Usuário autorizado para enriquecimento
+            description: User authorized for enrichment
           validation_method:
             type: string
-            description: Método de validação utilizado
+            description: Validation method used
             enum:
               - moc_based
               - role_based
@@ -364,24 +364,24 @@ properties:
               - moc_based
           required_authority:
             type: string
-            description: Autoridade necessária identificada
+            description: Required authority identified
             examples:
               - squad_lead
               - tech_lead
           user_authority:
             type: string
-            description: Autoridade atual do usuário
+            description: User's current authority
             examples:
               - developer
               - tech_lead
           escalation_hint:
             type: string
-            description: Sugestão de escalação (se não autorizado)
+            description: Escalation suggestion (if not authorized)
             examples:
-              - Solicitar aprovação via team_lead
+              - Request approval via team_lead
           moc_nodes_cited:
             type: array
-            description: Nós MOC usados na validação
+            description: MOC nodes used in validation
             items:
               type: string
             examples:
@@ -390,7 +390,7 @@ properties:
         additionalProperties: false
       justification:
         type: object
-        description: Justificativa epistêmica da decisão
+        description: Epistemic justification of the decision
         required:
           - summary
           - reasoning
@@ -398,49 +398,49 @@ properties:
         properties:
           summary:
             type: string
-            description: Resumo da justificativa
+            description: Justification summary
             minLength: 50
             examples:
-              - Conhecimento aprovado baseado em relevância alta e autoridade adequada
+              - Knowledge approved based on high relevance and adequate authority
           reasoning:
             type: string
-            description: Raciocínio detalhado
+            description: Detailed reasoning
             minLength: 100
             examples:
-              - O resultado demonstra valor prático significativo para outros desenvolvedores enfrentando problemas
-                similares de autenticação JWT...
+              - The result demonstrates significant practical value for other developers facing similar JWT
+                authentication problems...
           mep_alignment:
             type: object
-            description: Alinhamento com princípios MEP
+            description: Alignment with MEP principles
             properties:
               epistemic_humility:
                 type: string
-                description: Como demonstra humildade epistêmica
+                description: How it demonstrates epistemic humility
               derived_authority:
                 type: string
-                description: Como respeita autoridade derivada
+                description: How it respects derived authority
               contextual_knowledge:
                 type: string
-                description: Como reconhece conhecimento contextual
+                description: How it recognizes contextual knowledge
               responsible_promotion:
                 type: string
-                description: Como pratica promoção responsável
+                description: How it practices responsible promotion
               explanatory_coherence:
                 type: string
-                description: Como mantém coerência explicativa
+                description: How it maintains explanatory coherence
             additionalProperties: false
         additionalProperties: false
       conflict_detection:
         type: object
-        description: Resultado da detecção de conflitos H1/H2/H3
+        description: H1/H2/H3 conflict detection result
         properties:
           conflicts_detected:
             type: boolean
-            description: Conflitos foram detectados
+            description: Conflicts were detected
             default: false
           conflict_types:
             type: array
-            description: Tipos de conflito detectados
+            description: Types of conflicts detected
             items:
               type: string
               enum:
@@ -449,26 +449,26 @@ properties:
                 - H3
           conflicting_ukis:
             type: array
-            description: UKIs em conflito identificadas
+            description: Conflicting UKIs identified
             items:
               type: string
               pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
           mal_invocation_required:
             type: boolean
-            description: Invocação MAL necessária
+            description: MAL invocation required
             default: false
           mal_event_ref:
             type: string
-            description: Referência ao evento MAL (se invocado)
+            description: Reference to MAL event (if invoked)
             pattern: ^mal-evt-[0-9]{8}-[0-9]+$
         additionalProperties: false
       scope_mode_validation:
         type: object
-        description: Validação de modo de escopo para operações multi-escopo
+        description: Scope mode validation for multi-scope operations
         properties:
           scope_mode:
             type: string
-            description: Modo de escopo aplicado
+            description: Scope mode applied
             enum:
               - any
               - all
@@ -477,7 +477,7 @@ properties:
               - all
           affected_scopes:
             type: array
-            description: Escopos afetados pelo enriquecimento
+            description: Scopes affected by enrichment
             items:
               type: string
             examples:
@@ -485,7 +485,7 @@ properties:
                 - squad-b
           validation_results:
             type: object
-            description: Resultados por escopo
+            description: Results per scope
             patternProperties:
               ^[a-z0-9-]+$:
                 type: object
@@ -500,12 +500,12 @@ properties:
             additionalProperties: false
           overall_validation:
             type: boolean
-            description: Validação geral do modo de escopo
+            description: Overall scope mode validation
         additionalProperties: false
     additionalProperties: false
   recommended_actions:
     type: array
-    description: Ações recomendadas baseadas na avaliação
+    description: Recommended actions based on evaluation
     items:
       type: object
       required:
@@ -515,7 +515,7 @@ properties:
       properties:
         action_type:
           type: string
-          description: Tipo de ação recomendada
+          description: Type of recommended action
           enum:
             - proceed_to_enrich
             - proceed_to_review
@@ -530,13 +530,13 @@ properties:
             - request_approval
         description:
           type: string
-          description: Descrição da ação
+          description: Action description
           minLength: 20
           examples:
-            - Prosseguir para enriquecimento do Oracle com conhecimento validado
+            - Proceed to Oracle enrichment with validated knowledge
         priority:
           type: string
-          description: Prioridade da ação
+          description: Action priority
           enum:
             - low
             - medium
@@ -547,12 +547,12 @@ properties:
             - medium
         parameters:
           type: object
-          description: Parâmetros específicos da ação
+          description: Action-specific parameters
           additionalProperties: true
       additionalProperties: false
   metadata:
     type: object
-    description: Metadados da avaliação
+    description: Evaluation metadata
     required:
       - evaluation_timestamp
       - evaluator
@@ -561,50 +561,50 @@ properties:
       evaluation_timestamp:
         type: string
         format: date-time
-        description: Timestamp da avaliação
+        description: Evaluation timestamp
       evaluator:
         type: string
-        description: Entidade que executou a avaliação
+        description: Entity that executed the evaluation
         examples:
           - workflow-agent
           - manual-reviewer
           - automated-system
       duration_ms:
         type: integer
-        description: Duração da avaliação em milissegundos
+        description: Evaluation duration in milliseconds
         minimum: 0
       evaluation_version:
         type: string
-        description: Versão do sistema de avaliação
+        description: Evaluation system version
         examples:
           - zof-eval-v1.0.0
       performance_metrics:
         type: object
-        description: Métricas de performance da avaliação
+        description: Evaluation performance metrics
         properties:
           moc_query_time_ms:
             type: integer
-            description: Tempo de consulta ao MOC
+            description: MOC query time
           criteria_evaluation_time_ms:
             type: integer
-            description: Tempo de avaliação de critérios
+            description: Criteria evaluation time
           authority_validation_time_ms:
             type: integer
-            description: Tempo de validação de autoridade
+            description: Authority validation time
           conflict_detection_time_ms:
             type: integer
-            description: Tempo de detecção de conflitos
+            description: Conflict detection time
         additionalProperties: true
       environment_info:
         type: object
-        description: Informações do ambiente de execução
+        description: Execution environment information
         properties:
           system_version:
             type: string
-            description: Versão do sistema ZOF
+            description: ZOF system version
           moc_version:
             type: string
-            description: Versão da configuração MOC
+            description: MOC configuration version
           evaluation_mode:
             type: string
             enum:

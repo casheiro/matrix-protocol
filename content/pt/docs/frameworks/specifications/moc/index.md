@@ -1,93 +1,93 @@
 ---
-title: Especificações MOC - Matrix Ontology Catalog
-description: Schemas YAML canônicos para hierarquias, critérios e políticas do Matrix Ontology Catalog
+title: MOC Specifications - Matrix Ontology Catalog
+description: Canonical YAML schemas for hierarchies, criteria and policies of the Matrix Ontology Catalog
 keywords:
   - MOC
   - Matrix Ontology Catalog
-  - hierarquias organizacionais
-  - critérios de avaliação
-  - políticas de arbitragem
-  - taxonomias configuráveis
-  - schemas YAML
+  - organizational hierarchies
+  - evaluation criteria
+  - arbitration policies
+  - configurable taxonomies
+  - YAML schemas
 framework: MOC
 icon: i-heroicons-adjustments-horizontal
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 2
 ---
 
-# Especificações MOC - Matrix Ontology Catalog
+# MOC Specifications - Matrix Ontology Catalog
 
-Esta seção contém as especificações canônicas normativas para o **Matrix Ontology Catalog (MOC)**, definindo schemas YAML para configuração de hierarquias organizacionais, critérios de avaliação e políticas de arbitragem.
+This section contains the normative canonical specifications for the **Matrix Ontology Catalog (MOC)**, defining YAML schemas for configuring organizational hierarchies, evaluation criteria and arbitration policies.
 
-## 📋 Schemas Disponíveis
+## 📋 Available Schemas
 
 ### 1. MOC Hierarchy Schema
-**Arquivo:** `moc-hierarchy-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para hierarquias organizacionais configuráveis
+**File:** `moc-hierarchy-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for configurable organizational hierarchies
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/moc/moc-hierarchy-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/moc/moc-hierarchy-schema.yaml" />
 
-#### Hierarquias Obrigatórias
-- **scope:** Alcance e visibilidade do conhecimento
-- **domain:** Áreas de conhecimento e especialização
-- **maturity:** Níveis de validação e confiabilidade
-- **evaluation_criteria:** Critérios para checkpoint EvaluateForEnrich
+#### Mandatory Hierarchies
+- **scope:** Knowledge reach and visibility
+- **domain:** Knowledge areas and specialization
+- **maturity:** Validation and reliability levels
+- **evaluation_criteria:** Criteria for EvaluateForEnrich checkpoint
 
-#### Hierarquias Opcionais
-- **authority:** Autoridade organizacional
-- **lifecycle:** Ciclo de vida do conhecimento
+#### Optional Hierarchies
+- **authority:** Organizational authority
+- **lifecycle:** Knowledge lifecycle
 
 ### 2. MOC Evaluation Criteria Schema
-**Arquivo:** `moc-evaluation-criteria-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para critérios organizacionais de enriquecimento
+**File:** `moc-evaluation-criteria-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for organizational enrichment criteria
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/moc/moc-evaluation-criteria-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/moc/moc-evaluation-criteria-schema.yaml" />
 
-#### Componentes Principais
-- **evaluation_profiles:** Perfis de critérios para diferentes contextos
-- **context_mapping:** Mapeamento de contextos para perfis específicos
-- **default_profile:** Perfil padrão de avaliação
+#### Main Components
+- **evaluation_profiles:** Criteria profiles for different contexts
+- **context_mapping:** Context mapping to specific profiles
+- **default_profile:** Default evaluation profile
 
-#### Métodos de Avaliação
-- **manual:** Avaliação humana
-- **automated:** Avaliação automatizada
-- **hybrid:** Combinação manual/automatizada
-- **semantic:** Avaliação semântica
+#### Evaluation Methods
+- **manual:** Human evaluation
+- **automated:** Automated evaluation
+- **hybrid:** Manual/automated combination
+- **semantic:** Semantic evaluation
 
 ### 3. MOC Arbitration Policies Schema
-**Arquivo:** `moc-arbitration-policies-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para políticas de arbitragem MAL
+**File:** `moc-arbitration-policies-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for MAL arbitration policies
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/moc/moc-arbitration-policies-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/moc/moc-arbitration-policies-schema.yaml" />
 
-#### Configurações Principais
-- **default_precedence_order:** Ordem padrão de regras P1-P6
-- **scope_specificity_rules:** Configuração da regra P2
-- **conflict_type_policies:** Políticas específicas para H1/H2/H3
-- **named_policies:** Políticas customizadas organizacionais
+#### Main Configurations
+- **default_precedence_order:** Default order of P1-P6 rules
+- **scope_specificity_rules:** P2 rule configuration
+- **conflict_type_policies:** Specific policies for H1/H2/H3
+- **named_policies:** Organizational custom policies
 
-## 🎯 Uso das Especificações
+## 🎯 Using the Specifications
 
-### Para Implementadores
+### For Implementers
 
-#### Estrutura Básica de MOC
+#### Basic MOC Structure
 ```yaml
-# Exemplo mínimo de configuração MOC
+# Minimal MOC configuration example
 schema: "1.0"
-organization_id: minha-org
+organization_id: my-org
 version: "1.0"
 
 hierarchies:
   scope:
-    description: "Estrutura organizacional"
+    description: "Organizational structure"
     nodes:
       squad:
         display_name: "Squad"
@@ -102,7 +102,7 @@ hierarchies:
         authority_roles: ["tribe_lead", "architect"]
 
   domain:
-    description: "Domínios de conhecimento"
+    description: "Knowledge domains"
     nodes:
       technical:
         display_name: "Technical"
@@ -115,34 +115,34 @@ hierarchies:
         specializations: ["product", "marketing"]
 
   maturity:
-    description: "Níveis de maturidade"
+    description: "Maturity levels"
     nodes:
       draft:
         display_name: "Draft"
         rank: 10
-        criteria: ["Documentação inicial"]
+        criteria: ["Initial documentation"]
         transitions:
           can_promote_to: ["validated"]
       
       validated:
         display_name: "Validated" 
         rank: 90
-        criteria: ["Revisão por pares", "Testes validados"]
+        criteria: ["Peer review", "Validated tests"]
         transitions:
           can_demote_to: ["draft"]
 
   evaluation_criteria:
-    description: "Critérios de avaliação"
+    description: "Evaluation criteria"
     nodes:
       relevance:
         display_name: "Relevance"
-        description: "Relevância para a equipe"
+        description: "Relevance to the team"
         threshold_type: high
         weight: 0.4
       
       reusability:
         display_name: "Reusability"
-        description: "Potencial de reutilização"
+        description: "Reusability potential"
         threshold_type: medium
         weight: 0.6
 
@@ -152,22 +152,22 @@ metadata:
   maintainer: governance-team
 ```
 
-#### Configuração de Critérios de Avaliação
+#### Evaluation Criteria Configuration
 ```yaml
-# Exemplo de perfis de avaliação
+# Evaluation profiles example
 schema: "1.0"
-organization_id: minha-org
+organization_id: my-org
 version: "1.0"
 
 evaluation_profiles:
   standard:
-    display_name: "Perfil Padrão"
-    description: "Avaliação padrão para conhecimento regular"
+    display_name: "Standard Profile"
+    description: "Standard evaluation for regular knowledge"
     
     criteria:
       relevance:
-        display_name: "Relevância"
-        description: "Relevância para outros membros"
+        display_name: "Relevance"
+        description: "Relevance to other members"
         evaluation_method: manual
         threshold:
           type: percentage
@@ -176,8 +176,8 @@ evaluation_profiles:
         weight: 0.4
       
       impact:
-        display_name: "Impacto"
-        description: "Impacto organizacional esperado"
+        display_name: "Impact"
+        description: "Expected organizational impact"
         evaluation_method: hybrid
         threshold:
           type: categorical
@@ -197,11 +197,11 @@ metadata:
   maintainer: platform-team
 ```
 
-#### Configuração de Políticas de Arbitragem
+#### Arbitration Policies Configuration
 ```yaml
-# Exemplo de políticas de arbitragem
+# Arbitration policies example
 schema: "1.0"
-organization_id: minha-org
+organization_id: my-org
 version: "1.0"
 
 arbitration_policies:
@@ -251,69 +251,69 @@ metadata:
   maintainer: governance-team
 ```
 
-### Para Organizações
+### For Organizations
 
-#### Flexibilidade Local
-- Configure hierarquias conforme estrutura organizacional
-- Adapte critérios de avaliação aos processos locais
-- Customize políticas de arbitragem conforme governança
+#### Local Flexibility
+- Configure hierarchies according to organizational structure
+- Adapt evaluation criteria to local processes
+- Customize arbitration policies according to governance
 
-#### Mantendo Conformidade
-- Preserve campos obrigatórios dos schemas
-- Use padrões de nomenclatura consistentes
-- Valide configurações contra schemas
+#### Maintaining Compliance
+- Preserve mandatory schema fields
+- Use consistent naming patterns
+- Validate configurations against schemas
 
 
-## ✅ Validação e Conformidade
+## ✅ Validation and Compliance
 
-### Hierarquias Obrigatórias
-Toda configuração MOC deve incluir:
-1. **scope** - com nós e níveis hierárquicos
-2. **domain** - com especializações e controles
-3. **maturity** - com ranks e transições
-4. **evaluation_criteria** - com pesos e limiares
+### Mandatory Hierarchies
+Every MOC configuration must include:
+1. **scope** - with nodes and hierarchical levels
+2. **domain** - with specializations and controls
+3. **maturity** - with ranks and transitions
+4. **evaluation_criteria** - with weights and thresholds
 
-### Regras de Validação
-- Soma de pesos de critérios ≤ 1.0
-- Nós pai devem existir na hierarquia
-- Referências entre hierarquias devem ser válidas
-- Perfis padrão devem existir
+### Validation Rules
+- Sum of criteria weights ≤ 1.0
+- Parent nodes must exist in hierarchy
+- Cross-hierarchy references must be valid
+- Default profiles must exist
 
-### Consistência Organizacional
-- Nomes de nós devem ser únicos por hierarquia
-- Níveis hierárquicos devem ser consistentes
-- Autoridades devem mapear para papéis válidos
+### Organizational Consistency
+- Node names must be unique per hierarchy
+- Hierarchical levels must be consistent
+- Authorities must map to valid roles
 
-## 🔗 Integração com Outros Frameworks
+## 🔗 Integration with Other Frameworks
 
 ### MEF (Matrix Embedding Framework)
-- Campos `*_ref` das UKIs referenciam nós MOC
-- Validação de autoridade através de hierarquias
-- Filtragem de conhecimento baseada em contexto
+- UKI `*_ref` fields reference MOC nodes
+- Authority validation through hierarchies
+- Context-based knowledge filtering
 
 ### ZOF (Zion Orchestration Framework)
-- Checkpoint EvaluateForEnrich usa critérios MOC
-- Validação de autoridade para enriquecimento
-- Políticas de workflow configuráveis
+- EvaluateForEnrich checkpoint uses MOC criteria
+- Authority validation for enrichment
+- Configurable workflow policies
 
 ### MAL (Matrix Arbiter Layer)
-- Regras de precedência configuradas no MOC
-- Políticas de arbitragem por tipo de conflito
-- Timeout e configurações de decisão
+- Precedence rules configured in MOC
+- Arbitration policies by conflict type
+- Timeout and decision configurations
 
 ### OIF (Operator Intelligence Framework)
-- Filtragem hierárquica de inteligência
-- Validação de autoridade para arquétipos
-- Explicações referenciam nós MOC específicos
+- Hierarchical intelligence filtering
+- Authority validation for archetypes
+- Explanations reference specific MOC nodes
 
-## 📖 Recursos Relacionados
+## 📖 Related Resources
 
 ### Matrix Protocol Frameworks
-- **[MOC - Matrix Ontology Catalog](../../moc)** - Documentação completa do framework
-- **[Especificações Canônicas](../)** - Todos os schemas do protocolo
-- **[Templates MOC](/docs/manual/templates)** - Templates organizacionais
+- **[MOC - Matrix Ontology Catalog](../../moc)** - Complete framework documentation
+- **[Canonical Specifications](../)** - All protocol schemas
+- **[MOC Templates](/docs/manual/templates)** - Organizational templates
 
-### Documentação Técnica
-- **[Guia de Implementação](/docs/implementation)** - Como implementar o protocolo
-- **[Governança MOC](/docs/manual/moc-governance)** - Práticas de governança
-- **[Glossário](/docs/glossary)** - Definições e terminologia
+### Technical Documentation
+- **[Implementation Guide](/docs/implementation)** - How to implement the protocol
+- **[MOC Governance](/docs/manual/moc-governance)** - Governance practices
+- **[Glossary](/docs/glossary)** - Definitions and terminology

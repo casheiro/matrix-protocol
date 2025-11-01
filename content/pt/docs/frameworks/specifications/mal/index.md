@@ -1,32 +1,32 @@
 ---
-title: Especificações MAL - Matrix Arbiter Layer
-description: Schemas YAML canônicos para eventos de arbitragem e registros de decisão do Matrix Arbiter Layer
+title: MAL Specifications - Matrix Arbiter Layer
+description: Canonical YAML schemas for arbitration events and decision records of the Matrix Arbiter Layer
 keywords:
   - MAL
   - Matrix Arbiter Layer
-  - arbitragem determinística
-  - resolução de conflitos
-  - conflitos horizontais
-  - enriquecimento concorrente
-  - contenção de promoção
+  - deterministic arbitration
+  - conflict resolution
+  - horizontal conflicts
+  - concurrent enrichment
+  - promotion contention
   - Decision Records
-  - schemas YAML
+  - YAML schemas
 framework: MAL
 icon: i-heroicons-scale
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 5
 ---
 
-# Especificações MAL - Matrix Arbiter Layer
+# MAL Specifications - Matrix Arbiter Layer
 
-Esta seção contém as especificações canônicas normativas para o **Matrix Arbiter Layer (MAL)**, definindo schemas YAML para eventos de arbitragem e registros de decisão determinística para resolução de conflitos de conhecimento.
+This section contains the normative canonical specifications for the **Matrix Arbiter Layer (MAL)**, defining YAML schemas for arbitration events and deterministic decision records for knowledge conflict resolution.
 
-## 📋 Schemas Disponíveis
+## 📋 Available Schemas
 
 ### 1. MAL Arbitration Event Schema
 **Arquivo:** `mal-arbitration-event-schema.yaml`  

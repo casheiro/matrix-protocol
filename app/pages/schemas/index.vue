@@ -150,13 +150,13 @@
                   </UBadge>
                   <!-- Multiple versions indicator -->
                   <UBadge 
-                    v-if="hasMultipleVersions(schema.framework, schema.type)"
+                    v-if="schema.versionCount && schema.versionCount > 1"
                     color="blue" 
                     size="sm" 
                     variant="soft"
-                    :title="t('schemas.multiVersion.tooltip', { count: getVersionCount(schema.framework, schema.type) })"
+                    :title="t('schemas.multiVersion.tooltip', { count: schema.versionCount })"
                   >
-                    +{{ getVersionCount(schema.framework, schema.type) - 1 }}
+                    +{{ schema.versionCount - 1 }}
                   </UBadge>
                   <!-- Latest badge -->
                   <UBadge 
@@ -222,7 +222,7 @@
             
             <!-- View all versions button (if multiple versions exist) -->
             <UButton
-              v-if="hasMultipleVersions(schema.framework, schema.type)"
+              v-if="schema.versionCount && schema.versionCount > 1"
               :to="localePath(`/schemas/${schema.framework}/${schema.type}`)"
               variant="outline"
               size="sm"
@@ -279,6 +279,10 @@
 import type { SchemaMetadata } from '~/composables/useMatrixSchemas'
 import MatrixBadge from '~/components/ui/MatrixBadge.vue'
 
+interface EnhancedSchemaMetadata extends SchemaMetadata {
+  versionCount?: number
+}
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 
@@ -294,21 +298,55 @@ const selectedFrameworks = ref<string[]>([]) // Array para múltiplos frameworks
 const selectedFrameworksDisplay = ref<string[]>([]) // Array para valores de display
 
 // Data - usando schemas únicos para mostrar apenas versões mais recentes
-const { getUniqueSchemas, getAvailableFrameworks, hasMultipleVersions, getVersionCount, getVersionStats } = useMatrixSchemas()
+const { 
+  getUniqueSchemas, 
+  getAvailableFrameworks, 
+  hasMultipleVersions, 
+  getVersionCount, 
+  getVersionStats,
+  isLoading,
+  error
+} = useMatrixSchemas()
 
-const allSchemas = computed(() => getUniqueSchemas())
-const frameworks = computed(() => getAvailableFrameworks())
+// Estado reativo para dados assíncronos
+const allSchemas = ref<SchemaMetadata[]>([])
+const frameworks = ref<string[]>([])
+const statsData = ref({
+  totalSchemas: 0,
+  frameworks: 0,
+  totalVersions: 0,
+  multiVersionSchemas: 0
+})
+
+// Função para carregar dados
+const loadData = async () => {
+  try {
+    const [schemas, frameworkList, stats] = await Promise.all([
+      getUniqueSchemas(),
+      getAvailableFrameworks(),
+      getVersionStats()
+    ])
+    
+    allSchemas.value = schemas
+    frameworks.value = frameworkList
+    statsData.value = {
+      totalSchemas: stats.uniqueSchemas,
+      frameworks: frameworkList.length,
+      totalVersions: stats.totalVersions,
+      multiVersionSchemas: stats.multiVersionSchemas
+    }
+  } catch (err) {
+    console.error('Erro ao carregar dados:', err)
+  }
+}
+
+// Carregar dados na montagem
+onMounted(() => {
+  loadData()
+})
 
 // Computed
-const stats = computed(() => {
-  const versionStats = getVersionStats()
-  return {
-    totalSchemas: versionStats.uniqueSchemas,
-    frameworks: frameworks.value.length,
-    totalVersions: versionStats.totalVersions,
-    multiVersionSchemas: versionStats.multiVersionSchemas
-  }
-})
+const stats = computed(() => statsData.value)
 
 // Opções para USelectMenu (apenas frameworks, sem "todos")
 const frameworkSelectOptions = computed(() => {
@@ -324,7 +362,10 @@ const frameworkValueMap = computed(() => {
   return map
 })
 
-const filteredSchemas = computed(() => {
+const filteredSchemas = ref<EnhancedSchemaMetadata[]>([])
+
+// Atualizar schemas filtrados quando dados ou filtros mudarem
+watch([allSchemas, searchQuery, selectedFrameworks], async () => {
   let filtered = allSchemas.value
 
   // Filter by search query
@@ -344,8 +385,19 @@ const filteredSchemas = computed(() => {
     )
   }
 
-  return filtered
-})
+  // Adicionar informação de contagem de versões para cada schema
+  const enhancedSchemas = await Promise.all(
+    filtered.map(async (schema) => {
+      const versionCount = await getVersionCount(schema.framework, schema.type)
+      return {
+        ...schema,
+        versionCount
+      }
+    })
+  )
+  
+  filteredSchemas.value = enhancedSchemas
+}, { immediate: true })
 
 const activeFilters = computed(() => {
   const filters: Array<{ key: string; label: string; color: string }> = []

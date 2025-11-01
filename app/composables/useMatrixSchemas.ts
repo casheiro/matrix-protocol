@@ -1,6 +1,6 @@
 /**
  * Composable para gerenciamento centralizado de schemas do Matrix Protocol
- * Fornece URLs, metadados e utilitários para trabalhar com schemas YAML
+ * Carrega dados dinamicamente da API de registry em vez de usar dados hardcoded
  */
 
 export interface SchemaMetadata {
@@ -9,39 +9,72 @@ export interface SchemaMetadata {
   version: string
   filename: string
   title: string
-  description?: string // Opcional, será gerada via i18n
+  description?: string
   url: string
   localPath: string
   status?: 'stable' | 'deprecated' | 'beta' | 'legacy'
   releaseDate?: string
   changelog?: string[]
   isLatest?: boolean
+  breaking?: boolean
+  category?: string
 }
 
-export interface SchemaRegistry {
-  [framework: string]: {
-    [type: string]: SchemaMetadata[]
+export interface SchemaVersionInfo {
+  status: string
+  releaseDate?: string
+  changelog?: string[]
+  isLatest: boolean
+  breaking: boolean
+}
+
+export interface SchemaInfo {
+  title: string
+  description: string
+  filename: string
+  category: string
+  versions: Record<string, SchemaVersionInfo>
+}
+
+export interface RegistryFramework {
+  name: string
+  description: string
+  schemas: Record<string, SchemaInfo>
+}
+
+export interface SchemaRegistryData {
+  frameworks: Record<string, RegistryFramework>
+  metadata: {
+    statistics: {
+      totalFrameworks: number
+      totalSchemas: number
+      totalVersions: number
+      statusBreakdown: Record<string, number>
+    }
+    categories: Record<string, string>
   }
 }
 
 export const useMatrixSchemas = () => {
   const { locale } = useI18n()
   const config = useRuntimeConfig()
+  
+  // Estado reativo para os dados do registry
+  const registryData = ref<SchemaRegistryData | null>(null)
+  const isLoading = ref(false)
+  const error = ref<string | null>(null)
 
   // Base URL para schemas - dinâmica baseada no ambiente
   const getBaseSchemaUrl = () => {
-    // Prioridade: config runtime > detecção automática
     if (config.public.schemaBaseUrl) {
       return config.public.schemaBaseUrl
     }
     
-    // Fallback: detectar URL atual do browser (client-side)
-    if (process.client && window?.location) {
+    if (import.meta.client && window?.location) {
       const { protocol, host } = window.location
       return `${protocol}//${host}/schemas`
     }
     
-    // Fallback: usar siteUrl do config
     const siteUrl = config.public.siteUrl || 'http://localhost:3000'
     return `${siteUrl}/schemas`
   }
@@ -50,204 +83,107 @@ export const useMatrixSchemas = () => {
   const localApiUrl = '/api/schemas'
 
   /**
-   * Registro central de todos os schemas disponíveis
-   * Mapeamento completo de frameworks -> tipos -> versões
-   * URLs são geradas dinamicamente baseadas no ambiente
+   * Carregar dados do registry da API
    */
-  const schemaRegistry: SchemaRegistry = {
-    mef: {
-      uki: [
-        {
-          framework: 'mef',
-          type: 'uki',
-          version: '2.1.0',
-          filename: 'mef-uki-schema-v2.1.0.yaml',
-          title: 'MEF UKI Schema',
-          url: `${baseSchemaUrl}/mef/uki/2.1.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-uki-schema.yaml',
-          status: 'stable',
-          releaseDate: '2024-10-15',
-          changelog: ['Added x-corporate extensions', 'Enhanced validation patterns', 'Improved error messages'],
-          isLatest: true
-        },
-        {
-          framework: 'mef',
-          type: 'uki',
-          version: '2.0.0',
-          filename: 'mef-uki-schema-v2.0.0.yaml',
-          title: 'MEF UKI Schema',
-          url: `${baseSchemaUrl}/mef/uki/2.0.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-uki-schema.yaml',
-          status: 'stable',
-          releaseDate: '2024-08-20',
-          changelog: ['Breaking: Changed scope_ref pattern', 'Added relationship validation', 'New versioning structure'],
-          isLatest: false
-        },
-        {
-          framework: 'mef',
-          type: 'uki',
-          version: '1.0.0',
-          filename: 'mef-uki-schema.yaml',
-          title: 'MEF UKI Schema',
-          url: `${baseSchemaUrl}/mef/uki/1.0.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-uki-schema.yaml',
-          status: 'legacy',
-          releaseDate: '2024-03-01',
-          changelog: ['Initial release', 'Basic UKI validation patterns'],
-          isLatest: false
-        }
-      ],
-      'decision-record': [{
-        framework: 'mef',
-        type: 'decision-record',
-        version: '1.0.0',
-        filename: 'mef-decision-record-schema.yaml',
-        title: 'MEF Decision Record Schema',
-        url: `${baseSchemaUrl}/mef/decision-record/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-decision-record-schema.yaml',
-        status: 'stable',
-        releaseDate: '2024-05-12',
-        changelog: ['Initial decision record schema', 'Persistence patterns defined'],
-        isLatest: true
-      }]
-    },
-    moc: {
-      hierarchy: [{
-        framework: 'moc',
-        type: 'hierarchy',
-        version: '1.0.0',
-        filename: 'moc-hierarchy-schema.yaml',
-        title: 'MOC Hierarchy Schema',
-        url: `${baseSchemaUrl}/moc/hierarchy/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-hierarchy-schema.yaml'
-      }],
-      'evaluation-criteria': [{
-        framework: 'moc',
-        type: 'evaluation-criteria',
-        version: '1.0.0',
-        filename: 'moc-evaluation-criteria-schema.yaml',
-        title: 'MOC Evaluation Criteria Schema',
-        url: `${baseSchemaUrl}/moc/evaluation-criteria/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-evaluation-criteria-schema.yaml'
-      }],
-      'arbitration-policies': [{
-        framework: 'moc',
-        type: 'arbitration-policies',
-        version: '1.0.0',
-        filename: 'moc-arbitration-policies-schema.yaml',
-        title: 'MOC Arbitration Policies Schema',
-        url: `${baseSchemaUrl}/moc/arbitration-policies/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-arbitration-policies-schema.yaml'
-      }]
-    },
-    zof: {
-      workflow: [
-        {
-          framework: 'zof',
-          type: 'workflow',
-          version: '1.3.0',
-          filename: 'zof-workflow-schema-v1.3.0.yaml',
-          title: 'ZOF Workflow Schema',
-          url: `${baseSchemaUrl}/zof/workflow/1.3.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-workflow-schema.yaml',
-          status: 'beta',
-          releaseDate: '2024-11-01',
-          changelog: ['Added parallel execution support', 'Enhanced error handling', 'New automation triggers'],
-          isLatest: true
-        },
-        {
-          framework: 'zof',
-          type: 'workflow',
-          version: '1.2.0',
-          filename: 'zof-workflow-schema-v1.2.0.yaml',
-          title: 'ZOF Workflow Schema',
-          url: `${baseSchemaUrl}/zof/workflow/1.2.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-workflow-schema.yaml',
-          status: 'stable',
-          releaseDate: '2024-09-10',
-          changelog: ['Improved state transitions', 'Added conditional steps', 'Performance optimizations'],
-          isLatest: false
-        },
-        {
-          framework: 'zof',
-          type: 'workflow',
-          version: '1.0.0',
-          filename: 'zof-workflow-schema.yaml',
-          title: 'ZOF Workflow Schema',
-          url: `${baseSchemaUrl}/zof/workflow/1.0.0`,
-          localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-workflow-schema.yaml',
-          status: 'stable',
-          releaseDate: '2024-06-15',
-          changelog: ['Initial workflow schema', 'Basic orchestration patterns'],
-          isLatest: false
-        }
-      ],
-      'state-transition': [{
-        framework: 'zof',
-        type: 'state-transition',
-        version: '1.0.0',
-        filename: 'zof-state-transition-schema.yaml',
-        title: 'ZOF State Transition Schema',
-        url: `${baseSchemaUrl}/zof/state-transition/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-state-transition-schema.yaml'
-      }],
-      'enrichment-evaluation': [{
-        framework: 'zof',
-        type: 'enrichment-evaluation',
-        version: '1.0.0',
-        filename: 'zof-enrichment-evaluation-schema.yaml',
-        title: 'ZOF Enrichment Evaluation Schema',
-        url: `${baseSchemaUrl}/zof/enrichment-evaluation/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-enrichment-evaluation-schema.yaml'
-      }]
-    },
-    oif: {
-      archetype: [{
-        framework: 'oif',
-        type: 'archetype',
-        version: '1.0.0',
-        filename: 'oif-archetype-schema.yaml',
-        title: 'OIF Archetype Schema',
-        url: `${baseSchemaUrl}/oif/archetype/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/oif/oif-archetype-schema.yaml'
-      }],
-      'arbitration-explanation': [{
-        framework: 'oif',
-        type: 'arbitration-explanation',
-        version: '1.0.0',
-        filename: 'oif-arbitration-explanation-schema.yaml',
-        title: 'OIF Arbitration Explanation Schema',
-        url: `${baseSchemaUrl}/oif/arbitration-explanation/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/oif/oif-arbitration-explanation-schema.yaml'
-      }]
-    },
-    mal: {
-      'decision-record': [{
-        framework: 'mal',
-        type: 'decision-record',
-        version: '1.0.0',
-        filename: 'mal-decision-record-schema.yaml',
-        title: 'MAL Decision Record Schema',
-        url: `${baseSchemaUrl}/mal/decision-record/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/mal/mal-decision-record-schema.yaml'
-      }],
-      'arbitration-event': [{
-        framework: 'mal',
-        type: 'arbitration-event',
-        version: '1.0.0',
-        filename: 'mal-arbitration-event-schema.yaml',
-        title: 'MAL Arbitration Event Schema',
-        url: `${baseSchemaUrl}/mal/arbitration-event/1.0.0`,
-        localPath: '/content/{locale}/docs/frameworks/specifications/mal/mal-arbitration-event-schema.yaml'
-      }]
+  const loadRegistry = async () => {
+    if (registryData.value) return registryData.value
+    
+    isLoading.value = true
+    error.value = null
+    
+    try {
+      const response = await $fetch<SchemaRegistryData>('/api/schemas/registry')
+      registryData.value = response
+      return response
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : 'Erro ao carregar registry'
+      console.error('Erro ao carregar schema registry:', err)
+      throw err
+    } finally {
+      isLoading.value = false
     }
   }
 
   /**
+   * Converter dados do registry para formato SchemaMetadata
+   */
+  const transformRegistryToSchemas = (registry: SchemaRegistryData): SchemaMetadata[] => {
+    const schemas: SchemaMetadata[] = []
+    
+    Object.entries(registry.frameworks).forEach(([frameworkKey, framework]) => {
+      Object.entries(framework.schemas).forEach(([typeKey, schemaInfo]) => {
+        Object.entries(schemaInfo.versions).forEach(([version, versionInfo]) => {
+          schemas.push({
+            framework: frameworkKey,
+            type: typeKey,
+            version,
+            filename: schemaInfo.filename,
+            title: schemaInfo.title,
+            description: schemaInfo.description,
+            url: `${baseSchemaUrl}/${frameworkKey}/${typeKey}/${version}`,
+            localPath: `/content/{locale}/docs/frameworks/specifications/${frameworkKey}/${typeKey}/${version}/${schemaInfo.filename}`,
+            status: versionInfo.status as SchemaMetadata['status'],
+            releaseDate: versionInfo.releaseDate,
+            changelog: versionInfo.changelog,
+            isLatest: versionInfo.isLatest,
+            breaking: versionInfo.breaking,
+            category: schemaInfo.category
+          })
+        })
+      })
+    })
+    
+    return schemas
+  }
+
+  /**
+   * Computed para obter todos os schemas transformados
+   */
+  const allSchemas = computed<SchemaMetadata[]>(() => {
+    if (!registryData.value) return []
+    return transformRegistryToSchemas(registryData.value)
+  })
+
+  /**
+   * Computed para obter schemas agrupados por framework e tipo
+   */
+  const schemasByFrameworkAndType = computed(() => {
+    const grouped: Record<string, Record<string, SchemaMetadata[]>> = {}
+    
+    allSchemas.value.forEach(schema => {
+      if (!grouped[schema.framework]) {
+        grouped[schema.framework] = {}
+      }
+      if (!grouped[schema.framework][schema.type]) {
+        grouped[schema.framework][schema.type] = []
+      }
+      grouped[schema.framework][schema.type].push(schema)
+    })
+    
+    // Ordenar versões dentro de cada tipo
+    Object.values(grouped).forEach(framework => {
+      Object.values(framework).forEach(schemas => {
+        schemas.sort((a, b) => {
+          if (a.isLatest) return -1
+          if (b.isLatest) return 1
+          if (a.releaseDate && b.releaseDate) {
+            return new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
+          }
+          return b.version.localeCompare(a.version, undefined, { numeric: true })
+        })
+      })
+    })
+    
+    return grouped
+  })
+
+  /**
    * Obter schema específico por framework, tipo e versão
    */
-  const getSchema = (framework: string, type: string, version = 'latest'): SchemaMetadata | null => {
-    const schemas = schemaRegistry[framework]?.[type]
+  const getSchema = async (framework: string, type: string, version = 'latest'): Promise<SchemaMetadata | null> => {
+    await loadRegistry()
+    
+    const schemas = schemasByFrameworkAndType.value[framework]?.[type]
     if (!schemas) return null
     
     if (version === 'latest') {
@@ -260,8 +196,10 @@ export const useMatrixSchemas = () => {
   /**
    * Obter todos os schemas de um framework
    */
-  const getFrameworkSchemas = (framework: string): SchemaMetadata[] => {
-    const frameworkSchemas = schemaRegistry[framework]
+  const getFrameworkSchemas = async (framework: string): Promise<SchemaMetadata[]> => {
+    await loadRegistry()
+    
+    const frameworkSchemas = schemasByFrameworkAndType.value[framework]
     if (!frameworkSchemas) return []
     
     return Object.values(frameworkSchemas).flat()
@@ -270,10 +208,9 @@ export const useMatrixSchemas = () => {
   /**
    * Obter lista de todos os schemas disponíveis
    */
-  const getAllSchemas = (): SchemaMetadata[] => {
-    return Object.values(schemaRegistry)
-      .map(framework => Object.values(framework).flat())
-      .flat()
+  const getAllSchemas = async (): Promise<SchemaMetadata[]> => {
+    await loadRegistry()
+    return allSchemas.value
   }
 
   /**
@@ -293,8 +230,9 @@ export const useMatrixSchemas = () => {
   /**
    * Verificar se schema existe
    */
-  const schemaExists = (framework: string, type: string, version = '1.0.0'): boolean => {
-    return getSchema(framework, type, version) !== null
+  const schemaExists = async (framework: string, type: string, version = '1.0.0'): Promise<boolean> => {
+    const schema = await getSchema(framework, type, version)
+    return schema !== null
   }
 
   /**
@@ -322,39 +260,44 @@ export const useMatrixSchemas = () => {
   /**
    * Obter lista de frameworks disponíveis
    */
-  const getAvailableFrameworks = (): string[] => {
-    return Object.keys(schemaRegistry)
+  const getAvailableFrameworks = async (): Promise<string[]> => {
+    await loadRegistry()
+    return Object.keys(schemasByFrameworkAndType.value)
   }
 
   /**
    * Obter tipos de schema disponíveis para um framework
    */
-  const getFrameworkTypes = (framework: string): string[] => {
-    return Object.keys(schemaRegistry[framework] || {})
+  const getFrameworkTypes = async (framework: string): Promise<string[]> => {
+    await loadRegistry()
+    return Object.keys(schemasByFrameworkAndType.value[framework] || {})
   }
 
   /**
    * Validar se uma URL de schema é válida
    */
-  const isValidSchemaUrl = (url: string): boolean => {
+  const isValidSchemaUrl = async (url: string): Promise<boolean> => {
     const parsed = parseSchemaUrl(url)
     if (!parsed) return false
     
-    return schemaExists(parsed.framework, parsed.type, parsed.version)
+    return await schemaExists(parsed.framework, parsed.type, parsed.version)
   }
 
   /**
    * Obter todas as versões de um schema específico
    */
-  const getSchemaVersions = (framework: string, type: string): SchemaMetadata[] => {
-    return schemaRegistry[framework]?.[type] || []
+  const getSchemaVersions = async (framework: string, type: string): Promise<SchemaMetadata[]> => {
+    await loadRegistry()
+    return schemasByFrameworkAndType.value[framework]?.[type] || []
   }
 
   /**
    * Obter a versão mais recente de um schema
    */
-  const getLatestSchemaVersion = (framework: string, type: string): SchemaMetadata | null => {
-    const schemas = schemaRegistry[framework]?.[type]
+  const getLatestSchemaVersion = async (framework: string, type: string): Promise<SchemaMetadata | null> => {
+    await loadRegistry()
+    
+    const schemas = schemasByFrameworkAndType.value[framework]?.[type]
     if (!schemas) return null
     
     return schemas.find(s => s.isLatest) || schemas[0] || null
@@ -363,24 +306,30 @@ export const useMatrixSchemas = () => {
   /**
    * Verificar se um schema tem múltiplas versões
    */
-  const hasMultipleVersions = (framework: string, type: string): boolean => {
-    const schemas = schemaRegistry[framework]?.[type]
+  const hasMultipleVersions = async (framework: string, type: string): Promise<boolean> => {
+    await loadRegistry()
+    
+    const schemas = schemasByFrameworkAndType.value[framework]?.[type]
     return schemas ? schemas.length > 1 : false
   }
 
   /**
    * Obter contagem de versões por schema
    */
-  const getVersionCount = (framework: string, type: string): number => {
-    const schemas = schemaRegistry[framework]?.[type]
+  const getVersionCount = async (framework: string, type: string): Promise<number> => {
+    await loadRegistry()
+    
+    const schemas = schemasByFrameworkAndType.value[framework]?.[type]
     return schemas ? schemas.length : 0
   }
 
   /**
    * Obter schemas únicos (apenas versão mais recente) para listagem
    */
-  const getUniqueSchemas = (): SchemaMetadata[] => {
-    return Object.values(schemaRegistry)
+  const getUniqueSchemas = async (): Promise<SchemaMetadata[]> => {
+    await loadRegistry()
+    
+    return Object.values(schemasByFrameworkAndType.value)
       .map(framework => 
         Object.values(framework).map(schemas => 
           schemas.find(s => s.isLatest) || schemas[0]
@@ -393,28 +342,52 @@ export const useMatrixSchemas = () => {
   /**
    * Obter estatísticas de versões
    */
-  const getVersionStats = () => {
-    const allSchemas = getAllSchemas()
-    const uniqueSchemas = getUniqueSchemas()
+  const getVersionStats = async () => {
+    await loadRegistry()
+    
+    if (!registryData.value) {
+      return {
+        totalVersions: 0,
+        uniqueSchemas: 0,
+        multiVersionSchemas: 0,
+        statusBreakdown: { stable: 0, beta: 0, deprecated: 0, legacy: 0 }
+      }
+    }
+    
+    // Usar estatísticas diretamente do registry
+    const stats = registryData.value.metadata.statistics
+    const uniqueSchemas = await getUniqueSchemas()
+    
+    // Calcular schemas com múltiplas versões
+    let multiVersionSchemas = 0
+    for (const schema of uniqueSchemas) {
+      if (await hasMultipleVersions(schema.framework, schema.type)) {
+        multiVersionSchemas++
+      }
+    }
     
     return {
-      totalVersions: allSchemas.length,
-      uniqueSchemas: uniqueSchemas.length,
-      multiVersionSchemas: uniqueSchemas.filter(schema => 
-        hasMultipleVersions(schema.framework, schema.type)
-      ).length,
-      statusBreakdown: {
-        stable: allSchemas.filter(s => s.status === 'stable').length,
-        beta: allSchemas.filter(s => s.status === 'beta').length,
-        deprecated: allSchemas.filter(s => s.status === 'deprecated').length,
-        legacy: allSchemas.filter(s => s.status === 'legacy').length
-      }
+      totalVersions: stats.totalVersions,
+      uniqueSchemas: stats.totalSchemas,
+      multiVersionSchemas,
+      statusBreakdown: stats.statusBreakdown
     }
   }
 
+  // Auto-carregar registry na inicialização se estiver no client
+  if (import.meta.client) {
+    loadRegistry().catch(console.error)
+  }
+
   return {
-    // Data
-    schemaRegistry,
+    // Estado reativo
+    registryData: readonly(registryData),
+    isLoading: readonly(isLoading),
+    error: readonly(error),
+    allSchemas,
+    
+    // Métodos de carregamento
+    loadRegistry,
     
     // Getters
     getSchema,

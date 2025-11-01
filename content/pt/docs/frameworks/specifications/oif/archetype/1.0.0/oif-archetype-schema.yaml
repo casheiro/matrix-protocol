@@ -1,12 +1,12 @@
 # OIF Archetype Schema v1.0.0
-# Operator Intelligence Framework - Definição de Arquétipos
-# Especificação canônica normativa para arquétipos de inteligência artificial
+# Operator Intelligence Framework - Archetype Definition
+# Normative canonical specification for artificial intelligence archetypes
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: http://localhost:3000/schemas/oif/archetype/1.0.0
 version: 1.0.0
 title: OIF Archetype Schema
-description: Schema canônico para definição de arquétipos OIF no Matrix Protocol
+description: Canonical schema for OIF archetype definition in Matrix Protocol
 type: object
 required:
   - schema
@@ -21,14 +21,14 @@ required:
 properties:
   schema:
     type: string
-    description: Versão do schema OIF Archetype utilizado
+    description: Schema version OIF Archetype used
     pattern: ^[0-9]+\.[0-9]+$
     examples:
       - "1.0"
       - "1.1"
   archetype_id:
     type: string
-    description: Identificador único do arquétipo
+    description: Unique identifier for the archetype
     pattern: ^[a-z]+(\.{1}[a-z0-9-]+)?$
     examples:
       - kag
@@ -37,7 +37,7 @@ properties:
       - gad.prototype
   archetype_name:
     type: string
-    description: Nome exibível do arquétipo
+    description: Display name for the archetype
     minLength: 5
     maxLength: 100
     examples:
@@ -46,7 +46,7 @@ properties:
       - Guidance Agent - Security
   archetype_level:
     type: string
-    description: Nível do arquétipo no framework OIF
+    description: Archetype level in the OIF framework
     enum:
       - canonical
       - specialized
@@ -56,22 +56,22 @@ properties:
       - specialized
   version:
     type: string
-    description: Versão do arquétipo (versionamento semântico)
+    description: Archetype version (semantic versioning)
     pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
     examples:
       - 1.0.0
       - 2.1.3
   specialization:
     type: string
-    description: Descrição da especialização do arquétipo
+    description: Description of the archetype specialization
     minLength: 30
     maxLength: 500
     examples:
-      - Compreensão, organização e relacionamento de conhecimento MEF
-      - Orientação específica de segurança e conformidade de políticas
+      - Understanding, organization and relationship of MEF knowledge
+      - Specific guidance for security and policy compliance
   domain_ref:
     type: string
-    description: Referência ao domínio no MOC (obrigatório para specialized/ephemeral)
+    description: Reference to domain in MOC (required for specialized/ephemeral)
     pattern: ^[a-z0-9-]+$|^global$
     examples:
       - global
@@ -80,7 +80,7 @@ properties:
       - experimental
   scope_ref:
     type: string
-    description: Referência ao escopo no MOC (obrigatório para specialized/ephemeral)
+    description: Reference to scope in MOC (required for specialized/ephemeral)
     pattern: ^[a-z0-9-]+$|^all$
     examples:
       - all
@@ -89,7 +89,7 @@ properties:
       - sandbox
   core_capabilities:
     type: object
-    description: Capacidades centrais do arquétipo
+    description: Core capabilities of the archetype
     required:
       - primary_functions
       - input_types
@@ -97,7 +97,7 @@ properties:
     properties:
       primary_functions:
         type: array
-        description: Funções primárias do arquétipo
+        description: Primary functions of the archetype
         minItems: 1
         items:
           type: object
@@ -108,26 +108,26 @@ properties:
           properties:
             function_name:
               type: string
-              description: Nome da função
+              description: Function name
               examples:
                 - semantic_search
                 - workflow_orchestration
                 - security_guidance
             description:
               type: string
-              description: Descrição detalhada da função
+              description: Detailed description of the function
               minLength: 30
               examples:
-                - Busca inteligente em UKIs com filtragem MOC
+                - Intelligent search in UKIs with MOC filtering
             moc_aware:
               type: boolean
-              description: Função é consciente das hierarquias MOC
+              description: Function is aware of MOC hierarchies
               examples:
                 - true
                 - false
             input_requirements:
               type: array
-              description: Requisitos de entrada da função
+              description: Function input requirements
               items:
                 type: string
               examples:
@@ -135,7 +135,7 @@ properties:
                   - query_parameters
             output_format:
               type: string
-              description: Formato de saída da função
+              description: Function output format
               examples:
                 - filtered_ukis
                 - workflow_state
@@ -143,7 +143,7 @@ properties:
           additionalProperties: false
       input_types:
         type: array
-        description: Tipos de entrada que o arquétipo processa
+        description: Input types that the archetype processes
         minItems: 1
         items:
           type: string
@@ -162,7 +162,7 @@ properties:
             - user_context
       output_types:
         type: array
-        description: Tipos de saída que o arquétipo produz
+        description: Output types that the archetype produces
         minItems: 1
         items:
           type: string
@@ -180,11 +180,11 @@ properties:
             - explanation
       performance_characteristics:
         type: object
-        description: Características de performance esperadas
+        description: Expected performance characteristics
         properties:
           response_time_target_ms:
             type: integer
-            description: Tempo de resposta alvo em milissegundos
+            description: Target response time in milliseconds
             minimum: 100
             maximum: 30000
             examples:
@@ -192,14 +192,14 @@ properties:
               - 5000
           throughput_target:
             type: integer
-            description: Requisições por minuto alvo
+            description: Target requests per minute
             minimum: 1
             examples:
               - 60
               - 300
           accuracy_target:
             type: number
-            description: Taxa de acurácia alvo (0.0 a 1.0)
+            description: Target accuracy rate (0.0 to 1.0)
             minimum: 0.5
             maximum: 1
             examples:
@@ -207,7 +207,7 @@ properties:
               - 0.95
           explainability_score:
             type: number
-            description: Pontuação de explicabilidade (0.0 a 1.0)
+            description: Explainability score (0.0 to 1.0)
             minimum: 0.7
             maximum: 1
             examples:
@@ -217,7 +217,7 @@ properties:
     additionalProperties: false
   moc_integration:
     type: object
-    description: Configuração de integração com MOC organizacional
+    description: Organizational MOC integration configuration
     required:
       - authority_validation
       - hierarchical_filtering
@@ -225,7 +225,7 @@ properties:
     properties:
       authority_validation:
         type: object
-        description: Configuração de validação de autoridade
+        description: Authority validation configuration
         required:
           - enabled
           - validation_method
@@ -233,11 +233,11 @@ properties:
         properties:
           enabled:
             type: boolean
-            description: Validação de autoridade habilitada
+            description: Authority validation enabled
             const: true
           validation_method:
             type: string
-            description: Método de validação utilizado
+            description: Validation method used
             enum:
               - moc_based
               - role_based
@@ -246,18 +246,18 @@ properties:
               - moc_based
           escalation_handling:
             type: boolean
-            description: Tratamento automático de escalação
+            description: Automatic escalation handling
             default: true
           cache_duration_ms:
             type: integer
-            description: Duração do cache de validação
+            description: Validation cache duration
             minimum: 1000
             maximum: 3600000
             default: 300000
         additionalProperties: false
       hierarchical_filtering:
         type: object
-        description: Configuração de filtragem hierárquica
+        description: Hierarchical filtering configuration
         required:
           - scope_filtering
           - domain_filtering
@@ -265,18 +265,18 @@ properties:
         properties:
           scope_filtering:
             type: object
-            description: Filtragem baseada em escopo
+            description: Scope-based filtering
             required:
               - enabled
               - filter_mode
             properties:
               enabled:
                 type: boolean
-                description: Filtragem de escopo habilitada
+                description: Scope filtering enabled
                 const: true
               filter_mode:
                 type: string
-                description: Modo de filtragem de escopo
+                description: Scope filtering mode
                 enum:
                   - inclusive
                   - exclusive
@@ -284,23 +284,23 @@ properties:
                 default: hierarchical
               inheritance_rules:
                 type: boolean
-                description: Aplicar regras de herança hierárquica
+                description: Apply hierarchical inheritance rules
                 default: true
             additionalProperties: false
           domain_filtering:
             type: object
-            description: Filtragem baseada em domínio
+            description: Domain-based filtering
             required:
               - enabled
               - access_control
             properties:
               enabled:
                 type: boolean
-                description: Filtragem de domínio habilitada
+                description: Domain filtering enabled
                 const: true
               access_control:
                 type: string
-                description: Tipo de controle de acesso
+                description: Access control type
                 enum:
                   - whitelist
                   - blacklist
@@ -308,30 +308,30 @@ properties:
                 default: role_based
               cross_domain_access:
                 type: boolean
-                description: Permitir acesso cross-domain
+                description: Allow cross-domain access
                 default: false
             additionalProperties: false
           contextual_access:
             type: object
-            description: Acesso baseado em contexto
+            description: Context-based access
             properties:
               user_context_required:
                 type: boolean
-                description: Contexto de usuário obrigatório
+                description: User context required
                 default: true
               session_awareness:
                 type: boolean
-                description: Consciência de sessão do usuário
+                description: User session awareness
                 default: true
               temporal_constraints:
                 type: boolean
-                description: Aplicar restrições temporais
+                description: Apply temporal constraints
                 default: false
             additionalProperties: false
         additionalProperties: false
       governance_explanation:
         type: object
-        description: Configuração de explicação de governança
+        description: Governance explanation configuration
         required:
           - moc_node_citation
           - explanation_depth
@@ -339,11 +339,11 @@ properties:
         properties:
           moc_node_citation:
             type: boolean
-            description: Citar nós MOC específicos nas explicações
+            description: Cite specific MOC nodes in explanations
             const: true
           explanation_depth:
             type: string
-            description: Profundidade das explicações
+            description: Explanation depth
             enum:
               - minimal
               - standard
@@ -352,7 +352,7 @@ properties:
             default: standard
           transparency_level:
             type: string
-            description: Nível de transparência das decisões
+            description: Decision transparency level
             enum:
               - basic
               - intermediate
@@ -360,13 +360,13 @@ properties:
             default: intermediate
           include_escalation_paths:
             type: boolean
-            description: Incluir caminhos de escalação nas explicações
+            description: Include escalation paths in explanations
             default: true
         additionalProperties: false
     additionalProperties: false
   level_specific_config:
     type: object
-    description: Configurações específicas do nível do arquétipo
+    description: Archetype level-specific configurations
     oneOf:
       - if:
           properties:
@@ -382,22 +382,22 @@ properties:
               properties:
                 prompt_protection:
                   type: object
-                  description: Proteção de prompts canônicos
+                  description: Canonical prompt protection
                   required:
                     - immutable_prompts
                     - override_allowed
                   properties:
                     immutable_prompts:
                       type: boolean
-                      description: Prompts são imutáveis
+                      description: Prompts are immutable
                       const: true
                     override_allowed:
                       type: boolean
-                      description: Override permitido
+                      description: Override allowed
                       const: false
                     modification_restrictions:
                       type: array
-                      description: Restrições de modificação
+                      description: Modification restrictions
                       items:
                         type: string
                       examples:
@@ -405,15 +405,15 @@ properties:
                           - knowledge_access_patterns
                 behavioral_constraints:
                   type: object
-                  description: Restrições comportamentais
+                  description: Behavioral constraints
                   properties:
                     domain_agnostic:
                       type: boolean
-                      description: Deve permanecer agnóstico a domínio
+                      description: Must remain domain-agnostic
                       default: true
                     organization_neutral:
                       type: boolean
-                      description: Deve ser neutro organizacionalmente
+                      description: Must be organizationally neutral
                       default: true
       - if:
           properties:
@@ -429,27 +429,27 @@ properties:
               properties:
                 moc_validation_required:
                   type: boolean
-                  description: Validação MOC obrigatória
+                  description: MOC validation required
                   const: true
                 extension_patterns:
                   type: object
-                  description: Padrões de extensão permitidos
+                  description: Allowed extension patterns
                   properties:
                     domain_specialization:
                       type: boolean
-                      description: Especialização de domínio permitida
+                      description: Domain specialization allowed
                       default: true
                     organizational_context:
                       type: boolean
-                      description: Contexto organizacional permitido
+                      description: Organizational context allowed
                       default: true
                     workflow_integration:
                       type: boolean
-                      description: Integração de workflow específico
+                      description: Specific workflow integration
                       default: true
                 base_archetype_inheritance:
                   type: string
-                  description: Arquétipo base herdado
+                  description: Inherited base archetype
                   enum:
                     - kag
                     - wag
@@ -470,31 +470,31 @@ properties:
               properties:
                 session_lifetime:
                   type: boolean
-                  description: Limitado ao tempo de sessão
+                  description: Limited to session lifetime
                   const: true
                 persistence_allowed:
                   type: boolean
-                  description: Persistência permitida
+                  description: Persistence allowed
                   const: false
                 experimental_features:
                   type: boolean
-                  description: Recursos experimentais habilitados
+                  description: Experimental features enabled
                   default: true
                 sandbox_restrictions:
                   type: object
-                  description: Restrições de sandbox
+                  description: Sandbox restrictions
                   properties:
                     moc_bypass_allowed:
                       type: boolean
-                      description: Bypass do MOC permitido
+                      description: MOC bypass allowed
                       default: true
                     production_access:
                       type: boolean
-                      description: Acesso à produção
+                      description: Production access
                       default: false
   quality_metrics:
     type: object
-    description: Métricas de qualidade obrigatórias
+    description: Mandatory quality metrics
     required:
       - explainability_metrics
       - hierarchical_filtering_metrics
@@ -502,26 +502,26 @@ properties:
     properties:
       explainability_metrics:
         type: object
-        description: Métricas de explicabilidade
+        description: Explainability metrics
         required:
           - clarity_target
           - traceability_target
         properties:
           clarity_target:
             type: number
-            description: Meta de clareza (porcentagem)
+            description: Clarity target (percentage)
             minimum: 0.8
             maximum: 1
             default: 0.85
           traceability_target:
             type: number
-            description: Meta de rastreabilidade (porcentagem)
+            description: Traceability target (percentage)
             minimum: 0.95
             maximum: 1
             default: 1
           measurement_frequency:
             type: string
-            description: Frequência de medição
+            description: Measurement frequency
             enum:
               - real_time
               - hourly
@@ -531,46 +531,46 @@ properties:
         additionalProperties: false
       hierarchical_filtering_metrics:
         type: object
-        description: Métricas de filtragem hierárquica
+        description: Hierarchical filtering metrics
         required:
           - precision_target
           - authority_compliance_target
         properties:
           precision_target:
             type: number
-            description: Meta de precisão na filtragem
+            description: Filtering precision target
             minimum: 0.9
             maximum: 1
             default: 0.95
           authority_compliance_target:
             type: number
-            description: Meta de conformidade com autoridade
+            description: Authority compliance target
             minimum: 0.98
             maximum: 1
             default: 1
         additionalProperties: false
       derived_authority_metrics:
         type: object
-        description: Métricas de autoridade derivada
+        description: Derived authority metrics
         required:
           - contextualization_target
           - humility_integration_target
         properties:
           contextualization_target:
             type: number
-            description: Meta de contextualização vs respostas absolutas
+            description: Contextualization vs absolute responses target
             minimum: 0.85
             maximum: 1
             default: 0.9
           humility_integration_target:
             type: number
-            description: Meta de integração de humildade epistêmica
+            description: Epistemic humility integration target
             minimum: 0.75
             maximum: 1
             default: 0.8
           absolute_truth_avoidance_target:
             type: number
-            description: Meta de evitação de verdades absolutas
+            description: Absolute truth avoidance target
             minimum: 0.95
             maximum: 1
             default: 1
@@ -578,23 +578,23 @@ properties:
     additionalProperties: false
   mal_integration:
     type: object
-    description: Configuração de integração com MAL (quando aplicável)
+    description: MAL integration configuration (when applicable)
     properties:
       arbitration_explanation:
         type: boolean
-        description: Capacidade de explicar arbitragens MAL
+        description: Ability to explain MAL arbitrations
         default: false
       explanation_template_support:
         type: boolean
-        description: Suporte a templates de explicação de arbitragem
+        description: Support for arbitration explanation templates
         default: false
       decision_record_interpretation:
         type: boolean
-        description: Capacidade de interpretar Decision Records
+        description: Ability to interpret Decision Records
         default: false
       user_communication_role:
         type: string
-        description: Papel na comunicação de resultados MAL
+        description: Role in MAL results communication
         enum:
           - none
           - interpreter
@@ -604,7 +604,7 @@ properties:
     additionalProperties: false
   metadata:
     type: object
-    description: Metadados do arquétipo
+    description: Archetype metadata
     required:
       - created_date
       - last_modified
@@ -614,21 +614,21 @@ properties:
       created_date:
         type: string
         format: date
-        description: Data de criação do arquétipo
+        description: Archetype creation date
       last_modified:
         type: string
         format: date
-        description: Data da última modificação
+        description: Last modification date
       maintainer:
         type: string
-        description: Responsável pela manutenção do arquétipo
+        description: Archetype maintenance responsible
         examples:
           - protocol-team
           - platform-team
           - security-team
       validation_status:
         type: string
-        description: Status de validação do arquétipo
+        description: Archetype validation status
         enum:
           - valid
           - pending
@@ -639,10 +639,10 @@ properties:
           - experimental
       change_summary:
         type: string
-        description: Resumo das mudanças na versão atual
+        description: Summary of changes in current version
       deployment_environments:
         type: array
-        description: Ambientes onde o arquétipo pode ser implantado
+        description: Environments where the archetype can be deployed
         items:
           type: string
           enum:
@@ -655,20 +655,20 @@ properties:
             - production
       compatibility_matrix:
         type: object
-        description: Matriz de compatibilidade com outros frameworks
+        description: Compatibility matrix with other frameworks
         properties:
           mef_version:
             type: string
-            description: Versão compatível do MEF
+            description: Compatible MEF version
           moc_version:
             type: string
-            description: Versão compatível do MOC
+            description: Compatible MOC version
           zof_version:
             type: string
-            description: Versão compatível do ZOF
+            description: Compatible ZOF version
           mal_version:
             type: string
-            description: Versão compatível do MAL
+            description: Compatible MAL version
         additionalProperties: false
     additionalProperties: false
 additionalProperties: false

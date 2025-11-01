@@ -1,31 +1,31 @@
 ---
-title: Especificações OIF - Operator Intelligence Framework
-description: Schemas YAML canônicos para arquétipos de inteligência e templates de explicação de arbitragem do Operator Intelligence Framework
+title: OIF Specifications - Operator Intelligence Framework
+description: Canonical YAML schemas for intelligence archetypes and arbitration explanation templates of the Operator Intelligence Framework
 keywords:
   - OIF
   - Operator Intelligence Framework
-  - arquétipos de inteligência
+  - intelligence archetypes
   - Knowledge Agent
   - Workflow Agent
-  - explicação de arbitragem
-  - autoridade derivada
-  - schemas YAML
+  - arbitration explanation
+  - derived authority
+  - YAML schemas
 framework: OIF
 icon: i-heroicons-cpu-chip
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 4
 ---
 
-# Especificações OIF - Operator Intelligence Framework
+# OIF Specifications - Operator Intelligence Framework
 
-Esta seção contém as especificações canônicas normativas para o **Operator Intelligence Framework (OIF)**, definindo schemas YAML para arquétipos de inteligência artificial hierarquicamente conscientes da governança organizacional e templates de explicação de arbitragem.
+This section contains the normative canonical specifications for the **Operator Intelligence Framework (OIF)**, defining YAML schemas for artificial intelligence archetypes hierarchically aware of organizational governance and arbitration explanation templates.
 
-## 📋 Schemas Disponíveis
+## 📋 Available Schemas
 
 ### 1. OIF Archetype Schema
 **Arquivo:** `oif-archetype-schema.yaml`  

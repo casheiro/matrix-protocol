@@ -1,113 +1,113 @@
 ---
-title: Especificações ZOF - Zion Orchestration Framework
-description: Schemas YAML canônicos para workflows, transições de estado e avaliação EvaluateForEnrich do Zion Orchestration Framework
+title: ZOF Specifications - Zion Orchestration Framework
+description: Canonical YAML schemas for workflows, state transitions and EvaluateForEnrich evaluation of the Zion Orchestration Framework
 keywords:
   - ZOF
   - Zion Orchestration Framework
-  - workflows conceituais
-  - estados canônicos
+  - conceptual workflows
+  - canonical states
   - EvaluateForEnrich
-  - orquestração IA
-  - schemas YAML
+  - AI orchestration
+  - YAML schemas
 framework: ZOF
 icon: i-heroicons-bolt
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 3
 ---
 
-# Especificações ZOF - Zion Orchestration Framework
+# ZOF Specifications - Zion Orchestration Framework
 
-Esta seção contém as especificações canônicas normativas para o **Zion Orchestration Framework (ZOF)**, definindo schemas YAML para workflows conceituais orientados a IA, transições de estado e checkpoint EvaluateForEnrich.
+This section contains the normative canonical specifications for the **Zion Orchestration Framework (ZOF)**, defining YAML schemas for AI-oriented conceptual workflows, state transitions and EvaluateForEnrich checkpoint.
 
-## 📋 Schemas Disponíveis
+## 📋 Available Schemas
 
 ### 1. ZOF Workflow Schema
-**Arquivo:** `zof-workflow-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para definição de workflows conceituais
+**File:** `zof-workflow-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for conceptual workflow definitions
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/zof/zof-workflow-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/zof/zof-workflow-schema.yaml" />
 
-#### Estados Canônicos Obrigatórios
-1. **intake:** Captura de contexto e requisitos
-2. **understand:** Consulta obrigatória ao Oracle (UKIs)  
-3. **decide:** Decisão baseada em conhecimento existente
-4. **act:** Execução da ação planejada
-5. **evaluate_for_enrich:** Checkpoint obrigatório de avaliação
-6. **review:** Validação opcional do resultado
-7. **enrich:** Enriquecimento condicional do Oracle
+#### Mandatory Canonical States
+1. **intake:** Context and requirements capture
+2. **understand:** Mandatory Oracle consultation (UKIs)  
+3. **decide:** Decision based on existing knowledge
+4. **act:** Execution of planned action
+5. **evaluate_for_enrich:** Mandatory evaluation checkpoint
+6. **review:** Optional result validation
+7. **enrich:** Conditional Oracle enrichment
 
-#### Eventos Gatilho Canônicos
-- `knowledge.added` - Novo conteúdo disponível
-- `work.proposed` - Nova proposta de trabalho
-- `work.refine.requested` - Solicitação de refinamento
-- `assistance.requested` - Pedido de ajuda/colaboração
-- `test.authored` - Cenários de teste criados
-- `feedback.submitted` - Correção/aprendizado
+#### Canonical Trigger Events
+- `knowledge.added` - New content available
+- `work.proposed` - New work proposal
+- `work.refine.requested` - Refinement request
+- `assistance.requested` - Help/collaboration request
+- `test.authored` - Test scenarios created
+- `feedback.submitted` - Correction/learning
 
 ### 2. ZOF State Transition Schema
-**Arquivo:** `zof-state-transition-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para transições entre estados canônicos
+**File:** `zof-state-transition-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for transitions between canonical states
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/zof/zof-state-transition-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/zof/zof-state-transition-schema.yaml" />
 
-#### Componentes Principais
-- **Condições de Transição:** Lógica para mudança de estado
-- **Sinais Obrigatórios:** Context, Decision, Result para explicabilidade
-- **Validações:** Verificações executadas durante transição
-- **Ações:** Operações realizadas na transição
-- **Integração MAL:** Detecção e arbitragem de conflitos
+#### Main Components
+- **Transition Conditions:** Logic for state changes
+- **Mandatory Signals:** Context, Decision, Result for explainability
+- **Validations:** Checks executed during transition
+- **Actions:** Operations performed in transition
+- **MAL Integration:** Conflict detection and arbitration
 
 ### 3. ZOF Enrichment Evaluation Schema
-**Arquivo:** `zof-enrichment-evaluation-schema.yaml`  
-**Versão:** 1.0.0  
-**Propósito:** Especificação para checkpoint EvaluateForEnrich
+**File:** `zof-enrichment-evaluation-schema.yaml`  
+**Version:** 1.0.0  
+**Purpose:** Specification for EvaluateForEnrich checkpoint
 
-<YamlViewer file-path="/content/pt/docs/frameworks/specifications/zof/zof-enrichment-evaluation-schema.yaml" />
+<YamlViewer file-path="/content/en/docs/frameworks/specifications/zof/zof-enrichment-evaluation-schema.yaml" />
 
-#### Elementos de Avaliação
-- **can_enrich_decision:** Resultado da função can_enrich?()
-- **moc_criteria_results:** Avaliação baseada em critérios MOC
-- **authority_validation:** Validação de autoridade do usuário
-- **conflict_detection:** Detecção de conflitos H1/H2/H3
-- **scope_mode_validation:** Validação para operações multi-escopo
+#### Evaluation Elements
+- **can_enrich_decision:** Result of can_enrich?() function
+- **moc_criteria_results:** Evaluation based on MOC criteria
+- **authority_validation:** User authority validation
+- **conflict_detection:** H1/H2/H3 conflict detection
+- **scope_mode_validation:** Validation for multi-scope operations
 
-## 🎯 Uso das Especificações
+## 🎯 Using the Specifications
 
-### Para Implementadores
+### For Implementers
 
-#### Estrutura Básica de Workflow ZOF
+#### Basic ZOF Workflow Structure
 ```yaml
-# Exemplo mínimo de workflow ZOF
+# Minimal ZOF workflow example
 schema: "1.0"
-workflow_id: zof-exemplo-basico
-title: "Workflow de Exemplo Básico"
+workflow_id: zof-basic-example
+title: "Basic Example Workflow"
 version: "1.0.0"
 
 canonical_states:
   intake:
-    description: "Captura de contexto e requisitos"
+    description: "Context and requirements capture"
     signals:
-      context: "Requisição inicial recebida"
-      decision: "Contexto suficiente para prosseguir"
-      result: "Requisitos organizados e validados"
+      context: "Initial request received"
+      decision: "Sufficient context to proceed"
+      result: "Requirements organized and validated"
     transitions:
       - target_state: understand
         condition: "completion_criteria_met"
-        description: "Prosseguir para consulta Oracle"
+        description: "Proceed to Oracle consultation"
 
   understand:
-    description: "Consulta obrigatória ao Oracle"
+    description: "Mandatory Oracle consultation"
     signals:
-      context: "Consultar conhecimento existente relevante"
-      decision: "Oracle consultado com sucesso"
-      result: "Conhecimento existente identificado"
+      context: "Consult relevant existing knowledge"
+      decision: "Oracle consulted successfully"
+      result: "Existing knowledge identified"
     oracle_consultation:
       required: true
       query_parameters:
@@ -119,34 +119,34 @@ canonical_states:
     transitions:
       - target_state: decide
         condition: "oracle_consulted"
-        description: "Prosseguir para decisão"
+        description: "Proceed to decision"
 
   decide:
-    description: "Decisão baseada em conhecimento"
+    description: "Knowledge-based decision"
     signals:
-      context: "Conhecimento Oracle + contexto requisição"
-      decision: "Abordagem de implementação definida"
-      result: "Estratégia clara para execução"
+      context: "Oracle knowledge + request context"
+      decision: "Implementation approach defined"
+      result: "Clear strategy for execution"
     transitions:
       - target_state: act
         condition: "decision_made"
-        description: "Executar ação planejada"
+        description: "Execute planned action"
 
   act:
-    description: "Execução da ação planejada"
+    description: "Planned action execution"
     signals:
-      context: "Estratégia definida para implementação"
-      decision: "Executar conforme planejado"
-      result: "Ação concluída com resultado específico"
+      context: "Defined strategy for implementation"
+      decision: "Execute as planned"
+      result: "Action completed with specific result"
     transitions:
       - target_state: evaluate_for_enrich
         condition: "action_executed"
-        description: "Avaliar para enriquecimento"
+        description: "Evaluate for enrichment"
 
   evaluate_for_enrich:
-    description: "Checkpoint obrigatório de avaliação"
+    description: "Mandatory evaluation checkpoint"
     signals:
-      context: "Resultado da ação disponível para avaliação"
+      context: "Action result available for evaluation"
       decision: "can_enrich?() executado com critérios MOC"
       result: "Decisão de enriquecimento tomada"
     checkpoint_config:
@@ -204,34 +204,34 @@ metadata:
   maintainer: platform-team
 ```
 
-#### Configuração de Transição de Estado
+#### State Transition Configuration
 ```yaml
-# Exemplo de transição intake → understand
+# Example of intake → understand transition
 schema: "1.0"
-transition_id: zof-tr-exemplo-001
-workflow_ref: zof-exemplo-basico
+transition_id: zof-tr-example-001
+workflow_ref: zof-basic-example
 from_state: intake
 to_state: understand
 
 condition:
   type: completion_criteria
   expression: "all_completion_criteria_met && context_captured"
-  description: "Critérios de completude atendidos e contexto capturado"
+  description: "Completion criteria met and context captured"
 
 signals:
-  context: "Estado intake finalizado com requisitos documentados"
-  decision: "Critérios satisfeitos, prosseguindo para consulta Oracle"
-  result: "Transição para understand confirmada"
+  context: "Intake state completed with documented requirements"
+  decision: "Criteria satisfied, proceeding to Oracle consultation"
+  result: "Transition to understand confirmed"
 
 validations:
   - validation_type: state_completeness
-    description: "Validar completude do estado intake"
+    description: "Validate intake state completeness"
     status: passed
-    details: "Todos os campos obrigatórios preenchidos"
+    details: "All mandatory fields filled"
 
 actions:
   - action_type: oracle_consultation
-    description: "Preparar consulta ao Oracle"
+    description: "Prepare Oracle consultation"
     execution_order: 1
     parameters:
       scope_filter: ["squad", "tribe"]
@@ -337,7 +337,7 @@ metadata:
 - Aplique políticas de arbitragem customizadas
 
 
-## ✅ Validação e Conformidade
+## ✅ Validation and Compliance
 
 ### Estados Canônicos Obrigatórios
 Todo workflow ZOF deve incluir os 7 estados canônicos:
@@ -355,7 +355,7 @@ Cada transição deve registrar:
 - **decision:** Por que transicionou
 - **result:** O que saiu do estado
 
-## 🔗 Integração com Outros Frameworks
+## 🔗 Integration with Other Frameworks
 
 ### MEF (Matrix Embedding Framework)
 - Estados understand consultam UKIs estruturadas
@@ -377,7 +377,7 @@ Cada transição deve registrar:
 - Arquétipos executam estados específicos
 - Explicações incorporam justificativas ZOF
 
-## 📖 Recursos Relacionados
+## 📖 Related Resources
 
 ### Matrix Protocol Frameworks
 - **[ZOF - Zion Orchestration Framework](../../zof)** - Documentação completa do framework

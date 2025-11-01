@@ -1,121 +1,121 @@
 ---
-title: Especificações Canônicas YAML
-description: Schemas YAML normativos para implementação dos frameworks Matrix Protocol
+title: Canonical YAML Specifications
+description: Normative YAML schemas for Matrix Protocol frameworks implementation
 keywords:
   - Matrix Protocol
-  - especificações canônicas
-  - schemas YAML
+  - canonical specifications
+  - YAML schemas
   - MEF
   - MOC
   - ZOF
   - OIF
   - MAL
-  - implementação
-  - padronização
+  - implementation
+  - standardization
 icon: i-heroicons-document-text
 layout: docs
 sidebar: true
 toc: true
 navigation: true
-lang: pt
+lang: en
 last_updated: 2025-10-31T00:00:00.000Z
 order: 10
 ---
 
-# Especificações Canônicas YAML
+# Canonical YAML Specifications
 
-Esta seção contém as **especificações canônicas normativas** em formato YAML para implementação dos frameworks Matrix Protocol. Estas especificações são obrigatórias para garantir interoperabilidade e conformidade com o protocolo.
+This section contains the **normative canonical specifications** in YAML format for implementing Matrix Protocol frameworks. These specifications are mandatory to ensure interoperability and compliance with the protocol.
 
-## 📋 Frameworks Especificados
+## 📋 Specified Frameworks
 
 ### MEF (Matrix Embedding Framework)
-- **[Schema UKI](./mef/)** - Especificação canônica para Units of Knowledge Interlinked
-- **[Schema Decision Record](./mef/)** - Especificação para registros de decisão MAL
+- **[UKI Schema](./mef/)** - Canonical specification for Units of Knowledge Interlinked
+- **[Decision Record Schema](./mef/)** - Specification for MAL decision records
 
 ### MOC (Matrix Ontology Catalog)  
-- **[Schema Hierarquias](./moc/)** - Especificação para hierarquias organizacionais
-- **[Schema Critérios](./moc/)** - Especificação para critérios de avaliação
-- **[Schema Políticas](./moc/)** - Especificação para políticas de arbitragem
+- **[Hierarchy Schema](./moc/)** - Specification for organizational hierarchies
+- **[Criteria Schema](./moc/)** - Specification for evaluation criteria
+- **[Policy Schema](./moc/)** - Specification for arbitration policies
 
 ### ZOF (Zion Orchestration Framework)
-- **[Schema Workflows](./zof/)** - Especificação para definição de workflows
-- **[Schema Transições](./zof/)** - Especificação para transições de estado
-- **[Schema Avaliação](./zof/)** - Especificação para checkpoint EvaluateForEnrich
+- **[Workflow Schema](./zof/)** - Specification for workflow definitions
+- **[Transition Schema](./zof/)** - Specification for state transitions
+- **[Evaluation Schema](./zof/)** - Specification for EvaluateForEnrich checkpoint
 
 ### OIF (Operator Intelligence Framework)
-- **[Schema Arquétipos](./oif/)** - Especificação para definição de arquétipos
-- **[Schema Explicações](./oif/)** - Especificação para templates de explicação
+- **[Archetype Schema](./oif/)** - Specification for archetype definitions
+- **[Explanation Schema](./oif/)** - Specification for explanation templates
 
 ### MAL (Matrix Arbiter Layer)
-- **[Schema Eventos](./mal/)** - Especificação para eventos de arbitragem
-- **[Schema Decisões](./mal/)** - Especificação para registros de decisão
+- **[Event Schema](./mal/)** - Specification for arbitration events
+- **[Decision Schema](./mal/)** - Specification for decision records
 
-## 🎯 Propósito das Especificações
+## 🎯 Purpose of Specifications
 
-### Padronização
-Garantem formato comum e consistente para implementações do Matrix Protocol em diferentes organizações e tecnologias.
+### Standardization
+Ensure common and consistent format for Matrix Protocol implementations across different organizations and technologies.
 
-### Interoperabilidade  
-Permitem que sistemas implementados independentemente se comuniquem e compartilhem dados estruturados.
+### Interoperability  
+Enable independently implemented systems to communicate and share structured data.
 
-### Validação
-Facilitam validação automática de conformidade com o protocolo através de schemas estruturados.
+### Validation
+Facilitate automatic protocol compliance validation through structured schemas.
 
-### Governança
-Estabelecem referência autoritativa para resolução de ambiguidades de implementação.
+### Governance
+Establish authoritative reference for resolving implementation ambiguities.
 
 
-## 🔧 Uso das Especificações
+## 🔧 Using the Specifications
 
-### Para Implementadores
-1. Use os schemas como referência para estruturas de dados
-2. Valide suas implementações contra os schemas fornecidos
-3. Consulte a documentação de cada framework para contexto
+### For Implementers
+1. Use schemas as reference for data structures
+2. Validate your implementations against provided schemas
+3. Consult each framework's documentation for context
 
-### Para Validação
+### For Validation
 ```yaml
-# Exemplo de validação usando jsonschema (Python)
+# Validation example using jsonschema (Python)
 import yaml
 import jsonschema
 
-# Carregar schema e dados
+# Load schema and data
 schema = yaml.safe_load(open('mef-uki-schema.yaml'))
-data = yaml.safe_load(open('minha-uki.yaml'))
+data = yaml.safe_load(open('my-uki.yaml'))
 
-# Validar
+# Validate
 jsonschema.validate(data, schema)
 ```
 
-### Para Organizações
-- Adapte os campos `*_ref` conforme sua configuração MOC
-- Mantenha conformidade com campos obrigatórios
-- Estenda com campos organizacionais específicos quando permitido
+### For Organizations
+- Adapt `*_ref` fields according to your MOC configuration
+- Maintain compliance with mandatory fields
+- Extend with organization-specific fields when allowed
 
-## ⚖️ Status Normativo
+## ⚖️ Normative Status
 
-> ⚠️ **IMPORTANTE**: Estas especificações são **normativas**.
+> ⚠️ **IMPORTANT**: These specifications are **normative**.
 
-- **DEVE**: Campos marcados como obrigatórios devem ser implementados
-- **PODE**: Campos opcionais podem ser implementados conforme necessidade
-- **NÃO DEVE**: Violações dos schemas não são permitidas
+- **MUST**: Fields marked as mandatory must be implemented
+- **MAY**: Optional fields may be implemented as needed
+- **MUST NOT**: Schema violations are not permitted
 
-## 🔄 Versionamento
+## 🔄 Versioning
 
-As especificações seguem versionamento semântico:
-- **MAJOR**: Mudanças incompatíveis na estrutura
-- **MINOR**: Adições compatíveis
-- **PATCH**: Correções e clarificações
+Specifications follow semantic versioning:
+- **MAJOR**: Incompatible structural changes
+- **MINOR**: Compatible additions
+- **PATCH**: Bug fixes and clarifications
 
-## 📖 Recursos Relacionados
+## 📖 Related Resources
 
 ### Matrix Protocol Frameworks
-- **[MEF - Matrix Embedding Framework](../mef)** - Conhecimento estruturado
-- **[MOC - Matrix Ontology Catalog](../moc)** - Taxonomias organizacionais
-- **[ZOF - Zion Orchestration Framework](../zof)** - Orquestração de workflows
-- **[OIF - Operator Intelligence Framework](../oif)** - Arquétipos de inteligência
-- **[MAL - Matrix Arbiter Layer](../mal)** - Arbitragem de conflitos
+- **[MEF - Matrix Embedding Framework](../mef)** - Structured knowledge
+- **[MOC - Matrix Ontology Catalog](../moc)** - Organizational taxonomies
+- **[ZOF - Zion Orchestration Framework](../zof)** - Workflow orchestration
+- **[OIF - Operator Intelligence Framework](../oif)** - Intelligence archetypes
+- **[MAL - Matrix Arbiter Layer](../mal)** - Conflict arbitration
 
-### Documentação Técnica
-- **[Guia de Implementação](/docs/implementation)** - Como implementar o protocolo
-- **[Exemplos Práticos](/docs/examples)** - Casos de uso e templates
-- **[Glossário](/docs/glossary)** - Definições e terminologia
+### Technical Documentation
+- **[Implementation Guide](/docs/implementation)** - How to implement the protocol
+- **[Practical Examples](/docs/examples)** - Use cases and templates
+- **[Glossary](/docs/glossary)** - Definitions and terminology
