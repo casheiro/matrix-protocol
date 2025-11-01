@@ -5,14 +5,19 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/process-schemas.js",
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "pregenerate": "node scripts/process-schemas.js",
     "generate": "nuxt generate",
+    "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
     "start": "node .output/server/index.mjs",
-    "clean": "rm -rf .nuxt .output dist"
+    "clean": "rm -rf .nuxt .output dist",
+    "schemas:process": "node scripts/process-schemas.js",
+    "schemas:validate": "node scripts/process-schemas.js --validate-only",
+    "schemas:force-rebuild": "FORCE_SCHEMA_REBUILD=true node scripts/process-schemas.js"
   },
   "dependencies": {
     "@iconify-json/circle-flags": "1.2.8",

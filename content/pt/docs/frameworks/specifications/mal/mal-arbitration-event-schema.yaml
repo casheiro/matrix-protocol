@@ -2,12 +2,11 @@
 # Matrix Arbiter Layer - Eventos de Arbitragem
 # Especificação canônica normativa para eventos de conflito que requerem arbitragem
 
-$schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://matrix-protocol.org/schemas/mal/arbitration-event/1.0.0"
-version: "1.0.0"
-title: "MAL Arbitration Event Schema"
-description: "Schema canônico para eventos de arbitragem MAL no Matrix Protocol"
-
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: http://localhost:3000/schemas/mal/arbitration-event/1.0.0
+version: 1.0.0
+title: MAL Arbitration Event Schema
+description: Schema canônico para eventos de arbitragem MAL no Matrix Protocol
 type: object
 required:
   - schema
@@ -18,536 +17,603 @@ required:
   - user_moc_context
   - operation
   - conflict_details
-
 properties:
-  # === METADADOS OBRIGATÓRIOS ===
   schema:
     type: string
-    description: "Versão do schema MAL Arbitration Event utilizado"
-    pattern: "^[0-9]+\\.[0-9]+$"
-    examples: ["1.0", "1.1"]
-
+    description: Versão do schema MAL Arbitration Event utilizado
+    pattern: ^[0-9]+\.[0-9]+$
+    examples:
+      - "1.0"
+      - "1.1"
   event_id:
     type: string
-    description: "Identificador único para a solicitação de arbitragem"
-    pattern: "^mal-evt-[0-9]{8}-[0-9]+$"
-    examples: ["mal-evt-20250826-001", "mal-evt-20250827-042"]
-
+    description: Identificador único para a solicitação de arbitragem
+    pattern: ^mal-evt-[0-9]{8}-[0-9]+$
+    examples:
+      - mal-evt-20250826-001
+      - mal-evt-20250827-042
   event_type:
     type: string
-    description: "Classificação do conflito"
-    enum: ["H1", "H2", "H3"]
-    examples: ["H1", "H2"]
-
+    description: Classificação do conflito
+    enum:
+      - H1
+      - H2
+      - H3
+    examples:
+      - H1
+      - H2
   timestamp:
     type: string
     format: date-time
-    description: "Timestamp de criação do evento"
-    examples: ["2025-08-26T14:30:25.123Z"]
-
-  # === CANDIDATOS CONFLITANTES ===
+    description: Timestamp de criação do evento
+    examples:
+      - 2025-08-26T14:30:25.123Z
   candidates:
     type: array
-    description: "Array de entidades conflitantes com metadados completos"
+    description: Array de entidades conflitantes com metadados completos
     minItems: 2
     items:
       type: object
-      required: ["uki_ref", "scope_ref", "domain_ref", "maturity_level"]
+      required:
+        - uki_ref
+        - scope_ref
+        - domain_ref
+        - maturity_level
       properties:
         uki_ref:
           type: string
-          description: "Identificador da UKI candidata"
-          pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-          examples: 
-            - "uki:squad-x:rule:retencao-dados-30d"
-            - "uki:squad-x:rule:retencao-dados-7d"
-
+          description: Identificador da UKI candidata
+          pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+          examples:
+            - uki:squad-x:rule:retencao-dados-30d
+            - uki:squad-x:rule:retencao-dados-7d
         scope_ref:
           type: string
-          description: "Referência de escopo MOC"
-          pattern: "^[a-z0-9-]+$"
-          examples: ["squad-x", "tribe-alpha", "organization"]
-
+          description: Referência de escopo MOC
+          pattern: ^[a-z0-9-]+$
+          examples:
+            - squad-x
+            - tribe-alpha
+            - organization
         domain_ref:
           type: string
-          description: "Referência de domínio MOC"
-          pattern: "^[a-z0-9-]+$"
-          examples: ["security", "technical", "business"]
-
+          description: Referência de domínio MOC
+          pattern: ^[a-z0-9-]+$
+          examples:
+            - security
+            - technical
+            - business
         type_ref:
           type: string
-          description: "Tipo de conhecimento"
-          pattern: "^[a-z0-9_]+$"
-          examples: ["rule", "pattern", "guideline", "policy"]
-
+          description: Tipo de conhecimento
+          pattern: ^[a-z0-9_]+$
+          examples:
+            - rule
+            - pattern
+            - guideline
+            - policy
         maturity_level:
           type: string
-          description: "Classificação de maturidade"
-          pattern: "^[a-z0-9_]+$"
-          examples: ["draft", "validated", "endorsed", "experimental"]
-
+          description: Classificação de maturidade
+          pattern: ^[a-z0-9_]+$
+          examples:
+            - draft
+            - validated
+            - endorsed
+            - experimental
         version:
           type: string
-          description: "Versão da UKI"
-          pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
-          examples: ["1.0.0", "2.1.3"]
-
+          description: Versão da UKI
+          pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
+          examples:
+            - 1.0.0
+            - 2.1.3
         created_date:
           type: string
           format: date
-          description: "Data de criação da UKI"
-
+          description: Data de criação da UKI
         last_modified:
           type: string
           format: date
-          description: "Data da última modificação"
-
+          description: Data da última modificação
         authority_ref:
           type: string
-          description: "Referência de autoridade criadora"
-          examples: ["tech_lead", "developer", "architect"]
-
+          description: Referência de autoridade criadora
+          examples:
+            - tech_lead
+            - developer
+            - architect
         evidence_refs:
           type: array
-          description: "Referências de evidência suporte"
+          description: Referências de evidência suporte
           items:
             type: string
-          examples: [["uki:org:policy:lgpd-compliance", "doc:logs-auditoria-2024"]]
-
-        # === METADADOS ESPECÍFICOS DO CONFLITO ===
+          examples:
+            - - uki:org:policy:lgpd-compliance
+              - doc:logs-auditoria-2024
         conflict_metadata:
           type: object
-          description: "Metadados específicos para este conflito"
+          description: Metadados específicos para este conflito
           properties:
             conflicting_aspects:
               type: array
-              description: "Aspectos específicos em conflito"
+              description: Aspectos específicos em conflito
               items:
                 type: string
-              examples: [["retention_period", "enforcement_method"]]
-
+              examples:
+                - - retention_period
+                  - enforcement_method
             semantic_similarity:
               type: number
-              description: "Similaridade semântica com outras candidatas (0.0 a 1.0)"
+              description: Similaridade semântica com outras candidatas (0.0 a 1.0)
               minimum: 0
               maximum: 1
-              examples: [0.85, 0.72]
-
+              examples:
+                - 0.85
+                - 0.72
             usage_frequency:
               type: integer
-              description: "Frequência de uso ou referência"
+              description: Frequência de uso ou referência
               minimum: 0
-              examples: [15, 3]
-
+              examples:
+                - 15
+                - 3
             stakeholder_preference:
               type: object
-              description: "Preferências de stakeholders"
+              description: Preferências de stakeholders
               properties:
                 primary_stakeholder:
                   type: string
-                  description: "Stakeholder principal"
+                  description: Stakeholder principal
                 preference_strength:
                   type: string
-                  enum: ["weak", "moderate", "strong"]
+                  enum:
+                    - weak
+                    - moderate
+                    - strong
               additionalProperties: false
           additionalProperties: true
       additionalProperties: false
-
-  # === CONTEXTO DO USUÁRIO ===
   user_moc_context:
     type: object
-    description: "Claims hierárquicos e níveis de autoridade do usuário"
-    required: ["user_id", "scopes", "authority_level"]
+    description: Claims hierárquicos e níveis de autoridade do usuário
+    required:
+      - user_id
+      - scopes
+      - authority_level
     properties:
       user_id:
         type: string
-        description: "Identificador único do usuário"
-        examples: ["dev001", "john.doe"]
-
+        description: Identificador único do usuário
+        examples:
+          - dev001
+          - john.doe
       scopes:
         type: array
-        description: "Hierarquia de escopo do usuário"
+        description: Hierarquia de escopo do usuário
         items:
           type: string
-          pattern: "^[a-z0-9-]+$"
+          pattern: ^[a-z0-9-]+$
         minItems: 1
-        examples: [["squad-x", "tribe-alpha", "organization"]]
-
+        examples:
+          - - squad-x
+            - tribe-alpha
+            - organization
       authority_level:
         type: string
-        description: "Designação de autoridade do usuário"
-        examples: ["developer", "squad_lead", "tech_lead", "architect"]
-
+        description: Designação de autoridade do usuário
+        examples:
+          - developer
+          - squad_lead
+          - tech_lead
+          - architect
       domain_access:
         type: array
-        description: "Domínios acessíveis ao usuário"
+        description: Domínios acessíveis ao usuário
         items:
           type: string
-          pattern: "^[a-z0-9-]+$"
-        examples: [["technical", "security"]]
-
+          pattern: ^[a-z0-9-]+$
+        examples:
+          - - technical
+            - security
       session_context:
         type: object
-        description: "Contexto da sessão atual"
+        description: Contexto da sessão atual
         properties:
           session_id:
             type: string
-            description: "ID da sessão"
-
+            description: ID da sessão
           workflow_ref:
             type: string
-            description: "Workflow que originou o conflito"
-            pattern: "^zof-[a-z0-9-]+$"
-
+            description: Workflow que originou o conflito
+            pattern: ^zof-[a-z0-9-]+$
           operation_context:
             type: string
-            description: "Contexto da operação atual"
+            description: Contexto da operação atual
         additionalProperties: true
     additionalProperties: false
-
-  # === OPERAÇÃO SOLICITADA ===
   operation:
     type: string
-    description: "Tipo de operação solicitada"
-    enum: ["read", "enrich", "promote"]
-    examples: ["enrich", "promote"]
-
-  # === DETALHES DO CONFLITO ===
+    description: Tipo de operação solicitada
+    enum:
+      - read
+      - enrich
+      - promote
+    examples:
+      - enrich
+      - promote
   conflict_details:
     type: object
-    description: "Detalhes específicos do conflito por tipo"
-    required: ["conflict_description", "detection_method"]
+    description: Detalhes específicos do conflito por tipo
+    required:
+      - conflict_description
+      - detection_method
     properties:
       conflict_description:
         type: string
-        description: "Descrição textual do conflito"
+        description: Descrição textual do conflito
         minLength: 50
-        examples: 
-          - "Duas regras de segurança de escopo equivalente em conflito sobre período de retenção"
-
+        examples:
+          - Duas regras de segurança de escopo equivalente em conflito sobre período de retenção
       detection_method:
         type: string
-        description: "Método usado para detectar o conflito"
-        enum: ["semantic_analysis", "rule_engine", "manual_escalation", "automated_workflow"]
-        examples: ["semantic_analysis", "automated_workflow"]
-
+        description: Método usado para detectar o conflito
+        enum:
+          - semantic_analysis
+          - rule_engine
+          - manual_escalation
+          - automated_workflow
+        examples:
+          - semantic_analysis
+          - automated_workflow
       detection_timestamp:
         type: string
         format: date-time
-        description: "Quando o conflito foi detectado"
-
+        description: Quando o conflito foi detectado
       severity:
         type: string
-        description: "Severidade do conflito"
-        enum: ["low", "medium", "high", "critical"]
-        default: "medium"
-        examples: ["high", "critical"]
-
-      # === DETALHES ESPECÍFICOS POR TIPO ===
+        description: Severidade do conflito
+        enum:
+          - low
+          - medium
+          - high
+          - critical
+        default: medium
+        examples:
+          - high
+          - critical
       h1_details:
         type: object
-        description: "Detalhes específicos para conflitos horizontais H1"
+        description: Detalhes específicos para conflitos horizontais H1
         properties:
           scope_equivalence:
             type: boolean
-            description: "UKIs operam em escopos equivalentes"
+            description: UKIs operam em escopos equivalentes
             default: true
-
           semantic_overlap:
             type: number
-            description: "Percentual de sobreposição semântica"
+            description: Percentual de sobreposição semântica
             minimum: 0
             maximum: 1
-            examples: [0.85, 0.92]
-
+            examples:
+              - 0.85
+              - 0.92
           contradictory_directives:
             type: array
-            description: "Diretrizes contraditórias identificadas"
+            description: Diretrizes contraditórias identificadas
             items:
               type: string
-            examples: [["retention_period: 30d vs 7d", "enforcement: automatic vs manual"]]
-
+            examples:
+              - - "retention_period: 30d vs 7d"
+                - "enforcement: automatic vs manual"
           domain_intersection:
             type: array
-            description: "Domínios onde há interseção"
+            description: Domínios onde há interseção
             items:
               type: string
-            examples: [["security", "compliance"]]
+            examples:
+              - - security
+                - compliance
         additionalProperties: false
-
       h2_details:
         type: object
-        description: "Detalhes específicos para enriquecimento concorrente H2"
+        description: Detalhes específicos para enriquecimento concorrente H2
         properties:
           concurrent_requests:
             type: array
-            description: "Solicitações concorrentes detectadas"
+            description: Solicitações concorrentes detectadas
             items:
               type: object
-              required: ["request_id", "timestamp", "user_id"]
+              required:
+                - request_id
+                - timestamp
+                - user_id
               properties:
                 request_id:
                   type: string
-                  description: "ID da solicitação concorrente"
+                  description: ID da solicitação concorrente
                 timestamp:
                   type: string
                   format: date-time
                 user_id:
                   type: string
-                  description: "Usuário que fez a solicitação"
+                  description: Usuário que fez a solicitação
                 priority:
                   type: string
-                  enum: ["low", "medium", "high"]
+                  enum:
+                    - low
+                    - medium
+                    - high
               additionalProperties: false
-
           temporal_window_ms:
             type: integer
-            description: "Janela temporal da concorrência"
+            description: Janela temporal da concorrência
             minimum: 0
-            examples: [30000, 60000]
-
+            examples:
+              - 30000
+              - 60000
           resource_contention:
             type: string
-            description: "Recurso em contenção"
-            examples: ["oracle_enrichment_lock", "uki_modification_lock"]
-
+            description: Recurso em contenção
+            examples:
+              - oracle_enrichment_lock
+              - uki_modification_lock
           first_request_advantage:
             type: boolean
-            description: "Primeira solicitação tem vantagem temporal"
+            description: Primeira solicitação tem vantagem temporal
             default: false
         additionalProperties: false
-
       h3_details:
         type: object
-        description: "Detalhes específicos para contenção de promoção H3"
+        description: Detalhes específicos para contenção de promoção H3
         properties:
           promotion_candidates:
             type: array
-            description: "Candidatas para promoção"
+            description: Candidatas para promoção
             items:
               type: object
-              required: ["uki_ref", "target_scope", "promotion_rationale"]
+              required:
+                - uki_ref
+                - target_scope
+                - promotion_rationale
               properties:
                 uki_ref:
                   type: string
-                  pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+                  pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
                 target_scope:
                   type: string
-                  description: "Escopo alvo da promoção"
+                  description: Escopo alvo da promoção
                 promotion_rationale:
                   type: string
-                  description: "Justificativa para promoção"
+                  description: Justificativa para promoção
                   minLength: 50
                 evidence_strength:
                   type: string
-                  enum: ["weak", "moderate", "strong", "compelling"]
+                  enum:
+                    - weak
+                    - moderate
+                    - strong
+                    - compelling
                 sponsor_authority:
                   type: string
-                  description: "Autoridade que patrocina a promoção"
+                  description: Autoridade que patrocina a promoção
               additionalProperties: false
-
           target_level:
             type: string
-            description: "Nível hierárquico alvo"
-            examples: ["tribe", "organization"]
-
+            description: Nível hierárquico alvo
+            examples:
+              - tribe
+              - organization
           promotion_criteria:
             type: array
-            description: "Critérios de promoção aplicáveis"
+            description: Critérios de promoção aplicáveis
             items:
               type: string
-            examples: [["evidence_density", "stakeholder_approval", "impact_assessment"]]
-
+            examples:
+              - - evidence_density
+                - stakeholder_approval
+                - impact_assessment
           competing_authorities:
             type: boolean
-            description: "Autoridades concorrentes identificadas"
+            description: Autoridades concorrentes identificadas
             default: false
         additionalProperties: false
     additionalProperties: false
-
-  # === CONFIGURAÇÃO DE POLÍTICA ===
   policy_ref:
     type: string
-    description: "Referência opcional a política de arbitragem MOC específica"
-    pattern: "^moc:arbitration:[a-z0-9_-]+$"
-    examples: ["moc:arbitration:security_priority", "moc:arbitration:default"]
-
+    description: Referência opcional a política de arbitragem MOC específica
+    pattern: ^moc:arbitration:[a-z0-9_-]+$
+    examples:
+      - moc:arbitration:security_priority
+      - moc:arbitration:default
   policy_context:
     type: object
-    description: "Contexto adicional de política"
+    description: Contexto adicional de política
     properties:
       escalation_source:
         type: string
-        description: "Fonte da escalação"
-        enum: ["zof_workflow", "manual_request", "automated_detection", "system_alert"]
-        examples: ["zof_workflow", "automated_detection"]
-
+        description: Fonte da escalação
+        enum:
+          - zof_workflow
+          - manual_request
+          - automated_detection
+          - system_alert
+        examples:
+          - zof_workflow
+          - automated_detection
       urgency_level:
         type: string
-        description: "Nível de urgência da arbitragem"
-        enum: ["low", "normal", "high", "urgent"]
-        default: "normal"
-
+        description: Nível de urgência da arbitragem
+        enum:
+          - low
+          - normal
+          - high
+          - urgent
+        default: normal
       business_impact:
         type: string
-        description: "Impacto nos negócios"
-        enum: ["minimal", "moderate", "significant", "critical"]
-        examples: ["moderate", "significant"]
-
+        description: Impacto nos negócios
+        enum:
+          - minimal
+          - moderate
+          - significant
+          - critical
+        examples:
+          - moderate
+          - significant
       deadline:
         type: string
         format: date-time
-        description: "Prazo para resolução (opcional)"
-
+        description: Prazo para resolução (opcional)
       stakeholders:
         type: array
-        description: "Stakeholders interessados na decisão"
+        description: Stakeholders interessados na decisão
         items:
           type: string
-        examples: [["security-team", "compliance-officer", "product-owner"]]
+        examples:
+          - - security-team
+            - compliance-officer
+            - product-owner
     additionalProperties: false
-
-  # === CONTEXTO TÉCNICO ===
   technical_context:
     type: object
-    description: "Contexto técnico do conflito"
+    description: Contexto técnico do conflito
     properties:
       system_state:
         type: object
-        description: "Estado atual do sistema"
+        description: Estado atual do sistema
         properties:
           active_workflows:
             type: integer
-            description: "Número de workflows ativos"
+            description: Número de workflows ativos
             minimum: 0
-
           system_load:
             type: string
-            enum: ["low", "medium", "high", "overloaded"]
-
+            enum:
+              - low
+              - medium
+              - high
+              - overloaded
           maintenance_window:
             type: boolean
-            description: "Sistema em janela de manutenção"
+            description: Sistema em janela de manutenção
             default: false
         additionalProperties: true
-
       environment:
         type: string
-        description: "Ambiente onde ocorre o conflito"
-        enum: ["development", "staging", "production", "test"]
-        examples: ["production", "staging"]
-
+        description: Ambiente onde ocorre o conflito
+        enum:
+          - development
+          - staging
+          - production
+          - test
+        examples:
+          - production
+          - staging
       related_systems:
         type: array
-        description: "Sistemas relacionados ao conflito"
+        description: Sistemas relacionados ao conflito
         items:
           type: string
-        examples: [["user-management", "audit-log", "compliance-dashboard"]]
-
+        examples:
+          - - user-management
+            - audit-log
+            - compliance-dashboard
       dependencies:
         type: array
-        description: "Dependências que podem ser afetadas"
+        description: Dependências que podem ser afetadas
         items:
           type: string
-        examples: [["authentication-service", "data-retention-policy"]]
+        examples:
+          - - authentication-service
+            - data-retention-policy
     additionalProperties: false
-
-  # === METADADOS DE RASTREAMENTO ===
   tracking_metadata:
     type: object
-    description: "Metadados para rastreamento e auditoria"
+    description: Metadados para rastreamento e auditoria
     properties:
       correlation_id:
         type: string
-        description: "ID de correlação para rastreamento"
-        examples: ["corr-2025-08-26-001"]
-
+        description: ID de correlação para rastreamento
+        examples:
+          - corr-2025-08-26-001
       parent_event_id:
         type: string
-        description: "Evento pai que originou este conflito"
-        pattern: "^[a-z]+-[0-9-]+$"
-        examples: ["zof-eval-20250826-001"]
-
+        description: Evento pai que originou este conflito
+        pattern: ^[a-z]+-[0-9-]+$
+        examples:
+          - zof-eval-20250826-001
       trace_id:
         type: string
-        description: "ID de trace distribuído"
-        examples: ["trace-abc123def456"]
-
+        description: ID de trace distribuído
+        examples:
+          - trace-abc123def456
       request_source:
         type: string
-        description: "Origem da solicitação de arbitragem"
-        examples: ["zof-workflow-agent", "manual-escalation", "automated-detector"]
-
+        description: Origem da solicitação de arbitragem
+        examples:
+          - zof-workflow-agent
+          - manual-escalation
+          - automated-detector
       processing_hints:
         type: object
-        description: "Dicas para processamento"
+        description: Dicas para processamento
         properties:
           priority_boost:
             type: boolean
-            description: "Prioridade elevada"
+            description: Prioridade elevada
             default: false
-
           fast_track:
             type: boolean
-            description: "Processamento acelerado"
+            description: Processamento acelerado
             default: false
-
           require_human_review:
             type: boolean
-            description: "Requer revisão humana"
+            description: Requer revisão humana
             default: false
         additionalProperties: false
     additionalProperties: false
-
 additionalProperties: false
-
-# === REGRAS DE VALIDAÇÃO ===
 allOf:
-  # Validar que tipo H1 tem detalhes H1
   - if:
       properties:
         event_type:
-          const: "H1"
+          const: H1
     then:
       properties:
         conflict_details:
-          required: ["h1_details"]
-
-  # Validar que tipo H2 tem detalhes H2
+          required:
+            - h1_details
   - if:
       properties:
         event_type:
-          const: "H2"
+          const: H2
     then:
       properties:
         conflict_details:
-          required: ["h2_details"]
-
-  # Validar que tipo H3 tem detalhes H3
+          required:
+            - h2_details
   - if:
       properties:
         event_type:
-          const: "H3"
+          const: H3
     then:
       properties:
         conflict_details:
-          required: ["h3_details"]
-
-  # Validar que operação enrich tem pelo menos 2 candidatos
+          required:
+            - h3_details
   - if:
       properties:
         operation:
-          const: "enrich"
+          const: enrich
     then:
       properties:
         candidates:
           minItems: 2
-
-  # Validar que H3 tem pelo menos 2 candidatos para promoção
   - if:
       properties:
         event_type:
-          const: "H3"
+          const: H3
     then:
       properties:
         conflict_details:

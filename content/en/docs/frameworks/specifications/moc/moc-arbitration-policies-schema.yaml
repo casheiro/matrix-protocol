@@ -1,13 +1,12 @@
 # MOC Arbitration Policies Schema v1.0.0
-# Matrix Ontology Catalog - Políticas de Arbitragem para integração MAL
-# Especificação canônica normativa para configuração de políticas de arbitragem
+# Matrix Ontology Catalog - Arbitration Policies for MAL integration
+# Normative canonical specification for arbitration policies configuration
 
-$schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://matrix-protocol.org/schemas/moc/arbitration-policies/1.0.0"
-version: "1.0.0"
-title: "MOC Arbitration Policies Schema"
-description: "Schema canônico para políticas de arbitragem MAL no MOC"
-
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: http://localhost:3000/schemas/moc/arbitration-policies/1.0.0
+version: 1.0.0
+title: MOC Arbitration Policies Schema
+description: Canonical schema for MAL arbitration policies in MOC
 type: object
 required:
   - schema
@@ -15,317 +14,360 @@ required:
   - version
   - arbitration_policies
   - metadata
-
 properties:
-  # === METADADOS OBRIGATÓRIOS ===
   schema:
     type: string
-    description: "Versão do schema MOC Arbitration Policies utilizado"
-    pattern: "^[0-9]+\\.[0-9]+$"
-    examples: ["1.0", "1.1"]
-
+    description: Schema version MOC Arbitration Policies used
+    pattern: ^[0-9]+\.[0-9]+$
+    examples:
+      - "1.0"
+      - "1.1"
   organization_id:
     type: string
-    description: "Identificador único da organização"
-    pattern: "^[a-z0-9-]+$"
-    examples: ["techcorp", "startup-alpha"]
-
+    description: Unique identifier of the organization
+    pattern: ^[a-z0-9-]+$
+    examples:
+      - techcorp
+      - startup-alpha
   version:
     type: string
-    description: "Versão da configuração de políticas de arbitragem"
-    pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
-    examples: ["1.0", "2.1"]
-
-  # === POLÍTICAS DE ARBITRAGEM ===
+    description: Version of the arbitration policies configuration
+    pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)$
+    examples:
+      - "1.0"
+      - "2.1"
   arbitration_policies:
     type: object
-    description: "Configurações de políticas para arbitragem MAL"
-    required: ["default_precedence_order", "arbitration_timeout", "conflict_type_policies"]
+    description: Policy configurations for MAL arbitration
+    required:
+      - default_precedence_order
+      - arbitration_timeout
+      - conflict_type_policies
     properties:
-      
-      # --- ORDEM DE PRECEDÊNCIA PADRÃO ---
       default_precedence_order:
         type: array
-        description: "Ordem padrão de regras de precedência P1-P6"
+        description: Default order of precedence rules P1-P6
         minItems: 6
         maxItems: 10
         items:
           type: string
-          pattern: "^P[0-9]+_[a-z_]+$"
-        examples: 
-          - ["P1_authority_weight", "P2_scope_specificity", "P3_maturity_level", "P4_temporal_recency", "P5_evidence_density", "P6_deterministic_fallback"]
-
-      # --- CONFIGURAÇÃO DE TIMEOUT ---
+          pattern: ^P[0-9]+_[a-z_]+$
+        examples:
+          - - P1_authority_weight
+            - P2_scope_specificity
+            - P3_maturity_level
+            - P4_temporal_recency
+            - P5_evidence_density
+            - P6_deterministic_fallback
       arbitration_timeout:
         type: integer
-        description: "Timeout para decisão MAL em milissegundos"
+        description: Timeout for MAL decision in milliseconds
         minimum: 1000
         maximum: 600000
         default: 2000
-        examples: [2000, 5000, 10000]
-
-      # --- REGRAS DE ESPECIFICIDADE DE ESCOPO (P2) ---
+        examples:
+          - 2000
+          - 5000
+          - 10000
       scope_specificity_rules:
         type: object
-        description: "Configuração da regra P2 de especificidade de escopo"
-        required: ["local_instructions", "mandatory_rules"]
+        description: Configuration of P2 scope specificity rule
+        required:
+          - local_instructions
+          - mandatory_rules
         properties:
           local_instructions:
             type: object
-            description: "Precedência para orientações locais"
-            required: ["precedence_order"]
+            description: Precedence for local guidelines
+            required:
+              - precedence_order
             properties:
               precedence_order:
                 type: array
-                description: "Ordem de precedência por especificidade (mais específico primeiro)"
+                description: Precedence order by specificity (most specific first)
                 items:
                   type: string
-                  pattern: "^[a-z0-9-]+$"
-                examples: [["squad", "tribe", "organization"]]
-              
+                  pattern: ^[a-z0-9-]+$
+                examples:
+                  - - squad
+                    - tribe
+                    - organization
               applies_to_types:
                 type: array
-                description: "Tipos de conhecimento que seguem esta regra"
+                description: Knowledge types that follow this rule
                 items:
                   type: string
-                examples: [["guideline", "pattern", "best_practice"]]
+                examples:
+                  - - guideline
+                    - pattern
+                    - best_practice
             additionalProperties: false
-
           mandatory_rules:
             type: object
-            description: "Precedência para regras obrigatórias"
-            required: ["precedence_order"]
+            description: Precedence for mandatory rules
+            required:
+              - precedence_order
             properties:
               precedence_order:
                 type: array
-                description: "Ordem de precedência por autoridade (mais alto primeiro)"
+                description: Precedence order by authority (highest first)
                 items:
                   type: string
-                  pattern: "^[a-z0-9-]+$"
-                examples: [["organization", "tribe", "squad"]]
-              
+                  pattern: ^[a-z0-9-]+$
+                examples:
+                  - - organization
+                    - tribe
+                    - squad
               applies_to_types:
                 type: array
-                description: "Tipos de conhecimento que seguem esta regra"
+                description: Knowledge types that follow this rule
                 items:
                   type: string
-                examples: [["policy", "compliance", "security_rule"]]
+                examples:
+                  - - policy
+                    - compliance
+                    - security_rule
             additionalProperties: false
         additionalProperties: false
-
-      # --- POLÍTICAS POR TIPO DE CONFLITO ---
       conflict_type_policies:
         type: object
-        description: "Políticas específicas por tipo de conflito H1/H2/H3"
-        required: ["H1_horizontal_conflicts", "H2_concurrent_enrichment", "H3_promotion_contention"]
+        description: Specific policies by conflict type H1/H2/H3
+        required:
+          - H1_horizontal_conflicts
+          - H2_concurrent_enrichment
+          - H3_promotion_contention
         properties:
-          
-          # --- CONFLITOS HORIZONTAIS (H1) ---
           H1_horizontal_conflicts:
             type: object
-            description: "Políticas para conflitos horizontais entre UKIs equivalentes"
-            required: ["enable_coexistence", "require_deprecation"]
+            description: Policies for horizontal conflicts between equivalent UKIs
+            required:
+              - enable_coexistence
+              - require_deprecation
             properties:
               enable_coexistence:
                 type: boolean
-                description: "Permitir particionamento de escopo para coexistência"
+                description: Allow scope partitioning for coexistence
                 default: true
-                examples: [true, false]
-
+                examples:
+                  - true
+                  - false
               require_deprecation:
                 type: boolean
-                description: "Forçar winner-take-all com depreciação do perdedor"
+                description: Force winner-take-all with deprecation of loser
                 default: false
-                examples: [false, true]
-
+                examples:
+                  - false
+                  - true
               coexistence_strategy:
                 type: string
-                description: "Estratégia de coexistência quando habilitada"
-                enum: ["scope_partition", "domain_partition", "temporal_partition"]
-                default: "scope_partition"
-                examples: ["scope_partition"]
-
+                description: Coexistence strategy when enabled
+                enum:
+                  - scope_partition
+                  - domain_partition
+                  - temporal_partition
+                default: scope_partition
+                examples:
+                  - scope_partition
               precedence_order:
                 type: array
-                description: "Ordem de precedência específica para H1"
+                description: Specific precedence order for H1
                 items:
                   type: string
-                  pattern: "^P[0-9]+_[a-z_]+$"
-                examples: 
-                  - ["P1_authority_weight", "P3_maturity_level", "P2_scope_specificity"]
-
+                  pattern: ^P[0-9]+_[a-z_]+$
+                examples:
+                  - - P1_authority_weight
+                    - P3_maturity_level
+                    - P2_scope_specificity
               evidence_weight_multiplier:
                 type: number
-                description: "Multiplicador de peso para evidência em conflitos H1"
+                description: Weight multiplier for evidence in H1 conflicts
                 minimum: 0.1
-                maximum: 5.0
-                default: 1.0
-                examples: [1.0, 1.5, 2.0]
+                maximum: 5
+                default: 1
+                examples:
+                  - 1
+                  - 1.5
+                  - 2
             additionalProperties: false
-
-          # --- ENRIQUECIMENTO CONCORRENTE (H2) ---
           H2_concurrent_enrichment:
             type: object
-            description: "Políticas para tentativas de enriquecimento concorrente"
-            required: ["temporal_window_ms", "precedence_order"]
+            description: Policies for concurrent enrichment attempts
+            required:
+              - temporal_window_ms
+              - precedence_order
             properties:
               temporal_window_ms:
                 type: integer
-                description: "Janela temporal para considerar enriquecimento concorrente"
+                description: Temporal window to consider concurrent enrichment
                 minimum: 1000
                 maximum: 300000
                 default: 30000
-                examples: [30000, 60000]
-
+                examples:
+                  - 30000
+                  - 60000
               precedence_order:
                 type: array
-                description: "Ordem de precedência específica para H2"
+                description: Specific precedence order for H2
                 items:
                   type: string
-                  pattern: "^P[0-9]+_[a-z_]+$"
-                examples: 
-                  - ["P4_temporal_recency", "P1_authority_weight", "P3_maturity_level"]
-
+                  pattern: ^P[0-9]+_[a-z_]+$
+                examples:
+                  - - P4_temporal_recency
+                    - P1_authority_weight
+                    - P3_maturity_level
               first_wins_policy:
                 type: boolean
-                description: "Primeira solicitação sempre vence em caso de empate"
+                description: First request always wins in case of tie
                 default: false
-                examples: [false, true]
-
+                examples:
+                  - false
+                  - true
               authority_escalation:
                 type: boolean
-                description: "Escalar para autoridade superior em caso de empate"
+                description: Escalate to higher authority in case of tie
                 default: true
-                examples: [true, false]
+                examples:
+                  - true
+                  - false
             additionalProperties: false
-
-          # --- CONTENÇÃO DE PROMOÇÃO (H3) ---
           H3_promotion_contention:
             type: object
-            description: "Políticas para propostas concorrentes de promoção"
-            required: ["evidence_density_multiplier", "precedence_order"]
+            description: Policies for concurrent promotion proposals
+            required:
+              - evidence_density_multiplier
+              - precedence_order
             properties:
               evidence_density_multiplier:
                 type: number
-                description: "Peso extra para densidade de evidência em promoções"
-                minimum: 1.0
-                maximum: 10.0
+                description: Extra weight for evidence density in promotions
+                minimum: 1
+                maximum: 10
                 default: 1.5
-                examples: [1.5, 2.0, 3.0]
-
+                examples:
+                  - 1.5
+                  - 2
+                  - 3
               precedence_order:
                 type: array
-                description: "Ordem de precedência específica para H3"
+                description: Specific precedence order for H3
                 items:
                   type: string
-                  pattern: "^P[0-9]+_[a-z_]+$"
-                examples: 
-                  - ["P5_evidence_density", "P1_authority_weight", "P3_maturity_level"]
-
+                  pattern: ^P[0-9]+_[a-z_]+$
+                examples:
+                  - - P5_evidence_density
+                    - P1_authority_weight
+                    - P3_maturity_level
               require_promotion_rationale:
                 type: boolean
-                description: "Requer justificativa obrigatória para promoção"
+                description: Requires mandatory rationale for promotion
                 default: true
-                examples: [true, false]
-
+                examples:
+                  - true
+                  - false
               minimum_evidence_threshold:
                 type: integer
-                description: "Número mínimo de evidências para promoção"
+                description: Minimum number of evidence for promotion
                 minimum: 0
                 maximum: 10
                 default: 2
-                examples: [2, 3, 5]
+                examples:
+                  - 2
+                  - 3
+                  - 5
             additionalProperties: false
         additionalProperties: false
-
-      # --- POLÍTICAS NOMEADAS ESPECÍFICAS ---
       named_policies:
         type: object
-        description: "Políticas de arbitragem nomeadas para contextos específicos"
+        description: Named arbitration policies for specific contexts
         patternProperties:
-          "^[a-z0-9_-]+$":
+          ^[a-z0-9_-]+$:
             type: object
-            required: ["display_name", "description", "applicable_contexts"]
+            required:
+              - display_name
+              - description
+              - applicable_contexts
             properties:
               display_name:
                 type: string
-                description: "Nome exibível da política"
-                examples: ["Política de Segurança", "Política Experimental"]
-
+                description: Display name of the policy
+                examples:
+                  - Security Policy
+                  - Experimental Policy
               description:
                 type: string
-                description: "Descrição da política e quando usar"
+                description: Description of the policy and when to use
                 minLength: 50
-                examples: 
-                  - "Política específica para conhecimento de segurança crítica"
-
+                examples:
+                  - Specific policy for critical security knowledge
               precedence_order:
                 type: array
-                description: "Ordem de precedência customizada"
+                description: Customized precedence order
                 items:
                   type: string
-                  pattern: "^P[0-9]+_[a-z_]+$"
-                examples: 
-                  - ["P1_authority_weight", "P3_maturity_level", "P2_scope_specificity"]
-
+                  pattern: ^P[0-9]+_[a-z_]+$
+                examples:
+                  - - P1_authority_weight
+                    - P3_maturity_level
+                    - P2_scope_specificity
               custom_rules:
                 type: array
-                description: "Regras de precedência customizadas adicionais"
+                description: Additional customized precedence rules
                 items:
                   type: object
-                  required: ["rule_id", "description", "weight"]
+                  required:
+                    - rule_id
+                    - description
+                    - weight
                   properties:
                     rule_id:
                       type: string
-                      pattern: "^P[0-9]+_[a-z_]+$"
-                      examples: ["P7_lifecycle_stage", "P8_compliance_level"]
+                      pattern: ^P[0-9]+_[a-z_]+$
+                      examples:
+                        - P7_lifecycle_stage
+                        - P8_compliance_level
                     description:
                       type: string
-                      examples: ["Ciclo de vida tem precedência", "Nível de conformidade"]
+                      examples:
+                        - Lifecycle has precedence
+                        - Compliance level
                     weight:
                       type: number
-                      minimum: 0.0
-                      maximum: 1.0
+                      minimum: 0
+                      maximum: 1
                   additionalProperties: false
-
               applicable_contexts:
                 type: object
-                description: "Contextos onde esta política se aplica"
+                description: Contexts where this policy applies
                 properties:
                   scopes:
                     type: array
                     items:
                       type: string
-                      pattern: "^[a-z0-9-]+$"
-                  
+                      pattern: ^[a-z0-9-]+$
                   domains:
                     type: array
                     items:
                       type: string
-                      pattern: "^[a-z0-9-]+$"
-                  
+                      pattern: ^[a-z0-9-]+$
                   knowledge_types:
                     type: array
                     items:
                       type: string
-                      pattern: "^[a-z0-9_]+$"
-                  
+                      pattern: ^[a-z0-9_]+$
                   maturity_levels:
                     type: array
                     items:
                       type: string
-                      pattern: "^[a-z0-9_]+$"
+                      pattern: ^[a-z0-9_]+$
                 additionalProperties: false
-
               overrides:
                 type: object
-                description: "Configurações que sobrescrevem padrões"
+                description: Settings that override defaults
                 properties:
                   arbitration_timeout:
                     type: integer
                     minimum: 1000
                     maximum: 600000
-                  
                   conflict_type_configs:
                     type: object
                     properties:
@@ -342,130 +384,120 @@ properties:
                 additionalProperties: false
             additionalProperties: false
         additionalProperties: false
-
     additionalProperties: false
-
-  # === CONFIGURAÇÃO DE NAMESPACE ===
   policy_reference_structure:
     type: object
-    description: "Estrutura de namespace para referência de políticas"
-    required: ["namespace_format"]
+    description: Namespace structure for policy reference
+    required:
+      - namespace_format
     properties:
       namespace_format:
         type: string
-        description: "Formato de namespace para políticas"
-        default: "moc:arbitration:{policy_name}"
-        examples: ["moc:arbitration:{policy_name}"]
-
+        description: Namespace format for policies
+        default: moc:arbitration:{policy_name}
+        examples:
+          - moc:arbitration:{policy_name}
       reserved_names:
         type: array
-        description: "Nomes de política reservados"
+        description: Reserved policy names
         items:
           type: string
-        examples: [["default", "critical", "experimental"]]
-
+        examples:
+          - - default
+            - critical
+            - experimental
       policy_inheritance:
         type: object
-        description: "Configuração de herança de políticas"
+        description: Policy inheritance configuration
         properties:
           default_fallback:
             type: string
-            description: "Política de fallback padrão"
-            default: "default_precedence_order"
-
+            description: Default fallback policy
+            default: default_precedence_order
           policy_override:
             type: string
-            description: "Política nomeada substitui completamente o padrão"
-            const: "política nomeada substitui completamente o padrão"
-
+            description: Named policy completely replaces the default
+            const: named policy completely replaces the default
           policy_extension:
             type: string
-            description: "Política nomeada modifica regras específicas"
-            const: "política nomeada modifica regras específicas de precedência"
+            description: Named policy modifies specific rules
+            const: named policy modifies specific precedence rules
         additionalProperties: false
     additionalProperties: false
-
-  # === METADADOS ===
   metadata:
     type: object
-    description: "Metadados da configuração de políticas"
-    required: ["created_date", "last_modified", "maintainer"]
+    description: Metadata of policy configuration
+    required:
+      - created_date
+      - last_modified
+      - maintainer
     properties:
       created_date:
         type: string
         format: date
-        description: "Data de criação da configuração"
-
+        description: Creation date of configuration
       last_modified:
         type: string
         format: date
-        description: "Data da última modificação"
-
+        description: Last modification date
       maintainer:
         type: string
-        description: "Responsável pela manutenção das políticas"
-        examples: ["governance-team", "security-team"]
-
+        description: Responsible for policy maintenance
+        examples:
+          - governance-team
+          - security-team
       change_summary:
         type: string
-        description: "Resumo das mudanças na versão atual"
-
+        description: Summary of changes in current version
       validation_status:
         type: string
-        description: "Status de validação da configuração"
-        enum: ["valid", "pending", "invalid"]
-
+        description: Configuration validation status
+        enum:
+          - valid
+          - pending
+          - invalid
       approval_authority:
         type: string
-        description: "Autoridade que aprovou as políticas"
-        examples: ["cto", "governance-board"]
-
+        description: Authority that approved the policies
+        examples:
+          - cto
+          - governance-board
       approval_date:
         type: string
         format: date
-        description: "Data de aprovação das políticas"
-
+        description: Approval date of policies
       testing_results:
         type: object
-        description: "Resultados de testes das políticas"
+        description: Policy testing results
         properties:
           last_test_date:
             type: string
             format: date
-          
           test_scenarios:
             type: integer
-            description: "Número de cenários testados"
+            description: Number of scenarios tested
             minimum: 0
-          
           success_rate:
             type: number
-            description: "Taxa de sucesso dos testes"
+            description: Test success rate
             minimum: 0
             maximum: 1
         additionalProperties: false
     additionalProperties: false
-
 additionalProperties: false
-
-# === REGRAS DE VALIDAÇÃO ===
 allOf:
-  # Validar que todas as regras P1-P6 estão em default_precedence_order
   - properties:
       arbitration_policies:
         properties:
           default_precedence_order:
             contains:
-              const: "P1_authority_weight"
-            
+              const: P1_authority_weight
   - properties:
       arbitration_policies:
         properties:
           default_precedence_order:
             contains:
-              const: "P6_deterministic_fallback"
-
-  # Validar que P6_deterministic_fallback é sempre o último
+              const: P6_deterministic_fallback
   - properties:
       arbitration_policies:
         properties:
@@ -473,8 +505,8 @@ allOf:
             additionalItems: false
             items:
               - true
-              - true  
               - true
               - true
               - true
-              - const: "P6_deterministic_fallback"
+              - true
+              - const: P6_deterministic_fallback

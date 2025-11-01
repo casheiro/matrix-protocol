@@ -1,13 +1,12 @@
 # MAL Decision Record Schema v1.0.0
-# Matrix Arbiter Layer - Registros de Decisão
-# Especificação canônica normativa para registros de decisão de arbitragem
+# Matrix Arbiter Layer - Decision Records
+# Normative canonical specification for arbitration decision records
 
-$schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://matrix-protocol.org/schemas/mal/decision-record/1.0.0"
-version: "1.0.0"
-title: "MAL Decision Record Schema"
-description: "Schema canônico para registros de decisão MAL no Matrix Protocol"
-
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: http://localhost:3000/schemas/mal/decision-record/1.0.0
+version: 1.0.0
+title: MAL Decision Record Schema
+description: Canonical schema for MAL decision records in Matrix Protocol
 type: object
 required:
   - schema
@@ -17,600 +16,613 @@ required:
   - precedence_applied
   - epistemic_rationale
   - audit
-
 properties:
-  # === METADADOS OBRIGATÓRIOS ===
   schema:
     type: string
-    description: "Versão do schema MAL Decision Record utilizado"
-    pattern: "^[0-9]+\\.[0-9]+$"
-    examples: ["1.0", "1.1"]
-
+    description: Schema version MAL Decision Record used
+    pattern: ^[0-9]+\.[0-9]+$
+    examples:
+      - "1.0"
+      - "1.1"
   decision_id:
     type: string
-    description: "Identificador único da decisão MAL"
-    pattern: "^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$"
-    examples: 
-      - "mal-dec-20250826-h1-001"
-      - "mal-dec-20250827-h2-042"
-
+    description: Unique identifier of MAL decision
+    pattern: ^mal-dec-[0-9]{8}-[a-z0-9]+-[0-9]+$
+    examples:
+      - mal-dec-20250826-h1-001
+      - mal-dec-20250827-h2-042
   event_ref:
     type: string
-    description: "Referência ao evento de arbitragem originário"
-    pattern: "^mal-evt-[0-9]{8}-[0-9]+$"
-    examples: 
-      - "mal-evt-20250826-001"
-      - "mal-evt-20250827-042"
-
-  # === RESULTADO DA DECISÃO ===
+    description: Reference to originating arbitration event
+    pattern: ^mal-evt-[0-9]{8}-[0-9]+$
+    examples:
+      - mal-evt-20250826-001
+      - mal-evt-20250827-042
   outcome:
     type: string
-    description: "Resultado da decisão de arbitragem"
-    enum: ["winner", "coexist", "reject_all", "defer"]
-    examples: ["winner", "coexist"]
-
+    description: Result of arbitration decision
+    enum:
+      - winner
+      - coexist
+      - reject_all
+      - defer
+    examples:
+      - winner
+      - coexist
   winner:
     type: string
-    description: "UKI escolhida como autoritativa (obrigatório se outcome=winner)"
-    pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: ["uki:squad-x:rule:retencao-dados-30d"]
-
+    description: UKI chosen as authoritative (required if outcome=winner)
+    pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - uki:squad-x:rule:retencao-dados-30d
   losers:
     type: array
-    description: "UKIs derrotadas na arbitragem"
+    description: UKIs defeated in arbitration
     items:
       type: string
-      pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-    examples: [["uki:squad-x:rule:retencao-dados-7d"]]
-
-  # === DETALHES POR OUTCOME ===
+      pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+    examples:
+      - - uki:squad-x:rule:retencao-dados-7d
   coexistence_arrangement:
     type: object
-    description: "Arranjo de coexistência (obrigatório se outcome=coexist)"
+    description: Coexistence arrangement (required if outcome=coexist)
     properties:
       partition_strategy:
         type: string
-        description: "Estratégia de particionamento aplicada"
-        enum: ["scope_partition", "domain_partition", "temporal_partition", "conditional_partition"]
-        examples: ["scope_partition"]
-
+        description: Applied partitioning strategy
+        enum:
+          - scope_partition
+          - domain_partition
+          - temporal_partition
+          - conditional_partition
+        examples:
+          - scope_partition
       partition_rules:
         type: array
-        description: "Regras específicas de particionamento"
+        description: Specific partitioning rules
         items:
           type: object
-          required: ["uki_ref", "assigned_context", "conditions"]
+          required:
+            - uki_ref
+            - assigned_context
+            - conditions
           properties:
             uki_ref:
               type: string
-              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-              description: "UKI sendo particionada"
-
+              pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+              description: UKI being partitioned
             assigned_context:
               type: object
-              description: "Contexto atribuído à UKI"
+              description: Context assigned to UKI
               properties:
                 scope_restriction:
                   type: string
-                  description: "Restrição de escopo"
-                
+                  description: Scope restriction
                 domain_restriction:
                   type: string
-                  description: "Restrição de domínio"
-                
+                  description: Domain restriction
                 temporal_restriction:
                   type: string
-                  description: "Restrição temporal"
-                  
+                  description: Temporal restriction
                 conditional_rules:
                   type: array
-                  description: "Regras condicionais"
+                  description: Conditional rules
                   items:
                     type: string
               additionalProperties: false
-
             conditions:
               type: array
-              description: "Condições para aplicação"
+              description: Conditions for application
               items:
                 type: string
-              examples: [["user.scope == 'squad-x'", "operation == 'read'"]]
-
+              examples:
+                - - user.scope == 'squad-x'
+                  - operation == 'read'
             precedence_order:
               type: integer
-              description: "Ordem de precedência (1 = mais alta)"
+              description: Precedence order (1 = highest)
               minimum: 1
           additionalProperties: false
-
       conflict_resolution_rules:
         type: array
-        description: "Regras para resolução de conflitos futuros"
+        description: Rules for future conflict resolution
         items:
           type: string
-        examples: 
-          - "Em caso de sobreposição, squad-x tem precedência sobre squad-y"
+        examples:
+          - In case of overlap, squad-x has precedence over squad-y
     additionalProperties: false
-
   rejection_rationale:
     type: object
-    description: "Justificativa de rejeição (obrigatório se outcome=reject_all)"
+    description: Rejection rationale (required if outcome=reject_all)
     properties:
       primary_reason:
         type: string
-        description: "Razão principal para rejeição"
-        enum: [
-          "insufficient_evidence",
-          "policy_violation",
-          "authority_conflict",
-          "semantic_inconsistency",
-          "quality_standards_not_met",
-          "organizational_conflict"
-        ]
-        examples: ["insufficient_evidence", "quality_standards_not_met"]
-
+        description: Primary reason for rejection
+        enum:
+          - insufficient_evidence
+          - policy_violation
+          - authority_conflict
+          - semantic_inconsistency
+          - quality_standards_not_met
+          - organizational_conflict
+        examples:
+          - insufficient_evidence
+          - quality_standards_not_met
       detailed_analysis:
         type: string
-        description: "Análise detalhada da rejeição"
+        description: Detailed analysis of rejection
         minLength: 100
-        examples: 
-          - "Nenhuma das UKIs candidatas atende aos critérios mínimos de evidência estabelecidos no MOC organizacional"
-
+        examples:
+          - None of the candidate UKIs meet the minimum evidence criteria established in the organizational MOC
       improvement_recommendations:
         type: array
-        description: "Recomendações para melhoria"
+        description: Improvement recommendations
         items:
           type: string
-        examples: 
-          - "Adicionar evidências de conformidade regulatória"
-          - "Obter aprovação de autoridade competente"
-
+        examples:
+          - Add regulatory compliance evidence
+          - Obtain approval from competent authority
       alternative_paths:
         type: array
-        description: "Caminhos alternativos sugeridos"
+        description: Suggested alternative paths
         items:
           type: string
-        examples: 
-          - "Criar nova UKI com evidências adequadas"
-          - "Escalação para autoridade superior"
+        examples:
+          - Create new UKI with adequate evidence
+          - Escalation to higher authority
     additionalProperties: false
-
   deferral_details:
     type: object
-    description: "Detalhes de adiamento (obrigatório se outcome=defer)"
+    description: Deferral details (required if outcome=defer)
     properties:
       deferral_reason:
         type: string
-        description: "Razão para adiamento"
-        enum: [
-          "insufficient_context",
-          "policy_ambiguity",
-          "human_judgment_required",
-          "external_dependency",
-          "conflicting_authorities",
-          "system_limitations"
-        ]
-        examples: ["human_judgment_required", "policy_ambiguity"]
-
+        description: Reason for deferral
+        enum:
+          - insufficient_context
+          - policy_ambiguity
+          - human_judgment_required
+          - external_dependency
+          - conflicting_authorities
+          - system_limitations
+        examples:
+          - human_judgment_required
+          - policy_ambiguity
       required_actions:
         type: array
-        description: "Ações necessárias antes da re-arbitragem"
+        description: Required actions before re-arbitration
         items:
           type: object
-          required: ["action_type", "description", "responsible_party"]
+          required:
+            - action_type
+            - description
+            - responsible_party
           properties:
             action_type:
               type: string
-              enum: ["human_review", "policy_clarification", "evidence_collection", "authority_escalation"]
-            
+              enum:
+                - human_review
+                - policy_clarification
+                - evidence_collection
+                - authority_escalation
             description:
               type: string
               minLength: 30
-            
             responsible_party:
               type: string
-              description: "Parte responsável pela ação"
-            
+              description: Party responsible for action
             deadline:
               type: string
               format: date-time
-              description: "Prazo para conclusão"
+              description: Deadline for completion
           additionalProperties: false
-
       re_arbitration_conditions:
         type: array
-        description: "Condições para nova arbitragem"
+        description: Conditions for new arbitration
         items:
           type: string
-        examples: 
-          - "Política de precedência clarificada pelo MOC"
-          - "Revisão humana completada"
-
+        examples:
+          - Precedence policy clarified by MOC
+          - Human review completed
       escalation_contacts:
         type: array
-        description: "Contatos para escalação"
+        description: Escalation contacts
         items:
           type: string
-        examples: ["governance-board", "technical-lead"]
+        examples:
+          - governance-board
+          - technical-lead
     additionalProperties: false
-
-  # === REGRAS DE PRECEDÊNCIA APLICADAS ===
   precedence_applied:
     type: array
-    description: "Regras de precedência aplicadas na decisão"
+    description: Precedence rules applied in decision
     minItems: 1
     items:
       type: object
-      required: ["rule_id", "description", "weight", "application_result"]
+      required:
+        - rule_id
+        - description
+        - weight
+        - application_result
       properties:
         rule_id:
           type: string
-          description: "Identificador da regra de precedência"
-          pattern: "^P[0-9]+_[a-z_]+$"
-          examples: ["P1_authority_weight", "P3_maturity_level"]
-
+          description: Precedence rule identifier
+          pattern: ^P[0-9]+_[a-z_]+$
+          examples:
+            - P1_authority_weight
+            - P3_maturity_level
         description:
           type: string
-          description: "Descrição da regra aplicada"
+          description: Description of applied rule
           minLength: 20
-          examples: 
-            - "Maior peso de autoridade hierárquica"
-            - "Conhecimento validado supera experimental"
-
+          examples:
+            - Higher hierarchical authority weight
+            - Validated knowledge supersedes experimental
         weight:
           type: number
-          description: "Peso aplicado à regra (0.0 a 1.0)"
+          description: Weight applied to rule (0.0 to 1.0)
           minimum: 0
           maximum: 1
-          examples: [0.8, 0.6, 0.4]
-
+          examples:
+            - 0.8
+            - 0.6
+            - 0.4
         application_result:
           type: object
-          description: "Resultado da aplicação da regra"
-          required: ["rule_outcome", "impact_on_decision"]
+          description: Result of rule application
+          required:
+            - rule_outcome
+            - impact_on_decision
           properties:
             rule_outcome:
               type: string
-              description: "Resultado específico da regra"
-              examples: 
-                - "tech_lead > developer"
-                - "validated > experimental"
-
+              description: Specific rule outcome
+              examples:
+                - tech_lead > developer
+                - validated > experimental
             impact_on_decision:
               type: string
-              description: "Como impactou a decisão final"
-              enum: ["decisive", "supportive", "neutral", "contradictory"]
-              examples: ["decisive", "supportive"]
-
+              description: How it impacted final decision
+              enum:
+                - decisive
+                - supportive
+                - neutral
+                - contradictory
+              examples:
+                - decisive
+                - supportive
             numerical_score:
               type: number
-              description: "Pontuação numérica (se aplicável)"
+              description: Numerical score (if applicable)
               minimum: 0
               maximum: 1
-
             compared_entities:
               type: array
-              description: "Entidades comparadas por esta regra"
+              description: Entities compared by this rule
               items:
                 type: object
-                required: ["entity_ref", "entity_value", "score"]
+                required:
+                  - entity_ref
+                  - entity_value
+                  - score
                 properties:
                   entity_ref:
                     type: string
-                    pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
+                    pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
                   entity_value:
                     type: string
-                    description: "Valor da entidade para esta regra"
+                    description: Entity value for this rule
                   score:
                     type: number
                     minimum: 0
                     maximum: 1
                 additionalProperties: false
           additionalProperties: false
-
         policy_source:
           type: string
-          description: "Fonte da política que define esta regra"
-          examples: ["moc:arbitration:default", "protocol_canonical"]
-
+          description: Source of policy defining this rule
+          examples:
+            - moc:arbitration:default
+            - protocol_canonical
         custom_parameters:
           type: object
-          description: "Parâmetros customizados da regra"
+          description: Custom rule parameters
           additionalProperties: true
       additionalProperties: false
-
-  # === JUSTIFICATIVA EPISTÊMICA ===
   epistemic_rationale:
     type: object
-    description: "Explicação epistêmica alinhada aos princípios MEP"
-    required: ["summary", "reasoning", "references"]
+    description: Epistemic explanation aligned with MEP principles
+    required:
+      - summary
+      - reasoning
+      - references
     properties:
       summary:
         type: string
-        description: "Justificativa breve da decisão"
+        description: Brief decision rationale
         minLength: 50
         maxLength: 500
-        examples: 
-          - "Maturidade validada e evidência regulatória mais forte determinaram a escolha da regra de 30 dias"
-
+        examples:
+          - Validated maturity and stronger regulatory evidence determined the choice of 30-day rule
       reasoning:
         type: string
-        description: "Explicação detalhada do raciocínio epistêmico"
+        description: Detailed explanation of epistemic reasoning
         minLength: 100
         examples:
-          - "Enquanto ambas as UKIs operam em escopo equivalente de squad, a regra de retenção de 30 dias demonstra maior maturidade epistemológica através de seu status 'validated' e evidência regulatória mais robusta ligada aos requisitos de conformidade LGPD"
-
-      # === REFERÊNCIAS ===
+          - While both UKIs operate in equivalent squad scope, the 30-day retention rule demonstrates greater
+            epistemological maturity through its 'validated' status and more robust regulatory evidence linked to LGPD
+            compliance requirements
       references:
         type: object
-        description: "Referências utilizadas na decisão"
-        required: ["moc_nodes", "mef_evidence"]
+        description: References used in decision
+        required:
+          - moc_nodes
+          - mef_evidence
         properties:
           moc_nodes:
             type: array
-            description: "Nós MOC referenciados"
+            description: Referenced MOC nodes
             items:
               type: string
-              pattern: "^[a-z0-9.-]+$"
-            examples: [["hierarchies.scope.squad-x", "hierarchies.domain.security"]]
-          
+              pattern: ^[a-z0-9.-]+$
+            examples:
+              - - hierarchies.scope.squad-x
+                - hierarchies.domain.security
           mef_evidence:
             type: array
-            description: "Evidências MEF referenciadas"
+            description: Referenced MEF evidence
             items:
               type: string
-              pattern: "^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$"
-            examples: [["uki:org:policy:lgpd-compliance"]]
-          
+              pattern: ^uki:[a-z0-9-]+:[a-z0-9_]+:[a-z0-9-]+$
+            examples:
+              - - uki:org:policy:lgpd-compliance
           external_references:
             type: array
-            description: "Referências externas (documentos, regulamentações)"
+            description: External references (documents, regulations)
             items:
               type: string
-            examples: [["doc:logs-auditoria-2024", "reg:lgpd-art-6"]]
-
+            examples:
+              - - doc:logs-auditoria-2024
+                - reg:lgpd-art-6
           policy_references:
             type: array
-            description: "Referências de política utilizadas"
+            description: Policy references used
             items:
               type: string
-              pattern: "^moc:arbitration:[a-z0-9_-]+$"
-            examples: [["moc:arbitration:security_priority"]]
+              pattern: ^moc:arbitration:[a-z0-9_-]+$
+            examples:
+              - - moc:arbitration:security_priority
         additionalProperties: false
-
-      # === ALINHAMENTO MEP ===
       mep_alignment:
         type: object
-        description: "Alinhamento com princípios MEP"
+        description: Alignment with MEP principles
         properties:
           epistemic_humility:
             type: string
-            description: "Como demonstra humildade epistêmica"
-            examples: 
-              - "Decisão baseada em critérios específicos organizacionais, reconhecendo limitações contextuais"
-
+            description: How it demonstrates epistemic humility
+            examples:
+              - Decision based on specific organizational criteria, recognizing contextual limitations
           derived_authority:
             type: string
-            description: "Como respeita autoridade derivada"
-            examples: 
-              - "Autoridade deriva do MOC organizacional e configuração de políticas"
-
+            description: How it respects derived authority
+            examples:
+              - Authority derives from organizational MOC and policy configuration
           contextual_knowledge:
             type: string
-            description: "Como reconhece conhecimento contextual"
-            examples: 
-              - "Decisão específica para contexto squad-x no domínio segurança"
-
+            description: How it recognizes contextual knowledge
+            examples:
+              - Decision specific to squad-x context in security domain
           responsible_promotion:
             type: string
-            description: "Como pratica promoção responsável"
-            examples: 
-              - "Baseada em evidência adequada e validação por autoridade competente"
-
+            description: How it practices responsible promotion
+            examples:
+              - Based on adequate evidence and validation by competent authority
           explanatory_coherence:
             type: string
-            description: "Como mantém coerência explicativa"
-            examples: 
-              - "Decisão consistente com precedentes e políticas organizacionais"
+            description: How it maintains explanatory coherence
+            examples:
+              - Decision consistent with precedents and organizational policies
         additionalProperties: false
-
       uncertainty_assessment:
         type: object
-        description: "Avaliação de incertezas"
+        description: Uncertainty assessment
         properties:
           confidence_level:
             type: number
-            description: "Nível de confiança na decisão (0.0 a 1.0)"
+            description: Confidence level in decision (0.0 to 1.0)
             minimum: 0
             maximum: 1
-            examples: [0.85, 0.92]
-
+            examples:
+              - 0.85
+              - 0.92
           risk_factors:
             type: array
-            description: "Fatores de risco identificados"
+            description: Identified risk factors
             items:
               type: string
-            examples: 
-              - "Evidência regulatória pode mudar"
-              - "Contexto organizacional em evolução"
-
+            examples:
+              - Regulatory evidence may change
+              - Organizational context evolving
           sensitivity_analysis:
             type: string
-            description: "Análise de sensibilidade da decisão"
-            examples: 
-              - "Decisão robusta a pequenas variações nos critérios"
-
+            description: Decision sensitivity analysis
+            examples:
+              - Decision robust to small variations in criteria
           alternative_scenarios:
             type: array
-            description: "Cenários alternativos considerados"
+            description: Alternative scenarios considered
             items:
               type: string
-            examples: 
-              - "Se evidência adicional emergir, reavaliação pode ser necessária"
+            examples:
+              - If additional evidence emerges, re-evaluation may be necessary
         additionalProperties: false
     additionalProperties: false
-
-  # === AÇÕES DERIVADAS ===
   actions:
     type: array
-    description: "Ações a serem executadas baseadas na decisão"
+    description: Actions to be executed based on decision
     items:
       type: string
       pattern: "^(allow_enrich|defer_enrich|gate_enrich|deprecate|partition_scope|promote|escalate):"
-      examples: 
-        - "allow_enrich:zof-auth-jwt-implementation-002"
-        - "deprecate:uki:squad-x:rule:retencao-dados-7d"
-        - "partition_scope:squad-x:read_only"
-
-  # === INFORMAÇÕES DE AUDITORIA ===
+      examples:
+        - allow_enrich:zof-auth-jwt-implementation-002
+        - deprecate:uki:squad-x:rule:retencao-dados-7d
+        - partition_scope:squad-x:read_only
   audit:
     type: object
-    description: "Informações de auditoria obrigatórias"
-    required: ["decided_at", "decided_by", "timeout_used_ms"]
+    description: Mandatory audit information
+    required:
+      - decided_at
+      - decided_by
+      - timeout_used_ms
     properties:
       decided_at:
         type: string
         format: date-time
-        description: "Timestamp preciso da decisão"
-        examples: ["2025-08-26T14:30:25.123Z"]
-
+        description: Precise decision timestamp
+        examples:
+          - 2025-08-26T14:30:25.123Z
       decided_by:
         type: string
-        description: "Identificador da versão MAL que tomou a decisão"
-        pattern: "^mal-v[0-9]+\\.[0-9]+\\.[0-9]+$"
-        examples: ["mal-v1.0.0", "mal-v1.2.3"]
-
+        description: Identifier of MAL version that made the decision
+        pattern: ^mal-v[0-9]+\.[0-9]+\.[0-9]+$
+        examples:
+          - mal-v1.0.0
+          - mal-v1.2.3
       timeout_used_ms:
         type: integer
-        description: "Tempo de processamento usado em milissegundos"
+        description: Processing time used in milliseconds
         minimum: 0
         maximum: 600000
-        examples: [1250, 5000]
-
+        examples:
+          - 1250
+          - 5000
       arbitration_timeout_ms:
         type: integer
-        description: "Timeout configurado para arbitragem"
+        description: Configured timeout for arbitration
         minimum: 1000
         maximum: 600000
-        examples: [2000, 10000]
-
+        examples:
+          - 2000
+          - 10000
       processing_details:
         type: object
-        description: "Detalhes de processamento"
+        description: Processing details
         properties:
           algorithm_version:
             type: string
-            description: "Versão do algoritmo de arbitragem"
-            examples: ["precedence-v1.0", "weighted-v2.1"]
-
+            description: Arbitration algorithm version
+            examples:
+              - precedence-v1.0
+              - weighted-v2.1
           policy_config_version:
             type: string
-            description: "Versão da configuração de política"
-            examples: ["moc-policy-v1.2"]
-
+            description: Policy configuration version
+            examples:
+              - moc-policy-v1.2
           computational_complexity:
             type: string
-            description: "Complexidade computacional da decisão"
-            enum: ["low", "medium", "high", "very_high"]
-
+            description: Computational complexity of decision
+            enum:
+              - low
+              - medium
+              - high
+              - very_high
           memory_usage_mb:
             type: number
-            description: "Uso de memória durante processamento"
+            description: Memory usage during processing
             minimum: 0
-
           database_queries:
             type: integer
-            description: "Número de consultas ao banco"
+            description: Number of database queries
             minimum: 0
         additionalProperties: true
-
       quality_indicators:
         type: object
-        description: "Indicadores de qualidade da decisão"
+        description: Decision quality indicators
         properties:
           consistency_check:
             type: boolean
-            description: "Verificação de consistência passou"
-
+            description: Consistency check passed
           precedent_alignment:
             type: number
-            description: "Alinhamento com precedentes (0.0 a 1.0)"
+            description: Alignment with precedents (0.0 to 1.0)
             minimum: 0
             maximum: 1
-
           stakeholder_impact_assessment:
             type: string
-            description: "Avaliação de impacto nos stakeholders"
-            enum: ["minimal", "moderate", "significant", "major"]
+            description: Stakeholder impact assessment
+            enum:
+              - minimal
+              - moderate
+              - significant
+              - major
         additionalProperties: false
     additionalProperties: false
-
-  # === METADADOS DE COMUNICAÇÃO ===
   communication_metadata:
     type: object
-    description: "Metadados para comunicação da decisão"
+    description: Metadata for decision communication
     properties:
       notification_required:
         type: boolean
-        description: "Notificação é necessária"
+        description: Notification is required
         default: true
-
       notification_targets:
         type: array
-        description: "Alvos de notificação"
+        description: Notification targets
         items:
           type: string
-        examples: ["original_requester", "affected_stakeholders", "governance_board"]
-
+        examples:
+          - original_requester
+          - affected_stakeholders
+          - governance_board
       explanation_template_ref:
         type: string
-        description: "Referência ao template de explicação"
-        pattern: "^oif-exp-template-[a-z0-9-]+$"
-        examples: ["oif-exp-template-standard", "oif-exp-template-technical"]
-
+        description: Reference to explanation template
+        pattern: ^oif-exp-template-[a-z0-9-]+$
+        examples:
+          - oif-exp-template-standard
+          - oif-exp-template-technical
       urgency_level:
         type: string
-        description: "Nível de urgência da comunicação"
-        enum: ["low", "normal", "high", "urgent"]
-        default: "normal"
+        description: Communication urgency level
+        enum:
+          - low
+          - normal
+          - high
+          - urgent
+        default: normal
     additionalProperties: false
-
 additionalProperties: false
-
-# === REGRAS DE VALIDAÇÃO ===
 allOf:
-  # Se outcome=winner, deve ter winner
   - if:
       properties:
         outcome:
-          const: "winner"
+          const: winner
     then:
-      required: ["winner"]
-
-  # Se outcome=coexist, deve ter coexistence_arrangement
+      required:
+        - winner
   - if:
       properties:
         outcome:
-          const: "coexist"
+          const: coexist
     then:
-      required: ["coexistence_arrangement"]
-
-  # Se outcome=reject_all, deve ter rejection_rationale
+      required:
+        - coexistence_arrangement
   - if:
       properties:
         outcome:
-          const: "reject_all"
+          const: reject_all
     then:
-      required: ["rejection_rationale"]
-
-  # Se outcome=defer, deve ter deferral_details
+      required:
+        - rejection_rationale
   - if:
       properties:
         outcome:
-          const: "defer"
+          const: defer
     then:
-      required: ["deferral_details"]
-
-  # Deve ter pelo menos uma regra de precedência
+      required:
+        - deferral_details
   - properties:
       precedence_applied:
         minItems: 1

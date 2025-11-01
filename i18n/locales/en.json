@@ -7,6 +7,7 @@
     "overviewBadge": "Overview", 
     "protocol": "Documentation",
     "manual": "Manual",
+    "schemas": "Schemas",
     "resources": "Resources",
     "community": "Community",
     "homeLink": "Go to homepage",
@@ -231,6 +232,67 @@
       "description": "Choose your path and start implementing Matrix Protocol in your organization today.",
       "quickstart": "Quick Start",
       "documentation": "Complete Documentation"
+    }
+  },
+  "schemas": {
+    "title": "Schema Index",
+    "description": "Complete catalog of Matrix Protocol YAML schemas organized by framework",
+    "seo": {
+      "title": "Schemas - Matrix Protocol",
+      "description": "YAML schema catalog for all Matrix Protocol frameworks"
+    },
+    "stats": {
+      "totalSchemas": "Schemas",
+      "frameworks": "Frameworks"
+    },
+    "search": {
+      "placeholder": "Search schemas by name, description or type..."
+    },
+    "filter": {
+      "framework": "Framework",
+      "allFrameworks": "All Frameworks",
+      "search": "Search",
+      "clear": "Clear"
+    },
+    "details": {
+      "type": "Type",
+      "filename": "File",
+      "canonicalUrl": "Canonical URL"
+    },
+    "actions": {
+      "view": "View",
+      "copyUrl": "Copy URL",
+      "openUrl": "Open URL",
+      "download": "Download"
+    },
+    "empty": {
+      "title": "No schemas found",
+      "description": "There are no schemas that match the applied filters.",
+      "clearFilters": "Clear Filters"
+    },
+    "descriptions": {
+      "mef": {
+        "uki": "Canonical schema for Units of Knowledge Interlinked",
+        "decision-record": "Schema for MEF decision records"
+      },
+      "moc": {
+        "hierarchy": "Schema for MOC organizational hierarchies",
+        "evaluation-criteria": "Schema for MOC evaluation criteria",
+        "arbitration-policies": "Schema for MOC arbitration policies"
+      },
+      "zof": {
+        "workflow": "Schema for ZOF workflows",
+        "state-transition": "Schema for ZOF state transitions",
+        "enrichment-evaluation": "Schema for ZOF enrichment evaluation"
+      },
+      "oif": {
+        "archetype": "Schema for OIF archetypes",
+        "arbitration-explanation": "Schema for OIF arbitration explanations"
+      },
+      "mal": {
+        "decision-record": "Schema for MAL decision records",
+        "arbitration-event": "Schema for MAL arbitration events"
+      }
     }
   },
   "frameworks": {
@@ -897,7 +959,10 @@
       "download": "Download",
       "copy": "Copy",
       "copyLink": "Copy link",
-      "search": "Search"
+      "search": "Search",
+      "openSchema": "Schema URL",
+      "openInNewTab": "Open in new tab",
+      "copySchemaId": "Copy Schema ID"
     },
     "sections": {
       "content": "Content",
@@ -910,6 +975,7 @@
     },
     "fields": {
       "schema": "Schema",
+      "schemaId": "Schema ID",
       "ontologyReference": "Ontology Reference",
       "id": "Identifier",
       "scopeRef": "Scope",
