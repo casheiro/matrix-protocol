@@ -130,6 +130,17 @@
           {{ $t('navigation.protocol') }}
         </NuxtLink>
 
+        <!-- Schemas -->
+        <NuxtLink 
+          :to="`/${$i18n.locale}/schemas`" 
+          class="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors duration-200 focus:outline-none"
+          :class="$route.path.includes('/schemas') ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700/50'"
+          @click="closeDrawer"
+        >
+          <UIcon name="i-heroicons-code-bracket" class="w-5 h-5" />
+          {{ $t('navigation.schemas') }}
+        </NuxtLink>
+
         <!-- Recursos -->
         <NuxtLink 
           :to="`/${$i18n.locale}/resources`" 

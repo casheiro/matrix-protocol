@@ -59,6 +59,17 @@
               {{ $t('navigation.protocol') }}
             </UButton>
 
+            <!-- Schemas -->
+            <UButton
+              :to="`/${$i18n.locale}/schemas`"
+              variant="ghost"
+              class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2.5 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none"
+              :class="{ 'text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-900/20': $route.path.includes('/schemas') }"
+              size="sm"
+            >
+              {{ $t('navigation.schemas') }}
+            </UButton>
+
             <!-- Recursos -->
             <UButton
               :to="`/${$i18n.locale}/resources`"
