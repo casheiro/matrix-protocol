@@ -130,17 +130,6 @@
           {{ $t('navigation.protocol') }}
         </NuxtLink>
 
-        <!-- Manual -->
-        <NuxtLink 
-          :to="`/${$i18n.locale}/docs/manual`" 
-          class="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors duration-200 focus:outline-none"
-          :class="isManualActive ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700/50'"
-          @click="closeDrawer"
-        >
-          <UIcon name="i-heroicons-document-text" class="w-5 h-5" />
-          {{ $t('navigation.manual') }}
-        </NuxtLink>
-
         <!-- Recursos -->
         <NuxtLink 
           :to="`/${$i18n.locale}/resources`" 

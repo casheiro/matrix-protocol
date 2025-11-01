@@ -268,6 +268,30 @@
       "title": "No schemas found",
       "description": "There are no schemas that match the applied filters.",
       "clearFilters": "Clear Filters"
+    },
+    "descriptions": {
+      "mef": {
+        "uki": "Canonical schema for Units of Knowledge Interlinked",
+        "decision-record": "Schema for MEF decision records"
+      },
+      "moc": {
+        "hierarchy": "Schema for MOC organizational hierarchies",
+        "evaluation-criteria": "Schema for MOC evaluation criteria",
+        "arbitration-policies": "Schema for MOC arbitration policies"
+      },
+      "zof": {
+        "workflow": "Schema for ZOF workflows",
+        "state-transition": "Schema for ZOF state transitions",
+        "enrichment-evaluation": "Schema for ZOF enrichment evaluation"
+      },
+      "oif": {
+        "archetype": "Schema for OIF archetypes",
+        "arbitration-explanation": "Schema for OIF arbitration explanations"
+      },
+      "mal": {
+        "decision-record": "Schema for MAL decision records",
+        "arbitration-event": "Schema for MAL arbitration events"
+      }
     }
   },
   "frameworks": {

@@ -9,7 +9,7 @@ export interface SchemaMetadata {
   version: string
   filename: string
   title: string
-  description: string
+  description?: string // Opcional, será gerada via i18n
   url: string
   localPath: string
 }
@@ -58,7 +58,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'mef-uki-schema.yaml',
         title: 'MEF UKI Schema',
-        description: 'Schema canônico para Units of Knowledge Interlinked',
         url: `${baseSchemaUrl}/mef/uki/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-uki-schema.yaml'
       }],
@@ -68,7 +67,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'mef-decision-record-schema.yaml',
         title: 'MEF Decision Record Schema',
-        description: 'Schema para registros de decisão do MEF',
         url: `${baseSchemaUrl}/mef/decision-record/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/mef/mef-decision-record-schema.yaml'
       }]
@@ -80,7 +78,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'moc-hierarchy-schema.yaml',
         title: 'MOC Hierarchy Schema',
-        description: 'Schema para hierarquias organizacionais do MOC',
         url: `${baseSchemaUrl}/moc/hierarchy/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-hierarchy-schema.yaml'
       }],
@@ -90,7 +87,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'moc-evaluation-criteria-schema.yaml',
         title: 'MOC Evaluation Criteria Schema',
-        description: 'Schema para critérios de avaliação do MOC',
         url: `${baseSchemaUrl}/moc/evaluation-criteria/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-evaluation-criteria-schema.yaml'
       }],
@@ -100,7 +96,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'moc-arbitration-policies-schema.yaml',
         title: 'MOC Arbitration Policies Schema',
-        description: 'Schema para políticas de arbitragem do MOC',
         url: `${baseSchemaUrl}/moc/arbitration-policies/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/moc/moc-arbitration-policies-schema.yaml'
       }]
@@ -112,7 +107,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'zof-workflow-schema.yaml',
         title: 'ZOF Workflow Schema',
-        description: 'Schema para workflows do ZOF',
         url: `${baseSchemaUrl}/zof/workflow/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-workflow-schema.yaml'
       }],
@@ -122,7 +116,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'zof-state-transition-schema.yaml',
         title: 'ZOF State Transition Schema',
-        description: 'Schema para transições de estado do ZOF',
         url: `${baseSchemaUrl}/zof/state-transition/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-state-transition-schema.yaml'
       }],
@@ -132,7 +125,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'zof-enrichment-evaluation-schema.yaml',
         title: 'ZOF Enrichment Evaluation Schema',
-        description: 'Schema para avaliação de enriquecimento do ZOF',
         url: `${baseSchemaUrl}/zof/enrichment-evaluation/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/zof/zof-enrichment-evaluation-schema.yaml'
       }]
@@ -144,7 +136,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'oif-archetype-schema.yaml',
         title: 'OIF Archetype Schema',
-        description: 'Schema para arquétipos do OIF',
         url: `${baseSchemaUrl}/oif/archetype/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/oif/oif-archetype-schema.yaml'
       }],
@@ -154,7 +145,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'oif-arbitration-explanation-schema.yaml',
         title: 'OIF Arbitration Explanation Schema',
-        description: 'Schema para explicações de arbitragem do OIF',
         url: `${baseSchemaUrl}/oif/arbitration-explanation/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/oif/oif-arbitration-explanation-schema.yaml'
       }]
@@ -166,7 +156,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'mal-decision-record-schema.yaml',
         title: 'MAL Decision Record Schema',
-        description: 'Schema para registros de decisão do MAL',
         url: `${baseSchemaUrl}/mal/decision-record/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/mal/mal-decision-record-schema.yaml'
       }],
@@ -176,7 +165,6 @@ export const useMatrixSchemas = () => {
         version: '1.0.0',
         filename: 'mal-arbitration-event-schema.yaml',
         title: 'MAL Arbitration Event Schema',
-        description: 'Schema para eventos de arbitragem do MAL',
         url: `${baseSchemaUrl}/mal/arbitration-event/1.0.0`,
         localPath: '/content/{locale}/docs/frameworks/specifications/mal/mal-arbitration-event-schema.yaml'
       }]

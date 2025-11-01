@@ -53,22 +53,15 @@
           
           <div class="flex gap-3">
             <USelectMenu
-              v-model="selectedFramework"
-              :options="frameworkOptions"
+              v-model="selectedFrameworksDisplay"
+              :items="frameworkSelectOptions"
               :placeholder="t('schemas.filter.framework')"
+              :search-input="false"
+              multiple
               size="lg"
               class="w-48"
+              @update:model-value="updateSelectedFrameworks"
             />
-            
-            <UButton
-              v-if="searchQuery || selectedFramework"
-              variant="outline"
-              size="lg"
-              icon="i-heroicons-x-mark"
-              @click="clearFilters"
-            >
-              {{ t('schemas.filter.clear') }}
-            </UButton>
           </div>
         </div>
         
@@ -80,8 +73,8 @@
             class="flex items-center gap-1"
           >
             <MatrixBadge
-              v-if="filter.key === 'framework'"
-              :framework="selectedFramework"
+              v-if="filter.key.startsWith('framework-')"
+              :framework="filter.key.replace('framework-', '')"
               variant="soft"
               size="sm"
               class="flex items-center gap-1"
@@ -146,7 +139,7 @@
 
           <!-- Schema Description -->
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            {{ schema.description }}
+            {{ $t(`schemas.descriptions.${schema.framework}.${schema.type}`) }}
           </p>
 
           <!-- Schema Details -->
@@ -224,7 +217,7 @@
           {{ t('schemas.empty.description') }}
         </p>
         <UButton
-          v-if="searchQuery || selectedFramework"
+          v-if="searchQuery || selectedFrameworks.length > 0"
           @click="clearFilters"
           variant="outline"
         >
@@ -240,7 +233,6 @@ import type { SchemaMetadata } from '~/composables/useMatrixSchemas'
 import MatrixBadge from '~/components/ui/MatrixBadge.vue'
 
 const { t } = useI18n()
-const { getAllSchemas, getAvailableFrameworks } = useMatrixSchemas()
 
 // SEO
 useSEO({
@@ -250,43 +242,53 @@ useSEO({
 
 // State
 const searchQuery = ref('')
-const selectedFramework = ref('')
+const selectedFrameworks = ref<string[]>([]) // Array para múltiplos frameworks
+const selectedFrameworksDisplay = ref<string[]>([]) // Array para valores de display
 
-// Data
-const allSchemas = getAllSchemas()
-const frameworks = getAvailableFrameworks()
+// Data - tornando reativo
+const { getAllSchemas, getAvailableFrameworks } = useMatrixSchemas()
+
+const allSchemas = computed(() => getAllSchemas())
+const frameworks = computed(() => getAvailableFrameworks())
 
 // Computed
 const stats = computed(() => ({
-  totalSchemas: allSchemas.length,
-  frameworks: frameworks.length
+  totalSchemas: allSchemas.value.length,
+  frameworks: frameworks.value.length
 }))
 
-const frameworkOptions = computed(() => [
-  { label: t('schemas.filter.allFrameworks'), value: '' },
-  ...frameworks.map(fw => ({
-    label: fw.toUpperCase(),
-    value: fw
-  }))
-])
+// Opções para USelectMenu (apenas frameworks, sem "todos")
+const frameworkSelectOptions = computed(() => {
+  return frameworks.value.map(fw => fw.toUpperCase())
+})
+
+// Mapeamento simplificado para converter valores do USelectMenu para valores internos
+const frameworkValueMap = computed(() => {
+  const map: Record<string, string> = {}
+  frameworks.value.forEach(fw => {
+    map[fw.toUpperCase()] = fw
+  })
+  return map
+})
 
 const filteredSchemas = computed(() => {
-  let filtered = allSchemas
+  let filtered = allSchemas.value
 
   // Filter by search query
   if (searchQuery.value.trim()) {
     const query = searchQuery.value.toLowerCase()
     filtered = filtered.filter(schema =>
       schema.title.toLowerCase().includes(query) ||
-      schema.description.toLowerCase().includes(query) ||
       schema.framework.toLowerCase().includes(query) ||
       schema.type.toLowerCase().includes(query)
     )
   }
 
-  // Filter by framework
-  if (selectedFramework.value) {
-    filtered = filtered.filter(schema => schema.framework === selectedFramework.value)
+  // Filter by frameworks (múltiplos)
+  if (selectedFrameworks.value.length > 0) {
+    filtered = filtered.filter(schema => 
+      selectedFrameworks.value.includes(schema.framework)
+    )
   }
 
   return filtered
@@ -303,28 +305,40 @@ const activeFilters = computed(() => {
     })
   }
 
-  if (selectedFramework.value) {
+  // Criar um filtro para cada framework selecionado
+  selectedFrameworks.value.forEach(framework => {
     filters.push({
-      key: 'framework',
-      label: `${t('schemas.filter.framework')}: ${selectedFramework.value.toUpperCase()}`,
-      color: 'blue' // Cor fixa para filtros
+      key: `framework-${framework}`,
+      label: `${t('schemas.filter.framework')}: ${framework.toUpperCase()}`,
+      color: 'blue'
     })
-  }
+  })
 
   return filters
 })
 
-// Methods
+// Methods - ajustados para multiselect
+const updateSelectedFrameworks = (displayValues: string[]) => {
+  selectedFrameworksDisplay.value = displayValues
+  selectedFrameworks.value = displayValues.map(display => frameworkValueMap.value[display]).filter(Boolean) as string[]
+}
+
 const clearFilters = () => {
   searchQuery.value = ''
-  selectedFramework.value = ''
+  selectedFrameworks.value = []
+  selectedFrameworksDisplay.value = []
 }
 
 const removeFilter = (key: string) => {
   if (key === 'search') {
     searchQuery.value = ''
-  } else if (key === 'framework') {
-    selectedFramework.value = ''
+  } else if (key.startsWith('framework-')) {
+    // Remover framework específico
+    const framework = key.replace('framework-', '')
+    selectedFrameworks.value = selectedFrameworks.value.filter(fw => fw !== framework)
+    selectedFrameworksDisplay.value = selectedFrameworksDisplay.value.filter(display => 
+      frameworkValueMap.value[display] !== framework
+    )
   }
 }
 
