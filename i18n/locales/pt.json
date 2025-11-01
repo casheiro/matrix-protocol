@@ -288,7 +288,9 @@
     },
     "stats": {
       "totalSchemas": "Schemas",
-      "frameworks": "Frameworks"
+      "frameworks": "Frameworks",
+      "totalVersions": "Versões",
+      "multiVersion": "Multi-versão"
     },
     "search": {
       "placeholder": "Buscar schemas por nome, descrição ou tipo..."
@@ -300,6 +302,7 @@
       "clear": "Limpar"
     },
     "details": {
+      "framework": "Framework",
       "type": "Tipo",
       "filename": "Arquivo",
       "canonicalUrl": "URL Canônica"
@@ -308,7 +311,10 @@
       "view": "Visualizar",
       "copyUrl": "Copiar URL",
       "openUrl": "Abrir URL",
-      "download": "Baixar"
+      "download": "Baixar",
+      "versions": "Versões",
+      "viewVersions": "Ver versões",
+      "compare": "Comparar"
     },
     "empty": {
       "title": "Nenhum schema encontrado",
@@ -338,6 +344,93 @@
         "decision-record": "Schema para registros de decisão do MAL",
         "arbitration-event": "Schema para eventos de arbitragem do MAL"
       }
+    },
+    
+    "multiVersion": {
+      "tooltip": "{count} versões disponíveis",
+      "latest": "Mais recente",
+      "allVersions": "Versões",
+      "viewAllVersions": "Ver todas as versões"
+    },
+    
+    "status": {
+      "stable": "Estável",
+      "beta": "Beta",
+      "deprecated": "Descontinuado",
+      "legacy": "Legado"
+    },
+    
+    "framework": {
+      "description": "Schemas do framework {framework} organizados por tipo",
+      "stats": {
+        "totalSchemas": "Schemas",
+        "totalVersions": "Versões",
+        "multiVersion": "Multi-versão",
+        "latest": "Mais recentes"
+      },
+      "versions": "{count} versões",
+      "latest": "Mais recente",
+      "viewAllVersions": "Ver todas as versões",
+      "changelog": "Mudanças",
+      "backToOverview": "Voltar à visão geral",
+      "seo": {
+        "title": "Schemas {framework} - Matrix Protocol",
+        "description": "Schemas do framework {framework} do Matrix Protocol"
+      }
+    },
+    
+    "versions": {
+      "title": "Histórico de Versões",
+      "latest": "Mais recente",
+      "breaking": "Breaking",
+      "changelog": "Mudanças",
+      "details": "Detalhes",
+      "viewLatest": "Ver mais recente",
+      "moreVersions": "versões mais antigas",
+      "showMoreChanges": "Mostrar {count} mudanças",
+      "showLessChanges": "Mostrar menos",
+      "stats": {
+        "totalVersions": "Total de versões",
+        "latestVersion": "Versão mais recente",
+        "stableVersions": "Versões estáveis", 
+        "daysSinceRelease": "Dias desde o lançamento"
+      },
+      "timeline": {
+        "title": "Timeline de versões"
+      },
+      "quickNav": {
+        "title": "Navegação rápida"
+      },
+      "statistics": {
+        "title": "Estatísticas"
+      },
+      "related": {
+        "title": "Links relacionados",
+        "backToFramework": "Voltar ao {framework}",
+        "allSchemas": "Todos os schemas",
+        "documentation": "Documentação"
+      },
+      "seo": {
+        "title": "{schema} - Versões - Matrix Protocol",
+        "description": "Histórico de versões do schema {schema}"
+      }
+    },
+    
+    "timeline": {
+      "latest": "Mais recente", 
+      "breaking": "Breaking",
+      "whatsNew": "Novidades",
+      "showMoreChanges": "Mostrar {count} mudanças",
+      "showLessChanges": "Mostrar menos",
+      "migrationRequired": "Migração necessária",
+      "migrationDescription": "Esta versão contém mudanças que quebram compatibilidade",
+      "filename": "Arquivo",
+      "endOfHistory": "Início do histórico",
+      "yesterday": "ontem",
+      "daysAgo": "{days} dias atrás", 
+      "weeksAgo": "{weeks} semanas atrás",
+      "monthsAgo": "{months} meses atrás",
+      "yearsAgo": "{years} anos atrás"
     }
   },
   "frameworks": {

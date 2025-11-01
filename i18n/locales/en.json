@@ -243,7 +243,9 @@
     },
     "stats": {
       "totalSchemas": "Schemas",
-      "frameworks": "Frameworks"
+      "frameworks": "Frameworks",
+      "totalVersions": "Versions",
+      "multiVersion": "Multi-version"
     },
     "search": {
       "placeholder": "Search schemas by name, description or type..."
@@ -255,6 +257,7 @@
       "clear": "Clear"
     },
     "details": {
+      "framework": "Framework",
       "type": "Type",
       "filename": "File",
       "canonicalUrl": "Canonical URL"
@@ -263,7 +266,10 @@
       "view": "View",
       "copyUrl": "Copy URL",
       "openUrl": "Open URL",
-      "download": "Download"
+      "download": "Download",
+      "versions": "Versions",
+      "viewVersions": "View versions",
+      "compare": "Compare"
     },
     "empty": {
       "title": "No schemas found",
@@ -293,6 +299,93 @@
         "decision-record": "Schema for MAL decision records",
         "arbitration-event": "Schema for MAL arbitration events"
       }
+    },
+    
+    "multiVersion": {
+      "tooltip": "{count} versions available",
+      "latest": "Latest",
+      "allVersions": "Versions",
+      "viewAllVersions": "View all versions"
+    },
+    
+    "status": {
+      "stable": "Stable",
+      "beta": "Beta",
+      "deprecated": "Deprecated",
+      "legacy": "Legacy"
+    },
+    
+    "framework": {
+      "description": "{framework} framework schemas organized by type",
+      "stats": {
+        "totalSchemas": "Schemas",
+        "totalVersions": "Versions",
+        "multiVersion": "Multi-version",
+        "latest": "Latest"
+      },
+      "versions": "{count} versions",
+      "latest": "Latest",
+      "viewAllVersions": "View all versions",
+      "changelog": "Changes",
+      "backToOverview": "Back to overview",
+      "seo": {
+        "title": "{framework} Schemas - Matrix Protocol",
+        "description": "{framework} framework schemas from Matrix Protocol"
+      }
+    },
+    
+    "versions": {
+      "title": "Version History",
+      "latest": "Latest",
+      "breaking": "Breaking",
+      "changelog": "Changes",
+      "details": "Details",
+      "viewLatest": "View latest",
+      "moreVersions": "older versions",
+      "showMoreChanges": "Show {count} more changes",
+      "showLessChanges": "Show less",
+      "stats": {
+        "totalVersions": "Total versions",
+        "latestVersion": "Latest version",
+        "stableVersions": "Stable versions", 
+        "daysSinceRelease": "Days since release"
+      },
+      "timeline": {
+        "title": "Version timeline"
+      },
+      "quickNav": {
+        "title": "Quick navigation"
+      },
+      "statistics": {
+        "title": "Statistics"
+      },
+      "related": {
+        "title": "Related links",
+        "backToFramework": "Back to {framework}",
+        "allSchemas": "All schemas",
+        "documentation": "Documentation"
+      },
+      "seo": {
+        "title": "{schema} - Versions - Matrix Protocol",
+        "description": "Version history for {schema} schema"
+      }
+    },
+    
+    "timeline": {
+      "latest": "Latest", 
+      "breaking": "Breaking",
+      "whatsNew": "What's new",
+      "showMoreChanges": "Show {count} more changes",
+      "showLessChanges": "Show less",
+      "migrationRequired": "Migration required",
+      "migrationDescription": "This version contains breaking changes",
+      "filename": "File",
+      "endOfHistory": "Beginning of history",
+      "yesterday": "yesterday",
+      "daysAgo": "{days} days ago", 
+      "weeksAgo": "{weeks} weeks ago",
+      "monthsAgo": "{months} months ago",
+      "yearsAgo": "{years} years ago"
     }
   },
   "frameworks": {

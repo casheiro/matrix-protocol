@@ -31,6 +31,22 @@
                 {{ t('schemas.stats.frameworks') }}
               </div>
             </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                {{ stats.totalVersions }}
+              </div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                {{ t('schemas.stats.totalVersions') }}
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                {{ stats.multiVersionSchemas }}
+              </div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                {{ t('schemas.stats.multiVersion') }}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -132,6 +148,25 @@
                   <UBadge color="primary" size="sm" variant="outline">
                     v{{ schema.version }}
                   </UBadge>
+                  <!-- Multiple versions indicator -->
+                  <UBadge 
+                    v-if="hasMultipleVersions(schema.framework, schema.type)"
+                    color="blue" 
+                    size="sm" 
+                    variant="soft"
+                    :title="t('schemas.multiVersion.tooltip', { count: getVersionCount(schema.framework, schema.type) })"
+                  >
+                    +{{ getVersionCount(schema.framework, schema.type) - 1 }}
+                  </UBadge>
+                  <!-- Latest badge -->
+                  <UBadge 
+                    v-if="schema.isLatest"
+                    color="green" 
+                    size="sm" 
+                    variant="solid"
+                  >
+                    {{ t('schemas.multiVersion.latest') }}
+                  </UBadge>
                 </div>
               </div>
             </div>
@@ -185,6 +220,18 @@
               {{ t('schemas.actions.view') }}
             </UButton>
             
+            <!-- View all versions button (if multiple versions exist) -->
+            <UButton
+              v-if="hasMultipleVersions(schema.framework, schema.type)"
+              :to="localePath(`/schemas/${schema.framework}/${schema.type}`)"
+              variant="outline"
+              size="sm"
+              icon="i-heroicons-clock"
+              :title="t('schemas.multiVersion.viewAllVersions')"
+            >
+              {{ t('schemas.multiVersion.allVersions') }}
+            </UButton>
+            
             <UButton
               @click="openSchemaUrl(schema.url)"
               variant="outline"
@@ -233,6 +280,7 @@ import type { SchemaMetadata } from '~/composables/useMatrixSchemas'
 import MatrixBadge from '~/components/ui/MatrixBadge.vue'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // SEO
 useSEO({
@@ -245,17 +293,22 @@ const searchQuery = ref('')
 const selectedFrameworks = ref<string[]>([]) // Array para múltiplos frameworks
 const selectedFrameworksDisplay = ref<string[]>([]) // Array para valores de display
 
-// Data - tornando reativo
-const { getAllSchemas, getAvailableFrameworks } = useMatrixSchemas()
+// Data - usando schemas únicos para mostrar apenas versões mais recentes
+const { getUniqueSchemas, getAvailableFrameworks, hasMultipleVersions, getVersionCount, getVersionStats } = useMatrixSchemas()
 
-const allSchemas = computed(() => getAllSchemas())
+const allSchemas = computed(() => getUniqueSchemas())
 const frameworks = computed(() => getAvailableFrameworks())
 
 // Computed
-const stats = computed(() => ({
-  totalSchemas: allSchemas.value.length,
-  frameworks: frameworks.value.length
-}))
+const stats = computed(() => {
+  const versionStats = getVersionStats()
+  return {
+    totalSchemas: versionStats.uniqueSchemas,
+    frameworks: frameworks.value.length,
+    totalVersions: versionStats.totalVersions,
+    multiVersionSchemas: versionStats.multiVersionSchemas
+  }
+})
 
 // Opções para USelectMenu (apenas frameworks, sem "todos")
 const frameworkSelectOptions = computed(() => {
