@@ -1,0 +1,73 @@
+Matrix Protocol Implementation License (MPIL) v1.0
+
+Copyright (c) 2025 Matrix Protocol Contributors
+
+Permission is hereby granted, free of charge, to any person or organization 
+obtaining a copy of the Matrix Protocol conceptual framework and associated 
+documentation files (the "Protocol"), to deal in implementations of the Protocol 
+without restriction, including without limitation the rights to use, copy, modify, 
+merge, publish, distribute, sublicense, and/or sell software, systems, or services 
+that implement or are based upon the Protocol concepts, and to permit persons to 
+whom such implementations are furnished to do so, subject to the following 
+conditions:
+
+PROTOCOL IMPLEMENTATION RIGHTS:
+1. You may freely implement the Matrix Protocol concepts in any technical form
+2. You may use such implementations for any purpose, including commercial use
+3. You may modify, distribute, and sublicense your implementations
+4. You may create derivative works based on your implementations
+5. You may integrate Protocol implementations with other software or systems
+
+PROTOCOL PROTECTION RESTRICTIONS:
+1. You may NOT create, publish, or distribute alternative or competing conceptual 
+   frameworks that are substantially similar to or derived from the Matrix Protocol
+2. You may NOT use the name "Matrix Protocol" or any confusingly similar names 
+   for alternative frameworks or protocols
+3. You may NOT claim to have created or evolved the core Matrix Protocol concepts
+4. Any proposed evolution or modification to the Protocol itself must be contributed 
+   back to the official Matrix Protocol project at https://matrix-protocol.org
+
+ATTRIBUTION REQUIREMENTS:
+1. The above copyright notice and this permission notice shall be included in all 
+   copies or substantial portions of implementations
+2. Any software, system, or service implementing the Protocol must include clear 
+   attribution to the Matrix Protocol with a link to https://matrix-protocol.org
+3. Documentation for implementations must acknowledge the Matrix Protocol as the 
+   conceptual foundation
+
+TRADEMARK PROTECTION:
+The names "Matrix Protocol", "MEF", "ZOF", "OIF", "MOC", "MAL", and related 
+terminology are protected. Use of these names is permitted only when referring 
+to the official Matrix Protocol concepts or when clearly indicating implementation 
+of these concepts.
+
+COLLABORATIVE EVOLUTION:
+The Matrix Protocol is designed for open, collaborative evolution. Any improvements, 
+extensions, or modifications to the core Protocol concepts should be proposed 
+through the official channels at https://matrix-protocol.org to benefit the entire 
+community.
+
+DISCLAIMER:
+THE PROTOCOL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE PROTOCOL OR THE USE OR OTHER DEALINGS IN THE 
+PROTOCOL.
+
+DEFINITIONS:
+- "Protocol" refers to the Matrix Protocol conceptual framework, including MEF, 
+  ZOF, OIF, MOC, MAL, and all associated methodologies and documentation
+- "Implementation" refers to any technical realization, software, system, or 
+  service that applies or is based upon the Protocol concepts
+- "Official Matrix Protocol project" refers to the project maintained at 
+  https://matrix-protocol.org
+
+For questions about this license or the Matrix Protocol, visit:
+https://matrix-protocol.org
+
+---
+
+This license allows broad implementation freedom while protecting the conceptual 
+integrity and collaborative evolution of the Matrix Protocol.
