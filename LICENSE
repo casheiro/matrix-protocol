@@ -3,13 +3,17 @@ Matrix Protocol Implementation License (MPIL) v1.0
 Copyright (c) 2025 Matrix Protocol Contributors
 
 Permission is hereby granted, free of charge, to any person or organization 
-obtaining a copy of the Matrix Protocol conceptual framework and associated 
+obtaining a copy of the Matrix Protocol epistemological framework and associated 
 documentation files (the "Protocol"), to deal in implementations of the Protocol 
 without restriction, including without limitation the rights to use, copy, modify, 
 merge, publish, distribute, sublicense, and/or sell software, systems, or services 
 that implement or are based upon the Protocol concepts, and to permit persons to 
 whom such implementations are furnished to do so, subject to the following 
 conditions:
+
+NOTE: The Matrix Protocol is an epistemological and conceptual framework for 
+structured human-AI collaboration, NOT technical software. This license governs 
+the use of these concepts and methodologies, and their technical implementations.
 
 PROTOCOL IMPLEMENTATION RIGHTS:
 1. You may freely implement the Matrix Protocol concepts in any technical form
@@ -36,7 +40,7 @@ ATTRIBUTION REQUIREMENTS:
    conceptual foundation
 
 TRADEMARK PROTECTION:
-The names "Matrix Protocol", "MEF", "ZOF", "OIF", "MOC", "MAL", and related 
+The names "Matrix Protocol", "MEF", "ZOF", "OIF", "MOC", "MAL", "MEP", and related 
 terminology are protected. Use of these names is permitted only when referring 
 to the official Matrix Protocol concepts or when clearly indicating implementation 
 of these concepts.
@@ -57,10 +61,21 @@ OUT OF OR IN CONNECTION WITH THE PROTOCOL OR THE USE OR OTHER DEALINGS IN THE
 PROTOCOL.
 
 DEFINITIONS:
-- "Protocol" refers to the Matrix Protocol conceptual framework, including MEF, 
-  ZOF, OIF, MOC, MAL, and all associated methodologies and documentation
+- "Protocol" refers to the Matrix Protocol epistemological and conceptual framework, 
+  which is NOT technical software or code, but rather a set of methodologies, concepts, 
+  and structured approaches for human-AI collaboration. The Protocol includes:
+  • MEF (Matrix Embedding Framework)
+  • ZOF (Zion Orchestration Framework) 
+  • OIF (Operator Intelligence Framework)
+  • MOC (Matrix Ontology Catalog)
+  • MAL (Matrix Arbiter Layer)
+  • MEP (Matrix Epistemic Principle)
+  and all associated methodologies, documentation, and conceptual frameworks
 - "Implementation" refers to any technical realization, software, system, or 
-  service that applies or is based upon the Protocol concepts
+  service that applies or is based upon the Protocol concepts. This includes 
+  but is not limited to: software applications, AI systems, organizational 
+  methodologies, training programs, or any other concrete application of the 
+  conceptual frameworks described in the Protocol
 - "Official Matrix Protocol project" refers to the project maintained at 
   https://matrix-protocol.org
 
